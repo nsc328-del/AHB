@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/MiniMax-AI/MiniMax-H3",
+  "upstream_ref": "main",
+  "retrieved_at": "2026-10-20",
+  "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/h3-prompt-writing",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "a7000443588ca3f145e3b3fd8900f14e0325dc460bd811268fac89a9dc8e56d0",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/h3-prompt-writing/SKILL.md"
+    },
+    {
+      "path": "references/base-en.txt",
+      "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/h3-prompt-writing/references/base-en.txt"
+    },
+    {
+      "path": "references/ref-en.txt",
+      "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/h3-prompt-writing/references/ref-en.txt"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "7770c9d784b7251ab882ee29a738219a3f01811e57ba7fc7822fa83eb8438c1a",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/h3-prompt-writing/agents/openai.yaml"
+    }
+  ],
+  "missing_optional": [
+    "SKILL.cn.md"
+  ],
+  "unresolved_references": []
+}

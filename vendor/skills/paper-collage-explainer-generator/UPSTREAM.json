@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/MiniMax-AI/MiniMax-H3",
+  "upstream_ref": "main",
+  "retrieved_at": "2026-10-20",
+  "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/paper-collage-explainer-generator",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "2223d4b4ec6b2842db4252a83f00aa6c31e6daa5e8d020d9518e3a8743c47de0",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/paper-collage-explainer-generator/SKILL.md"
+    },
+    {
+      "path": "SKILL.cn.md",
+      "sha256": "ceaecc38dcf78294d12e658c57b690a0f671bc4b9f7292ef5a65a7db178da4aa",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/paper-collage-explainer-generator/SKILL.cn.md"
+    }
+  ],
+  "missing_optional": [],
+  "unresolved_references": []
+}

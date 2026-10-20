@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff"><title>剪辑工作台</title>
+  <link rel="stylesheet" href="/static/style.css?v=20261020-product2">
+  <link rel="stylesheet" href="/static/media-gallery.css?v=20261020-product2">
+  <link rel="stylesheet" href="/static/product.css?v=20261020-product2">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#create" aria-label="剪辑工作台首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 3h10v4H7v6H3zm16 0h10v10h-4V7h-6zM3 19h4v6h6v4H3zm22 0h4v10H19v-4h6zM11 20l9-9"/></svg><span>剪辑工作台</span></a>
+    <nav aria-label="工作区"><a href="#create">开始剪辑</a><a href="#library">素材库</a><a href="#analysis">素材分析</a><a href="#reference">样片分析</a><a href="#generate">素材生成</a><a href="#workspace">工作空间</a></nav>
+    <div class="header-actions"><button class="icon-btn" id="jobs-toggle" aria-label="查看任务"><span class="job-dot"></span>任务<span id="job-count"></span></button></div>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <div id="selection-bar" class="selection-bar" hidden></div>
+  <aside id="jobs-panel" class="side-panel" hidden aria-label="任务列表"><div class="panel-heading"><h2>任务</h2><button class="icon-btn" data-close="jobs-panel" aria-label="关闭任务列表">×</button></div><div id="jobs-list"></div></aside>
+
+  <dialog id="asset-dialog" class="asset-dialog"><div id="asset-dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <input id="upload-input" type="file" accept="image/*,video/*,audio/*" multiple hidden>
+  <script type="module" src="/static/app.js?v=20261020-product2"></script>
+</body></html>

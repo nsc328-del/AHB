@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/MiniMax-AI/MiniMax-H3",
+  "upstream_ref": "main",
+  "retrieved_at": "2026-10-20",
+  "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/brand-promo-video-generator",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "a50d270e412be4ed5cf88b187665585f4da637701eb24333fbdef95a19442f37",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/brand-promo-video-generator/SKILL.md"
+    },
+    {
+      "path": "SKILL.cn.md",
+      "sha256": "e148ad61fe77114543b03ca68d9e1bc4b343d972d3264f6f2a014eaa27f55243",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/brand-promo-video-generator/SKILL.cn.md"
+    }
+  ],
+  "missing_optional": [],
+  "unresolved_references": []
+}

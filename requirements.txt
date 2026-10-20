@@ -1,0 +1,9 @@
+fastapi==0.135.1
+uvicorn==0.41.0
+python-multipart==0.0.32
+httpx==0.28.1
+Pillow==11.1.0
+imageio-ffmpeg==0.6.0
+faster-whisper==1.2.1
+huggingface-hub==0.36.2
+jsonschema==4.23.0

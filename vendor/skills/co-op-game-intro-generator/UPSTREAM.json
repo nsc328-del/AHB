@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/MiniMax-AI/MiniMax-H3",
+  "upstream_ref": "main",
+  "retrieved_at": "2026-10-20",
+  "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/co-op-game-intro-generator",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "8b49cf84a70fbbc99c661fdac2235cba7f7dd0bde51b639b6ed9c1679a707f5e",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/co-op-game-intro-generator/SKILL.md"
+    },
+    {
+      "path": "SKILL.cn.md",
+      "sha256": "42120f68416eb0ba3b6fd1d1755b902438cc25c89c0e3c30d445b0d566c7237a",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/co-op-game-intro-generator/SKILL.cn.md"
+    },
+    {
+      "path": "references/h3-confirmation-image-template.md",
+      "sha256": "344325132841a673fb2ccc5e12ada2c95c2cba19dd2b658678467219c9f66bbd",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/co-op-game-intro-generator/references/h3-confirmation-image-template.md"
+    },
+    {
+      "path": "references/h3-video-prompt-template.md",
+      "sha256": "7fac20c236de585d2f76e4fa01f9e74ced0a88a6d76d2b14c75ceac99607b9c2",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/co-op-game-intro-generator/references/h3-video-prompt-template.md"
+    }
+  ],
+  "missing_optional": [],
+  "unresolved_references": []
+}

@@ -1,0 +1,54 @@
+"""HTTP surface for local publication history; no publishing capability."""
+from fastapi import APIRouter, HTTPException, Query
+import publication_data as data
+
+router = APIRouter()
+
+
+@router.get("/api/workspaces")
+def workspaces():
+    return data.business_workspaces()
+
+
+@router.get("/api/workspaces/{workspace_id}/history")
+def workspace_history(workspace_id: str, platform: str = "", account: str = "", query: str = "",
+                      limit: int = Query(30, ge=1, le=100), offset: int = Query(0, ge=0)):
+    return data.list_history(platform, account, query, limit, offset, workspace_id=workspace_id)
+
+
+@router.get("/api/history/status")
+def history_status():
+    return data.history_status()
+
+
+@router.post("/api/history/sync")
+def history_sync():
+    return data.sync_history()
+
+
+@router.get("/api/history")
+def history(platform: str = "", account: str = "", query: str = "", limit: int = Query(30, ge=1, le=100), offset: int = Query(0, ge=0)):
+    return data.list_history(platform, account, query, limit, offset)
+
+
+@router.get("/api/history/{publication_id}")
+def history_detail(publication_id: str):
+    return data.history_detail(publication_id)
+
+
+@router.get("/api/projects/{project_id}/publications")
+def publications(project_id: str):
+    return data.project_publications(project_id)
+
+
+@router.post("/api/projects/{project_id}/publications")
+def bind_publication(project_id: str, payload: dict):
+    try:
+        return data.bind_publication(project_id, payload.get("publication_id"), payload.get("render_id"), payload.get("confirmed"))
+    except data.BindingConflict as exc:
+        raise HTTPException(409, str(exc)) from None
+
+
+@router.delete("/api/projects/{project_id}/publications/{binding_id}")
+def unbind_publication(project_id: str, binding_id: str):
+    return data.unbind_publication(project_id, binding_id)

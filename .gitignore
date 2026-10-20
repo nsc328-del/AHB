@@ -1,0 +1,15 @@
+.venv/
+data/
+tmp/
+__pycache__/
+*.pyc
+.DS_Store
+output/
+.playwright-cli/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+server.env
+providers.json
+*.log

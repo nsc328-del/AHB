@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/MiniMax-AI/MiniMax-H3",
+  "upstream_ref": "main",
+  "retrieved_at": "2026-10-20",
+  "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/handdrawn-live-video-generator",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "5c62175b552f51ed0bfb1e8fcb6fdcfab09530a36570478e58e41c14340b3001",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/handdrawn-live-video-generator/SKILL.md"
+    },
+    {
+      "path": "SKILL.cn.md",
+      "sha256": "ce4a4bcc867def998cd964a15367a9b12cb11534b94a33ed95a4107f49d3de08",
+      "source_url": "https://raw.githubusercontent.com/MiniMax-AI/MiniMax-H3/main/skills/handdrawn-live-video-generator/SKILL.cn.md"
+    }
+  ],
+  "missing_optional": [],
+  "unresolved_references": []
+}
