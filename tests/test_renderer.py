@@ -109,6 +109,29 @@ class RenderIntegrationTest(unittest.TestCase):
         self.assertGreater(self.audio_rms(path, .35), .005)
         self.assertEqual((result["width"], result["height"]), (1280, 720))
 
+    def test_speed_exact_cut_and_separate_audio_gains(self):
+        plan = deepcopy(self.plan)
+        plan.update(duration=2.4, music_asset_id='voice', music_volume=.5, music_start=.1)
+        plan['clips'] = [
+            {'id':'fast', 'asset_id':'voice', 'start':0, 'end':1.2, 'duration':.6,
+             'speed':2, 'original_volume':0, 'music_gain':1},
+            {'id':'slow', 'asset_id':'voice', 'start':0, 'end':.6, 'duration':1.2,
+             'speed':.5, 'original_volume':0, 'music_gain':.15},
+            {'id':'sound', 'asset_id':'voice', 'start':.3, 'end':.9, 'duration':.6,
+             'speed':1, 'original_volume':1, 'music_gain':0}]
+        path = self.root/'speed-audio.mp4'
+        receipt = render_plan(plan, self.assets, path)
+        # Same source color change occurs at half/double the source time.
+        for at, red in [(.1,True),(.2,False),(17/30,False),(18/30,True),(1.0,True),(1.3,False)]:
+            pixel = self.center_pixel(path, at)
+            self.assertGreater(pixel[0] if red else pixel[1], 2*(pixel[1] if red else pixel[0]), at)
+        normal, ducked, original = [self.audio_rms(path,t) for t in (.4,1.05,2.0)]
+        self.assertGreater(normal,ducked*4)
+        self.assertGreater(original,normal*1.5)
+        frozen=json.loads(Path(receipt['manifest_path']).read_text())
+        self.assertEqual([c['speed'] for c in frozen['compiled_timeline']['clips']],[2,.5,1])
+        self.assertEqual(frozen['music_start'],.1)
+
     def test_rejects_invalid_plan_before_writing_output(self):
         variants = []
         out_of_bounds = deepcopy(self.plan)

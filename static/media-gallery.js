@@ -6,6 +6,20 @@ const kindNames={image:'图片',video:'视频',audio:'音频'};
 
 export const isReferenceAsset=asset=>!!asset&&(asset.purpose==='reference'||asset.analysis?.reference_analysis===true||Array.isArray(asset.analysis?.structure)&&asset.analysis.structure.length>0);
 
+// Compact captions reuse evidence already in memory; no new model request.
+export function calendarCaption(assets, digest, filtered=false){
+  if(!assets.length)return '';
+  if(!filtered&&digest?.status==='succeeded'&&digest.count===assets.length&&digest.result?.summary){
+    const themes=(digest.result.themes||[]).filter(value=>typeof value==='string'&&value.trim()).slice(0,2);
+    return themes.length?`${themes.join('、')}等素材。`:digest.result.summary;
+  }
+  const tags=[...new Set(assets.flatMap(asset=>(asset.analysis?.tags||[]).filter(tag=>typeof tag==='string'&&tag.trim()).slice(0,1)))].slice(0,3);
+  const missing=assets.filter(asset=>!asset.analysis?.summary&&!asset.transcript?.text).length;
+  if(tags.length)return `${tags.join('、')}等素材${missing?`，${missing} 份待分析`:'。'}`;
+  const counts=['video','image','audio'].map(kind=>{const count=assets.filter(asset=>asset.kind===kind).length;return count?`${count} 份${kindNames[kind]}`:''}).filter(Boolean);
+  return counts.join('、')+(missing?'，待分析':'');
+}
+
 export function createMediaGallery(ctx){
   const {S,esc,fmt,mediaTag,thumb,assetById,selectedAssets,persistSelection}=ctx;
   const $=ctx.$||((selector,root=document)=>root.querySelector(selector));
@@ -73,7 +87,7 @@ export function createMediaGallery(ctx){
     return `<span class="mg-window-stack" aria-hidden="true">${group.assets.slice(0,3).reverse().map((asset,index)=>`<span class="mg-stack-card" style="--stack-index:${index}">${thumb(asset)?`<img src="${esc(thumb(asset))}" alt="" loading="lazy">`:`<span class="mg-stack-empty">${asset.kind==='audio'?'♫':'▧'}</span>`}</span>`).join('')}</span><span class="mg-date-caption"><span class="mg-date-title">${esc(group.label)}</span><span class="mg-date-count">${group.assets.length} 份</span></span><span class="mg-date-toggle"><span class="mg-date-toggle-label">展开</span><span class="mg-date-chevron" aria-hidden="true"></span></span>`;
   }
   function filtersHTML(){
-    return `<div class="mg-toolbar"><div class="mg-kind-tabs" role="group" aria-label="素材类型">${[['all','全部'],['video','视频'],['image','图片'],['audio','音频']].map(([id,label])=>`<button type="button" data-mg-action="filter" data-id="${id}" class="${(S.filter||'all')===id?'active':''}" aria-pressed="${(S.filter||'all')===id}">${label}</button>`).join('')}</div><label class="mg-search">${ctx.icons?.search||''}<input type="search" id="mg-search" value="${esc(S.search||'')}" placeholder="搜索名称、标签或内容" aria-label="搜索素材"></label><button type="button" class="button small quiet" data-mg-action="select-visible">选择当前素材</button><span class="mg-selected-count"></span></div>`;
+    return `<div class="mg-toolbar"><div class="mg-kind-tabs" role="group" aria-label="素材类型">${[['all','全部'],['video','视频'],['image','图片'],['audio','音频']].map(([id,label])=>`<button type="button" data-mg-action="filter" data-id="${id}" class="${(S.filter||'all')===id?'active':''}" aria-pressed="${(S.filter||'all')===id}">${label}</button>`).join('')}</div><label class="mg-search">${ctx.icons?.search||''}<input type="search" id="mg-search" value="${esc(S.search||'')}" placeholder="搜索素材、标签" aria-label="搜索素材"></label><span class="mg-selected-count"></span></div>`;
   }
   function referenceFiltersHTML(){
     return `<div class="mg-toolbar mg-reference-toolbar"><label class="mg-search">${ctx.icons?.search||''}<input type="search" id="mg-reference-search" value="${esc(state.reference.search)}" placeholder="搜索文件名" aria-label="搜索样片文件名"></label></div>`;
@@ -229,7 +243,7 @@ export function createMediaGallery(ctx){
     let root=rootFor(kind);
     if(!root){
       if(kind==='analysis'&&!state.analysis.detailId){state.analysis.day=shanghaiDay();state.analysis.month=state.analysis.day.slice(0,7)}
-      $('#app').innerHTML=`<section class="mg-root drop-area" data-kind="${kind}"><div class="mg-page-heading"><div><h1>${titleFor(kind)}</h1><p class="mg-gallery-count"></p></div><div class="mg-heading-actions">${uploadButton(kind,true)}</div></div>${kind==='analysis'?filtersHTML():referenceFiltersHTML()}<div class="mg-gallery"></div><div class="mg-detail" hidden></div></section>`;
+      $('#app').innerHTML=`<section class="mg-root drop-area" data-kind="${kind}">${kind==='analysis'?`<div class="mg-analysis-bar"><div class="mg-page-heading"><h1>${titleFor(kind)}</h1><span class="mg-gallery-count"></span></div>${filtersHTML()}<div class="mg-heading-actions">${uploadButton(kind,true)}</div></div>`:`<div class="mg-page-heading"><div><h1>${titleFor(kind)}</h1><p class="mg-gallery-count"></p></div><div class="mg-heading-actions">${uploadButton(kind,true)}</div></div>${referenceFiltersHTML()}`}<div class="mg-gallery"></div><div class="mg-detail" hidden></div></section>`;
       root=rootFor(kind);
       ctx.bindDrop?.();
     }
@@ -272,7 +286,7 @@ export function createMediaGallery(ctx){
       grid.innerHTML=['一','二','三','四','五','六','日'].map(day=>`<span class="mg-calendar-weekday">${day}</span>`).join('')+Array.from({length:cells},(_,index)=>{
         const number=index-offset+1;if(number<1||number>count)return '<span class="mg-calendar-cell is-outside" aria-hidden="true"></span>';
         const key=`${current.month}-${String(number).padStart(2,'0')}`;
-        return `<div class="mg-calendar-cell"><button type="button" class="mg-calendar-day" data-mg-action="calendar-day" data-day="${key}"><span class="mg-calendar-date">${number}</span><span class="mg-calendar-day-count"></span></button></div>`;
+        return `<div class="mg-calendar-cell"><button type="button" class="mg-calendar-day" data-mg-action="calendar-day" data-day="${key}"><span class="mg-calendar-day-top"><span class="mg-calendar-date">${number}</span><span class="mg-calendar-day-count"></span></span><span class="mg-calendar-day-preview"></span></button></div>`;
       }).join('');
       grid.dataset.month=current.month;
     }
@@ -284,7 +298,14 @@ export function createMediaGallery(ctx){
       button.setAttribute('aria-pressed',String(selected));
       button.setAttribute('aria-label',`${key}，${amount?amount+'份素材':'无素材'}`);
       if(key===today)button.setAttribute('aria-current','date');else button.removeAttribute('aria-current');
-      $('.mg-calendar-day-count',button).textContent=amount?String(amount):'';
+      $('.mg-calendar-day-count',button).textContent=amount?`${amount} 份`:'';
+      const dayAssets=byDay.get(key)?.assets||[],filtered=!!String(S.search||'').trim()||!!S.filter&&S.filter!=='all';
+      const caption=calendarCaption(dayAssets,current.summaries.get(key),filtered);
+      const previews=dayAssets.filter(asset=>thumb(asset)).slice(0,3);
+      const contents=amount?`<span class="mg-calendar-stack" aria-hidden="true">${previews.length?previews.map((asset,index)=>`<img src="${esc(thumb(asset))}" alt="" loading="lazy" style="--stack-index:${index}">`).join(''):`<span class="mg-calendar-stack-empty">${dayAssets.every(asset=>asset.kind==='audio')?'♫':'▧'}</span>`}</span><span class="mg-calendar-caption" title="${esc(caption)}">${esc(caption)}</span>`:'';
+      patchHTML('.mg-calendar-day-preview',contents,button);
+      button.title=caption;
+
     }
     const selected=byDay.get(current.day),assets=selected?.assets||[],digest=current.summaries.get(current.day),summary=digest?.result||digest?.previous_result;
     const total=assetsFor('analysis').filter(asset=>dateInfo(asset).key===current.day).length,filtered=!!String(S.search||'').trim()||!!S.filter&&S.filter!=='all';
@@ -296,7 +317,7 @@ export function createMediaGallery(ctx){
       $('.mg-calendar-results-heading',results)._mgMarkup=null;
       $('.mg-album',results).replaceChildren();
     }
-    patchHTML('.mg-calendar-results-heading',`<div><h2>${Number(current.day.slice(5,7))}月${Number(current.day.slice(8))}日</h2>${current.day===today?'<span class="mg-calendar-today-label">今天</span>':''}<span class="mg-calendar-result-count">${filtered?`${assets.length} / ${total}`:total} 份素材</span></div><div class="mg-calendar-result-actions">${digest?.job_id?`<div data-usage-scope="job" data-usage-job-id="${esc(digest.job_id)}" data-usage-label="本次汇总用量"></div>`:''}${total&&current.day<today?`<button type="button" class="button small quiet" data-mg-action="calendar-summary" data-day="${current.day}" ${['queued','running'].includes(digest?.status)?'disabled':''}>${['queued','running'].includes(digest?.status)?'汇总中':summary?'更新汇总':'汇总素材'}</button>`:''}</div>`,results);
+    patchHTML('.mg-calendar-results-heading',`<div><h2>${Number(current.day.slice(5,7))}月${Number(current.day.slice(8))}日</h2>${current.day===today?'<span class="mg-calendar-today-label">今天</span>':''}<span class="mg-calendar-result-count">${filtered?`${assets.length} / ${total}`:total} 份素材</span></div><div class="mg-calendar-result-actions"><button type="button" class="button small quiet" data-mg-action="select-visible">选择当天</button>${digest?.job_id?`<div data-usage-scope="job" data-usage-job-id="${esc(digest.job_id)}" data-usage-label="本次汇总用量"></div>`:''}${total&&current.day<today?`<button type="button" class="button small quiet" data-mg-action="calendar-summary" data-day="${current.day}" ${['queued','running'].includes(digest?.status)?'disabled':''}>${['queued','running'].includes(digest?.status)?'汇总中':summary?'更新汇总':'汇总素材'}</button>`:''}</div>`,results);
     patchHTML('.mg-calendar-digest',`${summary&&['queued','running','outdated'].includes(digest?.status)?'<p class="mg-calendar-pending">新汇总准备中，当前为上次结果</p>':''}${summary?`<p class="mg-calendar-day-summary">${esc(summary.summary)}</p><div class="mg-tags">${(summary.themes||[]).map(tag=>`<span>${esc(tag)}</span>`).join('')}</div>${summary.missing_count?`<p class="mg-calendar-pending">${summary.missing_count} 份尚无分析，未计入总结</p>`:''}`:''}${digest?.error?`<p class="mg-card-error">${esc(digest.error)}</p>`:''}`,results);
     const empty=$('.mg-calendar-empty',results);empty.hidden=assets.length>0;
     patchHTML('.mg-calendar-empty',total?'<p>没有符合筛选条件的素材</p><button type="button" class="button small quiet" data-mg-action="reset-filters">清除筛选</button>':'<p>当天还没有素材</p>',results);

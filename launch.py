@@ -28,7 +28,7 @@ if __name__ == "__main__":
         pass
     if running:
         webbrowser.open(URL)
-        print("剪辑工作台已打开：" + URL)
+        print("AHB 已打开：" + URL)
     else:
         import uvicorn
         threading.Thread(target=open_when_ready, daemon=True).start()

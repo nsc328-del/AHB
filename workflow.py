@@ -544,13 +544,20 @@ def validate_plan(plan, assets, selection=None):
             raise ValueError("样片不能作为成片素材，请改用素材库中的素材")
         try:
             start = float(raw.get("start", 0))
-            duration = float(raw.get("duration") or (float(raw.get("end", 0)) - start))
-            end = float(raw.get("end", start + duration))
-        except (TypeError, ValueError):
+            speed = float(raw.get("speed", 1))
+            duration = float(raw.get("duration") or (float(raw.get("end", 0))-start)/speed)
+            end = float(raw.get("end", start+duration*speed))
+            original_volume = float(raw.get("original_volume", 1))
+            music_gain = float(raw.get("music_gain", 1))
+        except (TypeError, ValueError, ZeroDivisionError):
             raise ValueError(f"第 {index + 1} 段的时间无效") from None
         if not all(math.isfinite(value) for value in (start, end, duration)) or start < 0 or duration < 0.2 or duration > 600 or end <= start:
             raise ValueError(f"第 {index + 1} 段的起止时间或时长无效")
-        if abs((end - start) - duration) > 0.15:
+        if not math.isfinite(speed+original_volume+music_gain) or not .5 <= speed <= 2 or not 0 <= original_volume <= 1.5 or not 0 <= music_gain <= 1:
+            raise ValueError("速度或音量超出可执行范围")
+        if asset['kind']=='image' and speed != 1:
+            raise ValueError("图片不支持播放速度调整")
+        if abs((end-start)/speed-duration) > 0.15:
             raise ValueError(f"第 {index + 1} 段的时长与所选区间不一致")
         if asset["kind"] == "video" and end > float(asset["duration"]) + 0.02:
             raise ValueError(f"第 {index + 1} 段超出原视频实际时长")
@@ -560,11 +567,18 @@ def validate_plan(plan, assets, selection=None):
                 raise ValueError(f"第 {index + 1} 段超出用户选定的素材区间")
         if asset["kind"] == "image" and start != 0:
             raise ValueError("图片片段应从 0 秒开始")
-        duration = end - start
+        duration = (end-start)/speed
         transition = raw.get("transition", "cut")
         if transition not in {"cut", "fade"}:
             raise ValueError("当前转场支持 cut 和 fade")
         clip = {"id": str(raw.get("id") or db.identifier()), "asset_id": asset["id"], "start": round(start, 4), "end": round(end, 4), "duration": round(duration, 4), "label": str(raw.get("label") or f"镜头 {index + 1}")[:200], "caption": str(raw.get("caption") or "")[:1200], "role": str(raw.get("role") or "body")[:100], "transition": transition, "timeline_start": round(elapsed, 4), "timeline_end": round(elapsed + duration, 4)}
+        clip.update(speed=speed, original_volume=original_volume, music_gain=music_gain)
+        for key in ('cut_reason', 'speed_reason', 'sound_reason'):
+            if key in raw:
+                clip[key] = str(raw[key])[:1200]
+        for key in ('action_index', 'action_evidence', 'beat_sync', 'beat_alignment'):
+            if key in raw:
+                clip[key] = copy.deepcopy(raw[key])
         normalized.append(clip)
         elapsed += duration
     if elapsed > 3600:
@@ -572,6 +586,11 @@ def validate_plan(plan, assets, selection=None):
     music_id = result.get("music_asset_id")
     if music_id and (music_id not in lookup or lookup[music_id]["kind"] not in {"audio", "video"} or not lookup[music_id].get("has_audio")):
         raise ValueError("配乐必须引用带音轨的素材")
+    music_start, music_volume = float(result.get('music_start', 0)), float(result.get('music_volume', .16))
+    if not math.isfinite(music_start+music_volume) or music_start < 0 or not 0 <= music_volume <= 1:
+        raise ValueError('配乐入点或音量无效')
+    if music_id and music_start >= float(lookup[music_id]['duration']):
+        raise ValueError('配乐入点超出素材时长')
     result.update(clips=normalized, ratio=ratio, width=width, height=height, duration=round(elapsed, 4))
     return result
 
@@ -707,7 +726,7 @@ def _plan_job(project_id, brief, job_id, previous_id=None, expected_head_id=UNSE
             reference = get_required("assets", reference["id"])
     job_update(job_id, message="组织素材与叙事节奏，生成可执行剪辑结构", progress=65)
     audio_incomplete = any(asset.get("has_audio") and not _audio_input(asset)[0] for asset in assets + ([reference] if reference else []))
-    options = {"template_id": previous.get("template_id", project["template_id"]) if previous else project["template_id"], "duration": previous.get("duration", project["target_duration"]) if previous else project["target_duration"], "ratio": previous.get("ratio", project["ratio"]) if previous else project["ratio"], "selection": project.get("selection", []), "audio_incomplete": audio_incomplete}
+    options = {"template_id": previous.get("template_id", project["template_id"]) if previous else project["template_id"], "duration": previous.get("target_duration", project["target_duration"]) if previous else project["target_duration"], "ratio": previous.get("ratio", project["ratio"]) if previous else project["ratio"], "selection": project.get("selection", []), "audio_incomplete": audio_incomplete}
     proposed = providers().create_plan(brief, assets, options, reference=reference, previous=previous)
     if not isinstance(proposed, dict):
         raise ValueError("模型没有返回有效的剪辑方案")

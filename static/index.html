@@ -2,21 +2,22 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#ffffff"><title>剪辑工作台</title>
+  <meta name="theme-color" content="#ffffff"><title>AHB · AI 剪辑工作台</title>
   <link rel="stylesheet" href="/static/style.css?v=20261020-meter3">
-  <link rel="stylesheet" href="/static/media-gallery.css?v=20261021-media-merge1">
+  <link rel="stylesheet" href="/static/media-gallery.css?v=20261021-media-cards2">
   <link rel="stylesheet" href="/static/product.css?v=20261020-meter3">
-  <link rel="stylesheet" href="/static/history-dashboard.css?v=20261021-media-merge1">
+  <link rel="stylesheet" href="/static/history-dashboard.css?v=20261021-media-cards2">
   <link rel="stylesheet" href="/static/candidate-graph.css?v=20261020-meter3">
   <link rel="stylesheet" href="/static/usage-meter.css?v=20261020-meter3">
   <link rel="stylesheet" href="/static/generation-studio.css?v=20261021-semantics1">
   <link rel="stylesheet" href="/static/home-canvas.css?v=20261021-home7">
   <link rel="stylesheet" href="/static/animation-studio.css?v=20261021-animation4">
   <link rel="stylesheet" href="/static/operations-home.css?v=20261021-ops-seasons1">
+  <link rel="stylesheet" href="/static/cut-inspector.css?v=20261021-action1">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#operations" aria-label="剪辑工作台首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 3h10v4H7v6H3zm16 0h10v10h-4V7h-6zM3 19h4v6h6v4H3zm22 0h4v10H19v-4h6zM11 20l9-9"/></svg><span>剪辑工作台</span></a>
+    <a class="brand" href="#operations" aria-label="AHB 首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 3h10v4H7v6H3zm16 0h10v10h-4V7h-6zM3 19h4v6h6v4H3zm22 0h4v10H19v-4h6zM11 20l9-9"/></svg><span>AHB</span></a>
     <nav aria-label="工作区"><a href="#operations">运营首页</a><a href="#create">开始剪辑</a><a href="#analysis">素材&amp;分析</a><a href="#reference">样片分析</a><a href="#generate">素材生成</a><a href="#workspace">工作空间</a><a href="#history">历史数据分析</a></nav>
     <div class="header-actions"><span id="global-usage" data-usage-scope="global" data-usage-label="累计用量"></span><button class="icon-btn" id="jobs-toggle" aria-label="查看任务"><span class="job-dot"></span>任务<span id="job-count"></span></button></div>
   </header>
@@ -27,5 +28,5 @@
   <dialog id="asset-dialog" class="asset-dialog"><div id="asset-dialog-content"></div></dialog>
   <div class="toast" id="toast" role="status" hidden></div>
   <input id="upload-input" type="file" accept="image/*,video/*,audio/*" multiple hidden>
-  <script type="module" src="/static/app.js?v=20261021-media-merge1"></script>
+  <script type="module" src="/static/app.js?v=20261021-action1"></script>
 </body></html>

@@ -25,6 +25,7 @@ from home_ai import router as home_ai_router
 from animation_api import router as animation_router
 from operations_api import router as operations_router
 import daily_summaries
+from render_inspector import router as render_inspector_router
 
 
 @asynccontextmanager
@@ -44,7 +45,7 @@ async def lifespan(application):
             await daily_task
 
 
-app = FastAPI(title="Cutroom · Video Workbench", lifespan=lifespan)
+app = FastAPI(title="AHB · AI Video Workbench", lifespan=lifespan)
 app.include_router(decisions_router)
 app.include_router(publication_router)
 app.include_router(usage_router)
@@ -54,6 +55,7 @@ app.include_router(home_ai_router)
 app.include_router(animation_router)
 app.include_router(operations_router)
 app.include_router(daily_summaries.router)
+app.include_router(render_inspector_router)
 STATIC = Path(__file__).resolve().parent / "static"
 app.mount("/static", StaticFiles(directory=STATIC, check_dir=False), name="static")
 

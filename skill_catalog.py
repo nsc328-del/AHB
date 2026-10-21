@@ -69,6 +69,7 @@ def get_templates() -> list[dict]:
         {"id": "promo", "name": "产品短片", "description": "开场吸引、细节展示、品牌收尾。", "ratio": "9:16", "duration": 20, "color": "#284d9d", "category": "剪辑"},
         {"id": "story", "name": "叙事短片", "description": "以事件、转折与情绪组织素材。", "ratio": "16:9", "duration": 45, "color": "#3a6faf", "category": "剪辑"},
         {"id": "rhythm", "name": "节奏混剪", "description": "把动作与画面变化连成节奏。", "ratio": "9:16", "duration": 15, "color": "#507ec4", "category": "剪辑"},
+        {"id": "appetite", "name": "菜品食欲片", "description": "动作切点、快慢变化、原声与音乐。", "ratio": "16:9", "duration": 24, "color": "#284d9d", "category": "剪辑"},
     ]
     rows += [{"id": s["id"], "name": s["name"], "description": s["description"],
               "ratio": "16:9" if s["category"] == "故事" else "9:16", "duration": 10,

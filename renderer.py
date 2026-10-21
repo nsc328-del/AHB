@@ -215,8 +215,15 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
             raise RenderError(f"第{index + 1}个镜头需要图片或视频素材")
         start = _number(clip.get("start", 0), "素材入点")
         duration = _number(clip.get("duration"), "镜头时长", positive=True)
-        end = _number(clip.get("end", start + duration), "素材出点", positive=True)
-        if end <= start or abs(end - start - duration) > .02:
+        speed = _number(clip.get('speed', 1), '播放速度', positive=True)
+        original_volume = _number(clip.get('original_volume', 1), '原声音量')
+        music_gain = _number(clip.get('music_gain', 1), '本段配乐音量')
+        if not .5 <= speed <= 2 or original_volume > 1.5 or music_gain > 1:
+            raise RenderError('播放速度或音量超出可执行范围')
+        if asset['kind']=='image' and speed != 1:
+            raise RenderError('图片不支持播放速度调整')
+        end = _number(clip.get("end", start+duration*speed), "素材出点", positive=True)
+        if end <= start or abs((end-start)/speed-duration) > .02:
             raise RenderError(f"第{index + 1}个镜头的入出点与时长不一致")
         if asset["kind"] == "video":
             if info["video_duration"] <= 0 or end > info["video_duration"] + .02:
@@ -235,7 +242,7 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
         clip.update(_path=path, _kind=asset["kind"], _info=info, _source_start=start,
                     _source_duration=end - start, _frames=frames, _duration=frames / FPS,
                     _timeline_start=frame_cursor / FPS, _timeline_end=next_frame / FPS,
-                    transition=transition)
+                    transition=transition, speed=speed, original_volume=original_volume, music_gain=music_gain)
         clips.append(clip)
         cursor += duration
         frame_cursor = next_frame
@@ -248,6 +255,9 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
         if not music_info["audio"] or music_info["duration"] <= 0:
             raise RenderError("配乐素材没有有效音轨")
     music_volume = _number(plan.get("music_volume", .16), "配乐音量")
+    music_start = _number(plan.get('music_start', 0), '配乐入点')
+    if music and music_start >= music_info['duration']:
+        raise RenderError('配乐入点超出素材时长')
     if music_volume > 1:
         raise RenderError("配乐音量应在0到1之间")
     ass = _ass_document(clips, width, height, str(plan.get("font") or "Hiragino Sans GB"))
@@ -267,7 +277,9 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
         names = []
         for index, clip in enumerate(clips):
             duration, frames = clip["_duration"], clip["_frames"]
-            name = f"clip-{index:04d}.mp4"
+            # PCM intermediates avoid AAC priming/padding at every join. Encode
+            # AAC only once, after the frame-exact picture edit is assembled.
+            name = f"clip-{index:04d}.mkv"
             names.append(name)
             args = [ffmpeg, "-hide_banner", "-loglevel", "error", "-nostdin", "-y"]
             if clip["_kind"] == "video":
@@ -285,9 +297,12 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
                           f"zoompan=z='1+min(on,{frames - 1})*{step:.10f}':"
                           f"x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d={frames}:s={width}x{height}:fps={FPS}")
             else:
-                visual = (f"trim=duration={clip['_source_duration']:.8f},setpts=PTS-STARTPTS,{fit},"
-                          f"fps={FPS},tpad=stop_mode=clone:stop_duration={1 / FPS:.8f},trim=end_frame={frames}")
-            audio = f"aresample={SAMPLE_RATE},aformat=sample_fmts=fltp:channel_layouts=stereo,apad,atrim=duration={duration:.8f},asetpts=PTS-STARTPTS"
+                visual = (f"trim=duration={clip['_source_duration']:.8f},setpts=(PTS-STARTPTS)/{clip['speed']:.10f},{fit},"
+                          f"fps={FPS},tpad=stop_mode=clone:stop_duration={2 / FPS:.8f},trim=end_frame={frames}")
+            audio = (f"aformat=sample_fmts=fltp:channel_layouts=stereo,atrim=duration={clip['_source_duration']:.8f},asetpts=PTS-STARTPTS,"
+                     f"atempo={clip['speed']:.10f},aresample={SAMPLE_RATE},aformat=sample_fmts=fltp:channel_layouts=stereo,"
+                     f"volume={clip['original_volume']:.8f},apad,atrim=end_sample={frames*(SAMPLE_RATE//FPS)},"
+                     f"asetpts=N/SR/TB,afade=t=in:d=0.005,afade=t=out:st={max(0,duration-.005):.8f}:d=0.005")
             if clip["transition"] == "fade":
                 fade = min(.25, duration)
                 visual += f",fade=t=in:st=0:d={fade:.8f}"
@@ -295,22 +310,30 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
             filters = f"[0:v:0]{visual},format=yuv420p[v];[{audio_input}:a:0]{audio}[a]"
             args += ["-filter_complex_threads", "1", "-filter_complex", filters, "-map", "[v]", "-map", "[a]",
                      "-t", f"{duration:.8f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
-                     "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-ar", str(SAMPLE_RATE),
-                     "-ac", "2", "-movflags", "+faststart", name]
+                     "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "pcm_f32le", "-ar", str(SAMPLE_RATE),
+                     "-ac", "2", name]
             _run(args, cwd=workdir)
             report("rendering", .05 + .65 * (index + 1) / len(clips), f"已渲染镜头 {index + 1}/{len(clips)}")
-        (workdir / "concat.txt").write_text("".join(f"file '{name}'\n" for name in names), encoding="utf-8")
+        (workdir / "concat.txt").write_text("".join(f"file '{name}'\nduration {clip['_duration']:.10f}\n" for name,clip in zip(names,clips)), encoding="utf-8")
         args = [ffmpeg, "-hide_banner", "-loglevel", "error", "-nostdin", "-y", "-f", "concat", "-safe", "1", "-i", "concat.txt"]
         if music:
-            args += ["-stream_loop", "-1", "-i", str(music)]
+            args += ["-stream_loop", "-1", "-ss", str(music_start), "-i", str(music)]
             fade_out = max(0, total - min(.5, total / 4))
+            envelope = str(clips[-1]['music_gain'])
+            for index in reversed(range(len(clips))):
+                clip = clips[index]
+                start, end, gain = clip['_timeline_start'], clip['_timeline_end'], clip['music_gain']
+                previous_gain = clips[index-1]['music_gain'] if index else gain
+                ramp = min(.08, clip['_duration']/2)
+                local = f"if(lt(t,{start+ramp:.8f}),{previous_gain}+({gain}-{previous_gain})*(t-{start:.8f})/{ramp:.8f},{gain})"
+                envelope = f"if(lt(t,{end:.8f}),{local},{envelope})"
             audio = (f"[0:a:0]aresample={SAMPLE_RATE}:async=1:first_pts=0,apad,atrim=duration={total:.8f}[original];"
-                     f"[1:a:0]aresample={SAMPLE_RATE},volume={music_volume},atrim=duration={total:.8f},"
+                     f"[1:a:0]asetpts=PTS-STARTPTS,aresample={SAMPLE_RATE},volume='{music_volume}*({envelope})':eval=frame,atrim=duration={total:.8f},"
                      f"afade=t=in:d={min(.3, total / 4):.8f},afade=t=out:st={fade_out:.8f}:d={total-fade_out:.8f}[music];"
-                     "[original][music]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95:level=0[a]")
+                     "[original][music]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.7:level=0:latency=1[a]")
         else:
-            audio = f"[0:a:0]aresample={SAMPLE_RATE}:async=1:first_pts=0,apad,atrim=duration={total:.8f}[a]"
-        final_visual = "ass=captions.ass,format=yuv420p" if has_captions else "format=yuv420p"
+            audio = f"[0:a:0]aresample={SAMPLE_RATE}:async=1:first_pts=0,apad,atrim=duration={total:.8f},alimiter=limit=0.7:level=0:latency=1[a]"
+        final_visual = f"setpts=N/({FPS}*TB),"+("ass=captions.ass,format=yuv420p" if has_captions else "format=yuv420p")
         args += ["-filter_complex_threads", "1", "-filter_complex", f"[0:v:0]{final_visual}[v];{audio}",
                  "-map", "[v]", "-map", "[a]", "-t", f"{total:.8f}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
                  "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-ar", str(SAMPLE_RATE),
@@ -345,6 +368,8 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
              "source_end_seconds": clip["_source_start"] + clip["_source_duration"],
              "source_time_base": (clip["_info"]["video"] or {}).get("time_base"),
              "kind": clip["_kind"], "transition": clip["transition"],
+             "speed": clip['speed'], "original_volume": clip['original_volume'], "music_gain": clip['music_gain'],
+             "source_has_audio": bool(clip['_info']['audio']),
              "caption": str(clip.get("caption") or "")}
             for clip in clips
         ],
@@ -353,7 +378,7 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
         with Path(path).open("rb") as handle:
             return hashlib.file_digest(handle, "sha256").hexdigest()
     manifest = {
-        "schema_version": 1, "plan_id": plan.get("id"), "plan_version": plan.get("version"),
+        "schema_version": 2, "plan_id": plan.get("id"), "plan_version": plan.get("version"),
         "output_sha256": digest(output_path), "compiled_timeline": compiled_timeline,
         "assets": [
             {"asset_id": asset_id, "sha256": digest(asset_map[asset_id]["path"])}
@@ -364,6 +389,9 @@ def render_plan(plan: dict, assets: list[dict], output_path: Path,
         "width": width, "height": height, "sample_rate": SAMPLE_RATE,
         "font_requested": str(plan.get("font") or "Hiragino Sans GB"),
         "music_asset_id": plan.get("music_asset_id"), "music_volume": music_volume,
+        "music_start": music_start, "music_beat_times": plan.get('music_beat_times', []),
+        "music_sync_events": plan.get('music_sync_events', []),
+        "audio_treatment": {'pitch_preserved': True, 'music_gain_ramp_seconds': .08, 'source_edge_fade_seconds': .005},
         "plan": plan,
     }
     manifest_path = output_path.with_suffix(".manifest.json")
