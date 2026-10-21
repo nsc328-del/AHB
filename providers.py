@@ -147,7 +147,7 @@ def _request(provider: str, method: str, endpoint: str, body: dict | None = None
     key = config.get(provider + "_api_key")
     title = "DeepSeek" if provider == "deepseek" else "MiniMax H3"
     if not key:
-        raise ConfigurationError(f"请先在设置中配置 {title} API Key")
+        raise ConfigurationError(f"{title} 服务尚未配置，请联系项目维护者")
     base = config.get(provider + "_base_url", "")
     if base not in _BASES[provider]:
         raise ConfigurationError("供应商 API 地址不是受支持的官方地址")
