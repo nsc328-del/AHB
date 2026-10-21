@@ -16,6 +16,11 @@ import storage as db
 import workflow
 from decisions_api import router as decisions_router
 from publication_api import router as publication_router
+from usage_api import router as usage_router
+from generation_batches import router as generation_batches_router
+from home_api import router as home_router
+from home_ai import router as home_ai_router
+from animation_api import router as animation_router
 
 
 @asynccontextmanager
@@ -24,12 +29,19 @@ async def lifespan(application):
     db.mark_interrupted()
     import decisions
     decisions.reconcile_batches(startup=True)
+    import generation_batches
+    generation_batches.reconcile_startup()
     yield
 
 
 app = FastAPI(title="Cutroom · Video Workbench", lifespan=lifespan)
 app.include_router(decisions_router)
 app.include_router(publication_router)
+app.include_router(usage_router)
+app.include_router(generation_batches_router)
+app.include_router(home_router)
+app.include_router(home_ai_router)
+app.include_router(animation_router)
 STATIC = Path(__file__).resolve().parent / "static"
 app.mount("/static", StaticFiles(directory=STATIC, check_dir=False), name="static")
 
@@ -150,6 +162,11 @@ def analyze_asset(asset_id: str):
     return {"job_id": job["id"]}
 
 
+@app.patch("/api/assets/{asset_id}/name")
+def rename_asset(asset_id: str, payload: dict):
+    return workflow.rename_asset(asset_id, payload.get("name"), payload.get("expected_name"))
+
+
 @app.get("/api/transcription")
 def transcription_status():
     import transcription
@@ -168,10 +185,39 @@ def analyze_reference(asset_id: str):
     return {"job_id": job["id"]}
 
 
+@app.post("/api/references/{asset_id}/repair")
+def repair_reference(asset_id: str, payload: dict):
+    import reference_repair
+    job = reference_repair.repair_reference(asset_id, payload.get("base_analysis_id"), payload.get("targets", []))
+    return {"job_id": job["id"]}
+
+
+@app.post("/api/references/{asset_id}/rhythm")
+def analyze_reference_rhythm(asset_id: str):
+    import rhythm_analysis
+    job = rhythm_analysis.analyze_rhythm(asset_id)
+    return {"job_id": job["id"]}
+
+
+@app.post("/api/references/{asset_id}/presentation")
+def analyze_reference_presentation(asset_id: str, payload: dict):
+    import reference_presentation
+    job = reference_presentation.analyze_presentation(asset_id, payload.get("base_analysis_id"))
+    return {"job_id": job["id"]}
+
+
+@app.post("/api/references/{asset_id}/semantics")
+def analyze_reference_semantics(asset_id: str, payload: dict):
+    import reference_semantics
+    job = reference_semantics.analyze_semantics(asset_id, payload.get("base_analysis_id"))
+    return {"job_id": job["id"]}
+
+
 @app.post("/api/projects")
 def create_project(payload: dict):
     job = workflow.create_project(payload)
-    return {"job_id": job["id"], "project_id": job["payload"]["project_id"]}
+    return {"job_id": job["id"], "project_id": job["payload"]["project_id"],
+            **({"batch_id": job["batch_id"]} if job.get("batch_id") else {})}
 
 
 @app.get("/api/projects")
@@ -216,6 +262,27 @@ def generate_video(payload: dict):
 @app.post("/api/generation-plans")
 def generation_plan(payload: dict):
     job = workflow.generation_plan(payload)
+    return {"job_id": job["id"]}
+
+
+@app.get("/api/generation-plans")
+def generation_plan_history(skill_id: str | None = None):
+    return {"plans": workflow.list_generation_plans(skill_id)}
+
+
+@app.get("/api/generation-plans/{job_id}")
+def generation_plan_detail(job_id: str):
+    return workflow.get_generation_plan(job_id)
+
+
+@app.put("/api/generation-plans/{job_id}/shots/{shot_id}")
+def generation_shot_review(job_id: str, shot_id: str, payload: dict):
+    return workflow.save_generation_shot(job_id, shot_id, payload)
+
+
+@app.post("/api/generation-plans/{job_id}/shots/{shot_id}/rewrite-prompt")
+def generation_shot_rewrite(job_id: str, shot_id: str, payload: dict):
+    job = workflow.rewrite_generation_prompt(job_id, shot_id, payload)
     return {"job_id": job["id"]}
 
 

@@ -109,7 +109,8 @@ class ProviderContractTest(unittest.TestCase):
         with self.assertRaises(p.ProviderError):
             p.analyze_asset(self.asset, [{"path": str(self.image), "time": 0}])
         audio = {"id": "audio-1", "kind": "audio", "duration": 5, "audio_status": "succeeded",
-                 "transcript": {"text": "早上好", "segments": [{"start": 1, "end": 2, "text": "早上好"}], "model": "local-test"}}
+                 "transcript": {"text": "早上好", "segments": [{"start": 1, "end": 2, "text": "早上好",
+                                                             "words": [{"probability": .9}]}], "model": "local-test"}}
         data["segments"][0].update(start=1, end=2, evidence_times=[1, 2], shot_type="不适用", motion="不适用")
         self.deepseek_reply(data)
         self.assertTrue(p.analyze_asset(audio, [])["audio_analyzed"])
@@ -118,8 +119,12 @@ class ProviderContractTest(unittest.TestCase):
     def test_plan_real_intervals_partial_selection_and_reference_transcript(self):
         video = {"id": "video-1", "kind": "video", "duration": 10, "width": 640, "height": 480}
         other = {**video, "id": "video-2"}
-        reference = {**video, "id": "reference", "analysis": {"summary": "开场到收束"},
-                     "audio_status": "succeeded", "transcript": {"text": "真实参考台词", "segments": []}}
+        reference = {**video, "id": "reference", "analysis": {
+                         "summary": "开场到收束", "structure": [{"role": "旧成果展示"}],
+                         "content_segments": [{"start": 0, "end": 2, "role": "旧开场建立", "description": "画面横向变化"}],
+                         "presentation": {"kind": "motion_transition", "summary": "同向画面接续"}},
+                     "audio_status": "succeeded", "transcript": {"text": "真实参考台词", "segments": [
+                         {"start": 0, "end": 2, "text": "真实参考台词", "words": [{"probability": .9}]}]}}
         clip = {"asset_id": "video-1", "start": 2, "end": 5, "duration": 3,
                 "label": "动作", "caption": "", "role": "开场", "transition": "cut"}
         data = {"title": "测试计划", "summary": "来源连续", "clips": [clip, {**clip, "asset_id": "video-2"}], "music_asset_id": ""}
@@ -131,6 +136,9 @@ class ProviderContractTest(unittest.TestCase):
         self.assertEqual(result["duration"], 6)
         context = json.loads(json.loads(self.requests[-1].content)["input"][0]["content"][0]["text"])
         self.assertEqual(context["reference"]["transcript"]["text"], "真实参考台词")
+        self.assertNotIn("旧成果展示", json.dumps(context, ensure_ascii=False))
+        self.assertNotIn("旧开场建立", json.dumps(context, ensure_ascii=False))
+        self.assertEqual(context["reference"]["analysis"]["summary"], "同向画面接续")
         self.assertEqual(context["previous"]["clips"], data["clips"])
         self.assertNotIn("decision_events", context["previous"])
         self.assertNotIn("reference_cases", context["previous"])

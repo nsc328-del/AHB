@@ -15,7 +15,7 @@ TABLES = {
     "assets", "analyses", "projects", "plans", "jobs", "renders",
     "candidate_batches", "decision_events", "publication_cases",
     "publication_observations", "publication_bindings", "publication_events",
-    "publication_syncs",
+    "publication_syncs", "usage_records", "usage_tracking", "generation_batches", "animation_projects", "animation_revisions",
 }
 
 
@@ -44,12 +44,15 @@ def connection():
 
 
 def initialize():
-    for name in ("assets", "previews", "frames", "renders", "plans", "tmp", "generations"):
+    for name in ("assets", "previews", "frames", "renders", "plans", "tmp", "generations", "animation_sources"):
         (DATA / name).mkdir(parents=True, exist_ok=True)
     with connection() as conn:
         conn.execute("PRAGMA journal_mode=WAL")
         for table in TABLES:
             conn.execute(f"CREATE TABLE IF NOT EXISTS {table} (id TEXT PRIMARY KEY, data TEXT NOT NULL, created_at TEXT NOT NULL, updated_at TEXT NOT NULL)")
+        stamp = now()
+        conn.execute("INSERT OR IGNORE INTO usage_tracking(id,data,created_at,updated_at) VALUES(?,?,?,?)",
+                     ("provider-usage-v1", '{"version": 1}', stamp, stamp))
 
 
 def _table(table):
@@ -126,6 +129,10 @@ def public_job(job):
     if not job:
         return None
     item = {k: v for k, v in job.items() if k not in {"payload", "provider_state", "traceback"} and not k.startswith("_")}
+    if job.get("kind") in {"generation_plan", "generation_prompt"}:
+        item["skill_id"] = job.get("payload", {}).get("skill_id") or "h3-prompt-writing"
+    if job.get("kind") == "generation_prompt":
+        item.update({key: job.get("payload", {}).get(key) for key in ("plan_job_id", "shot_id")})
     state = job.get("provider_state", {})
     item["resumable"] = job.get("kind") == "generation" and bool(state.get("task_id")) and not state.get("terminal_failure") and job.get("status") in {"failed", "unknown"}
     return item

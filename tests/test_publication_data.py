@@ -119,6 +119,56 @@ class PublicationDataTest(unittest.TestCase):
         with self.assertRaises(KeyError):
             p.list_history(workspace_id="not-a-workspace")
 
+    def test_dashboard_latest_video_values_platform_scope_and_missing_are_not_zero(self):
+        source = {"kind": "alpha_sqlite", "label": "星尚", "location": p.SOURCE_LOCATION}
+        p._ingest(self.payload({"播放": {"value": 100}, "点赞": {"value": 2}},
+                               "2026-10-19T13:00:00+08:00"), source)
+        p._ingest(self.payload({"播放": {"value": 12000, "approximate": True},
+                               "点赞": {"value": 0}, "评论": {"value": 0, "zero_may_mean_unavailable": True}}), source)
+        self.pub = {**self.pub, "id": "missing", "published_at": "2026-10-20T03:00:00+08:00"}
+        p._ingest(self.payload({}), source)
+        self.pub = {**self.pub, "id": "zero", "published_at": "2026-10-20T04:00:00+08:00"}
+        p._ingest(self.payload({"播放": {"value": 0}, "点赞": {"value": 0}}), source)
+        self.pub = {**self.pub, "id": "other-platform", "platform": "xiaohongshu"}
+        p._ingest(self.payload({"播放": {"value": 999999}}), source)
+        self.pub = {**self.pub, "id": "other-source", "platform": "douyin"}
+        p._ingest(self.payload({"播放": {"value": 888888}}), self.source)
+        data = p.history_dashboard()
+        self.assertEqual(data["scope"]["videos"], 3)
+        self.assertEqual(data["scope"]["project_videos"], 4)
+        views = data["metrics"]["views"]
+        self.assertEqual((views["count"], views["missing_count"], views["total"], views["median"]),
+                         (2, 1, 12000, 6000))
+        self.assertEqual(views["approximate_count"], 1)
+        self.assertEqual(data["metrics"]["comments"]["ambiguous_count"], 1)
+        self.assertIsNone(data["metrics"]["comments"]["total"])
+        self.assertEqual(data["metrics"]["likes"]["total"], 0)
+        self.assertEqual(sum(row["count"] for row in data["distribution"]), 2)
+        self.assertEqual(data["distribution"][0]["count"], 1)
+        self.assertEqual(data["distribution"][2]["count"], 1)
+        self.assertEqual(data["daily"][1]["views"]["median"], 0)
+        self.assertEqual(data["daily"][1]["views"]["missing_count"], 1)
+        self.assertEqual(data["top_cases"][0]["id"], "publication-1")
+        self.assertEqual(p.history_dashboard(platform="xiaohongshu")["metrics"]["views"]["total"], 999999)
+
+    def test_dashboard_dates_use_shanghai_inclusive_range_and_validate(self):
+        source = {"kind": "alpha_sqlite", "label": "星尚", "location": p.SOURCE_LOCATION}
+        self.pub["published_at"] = "2026-10-19T17:00:00Z"  # October 20 in Shanghai.
+        p._ingest(self.payload(), source)
+        inside = p.history_dashboard(date_from="2026-10-20", date_to="2026-10-20")
+        self.assertEqual(inside["scope"]["videos"], 1)
+        self.assertEqual(inside["cases"][0]["published_date"], "2026-10-20")
+        self.assertEqual(p.history_dashboard(date_to="2026-10-19")["scope"]["videos"], 0)
+        empty = p.history_dashboard(account="没有此账号")
+        self.assertEqual(empty["cases"], [])
+        self.assertIsNone(empty["metrics"]["views"]["median"])
+        for options in ({"platform": ""}, {"date_from": "2026-02-30"}, {"date_to": "20261020"},
+                        {"date_from": "2026-10-21", "date_to": "2026-10-20"}):
+            with self.subTest(options=options), self.assertRaises(ValueError):
+                p.history_dashboard(**options)
+        with self.assertRaises(KeyError):
+            p.history_dashboard(workspace_id="unknown")
+
     def test_exact_render_binding_confirmation_scope_hash_and_revoke_audit(self):
         p._ingest(self.payload(), self.source)
         db.create("projects", {"id": "project-1"})

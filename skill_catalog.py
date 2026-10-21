@@ -9,6 +9,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent / "vendor" / "skills"
 SOURCE = "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/"
 
+# Brief examples adapted from the published style rules. These are not the
+# undisclosed prompts used to produce the preview GIFs, and are never user input.
+_BRIEF_EXAMPLES = {
+    "h3-prompt-writing": "例如：清晨咖啡店，一杯拿铁放到窗边，镜头缓慢靠近奶泡纹理。暖色侧光，保留杯碟轻碰和店内环境声。",
+    "minimalist-product-ad-generator": "例如：为图中的无线耳机做一条广告。白色留白中打开充电盒，切到材质细节，最后展示完整产品；轻快电子节奏，保持外形与颜色一致。",
+    "papercraft-stop-motion-explainer": "例如：用纸艺定格讲清月相变化。纸月球沿轨道绕地球移动，光照面随位置变化；保留纸张纤维、前后层次与轻微纸片摩擦声。",
+    "3d-animation-short-generator": "例如：两个小伙伴修理一辆坏掉的小车。先尝试失败，再一起找到办法，最后开车出发。温暖的 3D 动画，角色造型和场景保持一致。",
+    "brand-promo-video-generator": "例如：介绍一家街角咖啡店。从清晨开门、磨豆到第一杯咖啡递给客人；突出真实手作过程，结尾出现我提供的店名和标志。",
+    "music-video-subtitle-generator": "例如：用我上传的音乐与歌词做一段 MV。文字在主唱进入时逐句出现，跟随重拍变化；副歌画面更开阔，保持人物与色调一致。",
+    "co-op-game-intro-generator": "例如：把两张人物图做成双人合作游戏开场。左右玩家卡片依次亮起，两位角色确认加入后并肩出发；保留各自服装、装备和身份。",
+    "paper-collage-explainer-generator": "例如：用纸张拼贴讲一个想法如何落地。散落的笔记逐张靠拢，拼出路径，最后搭成一座纸桥；保留剪贴边缘与纸张声，不加旁白。",
+    "handdrawn-live-video-generator": "例如：真实书桌上，一条发光手绘线爬过杯沿，变成小鱼游向桌边。镜头稍慢半拍跟随，笔触粗糙，线条始终贴合真实物体。",
+}
+
 _SKILLS = [
     {"id": "h3-prompt-writing", "name": "H3 镜头提示词", "description": "把画面、动作与声音组织成可生成的镜头。", "category": "提示词", "mode": "T2VA", "inputs": [], "prompt_hint": "按时间展开构图、主体、环境、动作、镜头和声音，避免抽象形容词。"},
     {"id": "minimalist-product-ad-generator", "name": "极简产品广告", "description": "产品锚点、细节特写与有节奏的品牌文案。", "category": "广告", "mode": "Ref2VA", "inputs": ["产品图片"], "prompt_hint": "锁定产品颜色、材质与结构，采用独立主视觉、细节、收尾锚点；用精确节拍组织留白与短文案。"},
@@ -30,6 +44,11 @@ def get_skills() -> list[dict]:
         row.update(source_url=SOURCE + row["id"], available=source_ready,
                    status="已适配" if source_ready else "规范缺失",
                    requires=["DeepSeek", "MiniMax H3"])
+        row["prompt_placeholder"] = _BRIEF_EXAMPLES[row["id"]]
+        row["prompt_placeholder_source"] = {
+            "kind": "adapted_brief", "source_url": SOURCE + row["id"],
+            "preview_original_prompt_verified": False,
+        }
         row["limitations"] = [] if row["id"] == "h3-prompt-writing" else [
             "使用已上传的角色、产品或场景锚点；未接自动锚点生图。",
             "分镜逐段生成，成片通过代码剪辑；独立配乐需上传。",

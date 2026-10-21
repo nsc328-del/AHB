@@ -46,6 +46,8 @@ class DecisionContractTest(unittest.TestCase):
                                               create_plan=self.model_plan)
         self.mock = patch.object(workflow, "providers", return_value=self.provider)
         self.mock.start()
+        self.render_mock = patch.object(workflow, "render", side_effect=self.synthetic_preview)
+        self.render_mock.start()
         self.client = TestClient(app)
         self.client.__enter__()
         self.assets = [db.create("assets", {"name": f"合成图 {i}", "kind": "image", "duration": 0, "width": 100,
@@ -67,6 +69,7 @@ class DecisionContractTest(unittest.TestCase):
             time.sleep(.02)
         self.client.__exit__(None, None, None)
         self.mock.stop()
+        self.render_mock.stop()
         self.env.stop()
         db.DATA = self.previous_data
         self.tmp.cleanup()
@@ -83,7 +86,14 @@ class DecisionContractTest(unittest.TestCase):
             result["title"] = "AI 修改了历史初稿"
             return result
         key = options["candidate_strategy"]["key"]
-        return self.plan({"evidence": [0, 1, 2], "question": [1, 2, 0], "process": [2, 0, 1]}[key], key)
+        return self.plan({"evidence": [0, 1, 2], "question": [1, 2, 0], "exploration": [2, 0, 1]}[key], key)
+
+    def synthetic_preview(self, project_id, plan_id, *, preview_batch_id=None):
+        render = db.create("renders", {"project_id": project_id, "plan_id": plan_id,
+                                       "url": "/synthetic-contract.mp4", "sha256": "synthetic",
+                                       "candidate_preview": True, "batch_id": preview_batch_id})
+        return db.create("jobs", {"kind": "render", "status": "succeeded", "result": render,
+                                  "payload": {"project_id": project_id, "plan_id": plan_id}})
 
     def wait(self, job_id):
         deadline = time.monotonic() + 10

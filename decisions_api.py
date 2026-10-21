@@ -21,6 +21,11 @@ def candidate_event(batch_id: str, payload: dict):
     return decisions.record_event(batch_id, payload)
 
 
+@router.post("/api/candidate-batches/{batch_id}/retry-previews")
+def retry_previews(batch_id: str, payload: dict = {}):
+    return decisions.retry_previews(batch_id, payload)
+
+
 @router.get("/api/projects/{project_id}/decisions")
 def project_decisions(project_id: str):
     return decisions.project_decisions(project_id)
