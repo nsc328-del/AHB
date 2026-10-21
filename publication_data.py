@@ -12,7 +12,9 @@ import sqlite3
 import subprocess
 import threading
 import zlib
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
+from statistics import median
+from zoneinfo import ZoneInfo
 
 import storage as db
 
@@ -363,6 +365,104 @@ def business_workspaces():
                            "accounts_count": len(cases["facets"]["accounts"]),
                            "latest_captured_at": latest.get("captured_at"),
                            "view_only": True}]}
+
+
+def history_dashboard(workspace_id="xingshang", platform="douyin", account="", date_from="", date_to=""):
+    """Aggregate one platform's latest per-video observations, never observation sums."""
+    if workspace_id != "xingshang":
+        raise KeyError(workspace_id)
+    if platform not in {"douyin", "xiaohongshu", "channels"}:
+        raise ValueError("请选择一个平台")
+
+    def parse_day(value):
+        if not value:
+            return None
+        try:
+            parsed = date.fromisoformat(value)
+            if parsed.isoformat() != value:
+                raise ValueError()
+            return parsed
+        except (ValueError, TypeError):
+            raise ValueError("日期格式应为 YYYY-MM-DD") from None
+
+    start, end = parse_day(date_from), parse_day(date_to)
+    if start and end and start > end:
+        raise ValueError("开始日期不能晚于结束日期")
+    zone = ZoneInfo("Asia/Shanghai")
+
+    def day_of(value):
+        epoch = _time(value)
+        return datetime.fromtimestamp(epoch, zone).date() if epoch is not None else None
+
+    source_cases = [c for c in _records("publication_cases")
+                    if c.get("source", {}).get("kind") == "alpha_sqlite"
+                    and c.get("source", {}).get("location") == SOURCE_LOCATION]
+    platform_cases = [c for c in source_cases if c.get("platform") == platform]
+    accounts = sorted({c["account"] for c in platform_cases})
+    scoped = [c for c in platform_cases if not account or c.get("account") == account]
+    known_dates = sorted(day_of(c.get("published_at")) for c in scoped if day_of(c.get("published_at")))
+    cases = []
+    for case in scoped:
+        day = day_of(case.get("published_at"))
+        if day is None or (start and day < start) or (end and day > end):
+            continue
+        cases.append({**case, "published_date": day.isoformat()})
+    selected_dates = sorted(c["published_date"] for c in cases)
+
+    def metric_summary(rows, key):
+        entries = [c.get("metrics", {}).get(key, {}) for c in rows]
+        observed = [m for m in entries if not m.get("unknown", True) and _number(m.get("value"))
+                    and m["value"] >= 0]
+        values = [m["value"] for m in observed]
+        return {"count": len(values), "missing_count": len(rows) - len(values),
+                "ambiguous_count": sum(bool(m.get("zero_may_mean_unavailable")) for m in entries),
+                "approximate_count": sum(bool(m.get("approximate")) for m in observed),
+                "total": sum(values) if values else None, "median": median(values) if values else None,
+                "min": min(values) if values else None, "max": max(values) if values else None}
+
+    metrics = {key: metric_summary(cases, key) for key in METRICS}
+    by_day = {}
+    for case in cases:
+        by_day.setdefault(case["published_date"], []).append(case)
+    daily = [{"date": day, "videos": len(rows), "views": metric_summary(rows, "views")}
+             for day, rows in sorted(by_day.items())]
+    thresholds = [(0, 1000, "1 千以下"), (1000, 10000, "1 千–1 万"),
+                  (10000, 100000, "1 万–10 万"), (100000, 1000000, "10 万–100 万"),
+                  (1000000, None, "100 万及以上")]
+    distribution = []
+    for low, high, label in thresholds:
+        rows = [c for c in cases if not c.get("metrics", {}).get("views", {}).get("unknown", True)
+                and _number(c["metrics"]["views"].get("value"))
+                and c["metrics"]["views"]["value"] >= low
+                and (high is None or c["metrics"]["views"]["value"] < high)]
+        distribution.append({"label": label, "min": low, "max": high, "count": len(rows),
+                             "approximate_count": sum(bool(c["metrics"]["views"].get("approximate")) for c in rows)})
+    captured = [c for c in cases if _time(c.get("captured_at")) is not None]
+    oldest_capture = min(captured, key=lambda c: _time(c["captured_at"]), default={})
+    latest_capture = max(captured, key=lambda c: _time(c["captured_at"]), default={})
+    view_cases = [c for c in cases if not c.get("metrics", {}).get("views", {}).get("unknown", True)
+                  and _number(c["metrics"]["views"].get("value")) and c["metrics"]["views"]["value"] >= 0]
+    compact = lambda c: {k: c.get(k) for k in
+                        ("id", "title", "account", "platform", "published_at", "published_date",
+                         "captured_at", "age_hours", "metrics")}
+    sorted_cases = sorted(cases, key=lambda c: _time(c.get("published_at")) or 0, reverse=True)
+    return {
+        "workspace": {"id": workspace_id, "name": "星尚"},
+        "filters": {"platform": platform, "account": account, "date_from": date_from, "date_to": date_to},
+        "facets": {"platforms": sorted({c["platform"] for c in source_cases}), "accounts": accounts,
+                   "date_min": known_dates[0].isoformat() if known_dates else None,
+                   "date_max": known_dates[-1].isoformat() if known_dates else None},
+        "scope": {"date_from": date_from or (selected_dates[0] if selected_dates else None),
+                  "date_to": date_to or (selected_dates[-1] if selected_dates else None),
+                  "timezone": "Asia/Shanghai", "videos": len(cases), "project_videos": len(source_cases),
+                  "undated_videos": sum(day_of(c.get("published_at")) is None for c in scoped),
+                  "capture_from": oldest_capture.get("captured_at"), "capture_to": latest_capture.get("captured_at"),
+                  "observation_basis": "latest_per_video", "cumulative": True},
+        "metrics": metrics, "daily": daily, "distribution": distribution,
+        "cases": [compact(c) for c in sorted_cases],
+        "top_cases": [compact(c) for c in sorted(view_cases, key=lambda c: c["metrics"]["views"]["value"],
+                                               reverse=True)[:10]],
+    }
 
 
 def history_detail(publication_id):

@@ -175,14 +175,16 @@ class APIIntegrationTest(unittest.TestCase):
         self.assertEqual(finished["status"], "failed", finished)
         self.assertEqual(calls, {"submit": 1, "query": 1})
         self.assertEqual(self.client.post(f"/api/jobs/{accepted['id']}/resume").status_code, 400)
-        for error, expected in [(ValueError("参数错误"), "failed"), (ConfigurationError("模型未配置"), "needs_configuration"), (ProviderError("供应商明确拒绝"), "failed")]:
+        # Once create_generation has started, an unexpected parsing/persistence
+        # error cannot prove rejection. Real local validation reports ProviderError.
+        for error, expected in [(ValueError("回执处理异常"), "unknown"), (ConfigurationError("模型未配置"), "needs_configuration"), (ProviderError("供应商明确拒绝"), "failed")]:
             def rejected(*args, **kwargs):
                 raise error
             self.provider.create_generation = rejected
             rejected_id = self.client.post("/api/generations", json={"prompt": "测试"}).json()["job_id"]
             rejected_job = self.await_job(rejected_id)
             self.assertEqual(rejected_job["status"], expected)
-            self.assertFalse(db.get("jobs", rejected_id)["provider_state"].get("submitting"))
+            self.assertEqual(bool(db.get("jobs", rejected_id)["provider_state"].get("submitting")), expected == "unknown")
 
     def test_generation_storyboard_and_selected_interval_validation(self):
         result = self.client.post("/api/generation-plans", json={"prompt": "合成测试", "skill_id": "h3-prompt-writing", "duration": 4}).json()

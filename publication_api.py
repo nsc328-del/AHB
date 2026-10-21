@@ -31,6 +31,17 @@ def history(platform: str = "", account: str = "", query: str = "", limit: int =
     return data.list_history(platform, account, query, limit, offset)
 
 
+@router.get("/api/history/dashboard")
+def history_dashboard(workspace_id: str = "xingshang", platform: str = "douyin", account: str = "",
+                      date_from: str = "", date_to: str = ""):
+    try:
+        return data.history_dashboard(workspace_id, platform, account, date_from, date_to)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from None
+    except KeyError:
+        raise HTTPException(404, "项目不存在") from None
+
+
 @router.get("/api/history/{publication_id}")
 def history_detail(publication_id: str):
     return data.history_detail(publication_id)

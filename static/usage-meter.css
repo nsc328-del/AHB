@@ -1,0 +1,47 @@
+.um-host{display:inline-flex;align-items:center;max-width:100%;vertical-align:middle}
+.um-pill{display:inline-flex;align-items:center;gap:7px;min-height:30px;max-width:100%;padding:6px 11px;border:1px solid #e8e9ec;border-radius:999px;background:linear-gradient(150deg,#fbfbfc,#f0f1f3);box-shadow:inset 0 1px 1px #fff,0 2px 5px #1c243008;color:#606773;font-size:12px;line-height:1.15;white-space:nowrap;transition:box-shadow 160ms ease,background 160ms ease,transform 120ms ease}
+.um-pill:hover{color:#3c4350;box-shadow:inset 0 1px 1px #fff,0 3px 7px #1c24300d}
+.um-pill:active{transform:scale(.98);box-shadow:inset 1px 2px 4px #1c24300d,inset -1px -1px 3px #fff}
+.um-pill[aria-expanded=true]{background:#f2f4fa;border-color:#dfe3f1;color:#3c485e;box-shadow:inset 1px 2px 4px #1c24300b,inset -1px -1px 3px #fff}
+.um-pill:focus-visible,.um-close:focus-visible,.um-retry:focus-visible,.um-calls>summary:focus-visible{outline:2px solid var(--blue,#243beb);outline-offset:3px}
+.um-icon{display:inline-flex;flex:0 0 auto;align-items:center}
+.um-icon svg{width:15px;height:16px;stroke:currentColor;stroke-width:1.3;fill:none}
+.um-amount,.um-detail,.um-row dd,.um-call-amount{font-variant-numeric:tabular-nums}
+.um-detail::before{content:"·";margin-right:7px;color:#9297a1}
+.um-popover{position:fixed;z-index:120;box-sizing:border-box;width:344px;padding:20px 22px 17px;margin:0;overflow:auto;color:#424956;background:#f8f9fa;border:1px solid #e7e9ed;border-radius:23px;box-shadow:inset 0 1px 1px #ffffff,0 8px 30px #1d243017,0 2px 5px #1d24300a;font-size:13px;line-height:1.5;overscroll-behavior:contain;outline:none}
+.um-popover.um-open{animation:um-reveal 180ms cubic-bezier(.2,.8,.2,1) both}
+.um-heading{display:flex;align-items:center;gap:9px;margin:0 0 14px;color:#242833}
+.um-heading .um-icon svg{width:18px;height:20px}
+.um-title{font-size:15px;font-weight:500}
+.um-close{display:grid;place-items:center;width:27px;height:27px;min-height:0;padding:0;margin:-3px -8px -3px auto;background:transparent;border:0;border-radius:50%;font-size:20px;color:#858c98;line-height:1;cursor:pointer}
+.um-close:hover{background:#eceef2;color:#3d4553}
+.um-numbers{display:grid;gap:9px;margin:0}
+.um-row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;min-width:0;color:#7b828e}
+.um-row dt,.um-row dd{margin:0}
+.um-row dd{color:#5c6573;text-align:right;white-space:nowrap}
+.um-total{padding-bottom:12px;margin-bottom:3px;border-bottom:1px solid #e0e3e9}
+.um-total dt{color:#525b69}
+.um-total dd{font-size:17px;font-weight:500;color:#242833}
+.um-video{padding-top:10px;margin-top:3px;border-top:1px solid #e0e3e9}
+.um-total[hidden]~.um-video{padding-top:0;margin-top:0;border-top:0}
+.um-note{margin:14px 0 0;color:#858c98;font-size:11px;line-height:1.6}
+.um-calls{margin-top:16px;padding-top:11px;border-top:1px solid #e4e6eb}
+.um-calls>summary{display:flex;align-items:center;gap:7px;list-style:none;cursor:pointer;color:#737c8b;font-size:11px}
+.um-calls>summary::-webkit-details-marker{display:none}
+.um-calls>summary::before{content:"";display:block;width:5px;height:5px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(-45deg);transition:transform 140ms ease}
+.um-calls[open]>summary::before{transform:rotate(45deg)}
+.um-call-list{display:grid;gap:12px;padding-top:13px}
+.um-call-top,.um-call-meta{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.um-call-top{font-size:12px;color:#535e70}
+.um-call-amount{white-space:nowrap}
+.um-call-meta{font-size:10px;color:#9198a3;padding-top:3px}
+.um-call-meta>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.um-call-meta time{white-space:nowrap}
+.um-failure{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding-top:12px;border-top:1px solid #e4e6eb;font-size:12px;color:#7e6470}
+.um-retry{padding:3px 7px;border:0;border-radius:4px;background:transparent;color:var(--blue,#243beb);font-size:12px;cursor:pointer}
+.um-retry:disabled{opacity:.45;cursor:wait}
+@keyframes um-reveal{from{opacity:0;transform:translateY(-4px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+.um-popover[data-side=top].um-open{animation-name:um-reveal-up}
+@keyframes um-reveal-up{from{opacity:0;transform:translateY(4px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){.um-pill{padding:6px 9px;gap:5px;font-size:11px}.topbar .um-detail{display:none}.um-popover{padding:18px 19px 15px;border-radius:20px}}
+@media(prefers-reduced-motion:reduce){.um-pill,.um-calls>summary::before{transition:none}.um-popover.um-open{animation:none}.um-pill:active{transform:none}}

@@ -1,3 +1,4 @@
+import {createCandidateGraph} from './candidate-graph.js?v=20261020-meter3';
 const platforms = {xiaohongshu:'小红书',douyin:'抖音',channels:'视频号'};
 const metricNames = {views:'播放',likes:'点赞',comments:'评论',saves:'收藏',shares:'分享',recommends:'推荐',completion_rate:'完播率',bounce_2s:'2 秒跳出',avg_watch_seconds:'平均观看'};
 const unknownReasons={not_observed:'尚未采集到此指标',zero_may_mean_unavailable:'平台暂未提供，当前零值尚未确认',unit_unknown:'原始数值的单位尚未确认',out_of_range:'原始数值超出有效范围'};
@@ -17,7 +18,7 @@ export function createDataWorkflow(ctx){
     homeResults:null,homeSequence:0,historyOpen:false,historyLoading:null,projectId:null,tab:'candidates',decisions:null,
     batches:new Map(),batchId:null,expandedPlan:null,reason:'',bindings:null,
     publicationQuery:{platform:'',account:'',query:''},publicationResults:null,
-    selectedPublication:null,selectedRender:null,pendingCandidate:null,projectSequence:0,
+    selectedPublication:null,selectedRender:null,pendingCandidate:null,projectSequence:0,candidateCount:3,
   };
   const platformName=value=>platforms[value]||value||'平台未知';
   const sourceText=source=>source?.label||source?.kind||'来源未标注';
@@ -144,26 +145,26 @@ export function createDataWorkflow(ctx){
       }else host.innerHTML=`<div class="result-count">${resultCount(result)}</div>${result.cases.length?result.cases.map(item=>caseRow(item,isHome?'history':'publication')).join(''):'<div class="data-empty">没有匹配记录。</div>'}${moreHTML(result,purpose)}`;
     }
   }
-  async function renderWorkspace(){
+  async function renderHistory(){
     const sequence=++D.workspaceSequence;
     const route=S.route,id=route.split('/')[1];
-    $('#app').innerHTML='<section class="section"><div class="section-head"><h1>工作空间</h1></div><div class="loading">读取工作空间</div></section>';
+    $('#app').innerHTML='<section class="section"><div class="section-head"><h1>历史数据分析</h1></div><div class="loading">读取发布记录</div></section>';
     try{
       const {workspaces}=await api('/workspaces');
       if(sequence!==D.workspaceSequence||S.route!==route)return;
       if(!id){
-        $('#app').innerHTML=`<section class="section business-workspaces"><div class="section-head"><h1>工作空间</h1></div><div class="business-workspace-grid">${workspaces.map(w=>`<a class="business-workspace" href="#workspace/${esc(w.id)}"><div class="workspace-mark">${esc(w.name.slice(0,1))}</div><h2>${esc(w.name)}</h2><p>${w.cases_count} 条历史案例</p><div class="workspace-platforms">${w.platforms.map(platformName).map(esc).join(' / ')}</div><span class="workspace-open">查看案例 <span aria-hidden="true">↗</span></span></a>`).join('')}</div></section>`;
+        $('#app').innerHTML=`<section class="section business-workspaces"><div class="section-head"><h1>历史数据分析</h1></div><div class="business-workspace-grid">${workspaces.map(w=>`<a class="business-workspace" href="#history/${esc(w.id)}"><div class="workspace-mark">${esc(w.name.slice(0,1))}</div><h2>${esc(w.name)}</h2><p>${w.cases_count} 条发布记录</p><div class="workspace-platforms">${w.platforms.map(platformName).map(esc).join(' / ')}</div><span class="workspace-open">查看数据 <span aria-hidden="true">↗</span></span></a>`).join('')}</div></section>`;
         return;
       }
       const workspace=workspaces.find(w=>w.id===id);
-      if(!workspace)throw new Error('工作空间不存在。');
+      if(!workspace)throw new Error('项目不存在。');
       if(D.workspaceId!==id){D.homeResults=null;D.homeQuery={platform:'',account:'',query:''}}
       D.workspaceId=id;D.historyOpen=true;
-      $('#app').innerHTML=`<section class="section workspace-history"><a class="back-link" href="#workspace">‹ 工作空间</a><div class="section-head"><div><h1>${esc(workspace.name)}</h1><p class="muted">历史案例</p></div><button class="button" data-dw-action="history-sync">更新采集记录</button></div><div id="history-cases"><p class="muted history-status" id="history-status"></p>${filterHTML('home')}<div id="history-results"><div class="loading">读取案例</div></div><datalist id="history-account-options"></datalist></div></section>`;
+      $('#app').innerHTML=`<section class="section workspace-history"><a class="back-link" href="#history">‹ 历史数据分析</a><div class="section-head"><div><h1>${esc(workspace.name)}</h1><p class="muted">发布数据</p></div><button class="button" data-dw-action="history-sync">更新采集记录</button></div><div id="history-cases"><p class="muted history-status" id="history-status"></p>${filterHTML('home')}<div id="history-results"><div class="loading">读取案例</div></div><datalist id="history-account-options"></datalist></div></section>`;
       const [status]=await Promise.all([api('/history/status'),searchHistory('home')]);
       if(sequence===D.workspaceSequence&&S.route===route)showHistoryStatus(status);
     }catch(error){
-      if(sequence===D.workspaceSequence&&S.route===route)$('#app').innerHTML=`<section class="section"><a class="back-link" href="#workspace">‹ 工作空间</a><div class="data-error">${shortError(error)}</div></section>`;
+      if(sequence===D.workspaceSequence&&S.route===route)$('#app').innerHTML=`<section class="section"><a class="back-link" href="#history">‹ 历史数据分析</a><div class="data-error">${shortError(error)}</div></section>`;
     }
   }
   function mountHome(){
@@ -203,14 +204,14 @@ export function createDataWorkflow(ctx){
   }
 
   function projectHTML(){
-    return `<section class="project-data-workspace" id="project-data-workspace" data-project-id="${esc(S.project.id)}"><div class="data-tabs" role="tablist" aria-label="作品记录">${[['candidates','候选方案'],['decisions','选择与修改'],['publications','发布表现']].map(([id,label])=>`<button role="tab" type="button" data-dw-action="project-tab" data-id="${id}" aria-selected="${D.tab===id}" class="${D.tab===id?'active':''}">${label}</button>`).join('')}</div><div id="project-data-content"></div></section>`;
+    return `<section class="project-data-workspace" id="project-data-workspace" data-project-id="${esc(S.project.id)}"><div class="data-tabs" role="tablist" aria-label="作品记录">${[['candidates','候选成片'],['decisions','选择与修改'],['publications','发布表现']].map(([id,label])=>`<button role="tab" type="button" data-dw-action="project-tab" data-id="${id}" aria-selected="${D.tab===id}" class="${D.tab===id?'active':''}">${label}</button>`).join('')}</div><div id="project-data-content"></div></section>`;
   }
   function mountProject(){
     const project=S.project;
     if(!project)return;
     if(D.projectId!==project.id){
       D.projectId=project.id;D.tab='candidates';D.decisions=null;D.bindings=null;D.batchId=null;
-      D.expandedPlan=null;D.reason='';D.selectedPublication=null;D.selectedRender=null;D.publicationResults=null;
+      D.expandedPlan=null;D.reason='';D.selectedPublication=null;D.selectedRender=null;D.publicationResults=null;D.candidateCount=project.latest_candidate_batch_count||3;D.batchId=project.latest_candidate_batch_id||null;D.pendingCandidate=project.active_candidate_job_id||null;
     }
     if($('#project-data-workspace'))return;
     $('.project-workspace')?.insertAdjacentHTML('beforeend',projectHTML());
@@ -227,7 +228,7 @@ export function createDataWorkflow(ctx){
   }
   function batchPlans(result){
     const lookup=new Map((result?.plans||[]).map(plan=>[plan.id,plan]));
-    return (result?.batch?.plan_ids||[]).map(id=>lookup.get(id)).filter(Boolean);
+    return (result?.batch?.display_order||result?.batch?.plan_ids||[]).map(id=>lookup.get(id)).filter(Boolean);
   }
   function viewedIds(result){
     return [...new Set((result?.events||[]).filter(e=>e.event_type==='viewed').map(e=>e.plan_id))];
@@ -239,27 +240,43 @@ export function createDataWorkflow(ctx){
     if(D.projectId!==id)return;
     D.decisions=result;
     for(const batch of result.batches||[]){
-      const record={batch,plans:batch.plans||[],events:batch.events||[]};
+      const record={batch,plans:batch.plans||[],previews:batch.previews||{},events:batch.events||[]};
       D.batches.set(batch.id,record);
     }
     if(!D.batchId&&result.batches?.length)D.batchId=result.batches[0].id;
     if(['candidates','decisions'].includes(D.tab))renderProjectTab();
   }
-  function candidateStructure(plan){
-    return `<div class="candidate-structure" aria-label="${esc(plan.title)}的剪辑结构">${(plan.clips||[]).map((clip,index)=>`<span style="flex-grow:${Math.max(.2,Number(clip.duration)||.2)}" title="${esc(`${index+1}. ${clip.label||'镜头'} ${fmt(clip.duration)}`)}"><b>${esc(clip.label||`镜头 ${index+1}`)}</b><small>${fmt(clip.duration)}</small></span>`).join('')}</div>`;
+  const candidateGraph=createCandidateGraph({S,esc,fmt,
+    onView:async planId=>{await candidateEvent('viewed',planId);},
+    onSelect:planId=>adoptCandidate(planId),
+    onRetry:planId=>retryCandidatePreviews(planId),
+    onError:error=>toast(error.message||'候选预览暂时不可用',true),
+  });
+  function candidateHeadHTML(){
+    const result=currentBatch(),batch=result?.batch;
+    const busy=!!D.pendingCandidate||['queued','running'].includes(batch?.status);
+    return `<div class="data-panel-head"><div><h2>候选成片</h2>${batch?`<p class="muted">${esc(dateText(batch.created_at))}${batch.decision_status==='selected'?'　已采用':batch.decision_status==='rejected_all'?'　本批未采用':''}</p>`:''}</div><div class="actions">${(D.decisions?.batches?.length||0)>1?`<select id="candidate-batch-select" aria-label="候选组">${D.decisions.batches.map(b=>`<option value="${esc(b.id)}" ${b.id===D.batchId?'selected':''}>${esc(dateText(b.created_at))}${b.id===D.batchId?' · 当前':''}</option>`).join('')}</select>`:''}<select id="candidate-count-select" aria-label="候选数量" ${busy?'disabled':''}>${[3,4,5].map(n=>`<option value="${n}" ${D.candidateCount===n?'selected':''}>${n} 条候选</option>`).join('')}</select><button class="button primary" data-dw-action="generate-candidates" ${busy?'disabled':''}>${busy?'正在准备预览':batch?'再生成一组':'生成候选成片'}</button></div></div>${batch?.error?`<p class="data-error">${esc(batch.error)}</p>`:''}`;
   }
-  function candidateClips(plan){
-    return `<div class="candidate-clips">${plan.clips.map((clip,index)=>{
-      const asset=S.assets.find(a=>a.id===clip.asset_id);
-      return `<button type="button" class="candidate-clip" data-dw-action="candidate-preview" data-asset-id="${esc(clip.asset_id)}" data-time="${Number(clip.start)||0}">${asset?.thumbnail_url?`<img src="${esc(asset.thumbnail_url)}" alt="">`:''}<div><span>${index+1}. ${esc(clip.label||asset?.name||'镜头')}</span><small>${fmt(clip.start)} – ${fmt(clip.end)}${clip.caption?`　${esc(clip.caption)}`:''}</small></div></button>`;
-    }).join('')}</div>`;
+  function candidateFooterHTML(){
+    const result=currentBatch(),batch=result?.batch;
+    if(!(result?.plans||[]).length)return '';
+    return `<div class="candidate-decision"><label>选择理由（可选）<textarea id="candidate-reason" placeholder="留下这次取舍的原因">${esc(D.reason)}</textarea></label>${(result.events||[]).some(event=>event.event_type==='selected')?'':`<button class="button" data-dw-action="candidate-reject" ${batch?.status!=='succeeded'?'disabled':''}>本批都不采用</button>`}</div>`;
   }
-  function candidatesHTML(){
-    const result=currentBatch(),batch=result?.batch,plans=batchPlans(result),viewed=viewedIds(result);
-    const isBusy=!!D.pendingCandidate||['queued','running'].includes(batch?.status);
-    return `<div class="data-panel-head"><div><h2>比较三个剪辑方案</h2>${batch?`<p class="muted">生成于 ${esc(dateText(batch.created_at))}${batch.decision_status==='selected'?'　已采用一个方案':batch.decision_status==='rejected_all'?'　本组暂不采用':''}</p>`:''}</div><div class="actions">${(D.decisions?.batches?.length||0)>1?`<select id="candidate-batch-select" aria-label="候选组">${D.decisions.batches.map((b,i)=>`<option value="${esc(b.id)}" ${b.id===D.batchId?'selected':''}>${dateText(b.created_at)}${b.id===D.batchId?' · 当前':''}</option>`).join('')}</select>`:''}<button class="button primary" data-dw-action="generate-candidates" ${isBusy||!S.project?.plan?'disabled':''}>${isBusy?'正在生成候选':'生成三个候选'}</button></div></div>
-      ${batch?.error?`<p class="data-error">${esc(batch.error)}</p>`:''}
-      ${plans.length?`<div class="candidate-grid">${plans.map((plan,index)=>`<article class="candidate-card ${S.project?.plan_id===plan.id?'adopted':''}" data-candidate-id="${esc(plan.id)}"><div class="candidate-title"><span class="candidate-order">${String.fromCharCode(65+index)}</span><div><h3>${esc(plan.candidate_strategy?.label||plan.title)}</h3><small>${fmt(plan.duration)}　${plan.clips.length} 个镜头</small></div>${S.project?.plan_id===plan.id?'<span class="tag blue">当前方案</span>':(result.events||[]).some(event=>event.event_type==='selected'&&event.plan_id===plan.id)?'<span class="tag">曾采用</span>':viewed.includes(plan.id)?'<span class="tag">已查看</span>':''}</div><p class="candidate-difference">${esc(plan.difference_summary||plan.change_summary||plan.summary||'')}</p>${candidateStructure(plan)}<div class="candidate-actions"><button class="button small" data-dw-action="candidate-view" data-id="${esc(plan.id)}" aria-expanded="${D.expandedPlan===plan.id}">${D.expandedPlan===plan.id?'收起镜头':'查看镜头'}</button><button class="button small primary" data-dw-action="candidate-select" data-id="${esc(plan.id)}" ${!viewed.includes(plan.id)||S.project?.plan_id===plan.id?'disabled':''}>${S.project?.plan_id===plan.id?'当前方案':'采用此方案'}</button></div><div class="candidate-expanded" ${D.expandedPlan===plan.id?'':'hidden'}>${D.expandedPlan===plan.id?candidateClips(plan):''}</div></article>`).join('')}</div><div class="candidate-decision"><label>选择理由（可选）<textarea id="candidate-reason" placeholder="留下这次取舍的原因，方便下次回看。">${esc(D.reason)}</textarea></label>${(result.events||[]).some(event=>event.event_type==='selected')?'':'<button class="button" data-dw-action="candidate-reject">三个都不采用</button>'}</div>`:isBusy?'<div class="data-empty">正在生成候选…</div>':''}`;
+  function candidatesHTML(){return `<div id="candidate-panel"><div id="candidate-panel-head">${candidateHeadHTML()}</div><div id="candidate-graph-host"></div><div id="candidate-panel-footer">${candidateFooterHTML()}</div></div>`;}
+  async function adoptCandidate(id){
+    const projectId=D.projectId,batchId=D.batchId,result=currentBatch(),reason=D.reason;
+    const onProject=()=>D.projectId===projectId&&S.route===`project/${projectId}`&&S.project?.id===projectId;
+    if(S.project?.plan)await ctx.savePlan();
+    await candidateEvent('selected',id,{result,reason});
+    if(onProject()){await refreshBatch(batchId);if(onProject())await ctx.refreshProjectResult(projectId,false);if(onProject())await loadDecisions();}
+    toast('已采用这条成片');
+  }
+  async function retryCandidatePreviews(planId){
+    const projectId=D.projectId,batchId=D.batchId;
+    const response=await api(`/candidate-batches/${batchId}/retry-previews`,planId?{plan_ids:[planId]}:{});
+    if(D.projectId===projectId&&D.batchId===batchId&&S.route===`project/${projectId}`){D.pendingCandidate=response.job_id;await refreshBatch(batchId);}
+    await track(response,async()=>{if(D.projectId===projectId&&S.route===`project/${projectId}`){D.pendingCandidate=null;await refreshBatch(batchId);await loadDecisions();}toast('候选预览已完成')});
+    toast('正在重新渲染预览');
   }
   function decisionsHTML(){
     const result=D.decisions;
@@ -271,8 +288,8 @@ export function createDataWorkflow(ctx){
     ].sort((a,b)=>String(b.created_at||'').localeCompare(String(a.created_at||'')));
     return `<div class="data-panel-head"><h2>选择与修改</h2><button class="button small" data-dw-action="refresh-decisions">刷新记录</button></div>${entries.length?`<div class="decision-log">${entries.map(entry=>{
       if(entry.entry==='revision')return `<article class="decision-entry"><div class="decision-date">${esc(dateText(entry.created_at))}</div><div><h3>方案 v${entry.version} ${entry.origin?.source==='candidate'?'候选方案':'修改记录'}</h3><p>${esc(entry.summary||'')}</p>${entry.changes?.length?`<ul>${entry.changes.map(change=>`<li>${esc(change)}</li>`).join('')}</ul>`:''}</div></article>`;
-      const name={viewed:'查看镜头',selected:'采用方案',rejected_all:'三个都不采用'}[entry.event_type]||entry.event_type;
-      return `<article class="decision-entry"><div class="decision-date">${esc(dateText(entry.created_at))}</div><div><h3>${esc(name)}${entry.plan_id?`：${esc(planNames.get(entry.plan_id)||'候选方案')}`:''}</h3>${entry.reason?`<p>${esc(entry.reason)}</p>`:''}<p class="decision-context">展示顺序：${(entry.displayed_plan_ids||[]).map((id,index)=>`${String.fromCharCode(65+index)} ${planNames.get(id)||'方案'}`).map(esc).join(' / ')||'未记录'}　已查看 ${(entry.viewed_plan_ids||[]).length} 个</p></div></article>`;
+      const name={viewed:'查看预览',selected:'采用成片',rejected_all:'本批都不采用'}[entry.event_type]||entry.event_type;
+      return `<article class="decision-entry"><div class="decision-date">${esc(dateText(entry.created_at))}</div><div><h3>${esc(name)}${entry.plan_id?`：${esc(planNames.get(entry.plan_id)||'候选方案')}`:''}</h3>${entry.reason?`<p>${esc(entry.reason)}</p>`:''}<p class="decision-context">展示顺序：${(entry.displayed_plan_ids||[]).map((id,index)=>`${index+1}. ${planNames.get(id)||'方案'}`).map(esc).join(' / ')||'未记录'}　已查看 ${(entry.viewed_plan_ids||[]).length} 个</p></div></article>`;
     }).join('')}</div>`:'<div class="data-empty">暂无选择与修改记录。</div>'}`;
   }
   function bindingHTML(binding){
@@ -300,33 +317,47 @@ export function createDataWorkflow(ctx){
     const host=$('#project-data-content');
     if(!host)return;
     $$('.data-tabs button').forEach(button=>{const selected=button.dataset.id===D.tab;button.classList.toggle('active',selected);button.setAttribute('aria-selected',String(selected))});
-    host.innerHTML=D.tab==='candidates'?candidatesHTML():D.tab==='decisions'?decisionsHTML():publicationsHTML();
+    if(D.tab==='candidates'){
+      if(!$('#candidate-panel',host))host.innerHTML=candidatesHTML();
+      else for(const [selector,markup] of [['#candidate-panel-head',candidateHeadHTML()],['#candidate-panel-footer',candidateFooterHTML()]]){
+        const node=$(selector,host);if(node&&!node.contains(document.activeElement)&&node.innerHTML!==markup)node.innerHTML=markup;
+      }
+      const busy=!!D.pendingCandidate||['queued','running'].includes(currentBatch()?.batch?.status);
+      const generate=$('[data-dw-action=generate-candidates]',host),count=$('#candidate-count-select',host);
+      if(generate){generate.disabled=busy;generate.textContent=busy?'正在准备预览':currentBatch()?'再生成一组':'生成候选成片';}
+      if(count)count.disabled=busy;
+      candidateGraph.mount($('#candidate-graph-host',host),currentBatch()||{batch:{status:D.pendingCandidate?'running':'empty',count:D.candidateCount},plans:[],previews:{},events:[]});
+    }else{candidateGraph.dispose?.();host.innerHTML=D.tab==='decisions'?decisionsHTML():publicationsHTML();}
   }
   async function refreshBatch(id){
     const result=await api(`/candidate-batches/${id}`);
     if(D.projectId!==result.batch?.project_id)return;
-    D.batches.set(id,result);D.batchId=id;
-    if(D.tab==='candidates')renderProjectTab();
+    D.batches.set(id,result);
+    if(!D.batchId)D.batchId=id;
+    if(D.batchId===id&&D.tab==='candidates')renderProjectTab();
     return result;
   }
   async function candidateEvent(type,planId,context={}){
     const result=context.result||currentBatch();
     if(!result)throw new Error('候选方案尚未准备完成。');
-    const payload={event_type:type,displayed_plan_ids:batchPlans(result).map(p=>p.id),viewed_plan_ids:viewedIds(result),reason:(context.reason??D.reason).trim()};
+    const visualOrder=candidateGraph.displayedPlanIds||[],ids=batchPlans(result).map(p=>p.id);
+    const displayed=visualOrder.length===ids.length&&visualOrder.every(id=>ids.includes(id))?visualOrder:ids;
+    const payload={event_type:type,displayed_plan_ids:displayed,viewed_plan_ids:viewedIds(result),reason:(context.reason??D.reason).trim()};
     if(planId)payload.plan_id=planId;
     const event=await api(`/candidate-batches/${result.batch.id}/events`,payload);
     result.events=[...(result.events||[]),event.event||event];
     return event;
   }
   async function onJobs(jobs){
-    const relevant=jobs.filter(job=>job.kind==='candidates'||['revision','render','plan'].includes(job.kind));
-    if(!relevant.length||!D.projectId||!S.route.startsWith('project/'))return;
-    for(const job of relevant.filter(j=>j.kind==='candidates'&&(j.result?.project_id===D.projectId||j.id===D.pendingCandidate))){
-      D.pendingCandidate=null;
-      if(job.result?.batch_id||D.batchId)await refreshBatch(job.result?.batch_id||D.batchId);
+    if(!D.projectId||S.route!==`project/${D.projectId}`)return;
+    const batch=currentBatch()?.batch;
+    const batchJob=S.jobs.find(job=>job.id===(D.pendingCandidate||batch?.job_id||S.project?.active_candidate_job_id));
+    if(D.batchId&&(D.pendingCandidate||['queued','running'].includes(batch?.status))){
+      if(batchJob&&!['queued','running'].includes(batchJob.status))D.pendingCandidate=null;
+      await refreshBatch(D.batchId);
     }
-    await loadDecisions();
-    if(D.tab==='publications')await loadBindings();
+    const relevant=jobs.filter(job=>['candidates','revision','render','plan'].includes(job.kind));
+    if(relevant.length){await loadDecisions();if(D.tab==='publications')await loadBindings();}
   }
 
   document.addEventListener('click',event=>{
@@ -364,30 +395,15 @@ export function createDataWorkflow(ctx){
         const projectId=S.project.id;
         const references=[...(S.project.reference_case_ids||[])];
         const onProject=()=>D.projectId===projectId&&S.route===`project/${projectId}`&&S.project?.id===projectId;
-        await ctx.savePlan();
-        const result=await api(`/projects/${projectId}/candidates`,{count:3,reference_case_ids:references});
+        if(S.project?.plan)await ctx.savePlan();
+        const count=D.candidateCount;
+        const result=await api(`/projects/${projectId}/candidates`,{count,reference_case_ids:references});
         if(onProject()){D.pendingCandidate=result.job_id;D.batchId=result.batch_id;await refreshBatch(result.batch_id)}
-        await track(result,async job=>{if(onProject()){D.pendingCandidate=null;await refreshBatch(job.result?.batch_id||result.batch_id);await loadDecisions()}toast('三个候选方案已生成')});
-        toast('正在生成三个候选方案');return;
+        await track(result,async job=>{if(onProject()){D.pendingCandidate=null;await refreshBatch(job.result?.batch_id||result.batch_id);await loadDecisions()}toast('候选成片已准备好')});
+        toast('正在生成候选成片');return;
       }
-      if(action==='candidate-view'){
-        if(D.expandedPlan===id){D.expandedPlan=null;renderProjectTab();return}
-        await candidateEvent('viewed',id);D.expandedPlan=id;renderProjectTab();return;
-      }
-      if(action==='candidate-preview'){ctx.openPreview(button.dataset.assetId,Number(button.dataset.time)||0);return}
-      if(action==='candidate-select'){
-        const projectId=D.projectId,batchId=D.batchId,result=currentBatch(),reason=D.reason;
-        const onProject=()=>D.projectId===projectId&&S.route===`project/${projectId}`&&S.project?.id===projectId;
-        await ctx.savePlan();
-        await candidateEvent('selected',id,{result,reason});
-        if(onProject()){
-          await refreshBatch(batchId);
-          if(onProject())await ctx.refreshProjectResult(projectId,false);
-          if(onProject())await loadDecisions();
-        }
-        toast('已采用此方案');return;
-      }
-      if(action==='candidate-reject'){await candidateEvent('rejected_all');await refreshBatch(D.batchId);await loadDecisions();toast('已记录：三个都不采用');return}
+      if(action==='candidate-select'){await adoptCandidate(id);return}
+      if(action==='candidate-reject'){await candidateEvent('rejected_all');await refreshBatch(D.batchId);await loadDecisions();toast('已记录：本批都不采用');return}
       if(action==='publication-select'){
         D.selectedPublication=id;
         $$('#publication-search-results .history-case').forEach(row=>row.classList.toggle('selected',row.dataset.caseId===id));
@@ -419,8 +435,9 @@ export function createDataWorkflow(ctx){
     if(action==='publication-search')D.publicationQuery=Object.fromEntries(new FormData(event.target.form));
   });
   document.addEventListener('change',event=>{
+    if(event.target.id==='candidate-count-select')D.candidateCount=Number(event.target.value);
     if(event.target.id==='candidate-batch-select'){D.batchId=event.target.value;D.expandedPlan=null;D.reason='';run(()=>refreshBatch(D.batchId))}
     if(event.target.id==='binding-render'){D.selectedRender=event.target.value;$('#publication-confirm').innerHTML=confirmationHTML((S.project.renders||[]).find(r=>r.id===D.selectedRender),D.cases.get(D.selectedPublication))}
   });
-  return {renderWorkspace,mountProject,onJobs,referenceCaseIds:()=>[...D.referenceIds],referenceCount:()=>D.referenceIds.size};
+  return {renderHistory,mountProject,onJobs,leaveProject:()=>candidateGraph.dispose?.(),referenceCaseIds:()=>[...D.referenceIds],referenceCount:()=>D.referenceIds.size};
 }
