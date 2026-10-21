@@ -18,7 +18,7 @@ CONTEXT = ContextVar("provider_usage_context", default=None)
 TOKEN_FIELDS = ("input_tokens", "output_tokens", "total_tokens", "cache_hit_tokens", "cache_miss_tokens")
 SECONDS_FIELDS = ("video_seconds", "input_seconds", "output_seconds", "input_audio_seconds")
 METRICS = TOKEN_FIELDS + SECONDS_FIELDS + ("input_image_count",)
-AI_KINDS = {"analysis", "reference", "reference_repair", "reference_rhythm", "reference_presentation", "reference_semantics", "plan", "revision", "candidates", "generation_plan", "generation_prompt", "generation", "home_node_edit", "animation_plan", "animation_render", "animation_revise", "operations_plan"}
+AI_KINDS = {"daily_summary", "analysis", "reference", "reference_repair", "reference_rhythm", "reference_presentation", "reference_semantics", "plan", "revision", "candidates", "generation_plan", "generation_prompt", "generation", "home_node_edit", "animation_plan", "animation_render", "animation_revise", "operations_plan"}
 
 
 @contextmanager

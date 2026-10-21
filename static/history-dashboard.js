@@ -29,7 +29,7 @@ export function createHistoryDashboard({S, api, esc, toast}) {
   const narrowChart=window.matchMedia('(max-width:600px)');
 
   function projectRail(workspaces) {
-    return `<aside class="hd-projects"><h2>项目</h2><nav aria-label="历史数据项目">${workspaces.map(w=>`<a href="#history/${esc(w.id)}" class="${w.id===state.workspace?'active':''}" ${w.id===state.workspace?'aria-current="page"':''}><span class="hd-project-symbol">${esc(w.name.slice(0,1))}</span><span>${esc(w.name)}</span><span class="hd-project-count">${number(w.cases_count)}</span></a>`).join('')}</nav></aside>`;
+    return `<aside class="hd-projects"><div class="hd-project-heading"><h2>项目</h2><button type="button" data-hd-add aria-label="添加项目" title="添加项目">＋</button></div><form id="hd-project-form" hidden><input name="name" placeholder="项目名称" aria-label="项目名称" maxlength="60" required><div><button type="submit">添加</button><button type="button" data-hd-cancel>取消</button></div><p role="status"></p></form><nav aria-label="历史数据项目">${workspaces.map(w=>`<a href="#history/${esc(w.id)}" class="${w.id===state.workspace?'active':''}" ${w.id===state.workspace?'aria-current="page"':''}><span class="hd-project-symbol">${esc(w.name.slice(0,1))}</span><span>${esc(w.name)}</span><span class="hd-project-count">${number(w.cases_count)}</span></a>`).join('')}</nav></aside>`;
   }
   function filtersHTML() {
     return `<div class="hd-controls"><div class="hd-platforms" role="tablist" aria-label="发布平台">${Object.entries(names).map(([id,label])=>`<button type="button" role="tab" aria-selected="${state.platform===id}" data-hd-platform="${id}">${label}</button>`).join('')}</div><form class="hd-filter" id="hd-filter"><label><span>账号</span><select name="account" aria-label="账号"><option value="">全部账号</option></select></label><label><span>发布日期</span><input type="date" name="date_from" aria-label="发布开始日期" value="${esc(state.date_from)}"></label><span class="hd-date-separator">至</span><label><span class="sr-only">发布结束日期</span><input type="date" name="date_to" aria-label="发布结束日期" value="${esc(state.date_to)}"></label><button class="button small" type="submit">应用</button><button class="hd-clear" type="button" data-hd-clear>全部日期</button></form></div>`;
@@ -79,7 +79,8 @@ export function createHistoryDashboard({S, api, esc, toast}) {
     return `<div class="hd-table-heading"><div><h2>视频明细</h2><span>${number(matches.length)} 条</span></div><div class="hd-table-tools"><input id="hd-query" aria-label="搜索视频标题" placeholder="搜索视频" value="${esc(state.query)}"><select id="hd-order" aria-label="视频排序"><option value="views" ${state.order==='views'?'selected':''}>播放较高</option><option value="latest" ${state.order==='latest'?'selected':''}>最近发布</option></select></div></div><div class="hd-table-scroll"><table class="hd-table"><thead><tr><th>视频</th><th>发布日期</th><th>播放</th><th>点赞</th><th>评论</th><th>收藏</th><th>分享</th><th>采集后距发布</th></tr></thead><tbody>${rows.map(c=>`<tr><td><button type="button" data-hd-case="${esc(c.id)}" title="${esc(c.title)}">${esc(c.title||'未命名视频')}</button></td><td>${date(c.published_date)}</td>${['views','likes','comments','saves','shares'].map(k=>`<td class="${c.metrics[k]?.unknown?'hd-unknown':''}">${metric(c.metrics[k])}</td>`).join('')}<td>${c.age_hours==null?'未知':c.age_hours<24?`${number(c.age_hours)} 小时`:`${number(c.age_hours/24)} 天`}</td></tr>`).join('')}</tbody></table>${rows.length?'':'<div class="hd-chart-empty">没有匹配的视频</div>'}</div>`;
   }
   function contentHTML(data) {
-    return `<div class="hd-scope"><span>${esc(scopeLabel(data))}</span><span>最近采集 ${stamp(data.scope.capture_to)}</span></div>${statsHTML(data)}<div class="hd-main-chart"><div class="hd-chart-heading"><h2>每条视频，表现如何</h2><span>累计播放 · 次 · 对数刻度</span></div>${scatterHTML(data)}<div class="hd-chart-foot"><span>按发布时间排列</span><span>● 精确值　○ 平台约数</span></div><div class="hd-daily-heading"><h3>每日发布</h3><span>条</span></div>${dailyHTML(data)}<p class="hd-chart-note">各视频取最近采集的累计值；发布时间与采集间隔不同。</p></div><div class="hd-secondary-charts"><section><div class="hd-chart-heading"><h2>播放分布</h2><span>条视频</span></div>${distributionHTML(data)}</section><section><div class="hd-chart-heading"><h2>互动构成</h2><span>各项累计次数</span></div>${interactionsHTML(data)}</section></div><section id="hd-records" class="hd-records">${tableHTML(data)}</section><p class="hd-source-line">星尚采集记录　${stamp(data.scope.capture_from)} — ${stamp(data.scope.capture_to)}</p>`;
+    if(!data.scope.project_videos)return '<div class="hd-new-empty"><h2>'+esc(data.workspace.name)+'</h2><p>暂无发布数据</p></div>';
+    return `<div class="hd-scope"><span>${esc(scopeLabel(data))}</span><span>最近采集 ${stamp(data.scope.capture_to)}</span></div>${statsHTML(data)}<div class="hd-main-chart"><div class="hd-chart-heading"><h2>每条视频，表现如何</h2><span>累计播放 · 次 · 对数刻度</span></div>${scatterHTML(data)}<div class="hd-chart-foot"><span>按发布时间排列</span><span>● 精确值　○ 平台约数</span></div><div class="hd-daily-heading"><h3>每日发布</h3><span>条</span></div>${dailyHTML(data)}<p class="hd-chart-note">各视频取最近采集的累计值；发布时间与采集间隔不同。</p></div><div class="hd-secondary-charts"><section><div class="hd-chart-heading"><h2>播放分布</h2><span>条视频</span></div>${distributionHTML(data)}</section><section><div class="hd-chart-heading"><h2>互动构成</h2><span>各项累计次数</span></div>${interactionsHTML(data)}</section></div><section id="hd-records" class="hd-records">${tableHTML(data)}</section><p class="hd-source-line">${esc(data.workspace.name)}　${stamp(data.scope.capture_from)} — ${stamp(data.scope.capture_to)}</p>`;
   }
   async function load() {
     const sequence=++state.sequence, route=S.route;
@@ -142,13 +143,15 @@ export function createHistoryDashboard({S, api, esc, toast}) {
       const {workspaces}=await api('/workspaces');
       if(S.route!==route||sequence!==state.sequence)return;
       if(!workspaces.some(w=>w.id===state.workspace))throw new Error('项目不存在');
-      $('#app').innerHTML=`<section class="history-dashboard" id="history-dashboard">${projectRail(workspaces)}<div class="hd-main"><div class="hd-heading"><h1>历史数据分析</h1><button type="button" class="button small" data-hd-sync>更新采集</button></div>${filtersHTML()}<div id="hd-status" class="hd-status" role="status"></div><div id="hd-content"><div class="hd-chart-empty">读取发布数据</div></div></div><dialog id="hd-detail" class="hd-detail" aria-label="视频采集明细"></dialog></section>`;
+      $('#app').innerHTML=`<section class="history-dashboard" id="history-dashboard">${projectRail(workspaces)}<div class="hd-main"><div class="hd-heading"><h1>历史数据分析</h1>${state.workspace==='xingshang'?'<button type="button" class="button small" data-hd-sync>更新采集</button>':''}</div>${filtersHTML()}<div id="hd-status" class="hd-status" role="status"></div><div id="hd-content"><div class="hd-chart-empty">读取发布数据</div></div></div><dialog id="hd-detail" class="hd-detail" aria-label="视频采集明细"></dialog></section>`;
       await load();
     }catch(error){if(S.route===route&&sequence===state.sequence)$('#app').innerHTML=`<section class="section"><h1>历史数据分析</h1><p class="data-error">${esc(error.message)}</p></section>`}
   }
   document.addEventListener('click',event=>{
     const root=event.target.closest('#history-dashboard');
     if(!root)return;
+    if(event.target.closest('[data-hd-add]')){const form=$('#hd-project-form');form.hidden=false;form.elements.name.focus();return}
+    if(event.target.closest('[data-hd-cancel]')){$('#hd-project-form').hidden=true;return}
     const point=event.target.closest('[data-hd-case]');
     if(point){void openDetail(point.dataset.hdCase);return}
     if(event.target.closest('[data-hd-close]')){closeDetail();return}
@@ -175,6 +178,13 @@ export function createHistoryDashboard({S, api, esc, toast}) {
     if(point&&point.tagName.toLowerCase()==='g'&&(event.key==='Enter'||event.key===' ')){event.preventDefault();void openDetail(point.dataset.hdCase)}
   });
   document.addEventListener('submit',event=>{
+    if(event.target.id==='hd-project-form'){
+      event.preventDefault();const form=event.target,button=form.querySelector('[type=submit]');
+      button.disabled=true;
+      void (async()=>{try{const item=await api('/workspaces',{name:form.elements.name.value});location.hash='history/'+item.id}
+      catch(error){form.querySelector('[role=status]').textContent=error.message}
+      finally{button.disabled=false}})();return;
+    }
     if(event.target.id!=='hd-filter')return;
     event.preventDefault();
     const values=Object.fromEntries(new FormData(event.target));

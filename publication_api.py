@@ -10,6 +10,11 @@ def workspaces():
     return data.business_workspaces()
 
 
+@router.post("/api/workspaces")
+def create_workspace(payload: dict):
+    return data.create_workspace(payload.get("name"))
+
+
 @router.get("/api/workspaces/{workspace_id}/history")
 def workspace_history(workspace_id: str, platform: str = "", account: str = "", query: str = "",
                       limit: int = Query(30, ge=1, le=100), offset: int = Query(0, ge=0)):

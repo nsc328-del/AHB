@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import re
+import asyncio
+from contextlib import suppress
 import shutil
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -22,6 +24,7 @@ from home_api import router as home_router
 from home_ai import router as home_ai_router
 from animation_api import router as animation_router
 from operations_api import router as operations_router
+import daily_summaries
 
 
 @asynccontextmanager
@@ -32,7 +35,13 @@ async def lifespan(application):
     decisions.reconcile_batches(startup=True)
     import generation_batches
     generation_batches.reconcile_startup()
-    yield
+    daily_task = asyncio.create_task(daily_summaries.scheduler())
+    try:
+        yield
+    finally:
+        daily_task.cancel()
+        with suppress(asyncio.CancelledError):
+            await daily_task
 
 
 app = FastAPI(title="Cutroom · Video Workbench", lifespan=lifespan)
@@ -44,6 +53,7 @@ app.include_router(home_router)
 app.include_router(home_ai_router)
 app.include_router(animation_router)
 app.include_router(operations_router)
+app.include_router(daily_summaries.router)
 STATIC = Path(__file__).resolve().parent / "static"
 app.mount("/static", StaticFiles(directory=STATIC, check_dir=False), name="static")
 
