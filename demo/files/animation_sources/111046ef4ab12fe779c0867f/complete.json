@@ -1,0 +1,241 @@
+{
+  "input_fingerprint": "60c6b2c19d6d9c3494600ead7a087af8a3e5639b22a26a560a9f50448e15c309",
+  "result": {
+    "source_html": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"UTF-8\">\n<title>从素材到故事</title>\n<style>\n  html,body{margin:0;padding:0;overflow:hidden;background:#ffffff;}\n  #stage{position:relative;width:1280px;height:720px;background:#ffffff;overflow:hidden;\n    font-family:'PingFang SC','Arial',sans-serif;}\n  .abs{position:absolute;}\n  .label{font-size:30px;color:#1B4DFF;letter-spacing:2px;font-weight:500;}\n  .hint{font-size:22px;color:#7C97FF;letter-spacing:1px;}\n  .prevTitle{font-size:40px;color:#1B4DFF;letter-spacing:4px;font-weight:600;}\n  .sub{font-size:22px;color:#5B78E6;letter-spacing:2px;}\n</style>\n</head>\n<body>\n<div id=\"stage\">\n  <div id=\"labelsWrap\" class=\"abs\"></div>\n  <div id=\"hintsWrap\" class=\"abs\"></div>\n  <div id=\"squaresWrap\" class=\"abs\"></div>\n  <svg id=\"lines\" class=\"abs\" width=\"1280\" height=\"720\" style=\"left:0;top:0;\"></svg>\n  <div id=\"previewBox\" class=\"abs\"></div>\n  <div id=\"prevText\" class=\"abs prevTitle\" style=\"opacity:0;\">故事预览</div>\n  <div id=\"prevSub\" class=\"abs sub\" style=\"opacity:0;\">素材 → 镜头 → 成片</div>\n  <div id=\"progressLine\" class=\"abs\" style=\"opacity:0;height:3px;background:#1B4DFF;border-radius:2px;\"></div>\n  <svg id=\"corners\" class=\"abs\" width=\"1280\" height=\"720\" style=\"left:0;top:0;pointer-events:none;\"></svg>\n</div>\n<script>\n(function(){\n  var stage = document.getElementById('stage');\n\n  // ---------- 静态布局参数 ----------\n  // 左侧素材方块 2列x3行 阵列\n  var sqSize = 56;\n  var sqGapX = 26, sqGapY = 26;\n  var baseX = 150, baseY = 250;\n  var squarePositions = [];\n  for(var r=0;r<3;r++){\n    for(var c=0;c<2;c++){\n      squarePositions.push({\n        x: baseX + c*(sqSize+sqGapX),\n        y: baseY + r*(sqSize+sqGapY)\n      });\n    }\n  }\n\n  // 三条分支终点\n  var branchNode = [\n    {x: 780, y: 200},\n    {x: 800, y: 360},\n    {x: 780, y: 520}\n  ];\n\n  // 分支节点旁的提示文字\n  var hintTexts = [\n    {t:'镜头顺序', x: branchNode[0].x+34, y: branchNode[0].y-2},\n    {t:'画面组合', x: branchNode[1].x+34, y: branchNode[1].y-2},\n    {t:'节奏点',   x: branchNode[2].x+34, y: branchNode[2].y-2}\n  ];\n\n  // 预览框\n  var box = {x: 860, y: 240, w: 320, h: 240};\n\n  // 三行标签位置\n  var labelPos = [\n    {t:'选取', x: 400, y: 300},\n    {t:'编排', x: 400, y: 356},\n    {t:'成片', x: 400, y: 412}\n  ];\n\n  // ---------- 构建 DOM ----------\n  var labelsWrap = document.getElementById('labelsWrap');\n  var hintsWrap = document.getElementById('hintsWrap');\n  var squaresWrap = document.getElementById('squaresWrap');\n\n  var labelEls = [];\n  labelPos.forEach(function(p){\n    var d = document.createElement('div');\n    d.className = 'abs label';\n    d.textContent = p.t;\n    d.style.left = p.x+'px';\n    d.style.top = p.y+'px';\n    d.style.opacity = '0';\n    labelsWrap.appendChild(d);\n    labelEls.push(d);\n  });\n\n  var hintEls = [];\n  hintTexts.forEach(function(p){\n    var d = document.createElement('div');\n    d.className = 'abs hint';\n    d.textContent = p.t;\n    d.style.left = p.x+'px';\n    d.style.top = p.y+'px';\n    d.style.opacity = '0';\n    hintsWrap.appendChild(d);\n    hintEls.push(d);\n  });\n\n  var squareEls = [];\n  squarePositions.forEach(function(p){\n    var d = document.createElement('div');\n    d.className = 'abs';\n    d.style.width = sqSize+'px';\n    d.style.height = sqSize+'px';\n    d.style.boxSizing = 'border-box';\n    d.style.border = '2.5px solid #1B4DFF';\n    d.style.borderRadius = '4px';\n    d.style.opacity = '0';\n    d.style.left = '0px';\n    d.style.top = '0px';\n    squaresWrap.appendChild(d);\n    squareEls.push(d);\n  });\n\n  var svg = document.getElementById('lines');\n  var NS = 'http://www.w3.org/2000/svg';\n\n  // 分支曲线（从方块区域右缘到节点）\n  function makeCurve(node){\n    var path = document.createElementNS(NS,'path');\n    path.setAttribute('fill','none');\n    path.setAttribute('stroke','#9FB6FF');\n    path.setAttribute('stroke-width','2');\n    path.setAttribute('stroke-linecap','round');\n    svg.appendChild(path);\n    return path;\n  }\n  var branchPaths = branchNode.map(makeCurve);\n\n  // 节点圆点\n  var nodeCircles = branchNode.map(function(n){\n    var c = document.createElementNS(NS,'circle');\n    c.setAttribute('cx', n.x);\n    c.setAttribute('cy', n.y);\n    c.setAttribute('r', 6);\n    c.setAttribute('fill','#1B4DFF');\n    c.setAttribute('opacity','0');\n    svg.appendChild(c);\n    return c;\n  });\n\n  // 汇合曲线（节点到预览框左缘），三条\n  var mergePaths = branchNode.map(function(n){\n    var p = document.createElementNS(NS,'path');\n    p.setAttribute('fill','none');\n    p.setAttribute('stroke','#C7D5FF');\n    p.setAttribute('stroke-width','2');\n    p.setAttribute('stroke-linecap','round');\n    svg.appendChild(p);\n    return p;\n  });\n\n  // ---------- 预览框（四条边逐步描边）----------\n  var previewBox = document.getElementById('previewBox');\n  previewBox.style.left = box.x+'px';\n  previewBox.style.top = box.y+'px';\n  previewBox.style.width = box.w+'px';\n  previewBox.style.height = box.h+'px';\n  previewBox.style.boxSizing = 'border-box';\n  previewBox.style.borderRadius = '6px';\n  previewBox.style.background = '#F7F9FF';\n\n  var edgeDefs = [\n    // top: left->right\n    {x1:0, y1:0, x2:box.w, y2:0, delay:4.0},\n    // right: top->bottom\n    {x1:box.w, y1:0, x2:box.w, y2:box.h, delay:4.25},\n    // bottom: right->left\n    {x1:box.w, y1:box.h, x2:0, y2:box.h, delay:4.5},\n    // left: bottom->top\n    {x1:0, y1:box.h, x2:0, y2:0, delay:4.75}\n  ];\n  var edgeEls = edgeDefs.map(function(e){\n    var d = document.createElement('div');\n    d.className = 'abs';\n    d.style.background = '#1B4DFF';\n    d.style.borderRadius = '1px';\n    d.style.opacity = '0';\n    previewBox.appendChild(d);\n    return d;\n  });\n\n  var prevText = document.getElementById('prevText');\n  var prevSub = document.getElementById('prevSub');\n  var progressLine = document.getElementById('progressLine');\n\n  var cornersSvg = document.getElementById('corners');\n  var cornerEls = [];\n  // 四个取景角标（L 形）\n  var cornerGeo = [\n    // 左上\n    {x:box.x-6, y:box.y-6, hx:1, hy:1},\n    // 右上\n    {x:box.x+box.w+6, y:box.y-6, hx:-1, hy:1},\n    // 左下\n    {x:box.x-6, y:box.y+box.h+6, hx:1, hy:-1},\n    // 右下\n    {x:box.x+box.w+6, y:box.y+box.h+6, hx:-1, hy:-1}\n  ];\n  cornerGeo.forEach(function(g){\n    var p = document.createElementNS(NS,'path');\n    var len = 22;\n    var d = 'M '+(g.x+g.hx*len)+' '+g.y+' L '+g.x+' '+g.y+' L '+g.x+' '+(g.y+g.hy*len);\n    p.setAttribute('d', d);\n    p.setAttribute('fill','none');\n    p.setAttribute('stroke','#1B4DFF');\n    p.setAttribute('stroke-width','3');\n    p.setAttribute('stroke-linecap','round');\n    p.setAttribute('stroke-linejoin','round');\n    p.setAttribute('opacity','0');\n    cornersSvg.appendChild(p);\n    cornerEls.push(p);\n  });\n\n  // ---------- 工具函数 ----------\n  function clamp(v,a,b){ return v<a?a:(v>b?b:v); }\n  function easeOut(t){ t=clamp(t,0,1); return 1-Math.pow(1-t,3); }\n  function easeInOut(t){ t=clamp(t,0,1); return t<0.5? 2*t*t : 1-Math.pow(-2*t+2,2)/2; }\n  function seg(t, a, b){ return clamp((t-a)/(b-a), 0, 1); }\n\n  // 计算方块的路径位置（用于 1.5–4.0 的移动）\n  // 分三支：索引 0,1 -> 上; 2,3 -> 中; 4,5 -> 下\n  function squareTarget(i){\n    var branch = Math.floor(i/2);\n    var n = branchNode[branch];\n    var offsetIndex = i%2;\n    return {\n      x: n.x - sqSize/2 + (offsetIndex===0? -18: 18),\n      y: n.y - sqSize/2\n    };\n  }\n\n  // ---------- 主渲染 ----------\n  window.renderAt = function(t){\n    t = Math.max(0, Math.min(10, t));\n\n    // 三行文字 0.0–4.0\n    var labelAlpha = 1;\n    if(t < 0.35){ labelAlpha = easeOut(seg(t,0,0.35)); }\n    if(t > 3.7){ labelAlpha = 1 - easeOut(seg(t,3.7,4.0)); }\n    labelEls.forEach(function(el,i){\n      var appear = easeOut(seg(t, 0.15 + i*0.12, 0.55 + i*0.12));\n      var a = labelAlpha * appear;\n      el.style.opacity = a.toFixed(3);\n      el.style.transform = 'translateX(' + ((1-appear)*(-16)) + 'px)';\n    });\n\n    // 方块出现 0.0–1.5 松散浮现\n    squareEls.forEach(function(el,i){\n      var ap = easeOut(seg(t, 0.05 + i*0.08, 0.5 + i*0.08));\n      var startP = squarePositions[i];\n\n      // 阶段：1.5–4.0 向右移动并分三支\n      var mv = seg(t, 1.5 + (i%2)*0.12 + Math.floor(i/2)*0.08, 3.1 + (i%2)*0.12 + Math.floor(i/2)*0.08);\n      // 用 easeInOut 但带轻微错位\n      var mve = easeInOut(mv);\n      var target = squareTarget(i);\n\n      var cx = startP.x + (target.x - startP.x) * mve;\n      var cy = startP.y + (target.y - startP.y) * mve;\n\n      // 4.0 后：方块收缩消失（左侧阵列收缩为细进度线）\n      var fadeOut = 1 - easeOut(seg(t, 4.0, 4.6));\n\n      // 7.0 后：再次淡出（清晰停留前）\n      var endFade = 1 - easeOut(seg(t, 8.8, 9.4));\n\n      el.style.opacity = (ap * fadeOut * endFade).toFixed(3);\n      el.style.left = cx+'px';\n      el.style.top = cy+'px';\n      // 缩放：出现时轻微放大\n      var sc = 0.85 + 0.15*ap;\n      el.style.transform = 'scale('+sc.toFixed(3)+')';\n    });\n\n    // 分支曲线：1.5–4.0 显现，4.0 淡出\n    var branchAlpha = 1;\n    if(t < 1.6) branchAlpha = easeOut(seg(t,1.5,1.9));\n    if(t > 3.8) branchAlpha = 1 - easeOut(seg(t,3.8,4.3));\n    if(t > 8.8) branchAlpha *= 1 - easeOut(seg(t,8.8,9.4));\n\n    branchPaths.forEach(function(p, idx){\n      var n = branchNode[idx];\n      // 起点：方块区域右缘\n      var sx = baseX + 2*(sqSize+sqGapX) - 6;\n      var sy = baseY + idx*(sqSize+sqGapY) + sqSize/2;\n      var ex = n.x - 8, ey = n.y;\n      var mx = (sx+ex)/2 + 40;\n      var d = 'M '+sx+' '+sy+' C '+mx+' '+sy+', '+mx+' '+ey+', '+ex+' '+ey;\n      p.setAttribute('d', d);\n      var draw = easeOut(seg(t, 1.6 + idx*0.12, 2.4 + idx*0.12));\n      p.setAttribute('stroke-dasharray', '600');\n      p.setAttribute('stroke-dashoffset', (600*(1-draw)).toFixed(1));\n      p.setAttribute('opacity', branchAlpha.toFixed(3));\n    });\n\n    // 节点圆点 2.0–4.0\n    nodeCircles.forEach(function(c, idx){\n      var a = easeOut(seg(t, 2.2 + idx*0.15, 2.7 + idx*0.15));\n      if(t > 3.8) a *= 1 - easeOut(seg(t,3.8,4.2));\n      if(t > 8.8) a *= 1 - easeOut(seg(t,8.8,9.4));\n      c.setAttribute('opacity', a.toFixed(3));\n      var pulse = 1;\n      if(t>2.7 && t<4.0){ pulse = 1 + 0.12*Math.sin((t-2.7)*6); }\n      c.setAttribute('r', (6*pulse).toFixed(2));\n    });\n\n    // 提示文字 1.5–4.0\n    hintEls.forEach(function(el, idx){\n      var a = easeOut(seg(t, 2.3 + idx*0.15, 2.9 + idx*0.15));\n      if(t > 3.7) a *= 1 - easeOut(seg(t,3.7,4.1));\n      if(t > 8.8) a *= 1 - easeOut(seg(t,8.8,9.4));\n      el.style.opacity = a.toFixed(3);\n      el.style.transform = 'translateX(' + ((1-a)*10) + 'px)';\n    });\n\n    // 汇合曲线 4.0–5.2 出现，5.2–6.2 淡出\n    var mergeAlpha = 0;\n    if(t >= 4.0) mergeAlpha = easeOut(seg(t,4.0,4.6));\n    if(t > 5.4) mergeAlpha *= 1 - easeOut(seg(t,5.4,6.3));\n\n    mergePaths.forEach(function(p, idx){\n      var n = branchNode[idx];\n      var sx = n.x + 8, sy = n.y;\n      var ex = box.x - 6, ey = box.y + box.h*0.5;\n      var mx = (sx+ex)/2 + 20;\n      var d = 'M '+sx+' '+sy+' C '+mx+' '+sy+', '+mx+' '+ey+', '+ex+' '+ey;\n      p.setAttribute('d', d);\n      var draw = easeOut(seg(t, 4.0 + idx*0.1, 4.8 + idx*0.1));\n      p.setAttribute('stroke-dasharray', '400');\n      p.setAttribute('stroke-dashoffset', (400*(1-draw)).toFixed(1));\n      p.setAttribute('opacity', mergeAlpha.toFixed(3));\n    });\n\n    // 预览框四条边描边 4.0–5.5\n    edgeDefs.forEach(function(e, idx){\n      var el = edgeEls[idx];\n      var p = easeOut(seg(t, e.delay, e.delay+0.55));\n      var isHoriz = (e.y1===e.y2);\n      var thick = 3;\n      if(isHoriz){\n        el.style.height = thick+'px';\n        el.style.top = (e.y1 - thick/2)+'px';\n        var fullW = box.w;\n        el.style.width = (fullW*p).toFixed(1)+'px';\n        el.style.left = (e.x1===0 ? 0 : (box.w - fullW*p)) + 'px';\n      } else {\n        el.style.width = thick+'px';\n        el.style.left = (e.x1 - thick/2)+'px';\n        var fullH = box.h;\n        el.style.height = (fullH*p).toFixed(1)+'px';\n        el.style.top = (e.y1===0 ? 0 : (box.h - fullH*p)) + 'px';\n      }\n      el.style.opacity = p>0 ? '1' : '0';\n    });\n\n    // 「故事预览」4.0 出现，保持到 10.0\n    var titleA = easeOut(seg(t, 4.35, 4.95));\n    prevText.style.opacity = titleA.toFixed(3);\n    prevText.style.left = (box.x + box.w/2)+'px';\n    prevText.style.top = (box.y + box.h/2 - 30)+'px';\n    prevText.style.transform = 'translateX(-50%)';\n    prevText.style.letterSpacing = '4px';\n\n    // 副标题 素材 → 镜头 → 成片 4.8 出现，8.5 淡出\n    var subA = easeOut(seg(t,4.8,5.3));\n    if(t > 8.0) subA *= 1 - easeOut(seg(t,8.0,8.5));\n    prevSub.style.opacity = subA.toFixed(3);\n    prevSub.style.left = (box.x + box.w/2)+'px';\n    prevSub.style.top = (box.y + box.h/2 + 36)+'px';\n    prevSub.style.transform = 'translateX(-50%)';\n    prevSub.style.whiteSpace = 'nowrap';\n\n    // 进度线 7.0–9.0 从左侧阵列位置收缩出现\n    var plA = easeOut(seg(t, 7.0, 7.6));\n    plA *= 1 - easeOut(seg(t, 9.3, 9.7));\n    progressLine.style.opacity = plA.toFixed(3);\n    var plW = 220 * easeInOut(seg(t, 7.0, 8.0));\n    progressLine.style.width = plW.toFixed(1)+'px';\n    progressLine.style.left = baseX+'px';\n    progressLine.style.top = (baseY + 3*(sqSize+sqGapY)/2 - 1)+'px';\n\n    // 取景角标 7.2 出现，8.9 淡出\n    var cornerA = easeOut(seg(t,7.2,7.7));\n    if(t > 8.3) cornerA *= 1 - easeOut(seg(t,8.3,8.9));\n    cornerEls.forEach(function(c){\n      c.setAttribute('opacity', cornerA.toFixed(3));\n      var s = 1;\n      if(t>7.7 && t<8.3){ s = 1 + 0.08*Math.sin((t-7.7)*7); }\n      c.setAttribute('transform', 'translate(0,0) scale('+s.toFixed(3)+')');\n      // 围绕各自角点缩放 - 简单处理：直接调整路径 stroke 宽度\n      c.setAttribute('stroke-width', (3*s).toFixed(2));\n    });\n\n    // 预览框背景：在描边过程中逐渐显现\n    var boxBgA = easeOut(seg(t,4.2,5.2));\n    if(t > 8.9) boxBgA *= 1 - easeOut(seg(t,8.9,9.5));\n    previewBox.style.background = 'rgba(247,249,255,'+(0.9*boxBgA).toFixed(3)+')';\n    previewBox.style.borderRadius = '6px';\n\n    // 预览框内的元素(故事预览/副标题)整体在最后轻微淡出? 保持到末帧不空\n    // 让标题在 9.6 后保持最小可见，避免空白\n    if(t > 9.5){\n      var k = 1 - (t-9.5)/0.5*0.15; // 轻微降到 85%\n      prevText.style.opacity = (titleA*k).toFixed(3);\n    }\n  };\n\n  window.renderAt(0);\n})();\n</script>\n</body>\n</html>",
+    "source_hash": "87c55552441a22e9dc8c8352cbc253878264f4b511086b9506a0531de990de9d",
+    "renderer": {
+      "diagnostics": [
+        {
+          "code": "raster_rounding",
+          "severity": "warning",
+          "message": "场景状态完全一致，少量像素出现 1 级栅格化舍入差异",
+          "frame": 225,
+          "time": 7.5,
+          "changed_pixels": 524,
+          "changed_pixel_ratio": 0.000568576,
+          "max_channel_difference": 1,
+          "mean_absolute_difference": 0.000205,
+          "difference_bounds": [
+            906,
+            400,
+            1131,
+            422
+          ],
+          "scene_state_equal": true,
+          "rounding_tolerated": true,
+          "tolerance": {
+            "max_channel_difference": 1,
+            "max_changed_pixel_ratio": 0.001
+          },
+          "evidence": {
+            "first": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-first.png",
+            "repeated": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-repeated.png",
+            "difference": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-difference.png"
+          },
+          "first_state_sha256": "367eea421028f3fe165058efc5a4fb5b58cb8ea5971c281dddb8a42ea157f678",
+          "repeated_state_sha256": "367eea421028f3fe165058efc5a4fb5b58cb8ea5971c281dddb8a42ea157f678"
+        },
+        {
+          "code": "blank_keyframe",
+          "severity": "warning",
+          "message": "部分采样帧几乎为单色，可能是入场或留白"
+        }
+      ],
+      "checkpoints": [
+        {
+          "time": 0.0,
+          "frame": 0,
+          "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000000.png"
+        },
+        {
+          "time": 2.5,
+          "frame": 75,
+          "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000075.png"
+        },
+        {
+          "time": 5.0,
+          "frame": 150,
+          "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000150.png"
+        },
+        {
+          "time": 7.5,
+          "frame": 225,
+          "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000225.png"
+        },
+        {
+          "time": 9.966666666666667,
+          "frame": 299,
+          "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000299.png"
+        }
+      ],
+      "isolation": {
+        "sandbox_requested": true,
+        "no_sandbox_flag": false,
+        "network": "data_only",
+        "profile": "ephemeral",
+        "clock": "paused",
+        "browser_version": "155.0.8059.79"
+      },
+      "frame_checks": [
+        {
+          "frame": 0,
+          "time": 0.0,
+          "pixel_stddev": 0.0
+        },
+        {
+          "frame": 75,
+          "time": 2.5,
+          "pixel_stddev": 10.021
+        },
+        {
+          "frame": 150,
+          "time": 5.0,
+          "pixel_stddev": 12.52
+        },
+        {
+          "frame": 225,
+          "time": 7.5,
+          "pixel_stddev": 13.392
+        },
+        {
+          "frame": 299,
+          "time": 9.966666666666667,
+          "pixel_stddev": 10.738
+        }
+      ],
+      "duration": 10.0,
+      "frames": 300,
+      "fps": 30,
+      "width": 1280,
+      "height": 720,
+      "render_seconds": 17.245,
+      "output_path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c.mp4",
+      "requested_duration": 10.0
+    },
+    "audit": {
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "attempts": [
+        {
+          "attempt": 1,
+          "source_hash": "87c55552441a22e9dc8c8352cbc253878264f4b511086b9506a0531de990de9d",
+          "renderer": {
+            "diagnostics": [
+              {
+                "code": "raster_rounding",
+                "severity": "warning",
+                "message": "场景状态完全一致，少量像素出现 1 级栅格化舍入差异",
+                "frame": 225,
+                "time": 7.5,
+                "changed_pixels": 524,
+                "changed_pixel_ratio": 0.000568576,
+                "max_channel_difference": 1,
+                "mean_absolute_difference": 0.000205,
+                "difference_bounds": [
+                  906,
+                  400,
+                  1131,
+                  422
+                ],
+                "scene_state_equal": true,
+                "rounding_tolerated": true,
+                "tolerance": {
+                  "max_channel_difference": 1,
+                  "max_changed_pixel_ratio": 0.001
+                },
+                "evidence": {
+                  "first": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-first.png",
+                  "repeated": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-repeated.png",
+                  "difference": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-difference.png"
+                },
+                "first_state_sha256": "367eea421028f3fe165058efc5a4fb5b58cb8ea5971c281dddb8a42ea157f678",
+                "repeated_state_sha256": "367eea421028f3fe165058efc5a4fb5b58cb8ea5971c281dddb8a42ea157f678"
+              },
+              {
+                "code": "blank_keyframe",
+                "severity": "warning",
+                "message": "部分采样帧几乎为单色，可能是入场或留白"
+              }
+            ],
+            "checkpoints": [
+              {
+                "time": 0.0,
+                "frame": 0,
+                "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000000.png"
+              },
+              {
+                "time": 2.5,
+                "frame": 75,
+                "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000075.png"
+              },
+              {
+                "time": 5.0,
+                "frame": 150,
+                "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000150.png"
+              },
+              {
+                "time": 7.5,
+                "frame": 225,
+                "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000225.png"
+              },
+              {
+                "time": 9.966666666666667,
+                "frame": 299,
+                "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000299.png"
+              }
+            ],
+            "isolation": {
+              "sandbox_requested": true,
+              "no_sandbox_flag": false,
+              "network": "data_only",
+              "profile": "ephemeral",
+              "clock": "paused",
+              "browser_version": "155.0.8059.79"
+            },
+            "frame_checks": [
+              {
+                "frame": 0,
+                "time": 0.0,
+                "pixel_stddev": 0.0
+              },
+              {
+                "frame": 75,
+                "time": 2.5,
+                "pixel_stddev": 10.021
+              },
+              {
+                "frame": 150,
+                "time": 5.0,
+                "pixel_stddev": 12.52
+              },
+              {
+                "frame": 225,
+                "time": 7.5,
+                "pixel_stddev": 13.392
+              },
+              {
+                "frame": 299,
+                "time": 9.966666666666667,
+                "pixel_stddev": 10.738
+              }
+            ],
+            "duration": 10.0,
+            "frames": 300,
+            "fps": 30,
+            "width": 1280,
+            "height": 720,
+            "render_seconds": 17.245,
+            "output_path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1.mp4",
+            "requested_duration": 10.0
+          },
+          "review": {
+            "passed": true,
+            "issues": []
+          },
+          "status": "succeeded"
+        }
+      ],
+      "human_source_edits": 0
+    }
+  }
+}

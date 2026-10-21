@@ -1,0 +1,159 @@
+{
+  "id": "0d4b9a9b74d64cfda998cc1d5d95c676",
+  "title": "20秒工作台介绍｜从素材到故事，再到可调整的每个镜头",
+  "current_revision_id": "8bdc70997a1e405bb7fc0e99c81210e9",
+  "workspace_project_id": "dfa59de2463f48cf862cd2c713234351",
+  "active_job_id": "8eeffaf558be47d0abc8a02077b64559",
+  "created_at": "2026-10-21T03:03:45.892520+00:00",
+  "updated_at": "2026-10-21T03:15:22.122865+00:00",
+  "status": "succeeded",
+  "revision": {
+    "id": "8bdc70997a1e405bb7fc0e99c81210e9",
+    "animation_id": "0d4b9a9b74d64cfda998cc1d5d95c676",
+    "parent_revision_id": null,
+    "version": 1,
+    "title": "20秒工作台介绍｜从素材到故事，再到可调整的每个镜头",
+    "brief": "制作20秒16:9工作台介绍，白底蓝色极简动效，2个独立10秒段落。第一段「从素材到故事」：素材缩略方块进入三条分支，再收束到预览画面。第二段「每个镜头，都能再调整」：突出时长、字幕、替换镜头三个动作，并以「让想法成为下一部片子」收尾。只讲这些已经存在的能力，不加经营数字，无音乐无旁白。不复刻网页截图，用图形与中文字体设计表达。",
+    "style": "free",
+    "ratio": "16:9",
+    "duration": 20.0,
+    "renders": [
+      {
+        "asset_id": "fe5caa123bf9496d85501b463fc2d3c9",
+        "duration": 10.0,
+        "height": 720,
+        "scene_id": "f901f8ddd77f4b16937c93112139c51c",
+        "thumbnail_url": "/api/media/previews/fe5caa123bf9496d85501b463fc2d3c9.jpg",
+        "url": "/api/media/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c.mp4",
+        "width": 1280
+      },
+      {
+        "asset_id": "6c6078c8483b4436b9ccb3774afd7987",
+        "duration": 10.0,
+        "height": 720,
+        "scene_id": "c14e8c277936402cb041503a8169b098",
+        "thumbnail_url": "/api/media/previews/6c6078c8483b4436b9ccb3774afd7987.jpg",
+        "url": "/api/media/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/c14e8c277936402cb041503a8169b098.mp4",
+        "width": 1280
+      }
+    ],
+    "output": {
+      "asset_id": "1f0406e617154d5da6c86ff73ad072fb",
+      "duration": 20.0,
+      "height": 720,
+      "thumbnail_url": "/api/media/previews/1f0406e617154d5da6c86ff73ad072fb.jpg",
+      "url": "/api/media/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/complete.mp4",
+      "width": 1280
+    },
+    "job_id": "8eeffaf558be47d0abc8a02077b64559",
+    "created_at": "2026-10-21T03:05:52.284184+00:00",
+    "updated_at": "2026-10-21T03:15:22.122773+00:00",
+    "workspace_project_id": "dfa59de2463f48cf862cd2c713234351",
+    "scenes": [
+      {
+        "id": "f901f8ddd77f4b16937c93112139c51c",
+        "title": "从素材到故事",
+        "description": "【画幅与基调】16:9 纯白底，主色为深蓝（约 #1B4DFF）与浅蓝线框，中文字体为无衬线黑体（如思源黑体）。全程无旁白、无配乐。\n\n【0.0–1.5s】画面左侧集中出现 6 个蓝色空心小方块（素材缩略图占位，内部无真实图片），以 2×3 的松散阵列轻轻浮现；中央偏右出现三行中文标签：「选取」「编排」「成片」。\n\n【1.5–4.0s】6 个方块依次向右移动并分成三条细流：上支 2 个方块、中支 2 个、下支 2 个，沿三条浅蓝曲线滑向右上、右中、右下三个分支节点。分支节点为小圆点，每个节点旁出现更小的中文提示：「镜头顺序」「画面组合」「节奏点」。\n\n【4.0–7.0s】三条分支线条向画面中右方的矩形框汇合；矩形框以蓝色描边逐步画出，作为「预览画面」容器。分支线条淡出，矩形框内出现居中中文「故事预览」，其下方简短出现「素材 → 镜头 → 成片」一行小字。\n\n【7.0–10.0s】预览框保持稳定，左侧缩略方块阵收缩为一条细蓝色进度线；右侧预览框四角出现取景角标，画面整体停留 1.5 秒供阅读，最后元素轻微淡出，结束本段。\n\n【实际画面文字与出现时间】「选取」「编排」「成片」三词 0.0s 出现、4.0s 淡出；「镜头顺序」「画面组合」「节奏点」1.5s 随分支出现、4.0s 淡出；「故事预览」4.0s 出现并保持到 10.0s；「素材 → 镜头 → 成片」4.8s 出现、8.5s 淡出。",
+        "duration": 10.0,
+        "source_revision_id": "8bdc70997a1e405bb7fc0e99c81210e9"
+      },
+      {
+        "id": "c14e8c277936402cb041503a8169b098",
+        "title": "每个镜头，都能再调整",
+        "description": "【画幅与基调】延续白底、蓝色线框，构图改为上中下三层动作展示，不复用第一段的左图右框布局。无旁白、无配乐。\n\n【0.0–2.0s】画面顶部居中先出现一句中文标题「每个镜头，都能再调整」，停留 2 秒。下方出现一条水平时间线，线上有 3 个蓝色镜头片段矩形。\n\n【2.0–5.0s】第一动作「时长」：时间线中间片段被选中（矩形加粗描边），其右边缘出现双向箭头，片段长度向右延展一小段，上方浮出小字「时长」。延展后的片段保持选中态。\n\n【5.0–7.5s】第二动作「字幕」：选中片段下方出现一条细横线，横线上从左到右逐字出现示例字幕文字「镜头，可以再调整」，文字以轻淡入方式显示，旁边浮出标签「字幕」。\n\n【7.5–10.0s】第三动作「替换镜头」：选中片段内部出现一个圆形循环箭头图标，片段底色由浅蓝变成更深的蓝，其右侧推入一个等宽的新片段矩形，旧片段的循环图标淡出，标签「替换镜头」短暂出现；随后顶部标题与时间线整体上移淡出，中央出现收尾中文「让想法成为下一部片子」，停留至 10.0s。\n\n【实际画面文字与出现时间】「每个镜头，都能再调整」0.0s 出现、8.0s 淡出；「时长」2.0s 出现、5.0s 淡出；「字幕」5.0s 出现、7.5s 淡出；示例字幕「镜头，可以再调整」5.5s 出现、8.0s 淡出；「替换镜头」7.5s 出现、9.0s 淡出；「让想法成为下一部片子」8.5s 淡入并保持到 10.0s。",
+        "duration": 10.0,
+        "source_revision_id": "8bdc70997a1e405bb7fc0e99c81210e9"
+      }
+    ]
+  },
+  "revisions": [
+    {
+      "id": "8bdc70997a1e405bb7fc0e99c81210e9",
+      "parent_revision_id": null,
+      "version": 1,
+      "title": "20秒工作台介绍｜从素材到故事，再到可调整的每个镜头",
+      "duration": 20.0,
+      "job_id": "8eeffaf558be47d0abc8a02077b64559",
+      "created_at": "2026-10-21T03:05:52.284184+00:00"
+    }
+  ],
+  "jobs": [
+    {
+      "created_at": "2026-10-21T03:14:28.249414+00:00",
+      "error": null,
+      "id": "8eeffaf558be47d0abc8a02077b64559",
+      "kind": "animation_render",
+      "message": "已完成",
+      "progress": 100,
+      "result": {
+        "animation_id": "0d4b9a9b74d64cfda998cc1d5d95c676",
+        "revision_id": "8bdc70997a1e405bb7fc0e99c81210e9",
+        "output": {
+          "asset_id": "1f0406e617154d5da6c86ff73ad072fb",
+          "url": "/api/media/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/complete.mp4",
+          "thumbnail_url": "/api/media/previews/1f0406e617154d5da6c86ff73ad072fb.jpg",
+          "duration": 20.0,
+          "width": 1280,
+          "height": 720
+        },
+        "workspace_project_id": "dfa59de2463f48cf862cd2c713234351"
+      },
+      "status": "succeeded",
+      "updated_at": "2026-10-21T03:15:22.124507+00:00",
+      "resumable": false
+    },
+    {
+      "created_at": "2026-10-21T03:08:16.729481+00:00",
+      "error": "动画经过一次修正仍未通过检查：场景校验未通过；{\"code\": \"non_deterministic_frame\", \"severity\": \"error\", \"message\": \"相同 t 的重复采样画面不同；renderAt 必须由 t 完整决定画面\", \"frame\": 225, \"time\": 7.5}；{\"code\": \"blank_keyframe\", \"severity\": \"warning\", \"message\": \"部分采样帧几乎为单色，可能是入场或留白\"}",
+      "id": "c6af45915f904a00bc08b6218801cd19",
+      "kind": "animation_render",
+      "message": "动画经过一次修正仍未通过检查：场景校验未通过；{\"code\": \"non_deterministic_frame\", \"severity\": \"error\", \"message\": \"相同 t 的重复采样画面不同；renderAt 必须由 t 完整决定画面\", \"frame\": 225, \"time\": 7.5}；{\"code\": \"blank_keyframe\", \"severity\": \"warning\", \"message\": \"部分采样帧几乎为单色，可能是入场或留白\"}",
+      "progress": 10.0,
+      "result": null,
+      "status": "failed",
+      "updated_at": "2026-10-21T03:08:38.525962+00:00",
+      "resumable": false
+    },
+    {
+      "created_at": "2026-10-21T03:06:43.735541+00:00",
+      "error": "DeepSeek 未返回有效 JSON；本次结果未保存",
+      "id": "f6b3f3d56144487db128286ea4b09448",
+      "kind": "animation_render",
+      "message": "DeepSeek 未返回有效 JSON；本次结果未保存",
+      "progress": 11.75,
+      "result": null,
+      "status": "failed",
+      "updated_at": "2026-10-21T03:07:02.975719+00:00",
+      "resumable": false
+    },
+    {
+      "created_at": "2026-10-21T03:05:45.642055+00:00",
+      "error": null,
+      "id": "afe7dbc1b164426988c1d41f9f0df1c6",
+      "kind": "animation_plan",
+      "message": "已完成",
+      "progress": 100,
+      "result": {
+        "animation_id": "0d4b9a9b74d64cfda998cc1d5d95c676",
+        "revision_id": "8bdc70997a1e405bb7fc0e99c81210e9",
+        "output": null,
+        "workspace_project_id": null
+      },
+      "status": "succeeded",
+      "updated_at": "2026-10-21T03:05:52.285636+00:00",
+      "resumable": false
+    },
+    {
+      "created_at": "2026-10-21T03:03:45.892600+00:00",
+      "error": "DeepSeek 返回的字段不符合约定（字段 $，规则 additionalProperties）；本次结果未保存",
+      "id": "5ab14a76032a4c3d8a9757e32f7bc544",
+      "kind": "animation_plan",
+      "message": "DeepSeek 返回的字段不符合约定（字段 $，规则 additionalProperties）；本次结果未保存",
+      "progress": 8.0,
+      "result": null,
+      "status": "failed",
+      "updated_at": "2026-10-21T03:03:50.517954+00:00",
+      "resumable": false
+    }
+  ]
+}

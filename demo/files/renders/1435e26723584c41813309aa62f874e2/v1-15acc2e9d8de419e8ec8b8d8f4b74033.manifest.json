@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "plan_id": "2abe73f02f2845368cb3366a8888ab7e",
+  "plan_version": 1,
+  "output_sha256": "37bf30dd819d34a31973d4375585331aebbd36b15b5966c7e3c51933015cd12c",
+  "compiled_timeline": {
+    "fps": 30,
+    "frame_count": 420,
+    "interval": "[start_frame,end_frame)",
+    "clips": [
+      {
+        "clip_id": "existing-video",
+        "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+        "start_frame": 0,
+        "end_frame": 120,
+        "source_start_seconds": 0.0,
+        "source_end_seconds": 4.0,
+        "source_time_base": "1/12288",
+        "kind": "video",
+        "transition": "cut",
+        "caption": ""
+      },
+      {
+        "clip_id": "animation-scene",
+        "asset_id": "c2636fff35354698975f0cec2178f938",
+        "start_frame": 120,
+        "end_frame": 420,
+        "source_start_seconds": 0.0,
+        "source_end_seconds": 10.0,
+        "source_time_base": "1/15360",
+        "kind": "video",
+        "transition": "cut",
+        "caption": ""
+      }
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+      "sha256": "0491a6cab08ef7f71f9530613250dcfd4bc17dcb38b5903611a892405c66c477"
+    },
+    {
+      "asset_id": "c2636fff35354698975f0cec2178f938",
+      "sha256": "61653d3f3833a99a6f514ed94292656b5d5ae576f7c662bd0ef17d22061a99ef"
+    }
+  ],
+  "renderer_sha256": "8276cd4d5e57b725e005a8d0b71d000a58e14145e21519be6af8fbee6642dc1d",
+  "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+  "width": 1280,
+  "height": 720,
+  "sample_rate": 48000,
+  "font_requested": "Hiragino Sans GB",
+  "music_asset_id": null,
+  "music_volume": 0.16,
+  "plan": {
+    "title": "动画与已有视频混剪验收",
+    "brief": "手动编排 · 动画与已有视频",
+    "summary": "",
+    "template_id": "manual",
+    "ratio": "16:9",
+    "clips": [
+      {
+        "id": "existing-video",
+        "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+        "start": 0.0,
+        "end": 4.0,
+        "duration": 4.0,
+        "label": "已有视频",
+        "caption": "",
+        "role": "开场",
+        "transition": "cut",
+        "timeline_start": 0.0,
+        "timeline_end": 4.0
+      },
+      {
+        "id": "animation-scene",
+        "asset_id": "c2636fff35354698975f0cec2178f938",
+        "start": 0.0,
+        "end": 10.0,
+        "duration": 10.0,
+        "label": "动画段落",
+        "caption": "",
+        "role": "说明",
+        "transition": "cut",
+        "timeline_start": 4.0,
+        "timeline_end": 14.0
+      }
+    ],
+    "width": 1280,
+    "height": 720,
+    "duration": 14.0,
+    "project_id": "1435e26723584c41813309aa62f874e2",
+    "id": "2abe73f02f2845368cb3366a8888ab7e",
+    "version": 1,
+    "base_version_id": null,
+    "origin": {
+      "source": "home_canvas",
+      "actor": "local_user",
+      "branch_id": "animation-mix-proof",
+      "branch_name": "动画与已有视频",
+      "submission_id": "bbaaeedb-875e-4d8f-b798-8f7bae133359"
+    },
+    "change_summary": "建立初始方案",
+    "changes": [
+      "建立初始方案"
+    ],
+    "created_at": "2026-10-21T03:23:20.568609+00:00",
+    "updated_at": "2026-10-21T03:23:20.571057+00:00",
+    "url": "/api/media/plans/2abe73f02f2845368cb3366a8888ab7e.json"
+  }
+}

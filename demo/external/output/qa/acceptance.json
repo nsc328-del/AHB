@@ -1,0 +1,196 @@
+{
+  "project": "通用视频 AI 剪辑工作台",
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "scope": "本机五板块关键链路验收；合成素材，程序剪辑，无 Computer Use 剪辑路径",
+  "status": "关键链路通过，未覆盖能力见 limitations",
+  "verification_sources": {
+    "database": "data/studio.sqlite，只读核对",
+    "media": "本地文件 SHA-256 与 ffprobe 实测",
+    "browser": "主执行会话实际浏览器操作及 output/qa/ui 截图",
+    "tests": "主执行会话最终合并测试结果；供应商模拟与真实调用分开记录"
+  },
+  "automated_checks": {
+    "unittest": {
+      "command": ".venv/bin/python -m unittest discover -s tests -v",
+      "passed": 18,
+      "failed": 0,
+      "elapsed_seconds": 5.16,
+      "covers": [
+        "真实上传、探测、素材引用和 FFmpeg 渲染",
+        "初始方案失败后同项目重试，重复重试拒绝",
+        "方案版本、历史版本审改及并发编辑保护",
+        "新素材替换、选中区间约束和参考原片禁止入片",
+        "配置缺失、明确拒绝、未知提交、重启与原供应商任务续查",
+        "本地转录状态与旧结果保留",
+        "供应商请求和生成模式的离线契约"
+      ]
+    },
+    "javascript": {
+      "command": "node --check static/app.js",
+      "status": "passed"
+    },
+    "boundary": "模拟供应商测试不等同于真实生成效果验收。"
+  },
+  "live_checks": {
+    "material_analysis": {
+      "status": "passed",
+      "provider": "DeepSeek",
+      "evidence": "output/qa/provider-live-20261020/ledger.json",
+      "inputs": "本地合成几何图片与视频",
+      "reference_asset_id": "7bf7a15b70ae466c9ffbf1ca215aaaa4",
+      "reference_duration_seconds": 6.0,
+      "sampled_frames": 9,
+      "analyzed_segments": 3,
+      "detected_shots": 3,
+      "complete_frame_review": false
+    },
+    "initial_plan_retry_and_versions": {
+      "status": "passed",
+      "project_id": "74716807545e479f875cebc3c1046bd7",
+      "original_failed_job_id": "52f295336f0a4c42bcc78450c95cad18",
+      "original_failed_job_preserved": true,
+      "retry_job_id": "5fde68afb31c435fba613e0f50728ff4",
+      "retry_status": "succeeded",
+      "v1_plan_id": "8aace0d05b464e2c8933754e5138d2f5",
+      "v2_plan_id": "c8daf0a4372b4a3e8f35070d6ad5eb3a",
+      "v2_change": "首段字幕由“蓝色方块”改为“蓝色方块 · 开场”",
+      "v2_base_version_id": "8aace0d05b464e2c8933754e5138d2f5",
+      "v1_render": {
+        "path": "data/renders/74716807545e479f875cebc3c1046bd7/v1-028f70d863794ae5bdf58c28e9c5e0e0.mp4",
+        "duration_seconds": 6.0,
+        "dimensions": [
+          1280,
+          720
+        ],
+        "has_audio": true,
+        "sha256": "dac85ac6335d2906d88c9321dd3b62d03b41385e87c07c610827df0c165a736a",
+        "sha256_matches_asset_record": true
+      },
+      "v2_render_verified": false,
+      "browser_verified": "查看历史 v1 并渲染后仍停留在 v1；v2 方案未被覆盖。",
+      "evidence": "output/qa/ui/project-rendered.png"
+    },
+    "reference_to_new_film": {
+      "status": "passed",
+      "project_id": "5958c22cb2f94b8aaf8df289d6edbee5",
+      "reference_asset_id": "7bf7a15b70ae466c9ffbf1ca215aaaa4",
+      "plan_id": "74825616dce6469ca5fa189953a0ac47",
+      "auto_render": true,
+      "plan_job_id": "d0071284dec94546943559e70d941daa",
+      "render_job_id": "616df5580aed48399b688efa934d298f",
+      "sequence": [
+        {
+          "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+          "content": "绿色三角",
+          "duration_seconds": 1.0
+        },
+        {
+          "asset_id": "e48d062237fe407dafe6676c3a96289e",
+          "content": "蓝色方块",
+          "duration_seconds": 3.0
+        },
+        {
+          "asset_id": "e400442976b34c6b92b3459502a60aaf",
+          "content": "橙色圆形",
+          "duration_seconds": 2.0
+        }
+      ],
+      "reference_asset_in_clips_or_music": false,
+      "render": {
+        "path": "data/renders/5958c22cb2f94b8aaf8df289d6edbee5/v1-616df5580aed48399b688efa934d298f.mp4",
+        "duration_seconds": 6.0,
+        "dimensions": [
+          1280,
+          720
+        ],
+        "has_audio": true,
+        "sha256": "5d0daab5f8c63061cba4fb444c2cab1b12cd665f0ea7e679f6f2749d7da1bb40",
+        "sha256_matches_asset_record": true
+      },
+      "evidence": "output/qa/ui/reference-remix-rendered.png"
+    },
+    "official_skill_storyboard": {
+      "status": "passed",
+      "job_id": "b1609758c4c44cf5820ed2417337dd55",
+      "skill_id": "minimalist-product-ad-generator",
+      "shot_count": 1,
+      "shot_durations_seconds": [
+        4
+      ],
+      "evidence": "output/qa/ui/generation-storyboard.png"
+    },
+    "h3_generation": {
+      "status": "succeeded",
+      "job_id": "abde907492464441b9e0a6913a919f61",
+      "live_generation_count": 1,
+      "model": "MiniMax-H3",
+      "mode": "T2VA",
+      "resolution": "768P",
+      "requested_duration_seconds": 4,
+      "provider_usage_seconds": 4,
+      "estimated_cost_cny": 2,
+      "final_charge_verified": false,
+      "local_media_duration_seconds": 4.458333,
+      "dimensions": [
+        1344,
+        768
+      ],
+      "has_audio": true,
+      "path": "data/generations/abde907492464441b9e0a6913a919f61.mp4",
+      "sha256": "0491a6cab08ef7f71f9530613250dcfd4bc17dcb38b5903611a892405c66c477",
+      "sha256_matches_asset_record": true,
+      "evidence": [
+        "output/qa/h3-live-receipt.json",
+        "output/qa/h3-live-result.json"
+      ],
+      "boundary": "唯一一次已批准的真实 H3 生成；记录整理未再次提交。API 计量为 4 秒，下载文件实测为 4.458333 秒。"
+    },
+    "local_transcription": {
+      "status": "passed",
+      "engine": "faster-whisper",
+      "model": "base",
+      "input": "本机合成的约 7 秒英文测试语音",
+      "result": "返回真实转录文本及时间段",
+      "elapsed_seconds_including_initial_model_setup": 10.8,
+      "media_uploaded": false,
+      "boundary": "仅验证该合成语音；不能代表所有语言、口音和噪声环境的准确率。"
+    }
+  },
+  "browser_checks": [
+    {
+      "check": "指定片段选择后刷新保留；取消最后一个选中片段时移除该素材",
+      "status": "passed",
+      "evidence": [
+        "主执行会话浏览器可访问性状态：刷新后已选4份/1段，取消后恢复3份且无片段限制",
+        "output/qa/ui/analysis-final.png"
+      ]
+    },
+    {
+      "check": "方案任务处理中刷新页面，完成后自动展示成功结果",
+      "status": "passed",
+      "evidence": "主执行会话浏览器交互观察"
+    },
+    {
+      "check": "历史 v1 渲染完成后仍显示 v1，未跳到当前 v2",
+      "status": "passed",
+      "evidence": "output/qa/ui/project-rendered.png"
+    }
+  ],
+  "final_local_checks": {
+    "source": "主执行会话最终核验结果",
+    "browser_console_errors": [],
+    "private_provider_config_mode": "0600",
+    "project_text_files_actual_key_matches": 0,
+    "keys_in_report": false
+  },
+  "limitations": [
+    "九种官方 Skills 均有本地来源快照与适配；本次真实分镜验收仅覆盖极简产品广告，其余不能称为逐项真实生成验收。",
+    "H3 真实调用只覆盖一次 T2VA；I2VA、L2VA、FL2VA、Ref2VA 仅完成接口契约测试。",
+    "自动角色/产品/场景锚点生图与独立音乐生成 API 未接入，需上传相应素材。",
+    "视频理解基于抽帧和已有本地语音转录；未完成逐帧人工审片，也没有独立音乐/音效语义识别。",
+    "手机端未做专门设备检查；动画只做状态截图检查，没有高帧率录屏验收。",
+    "仅本机运行；未验证外网部署、多人权限隔离、长时压力或长期稳定性。"
+  ],
+  "record_preservation": "保留原失败任务、旧方案、原件及已完成成片；本次整理只增加验收记录并修正 README 引用。"
+}

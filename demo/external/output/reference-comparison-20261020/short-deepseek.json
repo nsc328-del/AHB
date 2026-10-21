@@ -1,0 +1,882 @@
+{
+  "id": "bed732a655dd4a8e9a2d2386a964c5a5",
+  "name": "首尔旅行转场｜冷面公主.mp4",
+  "kind": "video",
+  "duration": 12.5667,
+  "width": 576,
+  "height": 1024,
+  "has_audio": true,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "video_codec": "hevc",
+  "audio_codec": "aac",
+  "size": 996138,
+  "sha256": "e6db1150efa795c8799924e796348027358a64200df1193a1fd252bb50b9162c",
+  "url": "/api/media/assets/69e1152b8fe8471fbaac49c0ec6c678e.mp4",
+  "thumbnail_url": "/api/media/previews/bed732a655dd4a8e9a2d2386a964c5a5.jpg",
+  "source": "upload",
+  "generation_id": null,
+  "purpose": "reference",
+  "analysis_status": "succeeded",
+  "analysis": {
+    "summary": "一段以年轻女性为主角的旅行/Vlog风格短视频，通过便利店外景、寿司店餐桌、自助照相馆、卷帘门涂鸦墙与商场咖啡区等多个场景快速切换，形成轻快的旅行记录式叙事。无可用转录文字，因此不对对白、音效或音乐做判断。",
+    "tags": [
+      "旅行vlog",
+      "年轻女性",
+      "多场景切换",
+      "手持跟拍",
+      "城市街景",
+      "轻快氛围",
+      "自拍视角",
+      "竖屏"
+    ],
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "timecode": "00:00.000-00:00.500",
+        "description": "街边便利店或小铺外的金属货架区域，可见蓝色塑料筐、纸箱、冰柜边缘和贴着瓷砖的矮墙，画面以环境和物件为主，人物尚未成为视觉中心。",
+        "tags": [
+          "街边",
+          "便利店外",
+          "货架",
+          "瓷砖墙",
+          "纸箱"
+        ],
+        "role": "环境建立",
+        "shot_type": "中景",
+        "motion": "手持轻微移动",
+        "evidence_times": [
+          0.0,
+          0.1,
+          0.25
+        ]
+      },
+      {
+        "start": 0.5,
+        "end": 1.0,
+        "timecode": "00:00.500-00:01.000",
+        "description": "镜头向右平移，画面右侧逐渐出现身穿白衬衫、灰色短裙、系红色格纹领带的长发女性，环境仍是便利店外的金属栏杆与冰柜。",
+        "tags": [
+          "人物入画",
+          "白衬衫",
+          "灰短裙",
+          "长发",
+          "便利店外"
+        ],
+        "role": "人物引入",
+        "shot_type": "中景",
+        "motion": "向右平移/跟拍",
+        "evidence_times": [
+          0.6,
+          0.75
+        ]
+      },
+      {
+        "start": 1.0,
+        "end": 2.0,
+        "timecode": "00:01.000-00:02.000",
+        "description": "女性正面入镜，站在便利店或小铺外，手指抵住脸颊，面对镜头做出轻微摆拍姿态；背景可见冰柜、货架和商品。",
+        "tags": [
+          "正面摆拍",
+          "手指脸颊",
+          "便利店外",
+          "校服风穿搭"
+        ],
+        "role": "人物展示",
+        "shot_type": "近景/中景",
+        "motion": "手持轻微晃动",
+        "evidence_times": [
+          1.1,
+          1.25,
+          1.6,
+          1.75
+        ]
+      },
+      {
+        "start": 2.0,
+        "end": 2.5,
+        "timecode": "00:02.000-00:02.500",
+        "description": "镜头从人物侧后方移向街道，画面中女性身体部分在左侧边缘，背景可见台阶、冰柜、蓝色垃圾桶和黄色道路标线。",
+        "tags": [
+          "侧后方",
+          "街道",
+          "台阶",
+          "黄色标线",
+          "转场前"
+        ],
+        "role": "场景过渡",
+        "shot_type": "中景",
+        "motion": "向左移动/摇镜",
+        "evidence_times": [
+          2.1,
+          2.25
+        ]
+      },
+      {
+        "start": 2.5,
+        "end": 4.733,
+        "timecode": "00:02.500-00:04.733",
+        "description": "室内餐饮场景，女性坐在木质餐桌前，桌上有寿司拼盘、刺身拼盘、饮料和餐具，她举杯面向镜头，背景有玻璃窗和其他顾客。",
+        "tags": [
+          "餐厅",
+          "寿司",
+          "举杯",
+          "室内",
+          "就餐"
+        ],
+        "role": "旅行生活记录",
+        "shot_type": "中景",
+        "motion": "手持固定/轻微晃动",
+        "evidence_times": [
+          2.6,
+          3.129,
+          3.616
+        ]
+      },
+      {
+        "start": 4.733,
+        "end": 6.5,
+        "timecode": "00:04.733-00:06.500",
+        "description": "自助照相馆或大头贴店区域，女性身穿米白色毛绒外套、短裤和雪地靴，手举照片小卡，面对镜头摆出俏皮姿势，背景有贴满照片的灯箱和数字门牌。",
+        "tags": [
+          "照相馆",
+          "大头贴",
+          "照片小卡",
+          "毛绒外套",
+          "俏皮摆拍"
+        ],
+        "role": "趣味互动",
+        "shot_type": "中景/全景",
+        "motion": "手持跟拍",
+        "evidence_times": [
+          4.833,
+          4.95,
+          5.267,
+          5.383,
+          5.7
+        ]
+      },
+      {
+        "start": 6.5,
+        "end": 7.6,
+        "timecode": "00:06.500-00:07.600",
+        "description": "镜头跟随女性走向照相馆门帘处，可见门牌数字1、贴满照片的墙面和蓝色屏幕，人物身体部分出画。",
+        "tags": [
+          "离场",
+          "门帘",
+          "数字门牌",
+          "照片墙"
+        ],
+        "role": "场景过渡",
+        "shot_type": "中景",
+        "motion": "跟拍/移动",
+        "evidence_times": [
+          6.6,
+          7.6
+        ]
+      },
+      {
+        "start": 7.6,
+        "end": 8.7,
+        "timecode": "00:07.600-00:08.700",
+        "description": "女性出现在楼梯间或室内过道，双手各举一张照片小卡面向镜头，表情兴奋，背景有楼梯、相框和暖色灯光。",
+        "tags": [
+          "照片小卡",
+          "兴奋表情",
+          "楼梯间",
+          "暖光"
+        ],
+        "role": "情绪展示",
+        "shot_type": "近景",
+        "motion": "手持前置自拍",
+        "evidence_times": [
+          7.6
+        ]
+      },
+      {
+        "start": 8.7,
+        "end": 10.033,
+        "timecode": "00:08.700-00:10.033",
+        "description": "街边卷帘门前，门上有卡通食物图案和日文文字，女性站在门前街道上，先侧身入镜，随后转身面对镜头并比出手指姿势。",
+        "tags": [
+          "卷帘门涂鸦",
+          "街边",
+          "转身",
+          "比手势",
+          "日文招牌"
+        ],
+        "role": "街景打卡",
+        "shot_type": "全景",
+        "motion": "手持略微后拉",
+        "evidence_times": [
+          8.8,
+          9.034,
+          9.388,
+          9.467,
+          9.7
+        ]
+      },
+      {
+        "start": 10.033,
+        "end": 10.7,
+        "timecode": "00:10.033-00:10.700",
+        "description": "女性站在街边，身旁可见红色餐饮招牌、空调外机和狭窄街道，她保持比手指姿势看向镜头。",
+        "tags": [
+          "红色招牌",
+          "餐饮店",
+          "空调外机",
+          "街边"
+        ],
+        "role": "街景展示",
+        "shot_type": "全景",
+        "motion": "手持固定/轻微晃动",
+        "evidence_times": [
+          10.133,
+          10.366
+        ]
+      },
+      {
+        "start": 10.7,
+        "end": 11.3,
+        "timecode": "00:10.700-00:11.300",
+        "description": "镜头转向街道纵深处，画面左侧是红色餐饮招牌和空调外机，前方是灰色路面与远处行人，女性身体部分在画面左下角。",
+        "tags": [
+          "街道纵深",
+          "红色招牌",
+          "行人",
+          "过渡"
+        ],
+        "role": "场景转场",
+        "shot_type": "全景",
+        "motion": "摇镜/前移",
+        "evidence_times": [
+          10.8,
+          11.0
+        ]
+      },
+      {
+        "start": 11.3,
+        "end": 12.5667,
+        "timecode": "00:11.300-00:12.567",
+        "description": "室内商场或咖啡座区域，女性坐在大理石纹桌面前，双手托腮面对镜头，桌上有粉色和橙色饮料以及白色购物袋，背景有其他顾客和店铺。",
+        "tags": [
+          "商场",
+          "咖啡座",
+          "托腮",
+          "饮料",
+          "购物袋",
+          "结尾"
+        ],
+        "role": "结尾收束",
+        "shot_type": "中景",
+        "motion": "手持轻微晃动",
+        "evidence_times": [
+          11.4,
+          11.634,
+          12.067,
+          12.267,
+          12.517
+        ]
+      }
+    ],
+    "structure": [
+      {
+        "role": "街景环境铺垫",
+        "start": 0.0,
+        "end": 0.5,
+        "purpose": "用便利店外的货架、冰柜和街道路面快速交代城市旅行环境，为人物出现提供空间。"
+      },
+      {
+        "role": "人物入画与亮相",
+        "start": 0.5,
+        "end": 2.0,
+        "purpose": "通过平移让主角进入画面并正面摆拍，建立人物形象与轻快调性。"
+      },
+      {
+        "role": "第一场景转场",
+        "start": 2.0,
+        "end": 2.5,
+        "purpose": "从便利店外移到街道和台阶，利用移动方向完成空间过渡。"
+      },
+      {
+        "role": "餐饮体验段落",
+        "start": 2.5,
+        "end": 4.733,
+        "purpose": "展示寿司餐桌和举杯动作，强化旅行中的美食体验与生活感。"
+      },
+      {
+        "role": "趣味照相馆段落",
+        "start": 4.733,
+        "end": 7.6,
+        "purpose": "用照片小卡、俏皮姿势和贴满照片的灯箱制造趣味互动与记忆点。"
+      },
+      {
+        "role": "照片成果展示",
+        "start": 7.6,
+        "end": 8.7,
+        "purpose": "以举照片小卡和兴奋表情回收上一场景，形成轻快的成果展示。"
+      },
+      {
+        "role": "街边打卡与招牌过渡",
+        "start": 8.7,
+        "end": 11.3,
+        "purpose": "延续城市街景旅行氛围，利用卷帘门涂鸦、餐饮招牌和街道纵深完成多个短镜切换。"
+      },
+      {
+        "role": "商场休息结尾",
+        "start": 11.3,
+        "end": 12.5667,
+        "purpose": "以商场咖啡座托腮镜头收束，形成轻松、日常化的旅行结尾。"
+      }
+    ],
+    "audio_analyzed": true,
+    "audio_note": "已完成本地语音转录，自动识别文本以原声音轨为准。",
+    "analyzed_frame_times": [
+      0.0,
+      0.1,
+      0.25,
+      0.6,
+      0.75,
+      1.1,
+      1.25,
+      1.6,
+      1.75,
+      2.1,
+      2.25,
+      2.6,
+      3.129,
+      3.616,
+      4.833,
+      4.95,
+      5.267,
+      5.383,
+      5.7,
+      5.816,
+      6.133,
+      6.258,
+      6.267,
+      6.6,
+      7.6,
+      8.8,
+      9.034,
+      9.388,
+      9.467,
+      9.7,
+      10.133,
+      10.366,
+      10.8,
+      11.0,
+      11.4,
+      11.634,
+      12.067,
+      12.267,
+      12.517
+    ],
+    "model": "deepseek-flash",
+    "status": "completed",
+    "evidence_frames": [
+      {
+        "time": 0.0,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-000.jpg"
+      },
+      {
+        "time": 0.1,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-001.jpg"
+      },
+      {
+        "time": 0.25,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-002.jpg"
+      },
+      {
+        "time": 0.6,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-003.jpg"
+      },
+      {
+        "time": 0.75,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-004.jpg"
+      },
+      {
+        "time": 1.1,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-005.jpg"
+      },
+      {
+        "time": 1.25,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-006.jpg"
+      },
+      {
+        "time": 1.6,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-007.jpg"
+      },
+      {
+        "time": 1.75,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-008.jpg"
+      },
+      {
+        "time": 2.1,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-009.jpg"
+      },
+      {
+        "time": 2.25,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-010.jpg"
+      },
+      {
+        "time": 2.6,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-011.jpg"
+      },
+      {
+        "time": 3.129,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-012.jpg"
+      },
+      {
+        "time": 3.616,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-013.jpg"
+      },
+      {
+        "time": 4.833,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-014.jpg"
+      },
+      {
+        "time": 4.95,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-015.jpg"
+      },
+      {
+        "time": 5.267,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-016.jpg"
+      },
+      {
+        "time": 5.383,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-017.jpg"
+      },
+      {
+        "time": 5.7,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-018.jpg"
+      },
+      {
+        "time": 5.816,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-019.jpg"
+      },
+      {
+        "time": 6.133,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-020.jpg"
+      },
+      {
+        "time": 6.258,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-021.jpg"
+      },
+      {
+        "time": 6.267,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-022.jpg"
+      },
+      {
+        "time": 6.6,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-023.jpg"
+      },
+      {
+        "time": 7.6,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-024.jpg"
+      },
+      {
+        "time": 8.8,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-025.jpg"
+      },
+      {
+        "time": 9.034,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-026.jpg"
+      },
+      {
+        "time": 9.388,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-027.jpg"
+      },
+      {
+        "time": 9.467,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-028.jpg"
+      },
+      {
+        "time": 9.7,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-029.jpg"
+      },
+      {
+        "time": 10.133,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-030.jpg"
+      },
+      {
+        "time": 10.366,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-031.jpg"
+      },
+      {
+        "time": 10.8,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-032.jpg"
+      },
+      {
+        "time": 11.0,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-033.jpg"
+      },
+      {
+        "time": 11.4,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-034.jpg"
+      },
+      {
+        "time": 11.634,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-035.jpg"
+      },
+      {
+        "time": 12.067,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-036.jpg"
+      },
+      {
+        "time": 12.267,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-037.jpg"
+      },
+      {
+        "time": 12.517,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/c02a4ae60bb1469688369d08881db282/frame-038.jpg"
+      }
+    ],
+    "analysis_id": "c02a4ae60bb1469688369d08881db282",
+    "analyzed_at": "2026-10-20T09:35:19.389422+00:00",
+    "coverage": {
+      "method": "sampled_frames",
+      "sampled_frame_count": 39,
+      "detected_shot_count": 17,
+      "complete_frame_review": false
+    },
+    "shot_boundaries": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      4.733,
+      5.167,
+      5.6,
+      6.033,
+      6.5,
+      8.7,
+      9.367,
+      10.033,
+      10.7,
+      11.3,
+      11.967,
+      12.5667
+    ],
+    "reference_analysis": true,
+    "audio_status": "succeeded",
+    "audio_used_in_analysis": false,
+    "transcript": {
+      "text": "One dog got nausea, that my name baby's only there's a fee I say I'm the key, so I'm in chocolate",
+      "segments": [
+        {
+          "start": 2.26,
+          "end": 8.36,
+          "text": "One dog got nausea, that my name baby's only there's a fee",
+          "words": [
+            {
+              "start": 2.26,
+              "end": 2.9,
+              "word": " One",
+              "probability": 0.1359
+            },
+            {
+              "start": 2.9,
+              "end": 3.26,
+              "word": " dog",
+              "probability": 0.2583
+            },
+            {
+              "start": 3.26,
+              "end": 3.62,
+              "word": " got",
+              "probability": 0.2182
+            },
+            {
+              "start": 3.62,
+              "end": 4.68,
+              "word": " nausea,",
+              "probability": 0.5979
+            },
+            {
+              "start": 4.74,
+              "end": 4.86,
+              "word": " that",
+              "probability": 0.2495
+            },
+            {
+              "start": 4.86,
+              "end": 5.2,
+              "word": " my",
+              "probability": 0.0641
+            },
+            {
+              "start": 5.2,
+              "end": 5.52,
+              "word": " name",
+              "probability": 0.5993
+            },
+            {
+              "start": 5.52,
+              "end": 6.58,
+              "word": " baby's",
+              "probability": 0.3323
+            },
+            {
+              "start": 6.58,
+              "end": 7.08,
+              "word": " only",
+              "probability": 0.5378
+            },
+            {
+              "start": 7.08,
+              "end": 7.72,
+              "word": " there's",
+              "probability": 0.4901
+            },
+            {
+              "start": 7.72,
+              "end": 7.96,
+              "word": " a",
+              "probability": 0.7834
+            },
+            {
+              "start": 7.96,
+              "end": 8.36,
+              "word": " fee",
+              "probability": 0.3079
+            }
+          ]
+        },
+        {
+          "start": 8.36,
+          "end": 12.2,
+          "text": "I say I'm the key, so I'm in chocolate",
+          "words": [
+            {
+              "start": 8.36,
+              "end": 8.82,
+              "word": " I",
+              "probability": 0.689
+            },
+            {
+              "start": 8.82,
+              "end": 9.2,
+              "word": " say",
+              "probability": 0.9379
+            },
+            {
+              "start": 9.2,
+              "end": 9.68,
+              "word": " I'm",
+              "probability": 0.9161
+            },
+            {
+              "start": 9.68,
+              "end": 9.94,
+              "word": " the",
+              "probability": 0.5343
+            },
+            {
+              "start": 9.94,
+              "end": 10.42,
+              "word": " key,",
+              "probability": 0.4126
+            },
+            {
+              "start": 10.66,
+              "end": 10.82,
+              "word": " so",
+              "probability": 0.137
+            },
+            {
+              "start": 10.82,
+              "end": 11.5,
+              "word": " I'm",
+              "probability": 0.1834
+            },
+            {
+              "start": 11.5,
+              "end": 11.56,
+              "word": " in",
+              "probability": 0.4624
+            },
+            {
+              "start": 11.56,
+              "end": 12.2,
+              "word": " chocolate",
+              "probability": 0.4994
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "language_probability": 0.3068,
+      "duration": 12.563,
+      "model": "base",
+      "engine": "faster-whisper",
+      "local": true,
+      "has_speech": true,
+      "created_at": "2026-10-20T09:35:09.006674+00:00",
+      "url": "/api/media/plans/transcript-bed732a655dd4a8e9a2d2386a964c5a5-77b420bd4fcb4714ba90e443d861f855.json"
+    }
+  },
+  "audio_status": "succeeded",
+  "transcript": {
+    "text": "One dog got nausea, that my name baby's only there's a fee I say I'm the key, so I'm in chocolate",
+    "segments": [
+      {
+        "start": 2.26,
+        "end": 8.36,
+        "text": "One dog got nausea, that my name baby's only there's a fee",
+        "words": [
+          {
+            "start": 2.26,
+            "end": 2.9,
+            "word": " One",
+            "probability": 0.1359
+          },
+          {
+            "start": 2.9,
+            "end": 3.26,
+            "word": " dog",
+            "probability": 0.2583
+          },
+          {
+            "start": 3.26,
+            "end": 3.62,
+            "word": " got",
+            "probability": 0.2182
+          },
+          {
+            "start": 3.62,
+            "end": 4.68,
+            "word": " nausea,",
+            "probability": 0.5979
+          },
+          {
+            "start": 4.74,
+            "end": 4.86,
+            "word": " that",
+            "probability": 0.2495
+          },
+          {
+            "start": 4.86,
+            "end": 5.2,
+            "word": " my",
+            "probability": 0.0641
+          },
+          {
+            "start": 5.2,
+            "end": 5.52,
+            "word": " name",
+            "probability": 0.5993
+          },
+          {
+            "start": 5.52,
+            "end": 6.58,
+            "word": " baby's",
+            "probability": 0.3323
+          },
+          {
+            "start": 6.58,
+            "end": 7.08,
+            "word": " only",
+            "probability": 0.5378
+          },
+          {
+            "start": 7.08,
+            "end": 7.72,
+            "word": " there's",
+            "probability": 0.4901
+          },
+          {
+            "start": 7.72,
+            "end": 7.96,
+            "word": " a",
+            "probability": 0.7834
+          },
+          {
+            "start": 7.96,
+            "end": 8.36,
+            "word": " fee",
+            "probability": 0.3079
+          }
+        ]
+      },
+      {
+        "start": 8.36,
+        "end": 12.2,
+        "text": "I say I'm the key, so I'm in chocolate",
+        "words": [
+          {
+            "start": 8.36,
+            "end": 8.82,
+            "word": " I",
+            "probability": 0.689
+          },
+          {
+            "start": 8.82,
+            "end": 9.2,
+            "word": " say",
+            "probability": 0.9379
+          },
+          {
+            "start": 9.2,
+            "end": 9.68,
+            "word": " I'm",
+            "probability": 0.9161
+          },
+          {
+            "start": 9.68,
+            "end": 9.94,
+            "word": " the",
+            "probability": 0.5343
+          },
+          {
+            "start": 9.94,
+            "end": 10.42,
+            "word": " key,",
+            "probability": 0.4126
+          },
+          {
+            "start": 10.66,
+            "end": 10.82,
+            "word": " so",
+            "probability": 0.137
+          },
+          {
+            "start": 10.82,
+            "end": 11.5,
+            "word": " I'm",
+            "probability": 0.1834
+          },
+          {
+            "start": 11.5,
+            "end": 11.56,
+            "word": " in",
+            "probability": 0.4624
+          },
+          {
+            "start": 11.56,
+            "end": 12.2,
+            "word": " chocolate",
+            "probability": 0.4994
+          }
+        ]
+      }
+    ],
+    "language": "en",
+    "language_probability": 0.3068,
+    "duration": 12.563,
+    "model": "base",
+    "engine": "faster-whisper",
+    "local": true,
+    "has_speech": true,
+    "created_at": "2026-10-20T09:35:09.006674+00:00",
+    "url": "/api/media/plans/transcript-bed732a655dd4a8e9a2d2386a964c5a5-77b420bd4fcb4714ba90e443d861f855.json"
+  },
+  "created_at": "2026-10-20T09:35:01.094564+00:00",
+  "updated_at": "2026-10-20T09:35:19.393494+00:00",
+  "audio_error": null,
+  "transcription_job_id": "77b420bd4fcb4714ba90e443d861f855",
+  "analysis_error": null,
+  "analysis_job_id": "aa1334b1c46a4951b31b07220027dacc"
+}

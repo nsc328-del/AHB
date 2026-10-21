@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-21",
+  "annual_revision": 3,
+  "ideas_preserved": 8,
+  "hotspots": {
+    "items": [
+      {
+        "id": "68952f76939844d663e276c9",
+        "title": "冬天第一串车厘子糖葫芦",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2705800",
+        "source": "搜搜热 · 抖音热榜",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:44:46+08:00",
+        "observed_at": "2026-10-21T14:38:54+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 4,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "糖葫芦"
+        ],
+        "topic_fit": "food",
+        "content_category": "吃什么",
+        "selection_evidence": "title_keywords",
+        "excluded_keywords": []
+      },
+      {
+        "id": "d27c7116d9b79714c7ff7164",
+        "title": "进入面要多吃面要多见时代",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2705361",
+        "source": "搜搜热 · 抖音热榜",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:44:46+08:00",
+        "observed_at": "2026-10-21T14:38:54+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 18,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "面要多吃"
+        ],
+        "topic_fit": "food",
+        "content_category": "吃什么",
+        "selection_evidence": "title_keywords",
+        "excluded_keywords": []
+      },
+      {
+        "id": "06525686c2b60bf1c0c2267e",
+        "title": "瞬移滑镜慢动作挑战",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2705851",
+        "source": "搜搜热 · 抖音热榜",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:44:46+08:00",
+        "observed_at": "2026-10-21T14:38:54+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 21,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "滑镜",
+          "慢动作"
+        ],
+        "topic_fit": "format",
+        "content_category": "怎么拍",
+        "selection_evidence": "title_keywords",
+        "excluded_keywords": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "soso_douyin",
+        "name": "搜搜热 · 抖音热榜",
+        "status": "ok",
+        "fetched_at": "2026-10-21T14:44:46+08:00",
+        "source_updated_at": "2026-10-21T14:38:54+08:00",
+        "count": 49,
+        "selected_count": 3
+      }
+    ],
+    "fetched_at": "2026-10-21T14:44:46+08:00",
+    "candidate_count": 49,
+    "selection_basis": "douyin_restaurant_clues_v2",
+    "coverage": {
+      "douyin": "public_general_board_filtered",
+      "xiaohongshu": "not_connected"
+    },
+    "refreshed_at": "2026-10-21T06:44:46.597054+00:00",
+    "snapshot_id": "b1a708ae134b44e7af26b9128fd973b8"
+  },
+  "new_model_calls": 0,
+  "xingshang_production_modified": false,
+  "tests": "operations API persistence, version conflict, sourced plan contracts, source exclusion and successful empty feed passed",
+  "source_audit": {
+    "existing": "9月/AI剪辑工作台/skills/tv-hotspot-digest/references/sources.md",
+    "douyin_official": "https://douhot.douyin.com/",
+    "xiaohongshu_official": "https://creator.xiaohongshu.com/",
+    "account_sources": "Login required in current browser; deferred by user",
+    "calendar": "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
+    "holidays": "https://www.beijing.gov.cn/cs/gncs/zcwj/202603/t20260327_4568275.html"
+  },
+  "limits": [
+    "公开抖音综合榜按标题筛选，不是垂类榜",
+    "尚未核看线索对应原视频",
+    "小红书尚未接入",
+    "已有选题保留，未触发新的DS选题"
+  ],
+  "ui": {
+    "viewport_css": [
+      1280,
+      720
+    ],
+    "document_width": 1265,
+    "month_switch": "September to October passed",
+    "visible_trend_count": 3,
+    "screenshot": "home.png",
+    "temporary_research_tab_closed": true
+  }
+}

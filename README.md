@@ -70,10 +70,13 @@ git clone https://github.com/nsc328-del/AHB.git
 cd AHB
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python app.py
+.venv/bin/python scripts/demo_data.py import --data-dir data
+VIDEO_STUDIO_DAILY_SUMMARY=0 .venv/bin/python app.py
 ```
 
 打开 [http://127.0.0.1:8787](http://127.0.0.1:8787)。已有本机环境可双击 `start.command`。关闭服务不会删除素材与作品。
+
+仓库附带当前测试快照：30 份素材、8 个制作项目、15 条成片，以及分析、候选和用量记录。上述导入命令可恢复「餐饮实测」等作品，**不含星尚历史数据**；已有 `data/` 时不会覆盖，请使用新的目录。只想从空白开始可跳过导入。素材来源、再分发依据及独立目录用法见[测试数据说明](docs/demo-data.md)。媒体文件直接随 Git 保存，克隆体积会明显大于纯代码仓库。
 
 DeepSeek 和 MiniMax 由后端读取 `DEEPSEEK_API_KEY`、`MINIMAX_API_KEY` 环境变量，或本机私密配置 `~/.config/video-ai-studio/providers.json`；私密配置优先于环境变量，项目 `.env` 不会自动加载。页面没有密钥输入界面。H3 仅在需要生成视频时使用；普通剪辑不调用 H3。语音转写首次运行需要下载公开模型权重。配置优先级、旧星尚配置复用和独立开发数据目录见[协作说明](CONTRIBUTING.md#本机开发)。
 
@@ -81,7 +84,7 @@ DeepSeek 和 MiniMax 由后端读取 `DEEPSEEK_API_KEY`、`MINIMAX_API_KEY` 环�
 
 HTML 动画导出另外需要已安装的 Google Chrome，由 Playwright 在独立临时环境中逐帧渲染，结束后关闭。它是代码渲染，不会操作剪映或用户的浏览器窗口。
 
-仓库不包含 `data/`、`output/`、`.venv/` 或密钥。新克隆不会带出本机试片、历史采集和已有作品；默认数据存入项目 `data/`，可用 `VIDEO_STUDIO_DATA` 指定独立目录。星尚历史同步还依赖维护者的只读数据源连接，新协作者不默认拥有该连接。目前只监听本机回环地址，不能当作已完成账号隔离的企业在线服务部署。
+本机运行目录 `data/`、`output/`、`.venv/` 与密钥仍不进入 Git；获准公开的测试内容另存为只读发布快照 `demo/`。导入后的工作数据默认存入项目 `data/`，可用 `VIDEO_STUDIO_DATA` 指定独立目录。星尚历史同步还依赖维护者的只读数据源连接，新协作者不默认拥有该连接。目前只监听本机回环地址，不能当作已完成账号隔离的企业在线服务部署。
 
 ## 模型、数据与费用
 
@@ -99,7 +102,7 @@ HTML 动画导出另外需要已安装的 Google Chrome，由 Playwright 在独�
 
 这证明了一条可执行链路，尚不证明门店素材上的普遍质量或业务收益。DS 仍可能误判动作与运镜，ASR 可能错字；当前声音节奏依据本机测量，DS 没有直接听音，未实现具体煎炒声或器具声识别。该次开发联调 13 份回执共 353,185 Token，含失败与重试，不能作为成熟产品的单片成本。
 
-本机验证记录位于 `output/appetite-pilot-20261021/` 等目录，不随仓库分发。历史实现记录可从 Git 提交查看。对后续试点的验收口径见[设计文档：验证收益](docs/design.md#验证收益)。
+本机验证记录位于 `output/appetite-pilot-20261021/` 等目录，获准公开的版本收录在 `demo/external/output/`，包括原始记录和失败尝试；它们是当时的证据，不是当前产品承诺。历史实现记录可从 Git 提交查看。对后续试点的验收口径见[设计文档：验证收益](docs/design.md#验证收益)。
 
 ```sh
 VIDEO_STUDIO_DAILY_SUMMARY=0 .venv/bin/python -m unittest discover -s tests -p 'test_action_editing.py' -q
@@ -120,5 +123,6 @@ node --check static/app.js
 | `decisions.py`、`diversity.py`、`publication_*.py` | 候选选择、结构差异与发布表现关联 |
 | `generation_batches.py`、`animation_*.py` | H3 分段生成、拼接与网页动画 |
 | `static/`、`tests/` | 前端界面与关键链路检查 |
+| `demo/`、`scripts/demo_data.py` | 获准公开的测试快照、空目录导入与完整性核对 |
 
 项目代码仓库：[nsc328-del/AHB](https://github.com/nsc328-del/AHB)。

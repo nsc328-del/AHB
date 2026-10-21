@@ -1,0 +1,18 @@
+{
+  "test_type": "real_deepseek_synthetic_only",
+  "h3_requests": 0,
+  "stages": {
+    "analysis": {
+      "started": true,
+      "request_count": 1,
+      "status": "succeeded",
+      "elapsed_seconds": 1.79
+    },
+    "plan": {
+      "started": true,
+      "request_count": 1,
+      "status": "succeeded",
+      "elapsed_seconds": 1.25
+    }
+  }
+}

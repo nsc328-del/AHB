@@ -1,0 +1,63 @@
+{
+  "assets": [
+    {
+      "id": "5d3523be1d264ee1aadb94a03f63f171",
+      "name": "咖啡店_网络实拍测试.mp4",
+      "kind": "video",
+      "duration": 51.1572,
+      "width": 1280,
+      "height": 720,
+      "has_audio": true,
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "size": 14411827,
+      "sha256": "e38dcc23a431561d78f9c9f350a9499f8261eb2a7817d91a09c10fd92c9d6b89",
+      "url": "/api/media/assets/d68164bee447468c96cf120ed122316b.mp4",
+      "thumbnail_url": "/api/media/previews/5d3523be1d264ee1aadb94a03f63f171.jpg",
+      "source": "upload",
+      "generation_id": null,
+      "purpose": "library",
+      "analysis_status": "queued",
+      "analysis": null,
+      "audio_status": "running",
+      "transcript": null,
+      "created_at": "2026-10-21T06:14:48.398180+00:00",
+      "updated_at": "2026-10-21T06:14:48.441223+00:00",
+      "audio_error": null,
+      "transcription_job_id": "505dc7028c1147cdb8afdf136e98b38f",
+      "analysis_error": null,
+      "analysis_job_id": "dae685920fae4728aefa0e7f98a89849"
+    }
+  ],
+  "jobs": [
+    {
+      "kind": "transcription",
+      "status": "queued",
+      "progress": 0,
+      "message": "等待处理",
+      "result": null,
+      "error": null,
+      "id": "505dc7028c1147cdb8afdf136e98b38f",
+      "created_at": "2026-10-21T06:14:48.422827+00:00",
+      "updated_at": "2026-10-21T06:14:48.422836+00:00",
+      "resumable": false
+    },
+    {
+      "kind": "analysis",
+      "status": "queued",
+      "progress": 0,
+      "message": "等待处理",
+      "result": null,
+      "error": null,
+      "id": "dae685920fae4728aefa0e7f98a89849",
+      "created_at": "2026-10-21T06:14:48.437714+00:00",
+      "updated_at": "2026-10-21T06:14:48.437724+00:00",
+      "resumable": false
+    }
+  ],
+  "job_ids": [
+    "505dc7028c1147cdb8afdf136e98b38f",
+    "dae685920fae4728aefa0e7f98a89849"
+  ]
+}

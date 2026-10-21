@@ -1,0 +1,18 @@
+{
+  "status": "succeeded",
+  "deepseek_requests": 1,
+  "h3_requests": 0,
+  "elapsed_seconds": 6.25,
+  "shots": 1,
+  "mode": "T2VA",
+  "duration": 4,
+  "script_present": true,
+  "official_sources": [
+    "h3-prompt-writing"
+  ],
+  "prompt_sections": [
+    "integrated_multimodal_description",
+    "overall_soundscape",
+    "non_diegetic_music"
+  ]
+}

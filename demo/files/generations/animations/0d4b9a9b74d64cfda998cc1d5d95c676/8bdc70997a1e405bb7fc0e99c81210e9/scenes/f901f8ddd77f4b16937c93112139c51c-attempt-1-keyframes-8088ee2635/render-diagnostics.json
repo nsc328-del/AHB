@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "diagnostics": [
+    {
+      "code": "raster_rounding",
+      "severity": "warning",
+      "message": "场景状态完全一致，少量像素出现 1 级栅格化舍入差异",
+      "frame": 225,
+      "time": 7.5,
+      "changed_pixels": 524,
+      "changed_pixel_ratio": 0.000568576,
+      "max_channel_difference": 1,
+      "mean_absolute_difference": 0.000205,
+      "difference_bounds": [
+        906,
+        400,
+        1131,
+        422
+      ],
+      "scene_state_equal": true,
+      "rounding_tolerated": true,
+      "tolerance": {
+        "max_channel_difference": 1,
+        "max_changed_pixel_ratio": 0.001
+      },
+      "evidence": {
+        "first": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-first.png",
+        "repeated": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-repeated.png",
+        "difference": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/determinism-000225-difference.png"
+      },
+      "first_state_sha256": "367eea421028f3fe165058efc5a4fb5b58cb8ea5971c281dddb8a42ea157f678",
+      "repeated_state_sha256": "367eea421028f3fe165058efc5a4fb5b58cb8ea5971c281dddb8a42ea157f678"
+    },
+    {
+      "code": "blank_keyframe",
+      "severity": "warning",
+      "message": "部分采样帧几乎为单色，可能是入场或留白"
+    }
+  ],
+  "checkpoints": [
+    {
+      "time": 0.0,
+      "frame": 0,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000000.png"
+    },
+    {
+      "time": 2.5,
+      "frame": 75,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000075.png"
+    },
+    {
+      "time": 5.0,
+      "frame": 150,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000150.png"
+    },
+    {
+      "time": 7.5,
+      "frame": 225,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000225.png"
+    },
+    {
+      "time": 9.966666666666667,
+      "frame": 299,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-1-keyframes-8088ee2635/frame-000299.png"
+    }
+  ],
+  "isolation": {
+    "sandbox_requested": true,
+    "no_sandbox_flag": false,
+    "network": "data_only",
+    "profile": "ephemeral",
+    "clock": "paused",
+    "browser_version": "155.0.8059.79"
+  },
+  "frame_checks": [
+    {
+      "frame": 0,
+      "time": 0.0,
+      "pixel_stddev": 0.0
+    },
+    {
+      "frame": 75,
+      "time": 2.5,
+      "pixel_stddev": 10.021
+    },
+    {
+      "frame": 150,
+      "time": 5.0,
+      "pixel_stddev": 12.52
+    },
+    {
+      "frame": 225,
+      "time": 7.5,
+      "pixel_stddev": 13.392
+    },
+    {
+      "frame": 299,
+      "time": 9.966666666666667,
+      "pixel_stddev": 10.738
+    }
+  ],
+  "duration": 10.0,
+  "frames": 300,
+  "fps": 30,
+  "width": 1280,
+  "height": 720,
+  "render_seconds": 16.756
+}

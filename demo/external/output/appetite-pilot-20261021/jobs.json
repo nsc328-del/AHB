@@ -1,0 +1,86 @@
+[
+  {
+    "id": "07f637be0c8f46e4a67eaebf97b2bedf",
+    "kind": "render",
+    "status": "succeeded",
+    "error": null,
+    "created_at": "2026-10-21T10:11:43.366286+00:00"
+  },
+  {
+    "id": "f9856c0fa53e4acab5547eb6de562758",
+    "kind": "render",
+    "status": "succeeded",
+    "error": null,
+    "created_at": "2026-10-21T10:04:23.173083+00:00"
+  },
+  {
+    "id": "5a6242981a6243ebbaa06889ed37ebdd",
+    "kind": "revision",
+    "status": "succeeded",
+    "error": null,
+    "created_at": "2026-10-21T10:04:13.134780+00:00"
+  },
+  {
+    "id": "51fbc8d700a94cd092ab1d5aab5bfccc",
+    "kind": "revision",
+    "status": "failed",
+    "error": "主体可见性帧数不一致",
+    "created_at": "2026-10-21T10:02:39.136270+00:00"
+  },
+  {
+    "id": "8c1fdb7eb350456a9cc416f0b744a791",
+    "kind": "render",
+    "status": "succeeded",
+    "error": null,
+    "created_at": "2026-10-21T09:59:41.578563+00:00"
+  },
+  {
+    "id": "496cb4dcfd7e46a29eda3ab5e6b8d808",
+    "kind": "revision",
+    "status": "succeeded",
+    "error": null,
+    "created_at": "2026-10-21T09:59:27.534210+00:00"
+  },
+  {
+    "id": "8288f8b61c954551bbbed0f1a5ede237",
+    "kind": "revision",
+    "status": "failed",
+    "error": "DeepSeek 未返回有效 JSON；本次结果未保存",
+    "created_at": "2026-10-21T09:57:10.511476+00:00"
+  },
+  {
+    "id": "29eb08ec5e7340ed8c589fc82f1ede43",
+    "kind": "render",
+    "status": "succeeded",
+    "error": null,
+    "created_at": "2026-10-21T09:54:21.218479+00:00"
+  },
+  {
+    "id": "c7110f1ca8364e659ace734a35cc616c",
+    "kind": "plan",
+    "status": "succeeded",
+    "error": null,
+    "created_at": "2026-10-21T09:54:11.351745+00:00"
+  },
+  {
+    "id": "cc9ce71f069a489680247b7d1a770ab1",
+    "kind": "plan",
+    "status": "failed",
+    "error": "剪辑方案没有保留已核实动作的关键时刻",
+    "created_at": "2026-10-21T09:52:16.093785+00:00"
+  },
+  {
+    "id": "82efd63e6a9b41bf9ffdbf00fb5cbbec",
+    "kind": "plan",
+    "status": "failed",
+    "error": "剪辑方案时长与源区间不一致",
+    "created_at": "2026-10-21T09:50:21.212671+00:00"
+  },
+  {
+    "id": "01bf6185745a4ca0923f4b22fc62fff0",
+    "kind": "plan",
+    "status": "failed",
+    "error": "动作精看窗口超出素材范围",
+    "created_at": "2026-10-21T09:47:53.451592+00:00"
+  }
+]

@@ -1,0 +1,204 @@
+{
+  "kind": "reference_repair",
+  "status": "failed",
+  "progress": 45.0,
+  "message": "needs_review：DS自动纠正仍存在证据矛盾（138.033000:145.733000: subject_change_requires_same_shot_temporal_evidence,description_quote_not_supported_by_clear_visible_text; 148.400000:152.467000: subject_change_requires_same_shot_temporal_evidence）",
+  "result": null,
+  "error": "needs_review：DS自动纠正仍存在证据矛盾（138.033000:145.733000: subject_change_requires_same_shot_temporal_evidence,description_quote_not_supported_by_clear_visible_text; 148.400000:152.467000: subject_change_requires_same_shot_temporal_evidence）",
+  "payload": {
+    "asset_id": "2e2893e271774911a336c8a5aad5923c",
+    "base_analysis_id": "a13d1ea54cd345f19173a059494393ad",
+    "targets": [
+      {
+        "collection": "content_segments",
+        "index": 1,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 2,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 3,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 6,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 8,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 9,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 12,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 15,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 17,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 18,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 19,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 20,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 21,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 22,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 23,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 25,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 26,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 30,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 9,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 26,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 52,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 10,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 87,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      }
+    ],
+    "reviewed_edits": [],
+    "automatic": true
+  },
+  "provider_state": {},
+  "id": "314cded056ca4b88bd1d49f64f2ffc34",
+  "created_at": "2026-10-20T16:19:33.021920+00:00",
+  "updated_at": "2026-10-20T16:19:40.377199+00:00"
+}

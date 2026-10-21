@@ -1,0 +1,158 @@
+{
+  "observations": [
+    {
+      "index": 0,
+      "visible": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "所有帧中均清晰可见锅内的蛋液/食物。"
+    },
+    {
+      "index": 1,
+      "visible": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "所有帧中锅内的黄色蛋液及炒制中的蛋块均清晰可见。"
+    },
+    {
+      "index": 2,
+      "visible": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "所有帧中均可见锅内的蛋饼/蛋块。"
+    },
+    {
+      "index": 3,
+      "visible": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "所有帧中可见锅内的蛋皮及馅料。"
+    },
+    {
+      "index": 4,
+      "visible": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "所有帧中可见锅内的蛋皮及肉松等食材。"
+    },
+    {
+      "index": 5,
+      "visible": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "所有帧中可见锅内的蛋包饭主体。"
+    },
+    {
+      "index": 6,
+      "visible": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "reason": "前3帧可见锅内的蛋包饭；71.396s及之后画面主要为空灶台或仅有手部/边缘，不可见主要食物。"
+    },
+    {
+      "index": 7,
+      "visible": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "部分帧可见盘中的蛋包饭，但中间多帧被毛巾遮挡或仅露极小边缘，主体不可见。"
+    },
+    {
+      "index": 8,
+      "visible": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "盘中蛋包饭全程清晰可见。"
+    },
+    {
+      "index": 9,
+      "visible": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "reason": "成品蛋包饭在盘中清晰可见。"
+    }
+  ]
+}

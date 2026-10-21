@@ -1,0 +1,922 @@
+{
+  "generated_at": "2026-10-20T15:00:46.327640+00:00",
+  "version": 1,
+  "status": "frozen",
+  "headline": "切镜与取样覆盖改善；语义、运镜和对白时间对应仍需人工确认。",
+  "method": "依据两条同源素材的冻结基线、新流水线记录、旧独立抽帧复核及实际用量回执。没有重新听审音频，没有长片全镜头人工真值；未外推通用准确率。",
+  "cases": {
+    "short": {
+      "title": "首尔旅行转场｜冷面公主.mp4",
+      "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+      "duration": 12.5667,
+      "before": {
+        "frames": 39,
+        "detected_intervals": 17,
+        "content_segments": 12,
+        "structure": 8,
+        "audio_used_in_analysis": false,
+        "summary": "一段以年轻女性为主角的旅行/Vlog风格短视频，通过便利店外景、寿司店餐桌、自助照相馆、卷帘门涂鸦墙与商场咖啡区等多个场景快速切换，形成轻快的旅行记录式叙事。无可用转录文字，因此不对对白、音效或音乐做判断。"
+      },
+      "after": {
+        "frames": 23,
+        "hard_cut_intervals": 6,
+        "hard_cuts": 5,
+        "gradual_candidates": 0,
+        "visual_segments": 6,
+        "content_segments": 6,
+        "structure": 6,
+        "windows": 1,
+        "audio_used_in_analysis": false,
+        "audio_evidence": {
+          "status": "uncertain",
+          "reason": "语种识别置信度偏低，转写仅供核对",
+          "accepted_segment_count": 0,
+          "excluded_segment_count": 2,
+          "language_probability": 0.3068,
+          "policy": {
+            "version": 1,
+            "min_language_probability": 0.6,
+            "min_mean_word_probability": 0.5
+          }
+        },
+        "summary": "该素材为一段约12.6秒的首尔旅行风格短视频，无有效对白转录。画面由多个场景快切组成：红砖墙街巷与自助拍照亭、咖啡厅用餐与举杯、楼梯间和拍立得展示、卷帘门涂鸦墙前摆拍、商场休息区与咖啡厅内景。整体以年轻女性为主体，轻快旅行记录感强，适合做旅行vlog、街拍转场或城市漫游混剪。",
+        "source_job_id": "e47ec3483132437ca555b5101a852d20",
+        "content_interval_audit": {
+          "gaps": [
+            [
+              10.8,
+              10.967
+            ],
+            [
+              12.533,
+              12.5667
+            ]
+          ],
+          "gap_seconds": 0.2007,
+          "overlaps": [],
+          "overlap_seconds": 0
+        },
+        "structure_interval_audit": {
+          "gaps": [
+            [
+              10.8,
+              10.967
+            ],
+            [
+              12.533,
+              12.5667
+            ]
+          ],
+          "gap_seconds": 0.2007,
+          "overlaps": [],
+          "overlap_seconds": 0
+        }
+      },
+      "verified_cuts": [
+        {
+          "manual": 2.6,
+          "detected": 2.6,
+          "absolute_error": 0.0
+        },
+        {
+          "manual": 4.733333,
+          "detected": 4.733,
+          "absolute_error": 0.000333
+        },
+        {
+          "manual": 6.766667,
+          "detected": 6.767,
+          "absolute_error": 0.000333
+        },
+        {
+          "manual": 8.7,
+          "detected": 8.7,
+          "absolute_error": 0.0
+        },
+        {
+          "manual": 10.866667,
+          "detected": 10.867,
+          "absolute_error": 0.000333
+        }
+      ],
+      "findings": [
+        {
+          "status": "improved",
+          "topic": "硬切识别",
+          "before": "旧检测形成 17 个区间，模型又把人物入画、居中、离场拆成内容段。",
+          "after": "新 5 处硬切与独立邻帧确认位置吻合，划成 6 段连续拍摄镜头；仅能证明这条短片的 5 处切点。"
+        },
+        {
+          "status": "improved",
+          "topic": "不可靠转写",
+          "before": "未使用语音，却标记 audio_analyzed=true，容易让人误以为已融合。",
+          "after": "语种置信度 0.3068，明确标为待核对；接纳 0 段、排除 2 段，audio_analyzed=false。"
+        },
+        {
+          "status": "remaining",
+          "topic": "运镜与剪辑机制",
+          "before": "已有内容描述混合了人物移动与镜头切换。",
+          "after": "DS 仍把首镜 1.3 秒人物入画说成切镜，并称固定机位为主。实际是持续横移；不能照此复刻剪辑方法。"
+        },
+        {
+          "status": "remaining",
+          "topic": "内容段覆盖",
+          "before": "内容段与镜头未分层。",
+          "after": "现在有独立 shots / content_segments，但内容段在 10.800–10.967 秒留空，末段至 12.533 秒。内容段数与镜头数相同并不代表语义准确。"
+        }
+      ]
+    },
+    "long": {
+      "title": "影视飓风那些无法超越的片段｜小壕h.mp4",
+      "asset_id": "2e2893e271774911a336c8a5aad5923c",
+      "duration": 210.0477,
+      "before": {
+        "frames": 48,
+        "detected_intervals": 99,
+        "content_segments": 22,
+        "structure": 7,
+        "audio_used_in_analysis": false,
+        "summary": "这是一支创作者自述与影像作品混剪的纪念样片：以戴眼镜的年轻男性（创作者本人）为固定叙事主体，穿插其在海边、办公室、剪辑室、车内、雪原、山顶等多环境下的现身说法片段，中间快速切换雪山、虎鲸、极光、微观生物、热气球、烟花、航拍人群等极具视觉冲击的影像作品画面，配合屏幕字幕形成“旁白推进 + 高光素材闪剪”的剪辑结构，整体从夕阳暖色调走向冷蓝、雪白与宇宙黑，情绪由焦虑、疲惫过渡到抒情与释然。"
+      },
+      "after": {
+        "frames": 397,
+        "hard_cut_intervals": 86,
+        "hard_cuts": 85,
+        "gradual_candidates": 19,
+        "visual_segments": 92,
+        "content_segments": 33,
+        "structure": 17,
+        "windows": 9,
+        "audio_used_in_analysis": true,
+        "audio_evidence": {
+          "status": "partial",
+          "reason": "已融合通过置信度筛选的对白，部分转写待核对",
+          "accepted_segment_count": 85,
+          "excluded_segment_count": 2,
+          "language_probability": 0.9994,
+          "policy": {
+            "version": 1,
+            "min_language_probability": 0.6,
+            "min_mean_word_probability": 0.5
+          }
+        },
+        "summary": "全片是一支以第一人称旁白串联的影视飓风作品回顾式短片：从青年抱着长焦镜头坐在霞光海岸边讲述“把人生拉长看会看到焦虑”开始，穿插背影、通话、伏案、车内剪影等压力画面，再以黑底黄字引语提出“把期待缩短”的视角，转入飞机、群鸟、海边剪影、渔船、礁石落日等黄昏空镜。随后旁白将视野拉到地球与宇宙尺度追问“做事是否有意义”，画面在镜面樱花庭院、办公空间、器材工作室、飞机舷窗、帆船与雪原气球间切换；再落入工作现场与深夜办公的自我怀疑，最终借“过程才最重要”的引述与雪原航拍完成和解。后半段以高密度混剪展示卫星、火箭、雪山、鲸鲨、打铁花、特技飞行、极光、日食等作品奇观，穿插多段室内口述谈尝试、突破舒适圈，并以公路无人机团队合影、草地俯拍人群、金句式文字卡和黑底署名收尾，落到“坚持自我、无限进步”的品牌表达。",
+        "source_job_id": "be8833ac5c674f59b717044f5fcb7a04",
+        "content_interval_audit": {
+          "gaps": [
+            [
+              104.6,
+              104.7
+            ],
+            [
+              109.6,
+              110.3
+            ],
+            [
+              115.667,
+              115.833
+            ],
+            [
+              120.3,
+              120.467
+            ],
+            [
+              137.1,
+              138.033
+            ],
+            [
+              145.733,
+              145.967
+            ],
+            [
+              156.2,
+              156.3
+            ],
+            [
+              198.8,
+              199.733
+            ],
+            [
+              202.6,
+              203.567
+            ],
+            [
+              206.467,
+              207.433
+            ],
+            [
+              210.0,
+              210.0477
+            ]
+          ],
+          "gap_seconds": 5.3137,
+          "overlaps": [
+            [
+              128.1,
+              129.8
+            ]
+          ],
+          "overlap_seconds": 1.7
+        },
+        "structure_interval_audit": {
+          "gaps": [
+            [
+              115.667,
+              115.833
+            ],
+            [
+              120.3,
+              120.467
+            ],
+            [
+              137.1,
+              138.033
+            ],
+            [
+              156.2,
+              156.3
+            ],
+            [
+              210.0,
+              210.0477
+            ]
+          ],
+          "gap_seconds": 1.4137,
+          "overlaps": [],
+          "overlap_seconds": 0
+        }
+      },
+      "sampling_checks": [
+        {
+          "start": 144,
+          "end": 154,
+          "before_frames": 7,
+          "after_frames": 53
+        },
+        {
+          "start": 191,
+          "end": 210.1,
+          "before_frames": 1,
+          "after_frames": 25
+        }
+      ],
+      "findings": [
+        {
+          "status": "improved",
+          "topic": "首镜与长片取样",
+          "before": "首个检测点 14.667 秒由人物动作触发；全片只有 48 张输入帧。",
+          "after": "首个硬切为 18.567 秒，与独立邻帧复核一致；397 张独立帧分 9 个窗口处理，再汇总内容，保留每个窗口来源。"
+        },
+        {
+          "status": "improved",
+          "topic": "语义主线",
+          "before": "约 60.967–105.550 秒笼统归为工作实态与压力。",
+          "after": "新结果已识别拉大尺度、宇宙与意义追问；接纳 85 段转写，排除 2 段。置信度筛选不能替代逐字校对。"
+        },
+        {
+          "status": "improved",
+          "topic": "密集画面与片尾",
+          "before": "144–154 秒只有 7 帧；191 秒后仅 1 帧，尾部概括为草坪后黑场。",
+          "after": "对应增加到 53 帧和 25 帧；现在能描述音乐署名、引语、印记、人物回场、无限进步与作者尾卡。"
+        },
+        {
+          "status": "remaining",
+          "topic": "语音的时间对应",
+          "before": "没有融合语音。",
+          "after": "汇总把“过度美化过去／不如尝试”写进 148.4–152.467 秒，但转写在 163.58–175.26 秒；把突破话题写进 152.467–156.2 秒，转写在 175.26–183.72 秒。语义融合有用，局部对白仍错位。"
+        },
+        {
+          "status": "remaining",
+          "topic": "镜头边界与内容区间",
+          "before": "99 个旧阈值区间不是人工镜头真值。",
+          "after": "新 85 个硬切、86 个硬切区间与 19 处渐变候选也不等于完整镜头表；内容段累计空白 5.314 秒，128.1–129.8 秒重叠。叠化及细节仍需核对。"
+        }
+      ]
+    }
+  },
+  "usage": {
+    "basis": "供应商实际返回的 Token 计数；包含本轮全部尝试，不折算人民币。沿最终分块来源和顺序对应缓存调用，计入最终结果的调用与未保留的失败调用分列。",
+    "baseline": {
+      "short": {
+        "total_tokens": 16270,
+        "calls": 1
+      },
+      "long": {
+        "total_tokens": 20681,
+        "calls": 1
+      }
+    },
+    "baseline_total_tokens": 36951,
+    "attempts": [
+      {
+        "case": "short",
+        "name": "short",
+        "job_id": "e47ec3483132437ca555b5101a852d20",
+        "status": "succeeded",
+        "error": null,
+        "calls": 1,
+        "total_tokens": 11460,
+        "retained_calls": 1,
+        "retained_tokens": 11460,
+        "additional_failed_calls": 0,
+        "additional_failed_tokens": 0,
+        "receipts": [
+          {
+            "id": "3df3017c21f617b8dd48fbf63d97779d",
+            "created_at": "2026-10-20T14:37:10.185273+00:00",
+            "updated_at": "2026-10-20T14:37:10.185273+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "13c066a2-c0c9-4acf-a275-62d9ffa6142f",
+            "job_id": "e47ec3483132437ca555b5101a852d20",
+            "project_id": null,
+            "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+            "batch_id": null,
+            "input_tokens": 9101,
+            "output_tokens": 2359,
+            "total_tokens": 11460,
+            "cache_hit_tokens": 0,
+            "cache_miss_tokens": 9101,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          }
+        ],
+        "usage_file": "short-usage.json",
+        "job_file": "short-job.json"
+      },
+      {
+        "case": "long",
+        "name": "long-attempt1",
+        "job_id": "bc192285eee84465a67dce0657022693",
+        "status": "failed",
+        "error": "模型引用的证据帧不在对应内容区间内",
+        "calls": 7,
+        "total_tokens": 136020,
+        "retained_calls": 6,
+        "retained_tokens": 116518,
+        "additional_failed_calls": 1,
+        "additional_failed_tokens": 19502,
+        "receipts": [
+          {
+            "id": "25858ee496e9ed45cc6aa50c59164783",
+            "created_at": "2026-10-20T14:37:26.869410+00:00",
+            "updated_at": "2026-10-20T14:37:26.869410+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "77a50cba-8d42-4cbc-85cb-e3c3f066b548",
+            "job_id": "bc192285eee84465a67dce0657022693",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17117,
+            "output_tokens": 1953,
+            "total_tokens": 19070,
+            "cache_hit_tokens": 640,
+            "cache_miss_tokens": 16477,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "8383a311abe3342e5a69639eb390e263",
+            "created_at": "2026-10-20T14:37:38.074159+00:00",
+            "updated_at": "2026-10-20T14:37:38.074159+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "0fe55323-3752-4d12-a089-2e4b7cec302f",
+            "job_id": "bc192285eee84465a67dce0657022693",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17413,
+            "output_tokens": 2259,
+            "total_tokens": 19672,
+            "cache_hit_tokens": 768,
+            "cache_miss_tokens": 16645,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "48035d6c6eeba0304ced1a4ca9ac7d78",
+            "created_at": "2026-10-20T14:37:51.533287+00:00",
+            "updated_at": "2026-10-20T14:37:51.533287+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "b4272279-0126-4344-841c-804502a1922d",
+            "job_id": "bc192285eee84465a67dce0657022693",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17419,
+            "output_tokens": 2573,
+            "total_tokens": 19992,
+            "cache_hit_tokens": 768,
+            "cache_miss_tokens": 16651,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "fcf1a06ec95171e58602b493bbc2e1f4",
+            "created_at": "2026-10-20T14:37:59.071474+00:00",
+            "updated_at": "2026-10-20T14:37:59.071474+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "f737d92b-9c0e-4612-b11e-5686aebdd237",
+            "job_id": "bc192285eee84465a67dce0657022693",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17340,
+            "output_tokens": 1659,
+            "total_tokens": 18999,
+            "cache_hit_tokens": 768,
+            "cache_miss_tokens": 16572,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "30ed34b74627f77ef158eafcc1c00fe3",
+            "created_at": "2026-10-20T14:38:08.996719+00:00",
+            "updated_at": "2026-10-20T14:38:08.996719+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "d8847cca-1621-41b7-938b-fba412a5408a",
+            "job_id": "bc192285eee84465a67dce0657022693",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17465,
+            "output_tokens": 1850,
+            "total_tokens": 19315,
+            "cache_hit_tokens": 768,
+            "cache_miss_tokens": 16697,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "a9c3856d19e2e0bd1ff240d3a70df4c3",
+            "created_at": "2026-10-20T14:38:19.473360+00:00",
+            "updated_at": "2026-10-20T14:38:19.473360+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "98b6012d-25b9-4b79-8d48-691fe48a3de2",
+            "job_id": "bc192285eee84465a67dce0657022693",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17144,
+            "output_tokens": 2326,
+            "total_tokens": 19470,
+            "cache_hit_tokens": 768,
+            "cache_miss_tokens": 16376,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "2344dff359e47c44f034eca0a4c320a2",
+            "created_at": "2026-10-20T14:38:30.795068+00:00",
+            "updated_at": "2026-10-20T14:38:30.795068+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "6b94b641-1889-43ce-a684-f1a5d81b6273",
+            "job_id": "bc192285eee84465a67dce0657022693",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17140,
+            "output_tokens": 2362,
+            "total_tokens": 19502,
+            "cache_hit_tokens": 768,
+            "cache_miss_tokens": 16372,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": false
+          }
+        ],
+        "usage_file": "long-attempt1-usage.json",
+        "job_file": "long-attempt1-job.json"
+      },
+      {
+        "case": "long",
+        "name": "long-attempt2",
+        "job_id": "3ef40f14b0f34c2dab8ff99a1e7955c3",
+        "status": "failed",
+        "error": "DeepSeek 返回的字段不符合约定（字段 $.structure[1]，规则 additionalProperties）；本次结果未保存",
+        "calls": 4,
+        "total_tokens": 85428,
+        "retained_calls": 3,
+        "retained_tokens": 51672,
+        "additional_failed_calls": 1,
+        "additional_failed_tokens": 33756,
+        "receipts": [
+          {
+            "id": "37e7adba3caa98339e492e19ccb1ed4b",
+            "created_at": "2026-10-20T14:43:55.218029+00:00",
+            "updated_at": "2026-10-20T14:43:55.218029+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "9386f34f-41d3-4e32-9b8b-dc33575623d4",
+            "job_id": "3ef40f14b0f34c2dab8ff99a1e7955c3",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17140,
+            "output_tokens": 2293,
+            "total_tokens": 19433,
+            "cache_hit_tokens": 16896,
+            "cache_miss_tokens": 244,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "8e0207b911599e0e65a12417c53159bd",
+            "created_at": "2026-10-20T14:44:05.978471+00:00",
+            "updated_at": "2026-10-20T14:44:05.978471+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "9107395c-e7ef-4235-b72b-d599a5170952",
+            "job_id": "3ef40f14b0f34c2dab8ff99a1e7955c3",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 17431,
+            "output_tokens": 2380,
+            "total_tokens": 19811,
+            "cache_hit_tokens": 768,
+            "cache_miss_tokens": 16663,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "46d56e06715a41ce448bfe5992ba7b05",
+            "created_at": "2026-10-20T14:44:12.700763+00:00",
+            "updated_at": "2026-10-20T14:44:12.700763+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "material_analysis",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "08723fd6-3f96-4699-a9da-336ba8544881",
+            "job_id": "3ef40f14b0f34c2dab8ff99a1e7955c3",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 11294,
+            "output_tokens": 1134,
+            "total_tokens": 12428,
+            "cache_hit_tokens": 768,
+            "cache_miss_tokens": 10526,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          },
+          {
+            "id": "1a174f2f540b0335b369f2eddaf272fc",
+            "created_at": "2026-10-20T14:44:31.794474+00:00",
+            "updated_at": "2026-10-20T14:44:31.794474+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "reference_content_merge",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "da9f43a1-9946-4019-bc6d-dc0b391c6cf0",
+            "job_id": "3ef40f14b0f34c2dab8ff99a1e7955c3",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 29800,
+            "output_tokens": 3956,
+            "total_tokens": 33756,
+            "cache_hit_tokens": 256,
+            "cache_miss_tokens": 29544,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": false
+          }
+        ],
+        "usage_file": "long-attempt2-usage.json",
+        "job_file": "long-attempt2-job.json"
+      },
+      {
+        "case": "long",
+        "name": "long",
+        "job_id": "be8833ac5c674f59b717044f5fcb7a04",
+        "status": "succeeded",
+        "error": null,
+        "calls": 1,
+        "total_tokens": 37520,
+        "retained_calls": 1,
+        "retained_tokens": 37520,
+        "additional_failed_calls": 0,
+        "additional_failed_tokens": 0,
+        "receipts": [
+          {
+            "id": "9c3e2a0c5f880f9aef6409213a5e538f",
+            "created_at": "2026-10-20T14:51:53.119713+00:00",
+            "updated_at": "2026-10-20T14:51:53.119713+00:00",
+            "provider": "deepseek",
+            "model": "deepseek-flash",
+            "operation": "reference_content_merge",
+            "status": "completed",
+            "http_status": 200,
+            "provider_task_id": null,
+            "provider_response_id": "84b225c9-9908-4266-a46d-353957f58b5e",
+            "job_id": "be8833ac5c674f59b717044f5fcb7a04",
+            "project_id": null,
+            "asset_id": "2e2893e271774911a336c8a5aad5923c",
+            "batch_id": null,
+            "input_tokens": 29800,
+            "output_tokens": 7720,
+            "total_tokens": 37520,
+            "cache_hit_tokens": 29568,
+            "cache_miss_tokens": 232,
+            "video_seconds": null,
+            "input_seconds": null,
+            "output_seconds": null,
+            "input_audio_seconds": null,
+            "input_image_count": null,
+            "derived_fields": [
+              "cache_miss_tokens"
+            ],
+            "usage_status": "reported",
+            "retained_in_final_analysis": true
+          }
+        ],
+        "usage_file": "long-usage.json",
+        "job_file": "long-job.json"
+      }
+    ],
+    "rerun_totals": {
+      "calls": 13,
+      "total_tokens": 270428,
+      "retained_calls": 11,
+      "retained_tokens": 217170,
+      "additional_failed_calls": 2,
+      "additional_failed_tokens": 53258
+    },
+    "case_totals": {
+      "short": {
+        "calls": 1,
+        "total_tokens": 11460,
+        "retained_calls": 1,
+        "retained_tokens": 11460,
+        "additional_failed_calls": 0,
+        "additional_failed_tokens": 0
+      },
+      "long": {
+        "calls": 12,
+        "total_tokens": 258968,
+        "retained_calls": 10,
+        "retained_tokens": 205710,
+        "additional_failed_calls": 2,
+        "additional_failed_tokens": 53258
+      }
+    }
+  },
+  "subsequent_local_annotation": {
+    "note": "冻结的后分析结果未覆盖；另外保存按本地 ASR 词时间映射的 speech_evidence 与内容段重叠标记，可在界面打开对照。模型原始对白错配仍然存在。",
+    "new_provider_calls": 0,
+    "receipt": [
+      {
+        "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+        "source_analysis_id": "1a0a9950d4ab4c36b29b1192d40c4378",
+        "annotation_analysis_id": "88b28ad9bed64739aaa307ac70aaa2ea",
+        "new_provider_calls": 0
+      },
+      {
+        "asset_id": "2e2893e271774911a336c8a5aad5923c",
+        "source_analysis_id": "45ca95794cbe4371bbbc9bba1908e904",
+        "annotation_analysis_id": "32a001e2a23d4b0686fe9d6ba4d238c9",
+        "new_provider_calls": 0
+      }
+    ],
+    "files": [
+      "short-annotated.json",
+      "long-annotated.json",
+      "annotation-receipt.json"
+    ]
+  },
+  "excluded_separate_validation": {
+    "name": "首页单节点自然语言修改链路测试",
+    "total_tokens": 1866,
+    "job_id": "e980dd29a87a4bf089680d32a3b4942f",
+    "source": "home-node-usage.json",
+    "note": "独立于两条样片重分析，不计入本报告分析 Token 总量。"
+  },
+  "sources": [
+    {
+      "path": "output/reference-comparison-20261020/short-deepseek.json",
+      "sha256": "8e9036fe0863ed88240899d9ba9f02b54303efdf9c127e1aaf1bb323d99c6552"
+    },
+    {
+      "path": "output/reference-comparison-20261020/long-deepseek.json",
+      "sha256": "69eb076de51c483b0df6b9aad444a26c4e079127361b820f030db614a4f2e5e3"
+    },
+    {
+      "path": "output/reference-comparison-20261020/independent-short.json",
+      "sha256": "a68c4f0545a2e54f9a86971ba6a272b70ff67e9e03785e901861e8eddeab090c"
+    },
+    {
+      "path": "output/reference-comparison-20261020/independent-long.json",
+      "sha256": "3fe38da42d36c98b6d2d1a1e4cbd41240d72fe355814d130532e4c115908ddd0"
+    },
+    {
+      "path": "output/reference-comparison-20261020/short-usage.json",
+      "sha256": "d0af811b74fe17e80c870d6c0693d3b2afd80be1c3a2b12dbc0f5912f666eff0"
+    },
+    {
+      "path": "output/reference-comparison-20261020/long-usage.json",
+      "sha256": "ba8b66be82304e5c1b301d2702f38e5ad0f1fa51677864977b923af6e0ad7fea"
+    },
+    {
+      "path": "output/reference-optimization-20261020/short-after.json",
+      "sha256": "2f0a3a17450882e8f7a6e1967e624403c310b863f90d682fdfcd37e9fe1d9d94"
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-after.json",
+      "sha256": "ea2cf3fa04fc56c53302dc83c1465ceb0264e047b0ff2b478d3acd6abd07e403"
+    },
+    {
+      "path": "output/reference-optimization-20261020/short-job.json",
+      "sha256": "e53a750fa16ce12f6e2090a3a0eb9c1ca976f0ea2114233047fe6a693acf358f"
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-job.json",
+      "sha256": "5f9acb3e6713a4c081a24db84411621d97cd9dfc32f637dc6e46575035fe978b"
+    },
+    {
+      "path": "output/reference-optimization-20261020/short-usage.json",
+      "sha256": "44d4d98b211627b14596a283ba25442d3552940f7a471b3f932ca3d09e2af9af"
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt1-usage.json",
+      "sha256": "c40d0ae098205e9eece9464a2440bf2d9c823620697336a7b82e3b4d88788b83"
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt2-usage.json",
+      "sha256": "f8f5a4f15e3551eed38556f81d749c28609deceade769b260a830adf35c0e147"
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-usage.json",
+      "sha256": "73255e5de039c3770728583ecafc7808da0266e97f9e7eb97c46f2f1687b3cd3"
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt1-job.json",
+      "sha256": "07a3b299dca1229d2f5096cca27db20f91d66088d486043ca162a7bb8716eeb7"
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt2-job.json",
+      "sha256": "1959bcd3e57e79498e3e4bb90548ef44c1fad3ed417f302ef3c1dacf851412c7"
+    },
+    {
+      "path": "output/reference-optimization-20261020/annotation-receipt.json",
+      "sha256": "28040f2b981f84ffd3520a7fbc818062ce1db82f3297e7154549d28e63fd3846"
+    },
+    {
+      "path": "output/reference-optimization-20261020/short-annotated.json",
+      "sha256": "76c444f0af7963879013ec746df32f56abbaca6f7a6fe4975111ae1f1c83e773"
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-annotated.json",
+      "sha256": "7d8e640e8ec68c962e122c39015907c08bf7f1aa66c3f7c3cf2230db21ccd280"
+    },
+    {
+      "path": "output/reference-optimization-20261020/home-node-usage.json",
+      "sha256": "e5de6504e99daee65167d50cc34a380c56086c191a42be6ad2b4c9b47d0b44cc"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "attempts": [
+    {
+      "attempt": 1,
+      "source_hash": "19d815ffb6039763b79fdc83e9d8b2f2c0de2a0a1fef75a384847e4e93655f3a",
+      "renderer": {
+        "diagnostics": [
+          {
+            "code": "blank_keyframe",
+            "severity": "warning",
+            "message": "部分采样帧几乎为单色，可能是入场或留白"
+          }
+        ],
+        "checkpoints": [
+          {
+            "time": 0.0,
+            "frame": 0,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-20d58c2341/frame-000000.png"
+          },
+          {
+            "time": 2.5,
+            "frame": 75,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-20d58c2341/frame-000075.png"
+          },
+          {
+            "time": 5.0,
+            "frame": 150,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-20d58c2341/frame-000150.png"
+          },
+          {
+            "time": 7.5,
+            "frame": 225,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-20d58c2341/frame-000225.png"
+          },
+          {
+            "time": 9.966666666666667,
+            "frame": 299,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-20d58c2341/frame-000299.png"
+          }
+        ],
+        "isolation": {
+          "sandbox_requested": true,
+          "no_sandbox_flag": false,
+          "network": "data_only",
+          "profile": "ephemeral",
+          "clock": "paused",
+          "browser_version": "155.0.8059.79"
+        },
+        "frame_checks": [
+          {
+            "frame": 0,
+            "time": 0.0,
+            "pixel_stddev": 0.0
+          },
+          {
+            "frame": 75,
+            "time": 2.5,
+            "pixel_stddev": 20.167
+          },
+          {
+            "frame": 150,
+            "time": 5.0,
+            "pixel_stddev": 20.359
+          },
+          {
+            "frame": 225,
+            "time": 7.5,
+            "pixel_stddev": 14.372
+          },
+          {
+            "frame": 299,
+            "time": 9.966666666666667,
+            "pixel_stddev": 18.372
+          }
+        ],
+        "duration": 10.0,
+        "frames": 300,
+        "fps": 30,
+        "width": 1280,
+        "height": 720,
+        "render_seconds": 16.306,
+        "output_path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1.mp4",
+        "requested_duration": 10.0
+      },
+      "review": {
+        "passed": false,
+        "issues": [
+          "2.5s 帧明显缺字：「时长」标签及时间线片段的选中提示未按脚本显示（仅见双向箭头）；且时间线仅现一端刻度和中部刻度，其余刻度缺失。",
+          "5.0s 帧缺内容：字幕行只出现一条短横线，示例字幕「镜头，可以再调整」与标签「字幕」都未出现。",
+          "7.5s 帧标签位置错位：字幕及「字幕」标签被放在时间线下方，而非脚本指定的选中片段下方；循环箭头图标过小、位置落在时间线上，未在片段内部。",
+          "7.5s 帧缺「替换镜头」标签与右侧推入的新片段矩形；且「时长」标签早期已缺失，第2秒动作无对应文字呈现。"
+        ]
+      },
+      "status": "needs_repair"
+    },
+    {
+      "attempt": 2,
+      "source_hash": "96ab5d5242b413cdee8ab64b06d3ec3bddf17d233bf3a2c1f3dd62fb1d54b0f9",
+      "renderer": {
+        "diagnostics": [
+          {
+            "code": "blank_keyframe",
+            "severity": "warning",
+            "message": "部分采样帧几乎为单色，可能是入场或留白"
+          }
+        ],
+        "checkpoints": [
+          {
+            "time": 0.0,
+            "frame": 0,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000000.png"
+          },
+          {
+            "time": 2.5,
+            "frame": 75,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000075.png"
+          },
+          {
+            "time": 5.0,
+            "frame": 150,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000150.png"
+          },
+          {
+            "time": 7.5,
+            "frame": 225,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000225.png"
+          },
+          {
+            "time": 9.966666666666667,
+            "frame": 299,
+            "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000299.png"
+          }
+        ],
+        "isolation": {
+          "sandbox_requested": true,
+          "no_sandbox_flag": false,
+          "network": "data_only",
+          "profile": "ephemeral",
+          "clock": "paused",
+          "browser_version": "155.0.8059.79"
+        },
+        "frame_checks": [
+          {
+            "frame": 0,
+            "time": 0.0,
+            "pixel_stddev": 0.0
+          },
+          {
+            "frame": 75,
+            "time": 2.5,
+            "pixel_stddev": 20.167
+          },
+          {
+            "frame": 150,
+            "time": 5.0,
+            "pixel_stddev": 20.363
+          },
+          {
+            "frame": 225,
+            "time": 7.5,
+            "pixel_stddev": 14.621
+          },
+          {
+            "frame": 299,
+            "time": 9.966666666666667,
+            "pixel_stddev": 18.372
+          }
+        ],
+        "duration": 10.0,
+        "frames": 300,
+        "fps": 30,
+        "width": 1280,
+        "height": 720,
+        "render_seconds": 14.144,
+        "output_path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2.mp4",
+        "requested_duration": 10.0
+      },
+      "review": {
+        "passed": false,
+        "issues": [
+          "第2.50秒帧缺少脚本要求同时出现的两种文字：时间线片段上方应浮出「时长」标签，实际未出现；该帧中只有标题，与脚本「2.0s出现『时长』」不符。",
+          "第5.00秒帧中标签「字幕」缺失；示例字幕「镜头，可以再调整」也未出现（只看到一条细横线），直到7.50s才出现，晚于脚本规定的5.5s。",
+          "第7.50秒帧中标签「替换镜头」（脚本要求7.5s出现）完全缺失；右侧的新片段矩形已与本片段合并渲染为同一矩形，没有体现「推入一个等宽的新片段矩形」的独立元素。",
+          "第7.50秒帧中「字幕」标签与示例字幕文字重叠，形成遮挡，文字可读性受损。",
+          "第0.00秒帧为纯空白，没有在0.0s显示标题「每个镜头，都能再调整」，与脚本给定的出现时间不符。"
+        ]
+      },
+      "status": "needs_repair"
+    }
+  ],
+  "human_source_edits": 0
+}

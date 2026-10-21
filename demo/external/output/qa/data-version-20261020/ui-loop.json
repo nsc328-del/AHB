@@ -1,0 +1,1434 @@
+{
+  "project_id": "b39dbbe82873461ba826d498e3835ccb",
+  "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+  "render": {
+    "project_id": "b39dbbe82873461ba826d498e3835ccb",
+    "plan_id": "67a4bba443944540845d1a7b07306c18",
+    "version": 6,
+    "asset_id": "153c0844f97c482197ff158d5b712754",
+    "url": "/api/media/renders/b39dbbe82873461ba826d498e3835ccb/v6-d632da93db9f474bb480c95cf78adbc4.mp4",
+    "thumbnail_url": "/api/media/previews/153c0844f97c482197ff158d5b712754.jpg",
+    "duration": 6.0,
+    "width": 1280,
+    "height": 720,
+    "sha256": "ac0fb6d42d6ed195855758970c280d2348b177857d3769466712969170978299",
+    "manifest_url": "/api/media/renders/b39dbbe82873461ba826d498e3835ccb/v6-d632da93db9f474bb480c95cf78adbc4.manifest.json",
+    "compiled_timeline": {
+      "fps": 30,
+      "frame_count": 180,
+      "interval": "[start_frame,end_frame)",
+      "clips": [
+        {
+          "clip_id": "b6121147b9154e64a36bd58c28409e60",
+          "asset_id": "e400442976b34c6b92b3459502a60aaf",
+          "start_frame": 0,
+          "end_frame": 60,
+          "source_start_seconds": 0.0,
+          "source_end_seconds": 2.0,
+          "source_time_base": "1/25",
+          "kind": "image",
+          "transition": "fade",
+          "caption": "蓝橙绿，节奏展开"
+        },
+        {
+          "clip_id": "1a731ea148b9446dbcd0379f805b326e",
+          "asset_id": "e48d062237fe407dafe6676c3a96289e",
+          "start_frame": 60,
+          "end_frame": 105,
+          "source_start_seconds": 0.0,
+          "source_end_seconds": 1.5,
+          "source_time_base": "1/25",
+          "kind": "image",
+          "transition": "cut",
+          "caption": "方中留圆"
+        },
+        {
+          "clip_id": "625ec88cc9be436f88c7763ab9504bdc",
+          "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+          "start_frame": 105,
+          "end_frame": 180,
+          "source_start_seconds": 0.0,
+          "source_end_seconds": 2.5,
+          "source_time_base": "1/25",
+          "kind": "image",
+          "transition": "cut",
+          "caption": "收于棱角"
+        }
+      ]
+    },
+    "id": "6a2290c011cd4a4cb666da4113321387",
+    "created_at": "2026-10-20T05:49:27.741694+00:00",
+    "updated_at": "2026-10-20T05:49:27.741697+00:00"
+  },
+  "binding": {
+    "asset_id": "153c0844f97c482197ff158d5b712754",
+    "confirmation_basis": "user_asserted_exact_render",
+    "confirmed": true,
+    "confirmed_at": "2026-10-20T05:51:05.030112+00:00",
+    "created_at": "2026-10-20T05:51:05.034672+00:00",
+    "id": "7f4e3d3d0a834acfa55ff827a513c955",
+    "plan_id": "67a4bba443944540845d1a7b07306c18",
+    "plan_sha256": "4503401a8ce76afe3b36a3bfa87ea293420ae8b8065b94496301198cf603db45",
+    "project_id": "b39dbbe82873461ba826d498e3835ccb",
+    "publication_id": "qa-only-douyin",
+    "render_id": "6a2290c011cd4a4cb666da4113321387",
+    "render_url": "/api/media/renders/b39dbbe82873461ba826d498e3835ccb/v6-d632da93db9f474bb480c95cf78adbc4.mp4",
+    "sha256": "ac0fb6d42d6ed195855758970c280d2348b177857d3769466712969170978299",
+    "status": "active",
+    "version": 6,
+    "publication": {
+      "account": "验收账号（未实际发布）",
+      "age_hours": 48.0,
+      "archive_id": null,
+      "captured_at": "2026-10-20T10:00:00+08:00",
+      "duration": 6,
+      "id": "qa-only-douyin",
+      "identity_basis": "source_publication_id",
+      "latest_observation_id": "e57e0545d1897913a01c34aa58ec95d585b3fec03ac6a92c5afa7a3cc6604ba0",
+      "metrics": {
+        "avg_watch_seconds": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": null,
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "bounce_2s": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": "10%",
+          "source_name": "2秒跳出率",
+          "source_value": 0.1,
+          "unit": "ratio",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 0.1,
+          "zero_may_mean_unavailable": false
+        },
+        "comments": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "3",
+          "source_name": "评论",
+          "source_value": 3,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 3,
+          "zero_may_mean_unavailable": false
+        },
+        "completion_rate": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": "40%",
+          "source_name": "完播率",
+          "source_value": 0.4,
+          "unit": "ratio",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 0.4,
+          "zero_may_mean_unavailable": false
+        },
+        "likes": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "20",
+          "source_name": "点赞",
+          "source_value": 20,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 20,
+          "zero_may_mean_unavailable": false
+        },
+        "recommends": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": "count",
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "saves": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": "count",
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "shares": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "2",
+          "source_name": "分享",
+          "source_value": 2,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 2,
+          "zero_may_mean_unavailable": false
+        },
+        "views": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "250",
+          "source_name": "播放",
+          "source_value": 250,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 250,
+          "zero_may_mean_unavailable": false
+        }
+      },
+      "platform": "douyin",
+      "platform_id": "qa-only-douyin",
+      "published_at": "2026-10-18T10:00:00+08:00",
+      "source": {
+        "captured_at": "2026-10-20T10:00:00+08:00",
+        "kind": "qa_fixture",
+        "label": "隔离验收样本",
+        "location": "local"
+      },
+      "source_url": null,
+      "status": "验收样本",
+      "thumbnail_url": null,
+      "title": "验收样本·几何色彩（未实际发布）",
+      "version_confirmed": true,
+      "freshness_hours": 3.855,
+      "binding": {
+        "asset_id": "153c0844f97c482197ff158d5b712754",
+        "confirmation_basis": "user_asserted_exact_render",
+        "confirmed": true,
+        "confirmed_at": "2026-10-20T05:51:05.030112+00:00",
+        "created_at": "2026-10-20T05:51:05.034672+00:00",
+        "id": "7f4e3d3d0a834acfa55ff827a513c955",
+        "plan_id": "67a4bba443944540845d1a7b07306c18",
+        "plan_sha256": "4503401a8ce76afe3b36a3bfa87ea293420ae8b8065b94496301198cf603db45",
+        "project_id": "b39dbbe82873461ba826d498e3835ccb",
+        "publication_id": "qa-only-douyin",
+        "render_id": "6a2290c011cd4a4cb666da4113321387",
+        "render_url": "/api/media/renders/b39dbbe82873461ba826d498e3835ccb/v6-d632da93db9f474bb480c95cf78adbc4.mp4",
+        "sha256": "ac0fb6d42d6ed195855758970c280d2348b177857d3769466712969170978299",
+        "status": "active",
+        "version": 6
+      }
+    }
+  },
+  "observations": [
+    {
+      "age_hours": 48.0,
+      "captured_at": "2026-10-20T10:00:00+08:00",
+      "id": "e57e0545d1897913a01c34aa58ec95d585b3fec03ac6a92c5afa7a3cc6604ba0",
+      "metrics": {
+        "avg_watch_seconds": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": null,
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "bounce_2s": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": "10%",
+          "source_name": "2秒跳出率",
+          "source_value": 0.1,
+          "unit": "ratio",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 0.1,
+          "zero_may_mean_unavailable": false
+        },
+        "comments": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "3",
+          "source_name": "评论",
+          "source_value": 3,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 3,
+          "zero_may_mean_unavailable": false
+        },
+        "completion_rate": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": "40%",
+          "source_name": "完播率",
+          "source_value": 0.4,
+          "unit": "ratio",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 0.4,
+          "zero_may_mean_unavailable": false
+        },
+        "likes": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "20",
+          "source_name": "点赞",
+          "source_value": 20,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 20,
+          "zero_may_mean_unavailable": false
+        },
+        "recommends": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": "count",
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "saves": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": "count",
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "shares": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "2",
+          "source_name": "分享",
+          "source_value": 2,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 2,
+          "zero_may_mean_unavailable": false
+        },
+        "views": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "250",
+          "source_name": "播放",
+          "source_value": 250,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 250,
+          "zero_may_mean_unavailable": false
+        }
+      },
+      "publication_id": "qa-only-douyin",
+      "raw_metrics": {
+        "2秒跳出率": {
+          "raw": "10%",
+          "value": 0.1
+        },
+        "分享": {
+          "raw": "2",
+          "value": 2
+        },
+        "完播率": {
+          "raw": "40%",
+          "value": 0.4
+        },
+        "播放": {
+          "raw": "250",
+          "value": 250
+        },
+        "点赞": {
+          "raw": "20",
+          "value": 20
+        },
+        "评论": {
+          "raw": "3",
+          "value": 3
+        }
+      },
+      "source": {
+        "captured_at": "2026-10-20T10:00:00+08:00",
+        "kind": "qa_fixture",
+        "label": "隔离验收样本",
+        "location": "local"
+      }
+    },
+    {
+      "age_hours": 24.0,
+      "captured_at": "2026-10-19T10:00:00+08:00",
+      "id": "c7e7dc9d62602cf537b87e2669959ebca90b9a5224c120e3841b93b07972d371",
+      "metrics": {
+        "avg_watch_seconds": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": null,
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "bounce_2s": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": "10%",
+          "source_name": "2秒跳出率",
+          "source_value": 0.1,
+          "unit": "ratio",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 0.1,
+          "zero_may_mean_unavailable": false
+        },
+        "comments": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "3",
+          "source_name": "评论",
+          "source_value": 3,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 3,
+          "zero_may_mean_unavailable": false
+        },
+        "completion_rate": {
+          "approximate": false,
+          "definition": "平台原始口径",
+          "raw": "40%",
+          "source_name": "完播率",
+          "source_value": 0.4,
+          "unit": "ratio",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 0.4,
+          "zero_may_mean_unavailable": false
+        },
+        "likes": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "20",
+          "source_name": "点赞",
+          "source_value": 20,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 20,
+          "zero_may_mean_unavailable": false
+        },
+        "recommends": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": "count",
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "saves": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": null,
+          "source_name": null,
+          "source_value": null,
+          "unit": "count",
+          "unknown": true,
+          "unknown_reason": "not_observed",
+          "value": null,
+          "zero_may_mean_unavailable": false
+        },
+        "shares": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "2",
+          "source_name": "分享",
+          "source_value": 2,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 2,
+          "zero_may_mean_unavailable": false
+        },
+        "views": {
+          "approximate": false,
+          "definition": "平台累计指标",
+          "raw": "100",
+          "source_name": "播放",
+          "source_value": 100,
+          "unit": "count",
+          "unknown": false,
+          "unknown_reason": null,
+          "value": 100,
+          "zero_may_mean_unavailable": false
+        }
+      },
+      "publication_id": "qa-only-douyin",
+      "raw_metrics": {
+        "2秒跳出率": {
+          "raw": "10%",
+          "value": 0.1
+        },
+        "分享": {
+          "raw": "2",
+          "value": 2
+        },
+        "完播率": {
+          "raw": "40%",
+          "value": 0.4
+        },
+        "播放": {
+          "raw": "100",
+          "value": 100
+        },
+        "点赞": {
+          "raw": "20",
+          "value": 20
+        },
+        "评论": {
+          "raw": "3",
+          "value": 3
+        }
+      },
+      "source": {
+        "captured_at": "2026-10-19T10:00:00+08:00",
+        "kind": "qa_fixture",
+        "label": "隔离验收样本",
+        "location": "local"
+      }
+    }
+  ],
+  "selection": {
+    "batches": [
+      {
+        "project_id": "b39dbbe82873461ba826d498e3835ccb",
+        "status": "succeeded",
+        "job_id": "84762674f1924e08af378f87e2ae4ead",
+        "plan_ids": [
+          "d74f7d87bad9457a859aa1614d539f2f",
+          "085fd46fc0fe455b947b2f5c5104a7bd",
+          "a87f0b7b0d9a41a58072001b1f0e88bd"
+        ],
+        "selected_plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+        "decision_status": "selected",
+        "input_snapshot": {
+          "asset_ids": [
+            "e48d062237fe407dafe6676c3a96289e",
+            "e400442976b34c6b92b3459502a60aaf",
+            "ed7d48f177304c759fe9381a74a72f9d"
+          ],
+          "selection": [],
+          "template_id": "free",
+          "ratio": "16:9",
+          "target_duration": 6,
+          "reference_id": null,
+          "platform": null,
+          "account": null,
+          "brief": "用蓝、橙、绿三张几何图做6秒色彩短片。三个方案分别探索不同开场、顺序和节奏，字幕保持简短。",
+          "base_plan_id": "a02d3113f579411eb66a676dee0ea4cb",
+          "assets": [
+            {
+              "id": "e48d062237fe407dafe6676c3a96289e",
+              "name": "blue.png",
+              "kind": "image",
+              "duration": 0.0,
+              "width": 960,
+              "height": 540,
+              "has_audio": false,
+              "sha256": "32d8624a3d6c55ec94d5a9fc5b4440e5f1e439b54287091036b77bcad5a4ae6a",
+              "analysis": {
+                "summary": "单帧静态图片：浅米色背景中央放置一个纯蓝色圆角方块，左上角与左下角有灰色说明文字。属图形化/示意类画面，无人物、无环境细节，亦无连续帧可供判断动作或运镜。",
+                "tags": [
+                  "静态图形",
+                  "蓝色方块",
+                  "浅色背景",
+                  "极简",
+                  "示意图",
+                  "居中构图"
+                ],
+                "segments": [
+                  {
+                    "start": 0.0,
+                    "end": 0.0,
+                    "timecode": "00:00:00.000",
+                    "description": "浅米色纯色背景，画面正中央为一个纯蓝色圆角正方形色块，边缘带轻微圆角；左上角有灰色小字文字块，左下角有灰色小字文字块。整体为扁平化图形版式，无立体光影与景深变化。",
+                    "tags": [
+                      "蓝色方块",
+                      "居中",
+                      "圆角矩形",
+                      "极简图形",
+                      "文字标注"
+                    ],
+                    "role": "单帧静态示意图",
+                    "shot_type": "不适用",
+                    "motion": "单帧无法确认",
+                    "evidence_times": [
+                      0.0
+                    ]
+                  }
+                ],
+                "audio_analyzed": false,
+                "audio_note": "原素材没有音轨。",
+                "analyzed_frame_times": [
+                  0.0
+                ],
+                "model": "deepseek-flash",
+                "status": "completed",
+                "evidence_frames": [
+                  {
+                    "time": 0.0,
+                    "url": "/api/media/frames/e48d062237fe407dafe6676c3a96289e/03750fb555574e3bb3883801169d0aeb/frame-000.jpg"
+                  }
+                ],
+                "analysis_id": "03750fb555574e3bb3883801169d0aeb",
+                "analyzed_at": "2026-10-20T03:00:00.566397+00:00",
+                "coverage": {
+                  "method": "sampled_frames",
+                  "sampled_frame_count": 1,
+                  "detected_shot_count": null,
+                  "complete_frame_review": false
+                },
+                "audio_status": "no_audio",
+                "audio_used_in_analysis": false
+              },
+              "audio_status": "no_audio",
+              "transcript": null,
+              "analysis_id": "03750fb555574e3bb3883801169d0aeb",
+              "analysis_hash": "56b6b9cc8ded613aa46a99cffeea46821f3461e95b790c1b63d674deae39cb39",
+              "transcript_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            {
+              "id": "e400442976b34c6b92b3459502a60aaf",
+              "name": "orange.png",
+              "kind": "image",
+              "duration": 0.0,
+              "width": 960,
+              "height": 540,
+              "has_audio": false,
+              "sha256": "b9f745666fde7a9b78bc01d54a8c0c1b770dc81609b5b09252e8f18e24f846d6",
+              "analysis": {
+                "summary": "单帧图形素材：浅灰白背景中央为纯色橙色正圆，左上与左下各有一行中文标识文字，画面无其他元素。",
+                "tags": [
+                  "单帧",
+                  "图形",
+                  "橙色圆形",
+                  "极简",
+                  "纯色背景",
+                  "静态"
+                ],
+                "segments": [
+                  {
+                    "start": 0.0,
+                    "end": 0.0,
+                    "timecode": "00:00:00.000",
+                    "description": "浅灰白背景中央居中一个纯橙色实心正圆，左上角有深灰色中文小字一行，左下角有深灰色中文小字一行，整体为扁平化图形版式。",
+                    "tags": [
+                      "居中构图",
+                      "橙色圆形",
+                      "极简图形",
+                      "文字标注",
+                      "静态"
+                    ],
+                    "role": "单帧图形素材",
+                    "shot_type": "不适用",
+                    "motion": "单帧无法确认",
+                    "evidence_times": [
+                      0
+                    ]
+                  }
+                ],
+                "audio_analyzed": false,
+                "audio_note": "原素材没有音轨。",
+                "analyzed_frame_times": [
+                  0.0
+                ],
+                "model": "deepseek-flash",
+                "status": "completed",
+                "evidence_frames": [
+                  {
+                    "time": 0.0,
+                    "url": "/api/media/frames/e400442976b34c6b92b3459502a60aaf/c9a8f94ac58e41c5861b6c3d1a605ce6/frame-000.jpg"
+                  }
+                ],
+                "analysis_id": "c9a8f94ac58e41c5861b6c3d1a605ce6",
+                "analyzed_at": "2026-10-20T03:00:00.627055+00:00",
+                "coverage": {
+                  "method": "sampled_frames",
+                  "sampled_frame_count": 1,
+                  "detected_shot_count": null,
+                  "complete_frame_review": false
+                },
+                "audio_status": "no_audio",
+                "audio_used_in_analysis": false
+              },
+              "audio_status": "no_audio",
+              "transcript": null,
+              "analysis_id": "c9a8f94ac58e41c5861b6c3d1a605ce6",
+              "analysis_hash": "4e471ba29a5f3eff33b514067377a66f598e3d30f7aabf306195f54896baba21",
+              "transcript_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            {
+              "id": "ed7d48f177304c759fe9381a74a72f9d",
+              "name": "green.png",
+              "kind": "image",
+              "duration": 0.0,
+              "width": 960,
+              "height": 540,
+              "has_audio": false,
+              "sha256": "9a0a1277b4231fc279573af7d4c281eddc8bb1219a16c0ff3f7786416b574141",
+              "analysis": {
+                "summary": "静态图形素材，浅灰底上居中放置一个绿色实心三角形，左上角与左下角有文字标注。单帧无法确认运动，也无音频信息。",
+                "tags": [
+                  "静态图形",
+                  "绿色三角形",
+                  "极简",
+                  "几何",
+                  "文字标注",
+                  "无音频"
+                ],
+                "segments": [
+                  {
+                    "start": 0.0,
+                    "end": 0.0,
+                    "timecode": "00:00:00.000",
+                    "description": "浅灰色背景中央偏上位置为一个绿色实心三角形，左上角有文字“工作台验收素材”，左下角有文字“绿色三角”。",
+                    "tags": [
+                      "几何图形",
+                      "绿色",
+                      "居中构图",
+                      "文字标注"
+                    ],
+                    "role": "静态展示素材",
+                    "shot_type": "不适用",
+                    "motion": "单帧无法确认",
+                    "evidence_times": [
+                      0.0
+                    ]
+                  }
+                ],
+                "audio_analyzed": false,
+                "audio_note": "原素材没有音轨。",
+                "analyzed_frame_times": [
+                  0.0
+                ],
+                "model": "deepseek-flash",
+                "status": "completed",
+                "evidence_frames": [
+                  {
+                    "time": 0.0,
+                    "url": "/api/media/frames/ed7d48f177304c759fe9381a74a72f9d/2285de65507f47809e6ff21f18eba38e/frame-000.jpg"
+                  }
+                ],
+                "analysis_id": "2285de65507f47809e6ff21f18eba38e",
+                "analyzed_at": "2026-10-20T03:00:00.531870+00:00",
+                "coverage": {
+                  "method": "sampled_frames",
+                  "sampled_frame_count": 1,
+                  "detected_shot_count": null,
+                  "complete_frame_review": false
+                },
+                "audio_status": "no_audio",
+                "audio_used_in_analysis": false
+              },
+              "audio_status": "no_audio",
+              "transcript": null,
+              "analysis_id": "2285de65507f47809e6ff21f18eba38e",
+              "analysis_hash": "5483573eadc0f4d6ea84d14a14e2861912e4669c803c5e1ee4f0cfcba148bf15",
+              "transcript_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            }
+          ],
+          "reference_case_snapshot": [
+            {
+              "id": "qa-only-douyin",
+              "platform": "douyin",
+              "account": "验收账号（未实际发布）",
+              "published_at": "2026-10-18T10:00:00+08:00",
+              "metrics": {
+                "avg_watch_seconds": {
+                  "approximate": false,
+                  "definition": "平台原始口径",
+                  "raw": null,
+                  "source_name": null,
+                  "source_value": null,
+                  "unit": null,
+                  "unknown": true,
+                  "unknown_reason": "not_observed",
+                  "value": null,
+                  "zero_may_mean_unavailable": false
+                },
+                "bounce_2s": {
+                  "approximate": false,
+                  "definition": "平台原始口径",
+                  "raw": "10%",
+                  "source_name": "2秒跳出率",
+                  "source_value": 0.1,
+                  "unit": "ratio",
+                  "unknown": false,
+                  "unknown_reason": null,
+                  "value": 0.1,
+                  "zero_may_mean_unavailable": false
+                },
+                "comments": {
+                  "approximate": false,
+                  "definition": "平台累计指标",
+                  "raw": "3",
+                  "source_name": "评论",
+                  "source_value": 3,
+                  "unit": "count",
+                  "unknown": false,
+                  "unknown_reason": null,
+                  "value": 3,
+                  "zero_may_mean_unavailable": false
+                },
+                "completion_rate": {
+                  "approximate": false,
+                  "definition": "平台原始口径",
+                  "raw": "40%",
+                  "source_name": "完播率",
+                  "source_value": 0.4,
+                  "unit": "ratio",
+                  "unknown": false,
+                  "unknown_reason": null,
+                  "value": 0.4,
+                  "zero_may_mean_unavailable": false
+                },
+                "likes": {
+                  "approximate": false,
+                  "definition": "平台累计指标",
+                  "raw": "20",
+                  "source_name": "点赞",
+                  "source_value": 20,
+                  "unit": "count",
+                  "unknown": false,
+                  "unknown_reason": null,
+                  "value": 20,
+                  "zero_may_mean_unavailable": false
+                },
+                "recommends": {
+                  "approximate": false,
+                  "definition": "平台累计指标",
+                  "raw": null,
+                  "source_name": null,
+                  "source_value": null,
+                  "unit": "count",
+                  "unknown": true,
+                  "unknown_reason": "not_observed",
+                  "value": null,
+                  "zero_may_mean_unavailable": false
+                },
+                "saves": {
+                  "approximate": false,
+                  "definition": "平台累计指标",
+                  "raw": null,
+                  "source_name": null,
+                  "source_value": null,
+                  "unit": "count",
+                  "unknown": true,
+                  "unknown_reason": "not_observed",
+                  "value": null,
+                  "zero_may_mean_unavailable": false
+                },
+                "shares": {
+                  "approximate": false,
+                  "definition": "平台累计指标",
+                  "raw": "2",
+                  "source_name": "分享",
+                  "source_value": 2,
+                  "unit": "count",
+                  "unknown": false,
+                  "unknown_reason": null,
+                  "value": 2,
+                  "zero_may_mean_unavailable": false
+                },
+                "views": {
+                  "approximate": false,
+                  "definition": "平台累计指标",
+                  "raw": "250",
+                  "source_name": "播放",
+                  "source_value": 250,
+                  "unit": "count",
+                  "unknown": false,
+                  "unknown_reason": null,
+                  "value": 250,
+                  "zero_may_mean_unavailable": false
+                }
+              },
+              "updated_at": "2026-10-20T05:43:14.084213+00:00",
+              "captured_at": "2026-10-20T10:00:00+08:00",
+              "latest_observation_id": "e57e0545d1897913a01c34aa58ec95d585b3fec03ac6a92c5afa7a3cc6604ba0",
+              "source": {
+                "captured_at": "2026-10-20T10:00:00+08:00",
+                "kind": "qa_fixture",
+                "label": "隔离验收样本",
+                "location": "local"
+              },
+              "case_hash": "7667b94ba7974f6e6beee6699e2cfa7668506534ddf3fcf9b9d6f2ad184e0768"
+            }
+          ],
+          "reference": null,
+          "frozen_at": "2026-10-20T05:43:23.687586+00:00"
+        },
+        "reference_case_ids": [
+          "qa-only-douyin"
+        ],
+        "strategy_version": "three-structures-v1",
+        "strategies": [
+          {
+            "key": "evidence",
+            "label": "证据先行",
+            "instruction": "先给素材中最有说服力的结果、事实或视觉证据，再补原因或上下文，最后收束。没有结果证据时，用最明确的主体展示开场，不虚构结论。"
+          },
+          {
+            "key": "question",
+            "label": "问题切入",
+            "instruction": "从用户需求中真实存在的问题、对照或悬念切入，再用素材逐步回应。与证据先行方案改变开场取材、镜头顺序或时间分配；不能编造冲突或对白。"
+          },
+          {
+            "key": "process",
+            "label": "过程展开",
+            "instruction": "顺着动作、时间、空间或观察过程展开，保留动作与信息的连续性，再落到结果。与前两案采用不同镜头组织或节奏；素材无真实过程时按细节到整体组织，不能虚构时间因果。"
+          }
+        ],
+        "error": null,
+        "id": "e74c81004c1b453b8bc89e248a69c5cf",
+        "created_at": "2026-10-20T05:43:23.680436+00:00",
+        "updated_at": "2026-10-20T05:48:16.767915+00:00",
+        "attempts": [
+          {
+            "strategy": "evidence",
+            "attempt": 1,
+            "model": "deepseek-flash",
+            "structure_hash": "d6c8a9c0c87b354fe226bddb054f112078427e09f6965530835042d82c0f6ff4",
+            "accepted": true,
+            "brief": "用蓝、橙、绿三张几何图做6秒色彩短片。三个方案分别探索不同开场、顺序和节奏，字幕保持简短。\n\n本候选的叙事要求：先给素材中最有说服力的结果、事实或视觉证据，再补原因或上下文，最后收束。没有结果证据时，用最明确的主体展示开场，不虚构结论。\n保持同一制作目标与素材范围。实际镜头数量、素材顺序、取材区间或时间分配必须与已有候选不同，只改标题、镜头名称、字幕或转场不算不同方案。不要用微小时间抖动伪造差异。",
+            "options": {
+              "template_id": "free",
+              "ratio": "16:9",
+              "duration": 6,
+              "selection": [],
+              "audio_incomplete": false,
+              "candidate_strategy": {
+                "key": "evidence",
+                "label": "证据先行",
+                "instruction": "先给素材中最有说服力的结果、事实或视觉证据，再补原因或上下文，最后收束。没有结果证据时，用最明确的主体展示开场，不虚构结论。"
+              },
+              "other_candidate_structures": []
+            }
+          },
+          {
+            "strategy": "question",
+            "attempt": 1,
+            "model": "deepseek-flash",
+            "structure_hash": "8cccea4419ec43d711abb0fc18cfb69c311cf9f15a21b2db2c17d918f70f1300",
+            "accepted": true,
+            "brief": "用蓝、橙、绿三张几何图做6秒色彩短片。三个方案分别探索不同开场、顺序和节奏，字幕保持简短。\n\n本候选的叙事要求：从用户需求中真实存在的问题、对照或悬念切入，再用素材逐步回应。与证据先行方案改变开场取材、镜头顺序或时间分配；不能编造冲突或对白。\n保持同一制作目标与素材范围。实际镜头数量、素材顺序、取材区间或时间分配必须与已有候选不同，只改标题、镜头名称、字幕或转场不算不同方案。不要用微小时间抖动伪造差异。",
+            "options": {
+              "template_id": "free",
+              "ratio": "16:9",
+              "duration": 6,
+              "selection": [],
+              "audio_incomplete": false,
+              "candidate_strategy": {
+                "key": "question",
+                "label": "问题切入",
+                "instruction": "从用户需求中真实存在的问题、对照或悬念切入，再用素材逐步回应。与证据先行方案改变开场取材、镜头顺序或时间分配；不能编造冲突或对白。"
+              },
+              "other_candidate_structures": [
+                [
+                  [
+                    "e400442976b34c6b92b3459502a60aaf",
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    "e48d062237fe407dafe6676c3a96289e",
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    "ed7d48f177304c759fe9381a74a72f9d",
+                    0.0,
+                    2.0
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "strategy": "process",
+            "attempt": 1,
+            "model": "deepseek-flash",
+            "structure_hash": "f6b007343708d18e9461ccce844dcd3ffda34856244db51106806c96bc12cf9e",
+            "accepted": true,
+            "brief": "用蓝、橙、绿三张几何图做6秒色彩短片。三个方案分别探索不同开场、顺序和节奏，字幕保持简短。\n\n本候选的叙事要求：顺着动作、时间、空间或观察过程展开，保留动作与信息的连续性，再落到结果。与前两案采用不同镜头组织或节奏；素材无真实过程时按细节到整体组织，不能虚构时间因果。\n保持同一制作目标与素材范围。实际镜头数量、素材顺序、取材区间或时间分配必须与已有候选不同，只改标题、镜头名称、字幕或转场不算不同方案。不要用微小时间抖动伪造差异。",
+            "options": {
+              "template_id": "free",
+              "ratio": "16:9",
+              "duration": 6,
+              "selection": [],
+              "audio_incomplete": false,
+              "candidate_strategy": {
+                "key": "process",
+                "label": "过程展开",
+                "instruction": "顺着动作、时间、空间或观察过程展开，保留动作与信息的连续性，再落到结果。与前两案采用不同镜头组织或节奏；素材无真实过程时按细节到整体组织，不能虚构时间因果。"
+              },
+              "other_candidate_structures": [
+                [
+                  [
+                    "e400442976b34c6b92b3459502a60aaf",
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    "e48d062237fe407dafe6676c3a96289e",
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    "ed7d48f177304c759fe9381a74a72f9d",
+                    0.0,
+                    2.0
+                  ]
+                ],
+                [
+                  [
+                    "e48d062237fe407dafe6676c3a96289e",
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    "e400442976b34c6b92b3459502a60aaf",
+                    0.0,
+                    2.0
+                  ],
+                  [
+                    "ed7d48f177304c759fe9381a74a72f9d",
+                    0.0,
+                    2.0
+                  ]
+                ]
+              ]
+            }
+          }
+        ],
+        "completed_at": "2026-10-20T05:43:30.866441+00:00",
+        "plans": [
+          {
+            "title": "三色证据：橙圆先行·几何收束",
+            "brief": "用蓝、橙、绿三张几何图做6秒色彩短片。三个方案分别探索不同开场、顺序和节奏，字幕保持简短。",
+            "summary": "6秒色彩短片，采用“证据先行”结构：开场先用最饱满、最闭合的橙色圆形作为最明确的主体证据，随后补入蓝色方块与绿色三角形，完成三色几何的完整交代，结尾以绿色三角作收束。三个镜头节奏为2秒、2秒、2秒，均匀推进，字幕只做色彩与形状的简短标注，不虚构任何对白或结论。",
+            "ratio": "16:9",
+            "clips": [
+              {
+                "id": "1eddb565a4634d65bf755f2f2e62184d",
+                "asset_id": "e400442976b34c6b92b3459502a60aaf",
+                "start": 0.0,
+                "end": 2.0,
+                "duration": 2.0,
+                "label": "开场：以橙色圆形作为最明确的视觉主体直接呈现",
+                "caption": "橙 · 圆",
+                "role": "开场",
+                "transition": "fade",
+                "timeline_start": 0.0,
+                "timeline_end": 2.0
+              },
+              {
+                "id": "56d772ed2c224335837d22c9bb8e7d14",
+                "asset_id": "e48d062237fe407dafe6676c3a96289e",
+                "start": 0.0,
+                "end": 2.0,
+                "duration": 2.0,
+                "label": "展开：补入蓝色方块，交代另一色彩与形状",
+                "caption": "蓝 · 方",
+                "role": "展开",
+                "transition": "cut",
+                "timeline_start": 2.0,
+                "timeline_end": 4.0
+              },
+              {
+                "id": "9383557510084b3788b6ed087e24e801",
+                "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+                "start": 0.0,
+                "end": 2.0,
+                "duration": 2.0,
+                "label": "收束：绿色三角形最后出现，完成三色几何",
+                "caption": "绿 · 三角",
+                "role": "收束",
+                "transition": "cut",
+                "timeline_start": 4.0,
+                "timeline_end": 6.0
+              }
+            ],
+            "project_id": "b39dbbe82873461ba826d498e3835ccb",
+            "width": 1280,
+            "height": 720,
+            "duration": 6.0,
+            "id": "d74f7d87bad9457a859aa1614d539f2f",
+            "version": 2,
+            "base_version_id": "a02d3113f579411eb66a676dee0ea4cb",
+            "origin": {
+              "source": "candidate",
+              "actor": "model",
+              "job_id": "84762674f1924e08af378f87e2ae4ead",
+              "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+              "candidate_key": "evidence"
+            },
+            "change_summary": "修改标题；调整素材或镜头顺序；修改字幕；调整转场；更换配乐",
+            "changes": [
+              "修改标题",
+              "调整素材或镜头顺序",
+              "修改字幕",
+              "调整转场",
+              "更换配乐"
+            ],
+            "template_id": "free",
+            "music_asset_id": "",
+            "model": "deepseek-flash",
+            "audio_incomplete": false,
+            "candidate_strategy": {
+              "key": "evidence",
+              "label": "证据先行",
+              "instruction": "先给素材中最有说服力的结果、事实或视觉证据，再补原因或上下文，最后收束。没有结果证据时，用最明确的主体展示开场，不虚构结论。"
+            },
+            "difference_summary": "本批结构对照",
+            "created_at": "2026-10-20T05:43:25.727751+00:00",
+            "updated_at": "2026-10-20T05:43:25.730313+00:00",
+            "url": "/api/media/plans/d74f7d87bad9457a859aa1614d539f2f.json"
+          },
+          {
+            "title": "三色六秒·问题开场",
+            "brief": "用蓝、橙、绿三张几何图做6秒色彩短片。三个方案分别探索不同开场、顺序和节奏，字幕保持简短。",
+            "summary": "从“缺了哪一色”的悬念切入：先以蓝色单独亮相，再让橙色与绿色接连进入，形成从疑问到补全的6秒色彩短片。总时长6秒，三张静态图各展示2秒，以短字幕把问题与回应串起来。",
+            "ratio": "16:9",
+            "clips": [
+              {
+                "id": "9e75e63df7ef4d4989826afdfae2282c",
+                "asset_id": "e48d062237fe407dafe6676c3a96289e",
+                "start": 0.0,
+                "end": 2.0,
+                "duration": 2.0,
+                "label": "蓝色方块率先出场，制造“只有一色”的疑问",
+                "caption": "先只有蓝",
+                "role": "开场",
+                "transition": "fade",
+                "timeline_start": 0.0,
+                "timeline_end": 2.0
+              },
+              {
+                "id": "3bba3d40f1bc4c8080ea29555084206a",
+                "asset_id": "e400442976b34c6b92b3459502a60aaf",
+                "start": 0.0,
+                "end": 2.0,
+                "duration": 2.0,
+                "label": "橙色圆形进入，回应悬念，形成第二色",
+                "caption": "橙来补位",
+                "role": "展开",
+                "transition": "cut",
+                "timeline_start": 2.0,
+                "timeline_end": 4.0
+              },
+              {
+                "id": "c681f3b519014a7c830596a73ba2ebee",
+                "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+                "start": 0.0,
+                "end": 2.0,
+                "duration": 2.0,
+                "label": "绿色三角收尾，三色到齐完成补全",
+                "caption": "绿色补齐三色",
+                "role": "收束",
+                "transition": "cut",
+                "timeline_start": 4.0,
+                "timeline_end": 6.0
+              }
+            ],
+            "project_id": "b39dbbe82873461ba826d498e3835ccb",
+            "width": 1280,
+            "height": 720,
+            "duration": 6.0,
+            "id": "085fd46fc0fe455b947b2f5c5104a7bd",
+            "version": 3,
+            "base_version_id": "a02d3113f579411eb66a676dee0ea4cb",
+            "origin": {
+              "source": "candidate",
+              "actor": "model",
+              "job_id": "84762674f1924e08af378f87e2ae4ead",
+              "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+              "candidate_key": "question"
+            },
+            "change_summary": "修改标题；修改字幕；调整转场；更换配乐",
+            "changes": [
+              "修改标题",
+              "修改字幕",
+              "调整转场",
+              "更换配乐"
+            ],
+            "template_id": "free",
+            "music_asset_id": "",
+            "model": "deepseek-flash",
+            "audio_incomplete": false,
+            "candidate_strategy": {
+              "key": "question",
+              "label": "问题切入",
+              "instruction": "从用户需求中真实存在的问题、对照或悬念切入，再用素材逐步回应。与证据先行方案改变开场取材、镜头顺序或时间分配；不能编造冲突或对白。"
+            },
+            "difference_summary": "素材次序不同",
+            "created_at": "2026-10-20T05:43:28.114898+00:00",
+            "updated_at": "2026-10-20T05:43:28.122251+00:00",
+            "url": "/api/media/plans/085fd46fc0fe455b947b2f5c5104a7bd.json"
+          },
+          {
+            "title": "色彩从弧到角：观察展开",
+            "brief": "用蓝、橙、绿三张几何图做6秒色彩短片。三个方案分别探索不同开场、顺序和节奏，字幕保持简短。",
+            "summary": "6秒几何色彩短片第三案：不按蓝橙绿平均三段平铺，而按“观察过程”组织——先停留橙色圆形，把其圆润边缘当作视觉起点；再切蓝色圆角方块，以圆角作为形状过渡的衔接；最后落到绿色三角形，形成从弧线到棱角的形状递进结果。节奏为2秒—1.5秒—2.5秒，结尾略长收束，与前两案的均分三段、蓝起顺序均不同。素材无真实过程，仅按细节到整体的视觉连续性组织，不虚构时间因果。",
+            "ratio": "16:9",
+            "clips": [
+              {
+                "id": "b6121147b9154e64a36bd58c28409e60",
+                "asset_id": "e400442976b34c6b92b3459502a60aaf",
+                "start": 0.0,
+                "end": 2.0,
+                "duration": 2.0,
+                "label": "观察起点：先停留橙色圆形，突出圆润弧线作为形状线索",
+                "caption": "从圆开始",
+                "role": "开场",
+                "transition": "fade",
+                "timeline_start": 0.0,
+                "timeline_end": 2.0
+              },
+              {
+                "id": "1a731ea148b9446dbcd0379f805b326e",
+                "asset_id": "e48d062237fe407dafe6676c3a96289e",
+                "start": 0.0,
+                "end": 1.5,
+                "duration": 1.5,
+                "label": "形状衔接：蓝色圆角方块承接圆的弧线，又带出方正轮廓",
+                "caption": "方中留圆",
+                "role": "展开",
+                "transition": "cut",
+                "timeline_start": 2.0,
+                "timeline_end": 3.5
+              },
+              {
+                "id": "625ec88cc9be436f88c7763ab9504bdc",
+                "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+                "start": 0.0,
+                "end": 2.5,
+                "duration": 2.5,
+                "label": "落到结果：绿色三角形以棱角收束，完成从弧到角的视觉递进",
+                "caption": "收于棱角",
+                "role": "收束",
+                "transition": "cut",
+                "timeline_start": 3.5,
+                "timeline_end": 6.0
+              }
+            ],
+            "project_id": "b39dbbe82873461ba826d498e3835ccb",
+            "width": 1280,
+            "height": 720,
+            "duration": 6.0,
+            "id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+            "version": 4,
+            "base_version_id": "a02d3113f579411eb66a676dee0ea4cb",
+            "origin": {
+              "source": "candidate",
+              "actor": "model",
+              "job_id": "84762674f1924e08af378f87e2ae4ead",
+              "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+              "candidate_key": "process"
+            },
+            "change_summary": "修改标题；调整素材或镜头顺序；调整入出点或展示时长；修改字幕；调整转场；更换配乐",
+            "changes": [
+              "修改标题",
+              "调整素材或镜头顺序",
+              "调整入出点或展示时长",
+              "修改字幕",
+              "调整转场",
+              "更换配乐"
+            ],
+            "template_id": "free",
+            "music_asset_id": "",
+            "model": "deepseek-flash",
+            "audio_incomplete": false,
+            "candidate_strategy": {
+              "key": "process",
+              "label": "过程展开",
+              "instruction": "顺着动作、时间、空间或观察过程展开，保留动作与信息的连续性，再落到结果。与前两案采用不同镜头组织或节奏；素材无真实过程时按细节到整体组织，不能虚构时间因果。"
+            },
+            "difference_summary": "取材区间或节奏不同",
+            "created_at": "2026-10-20T05:43:30.862964+00:00",
+            "updated_at": "2026-10-20T05:43:30.864548+00:00",
+            "url": "/api/media/plans/a87f0b7b0d9a41a58072001b1f0e88bd.json"
+          }
+        ],
+        "events": [
+          {
+            "id": "0506929da09d4423b43a82600e0a2fc2",
+            "project_id": "b39dbbe82873461ba826d498e3835ccb",
+            "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+            "event_type": "viewed",
+            "plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+            "displayed_plan_ids": [
+              "d74f7d87bad9457a859aa1614d539f2f",
+              "085fd46fc0fe455b947b2f5c5104a7bd",
+              "a87f0b7b0d9a41a58072001b1f0e88bd"
+            ],
+            "viewed_plan_ids": [
+              "a87f0b7b0d9a41a58072001b1f0e88bd"
+            ],
+            "reason": "",
+            "actor": "local_user",
+            "current_plan_id": "a02d3113f579411eb66a676dee0ea4cb",
+            "previous_plan_id": "a02d3113f579411eb66a676dee0ea4cb",
+            "strategy_version": "three-structures-v1",
+            "created_at": "2026-10-20T05:47:57.498979+00:00",
+            "updated_at": "2026-10-20T05:47:57.498979+00:00"
+          },
+          {
+            "id": "69cacbab5cbd438c88fcc0d358d28d55",
+            "project_id": "b39dbbe82873461ba826d498e3835ccb",
+            "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+            "event_type": "selected",
+            "plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+            "displayed_plan_ids": [
+              "d74f7d87bad9457a859aa1614d539f2f",
+              "085fd46fc0fe455b947b2f5c5104a7bd",
+              "a87f0b7b0d9a41a58072001b1f0e88bd"
+            ],
+            "viewed_plan_ids": [
+              "a87f0b7b0d9a41a58072001b1f0e88bd"
+            ],
+            "reason": "选择长短节奏对比，保留取舍记录。",
+            "actor": "local_user",
+            "current_plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+            "previous_plan_id": "dfc7a7151f304d909a42109c2a2c669c",
+            "strategy_version": "three-structures-v1",
+            "created_at": "2026-10-20T05:48:16.767915+00:00",
+            "updated_at": "2026-10-20T05:48:16.767915+00:00"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "69cacbab5cbd438c88fcc0d358d28d55",
+        "project_id": "b39dbbe82873461ba826d498e3835ccb",
+        "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+        "event_type": "selected",
+        "plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+        "displayed_plan_ids": [
+          "d74f7d87bad9457a859aa1614d539f2f",
+          "085fd46fc0fe455b947b2f5c5104a7bd",
+          "a87f0b7b0d9a41a58072001b1f0e88bd"
+        ],
+        "viewed_plan_ids": [
+          "a87f0b7b0d9a41a58072001b1f0e88bd"
+        ],
+        "reason": "选择长短节奏对比，保留取舍记录。",
+        "actor": "local_user",
+        "current_plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+        "previous_plan_id": "dfc7a7151f304d909a42109c2a2c669c",
+        "strategy_version": "three-structures-v1",
+        "created_at": "2026-10-20T05:48:16.767915+00:00",
+        "updated_at": "2026-10-20T05:48:16.767915+00:00"
+      },
+      {
+        "id": "0506929da09d4423b43a82600e0a2fc2",
+        "project_id": "b39dbbe82873461ba826d498e3835ccb",
+        "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+        "event_type": "viewed",
+        "plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+        "displayed_plan_ids": [
+          "d74f7d87bad9457a859aa1614d539f2f",
+          "085fd46fc0fe455b947b2f5c5104a7bd",
+          "a87f0b7b0d9a41a58072001b1f0e88bd"
+        ],
+        "viewed_plan_ids": [
+          "a87f0b7b0d9a41a58072001b1f0e88bd"
+        ],
+        "reason": "",
+        "actor": "local_user",
+        "current_plan_id": "a02d3113f579411eb66a676dee0ea4cb",
+        "previous_plan_id": "a02d3113f579411eb66a676dee0ea4cb",
+        "strategy_version": "three-structures-v1",
+        "created_at": "2026-10-20T05:47:57.498979+00:00",
+        "updated_at": "2026-10-20T05:47:57.498979+00:00"
+      }
+    ],
+    "revisions": [
+      {
+        "plan_id": "67a4bba443944540845d1a7b07306c18",
+        "base_plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+        "version": 6,
+        "origin": {
+          "batch_id": "e74c81004c1b453b8bc89e248a69c5cf",
+          "candidate_key": "process",
+          "root_candidate_plan_id": "a87f0b7b0d9a41a58072001b1f0e88bd",
+          "source": "manual",
+          "actor": "local_user"
+        },
+        "summary": "修改字幕",
+        "changes": [
+          "修改字幕"
+        ],
+        "created_at": "2026-10-20T05:48:58.017619+00:00"
+      },
+      {
+        "plan_id": "dfc7a7151f304d909a42109c2a2c669c",
+        "base_plan_id": "a02d3113f579411eb66a676dee0ea4cb",
+        "version": 5,
+        "origin": {
+          "source": "manual",
+          "actor": "local_user"
+        },
+        "summary": "修改字幕",
+        "changes": [
+          "修改字幕"
+        ],
+        "created_at": "2026-10-20T05:48:16.722941+00:00"
+      },
+      {
+        "plan_id": "a02d3113f579411eb66a676dee0ea4cb",
+        "base_plan_id": null,
+        "version": 1,
+        "origin": {
+          "source": "manual",
+          "actor": "local_user"
+        },
+        "summary": "建立初始方案",
+        "changes": [
+          "建立初始方案"
+        ],
+        "created_at": "2026-10-20T05:42:03.776888+00:00"
+      }
+    ]
+  }
+}

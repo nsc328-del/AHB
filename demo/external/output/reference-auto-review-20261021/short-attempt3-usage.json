@@ -1,0 +1,50 @@
+{
+  "scope": "job",
+  "filters": {
+    "job_id": "fbef35980b4f4fd8b945f2eb1b090714"
+  },
+  "aggregates": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null,
+    "cache_hit_tokens": null,
+    "cache_miss_tokens": null,
+    "video_seconds": null,
+    "input_seconds": null,
+    "output_seconds": null,
+    "input_audio_seconds": null,
+    "input_image_count": null,
+    "cache_hit_rate": null
+  },
+  "coverage": {
+    "recorded_calls": 0,
+    "token_reported_calls": 0,
+    "token_total_unknown_calls": 0,
+    "token_partial_calls": 0,
+    "seconds_only_calls": 0,
+    "token_unknown_calls": 0,
+    "seconds_reported_calls": 0,
+    "cache_reported_calls": 0,
+    "metric_reported_calls": {
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 0,
+      "video_seconds": 0,
+      "input_seconds": 0,
+      "output_seconds": 0,
+      "input_audio_seconds": 0,
+      "input_image_count": 0
+    },
+    "legacy_jobs_count": 0,
+    "scope_has_prior_activity": false,
+    "scope_status": "empty",
+    "first_recorded_at": null,
+    "tracking_started_at": "2026-10-20T07:58:46.066865+00:00",
+    "history_available": true
+  },
+  "records": [],
+  "records_total": 0,
+  "has_more": false
+}

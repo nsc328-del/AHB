@@ -1,0 +1,58 @@
+{
+  "source_analysis_id": "bd5c1574236546a98fd97c18e55f9f71",
+  "analysis_id": "2fe5d09115674886bdbcdd4f9928b1d7",
+  "model_calls": 0,
+  "edits": [
+    {
+      "collection": "content_segments",
+      "index": 19,
+      "expected_sha256": "c19afddcf2ca0ebb54257ddb4c4298b65787db965e1b6852b2d6bcb7a857e703",
+      "fields": {
+        "description": "画面从设备面板与线缆的局部开始，随后出现带蓝色屏幕的卫星/设备结构，屏幕上有编号“NO. 4”及“Insta360影石”等标识；接着是火箭在蓝天中垂直上升，两名男子在雪地户外，其中一人穿黑色羽绒服、举拳微笑，另一人戴帽子、持设备；之后出现光束中的模糊人影、翻开的发光书页和夜晚火车喷出大量火花的场景，画面底部有“找到啦”等字幕。"
+      },
+      "reason": "供帧可辨设备面板和编号，无法确认面板种类或完整地址。",
+      "evidence": [
+        "${AHB_DATA}/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-247.jpg"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 21,
+      "expected_sha256": "e465cacab04ca4ad2ed6b2cb9388f808945a45169289bd3ffbeaafbd9a0c3866",
+      "fields": {
+        "description": "画面延续两名黑衣男子在烟雾中持相机设备的场景，随后切到户外草地上一名穿白衬衫的男子奔跑，背景是绿色山丘与水面；接着出现覆盖白雪的山峰、更近的雪山与云海，之后是鲸鲨在水中游动，再切到另一只海洋动物的水下画面，最后是赤裸上身的男子在火光中挥动燃烧的工具，火花四溅。"
+      },
+      "reason": "第一只鲸鲨特征可见；第二只动物的供帧不足以确定物种。",
+      "evidence": [
+        "${AHB_DATA}/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-299.jpg",
+        "${AHB_DATA}/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-302.jpg",
+        "${AHB_DATA}/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-304.jpg"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 22,
+      "expected_sha256": "6dff82b203a13ae600d29156c46913482ff2efe66738fa8d925fa1ed5811783f",
+      "fields": {
+        "description": "画面从火花四溅的打铁花场景开始，接着是一名男子站在水边栈道尽头、前方有水雾或浪花，然后切到从飞机外部向下俯拍红白相间飞机的画面，透过座舱罩可见舱内人员，随后是地球边缘的绿色极光、暗色太空中的地球弧线，最后出现日全食的黑色圆盘与周围光环。"
+      },
+      "reason": "原帧从机外上方向下拍摄，并非舱内第一视角。",
+      "evidence": [
+        "${AHB_DATA}/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-312.jpg"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 87,
+      "expected_sha256": "a70c39fcf684838837379680d94623410b494864d6c01889759aef3e5ad91b40",
+      "fields": {
+        "description": "画面从草地俯拍开始，草地上有十几个人，有的站立、有的坐着、有的躺平。随后切到暗色虚化背景上的音乐署名字卡，黄色“音乐”标题与两行白色曲目信息同时显示，底部有“所以 坚持自我”字幕。接着出现白色引号字幕“用自己的方式，去留下属于这个时代的...”和黄色文字“印记”。之后出现一名戴黑框眼镜、穿白色T恤的男子在室内看镜头，画面文字为黄色“无限进步就是我们影视飓风的座右铭”。画面转至地球轨道背景，可见设备屏幕显示“NO. 1345”和“影视飓风 Insta360 影石”。最后画面为黑底白字“XIAOHAOH”。"
+      },
+      "reason": "画面证据为暗色虚化背景，标题与两行曲目信息同时显示。",
+      "evidence": [
+        "${AHB_DATA}/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-372.jpg",
+        "${AHB_DATA}/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-375.jpg"
+      ]
+    }
+  ]
+}

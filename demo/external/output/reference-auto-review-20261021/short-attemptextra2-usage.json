@@ -1,0 +1,111 @@
+{
+  "scope": "job",
+  "filters": {
+    "job_id": "b78161dd02d84e16870fe63c5214159d"
+  },
+  "aggregates": {
+    "input_tokens": 29996,
+    "output_tokens": 4235,
+    "total_tokens": 34231,
+    "cache_hit_tokens": 3456,
+    "cache_miss_tokens": 26540,
+    "video_seconds": null,
+    "input_seconds": null,
+    "output_seconds": null,
+    "input_audio_seconds": null,
+    "input_image_count": null,
+    "cache_hit_rate": 0.11521536204827311
+  },
+  "coverage": {
+    "recorded_calls": 2,
+    "token_reported_calls": 2,
+    "token_total_unknown_calls": 0,
+    "token_partial_calls": 0,
+    "seconds_only_calls": 0,
+    "token_unknown_calls": 0,
+    "seconds_reported_calls": 0,
+    "cache_reported_calls": 2,
+    "metric_reported_calls": {
+      "input_tokens": 2,
+      "output_tokens": 2,
+      "total_tokens": 2,
+      "cache_hit_tokens": 2,
+      "cache_miss_tokens": 2,
+      "video_seconds": 0,
+      "input_seconds": 0,
+      "output_seconds": 0,
+      "input_audio_seconds": 0,
+      "input_image_count": 0
+    },
+    "legacy_jobs_count": 0,
+    "scope_has_prior_activity": false,
+    "scope_status": "recorded",
+    "first_recorded_at": "2026-10-20T16:30:36.687603+00:00",
+    "tracking_started_at": "2026-10-20T07:58:46.066865+00:00",
+    "history_available": true
+  },
+  "records": [
+    {
+      "id": "c8ce93273de725d028d4e2a97050533b",
+      "created_at": "2026-10-20T16:30:56.274748+00:00",
+      "updated_at": "2026-10-20T16:30:56.274748+00:00",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "operation": "reference_visual_reconcile",
+      "status": "completed",
+      "http_status": 200,
+      "provider_task_id": null,
+      "provider_response_id": "81e7aab9-5ec5-4a1d-8ced-cb72e838a014",
+      "job_id": "b78161dd02d84e16870fe63c5214159d",
+      "project_id": null,
+      "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+      "batch_id": null,
+      "input_tokens": 22909,
+      "output_tokens": 3804,
+      "total_tokens": 26713,
+      "cache_hit_tokens": 1408,
+      "cache_miss_tokens": 21501,
+      "video_seconds": null,
+      "input_seconds": null,
+      "output_seconds": null,
+      "input_audio_seconds": null,
+      "input_image_count": null,
+      "derived_fields": [
+        "cache_miss_tokens"
+      ],
+      "usage_status": "reported"
+    },
+    {
+      "id": "5cc38f4c84d15fc04e968e4a4ac6152f",
+      "created_at": "2026-10-20T16:30:36.687603+00:00",
+      "updated_at": "2026-10-20T16:30:36.687603+00:00",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "operation": "reference_visual_reconcile",
+      "status": "completed",
+      "http_status": 200,
+      "provider_task_id": null,
+      "provider_response_id": "326d5978-e172-4fae-ace1-aedd05cdc98f",
+      "job_id": "b78161dd02d84e16870fe63c5214159d",
+      "project_id": null,
+      "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+      "batch_id": null,
+      "input_tokens": 7087,
+      "output_tokens": 431,
+      "total_tokens": 7518,
+      "cache_hit_tokens": 2048,
+      "cache_miss_tokens": 5039,
+      "video_seconds": null,
+      "input_seconds": null,
+      "output_seconds": null,
+      "input_audio_seconds": null,
+      "input_image_count": null,
+      "derived_fields": [
+        "cache_miss_tokens"
+      ],
+      "usage_status": "reported"
+    }
+  ],
+  "records_total": 2,
+  "has_more": false
+}

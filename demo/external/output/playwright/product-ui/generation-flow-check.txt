@@ -1,0 +1,42 @@
+### Result
+{"synced":true,"invalidated":true,"planned":2,"paidEndpointRequests":1,"submissionId":"a3e966ed-5b55-4936-95d0-f957f3bced45","contract":true,"lockedAfterReturn":true}
+### Ran Playwright code
+```js
+await (async (page) => {
+ const board={"title": "蓝色几何方块·光影缓移", "summary": "单一4秒固定机位镜头：白色桌面上一枚蓝色几何方块，柔和自然光下影子向右缓慢移动后停止；无人物、无文字、全程静音、无音乐。", "character_anchors": [], "scene_anchors": ["白色桌面，表面平整哑光，无纹理杂物", "蓝色几何方块，边缘清晰、表面细腻", "柔和自然光从画面左侧斜射，投下向右延展的软边阴影"], "missing_inputs": [], "shots": [{"id": "S1", "label": "蓝色方块与缓移阴影", "script": "固定机位、16:9横向构图的单一4秒镜头。白色桌面占满画面，中央偏左静置一个蓝色几何方块，立方体形态、棱边干净、表面细腻哑光。柔和自然光从画面左侧低角度斜射，桌面右侧投出边缘柔和的阴影。镜头中的光影缓慢变化：阴影从左向右缓慢移动约一小段距离，末尾逐渐减速直至完全停住；方块本体全程不移动、不旋转、不起伏。摄像机完全锁定，无推拉摇移。画面中没有人物，没有任何文字与标识。所有声音均不存在：无环境声、无接触声、无人声、无音乐，整段为绝对静音。结束状态为阴影停在右移后的位置保持静止，方块仍位于画面中央偏左，画面在大约最后一秒保持完全静止。", "duration": 4, "purpose": "以单镜头静物光影演示，呈现蓝色几何方块在柔和自然光下影子缓慢右移后停止的过程。", "continuity": "单镜头，画面、光线与对象位置完整自洽；起始时阴影位于左偏位置，结束时停在右移后位置并保持静止，中间无跳变。", "visual": "白色桌面全景，中央偏左一个蓝色几何方块（立方体、棱边清晰、哑光细腻表面），左侧柔和自然光斜射形成软边阴影；固定机位，无人物、无文字。", "audio": "完全静音：无环境声、无接触声、无人声、无音乐。", "mode": "T2VA", "reference_asset_ids": [], "first_asset_id": "", "last_asset_id": "", "prompt": "integrated_multimodal_description: [Shot 1] Live-action, cinematic still-life, a static medium shot frames a white matte tabletop filling the entire 16:9 frame under soft natural daylight. A single blue geometric cube, with crisp clean edges and a fine matte surface, rests slightly left of center, fully in frame and motionless throughout. Low-angle soft daylight enters from the left side of the frame and casts a soft-edged shadow of the cube onto the tabletop toward the right. Over the 4-second shot, the shadow alone creeps steadily toward the right across the white surface, then gradually decelerates and comes to a complete stop shortly before the end, remaining still through the final second. The cube itself never moves, rotates, bounces or changes shape, and the white tabletop stays empty with no props, no people and no visible text or markings anywhere in the frame. The camera holds a totally Static Shot with no push, pan, tilt, truck or zoom, and the composition, distance and focal length remain unchanged from first frame to last. The scene ends with the shadow settled in its shifted position to the right of the cube while the cube holds its original spot slightly left of center and the frame stays completely still.\n\noverall_soundscape: N/A\n\nnon_diegetic_music: N/A", "reference_bindings": [], "title": "蓝色方块与缓移阴影", "first_frame_id": "", "last_frame_id": "", "reference_image_ids": [], "reference_video_ids": [], "reference_audio_ids": []}], "skill_id": "h3-prompt-writing", "skill_sources": [{"id": "h3-prompt-writing", "source_url": "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/h3-prompt-writing", "snapshot_date": "2026-10-20", "manifest_sha256": "264e75939e3a27a276740805e3f3d09f09f1d0156bc55fdff1ad39db5b459a53", "files": [{"path": "SKILL.md", "sha256": "a7000443588ca3f145e3b3fd8900f14e0325dc460bd811268fac89a9dc8e56d0"}, {"path": "references/base-en.txt", "sha256": "2cfebc096a6e08370f288d468d90b60f7f9bcb938f94bf090816e910e48e75fc"}, {"path": "references/ref-en.txt", "sha256": "1e574f356716ad55612247ffb7bbccbcdb484ad96599d63c7dca1af186b1fab7"}]}], "model": "deepseek-flash", "character_notes": [], "scene_notes": ["白色桌面，表面平整哑光，无纹理杂物", "蓝色几何方块，边缘清晰、表面细腻", "柔和自然光从画面左侧斜射，投下向右延展的软边阴影"]};
+ let submitted=[],plans=0;
+ const planJob={id:'ui-qa-plan',kind:'generation_plan',status:'succeeded',result:{storyboard:board}};
+ const generatedJob={id:'ui-qa-generation',kind:'generation',status:'queued',progress:0};
+ await page.route('**/api/generation-plans',route=>{plans++;return route.fulfill({json:{job_id:planJob.id}})});
+ await page.route('**/api/generations',route=>{submitted.push(route.request().postDataJSON());return route.fulfill({json:{job_id:generatedJob.id}})});
+ await page.route('**/api/jobs/ui-qa-plan',route=>route.fulfill({json:planJob}));
+ await page.route('**/api/jobs/ui-qa-generation',route=>route.fulfill({json:generatedJob}));
+ await page.route('**/api/jobs',async route=>{const original=await (await route.fetch()).json();return route.fulfill({json:{jobs:[...(plans?[planJob]:[]),...(submitted.length?[generatedJob]:[]),...original.jobs]}})});
+ await page.getByRole('button',{name:'自由生成',exact:true}).click();
+ await page.locator('#generation-form [name=prompt]').fill('白色桌面上的蓝色方块，光影缓慢变化。');
+ await page.getByRole('button',{name:'编写脚本',exact:true}).click();
+ await page.getByRole('button',{name:'使用这个镜头',exact:true}).waitFor({state:'visible'});
+ await page.getByRole('button',{name:'使用这个镜头',exact:true}).click();
+ await page.locator('.shot-prompt summary').click();
+ const edited=board.shots[0].prompt+'\n';
+ await page.locator('[data-gs-field=prompt]').fill(edited);
+ const synced=await page.locator('#generation-form [name=prompt]').inputValue()===edited;
+ await page.locator('.generation-options summary').click();
+ await page.locator('#generation-form [name=duration]').selectOption('7');
+ const invalidated=await page.getByRole('button',{name:'生成这个镜头',exact:true}).count()===0;
+ await page.getByRole('button',{name:'编写脚本',exact:true}).click();
+ await page.getByRole('button',{name:'重新编写脚本',exact:true}).waitFor({state:'visible'});
+ await page.getByRole('button',{name:'使用这个镜头',exact:true}).click();
+ await page.getByRole('button',{name:'生成这个镜头',exact:true}).click({clickCount:3});
+ await page.getByRole('button',{name:'正在生成…',exact:true}).waitFor({state:'visible'});
+ await page.getByRole('button',{name:'关闭任务列表',exact:true}).click();
+ await page.getByRole('button',{name:'‹ 素材生成',exact:true}).click();
+ await page.getByRole('button',{name:'自由生成',exact:true}).click();
+ const result={synced,invalidated,planned:plans,paidEndpointRequests:submitted.length,submissionId:submitted[0]?.submission_id,contract:submitted[0]?.require_h3_prompt_contract,lockedAfterReturn:await page.getByRole('button',{name:'正在生成…',exact:true}).isDisabled()};
+ if(!result.synced||!result.invalidated||result.paidEndpointRequests!==1||!result.contract||!result.lockedAfterReturn)throw new Error(JSON.stringify(result));
+ await page.unrouteAll({behavior:'wait'});
+ await page.evaluate(()=>sessionStorage.removeItem('video-generation-submissions'));
+ await page.reload();
+ return result;
+})(page);
+```

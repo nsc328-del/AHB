@@ -1,0 +1,95 @@
+{
+  "diagnostics": [
+    {
+      "code": "blank_keyframe",
+      "severity": "warning",
+      "message": "部分采样帧几乎为单色，可能是入场或留白"
+    }
+  ],
+  "checkpoints": [
+    {
+      "time": 0.0,
+      "frame": 0,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-95e464f85c/frame-000000.png",
+      "visible_text": []
+    },
+    {
+      "time": 2.5,
+      "frame": 75,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-95e464f85c/frame-000075.png",
+      "visible_text": [
+        "每个镜头，都能再调整"
+      ]
+    },
+    {
+      "time": 5.0,
+      "frame": 150,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-95e464f85c/frame-000150.png",
+      "visible_text": [
+        "每个镜头，都能再调整",
+        "时长"
+      ]
+    },
+    {
+      "time": 7.5,
+      "frame": 225,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-95e464f85c/frame-000225.png",
+      "visible_text": [
+        "每个镜头，都能再调整",
+        "镜头，可以再调整",
+        "字幕"
+      ]
+    },
+    {
+      "time": 9.966666666666667,
+      "frame": 299,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1-keyframes-95e464f85c/frame-000299.png",
+      "visible_text": [
+        "从一个想法，到下一部片子"
+      ]
+    }
+  ],
+  "isolation": {
+    "sandbox_requested": true,
+    "no_sandbox_flag": false,
+    "network": "data_only",
+    "profile": "ephemeral",
+    "clock": "paused",
+    "browser_version": "155.0.8059.79"
+  },
+  "frame_checks": [
+    {
+      "frame": 0,
+      "time": 0.0,
+      "pixel_stddev": 0.0
+    },
+    {
+      "frame": 75,
+      "time": 2.5,
+      "pixel_stddev": 20.167
+    },
+    {
+      "frame": 150,
+      "time": 5.0,
+      "pixel_stddev": 20.359
+    },
+    {
+      "frame": 225,
+      "time": 7.5,
+      "pixel_stddev": 14.372
+    },
+    {
+      "frame": 299,
+      "time": 9.966666666666667,
+      "pixel_stddev": 18.338
+    }
+  ],
+  "duration": 10.0,
+  "frames": 300,
+  "fps": 30,
+  "width": 1280,
+  "height": 720,
+  "render_seconds": 17.373,
+  "output_path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-1.mp4",
+  "requested_duration": 10.0
+}

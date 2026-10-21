@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-20",
+  "workbench": "http://127.0.0.1:8787/",
+  "baseline_unchanged": true,
+  "live_analysis_versions": [
+    {
+      "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+      "source_analysis_id": "1a0a9950d4ab4c36b29b1192d40c4378",
+      "annotation_analysis_id": "88b28ad9bed64739aaa307ac70aaa2ea",
+      "new_provider_calls": 0
+    },
+    {
+      "asset_id": "2e2893e271774911a336c8a5aad5923c",
+      "source_analysis_id": "45ca95794cbe4371bbbc9bba1908e904",
+      "annotation_analysis_id": "32a001e2a23d4b0686fe9d6ba4d238c9",
+      "new_provider_calls": 0
+    }
+  ],
+  "real_model_usage": {
+    "reference_analysis_tokens": 270428,
+    "reference_calls": 13,
+    "retained_result_tokens": 217170,
+    "additional_failed_tokens": 53258,
+    "home_node_tokens": 1866,
+    "home_node_calls": 1,
+    "new_h3_calls": 0,
+    "total_this_iteration_tokens": 272294
+  },
+  "verified": [
+    "short five cuts match prior independent frame verification",
+    "long nine windows cover 397 evidence frames and screened speech",
+    "reference shots, semantic sections and uncertain ASR shown separately",
+    "library and reference membership separated",
+    "nine generation templates before expanded workspace; rapid switching retained",
+    "initial sample seeding and session recovery",
+    "inline node natural language modifies only active branch; real provider receipt",
+    "pointer drag material replacement and node reorder; undo",
+    "manual caption edit marks stale preview; undo restores matching preview",
+    "7 second 720x1280 FFmpeg render played through to end in existing browser",
+    "content ASR evidence and overlap markers shown"
+  ],
+  "validation": {
+    "backend_full_suite": "70 tests passed before local annotation change",
+    "annotation_and_home_targeted": "9 tests passed after annotation change",
+    "javascript_state_checks": [
+      "initial loading and empty saved seed",
+      "node stale result protection",
+      "submission recovery",
+      "pointer cancellation and branch isolation"
+    ],
+    "syntax_and_diff": "passed"
+  },
+  "limits": [
+    "Only two reference clips; no generalized detection accuracy claim",
+    "Long reference gradual boundaries and some fast cuts need human review",
+    "Model motion interpretation and some speech attribution remain incorrect",
+    "Local speech alignment preserves ASR text, not a claim of transcription correctness",
+    "Browser UI checked in existing 672px IAB panel; no new Chrome process, no desktop viewport or animation recording verification"
+  ],
+  "inventory_after": {
+    "assets": 10,
+    "reference": 3,
+    "library": 7,
+    "projects": 3
+  },
+  "test_project_id": "85e342b64afd4aa193b885156ac29ee6",
+  "render_receipt": "home-preview-job.json",
+  "screenshots": [
+    "ui/home-node-input.png",
+    "ui/home-preview.png",
+    "ui/generation-grid.png",
+    "ui/library-separated.png",
+    "ui/speech-evidence.png"
+  ]
+}

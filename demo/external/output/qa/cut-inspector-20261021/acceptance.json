@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-21",
+  "renders": [
+    {
+      "render_id": "3bbfabfcce42469e9efbf380763c5d41",
+      "stats": {
+        "clips": 5,
+        "sources": 1,
+        "captions": 5,
+        "fades": 1,
+        "cut_joins": 4,
+        "reordered": true,
+        "duration": 20.0,
+        "source_duration": 75.836,
+        "unique_source_duration": 20.0
+      },
+      "unchanged_render_hash": true,
+      "matches_renderer": true
+    },
+    {
+      "render_id": "9ca2699d4f19482697feca28ad666b0a",
+      "stats": {
+        "clips": 5,
+        "sources": 1,
+        "captions": 5,
+        "fades": 1,
+        "cut_joins": 4,
+        "reordered": true,
+        "duration": 20.1,
+        "source_duration": 75.836,
+        "unique_source_duration": 20.1
+      },
+      "unchanged_render_hash": true,
+      "matches_renderer": true
+    },
+    {
+      "render_id": "60911648e60a44928ba4623b617f7a99",
+      "stats": {
+        "clips": 7,
+        "sources": 1,
+        "captions": 7,
+        "fades": 1,
+        "cut_joins": 6,
+        "reordered": true,
+        "duration": 24.0,
+        "source_duration": 75.836,
+        "unique_source_duration": 24.0
+      },
+      "unchanged_render_hash": true,
+      "matches_renderer": true
+    },
+    {
+      "render_id": "48e1ebb010ac4048b5fb8d3bca9d8436",
+      "stats": {
+        "clips": 6,
+        "sources": 1,
+        "captions": 3,
+        "fades": 2,
+        "cut_joins": 4,
+        "reordered": false,
+        "duration": 21.9,
+        "source_duration": 51.157,
+        "unique_source_duration": 21.9
+      },
+      "unchanged_render_hash": true,
+      "matches_renderer": true
+    }
+  ],
+  "counts": {
+    "assets": 24,
+    "projects": 7,
+    "plans": 13,
+    "renders": 11,
+    "usage_records": 92
+  },
+  "usage_latest": "2026-10-21T06:54:30.586696+00:00",
+  "verification": [
+    "Frozen plan survives later plan edits",
+    "Exact source interval and thumbnail color verified with synthetic source",
+    "Source and result proxies do not create assets or renders",
+    "Changed media and mismatched manifest rejected",
+    "Focused inspector and API regression tests passed",
+    "No model or H3 calls made by inspector"
+  ],
+  "scope": "Existing rendered films only; reflects saved plan and manifest, not hidden model reasoning.",
+  "browser": {
+    "viewport": "1280x720",
+    "node_source_playback": {
+      "duration": 4,
+      "ended_at": 4,
+      "error": null
+    },
+    "result_playback_duration": 4,
+    "version_switch": "v1 5 nodes to v3 7 nodes verified",
+    "cafe": "6 nodes, last duration 2.4 seconds",
+    "rapid_node_switch": "final node, text and media agree",
+    "return_to_film": "hidden players paused",
+    "console_errors": [],
+    "screenshot": "restaurant-breakdown.png",
+    "narrow_screen": "not checked",
+    "motion": "Stable anchor verified; intermediate opacity frame not captured"
+  },
+  "known_existing_issues": [
+    "Restaurant v1 third segment DS label and caption do not match visible source content",
+    "Restaurant v1 output cut at 8 seconds is delayed by one frame; the result proxy preserves this original output, it is not silently corrected"
+  ]
+}

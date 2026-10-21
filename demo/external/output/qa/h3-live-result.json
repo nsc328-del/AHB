@@ -1,0 +1,17 @@
+{
+  "task_id": "454295050748219",
+  "status": "succeeded",
+  "usage": {
+    "total_seconds": 4,
+    "input_seconds": 0,
+    "output_seconds": 4,
+    "input_image_count": 0
+  },
+  "requested_duration": 4,
+  "local_result": {
+    "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+    "url": "/api/media/generations/abde907492464441b9e0a6913a919f61.mp4",
+    "thumbnail_url": "/api/media/previews/a9e3a40491324423826eb8ca76f4e99a.jpg",
+    "duration": 4.4583
+  }
+}

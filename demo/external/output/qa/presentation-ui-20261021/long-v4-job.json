@@ -1,0 +1,1454 @@
+{
+  "kind": "reference_presentation",
+  "status": "succeeded",
+  "progress": 100,
+  "message": "已完成",
+  "result": {
+    "asset_id": "2e2893e271774911a336c8a5aad5923c",
+    "analysis_id": "bd4eb58239b048649a8010e0ac9a6b88",
+    "presentation": {
+      "kind": "narrative",
+      "label": "讲述型人生感悟叙事",
+      "summary": "以男子面对镜头的自述旁白为主线，从人生拉长看之苦、缩短视野看之期待，到宇宙尺度下的无意义诘问，再回到自我怀疑与和解，最后由团队与作品集升华收束；画面按论点推进与人物出镜串联。",
+      "confidence": "medium",
+      "basis": [
+        "ASR呈现完整论证链：苦—缩短视野—无意义—和解",
+        "多次回到同一说话男子近景，充当论述锚点",
+        "插入海岸、地球、作品集画面佐证论点",
+        "rhythm未建立，运动匹配亦非主导"
+      ],
+      "limitations": [
+        "多数镜头无可用帧与运动统计，只能依ASR与观察推断",
+        "部分旁白转写含错字，语义按上下文推定",
+        "rhythm仅起音偶合，不能证明节奏剪辑"
+      ],
+      "nodes": [
+        {
+          "id": "content-001-a43e4c31ea7e",
+          "content_segment_index": 0,
+          "label": "男子 · 长焦镜头",
+          "description": "男子戴眼镜、穿深色厚外套和牛仔裤，怀抱白色长焦镜头坐在霞光海岸边，侧头远望、低头或抬手比划，呈沉思讲述状态。旁白此时讲述把事拉长看会看到人生之苦、家庭关系、工作与人生下半场的焦虑。",
+          "start": 0,
+          "end": 18.5,
+          "shot_ids": [
+            "shot-0001"
+          ],
+          "evidence_times": [
+            0,
+            3.967,
+            9.3,
+            15.867,
+            18.5
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 0,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-002-0b5d203a720d",
+          "content_segment_index": 1,
+          "label": "背影 · 打电话",
+          "description": "多镜头片段。18.5秒一名戴眼镜男子穿深色羽绒服抱长焦镜头坐于户外；19.8秒男子黑衣背影，衣领有字样；21.1秒黑衣眼镜男子在树林中低头；21.9秒其侧背影；22.6秒白衣男子低头坐于桌前；23.4秒男子弯腰伏身；23.8秒白衣男子在船上伏在桌前；24.2至24.5秒戴眼镜男子侧脸看向前方，左前景有另一人虚影。",
+          "start": 18.5,
+          "end": 24.633,
+          "shot_ids": [
+            "shot-0001",
+            "shot-0002",
+            "shot-0003",
+            "shot-0004",
+            "shot-0005",
+            "shot-0006",
+            "shot-0007",
+            "shot-0008",
+            "shot-0009"
+          ],
+          "evidence_times": [
+            18.5,
+            19.833,
+            21.1,
+            21.867,
+            22.633,
+            23.4,
+            23.833,
+            24.233,
+            24.467
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 1,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-003-dd8723b400ed",
+          "content_segment_index": 2,
+          "label": "车内剪影 · 黑场",
+          "description": "24.6至26.6秒车内窗边戴眼镜男子的剪影姿态基本静止；27.8至28.8秒黑场；28.8至30.2秒黄色字幕卡上出现人影在日落地面上朝水边移动，画面右侧有三脚架和长焦镜头；30.7秒切为户外戴眼镜男子面对镜头。",
+          "start": 24.633,
+          "end": 30.9,
+          "shot_ids": [
+            "shot-0009",
+            "shot-0010",
+            "shot-0011"
+          ],
+          "evidence_times": [
+            24.633,
+            25.867,
+            26.633,
+            27.767,
+            28.833,
+            29.2,
+            29.9,
+            30.233,
+            30.733
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 2,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-004-039dbc9f5e9c",
+          "content_segment_index": 3,
+          "label": "人物口述 · 飞机剪影",
+          "description": "30.9至32.9秒戴眼镜男子坐地抱长焦镜头说话并抬手；35.3至35.9秒飞机剪影飞过橙色天空；36.8至38.2秒大群鸟在粉色天空飞过。",
+          "start": 30.9,
+          "end": 38.367,
+          "shot_ids": [
+            "shot-0011",
+            "shot-0012",
+            "shot-0013",
+            "shot-0014"
+          ],
+          "evidence_times": [
+            30.9,
+            31.7,
+            32.933,
+            35.3,
+            35.667,
+            35.967,
+            36.833,
+            37.5,
+            38.2
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 3,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-005-83f043c75619",
+          "content_segment_index": 4,
+          "label": "海边背影 · 碎石滩",
+          "description": "背背包人物站在海边望紫粉海面的剪影、低角度逆光碎石滩、海平线红日与港口吊机剪影、金色海面上行驶的渔船、夕阳礁石海面，以及前景模糊人头剪影映衬的大红日，构成黄昏海景蒙太奇。",
+          "start": 38.367,
+          "end": 49.3,
+          "shot_ids": [
+            "shot-0014",
+            "shot-0015",
+            "shot-0016",
+            "shot-0017",
+            "shot-0018",
+            "shot-0019",
+            "shot-0020"
+          ],
+          "evidence_times": [
+            38.367,
+            39.9,
+            41.433,
+            43.267,
+            45.333,
+            47.533,
+            48.333
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 4,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-006-9df6582e4b52",
+          "content_segment_index": 5,
+          "label": "双人剪影 · 落日",
+          "description": "两人在落日逆光中站立于海边的黑色剪影，远处岛屿与船只轮廓；随后转为黑场白字字幕收束该观点，再切到一名穿浅灰连帽衫的人背对镜头走过园林小径，引出旁白“当然反过来说”。",
+          "start": 49.3,
+          "end": 57.6,
+          "shot_ids": [
+            "shot-0020"
+          ],
+          "evidence_times": [
+            49.3,
+            51.533,
+            53.7,
+            55.5,
+            56.833,
+            57.6
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 5,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-007-4d544304903b",
+          "content_segment_index": 6,
+          "label": "镜面墙 · 樱花庭院",
+          "description": "一名穿浅灰连帽衫的男子背对镜头站在两堵深色高墙间的通道中，前方可见开花的树与草地；切镜后转为男子正面近景，抬头望向侧上方。",
+          "start": 57.6,
+          "end": 63.7,
+          "shot_ids": [
+            "shot-0020",
+            "shot-0021"
+          ],
+          "evidence_times": [
+            57.6,
+            58.4,
+            59.2,
+            59.433,
+            59.9,
+            61.9,
+            62.6,
+            63.3,
+            63.4
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 6,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-008-881f6eaaa4be",
+          "content_segment_index": 7,
+          "label": "地球全景 · 宇宙",
+          "description": "地球全貌画面出现，蓝色海洋与白色云层占据中央，边缘可见空间站或卫星结构，黑色宇宙背景。画面从个体近景跳到星球尺度，呼应旁白中的蓝色星球。",
+          "start": 63.7,
+          "end": 66.7,
+          "shot_ids": [
+            "shot-0021",
+            "shot-0022"
+          ],
+          "evidence_times": [
+            63.867,
+            64.0,
+            65.3,
+            66.7
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 7,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-009-e9c512391645",
+          "content_segment_index": 8,
+          "label": "办公空间 · 相机稳定器",
+          "description": "先是黑色背景中的地球影像，画面边缘可见部分载具结构；随后切为一名男子背对镜头站在有玻璃隔断和斜顶的现代室内空间；之后依次切为男子正面近景、男子手持摄像稳定器的近景、男子戴眼镜的侧面近景，以及一名戴耳机的男子临窗画面。",
+          "start": 66.7,
+          "end": 72.6,
+          "shot_ids": [
+            "shot-0022",
+            "shot-0023",
+            "shot-0024",
+            "shot-0025",
+            "shot-0026",
+            "shot-0027",
+            "shot-0028"
+          ],
+          "evidence_times": [
+            66.7,
+            67.2,
+            67.533,
+            68.233,
+            68.933,
+            69.767,
+            70.8,
+            71.333,
+            72.433
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 8,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-010-a1021bbc7614",
+          "content_segment_index": 9,
+          "label": "砖墙 · 庭院行走",
+          "description": "男子侧脸望向一侧，随后低头；接着是他远景中在成排刷白树干与矮墙间的草地通道上行走；再切为他在水面上从船侧近处望向远处船只与山岸；最后为室内正面近景。",
+          "start": 72.6,
+          "end": 81.0,
+          "shot_ids": [
+            "shot-0028",
+            "shot-0029",
+            "shot-0030",
+            "shot-0031"
+          ],
+          "evidence_times": [
+            72.6,
+            75.3,
+            75.333,
+            75.5,
+            78.8,
+            79.267,
+            79.7,
+            80.3,
+            80.6
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 9,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-011-7cf3d2b42510",
+          "content_segment_index": 10,
+          "label": "室内口播 · 白色连帽衫",
+          "description": "戴眼镜男生穿白色连帽衫在室内面对镜头讲述，背景为白色柜体与生活物品，字幕出现“我很想看到你的答案”。",
+          "start": 81.0,
+          "end": 84.333,
+          "shot_ids": [
+            "shot-0031"
+          ],
+          "evidence_times": [
+            81.0,
+            81.7,
+            82.467,
+            83.233,
+            84.333
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 10,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-012-aad6c97e8828",
+          "content_segment_index": 11,
+          "label": "搬桌子 · 相机调试",
+          "description": "密集工作场景组接：多人在树林石阶上抬蓝色乒乓球桌向上走、切脚步特写；男生在蓝天下手持相机和麦克风调试；坐在海边草地上持麦克风说话；在室内用电脑并切面部特写；多人背影围看屏幕；户外围看设备；戴耳机在剪辑台前工作；最后在黄色挖掘机旁把笔记本放在腿上使用。旁白谈那时候只知道埋头苦干、无形成压力和焦虑感。",
+          "start": 84.333,
+          "end": 97.567,
+          "shot_ids": [
+            "shot-0031",
+            "shot-0032",
+            "shot-0033",
+            "shot-0034",
+            "shot-0035",
+            "shot-0036",
+            "shot-0037",
+            "shot-0038",
+            "shot-0039",
+            "shot-0040",
+            "shot-0041",
+            "shot-0042"
+          ],
+          "evidence_times": [
+            84.5,
+            86.567,
+            88.533,
+            89.9,
+            91.433,
+            92.867,
+            94.8,
+            96.033
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 11,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-013-4420527814ec",
+          "content_segment_index": 12,
+          "label": "红砖建筑 · 人群",
+          "description": "前半段为砖墙工业空间内，一名戴口罩、穿米色T恤的年轻男子手持纸张站立，周围有多人；101.467秒切至室内，一名戴眼镜、穿黑T恤的男子坐在浅色沙发上对镜头说话。",
+          "start": 97.567,
+          "end": 104.6,
+          "shot_ids": [
+            "shot-0042",
+            "shot-0043"
+          ],
+          "evidence_times": [
+            97.567,
+            99.067,
+            99.5,
+            101.4,
+            101.567,
+            103.033,
+            103.067,
+            104.533
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 12,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-014-65a9ffc8a80f",
+          "content_segment_index": 13,
+          "label": "抱头 · 紧张",
+          "description": "白色背景前男子穿白T恤双手抱头、神情紧绷，随后侧脸低头；再切到他双手握相机站在深色工作现场，旁边有人举着平板，背景有字牌，他露出略显勉强的笑。旁白继续自我怀疑与焦虑。",
+          "start": 104.7,
+          "end": 109.6,
+          "shot_ids": [
+            "shot-0044",
+            "shot-0045"
+          ],
+          "evidence_times": [
+            104.7,
+            105.567,
+            106.6,
+            107.233,
+            108.467,
+            109.6
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 13,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-015-b76a99d8d501",
+          "content_segment_index": 14,
+          "label": "室内访谈 · 显示器",
+          "description": "短暂黑场后回到室内，男子穿白T恤坐在显示器与麦克风前对镜头讲述，表情认真略带苦笑，旁白说一直觉得把所有东西都堵在了这里，却得到这样的结果。",
+          "start": 110.3,
+          "end": 115.667,
+          "shot_ids": [
+            "shot-0045",
+            "shot-0046"
+          ],
+          "evidence_times": [
+            110.3,
+            110.967,
+            113.067,
+            114.933,
+            115.667
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 14,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-016-4f94aea1dcbd",
+          "content_segment_index": 15,
+          "label": "夜间办公 · 屏幕蓝光",
+          "description": "戴眼镜、穿深色连帽外套的男子在较暗室内使用笔记本电脑，旁边有显示器；118.4秒切至另一角度，男子仰坐、双腿抬起，画面左侧有模糊前景遮挡。",
+          "start": 115.833,
+          "end": 120.3,
+          "shot_ids": [
+            "shot-0047",
+            "shot-0048",
+            "shot-0049"
+          ],
+          "evidence_times": [
+            115.833,
+            116.3,
+            116.8,
+            116.967,
+            117.633,
+            118.333,
+            118.5,
+            118.9,
+            119.4
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 15,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-017-2cf69106a579",
+          "content_segment_index": 16,
+          "label": "明亮室内 · 白色卫衣",
+          "description": "明亮白色窗帘室内，男子换成白色连帽卫衣，双手在胸前做解释手势，讲述自己和解的方法以及关于宇宙结局注定、归于死寂的那段话。",
+          "start": 120.467,
+          "end": 129.8,
+          "shot_ids": [
+            "shot-0050",
+            "shot-0051"
+          ],
+          "evidence_times": [
+            120.467,
+            121.867,
+            122.833,
+            126.2,
+            127.133,
+            128.1
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 16,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-018-fcca663688e9",
+          "content_segment_index": 17,
+          "label": "雪原 · 白色气球",
+          "description": "雪地远景中一群人围绕白色气球站立；129.8秒切为俯视雪地，可见几名深色衣着的人围成一圈，周围雪地有放射状踩踏痕迹。",
+          "start": 128.1,
+          "end": 131.733,
+          "shot_ids": [
+            "shot-0051",
+            "shot-0052",
+            "shot-0053"
+          ],
+          "evidence_times": [
+            128.1,
+            129.033,
+            129.733,
+            129.9,
+            130.733,
+            130.767,
+            131.233,
+            131.567
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 17,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-019-f240dad2026e",
+          "content_segment_index": 18,
+          "label": "室内暖光 · 手持相机",
+          "description": "夜间窗边，戴黑框眼镜、穿黑衣的男子凑近横向格栅窗向外张望；134.533切至白天山野，同一男子穿黑T恤、戴浅色眼镜，双手持相机仰望，背景为山坡与云天；136.3切至黑场，右上角残留频道水印。",
+          "start": 131.733,
+          "end": 137.1,
+          "shot_ids": [
+            "shot-0053",
+            "shot-0054",
+            "shot-0055"
+          ],
+          "evidence_times": [
+            131.733,
+            132.033,
+            132.8,
+            133.6,
+            134.467,
+            134.633,
+            135.433,
+            136.233,
+            136.4
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 18,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-020-31cf2798e1d9",
+          "content_segment_index": 19,
+          "label": "卫星 · 火箭升空",
+          "description": "暗处可见设备结构，一块小屏幕亮起并显示“NO. 4”及较小文字；随后切至蓝天中垂直升空的火箭；再切至雪地户外两名男子，右侧男子单臂上举握拳；随后切为一名戴眼镜男子侧脸近景；再切至暗处金色光点围绕下的模糊人影，随后是一本翻开的书与旁边的兽形插画，最后是夜色中喷溅火花的蒸汽火车头。",
+          "start": 138.033,
+          "end": 145.733,
+          "shot_ids": [
+            "shot-0055",
+            "shot-0056",
+            "shot-0057",
+            "shot-0058",
+            "shot-0059",
+            "shot-0060",
+            "shot-0061",
+            "shot-0062",
+            "shot-0063"
+          ],
+          "evidence_times": [
+            138.033,
+            139.867,
+            140.8,
+            141.933,
+            142.667,
+            143.6,
+            144.5,
+            144.933,
+            145.567
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 19,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-021-2d88b90ef82c",
+          "content_segment_index": 20,
+          "label": "铁花剪影 · 手机屏幕",
+          "description": "暗背景中前倾人物剪影，周围金色火花飞散；切至手机屏幕显示散乱字符键盘，背景为快速横向流动的模糊光影；再切至手绘人物背影插画，随后是房间内窗外暮色与桌上摆件。",
+          "start": 145.967,
+          "end": 148.4,
+          "shot_ids": [
+            "shot-0063",
+            "shot-0064",
+            "shot-0065",
+            "shot-0066",
+            "shot-0067"
+          ],
+          "evidence_times": [
+            145.967,
+            146.1,
+            146.133,
+            146.267,
+            146.633,
+            146.9,
+            147.233,
+            147.6,
+            148.1
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 20,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-022-79f8ab72f9f2",
+          "content_segment_index": 21,
+          "label": "湖畔奔跑 · 雪山云海",
+          "description": "烟雾弥漫的室内，两名男子各持大型相机装置；切至草坡湖泊前一名白衫男子单腿抬起、身体前倾的奔跑姿态；再切至日照雪山与云海上的雪峰；随后水下出现鲸鲨，深蓝水中出现海豚；最后切至暗处一名赤裸上身男子手持一端燃火的棍状物。",
+          "start": 148.4,
+          "end": 152.467,
+          "shot_ids": [
+            "shot-0067",
+            "shot-0068",
+            "shot-0069",
+            "shot-0070",
+            "shot-0071",
+            "shot-0072",
+            "shot-0073"
+          ],
+          "evidence_times": [
+            148.4,
+            148.9,
+            149.367,
+            150.2,
+            150.567,
+            150.833,
+            151.4,
+            151.667,
+            152.133
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 21,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-023-ed5917c2a728",
+          "content_segment_index": 22,
+          "label": "海边栈道 · 水雾",
+          "description": "多次硬切：先是飞溅的火花与暗处的人影，切至一名穿浅灰连帽衫的男子站在海边木栈道上面向远处升起的烟雾，接着是红色特技飞机座舱俯视画面、绿色极光与发光边缘的地球、日全食特写。",
+          "start": 152.467,
+          "end": 156.2,
+          "shot_ids": [
+            "shot-0073",
+            "shot-0074",
+            "shot-0075",
+            "shot-0076",
+            "shot-0077",
+            "shot-0078"
+          ],
+          "evidence_times": [
+            152.467,
+            152.767,
+            153.067,
+            153.433,
+            153.967,
+            154.533,
+            154.833,
+            155.367,
+            155.867
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 22,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-024-374015b926df",
+          "content_segment_index": 23,
+          "label": "日食 · 镜头内部",
+          "description": "日全食画面延续后切至镜头内部的圆形光斑，随后出现米白色药片状物体、黑色背景上生长的白色针状结晶、显微镜下水中游动的微生物群，以及散布的雪花状结晶。",
+          "start": 156.3,
+          "end": 161.733,
+          "shot_ids": [
+            "shot-0078",
+            "shot-0079",
+            "shot-0080",
+            "shot-0081",
+            "shot-0082"
+          ],
+          "evidence_times": [
+            156.3,
+            156.733,
+            157.433,
+            158.167,
+            158.4,
+            158.933,
+            159.667,
+            160.267,
+            160.9
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 23,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-025-bcc87b4ebf1a",
+          "content_segment_index": 24,
+          "label": "白衬衫 · 蓝天",
+          "description": "晴朗蓝天背景下，一位穿白衬衫的男子侧面近景，闭眼再睁眼、仰头迎光，情绪平静。旁白说这是属于这个维度的。",
+          "start": 161.733,
+          "end": 166.3,
+          "shot_ids": [
+            "shot-0082"
+          ],
+          "evidence_times": [
+            162.467,
+            163.433,
+            164.3,
+            165.3,
+            166.3
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 24,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-026-02225f99bfce",
+          "content_segment_index": 25,
+          "label": "厨房 · 眼镜",
+          "description": "室内厨房中，一名戴黑框眼镜、穿黑色印有黄色JUNKRAT字样短袖的男子面向镜头说话并做手势；左侧一位长发女子背对镜头，随后被画面边缘遮挡。",
+          "start": 166.3,
+          "end": 175.4,
+          "shot_ids": [
+            "shot-0082"
+          ],
+          "evidence_times": [
+            166.3,
+            166.433,
+            167.267,
+            167.9,
+            168.233,
+            170.4,
+            174.367
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 25,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-027-b4705c864506",
+          "content_segment_index": 26,
+          "label": "工作室 · 白T恤",
+          "description": "切至另一室内：一名短发、戴黑框眼镜、穿白色上衣的男子面对镜头坐在显示器与麦克风前，背景有黄色圆形灯饰与白色弧形物体。",
+          "start": 175.4,
+          "end": 182.9,
+          "shot_ids": [
+            "shot-0082",
+            "shot-0083",
+            "shot-0084"
+          ],
+          "evidence_times": [
+            175.4,
+            175.567,
+            178.3,
+            179.167,
+            182.267,
+            182.733
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 26,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-028-94459f5144e1",
+          "content_segment_index": 27,
+          "label": "车内 · 安全带",
+          "description": "车内环境，一位戴黑框眼镜的年轻男子坐在驾驶座侧系安全带，旁边有穿格子衬衫的中年男子。旁白继续谈突破缺少的东西。",
+          "start": 182.9,
+          "end": 184.633,
+          "shot_ids": [
+            "shot-0084",
+            "shot-0085"
+          ],
+          "evidence_times": [
+            183.667,
+            184.467,
+            184.633
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 27,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-029-2d8a3e03b22e",
+          "content_segment_index": 28,
+          "label": "团队合影 · 无人机",
+          "description": "公路场景中一群人站成一排合影，地面摆放多台无人机，天上有无人机悬停，团队竖拇指、比手势；随后切为俯拍草地上多人分散站立或躺卧围绕成近似圆形，画面可见道路与水面边缘。旁白说当我们铁了心想做成这个片子时，整个世界都在奔向你。",
+          "start": 184.633,
+          "end": 190.567,
+          "shot_ids": [
+            "shot-0085",
+            "shot-0086"
+          ],
+          "evidence_times": [
+            184.633,
+            185.9,
+            186.233,
+            188.6,
+            189.567,
+            190.567
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 28,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-030-227d029bfce9",
+          "content_segment_index": 29,
+          "label": "字卡 · 音乐信息",
+          "description": "暗色虚化背景中依次出现“音乐”字样及曲目信息卡，随后切换为白色引言字幕卡和金黄色“印记”字幕卡，画面以文字信息为主。旁白谈坚持自我、展现坚持与热爱、用自己的方式留下属于这个时代的印记。",
+          "start": 190.567,
+          "end": 198.8,
+          "shot_ids": [
+            "shot-0086"
+          ],
+          "evidence_times": [
+            190.567,
+            191.533,
+            192.5,
+            194.167,
+            196.033,
+            197.867,
+            198.133,
+            198.8
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 29,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-031-f363af4afc92",
+          "content_segment_index": 30,
+          "label": "人物近景 · 室内",
+          "description": "戴眼镜男子在室内面对镜头讲话，手部抬起、头部与表情随讲话变化，背景为显示器与器材。",
+          "start": 199.733,
+          "end": 202.6,
+          "shot_ids": [
+            "shot-0086"
+          ],
+          "evidence_times": [
+            199.733,
+            200.667,
+            201.6,
+            201.633,
+            202.1
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 30,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-032-cdd8e779e6e5",
+          "content_segment_index": 31,
+          "label": "装置 · 屏幕特写",
+          "description": "画面转为带有透明屏幕装置的近景，屏幕内显示男子头像与“No.”编号内容，装置外可见线缆与背景地貌，屏幕内容随帧变化。旁白再次念出无限进步。",
+          "start": 203.567,
+          "end": 206.467,
+          "shot_ids": [
+            "shot-0086"
+          ],
+          "evidence_times": [
+            203.567,
+            204.533,
+            205.5,
+            206.067,
+            206.467
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 31,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        },
+        {
+          "id": "content-033-de264d699a10",
+          "content_segment_index": 32,
+          "label": "黑底 · 署名",
+          "description": "黑底画面中央显示白色“XIAOHAOH”署名，右上角保留平台水印，画面保持至片尾。",
+          "start": 207.433,
+          "end": 210.0,
+          "shot_ids": [
+            "shot-0086"
+          ],
+          "evidence_times": [
+            207.433,
+            210.0
+          ],
+          "source": "existing_content_segment",
+          "provenance": {
+            "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+            "collection": "content_segments",
+            "index": 32,
+            "boundaries": "preserved",
+            "description": "preserved",
+            "label": "existing_tags"
+          }
+        }
+      ],
+      "links": [
+        {
+          "from": "content-001-a43e4c31ea7e",
+          "to": "content-002-0b5d203a720d",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-002-0b5d203a720d",
+          "to": "content-003-dd8723b400ed",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-003-dd8723b400ed",
+          "to": "content-004-039dbc9f5e9c",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-004-039dbc9f5e9c",
+          "to": "content-005-83f043c75619",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-005-83f043c75619",
+          "to": "content-006-9df6582e4b52",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-006-9df6582e4b52",
+          "to": "content-007-4d544304903b",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-007-4d544304903b",
+          "to": "content-008-881f6eaaa4be",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-008-881f6eaaa4be",
+          "to": "content-009-e9c512391645",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-009-e9c512391645",
+          "to": "content-010-a1021bbc7614",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-010-a1021bbc7614",
+          "to": "content-011-7cf3d2b42510",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-011-7cf3d2b42510",
+          "to": "content-012-aad6c97e8828",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-012-aad6c97e8828",
+          "to": "content-013-4420527814ec",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-013-4420527814ec",
+          "to": "content-014-65a9ffc8a80f",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-014-65a9ffc8a80f",
+          "to": "content-015-b76a99d8d501",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-015-b76a99d8d501",
+          "to": "content-016-4f94aea1dcbd",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-016-4f94aea1dcbd",
+          "to": "content-017-2cf69106a579",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-017-2cf69106a579",
+          "to": "content-018-fcca663688e9",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-018-fcca663688e9",
+          "to": "content-019-f240dad2026e",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-019-f240dad2026e",
+          "to": "content-020-31cf2798e1d9",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-020-31cf2798e1d9",
+          "to": "content-021-2d88b90ef82c",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-021-2d88b90ef82c",
+          "to": "content-022-79f8ab72f9f2",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-022-79f8ab72f9f2",
+          "to": "content-023-ed5917c2a728",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-023-ed5917c2a728",
+          "to": "content-024-374015b926df",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-024-374015b926df",
+          "to": "content-025-bcc87b4ebf1a",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-025-bcc87b4ebf1a",
+          "to": "content-026-02225f99bfce",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-026-02225f99bfce",
+          "to": "content-027-b4705c864506",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-027-b4705c864506",
+          "to": "content-028-94459f5144e1",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-028-94459f5144e1",
+          "to": "content-029-2d8a3e03b22e",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-029-2d8a3e03b22e",
+          "to": "content-030-227d029bfce9",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-030-227d029bfce9",
+          "to": "content-031-f363af4afc92",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-031-f363af4afc92",
+          "to": "content-032-cdd8e779e6e5",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        },
+        {
+          "from": "content-032-cdd8e779e6e5",
+          "to": "content-033-de264d699a10",
+          "kind": "sequence",
+          "description": "",
+          "evidence_times": [],
+          "source": "chronological_order"
+        }
+      ],
+      "provenance": {
+        "method": "classification_with_existing_content_projection",
+        "content_source_analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+        "model_regrouped_content": false,
+        "content_boundaries": "existing_content_segments",
+        "shot_ids": "overlap_index_only",
+        "links": "neutral_chronological_order",
+        "classification_source_job_id": "5948983d275146e59f41a1520f74f7b8"
+      },
+      "version": 3,
+      "source_analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+      "source_job_id": "5948983d275146e59f41a1520f74f7b8",
+      "created_at": "2026-10-21T04:08:45.693504+00:00",
+      "cache_hit": true,
+      "new_provider_calls": 0,
+      "reused": {
+        "shot_detection": true,
+        "transcript": true,
+        "visual_observations": true,
+        "motion_measurements": true,
+        "rhythm_analysis": true,
+        "full_analysis_windows": 9
+      },
+      "frame_times": [
+        0.0,
+        18.5,
+        18.667,
+        20.6,
+        24.633,
+        29.033,
+        29.2,
+        30.567,
+        41.433,
+        43.1,
+        43.267,
+        45.167,
+        67.7,
+        68.767,
+        68.933,
+        69.6,
+        84.5,
+        84.9,
+        85.067,
+        86.567,
+        93.833,
+        94.633,
+        94.8,
+        95.867,
+        115.833,
+        116.8,
+        116.967,
+        118.333,
+        134.633,
+        136.233,
+        136.4,
+        140.3,
+        145.333,
+        145.567,
+        145.733,
+        145.967,
+        150.2,
+        150.667,
+        150.833,
+        151.233,
+        155.0,
+        155.7,
+        155.867,
+        156.567,
+        184.633,
+        185.9,
+        186.067,
+        210.0
+      ],
+      "unpublished_response_audit": {
+        "source_job_id": "5948983d275146e59f41a1520f74f7b8",
+        "raw_response_sha256": "899f9f255c7ee8e69c4c125a67a7c0e5a85a20bf2d8c3405e14e60e178712b4f",
+        "unpublished_node_count": 22,
+        "unpublished_link_count": 22,
+        "reason": "narrative_uses_existing_content_units_not_model_shot_ranges",
+        "invalid_node_indices": [
+          4,
+          6,
+          7,
+          9,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "affected_link_indices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "surplus_link_indices": [
+          22
+        ],
+        "model_rows_validated": false
+      }
+    }
+  },
+  "error": null,
+  "id": "6212641a757541909349efd8ffb77bbf",
+  "created_at": "2026-10-21T04:08:45.596738+00:00",
+  "updated_at": "2026-10-21T04:08:45.745393+00:00",
+  "resumable": false
+}

@@ -1,0 +1,59 @@
+{
+  "source_analysis_id": "3afc79e5fd3546bc97819841dd813e9f",
+  "analysis_id": "29243eb0ef574acda19236262be13914",
+  "model_calls": 0,
+  "edits": [
+    {
+      "collection": "segments",
+      "index": 0,
+      "expected_sha256": "9210bfc54585a6aa8d30c6292ceb9dfcbca24bf6b4b48c39323a7a660a2973dd",
+      "fields": {
+        "description": "连续画面从红砖建筑旁的黑色铁架、纸箱和冷柜扫向店外街道。一名穿白衬衫、灰裙、系红格纹领带的女生在冷柜前保持手指抵脸的姿势；随着取景变化，她从画面右侧出现、经过中央，再从左侧移出，随后露出黄色路面标线和蓝色箱子。",
+        "motion": "连续横向取景变化；背景主要向画面左侧移动，摇摄与平移无法仅凭这些帧区分。"
+      },
+      "reason": "连续帧显示人物保持姿势或抬手，与背景共同发生屏幕位移；不支持DS对人物走开及物理取景方向的推断。",
+      "evidence": [
+        "${AHB_DATA}/frames/imported-evidence/output/reference-targeted-repair-20261020/motion-evidence/shot-01-sequence.jpg"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 4,
+      "expected_sha256": "cee1435d52711b3d1e15082d63cce354bd1a3df3c8f4230745863d792c6923f5",
+      "fields": {
+        "description": "起始短暂出现白墙与镜子，8.700秒切镜后连续扫过绘有白色卡通角色的卷帘门、门前女生、红色招牌和巷道路面。女生身体前倾，随后抬手做V手势；人物和背景随取景变化一起向画面左侧移动，不能据此判定她在步行。",
+        "motion": "8.700秒有切镜；切点后的连续画面中背景主要向左侧移动，呈横向扫过效果，摇摄与平移无法区分。"
+      },
+      "reason": "连续帧显示人物保持姿势或抬手，与背景共同发生屏幕位移；不支持DS对人物走开及物理取景方向的推断。",
+      "evidence": [
+        "${AHB_DATA}/frames/imported-evidence/output/reference-targeted-repair-20261020/motion-evidence/shot-05-sequence.jpg"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 0,
+      "expected_sha256": "ef2eda4a915b3141518156ab57c97f421ab14d4fbe5194a09b282ebc89714cea",
+      "fields": {
+        "description": "连续画面从红砖建筑旁的黑色铁架、纸箱和冷柜扫向店外街道。一名穿白衬衫、灰裙、系红格纹领带的女生在冷柜前保持手指抵脸的姿势；随着取景变化，她从画面右侧出现、经过中央，再从左侧移出，随后露出黄色路面标线和蓝色箱子。",
+        "motion": "连续横向取景变化；背景主要向画面左侧移动，摇摄与平移无法仅凭这些帧区分。"
+      },
+      "reason": "连续帧显示人物保持姿势或抬手，与背景共同发生屏幕位移；不支持DS对人物走开及物理取景方向的推断。",
+      "evidence": [
+        "${AHB_DATA}/frames/imported-evidence/output/reference-targeted-repair-20261020/motion-evidence/shot-01-sequence.jpg"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 4,
+      "expected_sha256": "738ff284a3bd7f686964c70b1aa0bab02396797221d28385b0e9ce9641b5a2db",
+      "fields": {
+        "description": "起始短暂出现白墙与镜子，8.700秒切镜后连续扫过绘有白色卡通角色的卷帘门、门前女生、红色招牌和巷道路面。女生身体前倾，随后抬手做V手势；人物和背景随取景变化一起向画面左侧移动，不能据此判定她在步行。",
+        "motion": "8.700秒有切镜；切点后的连续画面中背景主要向左侧移动，呈横向扫过效果，摇摄与平移无法区分。"
+      },
+      "reason": "连续帧显示人物保持姿势或抬手，与背景共同发生屏幕位移；不支持DS对人物走开及物理取景方向的推断。",
+      "evidence": [
+        "${AHB_DATA}/frames/imported-evidence/output/reference-targeted-repair-20261020/motion-evidence/shot-05-sequence.jpg"
+      ]
+    }
+  ]
+}

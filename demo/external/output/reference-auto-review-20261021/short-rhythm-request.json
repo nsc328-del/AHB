@@ -1,0 +1,16 @@
+{
+  "kind": "reference_rhythm",
+  "status": "queued",
+  "progress": 0,
+  "message": "等待处理",
+  "result": null,
+  "error": null,
+  "payload": {
+    "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+    "base_analysis_id": "29243eb0ef574acda19236262be13914"
+  },
+  "provider_state": {},
+  "id": "62d292ca5a3342fab17dc9bd6d985432",
+  "created_at": "2026-10-20T16:12:55.307735+00:00",
+  "updated_at": "2026-10-20T16:12:55.307743+00:00"
+}

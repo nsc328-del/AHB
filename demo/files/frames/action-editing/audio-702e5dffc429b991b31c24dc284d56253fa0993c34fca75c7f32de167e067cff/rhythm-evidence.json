@@ -1,0 +1,6096 @@
+{
+  "version": 1,
+  "method": "spectral_flux_local_periodicity_v1",
+  "duration": 88.3929,
+  "timing": {
+    "time_basis": "original_media_playback_seconds",
+    "container_start_time": 0.0251,
+    "audio_stream_start_time": 0.0251,
+    "normalization": "ffmpeg copyts/start_at_zero; resample first_pts=0 preserves audio offset and gaps"
+  },
+  "sample_rate": 16000,
+  "analysis_hop_seconds": 0.01,
+  "sound_source_type": "unclassified",
+  "model_calls": 0,
+  "limits": [
+    "起音是频谱突变候选，可能来自鼓点、语音辅音、音效、剪接或噪声，不等同于音乐节拍。",
+    "没有执行音乐/语音分离或声源分类；不凭能量、起音或周期性将片段标为配乐或说话。",
+    "beat_candidates 是获得局部起音支持的周期性脉冲候选，不是人工确认的音乐节拍。",
+    "bpm 表示稳定局部脉冲的重复速率；音乐拍号、强拍位置及半拍/倍拍解释仍未确认。",
+    "低置信窗口的 bpm 为 null；节奏可以变化，不用一个全片 BPM 外推，也不在无证据位置补拍。",
+    "cut_offset_seconds = 切镜时间 - 音频事件时间；正数表示切镜发生在事件之后。",
+    "切镜接近起音或候选拍点只说明时间接近；密集音频事件会偶然命中，不能据此断言刻意卡点。"
+  ],
+  "status": "analyzed",
+  "onsets": [
+    {
+      "time": 0.94,
+      "strength": 0.6315,
+      "spectral_flux": 0.3441367,
+      "prominence": 0.3441353,
+      "energy_dbfs": -21.8
+    },
+    {
+      "time": 1.08,
+      "strength": 0.6359,
+      "spectral_flux": 0.3466519,
+      "prominence": 0.3466519,
+      "energy_dbfs": -18.38
+    },
+    {
+      "time": 1.22,
+      "strength": 0.0957,
+      "spectral_flux": 0.0524431,
+      "prominence": 0.0524373,
+      "energy_dbfs": -31.44
+    },
+    {
+      "time": 1.36,
+      "strength": 0.0881,
+      "spectral_flux": 0.0494879,
+      "prominence": 0.0477174,
+      "energy_dbfs": -27.29
+    },
+    {
+      "time": 1.47,
+      "strength": 0.6656,
+      "spectral_flux": 0.3652804,
+      "prominence": 0.3652643,
+      "energy_dbfs": -20.07
+    },
+    {
+      "time": 1.88,
+      "strength": 0.1098,
+      "spectral_flux": 0.0629724,
+      "prominence": 0.0629563,
+      "energy_dbfs": -22.37
+    },
+    {
+      "time": 2.14,
+      "strength": 1.3142,
+      "spectral_flux": 0.7258507,
+      "prominence": 0.7256508,
+      "energy_dbfs": -7.06
+    },
+    {
+      "time": 2.3,
+      "strength": 0.1125,
+      "spectral_flux": 0.0759559,
+      "prominence": 0.0723723,
+      "energy_dbfs": -14.79
+    },
+    {
+      "time": 2.41,
+      "strength": 0.3464,
+      "spectral_flux": 0.2063777,
+      "prominence": 0.2029356,
+      "energy_dbfs": -14.25
+    },
+    {
+      "time": 2.57,
+      "strength": 0.4993,
+      "spectral_flux": 0.2967532,
+      "prominence": 0.2931867,
+      "energy_dbfs": -14.25
+    },
+    {
+      "time": 2.68,
+      "strength": 0.9014,
+      "spectral_flux": 0.5189868,
+      "prominence": 0.5167339,
+      "energy_dbfs": -8.01
+    },
+    {
+      "time": 2.83,
+      "strength": 0.4295,
+      "spectral_flux": 0.2586992,
+      "prominence": 0.2533421,
+      "energy_dbfs": -15.99
+    },
+    {
+      "time": 2.94,
+      "strength": 0.8326,
+      "spectral_flux": 0.4723096,
+      "prominence": 0.4691774,
+      "energy_dbfs": -15.91
+    },
+    {
+      "time": 3.11,
+      "strength": 0.2624,
+      "spectral_flux": 0.1575323,
+      "prominence": 0.1552793,
+      "energy_dbfs": -14.43
+    },
+    {
+      "time": 3.21,
+      "strength": 0.1455,
+      "spectral_flux": 0.087909,
+      "prominence": 0.0810892,
+      "energy_dbfs": -18.35
+    },
+    {
+      "time": 3.48,
+      "strength": 0.1645,
+      "spectral_flux": 0.0964779,
+      "prominence": 0.0952792,
+      "energy_dbfs": -22.4
+    },
+    {
+      "time": 3.75,
+      "strength": 0.2839,
+      "spectral_flux": 0.1609422,
+      "prominence": 0.1599815,
+      "energy_dbfs": -28.67
+    },
+    {
+      "time": 3.88,
+      "strength": 1.1911,
+      "spectral_flux": 0.6573377,
+      "prominence": 0.6558149,
+      "energy_dbfs": -10.41
+    },
+    {
+      "time": 4.02,
+      "strength": 0.109,
+      "spectral_flux": 0.0704734,
+      "prominence": 0.0647691,
+      "energy_dbfs": -32.81
+    },
+    {
+      "time": 4.15,
+      "strength": 1.1374,
+      "spectral_flux": 0.6372829,
+      "prominence": 0.6357602,
+      "energy_dbfs": -8.56
+    },
+    {
+      "time": 4.29,
+      "strength": 0.6873,
+      "spectral_flux": 0.3976845,
+      "prominence": 0.3945633,
+      "energy_dbfs": -8.22
+    },
+    {
+      "time": 4.36,
+      "strength": 0.146,
+      "spectral_flux": 0.1077685,
+      "prominence": 0.0984349,
+      "energy_dbfs": -17.1
+    },
+    {
+      "time": 4.56,
+      "strength": 0.4986,
+      "spectral_flux": 0.297608,
+      "prominence": 0.2887857,
+      "energy_dbfs": -4.16
+    },
+    {
+      "time": 4.74,
+      "strength": 0.3577,
+      "spectral_flux": 0.2239626,
+      "prominence": 0.206972,
+      "energy_dbfs": -14.02
+    },
+    {
+      "time": 4.82,
+      "strength": 0.7423,
+      "spectral_flux": 0.4328603,
+      "prominence": 0.4321499,
+      "energy_dbfs": -8.82
+    },
+    {
+      "time": 5.0,
+      "strength": 0.65,
+      "spectral_flux": 0.377098,
+      "prominence": 0.3738435,
+      "energy_dbfs": -16.35
+    },
+    {
+      "time": 5.12,
+      "strength": 0.5417,
+      "spectral_flux": 0.3130718,
+      "prominence": 0.3064221,
+      "energy_dbfs": -15.42
+    },
+    {
+      "time": 5.27,
+      "strength": 0.6168,
+      "spectral_flux": 0.3518248,
+      "prominence": 0.3510646,
+      "energy_dbfs": -17.22
+    },
+    {
+      "time": 5.35,
+      "strength": 0.1954,
+      "spectral_flux": 0.1183295,
+      "prominence": 0.1151438,
+      "energy_dbfs": -17.18
+    },
+    {
+      "time": 5.62,
+      "strength": 0.5156,
+      "spectral_flux": 0.2911437,
+      "prominence": 0.2903834,
+      "energy_dbfs": -22.65
+    },
+    {
+      "time": 5.76,
+      "strength": 0.4802,
+      "spectral_flux": 0.2708549,
+      "prominence": 0.2688359,
+      "energy_dbfs": -21.3
+    },
+    {
+      "time": 5.89,
+      "strength": 0.6437,
+      "spectral_flux": 0.3599743,
+      "prominence": 0.3595955,
+      "energy_dbfs": -21.57
+    },
+    {
+      "time": 6.03,
+      "strength": 1.2898,
+      "spectral_flux": 0.7148702,
+      "prominence": 0.7140631,
+      "energy_dbfs": -8.8
+    },
+    {
+      "time": 6.27,
+      "strength": 0.2005,
+      "spectral_flux": 0.1261072,
+      "prominence": 0.1222437,
+      "energy_dbfs": -17.81
+    },
+    {
+      "time": 6.43,
+      "strength": 1.2212,
+      "spectral_flux": 0.6853077,
+      "prominence": 0.6845006,
+      "energy_dbfs": -2.91
+    },
+    {
+      "time": 6.7,
+      "strength": 0.2336,
+      "spectral_flux": 0.1504964,
+      "prominence": 0.1465133,
+      "energy_dbfs": -13.74
+    },
+    {
+      "time": 6.86,
+      "strength": 0.404,
+      "spectral_flux": 0.2492696,
+      "prominence": 0.2408916,
+      "energy_dbfs": -15.23
+    },
+    {
+      "time": 6.97,
+      "strength": 0.9525,
+      "spectral_flux": 0.5481716,
+      "prominence": 0.5441694,
+      "energy_dbfs": -7.4
+    },
+    {
+      "time": 7.11,
+      "strength": 0.584,
+      "spectral_flux": 0.3446514,
+      "prominence": 0.3389619,
+      "energy_dbfs": -17.05
+    },
+    {
+      "time": 7.23,
+      "strength": 0.7392,
+      "spectral_flux": 0.4214917,
+      "prominence": 0.4174895,
+      "energy_dbfs": -14.38
+    },
+    {
+      "time": 7.39,
+      "strength": 0.3473,
+      "spectral_flux": 0.2053933,
+      "prominence": 0.1942959,
+      "energy_dbfs": -15.43
+    },
+    {
+      "time": 7.5,
+      "strength": 0.1902,
+      "spectral_flux": 0.1157083,
+      "prominence": 0.1084107,
+      "energy_dbfs": -18.81
+    },
+    {
+      "time": 7.77,
+      "strength": 0.1749,
+      "spectral_flux": 0.1017151,
+      "prominence": 0.101213,
+      "energy_dbfs": -24.68
+    },
+    {
+      "time": 8.17,
+      "strength": 1.4432,
+      "spectral_flux": 0.7947645,
+      "prominence": 0.7921785,
+      "energy_dbfs": -8.51
+    },
+    {
+      "time": 8.33,
+      "strength": 0.1048,
+      "spectral_flux": 0.0687969,
+      "prominence": 0.065875,
+      "energy_dbfs": -30.74
+    },
+    {
+      "time": 8.44,
+      "strength": 0.9421,
+      "spectral_flux": 0.5309416,
+      "prominence": 0.5255015,
+      "energy_dbfs": -5.0
+    },
+    {
+      "time": 8.57,
+      "strength": 0.9396,
+      "spectral_flux": 0.5310118,
+      "prominence": 0.5284259,
+      "energy_dbfs": -12.85
+    },
+    {
+      "time": 8.84,
+      "strength": 0.8168,
+      "spectral_flux": 0.4723693,
+      "prominence": 0.4649026,
+      "energy_dbfs": -3.76
+    },
+    {
+      "time": 9.03,
+      "strength": 0.4608,
+      "spectral_flux": 0.2830075,
+      "prominence": 0.2725154,
+      "energy_dbfs": -15.4
+    },
+    {
+      "time": 9.11,
+      "strength": 0.9623,
+      "spectral_flux": 0.5563437,
+      "prominence": 0.5538797,
+      "energy_dbfs": -8.18
+    },
+    {
+      "time": 9.29,
+      "strength": 0.6812,
+      "spectral_flux": 0.4026182,
+      "prominence": 0.4001089,
+      "energy_dbfs": -16.16
+    },
+    {
+      "time": 9.4,
+      "strength": 0.3824,
+      "spectral_flux": 0.2366337,
+      "prominence": 0.2240106,
+      "energy_dbfs": -16.16
+    },
+    {
+      "time": 9.56,
+      "strength": 0.3784,
+      "spectral_flux": 0.2368517,
+      "prominence": 0.2294489,
+      "energy_dbfs": -14.82
+    },
+    {
+      "time": 9.66,
+      "strength": 0.2248,
+      "spectral_flux": 0.1504491,
+      "prominence": 0.141733,
+      "energy_dbfs": -14.28
+    },
+    {
+      "time": 9.91,
+      "strength": 0.8574,
+      "spectral_flux": 0.4956145,
+      "prominence": 0.4882116,
+      "energy_dbfs": -10.09
+    },
+    {
+      "time": 10.06,
+      "strength": 0.2082,
+      "spectral_flux": 0.144111,
+      "prominence": 0.1403479,
+      "energy_dbfs": -22.38
+    },
+    {
+      "time": 10.19,
+      "strength": 0.5602,
+      "spectral_flux": 0.3314657,
+      "prominence": 0.3283727,
+      "energy_dbfs": -18.44
+    },
+    {
+      "time": 10.31,
+      "strength": 1.0553,
+      "spectral_flux": 0.6026583,
+      "prominence": 0.6008985,
+      "energy_dbfs": -5.79
+    },
+    {
+      "time": 10.58,
+      "strength": 0.1826,
+      "spectral_flux": 0.1205912,
+      "prominence": 0.1146532,
+      "energy_dbfs": -17.58
+    },
+    {
+      "time": 10.71,
+      "strength": 0.8293,
+      "spectral_flux": 0.4739193,
+      "prominence": 0.4735013,
+      "energy_dbfs": -8.24
+    },
+    {
+      "time": 10.98,
+      "strength": 0.3418,
+      "spectral_flux": 0.2081033,
+      "prominence": 0.2029033,
+      "energy_dbfs": -14.66
+    },
+    {
+      "time": 11.14,
+      "strength": 0.2534,
+      "spectral_flux": 0.1599063,
+      "prominence": 0.1592743,
+      "energy_dbfs": -14.88
+    },
+    {
+      "time": 11.25,
+      "strength": 0.8593,
+      "spectral_flux": 0.4994871,
+      "prominence": 0.4980323,
+      "energy_dbfs": -8.29
+    },
+    {
+      "time": 11.4,
+      "strength": 0.5021,
+      "spectral_flux": 0.2970377,
+      "prominence": 0.2953389,
+      "energy_dbfs": -16.24
+    },
+    {
+      "time": 11.51,
+      "strength": 0.445,
+      "spectral_flux": 0.2608656,
+      "prominence": 0.2591641,
+      "energy_dbfs": -17.96
+    },
+    {
+      "time": 11.68,
+      "strength": 0.2772,
+      "spectral_flux": 0.1670437,
+      "prominence": 0.1543079,
+      "energy_dbfs": -14.69
+    },
+    {
+      "time": 11.78,
+      "strength": 0.1323,
+      "spectral_flux": 0.0857808,
+      "prominence": 0.0801918,
+      "energy_dbfs": -18.39
+    },
+    {
+      "time": 12.07,
+      "strength": 0.1145,
+      "spectral_flux": 0.0694833,
+      "prominence": 0.0677818,
+      "energy_dbfs": -22.58
+    },
+    {
+      "time": 12.32,
+      "strength": 0.2807,
+      "spectral_flux": 0.1594199,
+      "prominence": 0.1588942,
+      "energy_dbfs": -29.07
+    },
+    {
+      "time": 12.46,
+      "strength": 1.0417,
+      "spectral_flux": 0.576599,
+      "prominence": 0.5762605,
+      "energy_dbfs": -8.27
+    },
+    {
+      "time": 12.59,
+      "strength": 0.095,
+      "spectral_flux": 0.0639966,
+      "prominence": 0.0591918,
+      "energy_dbfs": -32.96
+    },
+    {
+      "time": 12.72,
+      "strength": 1.0418,
+      "spectral_flux": 0.5859451,
+      "prominence": 0.5830808,
+      "energy_dbfs": -9.69
+    },
+    {
+      "time": 12.86,
+      "strength": 0.8038,
+      "spectral_flux": 0.4609201,
+      "prominence": 0.4578169,
+      "energy_dbfs": -7.88
+    },
+    {
+      "time": 12.93,
+      "strength": 0.1972,
+      "spectral_flux": 0.1375361,
+      "prominence": 0.1302362,
+      "energy_dbfs": -17.86
+    },
+    {
+      "time": 13.13,
+      "strength": 0.5992,
+      "spectral_flux": 0.3525241,
+      "prominence": 0.3455681,
+      "energy_dbfs": -4.69
+    },
+    {
+      "time": 13.31,
+      "strength": 0.2813,
+      "spectral_flux": 0.1818834,
+      "prominence": 0.1719243,
+      "energy_dbfs": -14.84
+    },
+    {
+      "time": 13.39,
+      "strength": 0.6258,
+      "spectral_flux": 0.3679771,
+      "prominence": 0.3648739,
+      "energy_dbfs": -9.24
+    },
+    {
+      "time": 13.57,
+      "strength": 0.5246,
+      "spectral_flux": 0.308769,
+      "prominence": 0.3013903,
+      "energy_dbfs": -16.97
+    },
+    {
+      "time": 13.69,
+      "strength": 0.6331,
+      "spectral_flux": 0.3655556,
+      "prominence": 0.3643967,
+      "energy_dbfs": -14.86
+    },
+    {
+      "time": 13.84,
+      "strength": 0.5959,
+      "spectral_flux": 0.3472152,
+      "prominence": 0.3403697,
+      "energy_dbfs": -17.25
+    },
+    {
+      "time": 14.19,
+      "strength": 0.8406,
+      "spectral_flux": 0.4795925,
+      "prominence": 0.4790913,
+      "energy_dbfs": -6.65
+    },
+    {
+      "time": 14.33,
+      "strength": 0.2724,
+      "spectral_flux": 0.1719998,
+      "prominence": 0.1651811,
+      "energy_dbfs": -16.53
+    },
+    {
+      "time": 14.46,
+      "strength": 0.4189,
+      "spectral_flux": 0.2497483,
+      "prominence": 0.2491838,
+      "energy_dbfs": -17.18
+    },
+    {
+      "time": 14.6,
+      "strength": 1.2934,
+      "spectral_flux": 0.7318641,
+      "prominence": 0.7304216,
+      "energy_dbfs": -9.17
+    },
+    {
+      "time": 14.75,
+      "strength": 0.212,
+      "spectral_flux": 0.1425096,
+      "prominence": 0.1388058,
+      "energy_dbfs": -16.04
+    },
+    {
+      "time": 14.87,
+      "strength": 0.1832,
+      "spectral_flux": 0.1247834,
+      "prominence": 0.1110768,
+      "energy_dbfs": -18.86
+    },
+    {
+      "time": 15.0,
+      "strength": 1.486,
+      "spectral_flux": 0.8342303,
+      "prominence": 0.8324338,
+      "energy_dbfs": -3.8
+    },
+    {
+      "time": 15.27,
+      "strength": 0.2722,
+      "spectral_flux": 0.1729927,
+      "prominence": 0.1705473,
+      "energy_dbfs": -14.19
+    },
+    {
+      "time": 15.43,
+      "strength": 0.3353,
+      "spectral_flux": 0.2097928,
+      "prominence": 0.1980876,
+      "energy_dbfs": -15.92
+    },
+    {
+      "time": 15.54,
+      "strength": 1.0591,
+      "spectral_flux": 0.6064986,
+      "prominence": 0.6047021,
+      "energy_dbfs": -7.46
+    },
+    {
+      "time": 15.68,
+      "strength": 0.5607,
+      "spectral_flux": 0.3320446,
+      "prominence": 0.330187,
+      "energy_dbfs": -17.26
+    },
+    {
+      "time": 15.8,
+      "strength": 0.5832,
+      "spectral_flux": 0.3394742,
+      "prominence": 0.3386773,
+      "energy_dbfs": -15.82
+    },
+    {
+      "time": 15.96,
+      "strength": 0.2948,
+      "spectral_flux": 0.1804783,
+      "prominence": 0.1656871,
+      "energy_dbfs": -15.9
+    },
+    {
+      "time": 16.07,
+      "strength": 0.2168,
+      "spectral_flux": 0.1302454,
+      "prominence": 0.1282131,
+      "energy_dbfs": -18.62
+    },
+    {
+      "time": 16.34,
+      "strength": 0.1404,
+      "spectral_flux": 0.0853811,
+      "prominence": 0.0845843,
+      "energy_dbfs": -24.78
+    },
+    {
+      "time": 16.63,
+      "strength": 0.2248,
+      "spectral_flux": 0.1295899,
+      "prominence": 0.1293595,
+      "energy_dbfs": -28.0
+    },
+    {
+      "time": 16.74,
+      "strength": 1.4478,
+      "spectral_flux": 0.7995712,
+      "prominence": 0.7981535,
+      "energy_dbfs": -8.72
+    },
+    {
+      "time": 17.01,
+      "strength": 1.0952,
+      "spectral_flux": 0.6165679,
+      "prominence": 0.6138856,
+      "energy_dbfs": -5.28
+    },
+    {
+      "time": 17.14,
+      "strength": 0.8709,
+      "spectral_flux": 0.4976337,
+      "prominence": 0.4924284,
+      "energy_dbfs": -12.31
+    },
+    {
+      "time": 17.41,
+      "strength": 0.6716,
+      "spectral_flux": 0.3972138,
+      "prominence": 0.3904345,
+      "energy_dbfs": -4.25
+    },
+    {
+      "time": 17.6,
+      "strength": 0.44,
+      "spectral_flux": 0.2743396,
+      "prominence": 0.2645881,
+      "energy_dbfs": -15.64
+    },
+    {
+      "time": 17.68,
+      "strength": 0.9689,
+      "spectral_flux": 0.5625781,
+      "prominence": 0.5573728,
+      "energy_dbfs": -8.27
+    },
+    {
+      "time": 17.86,
+      "strength": 0.7266,
+      "spectral_flux": 0.4305362,
+      "prominence": 0.4239173,
+      "energy_dbfs": -16.17
+    },
+    {
+      "time": 17.98,
+      "strength": 0.428,
+      "spectral_flux": 0.2642731,
+      "prominence": 0.2556992,
+      "energy_dbfs": -14.5
+    },
+    {
+      "time": 18.13,
+      "strength": 0.3631,
+      "spectral_flux": 0.2321635,
+      "prominence": 0.2255446,
+      "energy_dbfs": -14.67
+    },
+    {
+      "time": 18.22,
+      "strength": 0.2919,
+      "spectral_flux": 0.1892671,
+      "prominence": 0.1768629,
+      "energy_dbfs": -14.17
+    },
+    {
+      "time": 18.48,
+      "strength": 0.8464,
+      "spectral_flux": 0.490031,
+      "prominence": 0.4868066,
+      "energy_dbfs": -10.38
+    },
+    {
+      "time": 18.63,
+      "strength": 0.1593,
+      "spectral_flux": 0.1151178,
+      "prominence": 0.1079243,
+      "energy_dbfs": -22.29
+    },
+    {
+      "time": 18.76,
+      "strength": 0.5938,
+      "spectral_flux": 0.3462848,
+      "prominence": 0.3413262,
+      "energy_dbfs": -19.62
+    },
+    {
+      "time": 18.88,
+      "strength": 0.9226,
+      "spectral_flux": 0.5262641,
+      "prominence": 0.5238618,
+      "energy_dbfs": -6.1
+    },
+    {
+      "time": 19.03,
+      "strength": 0.2524,
+      "spectral_flux": 0.1656256,
+      "prominence": 0.1624113,
+      "energy_dbfs": -18.33
+    },
+    {
+      "time": 19.28,
+      "strength": 0.7658,
+      "spectral_flux": 0.4477081,
+      "prominence": 0.4366412,
+      "energy_dbfs": -6.15
+    },
+    {
+      "time": 19.37,
+      "strength": 0.1219,
+      "spectral_flux": 0.0986139,
+      "prominence": 0.0752717,
+      "energy_dbfs": -12.77
+    },
+    {
+      "time": 19.5,
+      "strength": 0.1258,
+      "spectral_flux": 0.1016517,
+      "prominence": 0.0815545,
+      "energy_dbfs": -15.68
+    },
+    {
+      "time": 19.82,
+      "strength": 0.7313,
+      "spectral_flux": 0.4346531,
+      "prominence": 0.4235862,
+      "energy_dbfs": -8.59
+    },
+    {
+      "time": 19.89,
+      "strength": 0.2175,
+      "spectral_flux": 0.1546716,
+      "prominence": 0.1461363,
+      "energy_dbfs": -13.19
+    },
+    {
+      "time": 20.36,
+      "strength": 0.9986,
+      "spectral_flux": 0.584312,
+      "prominence": 0.58071,
+      "energy_dbfs": -3.6
+    },
+    {
+      "time": 20.57,
+      "strength": 0.1318,
+      "spectral_flux": 0.0995176,
+      "prominence": 0.0859351,
+      "energy_dbfs": -12.19
+    },
+    {
+      "time": 20.68,
+      "strength": 0.1813,
+      "spectral_flux": 0.1263131,
+      "prominence": 0.1194016,
+      "energy_dbfs": -12.68
+    },
+    {
+      "time": 20.76,
+      "strength": 0.2193,
+      "spectral_flux": 0.1452695,
+      "prominence": 0.1422364,
+      "energy_dbfs": -13.53
+    },
+    {
+      "time": 20.89,
+      "strength": 0.9428,
+      "spectral_flux": 0.5380613,
+      "prominence": 0.5360876,
+      "energy_dbfs": -8.89
+    },
+    {
+      "time": 21.16,
+      "strength": 0.1206,
+      "spectral_flux": 0.0887102,
+      "prominence": 0.0866884,
+      "energy_dbfs": -30.43
+    },
+    {
+      "time": 21.31,
+      "strength": 0.4917,
+      "spectral_flux": 0.2894097,
+      "prominence": 0.2815019,
+      "energy_dbfs": -14.16
+    },
+    {
+      "time": 21.43,
+      "strength": 0.5707,
+      "spectral_flux": 0.3307499,
+      "prominence": 0.3259433,
+      "energy_dbfs": -4.84
+    },
+    {
+      "time": 21.59,
+      "strength": 0.4072,
+      "spectral_flux": 0.2451567,
+      "prominence": 0.2354419,
+      "energy_dbfs": -17.91
+    },
+    {
+      "time": 21.7,
+      "strength": 0.7924,
+      "spectral_flux": 0.4551569,
+      "prominence": 0.4510245,
+      "energy_dbfs": -16.15
+    },
+    {
+      "time": 21.97,
+      "strength": 0.937,
+      "spectral_flux": 0.5347269,
+      "prominence": 0.5300261,
+      "energy_dbfs": -8.62
+    },
+    {
+      "time": 22.23,
+      "strength": 0.287,
+      "spectral_flux": 0.1861214,
+      "prominence": 0.1799647,
+      "energy_dbfs": -12.1
+    },
+    {
+      "time": 22.37,
+      "strength": 0.7189,
+      "spectral_flux": 0.4235379,
+      "prominence": 0.4188371,
+      "energy_dbfs": -5.29
+    },
+    {
+      "time": 22.5,
+      "strength": 0.2914,
+      "spectral_flux": 0.1930343,
+      "prominence": 0.1865321,
+      "energy_dbfs": -10.03
+    },
+    {
+      "time": 22.68,
+      "strength": 0.1575,
+      "spectral_flux": 0.1177028,
+      "prominence": 0.1014959,
+      "energy_dbfs": -15.81
+    },
+    {
+      "time": 22.77,
+      "strength": 0.9995,
+      "spectral_flux": 0.5746466,
+      "prominence": 0.5716831,
+      "energy_dbfs": -3.4
+    },
+    {
+      "time": 22.9,
+      "strength": 0.1771,
+      "spectral_flux": 0.1264462,
+      "prominence": 0.1194754,
+      "energy_dbfs": -19.28
+    },
+    {
+      "time": 23.04,
+      "strength": 1.1619,
+      "spectral_flux": 0.6631507,
+      "prominence": 0.6602958,
+      "energy_dbfs": -7.88
+    },
+    {
+      "time": 23.2,
+      "strength": 0.4067,
+      "spectral_flux": 0.2540929,
+      "prominence": 0.2513073,
+      "energy_dbfs": -19.06
+    },
+    {
+      "time": 23.32,
+      "strength": 0.35,
+      "spectral_flux": 0.2242646,
+      "prominence": 0.2139309,
+      "energy_dbfs": -20.21
+    },
+    {
+      "time": 23.44,
+      "strength": 0.3673,
+      "spectral_flux": 0.2325973,
+      "prominence": 0.22342,
+      "energy_dbfs": -15.54
+    },
+    {
+      "time": 23.57,
+      "strength": 0.8613,
+      "spectral_flux": 0.4974974,
+      "prominence": 0.4918931,
+      "energy_dbfs": -4.54
+    },
+    {
+      "time": 23.67,
+      "strength": 0.1667,
+      "spectral_flux": 0.1245761,
+      "prominence": 0.0988016,
+      "energy_dbfs": -13.74
+    },
+    {
+      "time": 24.11,
+      "strength": 0.9164,
+      "spectral_flux": 0.5365488,
+      "prominence": 0.5320832,
+      "energy_dbfs": -8.06
+    },
+    {
+      "time": 24.64,
+      "strength": 0.9713,
+      "spectral_flux": 0.566477,
+      "prominence": 0.5627023,
+      "energy_dbfs": -5.43
+    },
+    {
+      "time": 24.82,
+      "strength": 0.1323,
+      "spectral_flux": 0.1050993,
+      "prominence": 0.0943529,
+      "energy_dbfs": -12.67
+    },
+    {
+      "time": 24.91,
+      "strength": 0.1521,
+      "spectral_flux": 0.1102635,
+      "prominence": 0.1000625,
+      "energy_dbfs": -12.28
+    },
+    {
+      "time": 25.05,
+      "strength": 0.2042,
+      "spectral_flux": 0.1335931,
+      "prominence": 0.110008,
+      "energy_dbfs": -13.49
+    },
+    {
+      "time": 25.18,
+      "strength": 1.0807,
+      "spectral_flux": 0.6146431,
+      "prominence": 0.6108684,
+      "energy_dbfs": -8.31
+    },
+    {
+      "time": 25.59,
+      "strength": 0.4472,
+      "spectral_flux": 0.2640587,
+      "prominence": 0.2564343,
+      "energy_dbfs": -17.26
+    },
+    {
+      "time": 25.72,
+      "strength": 0.4242,
+      "spectral_flux": 0.2487205,
+      "prominence": 0.238918,
+      "energy_dbfs": -4.22
+    },
+    {
+      "time": 25.87,
+      "strength": 0.5781,
+      "spectral_flux": 0.3352594,
+      "prominence": 0.3320112,
+      "energy_dbfs": -18.46
+    },
+    {
+      "time": 25.98,
+      "strength": 0.5656,
+      "spectral_flux": 0.3279045,
+      "prominence": 0.3221136,
+      "energy_dbfs": -17.31
+    },
+    {
+      "time": 26.05,
+      "strength": 0.1258,
+      "spectral_flux": 0.0928069,
+      "prominence": 0.0804865,
+      "energy_dbfs": -11.03
+    },
+    {
+      "time": 26.25,
+      "strength": 1.1551,
+      "spectral_flux": 0.6537471,
+      "prominence": 0.6501961,
+      "energy_dbfs": -9.68
+    },
+    {
+      "time": 26.52,
+      "strength": 0.272,
+      "spectral_flux": 0.1799605,
+      "prominence": 0.1738548,
+      "energy_dbfs": -12.6
+    },
+    {
+      "time": 26.65,
+      "strength": 0.527,
+      "spectral_flux": 0.3205023,
+      "prominence": 0.3116155,
+      "energy_dbfs": -19.46
+    },
+    {
+      "time": 26.79,
+      "strength": 0.2427,
+      "spectral_flux": 0.1663594,
+      "prominence": 0.1517316,
+      "energy_dbfs": -12.62
+    },
+    {
+      "time": 26.92,
+      "strength": 0.1621,
+      "spectral_flux": 0.1250046,
+      "prominence": 0.1035658,
+      "energy_dbfs": -15.55
+    },
+    {
+      "time": 27.06,
+      "strength": 0.8277,
+      "spectral_flux": 0.4905839,
+      "prominence": 0.4870329,
+      "energy_dbfs": -8.66
+    },
+    {
+      "time": 27.19,
+      "strength": 0.1861,
+      "spectral_flux": 0.1408135,
+      "prominence": 0.1151901,
+      "energy_dbfs": -16.69
+    },
+    {
+      "time": 27.33,
+      "strength": 0.6179,
+      "spectral_flux": 0.3734226,
+      "prominence": 0.3672433,
+      "energy_dbfs": -14.61
+    },
+    {
+      "time": 27.46,
+      "strength": 0.6984,
+      "spectral_flux": 0.416378,
+      "prominence": 0.4133287,
+      "energy_dbfs": -2.88
+    },
+    {
+      "time": 27.6,
+      "strength": 0.2201,
+      "spectral_flux": 0.1532529,
+      "prominence": 0.1504884,
+      "energy_dbfs": -23.72
+    },
+    {
+      "time": 27.74,
+      "strength": 0.187,
+      "spectral_flux": 0.1319537,
+      "prominence": 0.1256451,
+      "energy_dbfs": -15.97
+    },
+    {
+      "time": 27.86,
+      "strength": 0.8852,
+      "spectral_flux": 0.5124835,
+      "prominence": 0.5055961,
+      "energy_dbfs": -2.99
+    },
+    {
+      "time": 28.27,
+      "strength": 0.2575,
+      "spectral_flux": 0.1731983,
+      "prominence": 0.164688,
+      "energy_dbfs": -16.13
+    },
+    {
+      "time": 28.4,
+      "strength": 0.7797,
+      "spectral_flux": 0.45976,
+      "prominence": 0.4531818,
+      "energy_dbfs": -7.49
+    },
+    {
+      "time": 28.48,
+      "strength": 0.1266,
+      "spectral_flux": 0.1060245,
+      "prominence": 0.0667953,
+      "energy_dbfs": -13.28
+    },
+    {
+      "time": 28.8,
+      "strength": 0.3918,
+      "spectral_flux": 0.2512817,
+      "prominence": 0.2472372,
+      "energy_dbfs": -14.26
+    },
+    {
+      "time": 28.93,
+      "strength": 0.9576,
+      "spectral_flux": 0.5595032,
+      "prominence": 0.5554836,
+      "energy_dbfs": -3.69
+    },
+    {
+      "time": 29.16,
+      "strength": 0.1273,
+      "spectral_flux": 0.099641,
+      "prominence": 0.094949,
+      "energy_dbfs": -12.28
+    },
+    {
+      "time": 29.27,
+      "strength": 0.1618,
+      "spectral_flux": 0.113358,
+      "prominence": 0.1108066,
+      "energy_dbfs": -12.57
+    },
+    {
+      "time": 29.36,
+      "strength": 0.123,
+      "spectral_flux": 0.0893185,
+      "prominence": 0.0876219,
+      "energy_dbfs": -17.76
+    },
+    {
+      "time": 29.47,
+      "strength": 1.0192,
+      "spectral_flux": 0.574981,
+      "prominence": 0.5740991,
+      "energy_dbfs": -7.91
+    },
+    {
+      "time": 29.73,
+      "strength": 0.1295,
+      "spectral_flux": 0.0890836,
+      "prominence": 0.0873068,
+      "energy_dbfs": -30.7
+    },
+    {
+      "time": 29.88,
+      "strength": 0.4876,
+      "spectral_flux": 0.2842001,
+      "prominence": 0.275846,
+      "energy_dbfs": -14.58
+    },
+    {
+      "time": 30.0,
+      "strength": 0.639,
+      "spectral_flux": 0.3654113,
+      "prominence": 0.3604363,
+      "energy_dbfs": -5.55
+    },
+    {
+      "time": 30.16,
+      "strength": 0.5135,
+      "spectral_flux": 0.2995896,
+      "prominence": 0.2892077,
+      "energy_dbfs": -18.42
+    },
+    {
+      "time": 30.27,
+      "strength": 0.6947,
+      "spectral_flux": 0.3983734,
+      "prominence": 0.393689,
+      "energy_dbfs": -17.38
+    },
+    {
+      "time": 30.41,
+      "strength": 0.1449,
+      "spectral_flux": 0.1011912,
+      "prominence": 0.0930321,
+      "energy_dbfs": -14.21
+    },
+    {
+      "time": 30.54,
+      "strength": 1.0832,
+      "spectral_flux": 0.6102741,
+      "prominence": 0.6055897,
+      "energy_dbfs": -8.95
+    },
+    {
+      "time": 30.94,
+      "strength": 0.9245,
+      "spectral_flux": 0.5286425,
+      "prominence": 0.5278911,
+      "energy_dbfs": -5.24
+    },
+    {
+      "time": 31.08,
+      "strength": 0.2532,
+      "spectral_flux": 0.1603301,
+      "prominence": 0.1600911,
+      "energy_dbfs": -7.3
+    },
+    {
+      "time": 31.26,
+      "strength": 0.1404,
+      "spectral_flux": 0.1023598,
+      "prominence": 0.0999131,
+      "energy_dbfs": -16.96
+    },
+    {
+      "time": 31.34,
+      "strength": 1.0436,
+      "spectral_flux": 0.5920987,
+      "prominence": 0.5911165,
+      "energy_dbfs": -3.77
+    },
+    {
+      "time": 31.48,
+      "strength": 0.1866,
+      "spectral_flux": 0.1277451,
+      "prominence": 0.1219268,
+      "energy_dbfs": -17.72
+    },
+    {
+      "time": 31.61,
+      "strength": 1.3065,
+      "spectral_flux": 0.7422383,
+      "prominence": 0.7409212,
+      "energy_dbfs": -7.93
+    },
+    {
+      "time": 31.77,
+      "strength": 0.3866,
+      "spectral_flux": 0.2459516,
+      "prominence": 0.2424839,
+      "energy_dbfs": -18.84
+    },
+    {
+      "time": 31.89,
+      "strength": 0.3634,
+      "spectral_flux": 0.2333187,
+      "prominence": 0.2276707,
+      "energy_dbfs": -20.46
+    },
+    {
+      "time": 32.01,
+      "strength": 0.4833,
+      "spectral_flux": 0.2986433,
+      "prominence": 0.286474,
+      "energy_dbfs": -15.22
+    },
+    {
+      "time": 32.14,
+      "strength": 0.7044,
+      "spectral_flux": 0.4195488,
+      "prominence": 0.4160071,
+      "energy_dbfs": -5.52
+    },
+    {
+      "time": 32.55,
+      "strength": 0.2496,
+      "spectral_flux": 0.1742792,
+      "prominence": 0.1686536,
+      "energy_dbfs": -14.71
+    },
+    {
+      "time": 32.68,
+      "strength": 0.9665,
+      "spectral_flux": 0.5651832,
+      "prominence": 0.5616954,
+      "energy_dbfs": -8.25
+    },
+    {
+      "time": 33.08,
+      "strength": 0.4733,
+      "spectral_flux": 0.2929006,
+      "prominence": 0.2917723,
+      "energy_dbfs": -15.15
+    },
+    {
+      "time": 33.21,
+      "strength": 0.5771,
+      "spectral_flux": 0.3558731,
+      "prominence": 0.3524445,
+      "energy_dbfs": -6.35
+    },
+    {
+      "time": 33.48,
+      "strength": 0.1353,
+      "spectral_flux": 0.104503,
+      "prominence": 0.0961334,
+      "energy_dbfs": -12.51
+    },
+    {
+      "time": 33.62,
+      "strength": 0.1742,
+      "spectral_flux": 0.1226268,
+      "prominence": 0.1127151,
+      "energy_dbfs": -14.11
+    },
+    {
+      "time": 33.75,
+      "strength": 1.1797,
+      "spectral_flux": 0.6707207,
+      "prominence": 0.6672921,
+      "energy_dbfs": -8.38
+    },
+    {
+      "time": 34.02,
+      "strength": 0.1033,
+      "spectral_flux": 0.0793893,
+      "prominence": 0.0766492,
+      "energy_dbfs": -29.39
+    },
+    {
+      "time": 34.17,
+      "strength": 0.4708,
+      "spectral_flux": 0.2796572,
+      "prominence": 0.2711067,
+      "energy_dbfs": -13.94
+    },
+    {
+      "time": 34.29,
+      "strength": 0.6573,
+      "spectral_flux": 0.3785345,
+      "prominence": 0.372575,
+      "energy_dbfs": -4.62
+    },
+    {
+      "time": 34.44,
+      "strength": 0.3796,
+      "spectral_flux": 0.2306602,
+      "prominence": 0.2215891,
+      "energy_dbfs": -17.78
+    },
+    {
+      "time": 34.56,
+      "strength": 0.5324,
+      "spectral_flux": 0.3148815,
+      "prominence": 0.3083999,
+      "energy_dbfs": -13.41
+    },
+    {
+      "time": 34.82,
+      "strength": 1.0588,
+      "spectral_flux": 0.6068795,
+      "prominence": 0.6009201,
+      "energy_dbfs": -9.74
+    },
+    {
+      "time": 35.09,
+      "strength": 0.3253,
+      "spectral_flux": 0.2117604,
+      "prominence": 0.2069147,
+      "energy_dbfs": -11.98
+    },
+    {
+      "time": 35.22,
+      "strength": 0.4133,
+      "spectral_flux": 0.2617487,
+      "prominence": 0.2521754,
+      "energy_dbfs": -20.13
+    },
+    {
+      "time": 35.37,
+      "strength": 0.408,
+      "spectral_flux": 0.2624186,
+      "prominence": 0.2544722,
+      "energy_dbfs": -11.69
+    },
+    {
+      "time": 35.63,
+      "strength": 0.8569,
+      "spectral_flux": 0.5118247,
+      "prominence": 0.510574,
+      "energy_dbfs": -9.33
+    },
+    {
+      "time": 35.77,
+      "strength": 0.266,
+      "spectral_flux": 0.1875031,
+      "prominence": 0.1667406,
+      "energy_dbfs": -15.83
+    },
+    {
+      "time": 35.9,
+      "strength": 0.8944,
+      "spectral_flux": 0.5278021,
+      "prominence": 0.5231894,
+      "energy_dbfs": -14.22
+    },
+    {
+      "time": 36.03,
+      "strength": 0.7931,
+      "spectral_flux": 0.4698686,
+      "prominence": 0.459975,
+      "energy_dbfs": -3.03
+    },
+    {
+      "time": 36.18,
+      "strength": 0.1707,
+      "spectral_flux": 0.123127,
+      "prominence": 0.1179636,
+      "energy_dbfs": -20.1
+    },
+    {
+      "time": 36.31,
+      "strength": 0.1664,
+      "spectral_flux": 0.1179517,
+      "prominence": 0.1126553,
+      "energy_dbfs": -15.22
+    },
+    {
+      "time": 36.43,
+      "strength": 0.8327,
+      "spectral_flux": 0.4791577,
+      "prominence": 0.4745451,
+      "energy_dbfs": -4.87
+    },
+    {
+      "time": 36.7,
+      "strength": 0.8005,
+      "spectral_flux": 0.4566706,
+      "prominence": 0.4518798,
+      "energy_dbfs": -14.77
+    },
+    {
+      "time": 36.84,
+      "strength": 0.0931,
+      "spectral_flux": 0.0690519,
+      "prominence": 0.0581263,
+      "energy_dbfs": -25.9
+    },
+    {
+      "time": 36.97,
+      "strength": 0.9303,
+      "spectral_flux": 0.5252476,
+      "prominence": 0.5214213,
+      "energy_dbfs": -8.61
+    },
+    {
+      "time": 37.23,
+      "strength": 0.2728,
+      "spectral_flux": 0.1658638,
+      "prominence": 0.1618916,
+      "energy_dbfs": -18.43
+    },
+    {
+      "time": 37.38,
+      "strength": 0.5783,
+      "spectral_flux": 0.3331602,
+      "prominence": 0.3264948,
+      "energy_dbfs": -19.03
+    },
+    {
+      "time": 37.5,
+      "strength": 1.2941,
+      "spectral_flux": 0.72252,
+      "prominence": 0.7186937,
+      "energy_dbfs": -3.78
+    },
+    {
+      "time": 37.65,
+      "strength": 0.3683,
+      "spectral_flux": 0.2196818,
+      "prominence": 0.2181683,
+      "energy_dbfs": -25.41
+    },
+    {
+      "time": 37.77,
+      "strength": 0.55,
+      "spectral_flux": 0.3179869,
+      "prominence": 0.3167297,
+      "energy_dbfs": -17.28
+    },
+    {
+      "time": 37.92,
+      "strength": 0.5181,
+      "spectral_flux": 0.3004228,
+      "prominence": 0.2989985,
+      "energy_dbfs": -17.19
+    },
+    {
+      "time": 38.04,
+      "strength": 1.0036,
+      "spectral_flux": 0.5650293,
+      "prominence": 0.5638943,
+      "energy_dbfs": -7.48
+    },
+    {
+      "time": 38.12,
+      "strength": 0.1842,
+      "spectral_flux": 0.1191056,
+      "prominence": 0.116335,
+      "energy_dbfs": -14.84
+    },
+    {
+      "time": 38.32,
+      "strength": 0.2103,
+      "spectral_flux": 0.13334,
+      "prominence": 0.1300553,
+      "energy_dbfs": -25.79
+    },
+    {
+      "time": 38.46,
+      "strength": 0.5286,
+      "spectral_flux": 0.3061307,
+      "prominence": 0.3048958,
+      "energy_dbfs": -19.52
+    },
+    {
+      "time": 38.57,
+      "strength": 1.2469,
+      "spectral_flux": 0.6971803,
+      "prominence": 0.6957498,
+      "energy_dbfs": -6.12
+    },
+    {
+      "time": 38.84,
+      "strength": 0.6032,
+      "spectral_flux": 0.3457649,
+      "prominence": 0.3404068,
+      "energy_dbfs": -15.27
+    },
+    {
+      "time": 38.99,
+      "strength": 0.1722,
+      "spectral_flux": 0.1122394,
+      "prominence": 0.1087153,
+      "energy_dbfs": -25.04
+    },
+    {
+      "time": 39.11,
+      "strength": 1.1069,
+      "spectral_flux": 0.6223035,
+      "prominence": 0.620873,
+      "energy_dbfs": -8.82
+    },
+    {
+      "time": 39.37,
+      "strength": 0.3286,
+      "spectral_flux": 0.1995434,
+      "prominence": 0.1929945,
+      "energy_dbfs": -20.86
+    },
+    {
+      "time": 39.51,
+      "strength": 1.0753,
+      "spectral_flux": 0.6072672,
+      "prominence": 0.603375,
+      "energy_dbfs": -5.14
+    },
+    {
+      "time": 39.65,
+      "strength": 0.5035,
+      "spectral_flux": 0.2948334,
+      "prominence": 0.2940169,
+      "energy_dbfs": -9.92
+    },
+    {
+      "time": 39.79,
+      "strength": 0.2751,
+      "spectral_flux": 0.1703874,
+      "prominence": 0.169749,
+      "energy_dbfs": -23.73
+    },
+    {
+      "time": 39.91,
+      "strength": 1.3112,
+      "spectral_flux": 0.7333713,
+      "prominence": 0.7330911,
+      "energy_dbfs": -3.71
+    },
+    {
+      "time": 40.06,
+      "strength": 0.187,
+      "spectral_flux": 0.1189498,
+      "prominence": 0.1179203,
+      "energy_dbfs": -25.37
+    },
+    {
+      "time": 40.18,
+      "strength": 1.3574,
+      "spectral_flux": 0.7568321,
+      "prominence": 0.7556381,
+      "energy_dbfs": -8.48
+    },
+    {
+      "time": 40.47,
+      "strength": 0.1711,
+      "spectral_flux": 0.1103106,
+      "prominence": 0.1070716,
+      "energy_dbfs": -24.63
+    },
+    {
+      "time": 40.58,
+      "strength": 0.8448,
+      "spectral_flux": 0.4768561,
+      "prominence": 0.4739787,
+      "energy_dbfs": -18.28
+    },
+    {
+      "time": 40.71,
+      "strength": 0.7291,
+      "spectral_flux": 0.4151547,
+      "prominence": 0.4089157,
+      "energy_dbfs": -5.83
+    },
+    {
+      "time": 40.87,
+      "strength": 0.205,
+      "spectral_flux": 0.1295487,
+      "prominence": 0.120713,
+      "energy_dbfs": -18.41
+    },
+    {
+      "time": 41.0,
+      "strength": 0.0932,
+      "spectral_flux": 0.0679943,
+      "prominence": 0.0618829,
+      "energy_dbfs": -20.56
+    },
+    {
+      "time": 41.13,
+      "strength": 0.1807,
+      "spectral_flux": 0.1168161,
+      "prominence": 0.111642,
+      "energy_dbfs": -24.59
+    },
+    {
+      "time": 41.25,
+      "strength": 1.128,
+      "spectral_flux": 0.6325238,
+      "prominence": 0.6295443,
+      "energy_dbfs": -9.24
+    },
+    {
+      "time": 41.51,
+      "strength": 0.2545,
+      "spectral_flux": 0.1565032,
+      "prominence": 0.152458,
+      "energy_dbfs": -24.0
+    },
+    {
+      "time": 41.67,
+      "strength": 0.6031,
+      "spectral_flux": 0.3475877,
+      "prominence": 0.3392858,
+      "energy_dbfs": -19.2
+    },
+    {
+      "time": 41.79,
+      "strength": 0.8343,
+      "spectral_flux": 0.473375,
+      "prominence": 0.4703955,
+      "energy_dbfs": -3.31
+    },
+    {
+      "time": 41.94,
+      "strength": 0.2886,
+      "spectral_flux": 0.1772534,
+      "prominence": 0.1738245,
+      "energy_dbfs": -20.09
+    },
+    {
+      "time": 42.06,
+      "strength": 0.4792,
+      "spectral_flux": 0.2801576,
+      "prominence": 0.2790633,
+      "energy_dbfs": -15.13
+    },
+    {
+      "time": 42.2,
+      "strength": 0.4679,
+      "spectral_flux": 0.2741317,
+      "prominence": 0.2707447,
+      "energy_dbfs": -20.32
+    },
+    {
+      "time": 42.32,
+      "strength": 1.2396,
+      "spectral_flux": 0.6939892,
+      "prominence": 0.6934285,
+      "energy_dbfs": -8.23
+    },
+    {
+      "time": 42.39,
+      "strength": 0.1736,
+      "spectral_flux": 0.1131881,
+      "prominence": 0.1040621,
+      "energy_dbfs": -14.53
+    },
+    {
+      "time": 42.6,
+      "strength": 0.5191,
+      "spectral_flux": 0.3018713,
+      "prominence": 0.299736,
+      "energy_dbfs": -15.73
+    },
+    {
+      "time": 42.67,
+      "strength": 0.1813,
+      "spectral_flux": 0.1188007,
+      "prominence": 0.1169851,
+      "energy_dbfs": -14.99
+    },
+    {
+      "time": 42.86,
+      "strength": 0.9457,
+      "spectral_flux": 0.5324343,
+      "prominence": 0.5299121,
+      "energy_dbfs": -4.43
+    },
+    {
+      "time": 43.13,
+      "strength": 0.8283,
+      "spectral_flux": 0.4674734,
+      "prominence": 0.4622969,
+      "energy_dbfs": -14.55
+    },
+    {
+      "time": 43.27,
+      "strength": 0.137,
+      "spectral_flux": 0.0907365,
+      "prominence": 0.0802435,
+      "energy_dbfs": -26.04
+    },
+    {
+      "time": 43.39,
+      "strength": 1.0591,
+      "spectral_flux": 0.5950295,
+      "prominence": 0.5925074,
+      "energy_dbfs": -9.99
+    },
+    {
+      "time": 43.66,
+      "strength": 0.2643,
+      "spectral_flux": 0.1660442,
+      "prominence": 0.165211,
+      "energy_dbfs": -17.94
+    },
+    {
+      "time": 43.8,
+      "strength": 0.5023,
+      "spectral_flux": 0.3018895,
+      "prominence": 0.3010893,
+      "energy_dbfs": -16.1
+    },
+    {
+      "time": 43.93,
+      "strength": 0.3851,
+      "spectral_flux": 0.2331434,
+      "prominence": 0.2245528,
+      "energy_dbfs": -14.23
+    },
+    {
+      "time": 44.08,
+      "strength": 0.2519,
+      "spectral_flux": 0.1592766,
+      "prominence": 0.1581726,
+      "energy_dbfs": -21.59
+    },
+    {
+      "time": 44.2,
+      "strength": 1.0305,
+      "spectral_flux": 0.5871477,
+      "prominence": 0.5860833,
+      "energy_dbfs": -7.9
+    },
+    {
+      "time": 44.28,
+      "strength": 0.1379,
+      "spectral_flux": 0.1035588,
+      "prominence": 0.0889767,
+      "energy_dbfs": -15.18
+    },
+    {
+      "time": 44.35,
+      "strength": 0.1378,
+      "spectral_flux": 0.0970872,
+      "prominence": 0.0941995,
+      "energy_dbfs": -24.68
+    },
+    {
+      "time": 44.47,
+      "strength": 0.1159,
+      "spectral_flux": 0.0813321,
+      "prominence": 0.0765978,
+      "energy_dbfs": -28.37
+    },
+    {
+      "time": 44.6,
+      "strength": 1.1392,
+      "spectral_flux": 0.6400403,
+      "prominence": 0.6384694,
+      "energy_dbfs": -2.94
+    },
+    {
+      "time": 44.75,
+      "strength": 0.1938,
+      "spectral_flux": 0.1252453,
+      "prominence": 0.1224226,
+      "energy_dbfs": -26.9
+    },
+    {
+      "time": 44.87,
+      "strength": 0.2204,
+      "spectral_flux": 0.1382833,
+      "prominence": 0.1357363,
+      "energy_dbfs": -26.59
+    },
+    {
+      "time": 45.0,
+      "strength": 1.2565,
+      "spectral_flux": 0.7045444,
+      "prominence": 0.6979003,
+      "energy_dbfs": -3.54
+    },
+    {
+      "time": 45.17,
+      "strength": 0.1541,
+      "spectral_flux": 0.104003,
+      "prominence": 0.0866612,
+      "energy_dbfs": -16.21
+    },
+    {
+      "time": 45.27,
+      "strength": 0.1268,
+      "spectral_flux": 0.0895183,
+      "prominence": 0.0801977,
+      "energy_dbfs": -16.57
+    },
+    {
+      "time": 45.54,
+      "strength": 0.9208,
+      "spectral_flux": 0.5298577,
+      "prominence": 0.5232136,
+      "energy_dbfs": -8.72
+    },
+    {
+      "time": 45.72,
+      "strength": 0.33,
+      "spectral_flux": 0.2028076,
+      "prominence": 0.1975532,
+      "energy_dbfs": -18.15
+    },
+    {
+      "time": 45.8,
+      "strength": 0.5382,
+      "spectral_flux": 0.3162688,
+      "prominence": 0.3088279,
+      "energy_dbfs": -16.19
+    },
+    {
+      "time": 46.0,
+      "strength": 0.144,
+      "spectral_flux": 0.1069656,
+      "prominence": 0.0842981,
+      "energy_dbfs": -17.71
+    },
+    {
+      "time": 46.07,
+      "strength": 0.7845,
+      "spectral_flux": 0.455999,
+      "prominence": 0.4542576,
+      "energy_dbfs": -4.05
+    },
+    {
+      "time": 46.25,
+      "strength": 0.5053,
+      "spectral_flux": 0.3029058,
+      "prominence": 0.2963675,
+      "energy_dbfs": -17.98
+    },
+    {
+      "time": 46.35,
+      "strength": 0.3943,
+      "spectral_flux": 0.2393306,
+      "prominence": 0.236736,
+      "energy_dbfs": -12.57
+    },
+    {
+      "time": 46.51,
+      "strength": 0.4558,
+      "spectral_flux": 0.2688988,
+      "prominence": 0.2668217,
+      "energy_dbfs": -15.87
+    },
+    {
+      "time": 46.61,
+      "strength": 1.0022,
+      "spectral_flux": 0.564407,
+      "prominence": 0.562462,
+      "energy_dbfs": -7.92
+    },
+    {
+      "time": 46.87,
+      "strength": 0.2169,
+      "spectral_flux": 0.1376364,
+      "prominence": 0.1309156,
+      "energy_dbfs": -25.42
+    },
+    {
+      "time": 47.05,
+      "strength": 0.5453,
+      "spectral_flux": 0.3157907,
+      "prominence": 0.3120024,
+      "energy_dbfs": -15.23
+    },
+    {
+      "time": 47.14,
+      "strength": 0.95,
+      "spectral_flux": 0.5358521,
+      "prominence": 0.5323253,
+      "energy_dbfs": -5.65
+    },
+    {
+      "time": 47.3,
+      "strength": 0.3312,
+      "spectral_flux": 0.197414,
+      "prominence": 0.193556,
+      "energy_dbfs": -16.28
+    },
+    {
+      "time": 47.43,
+      "strength": 0.108,
+      "spectral_flux": 0.0769524,
+      "prominence": 0.0719842,
+      "energy_dbfs": -21.2
+    },
+    {
+      "time": 47.56,
+      "strength": 0.1907,
+      "spectral_flux": 0.1226461,
+      "prominence": 0.1180169,
+      "energy_dbfs": -25.23
+    },
+    {
+      "time": 47.68,
+      "strength": 1.1402,
+      "spectral_flux": 0.6402782,
+      "prominence": 0.6367515,
+      "energy_dbfs": -8.99
+    },
+    {
+      "time": 47.85,
+      "strength": 0.5511,
+      "spectral_flux": 0.318978,
+      "prominence": 0.3167259,
+      "energy_dbfs": -18.38
+    },
+    {
+      "time": 47.95,
+      "strength": 0.5012,
+      "spectral_flux": 0.2891687,
+      "prominence": 0.2852217,
+      "energy_dbfs": -15.27
+    },
+    {
+      "time": 48.08,
+      "strength": 0.4956,
+      "spectral_flux": 0.289145,
+      "prominence": 0.2851936,
+      "energy_dbfs": -6.38
+    },
+    {
+      "time": 48.22,
+      "strength": 0.4652,
+      "spectral_flux": 0.2699223,
+      "prominence": 0.2605005,
+      "energy_dbfs": -10.0
+    },
+    {
+      "time": 48.39,
+      "strength": 0.8181,
+      "spectral_flux": 0.4630367,
+      "prominence": 0.4607845,
+      "energy_dbfs": -15.72
+    },
+    {
+      "time": 48.48,
+      "strength": 1.2389,
+      "spectral_flux": 0.6906446,
+      "prominence": 0.6902492,
+      "energy_dbfs": -4.53
+    },
+    {
+      "time": 48.63,
+      "strength": 0.217,
+      "spectral_flux": 0.1342845,
+      "prominence": 0.1325809,
+      "energy_dbfs": -25.76
+    },
+    {
+      "time": 48.75,
+      "strength": 1.563,
+      "spectral_flux": 0.8668225,
+      "prominence": 0.8646194,
+      "energy_dbfs": -8.21
+    },
+    {
+      "time": 48.91,
+      "strength": 0.4676,
+      "spectral_flux": 0.273432,
+      "prominence": 0.2703424,
+      "energy_dbfs": -15.2
+    },
+    {
+      "time": 49.02,
+      "strength": 0.1125,
+      "spectral_flux": 0.0804513,
+      "prominence": 0.0765915,
+      "energy_dbfs": -19.5
+    },
+    {
+      "time": 49.15,
+      "strength": 0.7605,
+      "spectral_flux": 0.4336146,
+      "prominence": 0.4297118,
+      "energy_dbfs": -18.94
+    },
+    {
+      "time": 49.29,
+      "strength": 0.6773,
+      "spectral_flux": 0.3892718,
+      "prominence": 0.3817815,
+      "energy_dbfs": -3.0
+    },
+    {
+      "time": 49.47,
+      "strength": 0.1727,
+      "spectral_flux": 0.1145161,
+      "prominence": 0.1053961,
+      "energy_dbfs": -14.67
+    },
+    {
+      "time": 49.54,
+      "strength": 0.1591,
+      "spectral_flux": 0.1060797,
+      "prominence": 0.1000723,
+      "energy_dbfs": -15.45
+    },
+    {
+      "time": 49.7,
+      "strength": 0.1497,
+      "spectral_flux": 0.1014773,
+      "prominence": 0.0946673,
+      "energy_dbfs": -23.29
+    },
+    {
+      "time": 49.82,
+      "strength": 0.9936,
+      "spectral_flux": 0.5614114,
+      "prominence": 0.5575086,
+      "energy_dbfs": -9.59
+    },
+    {
+      "time": 50.08,
+      "strength": 0.2018,
+      "spectral_flux": 0.1289316,
+      "prominence": 0.1244602,
+      "energy_dbfs": -23.49
+    },
+    {
+      "time": 50.24,
+      "strength": 0.5987,
+      "spectral_flux": 0.3489763,
+      "prominence": 0.3420001,
+      "energy_dbfs": -18.99
+    },
+    {
+      "time": 50.36,
+      "strength": 1.0065,
+      "spectral_flux": 0.5709515,
+      "prominence": 0.5681211,
+      "energy_dbfs": -3.39
+    },
+    {
+      "time": 50.51,
+      "strength": 0.3304,
+      "spectral_flux": 0.2050404,
+      "prominence": 0.1983275,
+      "energy_dbfs": -20.97
+    },
+    {
+      "time": 50.63,
+      "strength": 0.5235,
+      "spectral_flux": 0.3093894,
+      "prominence": 0.3080547,
+      "energy_dbfs": -16.03
+    },
+    {
+      "time": 50.77,
+      "strength": 0.3456,
+      "spectral_flux": 0.2141135,
+      "prominence": 0.2088473,
+      "energy_dbfs": -19.65
+    },
+    {
+      "time": 50.89,
+      "strength": 1.1926,
+      "spectral_flux": 0.6727386,
+      "prominence": 0.6714142,
+      "energy_dbfs": -8.41
+    },
+    {
+      "time": 50.96,
+      "strength": 0.167,
+      "spectral_flux": 0.1140302,
+      "prominence": 0.1032983,
+      "energy_dbfs": -14.17
+    },
+    {
+      "time": 51.17,
+      "strength": 0.5033,
+      "spectral_flux": 0.2978026,
+      "prominence": 0.2953828,
+      "energy_dbfs": -15.64
+    },
+    {
+      "time": 51.24,
+      "strength": 0.219,
+      "spectral_flux": 0.1445728,
+      "prominence": 0.1431696,
+      "energy_dbfs": -14.29
+    },
+    {
+      "time": 51.43,
+      "strength": 0.9857,
+      "spectral_flux": 0.5593172,
+      "prominence": 0.5549258,
+      "energy_dbfs": -4.64
+    },
+    {
+      "time": 51.7,
+      "strength": 0.7981,
+      "spectral_flux": 0.4543763,
+      "prominence": 0.4497128,
+      "energy_dbfs": -14.86
+    },
+    {
+      "time": 51.97,
+      "strength": 0.9079,
+      "spectral_flux": 0.5158915,
+      "prominence": 0.5115001,
+      "energy_dbfs": -8.68
+    },
+    {
+      "time": 52.23,
+      "strength": 0.2929,
+      "spectral_flux": 0.1813695,
+      "prominence": 0.1748381,
+      "energy_dbfs": -18.27
+    },
+    {
+      "time": 52.37,
+      "strength": 0.591,
+      "spectral_flux": 0.3460553,
+      "prominence": 0.3433094,
+      "energy_dbfs": -17.1
+    },
+    {
+      "time": 52.5,
+      "strength": 0.3389,
+      "spectral_flux": 0.2098845,
+      "prominence": 0.1994422,
+      "energy_dbfs": -15.02
+    },
+    {
+      "time": 52.65,
+      "strength": 0.2556,
+      "spectral_flux": 0.1623359,
+      "prominence": 0.1591656,
+      "energy_dbfs": -21.82
+    },
+    {
+      "time": 52.77,
+      "strength": 1.0715,
+      "spectral_flux": 0.6072229,
+      "prominence": 0.606404,
+      "energy_dbfs": -8.06
+    },
+    {
+      "time": 52.92,
+      "strength": 0.1751,
+      "spectral_flux": 0.1165546,
+      "prominence": 0.1156464,
+      "energy_dbfs": -24.67
+    },
+    {
+      "time": 53.04,
+      "strength": 0.135,
+      "spectral_flux": 0.090513,
+      "prominence": 0.0856365,
+      "energy_dbfs": -28.52
+    },
+    {
+      "time": 53.17,
+      "strength": 1.311,
+      "spectral_flux": 0.7314421,
+      "prominence": 0.7304892,
+      "energy_dbfs": -3.19
+    },
+    {
+      "time": 53.25,
+      "strength": 0.1587,
+      "spectral_flux": 0.1061205,
+      "prominence": 0.1008125,
+      "energy_dbfs": -14.98
+    },
+    {
+      "time": 53.33,
+      "strength": 0.1955,
+      "spectral_flux": 0.1262124,
+      "prominence": 0.1244155,
+      "energy_dbfs": -26.06
+    },
+    {
+      "time": 53.44,
+      "strength": 1.0783,
+      "spectral_flux": 0.6165251,
+      "prominence": 0.611965,
+      "energy_dbfs": -3.03
+    },
+    {
+      "time": 53.57,
+      "strength": 1.2111,
+      "spectral_flux": 0.7032006,
+      "prominence": 0.6952017,
+      "energy_dbfs": -5.28
+    },
+    {
+      "time": 53.67,
+      "strength": 0.3232,
+      "spectral_flux": 0.2234344,
+      "prominence": 0.1839026,
+      "energy_dbfs": -12.89
+    },
+    {
+      "time": 53.76,
+      "strength": 0.3225,
+      "spectral_flux": 0.2267241,
+      "prominence": 0.2145562,
+      "energy_dbfs": -14.95
+    },
+    {
+      "time": 53.84,
+      "strength": 0.2045,
+      "spectral_flux": 0.1658209,
+      "prominence": 0.134422,
+      "energy_dbfs": -14.67
+    },
+    {
+      "time": 53.93,
+      "strength": 0.2215,
+      "spectral_flux": 0.1798679,
+      "prominence": 0.1676185,
+      "energy_dbfs": -14.53
+    },
+    {
+      "time": 54.11,
+      "strength": 0.6261,
+      "spectral_flux": 0.404211,
+      "prominence": 0.3949474,
+      "energy_dbfs": -8.64
+    },
+    {
+      "time": 54.22,
+      "strength": 0.1677,
+      "spectral_flux": 0.153315,
+      "prominence": 0.1357794,
+      "energy_dbfs": -14.05
+    },
+    {
+      "time": 54.39,
+      "strength": 0.2336,
+      "spectral_flux": 0.1834562,
+      "prominence": 0.1731668,
+      "energy_dbfs": -15.44
+    },
+    {
+      "time": 54.55,
+      "strength": 0.1579,
+      "spectral_flux": 0.1421755,
+      "prominence": 0.1290562,
+      "energy_dbfs": -14.52
+    },
+    {
+      "time": 54.64,
+      "strength": 0.7251,
+      "spectral_flux": 0.4495209,
+      "prominence": 0.4402573,
+      "energy_dbfs": -5.56
+    },
+    {
+      "time": 54.75,
+      "strength": 0.1758,
+      "spectral_flux": 0.1519221,
+      "prominence": 0.1337551,
+      "energy_dbfs": -14.69
+    },
+    {
+      "time": 54.82,
+      "strength": 0.21,
+      "spectral_flux": 0.1681472,
+      "prominence": 0.1458289,
+      "energy_dbfs": -12.26
+    },
+    {
+      "time": 54.91,
+      "strength": 0.2443,
+      "spectral_flux": 0.1847474,
+      "prominence": 0.1776353,
+      "energy_dbfs": -12.3
+    },
+    {
+      "time": 54.98,
+      "strength": 0.1781,
+      "spectral_flux": 0.148703,
+      "prominence": 0.1391223,
+      "energy_dbfs": -11.93
+    },
+    {
+      "time": 55.06,
+      "strength": 0.2946,
+      "spectral_flux": 0.2122022,
+      "prominence": 0.1941457,
+      "energy_dbfs": -15.91
+    },
+    {
+      "time": 55.18,
+      "strength": 0.6997,
+      "spectral_flux": 0.4336215,
+      "prominence": 0.4281587,
+      "energy_dbfs": -8.58
+    },
+    {
+      "time": 55.26,
+      "strength": 0.1935,
+      "spectral_flux": 0.1591613,
+      "prominence": 0.1446075,
+      "energy_dbfs": -17.88
+    },
+    {
+      "time": 55.46,
+      "strength": 0.3582,
+      "spectral_flux": 0.2468162,
+      "prominence": 0.2349158,
+      "energy_dbfs": -16.66
+    },
+    {
+      "time": 55.6,
+      "strength": 0.2131,
+      "spectral_flux": 0.1697759,
+      "prominence": 0.1498435,
+      "energy_dbfs": -13.54
+    },
+    {
+      "time": 55.68,
+      "strength": 0.4336,
+      "spectral_flux": 0.2899659,
+      "prominence": 0.2831055,
+      "energy_dbfs": -12.32
+    },
+    {
+      "time": 56.08,
+      "strength": 0.5257,
+      "spectral_flux": 0.3425283,
+      "prominence": 0.3356679,
+      "energy_dbfs": -13.63
+    },
+    {
+      "time": 56.23,
+      "strength": 0.5217,
+      "spectral_flux": 0.3330941,
+      "prominence": 0.3195735,
+      "energy_dbfs": -13.18
+    },
+    {
+      "time": 56.51,
+      "strength": 0.5304,
+      "spectral_flux": 0.3378378,
+      "prominence": 0.3299978,
+      "energy_dbfs": -12.95
+    },
+    {
+      "time": 56.65,
+      "strength": 0.3255,
+      "spectral_flux": 0.2250721,
+      "prominence": 0.2166071,
+      "energy_dbfs": -7.46
+    },
+    {
+      "time": 56.79,
+      "strength": 0.412,
+      "spectral_flux": 0.2722246,
+      "prominence": 0.258174,
+      "energy_dbfs": -11.81
+    },
+    {
+      "time": 56.98,
+      "strength": 0.4683,
+      "spectral_flux": 0.3014034,
+      "prominence": 0.2935635,
+      "energy_dbfs": -11.88
+    },
+    {
+      "time": 57.06,
+      "strength": 0.3643,
+      "spectral_flux": 0.2415997,
+      "prominence": 0.23268,
+      "energy_dbfs": -2.26
+    },
+    {
+      "time": 57.2,
+      "strength": 0.5599,
+      "spectral_flux": 0.3440636,
+      "prominence": 0.3395949,
+      "energy_dbfs": -15.8
+    },
+    {
+      "time": 57.32,
+      "strength": 1.1376,
+      "spectral_flux": 0.6627429,
+      "prominence": 0.6588368,
+      "energy_dbfs": -9.66
+    },
+    {
+      "time": 57.46,
+      "strength": 0.2457,
+      "spectral_flux": 0.1752986,
+      "prominence": 0.1656319,
+      "energy_dbfs": -20.32
+    },
+    {
+      "time": 57.59,
+      "strength": 0.5946,
+      "spectral_flux": 0.3634847,
+      "prominence": 0.3616816,
+      "energy_dbfs": -20.18
+    },
+    {
+      "time": 57.72,
+      "strength": 0.6699,
+      "spectral_flux": 0.399314,
+      "prominence": 0.3987641,
+      "energy_dbfs": -16.09
+    },
+    {
+      "time": 57.86,
+      "strength": 0.5909,
+      "spectral_flux": 0.3562606,
+      "prominence": 0.3512525,
+      "energy_dbfs": -2.89
+    },
+    {
+      "time": 58.01,
+      "strength": 0.3224,
+      "spectral_flux": 0.2103353,
+      "prominence": 0.2066844,
+      "energy_dbfs": -13.19
+    },
+    {
+      "time": 58.23,
+      "strength": 0.3231,
+      "spectral_flux": 0.2227077,
+      "prominence": 0.2187161,
+      "energy_dbfs": -15.55
+    },
+    {
+      "time": 58.39,
+      "strength": 0.9973,
+      "spectral_flux": 0.5858576,
+      "prominence": 0.5819935,
+      "energy_dbfs": -8.43
+    },
+    {
+      "time": 58.65,
+      "strength": 0.2236,
+      "spectral_flux": 0.1744771,
+      "prominence": 0.1631521,
+      "energy_dbfs": -12.59
+    },
+    {
+      "time": 58.79,
+      "strength": 0.3331,
+      "spectral_flux": 0.2322958,
+      "prominence": 0.2229387,
+      "energy_dbfs": -12.56
+    },
+    {
+      "time": 58.93,
+      "strength": 0.8972,
+      "spectral_flux": 0.5437863,
+      "prominence": 0.5399223,
+      "energy_dbfs": -3.86
+    },
+    {
+      "time": 59.32,
+      "strength": 0.3753,
+      "spectral_flux": 0.2529199,
+      "prominence": 0.2429935,
+      "energy_dbfs": -13.06
+    },
+    {
+      "time": 59.47,
+      "strength": 0.9708,
+      "spectral_flux": 0.5760149,
+      "prominence": 0.5743914,
+      "energy_dbfs": -6.77
+    },
+    {
+      "time": 59.74,
+      "strength": 0.4167,
+      "spectral_flux": 0.27547,
+      "prominence": 0.2700146,
+      "energy_dbfs": -14.87
+    },
+    {
+      "time": 59.93,
+      "strength": 0.2316,
+      "spectral_flux": 0.1748056,
+      "prominence": 0.1671122,
+      "energy_dbfs": -12.75
+    },
+    {
+      "time": 60.0,
+      "strength": 0.4467,
+      "spectral_flux": 0.291837,
+      "prominence": 0.2899594,
+      "energy_dbfs": -3.55
+    },
+    {
+      "time": 60.15,
+      "strength": 0.2561,
+      "spectral_flux": 0.1903832,
+      "prominence": 0.1787684,
+      "energy_dbfs": -14.43
+    },
+    {
+      "time": 60.54,
+      "strength": 0.8354,
+      "spectral_flux": 0.5057693,
+      "prominence": 0.4961466,
+      "energy_dbfs": -7.59
+    },
+    {
+      "time": 60.81,
+      "strength": 0.1487,
+      "spectral_flux": 0.1310803,
+      "prominence": 0.1194857,
+      "energy_dbfs": -15.0
+    },
+    {
+      "time": 60.94,
+      "strength": 0.2235,
+      "spectral_flux": 0.1722946,
+      "prominence": 0.160622,
+      "energy_dbfs": -13.51
+    },
+    {
+      "time": 61.08,
+      "strength": 0.6197,
+      "spectral_flux": 0.3877721,
+      "prominence": 0.3781494,
+      "energy_dbfs": -10.05
+    },
+    {
+      "time": 61.2,
+      "strength": 0.584,
+      "spectral_flux": 0.3676879,
+      "prominence": 0.3600552,
+      "energy_dbfs": -12.05
+    },
+    {
+      "time": 61.34,
+      "strength": 0.552,
+      "spectral_flux": 0.3469372,
+      "prominence": 0.3396236,
+      "energy_dbfs": -8.78
+    },
+    {
+      "time": 61.44,
+      "strength": 0.2567,
+      "spectral_flux": 0.1868629,
+      "prominence": 0.1715647,
+      "energy_dbfs": -14.16
+    },
+    {
+      "time": 61.6,
+      "strength": 0.2504,
+      "spectral_flux": 0.181645,
+      "prominence": 0.1715663,
+      "energy_dbfs": -15.63
+    },
+    {
+      "time": 61.74,
+      "strength": 0.5096,
+      "spectral_flux": 0.3238155,
+      "prominence": 0.3199131,
+      "energy_dbfs": -4.43
+    },
+    {
+      "time": 61.88,
+      "strength": 0.214,
+      "spectral_flux": 0.1662198,
+      "prominence": 0.1590985,
+      "energy_dbfs": -15.02
+    },
+    {
+      "time": 62.03,
+      "strength": 0.247,
+      "spectral_flux": 0.185301,
+      "prominence": 0.1808308,
+      "energy_dbfs": -17.88
+    },
+    {
+      "time": 62.14,
+      "strength": 0.932,
+      "spectral_flux": 0.5600072,
+      "prominence": 0.5471712,
+      "energy_dbfs": -5.15
+    },
+    {
+      "time": 62.33,
+      "strength": 0.2184,
+      "spectral_flux": 0.1754087,
+      "prominence": 0.1539614,
+      "energy_dbfs": -14.12
+    },
+    {
+      "time": 62.56,
+      "strength": 0.2113,
+      "spectral_flux": 0.1714984,
+      "prominence": 0.145551,
+      "energy_dbfs": -14.95
+    },
+    {
+      "time": 62.67,
+      "strength": 0.5263,
+      "spectral_flux": 0.3441642,
+      "prominence": 0.3313282,
+      "energy_dbfs": -11.46
+    },
+    {
+      "time": 62.79,
+      "strength": 0.3281,
+      "spectral_flux": 0.2366697,
+      "prominence": 0.2209794,
+      "energy_dbfs": -13.61
+    },
+    {
+      "time": 62.94,
+      "strength": 0.421,
+      "spectral_flux": 0.2863874,
+      "prominence": 0.2709548,
+      "energy_dbfs": -13.16
+    },
+    {
+      "time": 63.22,
+      "strength": 0.4537,
+      "spectral_flux": 0.2988516,
+      "prominence": 0.283419,
+      "energy_dbfs": -3.29
+    },
+    {
+      "time": 63.32,
+      "strength": 0.2006,
+      "spectral_flux": 0.1605942,
+      "prominence": 0.1377325,
+      "energy_dbfs": -14.35
+    },
+    {
+      "time": 63.39,
+      "strength": 0.2015,
+      "spectral_flux": 0.1615566,
+      "prominence": 0.1383669,
+      "energy_dbfs": -12.13
+    },
+    {
+      "time": 63.48,
+      "strength": 0.5627,
+      "spectral_flux": 0.3582504,
+      "prominence": 0.3553311,
+      "energy_dbfs": -11.11
+    },
+    {
+      "time": 63.6,
+      "strength": 0.3401,
+      "spectral_flux": 0.2363441,
+      "prominence": 0.2287564,
+      "energy_dbfs": -11.99
+    },
+    {
+      "time": 63.75,
+      "strength": 0.9791,
+      "spectral_flux": 0.5806398,
+      "prominence": 0.5782173,
+      "energy_dbfs": -8.96
+    },
+    {
+      "time": 63.93,
+      "strength": 0.1725,
+      "spectral_flux": 0.1399823,
+      "prominence": 0.1311143,
+      "energy_dbfs": -20.09
+    },
+    {
+      "time": 64.02,
+      "strength": 0.3618,
+      "spectral_flux": 0.2438754,
+      "prominence": 0.2371985,
+      "energy_dbfs": -17.68
+    },
+    {
+      "time": 64.15,
+      "strength": 0.8103,
+      "spectral_flux": 0.4922206,
+      "prominence": 0.485892,
+      "energy_dbfs": -16.34
+    },
+    {
+      "time": 64.29,
+      "strength": 0.5031,
+      "spectral_flux": 0.3208844,
+      "prominence": 0.3145068,
+      "energy_dbfs": -2.96
+    },
+    {
+      "time": 64.56,
+      "strength": 0.4249,
+      "spectral_flux": 0.286774,
+      "prominence": 0.279574,
+      "energy_dbfs": -13.09
+    },
+    {
+      "time": 64.68,
+      "strength": 0.2648,
+      "spectral_flux": 0.2040878,
+      "prominence": 0.1853341,
+      "energy_dbfs": -14.46
+    },
+    {
+      "time": 64.82,
+      "strength": 0.5635,
+      "spectral_flux": 0.3623367,
+      "prominence": 0.3560082,
+      "energy_dbfs": -9.05
+    },
+    {
+      "time": 64.89,
+      "strength": 0.1834,
+      "spectral_flux": 0.1615695,
+      "prominence": 0.156536,
+      "energy_dbfs": -12.65
+    },
+    {
+      "time": 65.09,
+      "strength": 0.4217,
+      "spectral_flux": 0.2902269,
+      "prominence": 0.2839169,
+      "energy_dbfs": -12.86
+    },
+    {
+      "time": 65.21,
+      "strength": 0.3841,
+      "spectral_flux": 0.2695265,
+      "prominence": 0.2594202,
+      "energy_dbfs": -14.22
+    },
+    {
+      "time": 65.36,
+      "strength": 0.4721,
+      "spectral_flux": 0.3177217,
+      "prominence": 0.3150549,
+      "energy_dbfs": -11.88
+    },
+    {
+      "time": 65.55,
+      "strength": 0.2111,
+      "spectral_flux": 0.1695265,
+      "prominence": 0.1641514,
+      "energy_dbfs": -12.59
+    },
+    {
+      "time": 65.63,
+      "strength": 0.4286,
+      "spectral_flux": 0.2796184,
+      "prominence": 0.2661207,
+      "energy_dbfs": -2.57
+    },
+    {
+      "time": 65.76,
+      "strength": 0.502,
+      "spectral_flux": 0.319613,
+      "prominence": 0.3178262,
+      "energy_dbfs": -13.77
+    },
+    {
+      "time": 65.89,
+      "strength": 0.867,
+      "spectral_flux": 0.5270122,
+      "prominence": 0.5238577,
+      "energy_dbfs": -10.28
+    },
+    {
+      "time": 66.02,
+      "strength": 0.3848,
+      "spectral_flux": 0.2542253,
+      "prominence": 0.2334841,
+      "energy_dbfs": -19.5
+    },
+    {
+      "time": 66.17,
+      "strength": 0.7607,
+      "spectral_flux": 0.4530265,
+      "prominence": 0.449738,
+      "energy_dbfs": -14.41
+    },
+    {
+      "time": 66.31,
+      "strength": 0.4409,
+      "spectral_flux": 0.2728551,
+      "prominence": 0.2689937,
+      "energy_dbfs": -11.29
+    },
+    {
+      "time": 66.43,
+      "strength": 0.6159,
+      "spectral_flux": 0.3702598,
+      "prominence": 0.3671022,
+      "energy_dbfs": -3.08
+    },
+    {
+      "time": 66.56,
+      "strength": 0.4036,
+      "spectral_flux": 0.2548665,
+      "prominence": 0.2505612,
+      "energy_dbfs": -14.54
+    },
+    {
+      "time": 66.7,
+      "strength": 0.22,
+      "spectral_flux": 0.1614919,
+      "prominence": 0.1524094,
+      "energy_dbfs": -15.12
+    },
+    {
+      "time": 66.82,
+      "strength": 0.3635,
+      "spectral_flux": 0.2424024,
+      "prominence": 0.2380595,
+      "energy_dbfs": -14.96
+    },
+    {
+      "time": 66.96,
+      "strength": 0.8499,
+      "spectral_flux": 0.5047837,
+      "prominence": 0.5014419,
+      "energy_dbfs": -8.62
+    },
+    {
+      "time": 67.36,
+      "strength": 0.1744,
+      "spectral_flux": 0.1461328,
+      "prominence": 0.1389208,
+      "energy_dbfs": -14.61
+    },
+    {
+      "time": 67.5,
+      "strength": 0.7629,
+      "spectral_flux": 0.4741537,
+      "prominence": 0.4708119,
+      "energy_dbfs": -3.87
+    },
+    {
+      "time": 67.62,
+      "strength": 0.3943,
+      "spectral_flux": 0.2674279,
+      "prominence": 0.2571468,
+      "energy_dbfs": -12.92
+    },
+    {
+      "time": 67.75,
+      "strength": 0.4352,
+      "spectral_flux": 0.2877299,
+      "prominence": 0.2786744,
+      "energy_dbfs": -11.77
+    },
+    {
+      "time": 67.89,
+      "strength": 0.3017,
+      "spectral_flux": 0.2117966,
+      "prominence": 0.19282,
+      "energy_dbfs": -13.28
+    },
+    {
+      "time": 68.04,
+      "strength": 0.9873,
+      "spectral_flux": 0.5812684,
+      "prominence": 0.5736964,
+      "energy_dbfs": -7.67
+    },
+    {
+      "time": 68.3,
+      "strength": 0.3608,
+      "spectral_flux": 0.2381234,
+      "prominence": 0.2305315,
+      "energy_dbfs": -17.83
+    },
+    {
+      "time": 68.44,
+      "strength": 0.5187,
+      "spectral_flux": 0.3247994,
+      "prominence": 0.3172274,
+      "energy_dbfs": -17.89
+    },
+    {
+      "time": 68.57,
+      "strength": 0.4941,
+      "spectral_flux": 0.3146847,
+      "prominence": 0.2988746,
+      "energy_dbfs": -4.23
+    },
+    {
+      "time": 68.78,
+      "strength": 0.3422,
+      "spectral_flux": 0.2384425,
+      "prominence": 0.2218955,
+      "energy_dbfs": -14.26
+    },
+    {
+      "time": 68.99,
+      "strength": 0.1409,
+      "spectral_flux": 0.1301379,
+      "prominence": 0.0927883,
+      "energy_dbfs": -15.92
+    },
+    {
+      "time": 69.11,
+      "strength": 0.678,
+      "spectral_flux": 0.4224742,
+      "prominence": 0.4150576,
+      "energy_dbfs": -7.55
+    },
+    {
+      "time": 69.28,
+      "strength": 0.2979,
+      "spectral_flux": 0.2204963,
+      "prominence": 0.2102631,
+      "energy_dbfs": -14.26
+    },
+    {
+      "time": 69.35,
+      "strength": 0.2668,
+      "spectral_flux": 0.2035392,
+      "prominence": 0.1859127,
+      "energy_dbfs": -14.23
+    },
+    {
+      "time": 69.51,
+      "strength": 0.2928,
+      "spectral_flux": 0.2145866,
+      "prominence": 0.2038744,
+      "energy_dbfs": -13.52
+    },
+    {
+      "time": 69.66,
+      "strength": 0.3171,
+      "spectral_flux": 0.2278458,
+      "prominence": 0.2204293,
+      "energy_dbfs": -10.81
+    },
+    {
+      "time": 69.82,
+      "strength": 0.2448,
+      "spectral_flux": 0.1861483,
+      "prominence": 0.1815343,
+      "energy_dbfs": -13.56
+    },
+    {
+      "time": 69.91,
+      "strength": 0.4656,
+      "spectral_flux": 0.3060936,
+      "prominence": 0.3030551,
+      "energy_dbfs": -9.16
+    },
+    {
+      "time": 70.01,
+      "strength": 0.2783,
+      "spectral_flux": 0.2047918,
+      "prominence": 0.1921258,
+      "energy_dbfs": -14.42
+    },
+    {
+      "time": 70.16,
+      "strength": 0.3359,
+      "spectral_flux": 0.2263095,
+      "prominence": 0.2227572,
+      "energy_dbfs": -15.12
+    },
+    {
+      "time": 70.31,
+      "strength": 0.5496,
+      "spectral_flux": 0.3386183,
+      "prominence": 0.3379372,
+      "energy_dbfs": -5.42
+    },
+    {
+      "time": 70.44,
+      "strength": 0.3464,
+      "spectral_flux": 0.2237434,
+      "prominence": 0.202873,
+      "energy_dbfs": -15.41
+    },
+    {
+      "time": 70.58,
+      "strength": 0.3997,
+      "spectral_flux": 0.2512817,
+      "prominence": 0.2469722,
+      "energy_dbfs": -15.38
+    },
+    {
+      "time": 70.71,
+      "strength": 0.6078,
+      "spectral_flux": 0.3647371,
+      "prominence": 0.3621184,
+      "energy_dbfs": -8.36
+    },
+    {
+      "time": 70.84,
+      "strength": 0.1941,
+      "spectral_flux": 0.1410825,
+      "prominence": 0.1372328,
+      "energy_dbfs": -14.05
+    },
+    {
+      "time": 70.98,
+      "strength": 0.498,
+      "spectral_flux": 0.305171,
+      "prominence": 0.3020034,
+      "energy_dbfs": -13.16
+    },
+    {
+      "time": 71.14,
+      "strength": 0.3713,
+      "spectral_flux": 0.2361199,
+      "prominence": 0.2315223,
+      "energy_dbfs": -14.02
+    },
+    {
+      "time": 71.25,
+      "strength": 0.7385,
+      "spectral_flux": 0.438542,
+      "prominence": 0.4359233,
+      "energy_dbfs": -8.34
+    },
+    {
+      "time": 71.4,
+      "strength": 0.3755,
+      "spectral_flux": 0.2399843,
+      "prominence": 0.2361153,
+      "energy_dbfs": -15.25
+    },
+    {
+      "time": 71.51,
+      "strength": 0.911,
+      "spectral_flux": 0.530112,
+      "prominence": 0.5259009,
+      "energy_dbfs": -14.41
+    },
+    {
+      "time": 71.68,
+      "strength": 0.2554,
+      "spectral_flux": 0.1725476,
+      "prominence": 0.1595492,
+      "energy_dbfs": -14.68
+    },
+    {
+      "time": 71.79,
+      "strength": 0.6238,
+      "spectral_flux": 0.3647602,
+      "prominence": 0.3593526,
+      "energy_dbfs": -2.77
+    },
+    {
+      "time": 71.92,
+      "strength": 0.2817,
+      "spectral_flux": 0.1771632,
+      "prominence": 0.1729522,
+      "energy_dbfs": -21.32
+    },
+    {
+      "time": 72.05,
+      "strength": 0.2226,
+      "spectral_flux": 0.1406744,
+      "prominence": 0.1343799,
+      "energy_dbfs": -20.5
+    },
+    {
+      "time": 72.18,
+      "strength": 0.4523,
+      "spectral_flux": 0.2614424,
+      "prominence": 0.2584467,
+      "energy_dbfs": -22.19
+    },
+    {
+      "time": 72.32,
+      "strength": 1.375,
+      "spectral_flux": 0.7628227,
+      "prominence": 0.7613719,
+      "energy_dbfs": -8.66
+    },
+    {
+      "time": 72.59,
+      "strength": 0.5805,
+      "spectral_flux": 0.3339125,
+      "prominence": 0.3283932,
+      "energy_dbfs": -19.78
+    },
+    {
+      "time": 72.73,
+      "strength": 0.6217,
+      "spectral_flux": 0.3587677,
+      "prominence": 0.3580201,
+      "energy_dbfs": -18.38
+    },
+    {
+      "time": 72.86,
+      "strength": 0.9797,
+      "spectral_flux": 0.5596152,
+      "prominence": 0.5546675,
+      "energy_dbfs": -4.04
+    },
+    {
+      "time": 72.99,
+      "strength": 0.2512,
+      "spectral_flux": 0.165163,
+      "prominence": 0.1545832,
+      "energy_dbfs": -16.49
+    },
+    {
+      "time": 73.12,
+      "strength": 0.281,
+      "spectral_flux": 0.1821162,
+      "prominence": 0.1771198,
+      "energy_dbfs": -15.54
+    },
+    {
+      "time": 73.31,
+      "strength": 0.2378,
+      "spectral_flux": 0.1639312,
+      "prominence": 0.1553601,
+      "energy_dbfs": -13.42
+    },
+    {
+      "time": 73.39,
+      "strength": 0.6906,
+      "spectral_flux": 0.4106774,
+      "prominence": 0.4057298,
+      "energy_dbfs": -9.48
+    },
+    {
+      "time": 73.53,
+      "strength": 0.4709,
+      "spectral_flux": 0.2871892,
+      "prominence": 0.282083,
+      "energy_dbfs": -20.95
+    },
+    {
+      "time": 73.69,
+      "strength": 0.5202,
+      "spectral_flux": 0.3081574,
+      "prominence": 0.2943246,
+      "energy_dbfs": -14.82
+    },
+    {
+      "time": 73.79,
+      "strength": 0.5869,
+      "spectral_flux": 0.3442688,
+      "prominence": 0.3410527,
+      "energy_dbfs": -8.61
+    },
+    {
+      "time": 73.93,
+      "strength": 0.3418,
+      "spectral_flux": 0.2067735,
+      "prominence": 0.2042435,
+      "energy_dbfs": -9.52
+    },
+    {
+      "time": 74.06,
+      "strength": 0.3478,
+      "spectral_flux": 0.2135309,
+      "prominence": 0.2109424,
+      "energy_dbfs": -23.82
+    },
+    {
+      "time": 74.19,
+      "strength": 0.8891,
+      "spectral_flux": 0.506124,
+      "prominence": 0.5052803,
+      "energy_dbfs": -6.49
+    },
+    {
+      "time": 74.33,
+      "strength": 0.558,
+      "spectral_flux": 0.323059,
+      "prominence": 0.3220729,
+      "energy_dbfs": -17.44
+    },
+    {
+      "time": 74.47,
+      "strength": 1.1443,
+      "spectral_flux": 0.6442524,
+      "prominence": 0.6419688,
+      "energy_dbfs": -8.03
+    },
+    {
+      "time": 74.61,
+      "strength": 0.3384,
+      "spectral_flux": 0.2074338,
+      "prominence": 0.2049242,
+      "energy_dbfs": -16.76
+    },
+    {
+      "time": 74.73,
+      "strength": 0.3824,
+      "spectral_flux": 0.2327566,
+      "prominence": 0.2303281,
+      "energy_dbfs": -15.54
+    },
+    {
+      "time": 74.87,
+      "strength": 0.4311,
+      "spectral_flux": 0.2623853,
+      "prominence": 0.2559876,
+      "energy_dbfs": -14.45
+    },
+    {
+      "time": 75.0,
+      "strength": 0.8988,
+      "spectral_flux": 0.5193912,
+      "prominence": 0.5161302,
+      "energy_dbfs": -4.31
+    },
+    {
+      "time": 75.13,
+      "strength": 0.1528,
+      "spectral_flux": 0.112833,
+      "prominence": 0.1016454,
+      "energy_dbfs": -14.03
+    },
+    {
+      "time": 75.27,
+      "strength": 0.3187,
+      "spectral_flux": 0.2059171,
+      "prominence": 0.2017718,
+      "energy_dbfs": -14.17
+    },
+    {
+      "time": 75.43,
+      "strength": 0.4092,
+      "spectral_flux": 0.255488,
+      "prominence": 0.2444402,
+      "energy_dbfs": -14.7
+    },
+    {
+      "time": 75.54,
+      "strength": 0.9566,
+      "spectral_flux": 0.5537035,
+      "prominence": 0.5504426,
+      "energy_dbfs": -7.97
+    },
+    {
+      "time": 75.67,
+      "strength": 0.3123,
+      "spectral_flux": 0.2030924,
+      "prominence": 0.1967891,
+      "energy_dbfs": -18.93
+    },
+    {
+      "time": 75.8,
+      "strength": 0.6488,
+      "spectral_flux": 0.3858269,
+      "prominence": 0.3795921,
+      "energy_dbfs": -12.91
+    },
+    {
+      "time": 75.94,
+      "strength": 0.3295,
+      "spectral_flux": 0.2107105,
+      "prominence": 0.1929348,
+      "energy_dbfs": -17.72
+    },
+    {
+      "time": 76.07,
+      "strength": 0.8702,
+      "spectral_flux": 0.4998832,
+      "prominence": 0.4980106,
+      "energy_dbfs": -4.42
+    },
+    {
+      "time": 76.2,
+      "strength": 0.3114,
+      "spectral_flux": 0.1951111,
+      "prominence": 0.1915895,
+      "energy_dbfs": -20.44
+    },
+    {
+      "time": 76.33,
+      "strength": 0.3518,
+      "spectral_flux": 0.2117772,
+      "prominence": 0.2079348,
+      "energy_dbfs": -18.79
+    },
+    {
+      "time": 76.46,
+      "strength": 0.4671,
+      "spectral_flux": 0.270811,
+      "prominence": 0.2670169,
+      "energy_dbfs": -21.46
+    },
+    {
+      "time": 76.61,
+      "strength": 1.1759,
+      "spectral_flux": 0.6558817,
+      "prominence": 0.6534187,
+      "energy_dbfs": -7.96
+    },
+    {
+      "time": 76.87,
+      "strength": 0.5269,
+      "spectral_flux": 0.3052657,
+      "prominence": 0.3004993,
+      "energy_dbfs": -20.36
+    },
+    {
+      "time": 77.0,
+      "strength": 0.6632,
+      "spectral_flux": 0.381986,
+      "prominence": 0.3794111,
+      "energy_dbfs": -18.97
+    },
+    {
+      "time": 77.14,
+      "strength": 1.2721,
+      "spectral_flux": 0.7172922,
+      "prominence": 0.7134344,
+      "energy_dbfs": -7.03
+    },
+    {
+      "time": 77.28,
+      "strength": 0.154,
+      "spectral_flux": 0.1115548,
+      "prominence": 0.1006444,
+      "energy_dbfs": -15.32
+    },
+    {
+      "time": 77.44,
+      "strength": 0.313,
+      "spectral_flux": 0.2005538,
+      "prominence": 0.1918986,
+      "energy_dbfs": -10.86
+    },
+    {
+      "time": 77.6,
+      "strength": 0.5,
+      "spectral_flux": 0.3052966,
+      "prominence": 0.2959209,
+      "energy_dbfs": -14.38
+    },
+    {
+      "time": 77.68,
+      "strength": 0.8783,
+      "spectral_flux": 0.5118622,
+      "prominence": 0.5059578,
+      "energy_dbfs": -8.45
+    },
+    {
+      "time": 77.86,
+      "strength": 0.5888,
+      "spectral_flux": 0.3546303,
+      "prominence": 0.3484635,
+      "energy_dbfs": -16.46
+    },
+    {
+      "time": 77.94,
+      "strength": 0.6004,
+      "spectral_flux": 0.3607009,
+      "prominence": 0.3537393,
+      "energy_dbfs": -15.46
+    },
+    {
+      "time": 78.09,
+      "strength": 0.4241,
+      "spectral_flux": 0.2655549,
+      "prominence": 0.2508439,
+      "energy_dbfs": -15.31
+    },
+    {
+      "time": 78.23,
+      "strength": 0.2895,
+      "spectral_flux": 0.1912489,
+      "prominence": 0.1802709,
+      "energy_dbfs": -14.35
+    },
+    {
+      "time": 78.35,
+      "strength": 0.1739,
+      "spectral_flux": 0.1283091,
+      "prominence": 0.1104832,
+      "energy_dbfs": -17.79
+    },
+    {
+      "time": 78.48,
+      "strength": 0.8647,
+      "spectral_flux": 0.5047902,
+      "prominence": 0.4978286,
+      "energy_dbfs": -10.9
+    },
+    {
+      "time": 78.63,
+      "strength": 0.2629,
+      "spectral_flux": 0.1796916,
+      "prominence": 0.1593675,
+      "energy_dbfs": -18.44
+    },
+    {
+      "time": 78.76,
+      "strength": 0.7622,
+      "spectral_flux": 0.4475687,
+      "prominence": 0.4376786,
+      "energy_dbfs": -18.42
+    },
+    {
+      "time": 78.88,
+      "strength": 0.8508,
+      "spectral_flux": 0.4972057,
+      "prominence": 0.4931149,
+      "energy_dbfs": -6.37
+    },
+    {
+      "time": 79.02,
+      "strength": 0.1626,
+      "spectral_flux": 0.1184564,
+      "prominence": 0.0988975,
+      "energy_dbfs": -15.2
+    },
+    {
+      "time": 79.16,
+      "strength": 0.3129,
+      "spectral_flux": 0.2003212,
+      "prominence": 0.1913216,
+      "energy_dbfs": -17.06
+    },
+    {
+      "time": 79.29,
+      "strength": 0.6329,
+      "spectral_flux": 0.3766263,
+      "prominence": 0.3726038,
+      "energy_dbfs": -3.71
+    },
+    {
+      "time": 79.42,
+      "strength": 0.1279,
+      "spectral_flux": 0.1034207,
+      "prominence": 0.0888434,
+      "energy_dbfs": -14.63
+    },
+    {
+      "time": 79.55,
+      "strength": 0.4858,
+      "spectral_flux": 0.2964264,
+      "prominence": 0.2843479,
+      "energy_dbfs": -13.33
+    },
+    {
+      "time": 79.69,
+      "strength": 0.295,
+      "spectral_flux": 0.1935426,
+      "prominence": 0.1884012,
+      "energy_dbfs": -20.51
+    },
+    {
+      "time": 79.83,
+      "strength": 0.6974,
+      "spectral_flux": 0.4140336,
+      "prominence": 0.4100111,
+      "energy_dbfs": -7.41
+    },
+    {
+      "time": 79.97,
+      "strength": 0.4419,
+      "spectral_flux": 0.2744116,
+      "prominence": 0.2708947,
+      "energy_dbfs": -15.62
+    },
+    {
+      "time": 80.08,
+      "strength": 0.5971,
+      "spectral_flux": 0.3588423,
+      "prominence": 0.3538368,
+      "energy_dbfs": -16.36
+    },
+    {
+      "time": 80.25,
+      "strength": 0.3143,
+      "spectral_flux": 0.2039609,
+      "prominence": 0.1867302,
+      "energy_dbfs": -14.67
+    },
+    {
+      "time": 80.36,
+      "strength": 0.7464,
+      "spectral_flux": 0.4363949,
+      "prominence": 0.4334851,
+      "energy_dbfs": -2.84
+    },
+    {
+      "time": 80.49,
+      "strength": 0.2494,
+      "spectral_flux": 0.1626842,
+      "prominence": 0.158734,
+      "energy_dbfs": -21.2
+    },
+    {
+      "time": 80.62,
+      "strength": 0.1784,
+      "spectral_flux": 0.1150498,
+      "prominence": 0.1068024,
+      "energy_dbfs": -20.61
+    },
+    {
+      "time": 80.75,
+      "strength": 0.3606,
+      "spectral_flux": 0.2129399,
+      "prominence": 0.2081754,
+      "energy_dbfs": -22.64
+    },
+    {
+      "time": 80.89,
+      "strength": 1.2509,
+      "spectral_flux": 0.6971057,
+      "prominence": 0.6959686,
+      "energy_dbfs": -9.1
+    },
+    {
+      "time": 81.16,
+      "strength": 0.5098,
+      "spectral_flux": 0.2944629,
+      "prominence": 0.2869972,
+      "energy_dbfs": -19.95
+    },
+    {
+      "time": 81.3,
+      "strength": 0.7229,
+      "spectral_flux": 0.4138958,
+      "prominence": 0.4127972,
+      "energy_dbfs": -18.54
+    },
+    {
+      "time": 81.43,
+      "strength": 1.1764,
+      "spectral_flux": 0.6626792,
+      "prominence": 0.6608359,
+      "energy_dbfs": -4.17
+    },
+    {
+      "time": 81.5,
+      "strength": 0.1092,
+      "spectral_flux": 0.0903632,
+      "prominence": 0.0785534,
+      "energy_dbfs": -18.02
+    },
+    {
+      "time": 81.57,
+      "strength": 0.2693,
+      "spectral_flux": 0.1776194,
+      "prominence": 0.1689355,
+      "energy_dbfs": -15.3
+    },
+    {
+      "time": 81.7,
+      "strength": 0.2266,
+      "spectral_flux": 0.1570238,
+      "prominence": 0.1528537,
+      "energy_dbfs": -13.9
+    },
+    {
+      "time": 81.89,
+      "strength": 0.3111,
+      "spectral_flux": 0.2064114,
+      "prominence": 0.1999179,
+      "energy_dbfs": -13.83
+    },
+    {
+      "time": 81.97,
+      "strength": 0.6532,
+      "spectral_flux": 0.3921928,
+      "prominence": 0.3897693,
+      "energy_dbfs": -8.63
+    },
+    {
+      "time": 82.15,
+      "strength": 0.4518,
+      "spectral_flux": 0.2770864,
+      "prominence": 0.2673953,
+      "energy_dbfs": -15.07
+    },
+    {
+      "time": 82.26,
+      "strength": 0.5763,
+      "spectral_flux": 0.3393511,
+      "prominence": 0.3321738,
+      "energy_dbfs": -14.46
+    },
+    {
+      "time": 82.37,
+      "strength": 0.7785,
+      "spectral_flux": 0.4510992,
+      "prominence": 0.4486757,
+      "energy_dbfs": -5.28
+    },
+    {
+      "time": 82.5,
+      "strength": 0.3672,
+      "spectral_flux": 0.2264503,
+      "prominence": 0.2211737,
+      "energy_dbfs": -10.69
+    },
+    {
+      "time": 82.64,
+      "strength": 0.3102,
+      "spectral_flux": 0.2040343,
+      "prominence": 0.2007546,
+      "energy_dbfs": -23.31
+    },
+    {
+      "time": 82.77,
+      "strength": 0.9607,
+      "spectral_flux": 0.553635,
+      "prominence": 0.5533385,
+      "energy_dbfs": -3.71
+    },
+    {
+      "time": 82.9,
+      "strength": 0.4367,
+      "spectral_flux": 0.2725484,
+      "prominence": 0.265259,
+      "energy_dbfs": -14.35
+    },
+    {
+      "time": 83.04,
+      "strength": 1.0726,
+      "spectral_flux": 0.6190743,
+      "prominence": 0.6182168,
+      "energy_dbfs": -8.05
+    },
+    {
+      "time": 83.18,
+      "strength": 0.3586,
+      "spectral_flux": 0.2309265,
+      "prominence": 0.2273132,
+      "energy_dbfs": -18.99
+    },
+    {
+      "time": 83.31,
+      "strength": 0.361,
+      "spectral_flux": 0.234997,
+      "prominence": 0.2197754,
+      "energy_dbfs": -14.87
+    },
+    {
+      "time": 83.44,
+      "strength": 0.4146,
+      "spectral_flux": 0.2584125,
+      "prominence": 0.256449,
+      "energy_dbfs": -14.8
+    },
+    {
+      "time": 83.57,
+      "strength": 1.0646,
+      "spectral_flux": 0.6102795,
+      "prominence": 0.6093787,
+      "energy_dbfs": -5.61
+    },
+    {
+      "time": 83.76,
+      "strength": 0.2596,
+      "spectral_flux": 0.1739417,
+      "prominence": 0.1689732,
+      "energy_dbfs": -14.65
+    },
+    {
+      "time": 83.84,
+      "strength": 0.2261,
+      "spectral_flux": 0.1540163,
+      "prominence": 0.1466307,
+      "energy_dbfs": -14.17
+    },
+    {
+      "time": 84.0,
+      "strength": 0.3335,
+      "spectral_flux": 0.2125271,
+      "prominence": 0.2035196,
+      "energy_dbfs": -15.98
+    },
+    {
+      "time": 84.11,
+      "strength": 0.6669,
+      "spectral_flux": 0.3956279,
+      "prominence": 0.3947271,
+      "energy_dbfs": -7.07
+    },
+    {
+      "time": 84.22,
+      "strength": 0.4766,
+      "spectral_flux": 0.2960921,
+      "prominence": 0.2914153,
+      "energy_dbfs": -17.06
+    },
+    {
+      "time": 84.37,
+      "strength": 0.9675,
+      "spectral_flux": 0.5605037,
+      "prominence": 0.5582596,
+      "energy_dbfs": -13.24
+    },
+    {
+      "time": 84.49,
+      "strength": 0.1971,
+      "spectral_flux": 0.1403646,
+      "prominence": 0.0920878,
+      "energy_dbfs": -16.45
+    },
+    {
+      "time": 84.56,
+      "strength": 0.2271,
+      "spectral_flux": 0.1560443,
+      "prominence": 0.1444198,
+      "energy_dbfs": -14.53
+    },
+    {
+      "time": 84.64,
+      "strength": 0.5026,
+      "spectral_flux": 0.3032591,
+      "prominence": 0.3010149,
+      "energy_dbfs": -5.47
+    },
+    {
+      "time": 84.75,
+      "strength": 0.155,
+      "spectral_flux": 0.1142358,
+      "prominence": 0.0952733,
+      "energy_dbfs": -19.47
+    },
+    {
+      "time": 84.82,
+      "strength": 0.287,
+      "spectral_flux": 0.1851879,
+      "prominence": 0.1736663,
+      "energy_dbfs": -19.24
+    },
+    {
+      "time": 84.91,
+      "strength": 0.4646,
+      "spectral_flux": 0.2803982,
+      "prominence": 0.2755392,
+      "energy_dbfs": -16.74
+    },
+    {
+      "time": 85.03,
+      "strength": 0.4875,
+      "spectral_flux": 0.2903152,
+      "prominence": 0.2873602,
+      "energy_dbfs": -19.91
+    },
+    {
+      "time": 85.18,
+      "strength": 1.2971,
+      "spectral_flux": 0.7239953,
+      "prominence": 0.7237268,
+      "energy_dbfs": -8.54
+    },
+    {
+      "time": 85.36,
+      "strength": 0.4765,
+      "spectral_flux": 0.2784745,
+      "prominence": 0.274367,
+      "energy_dbfs": -22.73
+    },
+    {
+      "time": 85.45,
+      "strength": 0.6533,
+      "spectral_flux": 0.3797141,
+      "prominence": 0.3764444,
+      "energy_dbfs": -18.28
+    },
+    {
+      "time": 85.58,
+      "strength": 0.5806,
+      "spectral_flux": 0.3466191,
+      "prominence": 0.3456254,
+      "energy_dbfs": -18.01
+    },
+    {
+      "time": 85.71,
+      "strength": 1.2228,
+      "spectral_flux": 0.6977819,
+      "prominence": 0.6901379,
+      "energy_dbfs": -7.05
+    },
+    {
+      "time": 85.8,
+      "strength": 0.2014,
+      "spectral_flux": 0.1419378,
+      "prominence": 0.1213745,
+      "energy_dbfs": -18.0
+    },
+    {
+      "time": 85.99,
+      "strength": 0.2579,
+      "spectral_flux": 0.1719077,
+      "prominence": 0.1626907,
+      "energy_dbfs": -13.03
+    },
+    {
+      "time": 86.17,
+      "strength": 0.416,
+      "spectral_flux": 0.266779,
+      "prominence": 0.2587832,
+      "energy_dbfs": -15.19
+    },
+    {
+      "time": 86.25,
+      "strength": 0.806,
+      "spectral_flux": 0.4793065,
+      "prominence": 0.4716625,
+      "energy_dbfs": -8.98
+    },
+    {
+      "time": 86.43,
+      "strength": 0.8398,
+      "spectral_flux": 0.4977057,
+      "prominence": 0.4926185,
+      "energy_dbfs": -15.73
+    },
+    {
+      "time": 86.52,
+      "strength": 0.4786,
+      "spectral_flux": 0.296091,
+      "prominence": 0.2877811,
+      "energy_dbfs": -16.42
+    },
+    {
+      "time": 86.64,
+      "strength": 0.3252,
+      "spectral_flux": 0.2175184,
+      "prominence": 0.2027232,
+      "energy_dbfs": -15.86
+    },
+    {
+      "time": 86.79,
+      "strength": 0.3334,
+      "spectral_flux": 0.2218883,
+      "prominence": 0.2076377,
+      "energy_dbfs": -13.96
+    },
+    {
+      "time": 87.05,
+      "strength": 0.65,
+      "spectral_flux": 0.3884599,
+      "prominence": 0.3833728,
+      "energy_dbfs": -10.72
+    },
+    {
+      "time": 87.19,
+      "strength": 0.4207,
+      "spectral_flux": 0.2649035,
+      "prominence": 0.2503296,
+      "energy_dbfs": -14.31
+    },
+    {
+      "time": 87.33,
+      "strength": 0.571,
+      "spectral_flux": 0.3445117,
+      "prominence": 0.3396492,
+      "energy_dbfs": -19.8
+    },
+    {
+      "time": 87.45,
+      "strength": 0.3266,
+      "spectral_flux": 0.2059529,
+      "prominence": 0.1944684,
+      "energy_dbfs": -17.53
+    },
+    {
+      "time": 87.59,
+      "strength": 0.975,
+      "spectral_flux": 0.550473,
+      "prominence": 0.5503972,
+      "energy_dbfs": -3.48
+    },
+    {
+      "time": 87.72,
+      "strength": 0.7163,
+      "spectral_flux": 0.4056312,
+      "prominence": 0.386925,
+      "energy_dbfs": -7.24
+    },
+    {
+      "time": 88.14,
+      "strength": 0.0828,
+      "spectral_flux": 0.047691,
+      "prominence": 0.0476152,
+      "energy_dbfs": -38.1
+    },
+    {
+      "time": 88.29,
+      "strength": 0.0417,
+      "spectral_flux": 0.0233395,
+      "prominence": 0.0227505,
+      "energy_dbfs": -40.87
+    }
+  ],
+  "local_windows": [
+    {
+      "start": 0.0,
+      "end": 12.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.2884,
+      "onset_count": 67,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 149.36,
+          "score": 0.2884,
+          "autocorrelation": 0.2785,
+          "grid_support": 0.8,
+          "onset_mass_supported": 0.3508
+        },
+        {
+          "bpm": 112.13,
+          "score": 0.2794,
+          "autocorrelation": 0.2376,
+          "grid_support": 0.8636,
+          "onset_mass_supported": 0.3682
+        },
+        {
+          "bpm": 74.84,
+          "score": 0.2138,
+          "autocorrelation": 0.2388,
+          "grid_support": 0.9333,
+          "onset_mass_supported": 0.2114
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0124,
+      "reason": "ambiguous_period"
+    },
+    {
+      "start": 4.0,
+      "end": 16.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.2948,
+      "onset_count": 75,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 149.38,
+          "score": 0.2948,
+          "autocorrelation": 0.2872,
+          "grid_support": 0.8333,
+          "onset_mass_supported": 0.3462
+        },
+        {
+          "bpm": 111.76,
+          "score": 0.2706,
+          "autocorrelation": 0.2354,
+          "grid_support": 0.9091,
+          "onset_mass_supported": 0.3708
+        },
+        {
+          "bpm": 89.58,
+          "score": 0.1999,
+          "autocorrelation": 0.169,
+          "grid_support": 0.7778,
+          "onset_mass_supported": 0.2267
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0113,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 8.0,
+      "end": 20.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.2999,
+      "onset_count": 73,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 149.19,
+          "score": 0.2999,
+          "autocorrelation": 0.3342,
+          "grid_support": 0.8333,
+          "onset_mass_supported": 0.3539
+        },
+        {
+          "bpm": 111.62,
+          "score": 0.296,
+          "autocorrelation": 0.216,
+          "grid_support": 0.913,
+          "onset_mass_supported": 0.3668
+        },
+        {
+          "bpm": 56.18,
+          "score": 0.2089,
+          "autocorrelation": 0.2322,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2334
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0138,
+      "reason": "ambiguous_period"
+    },
+    {
+      "start": 12.0,
+      "end": 24.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.3555,
+      "onset_count": 72,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.83,
+          "score": 0.3555,
+          "autocorrelation": 0.2918,
+          "grid_support": 0.9545,
+          "onset_mass_supported": 0.3851
+        },
+        {
+          "bpm": 149.39,
+          "score": 0.3048,
+          "autocorrelation": 0.2967,
+          "grid_support": 0.7667,
+          "onset_mass_supported": 0.3565
+        },
+        {
+          "bpm": 55.98,
+          "score": 0.2391,
+          "autocorrelation": 0.366,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2124
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0049,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 16.0,
+      "end": 28.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4436,
+      "onset_count": 69,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 112.01,
+          "score": 0.4436,
+          "autocorrelation": 0.376,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4664
+        },
+        {
+          "bpm": 56.04,
+          "score": 0.3129,
+          "autocorrelation": 0.5039,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2614
+        },
+        {
+          "bpm": 149.6,
+          "score": 0.2951,
+          "autocorrelation": 0.3061,
+          "grid_support": 0.7333,
+          "onset_mass_supported": 0.358
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.003,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 20.0,
+      "end": 32.0,
+      "bpm": 111.96,
+      "confidence": "supported_local_pulse",
+      "score": 0.4802,
+      "onset_count": 70,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.96,
+          "score": 0.4802,
+          "autocorrelation": 0.4244,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4981
+        },
+        {
+          "bpm": 55.98,
+          "score": 0.3666,
+          "autocorrelation": 0.6225,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2937
+        },
+        {
+          "bpm": 149.11,
+          "score": 0.2735,
+          "autocorrelation": 0.2592,
+          "grid_support": 0.7931,
+          "onset_mass_supported": 0.3413
+        }
+      ],
+      "beat_candidates": [
+        {
+          "time": 20.36,
+          "grid_time": 20.3579,
+          "grid_offset_seconds": 0.0021,
+          "onset_strength": 0.9986
+        },
+        {
+          "time": 20.89,
+          "grid_time": 20.8938,
+          "grid_offset_seconds": -0.0038,
+          "onset_strength": 0.9428
+        },
+        {
+          "time": 21.43,
+          "grid_time": 21.4297,
+          "grid_offset_seconds": 0.0003,
+          "onset_strength": 0.5707
+        },
+        {
+          "time": 21.97,
+          "grid_time": 21.9656,
+          "grid_offset_seconds": 0.0044,
+          "onset_strength": 0.937
+        },
+        {
+          "time": 22.5,
+          "grid_time": 22.5015,
+          "grid_offset_seconds": -0.0015,
+          "onset_strength": 0.2914
+        },
+        {
+          "time": 23.04,
+          "grid_time": 23.0375,
+          "grid_offset_seconds": 0.0025,
+          "onset_strength": 1.1619
+        },
+        {
+          "time": 23.57,
+          "grid_time": 23.5734,
+          "grid_offset_seconds": -0.0034,
+          "onset_strength": 0.8613
+        },
+        {
+          "time": 24.11,
+          "grid_time": 24.1093,
+          "grid_offset_seconds": 0.0007,
+          "onset_strength": 0.9164
+        },
+        {
+          "time": 24.64,
+          "grid_time": 24.6452,
+          "grid_offset_seconds": -0.0052,
+          "onset_strength": 0.9713
+        },
+        {
+          "time": 25.18,
+          "grid_time": 25.1811,
+          "grid_offset_seconds": -0.0011,
+          "onset_strength": 1.0807
+        },
+        {
+          "time": 25.72,
+          "grid_time": 25.717,
+          "grid_offset_seconds": 0.003,
+          "onset_strength": 0.4242
+        },
+        {
+          "time": 26.25,
+          "grid_time": 26.253,
+          "grid_offset_seconds": -0.003,
+          "onset_strength": 1.1551
+        },
+        {
+          "time": 26.79,
+          "grid_time": 26.7889,
+          "grid_offset_seconds": 0.0011,
+          "onset_strength": 0.2427
+        },
+        {
+          "time": 27.33,
+          "grid_time": 27.3248,
+          "grid_offset_seconds": 0.0052,
+          "onset_strength": 0.6179
+        },
+        {
+          "time": 27.86,
+          "grid_time": 27.8607,
+          "grid_offset_seconds": -0.0007,
+          "onset_strength": 0.8852
+        },
+        {
+          "time": 28.4,
+          "grid_time": 28.3966,
+          "grid_offset_seconds": 0.0034,
+          "onset_strength": 0.7797
+        },
+        {
+          "time": 28.93,
+          "grid_time": 28.9325,
+          "grid_offset_seconds": -0.0025,
+          "onset_strength": 0.9576
+        },
+        {
+          "time": 29.47,
+          "grid_time": 29.4685,
+          "grid_offset_seconds": 0.0015,
+          "onset_strength": 1.0192
+        },
+        {
+          "time": 30.0,
+          "grid_time": 30.0044,
+          "grid_offset_seconds": -0.0044,
+          "onset_strength": 0.639
+        },
+        {
+          "time": 30.54,
+          "grid_time": 30.5403,
+          "grid_offset_seconds": -0.0003,
+          "onset_strength": 1.0832
+        },
+        {
+          "time": 31.08,
+          "grid_time": 31.0762,
+          "grid_offset_seconds": 0.0038,
+          "onset_strength": 0.2532
+        },
+        {
+          "time": 31.61,
+          "grid_time": 31.6121,
+          "grid_offset_seconds": -0.0021,
+          "onset_strength": 1.3065
+        }
+      ],
+      "median_grid_error_seconds": 0.0025,
+      "reason": "periodic_onset_support"
+    },
+    {
+      "start": 24.0,
+      "end": 36.0,
+      "bpm": 111.99,
+      "confidence": "supported_local_pulse",
+      "score": 0.5103,
+      "onset_count": 68,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.99,
+          "score": 0.5103,
+          "autocorrelation": 0.4804,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.5232
+        },
+        {
+          "bpm": 56.01,
+          "score": 0.3978,
+          "autocorrelation": 0.6219,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.3267
+        },
+        {
+          "bpm": 149.4,
+          "score": 0.2997,
+          "autocorrelation": 0.2677,
+          "grid_support": 0.7,
+          "onset_mass_supported": 0.3622
+        }
+      ],
+      "beat_candidates": [
+        {
+          "time": 24.11,
+          "grid_time": 24.1096,
+          "grid_offset_seconds": 0.0004,
+          "onset_strength": 0.9164
+        },
+        {
+          "time": 24.64,
+          "grid_time": 24.6453,
+          "grid_offset_seconds": -0.0053,
+          "onset_strength": 0.9713
+        },
+        {
+          "time": 25.18,
+          "grid_time": 25.1811,
+          "grid_offset_seconds": -0.0011,
+          "onset_strength": 1.0807
+        },
+        {
+          "time": 25.72,
+          "grid_time": 25.7169,
+          "grid_offset_seconds": 0.0031,
+          "onset_strength": 0.4242
+        },
+        {
+          "time": 26.25,
+          "grid_time": 26.2526,
+          "grid_offset_seconds": -0.0026,
+          "onset_strength": 1.1551
+        },
+        {
+          "time": 26.79,
+          "grid_time": 26.7884,
+          "grid_offset_seconds": 0.0016,
+          "onset_strength": 0.2427
+        },
+        {
+          "time": 27.33,
+          "grid_time": 27.3242,
+          "grid_offset_seconds": 0.0058,
+          "onset_strength": 0.6179
+        },
+        {
+          "time": 27.86,
+          "grid_time": 27.86,
+          "grid_offset_seconds": 0.0,
+          "onset_strength": 0.8852
+        },
+        {
+          "time": 28.4,
+          "grid_time": 28.3957,
+          "grid_offset_seconds": 0.0043,
+          "onset_strength": 0.7797
+        },
+        {
+          "time": 28.93,
+          "grid_time": 28.9315,
+          "grid_offset_seconds": -0.0015,
+          "onset_strength": 0.9576
+        },
+        {
+          "time": 29.47,
+          "grid_time": 29.4673,
+          "grid_offset_seconds": 0.0027,
+          "onset_strength": 1.0192
+        },
+        {
+          "time": 30.0,
+          "grid_time": 30.003,
+          "grid_offset_seconds": -0.003,
+          "onset_strength": 0.639
+        },
+        {
+          "time": 30.54,
+          "grid_time": 30.5388,
+          "grid_offset_seconds": 0.0012,
+          "onset_strength": 1.0832
+        },
+        {
+          "time": 31.08,
+          "grid_time": 31.0746,
+          "grid_offset_seconds": 0.0054,
+          "onset_strength": 0.2532
+        },
+        {
+          "time": 31.61,
+          "grid_time": 31.6104,
+          "grid_offset_seconds": -0.0004,
+          "onset_strength": 1.3065
+        },
+        {
+          "time": 32.14,
+          "grid_time": 32.1461,
+          "grid_offset_seconds": -0.0061,
+          "onset_strength": 0.7044
+        },
+        {
+          "time": 32.68,
+          "grid_time": 32.6819,
+          "grid_offset_seconds": -0.0019,
+          "onset_strength": 0.9665
+        },
+        {
+          "time": 33.21,
+          "grid_time": 33.2177,
+          "grid_offset_seconds": -0.0077,
+          "onset_strength": 0.5771
+        },
+        {
+          "time": 33.75,
+          "grid_time": 33.7534,
+          "grid_offset_seconds": -0.0034,
+          "onset_strength": 1.1797
+        },
+        {
+          "time": 34.29,
+          "grid_time": 34.2892,
+          "grid_offset_seconds": 0.0008,
+          "onset_strength": 0.6573
+        },
+        {
+          "time": 34.82,
+          "grid_time": 34.825,
+          "grid_offset_seconds": -0.005,
+          "onset_strength": 1.0588
+        },
+        {
+          "time": 35.37,
+          "grid_time": 35.3608,
+          "grid_offset_seconds": 0.0092,
+          "onset_strength": 0.408
+        },
+        {
+          "time": 35.9,
+          "grid_time": 35.8965,
+          "grid_offset_seconds": 0.0035,
+          "onset_strength": 0.8944
+        }
+      ],
+      "median_grid_error_seconds": 0.003,
+      "reason": "periodic_onset_support"
+    },
+    {
+      "start": 28.0,
+      "end": 40.0,
+      "bpm": 112.0,
+      "confidence": "supported_local_pulse",
+      "score": 0.4863,
+      "onset_count": 71,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 112.0,
+          "score": 0.4863,
+          "autocorrelation": 0.4965,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4797
+        },
+        {
+          "bpm": 149.14,
+          "score": 0.2976,
+          "autocorrelation": 0.2435,
+          "grid_support": 0.8333,
+          "onset_mass_supported": 0.3483
+        },
+        {
+          "bpm": 56.31,
+          "score": 0.283,
+          "autocorrelation": 0.6831,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2984
+        }
+      ],
+      "beat_candidates": [
+        {
+          "time": 28.4,
+          "grid_time": 28.3958,
+          "grid_offset_seconds": 0.0042,
+          "onset_strength": 0.7797
+        },
+        {
+          "time": 28.93,
+          "grid_time": 28.9316,
+          "grid_offset_seconds": -0.0016,
+          "onset_strength": 0.9576
+        },
+        {
+          "time": 29.47,
+          "grid_time": 29.4673,
+          "grid_offset_seconds": 0.0027,
+          "onset_strength": 1.0192
+        },
+        {
+          "time": 30.0,
+          "grid_time": 30.003,
+          "grid_offset_seconds": -0.003,
+          "onset_strength": 0.639
+        },
+        {
+          "time": 30.54,
+          "grid_time": 30.5387,
+          "grid_offset_seconds": 0.0013,
+          "onset_strength": 1.0832
+        },
+        {
+          "time": 31.08,
+          "grid_time": 31.0744,
+          "grid_offset_seconds": 0.0056,
+          "onset_strength": 0.2532
+        },
+        {
+          "time": 31.61,
+          "grid_time": 31.6102,
+          "grid_offset_seconds": -0.0002,
+          "onset_strength": 1.3065
+        },
+        {
+          "time": 32.14,
+          "grid_time": 32.1459,
+          "grid_offset_seconds": -0.0059,
+          "onset_strength": 0.7044
+        },
+        {
+          "time": 32.68,
+          "grid_time": 32.6816,
+          "grid_offset_seconds": -0.0016,
+          "onset_strength": 0.9665
+        },
+        {
+          "time": 33.21,
+          "grid_time": 33.2173,
+          "grid_offset_seconds": -0.0073,
+          "onset_strength": 0.5771
+        },
+        {
+          "time": 33.75,
+          "grid_time": 33.753,
+          "grid_offset_seconds": -0.003,
+          "onset_strength": 1.1797
+        },
+        {
+          "time": 34.29,
+          "grid_time": 34.2888,
+          "grid_offset_seconds": 0.0012,
+          "onset_strength": 0.6573
+        },
+        {
+          "time": 34.82,
+          "grid_time": 34.8245,
+          "grid_offset_seconds": -0.0045,
+          "onset_strength": 1.0588
+        },
+        {
+          "time": 35.37,
+          "grid_time": 35.3602,
+          "grid_offset_seconds": 0.0098,
+          "onset_strength": 0.408
+        },
+        {
+          "time": 35.9,
+          "grid_time": 35.8959,
+          "grid_offset_seconds": 0.0041,
+          "onset_strength": 0.8944
+        },
+        {
+          "time": 36.43,
+          "grid_time": 36.4316,
+          "grid_offset_seconds": -0.0016,
+          "onset_strength": 0.8327
+        },
+        {
+          "time": 36.97,
+          "grid_time": 36.9674,
+          "grid_offset_seconds": 0.0026,
+          "onset_strength": 0.9303
+        },
+        {
+          "time": 37.5,
+          "grid_time": 37.5031,
+          "grid_offset_seconds": -0.0031,
+          "onset_strength": 1.2941
+        },
+        {
+          "time": 38.04,
+          "grid_time": 38.0388,
+          "grid_offset_seconds": 0.0012,
+          "onset_strength": 1.0036
+        },
+        {
+          "time": 38.57,
+          "grid_time": 38.5745,
+          "grid_offset_seconds": -0.0045,
+          "onset_strength": 1.2469
+        },
+        {
+          "time": 39.11,
+          "grid_time": 39.1102,
+          "grid_offset_seconds": -0.0002,
+          "onset_strength": 1.1069
+        },
+        {
+          "time": 39.65,
+          "grid_time": 39.646,
+          "grid_offset_seconds": 0.004,
+          "onset_strength": 0.5035
+        }
+      ],
+      "median_grid_error_seconds": 0.003,
+      "reason": "periodic_onset_support"
+    },
+    {
+      "start": 32.0,
+      "end": 44.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4338,
+      "onset_count": 73,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.69,
+          "score": 0.4338,
+          "autocorrelation": 0.5706,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4938
+        },
+        {
+          "bpm": 56.02,
+          "score": 0.364,
+          "autocorrelation": 0.7049,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2751
+        },
+        {
+          "bpm": 74.69,
+          "score": 0.2925,
+          "autocorrelation": 0.387,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2597
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0187,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 36.0,
+      "end": 48.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4315,
+      "onset_count": 81,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.63,
+          "score": 0.4315,
+          "autocorrelation": 0.5469,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4512
+        },
+        {
+          "bpm": 149.04,
+          "score": 0.2953,
+          "autocorrelation": 0.1792,
+          "grid_support": 0.8667,
+          "onset_mass_supported": 0.3741
+        },
+        {
+          "bpm": 74.65,
+          "score": 0.2764,
+          "autocorrelation": 0.41,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2423
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0128,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 40.0,
+      "end": 52.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4039,
+      "onset_count": 82,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.57,
+          "score": 0.4039,
+          "autocorrelation": 0.5606,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4707
+        },
+        {
+          "bpm": 56.0,
+          "score": 0.3306,
+          "autocorrelation": 0.6065,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2595
+        },
+        {
+          "bpm": 149.17,
+          "score": 0.2862,
+          "autocorrelation": 0.1499,
+          "grid_support": 0.8333,
+          "onset_mass_supported": 0.3696
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0214,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 44.0,
+      "end": 56.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.3577,
+      "onset_count": 87,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.41,
+          "score": 0.3577,
+          "autocorrelation": 0.448,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4367
+        },
+        {
+          "bpm": 74.69,
+          "score": 0.2539,
+          "autocorrelation": 0.3703,
+          "grid_support": 0.9333,
+          "onset_mass_supported": 0.2308
+        },
+        {
+          "bpm": 148.92,
+          "score": 0.2459,
+          "autocorrelation": 0.19,
+          "grid_support": 0.8621,
+          "onset_mass_supported": 0.3561
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0217,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 48.0,
+      "end": 60.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4161,
+      "onset_count": 81,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 112.06,
+          "score": 0.4161,
+          "autocorrelation": 0.418,
+          "grid_support": 0.9565,
+          "onset_mass_supported": 0.4189
+        },
+        {
+          "bpm": 56.01,
+          "score": 0.2827,
+          "autocorrelation": 0.5285,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2264
+        },
+        {
+          "bpm": 149.37,
+          "score": 0.2496,
+          "autocorrelation": 0.2129,
+          "grid_support": 0.7586,
+          "onset_mass_supported": 0.3595
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0032,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 52.0,
+      "end": 64.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.369,
+      "onset_count": 80,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.55,
+          "score": 0.369,
+          "autocorrelation": 0.3756,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4145
+        },
+        {
+          "bpm": 149.45,
+          "score": 0.3092,
+          "autocorrelation": 0.2427,
+          "grid_support": 0.8667,
+          "onset_mass_supported": 0.3751
+        },
+        {
+          "bpm": 56.02,
+          "score": 0.2521,
+          "autocorrelation": 0.4155,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2172
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0124,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 56.0,
+      "end": 68.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4361,
+      "onset_count": 76,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.92,
+          "score": 0.4361,
+          "autocorrelation": 0.4626,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4359
+        },
+        {
+          "bpm": 149.35,
+          "score": 0.3534,
+          "autocorrelation": 0.264,
+          "grid_support": 0.8667,
+          "onset_mass_supported": 0.4151
+        },
+        {
+          "bpm": 55.97,
+          "score": 0.279,
+          "autocorrelation": 0.4497,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2382
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0053,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 60.0,
+      "end": 72.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4277,
+      "onset_count": 81,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 112.01,
+          "score": 0.4277,
+          "autocorrelation": 0.4778,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.4088
+        },
+        {
+          "bpm": 149.3,
+          "score": 0.3567,
+          "autocorrelation": 0.31,
+          "grid_support": 0.9333,
+          "onset_mass_supported": 0.3826
+        },
+        {
+          "bpm": 74.74,
+          "score": 0.2688,
+          "autocorrelation": 0.364,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2511
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0037,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 64.0,
+      "end": 76.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4185,
+      "onset_count": 84,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.99,
+          "score": 0.4185,
+          "autocorrelation": 0.5058,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.3832
+        },
+        {
+          "bpm": 149.14,
+          "score": 0.3407,
+          "autocorrelation": 0.3943,
+          "grid_support": 0.9333,
+          "onset_mass_supported": 0.3499
+        },
+        {
+          "bpm": 89.82,
+          "score": 0.2494,
+          "autocorrelation": 0.4038,
+          "grid_support": 0.9444,
+          "onset_mass_supported": 0.2439
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0029,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 68.0,
+      "end": 80.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.4154,
+      "onset_count": 86,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.84,
+          "score": 0.4154,
+          "autocorrelation": 0.4908,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.3958
+        },
+        {
+          "bpm": 149.38,
+          "score": 0.3439,
+          "autocorrelation": 0.4465,
+          "grid_support": 0.9333,
+          "onset_mass_supported": 0.3359
+        },
+        {
+          "bpm": 56.0,
+          "score": 0.248,
+          "autocorrelation": 0.5415,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2294
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.005,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 72.0,
+      "end": 84.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.3958,
+      "onset_count": 87,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.95,
+          "score": 0.3958,
+          "autocorrelation": 0.5073,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.395
+        },
+        {
+          "bpm": 149.53,
+          "score": 0.341,
+          "autocorrelation": 0.4425,
+          "grid_support": 0.9,
+          "onset_mass_supported": 0.3329
+        },
+        {
+          "bpm": 74.77,
+          "score": 0.2663,
+          "autocorrelation": 0.459,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.23
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0102,
+      "reason": "weak_periodic_support"
+    },
+    {
+      "start": 76.0,
+      "end": 88.0,
+      "bpm": null,
+      "confidence": "uncertain",
+      "score": 0.3828,
+      "onset_count": 88,
+      "sound_source_type": "unclassified",
+      "alternatives": [
+        {
+          "bpm": 111.89,
+          "score": 0.3828,
+          "autocorrelation": 0.4966,
+          "grid_support": 0.9565,
+          "onset_mass_supported": 0.3683
+        },
+        {
+          "bpm": 149.24,
+          "score": 0.334,
+          "autocorrelation": 0.3181,
+          "grid_support": 0.9655,
+          "onset_mass_supported": 0.3604
+        },
+        {
+          "bpm": 56.0,
+          "score": 0.2269,
+          "autocorrelation": 0.5115,
+          "grid_support": 1.0,
+          "onset_mass_supported": 0.2253
+        }
+      ],
+      "beat_candidates": [],
+      "median_grid_error_seconds": 0.0069,
+      "reason": "weak_periodic_support"
+    }
+  ],
+  "beat_candidates": [
+    {
+      "time": 20.36,
+      "grid_time": 20.3579,
+      "grid_offset_seconds": 0.0021,
+      "onset_strength": 0.9986,
+      "supporting_windows": [
+        5
+      ]
+    },
+    {
+      "time": 20.89,
+      "grid_time": 20.8938,
+      "grid_offset_seconds": -0.0038,
+      "onset_strength": 0.9428,
+      "supporting_windows": [
+        5
+      ]
+    },
+    {
+      "time": 21.43,
+      "grid_time": 21.4297,
+      "grid_offset_seconds": 0.0003,
+      "onset_strength": 0.5707,
+      "supporting_windows": [
+        5
+      ]
+    },
+    {
+      "time": 21.97,
+      "grid_time": 21.9656,
+      "grid_offset_seconds": 0.0044,
+      "onset_strength": 0.937,
+      "supporting_windows": [
+        5
+      ]
+    },
+    {
+      "time": 22.5,
+      "grid_time": 22.5015,
+      "grid_offset_seconds": -0.0015,
+      "onset_strength": 0.2914,
+      "supporting_windows": [
+        5
+      ]
+    },
+    {
+      "time": 23.04,
+      "grid_time": 23.0375,
+      "grid_offset_seconds": 0.0025,
+      "onset_strength": 1.1619,
+      "supporting_windows": [
+        5
+      ]
+    },
+    {
+      "time": 23.57,
+      "grid_time": 23.5734,
+      "grid_offset_seconds": -0.0034,
+      "onset_strength": 0.8613,
+      "supporting_windows": [
+        5
+      ]
+    },
+    {
+      "time": 24.11,
+      "grid_time": 24.1093,
+      "grid_offset_seconds": 0.0007,
+      "onset_strength": 0.9164,
+      "supporting_windows": [
+        5,
+        6
+      ]
+    },
+    {
+      "time": 24.64,
+      "grid_time": 24.6452,
+      "grid_offset_seconds": -0.0052,
+      "onset_strength": 0.9713,
+      "supporting_windows": [
+        5,
+        6
+      ]
+    },
+    {
+      "time": 25.18,
+      "grid_time": 25.1811,
+      "grid_offset_seconds": -0.0011,
+      "onset_strength": 1.0807,
+      "supporting_windows": [
+        5,
+        6
+      ]
+    },
+    {
+      "time": 25.72,
+      "grid_time": 25.717,
+      "grid_offset_seconds": 0.003,
+      "onset_strength": 0.4242,
+      "supporting_windows": [
+        5,
+        6
+      ]
+    },
+    {
+      "time": 26.25,
+      "grid_time": 26.253,
+      "grid_offset_seconds": -0.003,
+      "onset_strength": 1.1551,
+      "supporting_windows": [
+        5,
+        6
+      ]
+    },
+    {
+      "time": 26.79,
+      "grid_time": 26.7889,
+      "grid_offset_seconds": 0.0011,
+      "onset_strength": 0.2427,
+      "supporting_windows": [
+        5,
+        6
+      ]
+    },
+    {
+      "time": 27.33,
+      "grid_time": 27.3248,
+      "grid_offset_seconds": 0.0052,
+      "onset_strength": 0.6179,
+      "supporting_windows": [
+        5,
+        6
+      ]
+    },
+    {
+      "time": 27.86,
+      "grid_time": 27.8607,
+      "grid_offset_seconds": -0.0007,
+      "onset_strength": 0.8852,
+      "supporting_windows": [
+        5,
+        6
+      ]
+    },
+    {
+      "time": 28.4,
+      "grid_time": 28.3966,
+      "grid_offset_seconds": 0.0034,
+      "onset_strength": 0.7797,
+      "supporting_windows": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "time": 28.93,
+      "grid_time": 28.9325,
+      "grid_offset_seconds": -0.0025,
+      "onset_strength": 0.9576,
+      "supporting_windows": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "time": 29.47,
+      "grid_time": 29.4685,
+      "grid_offset_seconds": 0.0015,
+      "onset_strength": 1.0192,
+      "supporting_windows": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "time": 30.0,
+      "grid_time": 30.0044,
+      "grid_offset_seconds": -0.0044,
+      "onset_strength": 0.639,
+      "supporting_windows": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "time": 30.54,
+      "grid_time": 30.5403,
+      "grid_offset_seconds": -0.0003,
+      "onset_strength": 1.0832,
+      "supporting_windows": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "time": 31.08,
+      "grid_time": 31.0762,
+      "grid_offset_seconds": 0.0038,
+      "onset_strength": 0.2532,
+      "supporting_windows": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "time": 31.61,
+      "grid_time": 31.6121,
+      "grid_offset_seconds": -0.0021,
+      "onset_strength": 1.3065,
+      "supporting_windows": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "time": 32.14,
+      "grid_time": 32.1461,
+      "grid_offset_seconds": -0.0061,
+      "onset_strength": 0.7044,
+      "supporting_windows": [
+        6,
+        7
+      ]
+    },
+    {
+      "time": 32.68,
+      "grid_time": 32.6819,
+      "grid_offset_seconds": -0.0019,
+      "onset_strength": 0.9665,
+      "supporting_windows": [
+        6,
+        7
+      ]
+    },
+    {
+      "time": 33.21,
+      "grid_time": 33.2177,
+      "grid_offset_seconds": -0.0077,
+      "onset_strength": 0.5771,
+      "supporting_windows": [
+        6,
+        7
+      ]
+    },
+    {
+      "time": 33.75,
+      "grid_time": 33.7534,
+      "grid_offset_seconds": -0.0034,
+      "onset_strength": 1.1797,
+      "supporting_windows": [
+        6,
+        7
+      ]
+    },
+    {
+      "time": 34.29,
+      "grid_time": 34.2892,
+      "grid_offset_seconds": 0.0008,
+      "onset_strength": 0.6573,
+      "supporting_windows": [
+        6,
+        7
+      ]
+    },
+    {
+      "time": 34.82,
+      "grid_time": 34.825,
+      "grid_offset_seconds": -0.005,
+      "onset_strength": 1.0588,
+      "supporting_windows": [
+        6,
+        7
+      ]
+    },
+    {
+      "time": 35.37,
+      "grid_time": 35.3608,
+      "grid_offset_seconds": 0.0092,
+      "onset_strength": 0.408,
+      "supporting_windows": [
+        6,
+        7
+      ]
+    },
+    {
+      "time": 35.9,
+      "grid_time": 35.8965,
+      "grid_offset_seconds": 0.0035,
+      "onset_strength": 0.8944,
+      "supporting_windows": [
+        6,
+        7
+      ]
+    },
+    {
+      "time": 36.43,
+      "grid_time": 36.4316,
+      "grid_offset_seconds": -0.0016,
+      "onset_strength": 0.8327,
+      "supporting_windows": [
+        7
+      ]
+    },
+    {
+      "time": 36.97,
+      "grid_time": 36.9674,
+      "grid_offset_seconds": 0.0026,
+      "onset_strength": 0.9303,
+      "supporting_windows": [
+        7
+      ]
+    },
+    {
+      "time": 37.5,
+      "grid_time": 37.5031,
+      "grid_offset_seconds": -0.0031,
+      "onset_strength": 1.2941,
+      "supporting_windows": [
+        7
+      ]
+    },
+    {
+      "time": 38.04,
+      "grid_time": 38.0388,
+      "grid_offset_seconds": 0.0012,
+      "onset_strength": 1.0036,
+      "supporting_windows": [
+        7
+      ]
+    },
+    {
+      "time": 38.57,
+      "grid_time": 38.5745,
+      "grid_offset_seconds": -0.0045,
+      "onset_strength": 1.2469,
+      "supporting_windows": [
+        7
+      ]
+    },
+    {
+      "time": 39.11,
+      "grid_time": 39.1102,
+      "grid_offset_seconds": -0.0002,
+      "onset_strength": 1.1069,
+      "supporting_windows": [
+        7
+      ]
+    },
+    {
+      "time": 39.65,
+      "grid_time": 39.646,
+      "grid_offset_seconds": 0.004,
+      "onset_strength": 0.5035,
+      "supporting_windows": [
+        7
+      ]
+    }
+  ],
+  "energy_by_second": [
+    {
+      "start": 0,
+      "end": 1.0,
+      "mean_dbfs": -33.07,
+      "peak_window_dbfs": -18.68
+    },
+    {
+      "start": 1,
+      "end": 2.0,
+      "mean_dbfs": -23.36,
+      "peak_window_dbfs": -17.13
+    },
+    {
+      "start": 2,
+      "end": 3.0,
+      "mean_dbfs": -12.71,
+      "peak_window_dbfs": -1.2
+    },
+    {
+      "start": 3,
+      "end": 4.0,
+      "mean_dbfs": -19.09,
+      "peak_window_dbfs": -7.72
+    },
+    {
+      "start": 4,
+      "end": 5.0,
+      "mean_dbfs": -12.21,
+      "peak_window_dbfs": -2.44
+    },
+    {
+      "start": 5,
+      "end": 6.0,
+      "mean_dbfs": -20.1,
+      "peak_window_dbfs": -13.86
+    },
+    {
+      "start": 6,
+      "end": 7.0,
+      "mean_dbfs": -12.04,
+      "peak_window_dbfs": -0.72
+    },
+    {
+      "start": 7,
+      "end": 8.0,
+      "mean_dbfs": -19.46,
+      "peak_window_dbfs": -13.56
+    },
+    {
+      "start": 8,
+      "end": 9.0,
+      "mean_dbfs": -11.87,
+      "peak_window_dbfs": -1.52
+    },
+    {
+      "start": 9,
+      "end": 10.0,
+      "mean_dbfs": -15.5,
+      "peak_window_dbfs": -7.95
+    },
+    {
+      "start": 10,
+      "end": 11.0,
+      "mean_dbfs": -11.63,
+      "peak_window_dbfs": -1.24
+    },
+    {
+      "start": 11,
+      "end": 12.0,
+      "mean_dbfs": -16.12,
+      "peak_window_dbfs": -7.24
+    },
+    {
+      "start": 12,
+      "end": 13.0,
+      "mean_dbfs": -15.06,
+      "peak_window_dbfs": -4.52
+    },
+    {
+      "start": 13,
+      "end": 14.0,
+      "mean_dbfs": -13.59,
+      "peak_window_dbfs": -2.49
+    },
+    {
+      "start": 14,
+      "end": 15.0,
+      "mean_dbfs": -13.79,
+      "peak_window_dbfs": -1.63
+    },
+    {
+      "start": 15,
+      "end": 16.0,
+      "mean_dbfs": -12.46,
+      "peak_window_dbfs": -0.77
+    },
+    {
+      "start": 16,
+      "end": 17.0,
+      "mean_dbfs": -20.53,
+      "peak_window_dbfs": -7.84
+    },
+    {
+      "start": 17,
+      "end": 18.0,
+      "mean_dbfs": -11.42,
+      "peak_window_dbfs": -1.51
+    },
+    {
+      "start": 18,
+      "end": 19.0,
+      "mean_dbfs": -13.36,
+      "peak_window_dbfs": -1.07
+    },
+    {
+      "start": 19,
+      "end": 20.0,
+      "mean_dbfs": -12.47,
+      "peak_window_dbfs": -1.1
+    },
+    {
+      "start": 20,
+      "end": 21.0,
+      "mean_dbfs": -11.9,
+      "peak_window_dbfs": -1.73
+    },
+    {
+      "start": 21,
+      "end": 22.0,
+      "mean_dbfs": -13.66,
+      "peak_window_dbfs": -2.87
+    },
+    {
+      "start": 22,
+      "end": 23.0,
+      "mean_dbfs": -10.96,
+      "peak_window_dbfs": -1.3
+    },
+    {
+      "start": 23,
+      "end": 24.0,
+      "mean_dbfs": -12.29,
+      "peak_window_dbfs": -0.9
+    },
+    {
+      "start": 24,
+      "end": 25.0,
+      "mean_dbfs": -11.73,
+      "peak_window_dbfs": -1.09
+    },
+    {
+      "start": 25,
+      "end": 26.0,
+      "mean_dbfs": -13.96,
+      "peak_window_dbfs": -2.78
+    },
+    {
+      "start": 26,
+      "end": 27.0,
+      "mean_dbfs": -13.33,
+      "peak_window_dbfs": -7.17
+    },
+    {
+      "start": 27,
+      "end": 28.0,
+      "mean_dbfs": -11.15,
+      "peak_window_dbfs": -1.13
+    },
+    {
+      "start": 28,
+      "end": 29.0,
+      "mean_dbfs": -12.31,
+      "peak_window_dbfs": -1.42
+    },
+    {
+      "start": 29,
+      "end": 30.0,
+      "mean_dbfs": -14.68,
+      "peak_window_dbfs": -7.68
+    },
+    {
+      "start": 30,
+      "end": 31.0,
+      "mean_dbfs": -11.54,
+      "peak_window_dbfs": -2.94
+    },
+    {
+      "start": 31,
+      "end": 32.0,
+      "mean_dbfs": -12.47,
+      "peak_window_dbfs": -1.19
+    },
+    {
+      "start": 32,
+      "end": 33.0,
+      "mean_dbfs": -11.96,
+      "peak_window_dbfs": -0.99
+    },
+    {
+      "start": 33,
+      "end": 34.0,
+      "mean_dbfs": -12.21,
+      "peak_window_dbfs": -1.46
+    },
+    {
+      "start": 34,
+      "end": 35.0,
+      "mean_dbfs": -12.82,
+      "peak_window_dbfs": -2.93
+    },
+    {
+      "start": 35,
+      "end": 36.0,
+      "mean_dbfs": -13.99,
+      "peak_window_dbfs": -8.77
+    },
+    {
+      "start": 36,
+      "end": 37.0,
+      "mean_dbfs": -11.88,
+      "peak_window_dbfs": -1.53
+    },
+    {
+      "start": 37,
+      "end": 38.0,
+      "mean_dbfs": -14.04,
+      "peak_window_dbfs": -1.17
+    },
+    {
+      "start": 38,
+      "end": 39.0,
+      "mean_dbfs": -13.9,
+      "peak_window_dbfs": -1.99
+    },
+    {
+      "start": 39,
+      "end": 40.0,
+      "mean_dbfs": -12.03,
+      "peak_window_dbfs": -1.44
+    },
+    {
+      "start": 40,
+      "end": 41.0,
+      "mean_dbfs": -13.74,
+      "peak_window_dbfs": -1.1
+    },
+    {
+      "start": 41,
+      "end": 42.0,
+      "mean_dbfs": -14.41,
+      "peak_window_dbfs": -1.38
+    },
+    {
+      "start": 42,
+      "end": 43.0,
+      "mean_dbfs": -13.36,
+      "peak_window_dbfs": -2.29
+    },
+    {
+      "start": 43,
+      "end": 44.0,
+      "mean_dbfs": -17.82,
+      "peak_window_dbfs": -8.22
+    },
+    {
+      "start": 44,
+      "end": 45.0,
+      "mean_dbfs": -13.74,
+      "peak_window_dbfs": -1.41
+    },
+    {
+      "start": 45,
+      "end": 46.0,
+      "mean_dbfs": -13.35,
+      "peak_window_dbfs": -1.34
+    },
+    {
+      "start": 46,
+      "end": 47.0,
+      "mean_dbfs": -12.77,
+      "peak_window_dbfs": -1.08
+    },
+    {
+      "start": 47,
+      "end": 48.0,
+      "mean_dbfs": -13.85,
+      "peak_window_dbfs": -1.81
+    },
+    {
+      "start": 48,
+      "end": 49.0,
+      "mean_dbfs": -11.22,
+      "peak_window_dbfs": -1.21
+    },
+    {
+      "start": 49,
+      "end": 50.0,
+      "mean_dbfs": -13.98,
+      "peak_window_dbfs": -1.55
+    },
+    {
+      "start": 50,
+      "end": 51.0,
+      "mean_dbfs": -13.13,
+      "peak_window_dbfs": -1.47
+    },
+    {
+      "start": 51,
+      "end": 52.0,
+      "mean_dbfs": -14.08,
+      "peak_window_dbfs": -2.16
+    },
+    {
+      "start": 52,
+      "end": 53.0,
+      "mean_dbfs": -16.88,
+      "peak_window_dbfs": -7.32
+    },
+    {
+      "start": 53,
+      "end": 54.0,
+      "mean_dbfs": -10.3,
+      "peak_window_dbfs": -1.41
+    },
+    {
+      "start": 54,
+      "end": 55.0,
+      "mean_dbfs": -11.56,
+      "peak_window_dbfs": -1.15
+    },
+    {
+      "start": 55,
+      "end": 56.0,
+      "mean_dbfs": -12.11,
+      "peak_window_dbfs": -1.22
+    },
+    {
+      "start": 56,
+      "end": 57.0,
+      "mean_dbfs": -12.28,
+      "peak_window_dbfs": -2.76
+    },
+    {
+      "start": 57,
+      "end": 58.0,
+      "mean_dbfs": -10.92,
+      "peak_window_dbfs": -1.05
+    },
+    {
+      "start": 58,
+      "end": 59.0,
+      "mean_dbfs": -11.97,
+      "peak_window_dbfs": -1.51
+    },
+    {
+      "start": 59,
+      "end": 60.0,
+      "mean_dbfs": -13.5,
+      "peak_window_dbfs": -6.63
+    },
+    {
+      "start": 60,
+      "end": 61.0,
+      "mean_dbfs": -11.86,
+      "peak_window_dbfs": -1.04
+    },
+    {
+      "start": 61,
+      "end": 62.0,
+      "mean_dbfs": -11.98,
+      "peak_window_dbfs": -1.47
+    },
+    {
+      "start": 62,
+      "end": 63.0,
+      "mean_dbfs": -11.83,
+      "peak_window_dbfs": -0.78
+    },
+    {
+      "start": 63,
+      "end": 64.0,
+      "mean_dbfs": -12.06,
+      "peak_window_dbfs": -1.47
+    },
+    {
+      "start": 64,
+      "end": 65.0,
+      "mean_dbfs": -11.96,
+      "peak_window_dbfs": -1.28
+    },
+    {
+      "start": 65,
+      "end": 66.0,
+      "mean_dbfs": -10.99,
+      "peak_window_dbfs": -1.13
+    },
+    {
+      "start": 66,
+      "end": 67.0,
+      "mean_dbfs": -11.97,
+      "peak_window_dbfs": -1.0
+    },
+    {
+      "start": 67,
+      "end": 68.0,
+      "mean_dbfs": -11.86,
+      "peak_window_dbfs": -1.4
+    },
+    {
+      "start": 68,
+      "end": 69.0,
+      "mean_dbfs": -12.26,
+      "peak_window_dbfs": -0.93
+    },
+    {
+      "start": 69,
+      "end": 70.0,
+      "mean_dbfs": -13.19,
+      "peak_window_dbfs": -7.14
+    },
+    {
+      "start": 70,
+      "end": 71.0,
+      "mean_dbfs": -11.08,
+      "peak_window_dbfs": -1.54
+    },
+    {
+      "start": 71,
+      "end": 72.0,
+      "mean_dbfs": -12.86,
+      "peak_window_dbfs": -1.23
+    },
+    {
+      "start": 72,
+      "end": 73.0,
+      "mean_dbfs": -14.94,
+      "peak_window_dbfs": -2.5
+    },
+    {
+      "start": 73,
+      "end": 74.0,
+      "mean_dbfs": -12.95,
+      "peak_window_dbfs": -3.31
+    },
+    {
+      "start": 74,
+      "end": 75.0,
+      "mean_dbfs": -13.7,
+      "peak_window_dbfs": -1.51
+    },
+    {
+      "start": 75,
+      "end": 76.0,
+      "mean_dbfs": -12.45,
+      "peak_window_dbfs": -1.3
+    },
+    {
+      "start": 76,
+      "end": 77.0,
+      "mean_dbfs": -14.21,
+      "peak_window_dbfs": -1.05
+    },
+    {
+      "start": 77,
+      "end": 78.0,
+      "mean_dbfs": -13.12,
+      "peak_window_dbfs": -2.29
+    },
+    {
+      "start": 78,
+      "end": 79.0,
+      "mean_dbfs": -13.28,
+      "peak_window_dbfs": -1.4
+    },
+    {
+      "start": 79,
+      "end": 80.0,
+      "mean_dbfs": -12.63,
+      "peak_window_dbfs": -1.86
+    },
+    {
+      "start": 80,
+      "end": 81.0,
+      "mean_dbfs": -13.7,
+      "peak_window_dbfs": -1.35
+    },
+    {
+      "start": 81,
+      "end": 82.0,
+      "mean_dbfs": -13.55,
+      "peak_window_dbfs": -2.35
+    },
+    {
+      "start": 82,
+      "end": 83.0,
+      "mean_dbfs": -12.23,
+      "peak_window_dbfs": -2.03
+    },
+    {
+      "start": 83,
+      "end": 84.0,
+      "mean_dbfs": -12.62,
+      "peak_window_dbfs": -1.32
+    },
+    {
+      "start": 84,
+      "end": 85.0,
+      "mean_dbfs": -13.0,
+      "peak_window_dbfs": -1.09
+    },
+    {
+      "start": 85,
+      "end": 86.0,
+      "mean_dbfs": -14.54,
+      "peak_window_dbfs": -2.38
+    },
+    {
+      "start": 86,
+      "end": 87.0,
+      "mean_dbfs": -15.04,
+      "peak_window_dbfs": -8.12
+    },
+    {
+      "start": 87,
+      "end": 88.0,
+      "mean_dbfs": -12.13,
+      "peak_window_dbfs": -1.23
+    },
+    {
+      "start": 88,
+      "end": 88.3929,
+      "mean_dbfs": -42.32,
+      "peak_window_dbfs": -36.9
+    }
+  ],
+  "audio_end": 88.3929,
+  "cut_matches": [],
+  "alignment_summary": {
+    "cut_count": 0,
+    "excluded_boundary_count": 0,
+    "tolerance_seconds": 0.1,
+    "numeric_epsilon_seconds": 1e-09,
+    "onset": {
+      "matched_cuts": 0,
+      "cut_fraction": null,
+      "uniform_time_coverage_fraction": 0.9058,
+      "shifted_baseline_mean_fraction": null
+    },
+    "beat_candidate": {
+      "matched_cuts": 0,
+      "cut_fraction": null,
+      "uniform_time_coverage_fraction": 0.0837,
+      "shifted_baseline_mean_fraction": null
+    },
+    "shifted_cut_baseline": [
+      {
+        "shift_seconds": -0.5,
+        "cut_count": 0,
+        "onset_matched_cuts": 0,
+        "onset_fraction": null,
+        "beat_candidate_matched_cuts": 0,
+        "beat_candidate_fraction": null
+      },
+      {
+        "shift_seconds": -0.35,
+        "cut_count": 0,
+        "onset_matched_cuts": 0,
+        "onset_fraction": null,
+        "beat_candidate_matched_cuts": 0,
+        "beat_candidate_fraction": null
+      },
+      {
+        "shift_seconds": -0.2,
+        "cut_count": 0,
+        "onset_matched_cuts": 0,
+        "onset_fraction": null,
+        "beat_candidate_matched_cuts": 0,
+        "beat_candidate_fraction": null
+      },
+      {
+        "shift_seconds": 0.2,
+        "cut_count": 0,
+        "onset_matched_cuts": 0,
+        "onset_fraction": null,
+        "beat_candidate_matched_cuts": 0,
+        "beat_candidate_fraction": null
+      },
+      {
+        "shift_seconds": 0.35,
+        "cut_count": 0,
+        "onset_matched_cuts": 0,
+        "onset_fraction": null,
+        "beat_candidate_matched_cuts": 0,
+        "beat_candidate_fraction": null
+      },
+      {
+        "shift_seconds": 0.5,
+        "cut_count": 0,
+        "onset_matched_cuts": 0,
+        "onset_fraction": null,
+        "beat_candidate_matched_cuts": 0,
+        "beat_candidate_fraction": null
+      }
+    ],
+    "baseline_interpretation": "相同切点整体平移后的邻近命中率，只作偶合参照，不是显著性检验或刻意卡点的证明。"
+  },
+  "summary": {
+    "onset_count": 569,
+    "beat_candidate_count": 37,
+    "supported_local_windows": 3,
+    "window_count": 20,
+    "global_bpm": null
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "ok": false,
+  "diagnostics": [
+    {
+      "code": "non_deterministic_frame",
+      "severity": "error",
+      "message": "相同 t 的重复采样画面不同；renderAt 必须由 t 完整决定画面",
+      "frame": 225,
+      "time": 7.5
+    },
+    {
+      "code": "blank_keyframe",
+      "severity": "warning",
+      "message": "部分采样帧几乎为单色，可能是入场或留白"
+    }
+  ],
+  "checkpoints": [
+    {
+      "time": 0.0,
+      "frame": 0,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-2-keyframes-88a44a7a5c/frame-000000.png"
+    },
+    {
+      "time": 2.5,
+      "frame": 75,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-2-keyframes-88a44a7a5c/frame-000075.png"
+    },
+    {
+      "time": 5.0,
+      "frame": 150,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-2-keyframes-88a44a7a5c/frame-000150.png"
+    },
+    {
+      "time": 7.5,
+      "frame": 225,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-2-keyframes-88a44a7a5c/frame-000225.png"
+    },
+    {
+      "time": 9.966666666666667,
+      "frame": 299,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/8bdc70997a1e405bb7fc0e99c81210e9/scenes/f901f8ddd77f4b16937c93112139c51c-attempt-2-keyframes-88a44a7a5c/frame-000299.png"
+    }
+  ],
+  "isolation": {
+    "sandbox_requested": true,
+    "no_sandbox_flag": false,
+    "network": "data_only",
+    "profile": "ephemeral",
+    "clock": "paused",
+    "browser_version": "155.0.8059.79"
+  },
+  "frame_checks": [
+    {
+      "frame": 0,
+      "time": 0.0,
+      "pixel_stddev": 0.0
+    },
+    {
+      "frame": 75,
+      "time": 2.5,
+      "pixel_stddev": 10.034
+    },
+    {
+      "frame": 150,
+      "time": 5.0,
+      "pixel_stddev": 12.525
+    },
+    {
+      "frame": 225,
+      "time": 7.5,
+      "pixel_stddev": 13.374
+    },
+    {
+      "frame": 299,
+      "time": 9.966666666666667,
+      "pixel_stddev": 12.299
+    }
+  ],
+  "message": "场景校验未通过",
+  "render_seconds": 2.455
+}

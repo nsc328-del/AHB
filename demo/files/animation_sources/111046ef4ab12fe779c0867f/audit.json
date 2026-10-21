@@ -1,0 +1,27 @@
+{
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "attempts": [
+    {
+      "attempt": 1,
+      "source_hash": "87c55552441a22e9dc8c8352cbc253878264f4b511086b9506a0531de990de9d",
+      "status": "failed",
+      "diagnostics": [
+        "场景校验未通过",
+        "{\"code\": \"non_deterministic_frame\", \"severity\": \"error\", \"message\": \"相同 t 的重复采样画面不同；renderAt 必须由 t 完整决定画面\", \"frame\": 225, \"time\": 7.5}",
+        "{\"code\": \"blank_keyframe\", \"severity\": \"warning\", \"message\": \"部分采样帧几乎为单色，可能是入场或留白\"}"
+      ]
+    },
+    {
+      "attempt": 2,
+      "source_hash": "17121a57606b6eac6e020a92c7ff1c3b05182e4c81147ebc521713ad515b7eed",
+      "status": "failed",
+      "diagnostics": [
+        "场景校验未通过",
+        "{\"code\": \"non_deterministic_frame\", \"severity\": \"error\", \"message\": \"相同 t 的重复采样画面不同；renderAt 必须由 t 完整决定画面\", \"frame\": 225, \"time\": 7.5}",
+        "{\"code\": \"blank_keyframe\", \"severity\": \"warning\", \"message\": \"部分采样帧几乎为单色，可能是入场或留白\"}"
+      ]
+    }
+  ],
+  "human_source_edits": 0
+}

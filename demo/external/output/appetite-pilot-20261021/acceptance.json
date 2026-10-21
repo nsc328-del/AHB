@@ -1,0 +1,199 @@
+{
+  "created_at": "2026-10-21T10:12:24.976590+00:00",
+  "project_id": "463151c5002b44dbba988b4c168ad2aa",
+  "workspace_id": "a93546b192bc4eca97e3759b2cd6f9d8",
+  "render": {
+    "project_id": "463151c5002b44dbba988b4c168ad2aa",
+    "plan_id": "30276d28997c4a9095b9a6e26f9d3ebc",
+    "version": 3,
+    "asset_id": "ff5c3e0ef12b4f79993d928f2014893e",
+    "url": "/api/media/renders/463151c5002b44dbba988b4c168ad2aa/v3-07f637be0c8f46e4a67eaebf97b2bedf.mp4",
+    "thumbnail_url": "/api/media/previews/ff5c3e0ef12b4f79993d928f2014893e.jpg",
+    "duration": 23.4333,
+    "width": 1280,
+    "height": 720,
+    "sha256": "2b65b7ad94c2a1f1f23358a47c679c58d3c8ab1c0b23135b8c1e5bcfcb5bdecb",
+    "manifest_url": "/api/media/renders/463151c5002b44dbba988b4c168ad2aa/v3-07f637be0c8f46e4a67eaebf97b2bedf.manifest.json",
+    "compiled_timeline": {
+      "fps": 30,
+      "frame_count": 703,
+      "interval": "[start_frame,end_frame)",
+      "clips": [
+        {
+          "clip_id": "f8cca66829ba4a20b91bb66da5cba72a",
+          "asset_id": "8c0decc1b5094bdd9a800458e2fd8fa6",
+          "start_frame": 0,
+          "end_frame": 110,
+          "source_start_seconds": 6.329,
+          "source_end_seconds": 11.079,
+          "source_time_base": "1/15360",
+          "kind": "video",
+          "transition": "fade",
+          "speed": 1.3,
+          "original_volume": 1.0,
+          "music_gain": 0.5,
+          "source_has_audio": true,
+          "caption": ""
+        },
+        {
+          "clip_id": "60ebc679014e4e1b8d2931d1a74a0439",
+          "asset_id": "8c0decc1b5094bdd9a800458e2fd8fa6",
+          "start_frame": 110,
+          "end_frame": 201,
+          "source_start_seconds": 13.197,
+          "source_end_seconds": 17.947,
+          "source_time_base": "1/15360",
+          "kind": "video",
+          "transition": "cut",
+          "speed": 1.559343434343435,
+          "original_volume": 1.0,
+          "music_gain": 0.55,
+          "source_has_audio": true,
+          "caption": ""
+        },
+        {
+          "clip_id": "a56fdebd6a3d4a03917329cc274fd9ad",
+          "asset_id": "8c0decc1b5094bdd9a800458e2fd8fa6",
+          "start_frame": 201,
+          "end_frame": 261,
+          "source_start_seconds": 18.447,
+          "source_end_seconds": 20.447,
+          "source_time_base": "1/15360",
+          "kind": "video",
+          "transition": "cut",
+          "speed": 1.0,
+          "original_volume": 1.0,
+          "music_gain": 0.5,
+          "source_has_audio": true,
+          "caption": ""
+        },
+        {
+          "clip_id": "7244ab772ece440d91b260eb2d3e3c47",
+          "asset_id": "8c0decc1b5094bdd9a800458e2fd8fa6",
+          "start_frame": 261,
+          "end_frame": 360,
+          "source_start_seconds": 40.57,
+          "source_end_seconds": 44.855,
+          "source_time_base": "1/15360",
+          "kind": "video",
+          "transition": "cut",
+          "speed": 1.3,
+          "original_volume": 1.0,
+          "music_gain": 0.5,
+          "source_has_audio": true,
+          "caption": ""
+        },
+        {
+          "clip_id": "49f19debd0da4800bca320bd414caae7",
+          "asset_id": "8c0decc1b5094bdd9a800458e2fd8fa6",
+          "start_frame": 360,
+          "end_frame": 496,
+          "source_start_seconds": 62.294,
+          "source_end_seconds": 66.828,
+          "source_time_base": "1/15360",
+          "kind": "video",
+          "transition": "cut",
+          "speed": 1.0,
+          "original_volume": 1.2,
+          "music_gain": 0.35,
+          "source_has_audio": true,
+          "caption": ""
+        },
+        {
+          "clip_id": "214c174ad4d944af8e268fdb32b5e63c",
+          "asset_id": "8c0decc1b5094bdd9a800458e2fd8fa6",
+          "start_frame": 496,
+          "end_frame": 643,
+          "source_start_seconds": 113.975,
+          "source_end_seconds": 118.725,
+          "source_time_base": "1/15360",
+          "kind": "video",
+          "transition": "cut",
+          "speed": 0.9694181920939436,
+          "original_volume": 1.1,
+          "music_gain": 0.4,
+          "source_has_audio": true,
+          "caption": ""
+        },
+        {
+          "clip_id": "058572c182d449a98a020a92b98b2742",
+          "asset_id": "8c0decc1b5094bdd9a800458e2fd8fa6",
+          "start_frame": 643,
+          "end_frame": 703,
+          "source_start_seconds": 140.581,
+          "source_end_seconds": 142.581,
+          "source_time_base": "1/15360",
+          "kind": "video",
+          "transition": "fade",
+          "speed": 1.0,
+          "original_volume": 1.0,
+          "music_gain": 0.45,
+          "source_has_audio": true,
+          "caption": ""
+        }
+      ]
+    },
+    "candidate_preview": false,
+    "batch_id": null,
+    "adopted": false,
+    "id": "ddf2cbb9d25747dca91fdb9b83eff0ec",
+    "created_at": "2026-10-21T10:11:51.875634+00:00",
+    "updated_at": "2026-10-21T10:11:51.875644+00:00"
+  },
+  "stats": {
+    "clips": 7,
+    "sources": 1,
+    "captions": 0,
+    "fades": 2,
+    "cut_joins": 5,
+    "speed_changes": 4,
+    "beat_joins": 2,
+    "music_ducks": 7,
+    "reordered": false,
+    "duration": 23.433333333333334,
+    "source_duration": 148.8,
+    "unique_source_duration": 27.069
+  },
+  "music_events": [
+    {
+      "music_time": 27.06,
+      "kind": "onset",
+      "error_ms": 0.0,
+      "matched": true
+    },
+    {
+      "music_time": 41.79,
+      "kind": "onset",
+      "error_ms": 3.3,
+      "matched": true
+    }
+  ],
+  "audio_decoded_check": {
+    "peak_linear": 0.9615274667739868,
+    "samples_over_full_scale": 0,
+    "rms_dbfs": -26.929128646850586
+  },
+  "usage": {
+    "calls_with_receipts": 13,
+    "total_tokens": 353185,
+    "includes_failed_attempts": true,
+    "h3_calls": 0
+  },
+  "checks": {
+    "complete_decode": true,
+    "exact_output_frames": 703,
+    "speed_audio_mixing_tests": true,
+    "source_and_result_proxy_checked_all_7_nodes": true,
+    "browser_final_video_played_to_end": true,
+    "browser_source_and_processed_node_playback": true,
+    "all_14_proxy_http_checks": "playback-check.json",
+    "ui_screenshot": "workspace-proof.png"
+  },
+  "limits": [
+    "公开的连续制作记录，不是摄影机原始工程文件；仅一份烹饪素材验证。",
+    "视觉动作取舍由DeepSeek完成；0.5秒可见性抽查不是逐帧真值。",
+    "两处为实测音乐起音对齐，不能称为已确认音乐强拍。",
+    "DeepSeek没有直接听音；未识别具体锅铲/煎炒声，不代表完整声音设计验收。",
+    "本次验证单条制作链，未重新验收食欲模板3–5条候选。"
+  ]
+}

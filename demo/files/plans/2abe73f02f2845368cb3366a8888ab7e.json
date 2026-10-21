@@ -1,0 +1,55 @@
+{
+  "title": "动画与已有视频混剪验收",
+  "brief": "手动编排 · 动画与已有视频",
+  "summary": "",
+  "template_id": "manual",
+  "ratio": "16:9",
+  "clips": [
+    {
+      "id": "existing-video",
+      "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+      "start": 0.0,
+      "end": 4.0,
+      "duration": 4.0,
+      "label": "已有视频",
+      "caption": "",
+      "role": "开场",
+      "transition": "cut",
+      "timeline_start": 0.0,
+      "timeline_end": 4.0
+    },
+    {
+      "id": "animation-scene",
+      "asset_id": "c2636fff35354698975f0cec2178f938",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "label": "动画段落",
+      "caption": "",
+      "role": "说明",
+      "transition": "cut",
+      "timeline_start": 4.0,
+      "timeline_end": 14.0
+    }
+  ],
+  "width": 1280,
+  "height": 720,
+  "duration": 14.0,
+  "project_id": "1435e26723584c41813309aa62f874e2",
+  "id": "2abe73f02f2845368cb3366a8888ab7e",
+  "version": 1,
+  "base_version_id": null,
+  "origin": {
+    "source": "home_canvas",
+    "actor": "local_user",
+    "branch_id": "animation-mix-proof",
+    "branch_name": "动画与已有视频",
+    "submission_id": "bbaaeedb-875e-4d8f-b798-8f7bae133359"
+  },
+  "change_summary": "建立初始方案",
+  "changes": [
+    "建立初始方案"
+  ],
+  "created_at": "2026-10-21T03:23:20.568609+00:00",
+  "updated_at": "2026-10-21T03:23:20.568615+00:00"
+}

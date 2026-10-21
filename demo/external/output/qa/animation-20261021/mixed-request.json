@@ -1,0 +1,42 @@
+{
+  "request": {
+    "submission_id": "bbaaeedb-875e-4d8f-b798-8f7bae133359",
+    "branch_id": "animation-mix-proof",
+    "branch_name": "动画与已有视频",
+    "plan": {
+      "title": "动画与已有视频混剪验收",
+      "ratio": "16:9",
+      "clips": [
+        {
+          "id": "existing-video",
+          "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+          "start": 0,
+          "end": 4,
+          "duration": 4,
+          "label": "已有视频",
+          "role": "开场",
+          "caption": "",
+          "transition": "cut"
+        },
+        {
+          "id": "animation-scene",
+          "asset_id": "c2636fff35354698975f0cec2178f938",
+          "start": 0,
+          "end": 10,
+          "duration": 10,
+          "label": "动画段落",
+          "role": "说明",
+          "caption": "",
+          "transition": "cut"
+        }
+      ]
+    }
+  },
+  "receipt": {
+    "project_id": "1435e26723584c41813309aa62f874e2",
+    "plan_id": "2abe73f02f2845368cb3366a8888ab7e",
+    "job_id": "15acc2e9d8de419e8ec8b8d8f4b74033",
+    "branch_id": "animation-mix-proof",
+    "branch_name": "动画与已有视频"
+  }
+}

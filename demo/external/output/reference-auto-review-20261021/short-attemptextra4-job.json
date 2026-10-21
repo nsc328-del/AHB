@@ -1,0 +1,4365 @@
+{
+  "kind": "reference_repair",
+  "status": "succeeded",
+  "progress": 100,
+  "message": "已完成",
+  "result": {
+    "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+    "analysis_id": "b2c5493023dd46f493c8886b36807afb",
+    "repair": {
+      "base_analysis_id": "08dc6faf75ec4f8bbc2c18b6a12c21bb",
+      "job_id": "7d931428a78c407b985a51a75248c10d",
+      "created_at": "2026-10-20T16:37:57.865526+00:00",
+      "targets": [
+        {
+          "collection": "segments",
+          "index": 1,
+          "issues": [
+            "motion",
+            "visual"
+          ],
+          "window_id": "2.533000:4.667000",
+          "start": 2.533,
+          "end": 4.667,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "visual_verification"
+          ],
+          "before_sha256": "aa42a7c89a799633dfc1f03738742c3c6ffb63e2d42094abacdbf4ad2243d40a",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 2.533,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-003.jpg"
+            },
+            {
+              "time": 2.533333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-00.jpg"
+            },
+            {
+              "time": 2.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-004.jpg"
+            },
+            {
+              "time": 2.8,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-01.jpg"
+            },
+            {
+              "time": 3.066667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-02.jpg"
+            },
+            {
+              "time": 3.133,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-005.jpg"
+            },
+            {
+              "time": 3.333333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-03.jpg"
+            },
+            {
+              "time": 3.6,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-04.jpg"
+            },
+            {
+              "time": 3.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-006.jpg"
+            },
+            {
+              "time": 3.866667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-05.jpg"
+            },
+            {
+              "time": 4.133333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-06.jpg"
+            },
+            {
+              "time": 4.366667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-07.jpg"
+            },
+            {
+              "time": 4.633333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            2.533,
+            2.533333,
+            2.7,
+            2.8,
+            3.066667,
+            3.133,
+            3.333333,
+            3.6,
+            3.7,
+            3.866667,
+            4.133333,
+            4.366667,
+            4.633333
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 2.533,
+            "end": 4.667,
+            "fps": 30.0,
+            "decoded_frames": 65,
+            "statistics": {
+              "measured_pairs": 63,
+              "qualified_pairs": 63,
+              "qualified_pair_fraction": 1.0,
+              "image_dx_widths_per_second_median": -0.76741,
+              "image_dy_heights_per_second_median": -0.01367,
+              "image_rotation_degrees_per_second_median": -6.21032,
+              "image_scale_log_per_second_median": -0.00892,
+              "background_inlier_ratio_median": 0.97872,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.07456,
+              "center_residual_widths_per_second_median": 0.05437,
+              "center_residual_widths_per_second_p90_median": 0.09848,
+              "edge_residual_widths_per_second_median": 0.04652,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [
+              2.6
+            ],
+            "skipped_cut_pairs": [
+              2.6
+            ],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "discarded_fields": [
+                "$.checks",
+                "$.review_note"
+              ],
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "b78161dd02d84e16870fe63c5214159d",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "2.533000:4.667000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": false,
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "new_provider_calls": 1,
+              "section_ids": [
+                "2.533000:4.667000",
+                "4.667000:6.867000",
+                "6.867000:8.633000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "2.533000:4.667000",
+                  "flags": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 2.533,
+                      "end": 2.6,
+                      "frame_times": [
+                        2.533,
+                        2.533333
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 2.6,
+                      "end": 4.667,
+                      "frame_times": [
+                        2.7,
+                        2.8,
+                        3.066667,
+                        3.133,
+                        3.333333,
+                        3.6,
+                        3.7,
+                        3.866667,
+                        4.133333,
+                        4.366667,
+                        4.633333
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 2.7,
+                          "to": 2.8,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 2.8,
+                          "to": 3.066667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.066667,
+                          "to": 3.133,
+                          "delta_seconds": 0.066333
+                        },
+                        {
+                          "from": 3.133,
+                          "to": 3.333333,
+                          "delta_seconds": 0.200333
+                        },
+                        {
+                          "from": 3.333333,
+                          "to": 3.6,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.6,
+                          "to": 3.7,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 3.7,
+                          "to": 3.866667,
+                          "delta_seconds": 0.166667
+                        },
+                        {
+                          "from": 3.866667,
+                          "to": 4.133333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 4.133333,
+                          "to": 4.366667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 4.366667,
+                          "to": 4.633333,
+                          "delta_seconds": 0.266666
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    3.333,
+                    4.133
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    }
+                  ],
+                  "cited_motion_times": [
+                    2.533,
+                    2.8,
+                    3.333,
+                    4.133,
+                    4.633
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 2.8,
+                      "to": 3.333333
+                    },
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    },
+                    {
+                      "from": 4.133333,
+                      "to": 4.633333
+                    }
+                  ],
+                  "partial_text": [
+                    {
+                      "text": "Milk",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        2.533
+                      ]
+                    }
+                  ],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "4.667000:6.867000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 4.667,
+                      "end": 4.733,
+                      "frame_times": [
+                        4.667,
+                        4.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.667,
+                          "to": 4.7,
+                          "delta_seconds": 0.033
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 4.733,
+                      "end": 6.767,
+                      "frame_times": [
+                        4.833,
+                        4.966667,
+                        5.233333,
+                        5.5,
+                        5.766667,
+                        5.767,
+                        6.033333,
+                        6.267,
+                        6.3,
+                        6.566667,
+                        6.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.833,
+                          "to": 4.966667,
+                          "delta_seconds": 0.133667
+                        },
+                        {
+                          "from": 4.966667,
+                          "to": 5.233333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 5.233333,
+                          "to": 5.5,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.5,
+                          "to": 5.766667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.767,
+                          "to": 6.033333,
+                          "delta_seconds": 0.266333
+                        },
+                        {
+                          "from": 6.033333,
+                          "to": 6.267,
+                          "delta_seconds": 0.233667
+                        },
+                        {
+                          "from": 6.267,
+                          "to": 6.3,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.3,
+                          "to": 6.566667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 6.566667,
+                          "to": 6.7,
+                          "delta_seconds": 0.133333
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 6.767,
+                      "end": 6.867,
+                      "frame_times": [
+                        6.833333
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    6.267,
+                    6.567
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 6.267,
+                      "to": 6.566667
+                    }
+                  ],
+                  "cited_motion_times": [
+                    4.833,
+                    5.5,
+                    6.033,
+                    6.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 4.833,
+                      "to": 5.5
+                    },
+                    {
+                      "from": 5.5,
+                      "to": 6.033333
+                    },
+                    {
+                      "from": 6.033333,
+                      "to": 6.566667
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "2",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        4.833
+                      ]
+                    },
+                    {
+                      "text": "1",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        5.767,
+                        6.267
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 6.867,
+                      "end": 8.633,
+                      "frame_times": [
+                        6.867,
+                        6.9,
+                        7.1,
+                        7.3,
+                        7.533333,
+                        7.733,
+                        7.733333,
+                        7.966667,
+                        8.166667,
+                        8.4,
+                        8.6
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 6.867,
+                          "to": 6.9,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.9,
+                          "to": 7.1,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.1,
+                          "to": 7.3,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.3,
+                          "to": 7.533333,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 7.533333,
+                          "to": 7.733,
+                          "delta_seconds": 0.199667
+                        },
+                        {
+                          "from": 7.733333,
+                          "to": 7.966667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 7.966667,
+                          "to": 8.166667,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 8.166667,
+                          "to": 8.4,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 8.4,
+                          "to": 8.6,
+                          "delta_seconds": 0.2
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 9,
+                  "cited_subject_times": [
+                    8.167,
+                    8.6
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "cited_motion_times": [
+                    7.3,
+                    7.733,
+                    8.167,
+                    8.6
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 7.3,
+                      "to": 7.733
+                    },
+                    {
+                      "from": 7.733333,
+                      "to": 8.166667
+                    },
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                }
+              ],
+              "review_risks": [
+                {
+                  "id": "4.667000:6.867000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.96825,
+                  "is_hard_failure": false
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.80392,
+                  "is_hard_failure": false
+                }
+              ]
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "batch_source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "section_sources": {
+            "2.533000:4.667000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "4.667000:6.867000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "6.867000:8.633000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 1,
+          "observation_flags": [
+            {
+              "id": "2.533000:4.667000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "visible_text[1].evidence_times",
+                  "times": [
+                    4.833
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "2.533000:4.667000",
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "risk_reviewed_section_ids": [
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "section_source": {
+            "source_job_id": "7d931428a78c407b985a51a75248c10d",
+            "stage": "reconcile_2",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "20ee0f320b0484811503728811de25d8808e787fa486c69b5fe042707dc86b00"
+        },
+        {
+          "collection": "segments",
+          "index": 2,
+          "issues": [
+            "motion",
+            "visual"
+          ],
+          "window_id": "4.667000:6.867000",
+          "start": 4.667,
+          "end": 6.867,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "visual_verification"
+          ],
+          "before_sha256": "932d81491ac4b228b1c87cc2b5da58ae6a87b805948950927e0180c1a34f259a",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 4.667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-007.jpg"
+            },
+            {
+              "time": 4.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-00.jpg"
+            },
+            {
+              "time": 4.833,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-008.jpg"
+            },
+            {
+              "time": 4.966667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-01.jpg"
+            },
+            {
+              "time": 5.233333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-02.jpg"
+            },
+            {
+              "time": 5.5,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-03.jpg"
+            },
+            {
+              "time": 5.766667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-04.jpg"
+            },
+            {
+              "time": 5.767,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-009.jpg"
+            },
+            {
+              "time": 6.033333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-05.jpg"
+            },
+            {
+              "time": 6.267,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-010.jpg"
+            },
+            {
+              "time": 6.3,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-06.jpg"
+            },
+            {
+              "time": 6.566667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-07.jpg"
+            },
+            {
+              "time": 6.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-011.jpg"
+            },
+            {
+              "time": 6.833333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            4.667,
+            4.7,
+            4.833,
+            4.966667,
+            5.233333,
+            5.5,
+            5.766667,
+            5.767,
+            6.033333,
+            6.267,
+            6.3,
+            6.566667,
+            6.7,
+            6.833333
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 4.667,
+            "end": 6.867,
+            "fps": 30.0,
+            "decoded_frames": 66,
+            "statistics": {
+              "measured_pairs": 63,
+              "qualified_pairs": 61,
+              "qualified_pair_fraction": 0.96825,
+              "image_dx_widths_per_second_median": -0.63387,
+              "image_dy_heights_per_second_median": 0.0218,
+              "image_rotation_degrees_per_second_median": -6.98995,
+              "image_scale_log_per_second_median": 0.0355,
+              "background_inlier_ratio_median": 0.90286,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.10649,
+              "center_residual_widths_per_second_median": 0.0819,
+              "center_residual_widths_per_second_p90_median": 0.13323,
+              "edge_residual_widths_per_second_median": 0.06731,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [
+              4.733,
+              6.767
+            ],
+            "skipped_cut_pairs": [
+              4.733,
+              6.767
+            ],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "discarded_fields": [
+                "$.checks",
+                "$.review_note"
+              ],
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "b78161dd02d84e16870fe63c5214159d",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "2.533000:4.667000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": false,
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "new_provider_calls": 1,
+              "section_ids": [
+                "2.533000:4.667000",
+                "4.667000:6.867000",
+                "6.867000:8.633000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "2.533000:4.667000",
+                  "flags": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 2.533,
+                      "end": 2.6,
+                      "frame_times": [
+                        2.533,
+                        2.533333
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 2.6,
+                      "end": 4.667,
+                      "frame_times": [
+                        2.7,
+                        2.8,
+                        3.066667,
+                        3.133,
+                        3.333333,
+                        3.6,
+                        3.7,
+                        3.866667,
+                        4.133333,
+                        4.366667,
+                        4.633333
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 2.7,
+                          "to": 2.8,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 2.8,
+                          "to": 3.066667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.066667,
+                          "to": 3.133,
+                          "delta_seconds": 0.066333
+                        },
+                        {
+                          "from": 3.133,
+                          "to": 3.333333,
+                          "delta_seconds": 0.200333
+                        },
+                        {
+                          "from": 3.333333,
+                          "to": 3.6,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.6,
+                          "to": 3.7,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 3.7,
+                          "to": 3.866667,
+                          "delta_seconds": 0.166667
+                        },
+                        {
+                          "from": 3.866667,
+                          "to": 4.133333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 4.133333,
+                          "to": 4.366667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 4.366667,
+                          "to": 4.633333,
+                          "delta_seconds": 0.266666
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    3.333,
+                    4.133
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    }
+                  ],
+                  "cited_motion_times": [
+                    2.533,
+                    2.8,
+                    3.333,
+                    4.133,
+                    4.633
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 2.8,
+                      "to": 3.333333
+                    },
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    },
+                    {
+                      "from": 4.133333,
+                      "to": 4.633333
+                    }
+                  ],
+                  "partial_text": [
+                    {
+                      "text": "Milk",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        2.533
+                      ]
+                    }
+                  ],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "4.667000:6.867000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 4.667,
+                      "end": 4.733,
+                      "frame_times": [
+                        4.667,
+                        4.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.667,
+                          "to": 4.7,
+                          "delta_seconds": 0.033
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 4.733,
+                      "end": 6.767,
+                      "frame_times": [
+                        4.833,
+                        4.966667,
+                        5.233333,
+                        5.5,
+                        5.766667,
+                        5.767,
+                        6.033333,
+                        6.267,
+                        6.3,
+                        6.566667,
+                        6.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.833,
+                          "to": 4.966667,
+                          "delta_seconds": 0.133667
+                        },
+                        {
+                          "from": 4.966667,
+                          "to": 5.233333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 5.233333,
+                          "to": 5.5,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.5,
+                          "to": 5.766667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.767,
+                          "to": 6.033333,
+                          "delta_seconds": 0.266333
+                        },
+                        {
+                          "from": 6.033333,
+                          "to": 6.267,
+                          "delta_seconds": 0.233667
+                        },
+                        {
+                          "from": 6.267,
+                          "to": 6.3,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.3,
+                          "to": 6.566667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 6.566667,
+                          "to": 6.7,
+                          "delta_seconds": 0.133333
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 6.767,
+                      "end": 6.867,
+                      "frame_times": [
+                        6.833333
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    6.267,
+                    6.567
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 6.267,
+                      "to": 6.566667
+                    }
+                  ],
+                  "cited_motion_times": [
+                    4.833,
+                    5.5,
+                    6.033,
+                    6.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 4.833,
+                      "to": 5.5
+                    },
+                    {
+                      "from": 5.5,
+                      "to": 6.033333
+                    },
+                    {
+                      "from": 6.033333,
+                      "to": 6.566667
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "2",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        4.833
+                      ]
+                    },
+                    {
+                      "text": "1",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        5.767,
+                        6.267
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 6.867,
+                      "end": 8.633,
+                      "frame_times": [
+                        6.867,
+                        6.9,
+                        7.1,
+                        7.3,
+                        7.533333,
+                        7.733,
+                        7.733333,
+                        7.966667,
+                        8.166667,
+                        8.4,
+                        8.6
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 6.867,
+                          "to": 6.9,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.9,
+                          "to": 7.1,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.1,
+                          "to": 7.3,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.3,
+                          "to": 7.533333,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 7.533333,
+                          "to": 7.733,
+                          "delta_seconds": 0.199667
+                        },
+                        {
+                          "from": 7.733333,
+                          "to": 7.966667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 7.966667,
+                          "to": 8.166667,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 8.166667,
+                          "to": 8.4,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 8.4,
+                          "to": 8.6,
+                          "delta_seconds": 0.2
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 9,
+                  "cited_subject_times": [
+                    8.167,
+                    8.6
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "cited_motion_times": [
+                    7.3,
+                    7.733,
+                    8.167,
+                    8.6
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 7.3,
+                      "to": 7.733
+                    },
+                    {
+                      "from": 7.733333,
+                      "to": 8.166667
+                    },
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                }
+              ],
+              "review_risks": [
+                {
+                  "id": "4.667000:6.867000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.96825,
+                  "is_hard_failure": false
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.80392,
+                  "is_hard_failure": false
+                }
+              ]
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "batch_source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "section_sources": {
+            "2.533000:4.667000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "4.667000:6.867000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "6.867000:8.633000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 1,
+          "observation_flags": [
+            {
+              "id": "2.533000:4.667000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "visible_text[1].evidence_times",
+                  "times": [
+                    4.833
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "2.533000:4.667000",
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "risk_reviewed_section_ids": [
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "section_source": {
+            "source_job_id": "7d931428a78c407b985a51a75248c10d",
+            "stage": "reconcile_2",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "dcb32a7239f4724d3413306b127050cbb16d90876e3f98ce4c894409f0c11b65"
+        },
+        {
+          "collection": "segments",
+          "index": 3,
+          "issues": [
+            "motion",
+            "visual"
+          ],
+          "window_id": "6.867000:8.633000",
+          "start": 6.867,
+          "end": 8.633,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "visual_verification"
+          ],
+          "before_sha256": "99eb5b2fd643efb205febdba51fe8a495b409a13eb11a53f32e856913c001e39",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 6.867,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-012.jpg"
+            },
+            {
+              "time": 6.9,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-00.jpg"
+            },
+            {
+              "time": 7.1,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-01.jpg"
+            },
+            {
+              "time": 7.3,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-02.jpg"
+            },
+            {
+              "time": 7.533333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-03.jpg"
+            },
+            {
+              "time": 7.733,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-013.jpg"
+            },
+            {
+              "time": 7.733333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-04.jpg"
+            },
+            {
+              "time": 7.966667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-05.jpg"
+            },
+            {
+              "time": 8.166667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-06.jpg"
+            },
+            {
+              "time": 8.4,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-07.jpg"
+            },
+            {
+              "time": 8.6,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            6.867,
+            6.9,
+            7.1,
+            7.3,
+            7.533333,
+            7.733,
+            7.733333,
+            7.966667,
+            8.166667,
+            8.4,
+            8.6
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 6.867,
+            "end": 8.633,
+            "fps": 30.0,
+            "decoded_frames": 52,
+            "statistics": {
+              "measured_pairs": 51,
+              "qualified_pairs": 41,
+              "qualified_pair_fraction": 0.80392,
+              "image_dx_widths_per_second_median": -1.15908,
+              "image_dy_heights_per_second_median": -0.04258,
+              "image_rotation_degrees_per_second_median": 0.3219,
+              "image_scale_log_per_second_median": -0.01098,
+              "background_inlier_ratio_median": 0.82667,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.16806,
+              "center_residual_widths_per_second_median": 0.13448,
+              "center_residual_widths_per_second_p90_median": 0.22681,
+              "edge_residual_widths_per_second_median": 0.07382,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [],
+            "skipped_cut_pairs": [],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "discarded_fields": [
+                "$.checks",
+                "$.review_note"
+              ],
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "b78161dd02d84e16870fe63c5214159d",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "2.533000:4.667000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": false,
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "new_provider_calls": 1,
+              "section_ids": [
+                "2.533000:4.667000",
+                "4.667000:6.867000",
+                "6.867000:8.633000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "2.533000:4.667000",
+                  "flags": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 2.533,
+                      "end": 2.6,
+                      "frame_times": [
+                        2.533,
+                        2.533333
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 2.6,
+                      "end": 4.667,
+                      "frame_times": [
+                        2.7,
+                        2.8,
+                        3.066667,
+                        3.133,
+                        3.333333,
+                        3.6,
+                        3.7,
+                        3.866667,
+                        4.133333,
+                        4.366667,
+                        4.633333
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 2.7,
+                          "to": 2.8,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 2.8,
+                          "to": 3.066667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.066667,
+                          "to": 3.133,
+                          "delta_seconds": 0.066333
+                        },
+                        {
+                          "from": 3.133,
+                          "to": 3.333333,
+                          "delta_seconds": 0.200333
+                        },
+                        {
+                          "from": 3.333333,
+                          "to": 3.6,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.6,
+                          "to": 3.7,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 3.7,
+                          "to": 3.866667,
+                          "delta_seconds": 0.166667
+                        },
+                        {
+                          "from": 3.866667,
+                          "to": 4.133333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 4.133333,
+                          "to": 4.366667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 4.366667,
+                          "to": 4.633333,
+                          "delta_seconds": 0.266666
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    3.333,
+                    4.133
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    }
+                  ],
+                  "cited_motion_times": [
+                    2.533,
+                    2.8,
+                    3.333,
+                    4.133,
+                    4.633
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 2.8,
+                      "to": 3.333333
+                    },
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    },
+                    {
+                      "from": 4.133333,
+                      "to": 4.633333
+                    }
+                  ],
+                  "partial_text": [
+                    {
+                      "text": "Milk",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        2.533
+                      ]
+                    }
+                  ],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "4.667000:6.867000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 4.667,
+                      "end": 4.733,
+                      "frame_times": [
+                        4.667,
+                        4.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.667,
+                          "to": 4.7,
+                          "delta_seconds": 0.033
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 4.733,
+                      "end": 6.767,
+                      "frame_times": [
+                        4.833,
+                        4.966667,
+                        5.233333,
+                        5.5,
+                        5.766667,
+                        5.767,
+                        6.033333,
+                        6.267,
+                        6.3,
+                        6.566667,
+                        6.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.833,
+                          "to": 4.966667,
+                          "delta_seconds": 0.133667
+                        },
+                        {
+                          "from": 4.966667,
+                          "to": 5.233333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 5.233333,
+                          "to": 5.5,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.5,
+                          "to": 5.766667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.767,
+                          "to": 6.033333,
+                          "delta_seconds": 0.266333
+                        },
+                        {
+                          "from": 6.033333,
+                          "to": 6.267,
+                          "delta_seconds": 0.233667
+                        },
+                        {
+                          "from": 6.267,
+                          "to": 6.3,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.3,
+                          "to": 6.566667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 6.566667,
+                          "to": 6.7,
+                          "delta_seconds": 0.133333
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 6.767,
+                      "end": 6.867,
+                      "frame_times": [
+                        6.833333
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    6.267,
+                    6.567
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 6.267,
+                      "to": 6.566667
+                    }
+                  ],
+                  "cited_motion_times": [
+                    4.833,
+                    5.5,
+                    6.033,
+                    6.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 4.833,
+                      "to": 5.5
+                    },
+                    {
+                      "from": 5.5,
+                      "to": 6.033333
+                    },
+                    {
+                      "from": 6.033333,
+                      "to": 6.566667
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "2",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        4.833
+                      ]
+                    },
+                    {
+                      "text": "1",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        5.767,
+                        6.267
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 6.867,
+                      "end": 8.633,
+                      "frame_times": [
+                        6.867,
+                        6.9,
+                        7.1,
+                        7.3,
+                        7.533333,
+                        7.733,
+                        7.733333,
+                        7.966667,
+                        8.166667,
+                        8.4,
+                        8.6
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 6.867,
+                          "to": 6.9,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.9,
+                          "to": 7.1,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.1,
+                          "to": 7.3,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.3,
+                          "to": 7.533333,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 7.533333,
+                          "to": 7.733,
+                          "delta_seconds": 0.199667
+                        },
+                        {
+                          "from": 7.733333,
+                          "to": 7.966667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 7.966667,
+                          "to": 8.166667,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 8.166667,
+                          "to": 8.4,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 8.4,
+                          "to": 8.6,
+                          "delta_seconds": 0.2
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 9,
+                  "cited_subject_times": [
+                    8.167,
+                    8.6
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "cited_motion_times": [
+                    7.3,
+                    7.733,
+                    8.167,
+                    8.6
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 7.3,
+                      "to": 7.733
+                    },
+                    {
+                      "from": 7.733333,
+                      "to": 8.166667
+                    },
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                }
+              ],
+              "review_risks": [
+                {
+                  "id": "4.667000:6.867000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.96825,
+                  "is_hard_failure": false
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.80392,
+                  "is_hard_failure": false
+                }
+              ]
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "batch_source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "section_sources": {
+            "2.533000:4.667000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "4.667000:6.867000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "6.867000:8.633000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 1,
+          "observation_flags": [
+            {
+              "id": "2.533000:4.667000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "visible_text[1].evidence_times",
+                  "times": [
+                    4.833
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "2.533000:4.667000",
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "risk_reviewed_section_ids": [
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "section_source": {
+            "source_job_id": "7d931428a78c407b985a51a75248c10d",
+            "stage": "reconcile_2",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "977114ad901a4ff818f10f365dd7e529a6b14abd66cc7c0d3264332088bbc502"
+        },
+        {
+          "collection": "segments",
+          "index": 5,
+          "issues": [
+            "motion",
+            "visual"
+          ],
+          "window_id": "10.967000:12.533000",
+          "start": 10.967,
+          "end": 12.533,
+          "changed_fields": [],
+          "before_sha256": "e0fd679a16451762211104b901f224677abade66d9c1c950773dfaf7ad8dce1e",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 10.967,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-019.jpg"
+            },
+            {
+              "time": 11.0,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-00.jpg"
+            },
+            {
+              "time": 11.166667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-01.jpg"
+            },
+            {
+              "time": 11.366667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-02.jpg"
+            },
+            {
+              "time": 11.566667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-03.jpg"
+            },
+            {
+              "time": 11.733,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-020.jpg"
+            },
+            {
+              "time": 11.733333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-04.jpg"
+            },
+            {
+              "time": 11.933333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-05.jpg"
+            },
+            {
+              "time": 12.133333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-06.jpg"
+            },
+            {
+              "time": 12.333333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-07.jpg"
+            },
+            {
+              "time": 12.5,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            10.967,
+            11.0,
+            11.166667,
+            11.366667,
+            11.566667,
+            11.733,
+            11.733333,
+            11.933333,
+            12.133333,
+            12.333333,
+            12.5
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 10.967,
+            "end": 12.533,
+            "fps": 30.0,
+            "decoded_frames": 46,
+            "statistics": {
+              "measured_pairs": 45,
+              "qualified_pairs": 44,
+              "qualified_pair_fraction": 0.97778,
+              "image_dx_widths_per_second_median": -0.71046,
+              "image_dy_heights_per_second_median": -0.02716,
+              "image_rotation_degrees_per_second_median": -2.39392,
+              "image_scale_log_per_second_median": -0.02964,
+              "background_inlier_ratio_median": 0.83259,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.1367,
+              "center_residual_widths_per_second_median": 0.11303,
+              "center_residual_widths_per_second_p90_median": 0.19438,
+              "edge_residual_widths_per_second_median": 0.07295,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [],
+            "skipped_cut_pairs": [],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "10.967000:12.533000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "10.967000:12.533000",
+                  "codes": [
+                    "description_locomotion_conflicts_with_subject_evidence"
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+          "batch_source_job_id": "e5459feeeb9d42dab53214d30605918c",
+          "section_sources": {
+            "10.967000:12.533000": {
+              "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "10.967000:12.533000",
+              "codes": [
+                "description_locomotion_conflicts_with_subject_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "10.967000:12.533000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+            "stage": "reconcile_1",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "e0fd679a16451762211104b901f224677abade66d9c1c950773dfaf7ad8dce1e"
+        },
+        {
+          "collection": "content_segments",
+          "index": 1,
+          "issues": [
+            "motion",
+            "visual"
+          ],
+          "window_id": "2.533000:4.667000",
+          "start": 2.533,
+          "end": 4.667,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "visual_verification"
+          ],
+          "before_sha256": "5b37ac0c025256cb38d7a9a90d4521e4c286af50d05bf6d8bf6b403df7575955",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 2.533,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-003.jpg"
+            },
+            {
+              "time": 2.533333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-00.jpg"
+            },
+            {
+              "time": 2.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-004.jpg"
+            },
+            {
+              "time": 2.8,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-01.jpg"
+            },
+            {
+              "time": 3.066667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-02.jpg"
+            },
+            {
+              "time": 3.133,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-005.jpg"
+            },
+            {
+              "time": 3.333333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-03.jpg"
+            },
+            {
+              "time": 3.6,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-04.jpg"
+            },
+            {
+              "time": 3.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-006.jpg"
+            },
+            {
+              "time": 3.866667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-05.jpg"
+            },
+            {
+              "time": 4.133333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-06.jpg"
+            },
+            {
+              "time": 4.366667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-07.jpg"
+            },
+            {
+              "time": 4.633333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-275f669bacc51f48b714/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            2.533,
+            2.533333,
+            2.7,
+            2.8,
+            3.066667,
+            3.133,
+            3.333333,
+            3.6,
+            3.7,
+            3.866667,
+            4.133333,
+            4.366667,
+            4.633333
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 2.533,
+            "end": 4.667,
+            "fps": 30.0,
+            "decoded_frames": 65,
+            "statistics": {
+              "measured_pairs": 63,
+              "qualified_pairs": 63,
+              "qualified_pair_fraction": 1.0,
+              "image_dx_widths_per_second_median": -0.76741,
+              "image_dy_heights_per_second_median": -0.01367,
+              "image_rotation_degrees_per_second_median": -6.21032,
+              "image_scale_log_per_second_median": -0.00892,
+              "background_inlier_ratio_median": 0.97872,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.07456,
+              "center_residual_widths_per_second_median": 0.05437,
+              "center_residual_widths_per_second_p90_median": 0.09848,
+              "edge_residual_widths_per_second_median": 0.04652,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [
+              2.6
+            ],
+            "skipped_cut_pairs": [
+              2.6
+            ],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "discarded_fields": [
+                "$.checks",
+                "$.review_note"
+              ],
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "b78161dd02d84e16870fe63c5214159d",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "2.533000:4.667000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": false,
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "new_provider_calls": 1,
+              "section_ids": [
+                "2.533000:4.667000",
+                "4.667000:6.867000",
+                "6.867000:8.633000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "2.533000:4.667000",
+                  "flags": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 2.533,
+                      "end": 2.6,
+                      "frame_times": [
+                        2.533,
+                        2.533333
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 2.6,
+                      "end": 4.667,
+                      "frame_times": [
+                        2.7,
+                        2.8,
+                        3.066667,
+                        3.133,
+                        3.333333,
+                        3.6,
+                        3.7,
+                        3.866667,
+                        4.133333,
+                        4.366667,
+                        4.633333
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 2.7,
+                          "to": 2.8,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 2.8,
+                          "to": 3.066667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.066667,
+                          "to": 3.133,
+                          "delta_seconds": 0.066333
+                        },
+                        {
+                          "from": 3.133,
+                          "to": 3.333333,
+                          "delta_seconds": 0.200333
+                        },
+                        {
+                          "from": 3.333333,
+                          "to": 3.6,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.6,
+                          "to": 3.7,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 3.7,
+                          "to": 3.866667,
+                          "delta_seconds": 0.166667
+                        },
+                        {
+                          "from": 3.866667,
+                          "to": 4.133333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 4.133333,
+                          "to": 4.366667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 4.366667,
+                          "to": 4.633333,
+                          "delta_seconds": 0.266666
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    3.333,
+                    4.133
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    }
+                  ],
+                  "cited_motion_times": [
+                    2.533,
+                    2.8,
+                    3.333,
+                    4.133,
+                    4.633
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 2.8,
+                      "to": 3.333333
+                    },
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    },
+                    {
+                      "from": 4.133333,
+                      "to": 4.633333
+                    }
+                  ],
+                  "partial_text": [
+                    {
+                      "text": "Milk",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        2.533
+                      ]
+                    }
+                  ],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "4.667000:6.867000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 4.667,
+                      "end": 4.733,
+                      "frame_times": [
+                        4.667,
+                        4.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.667,
+                          "to": 4.7,
+                          "delta_seconds": 0.033
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 4.733,
+                      "end": 6.767,
+                      "frame_times": [
+                        4.833,
+                        4.966667,
+                        5.233333,
+                        5.5,
+                        5.766667,
+                        5.767,
+                        6.033333,
+                        6.267,
+                        6.3,
+                        6.566667,
+                        6.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.833,
+                          "to": 4.966667,
+                          "delta_seconds": 0.133667
+                        },
+                        {
+                          "from": 4.966667,
+                          "to": 5.233333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 5.233333,
+                          "to": 5.5,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.5,
+                          "to": 5.766667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.767,
+                          "to": 6.033333,
+                          "delta_seconds": 0.266333
+                        },
+                        {
+                          "from": 6.033333,
+                          "to": 6.267,
+                          "delta_seconds": 0.233667
+                        },
+                        {
+                          "from": 6.267,
+                          "to": 6.3,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.3,
+                          "to": 6.566667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 6.566667,
+                          "to": 6.7,
+                          "delta_seconds": 0.133333
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 6.767,
+                      "end": 6.867,
+                      "frame_times": [
+                        6.833333
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    6.267,
+                    6.567
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 6.267,
+                      "to": 6.566667
+                    }
+                  ],
+                  "cited_motion_times": [
+                    4.833,
+                    5.5,
+                    6.033,
+                    6.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 4.833,
+                      "to": 5.5
+                    },
+                    {
+                      "from": 5.5,
+                      "to": 6.033333
+                    },
+                    {
+                      "from": 6.033333,
+                      "to": 6.566667
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "2",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        4.833
+                      ]
+                    },
+                    {
+                      "text": "1",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        5.767,
+                        6.267
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 6.867,
+                      "end": 8.633,
+                      "frame_times": [
+                        6.867,
+                        6.9,
+                        7.1,
+                        7.3,
+                        7.533333,
+                        7.733,
+                        7.733333,
+                        7.966667,
+                        8.166667,
+                        8.4,
+                        8.6
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 6.867,
+                          "to": 6.9,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.9,
+                          "to": 7.1,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.1,
+                          "to": 7.3,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.3,
+                          "to": 7.533333,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 7.533333,
+                          "to": 7.733,
+                          "delta_seconds": 0.199667
+                        },
+                        {
+                          "from": 7.733333,
+                          "to": 7.966667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 7.966667,
+                          "to": 8.166667,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 8.166667,
+                          "to": 8.4,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 8.4,
+                          "to": 8.6,
+                          "delta_seconds": 0.2
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 9,
+                  "cited_subject_times": [
+                    8.167,
+                    8.6
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "cited_motion_times": [
+                    7.3,
+                    7.733,
+                    8.167,
+                    8.6
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 7.3,
+                      "to": 7.733
+                    },
+                    {
+                      "from": 7.733333,
+                      "to": 8.166667
+                    },
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                }
+              ],
+              "review_risks": [
+                {
+                  "id": "4.667000:6.867000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.96825,
+                  "is_hard_failure": false
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.80392,
+                  "is_hard_failure": false
+                }
+              ]
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "batch_source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "section_sources": {
+            "2.533000:4.667000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "4.667000:6.867000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "6.867000:8.633000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 1,
+          "observation_flags": [
+            {
+              "id": "2.533000:4.667000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "visible_text[1].evidence_times",
+                  "times": [
+                    4.833
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "2.533000:4.667000",
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "risk_reviewed_section_ids": [
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "section_source": {
+            "source_job_id": "7d931428a78c407b985a51a75248c10d",
+            "stage": "reconcile_2",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "ea02eef8979182a8815a430a637329890cadedc0489b75633f06f9e36485908c"
+        },
+        {
+          "collection": "content_segments",
+          "index": 2,
+          "issues": [
+            "motion",
+            "visual"
+          ],
+          "window_id": "4.667000:6.867000",
+          "start": 4.667,
+          "end": 6.867,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "visual_verification"
+          ],
+          "before_sha256": "d519e461b89e82c138addcadd4a54bd9261576c669040e8c7c5c6c6e9d90e5e9",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 4.667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-007.jpg"
+            },
+            {
+              "time": 4.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-00.jpg"
+            },
+            {
+              "time": 4.833,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-008.jpg"
+            },
+            {
+              "time": 4.966667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-01.jpg"
+            },
+            {
+              "time": 5.233333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-02.jpg"
+            },
+            {
+              "time": 5.5,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-03.jpg"
+            },
+            {
+              "time": 5.766667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-04.jpg"
+            },
+            {
+              "time": 5.767,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-009.jpg"
+            },
+            {
+              "time": 6.033333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-05.jpg"
+            },
+            {
+              "time": 6.267,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-010.jpg"
+            },
+            {
+              "time": 6.3,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-06.jpg"
+            },
+            {
+              "time": 6.566667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-07.jpg"
+            },
+            {
+              "time": 6.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-011.jpg"
+            },
+            {
+              "time": 6.833333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-8f3dc37932be9b3c905d/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            4.667,
+            4.7,
+            4.833,
+            4.966667,
+            5.233333,
+            5.5,
+            5.766667,
+            5.767,
+            6.033333,
+            6.267,
+            6.3,
+            6.566667,
+            6.7,
+            6.833333
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 4.667,
+            "end": 6.867,
+            "fps": 30.0,
+            "decoded_frames": 66,
+            "statistics": {
+              "measured_pairs": 63,
+              "qualified_pairs": 61,
+              "qualified_pair_fraction": 0.96825,
+              "image_dx_widths_per_second_median": -0.63387,
+              "image_dy_heights_per_second_median": 0.0218,
+              "image_rotation_degrees_per_second_median": -6.98995,
+              "image_scale_log_per_second_median": 0.0355,
+              "background_inlier_ratio_median": 0.90286,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.10649,
+              "center_residual_widths_per_second_median": 0.0819,
+              "center_residual_widths_per_second_p90_median": 0.13323,
+              "edge_residual_widths_per_second_median": 0.06731,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [
+              4.733,
+              6.767
+            ],
+            "skipped_cut_pairs": [
+              4.733,
+              6.767
+            ],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "discarded_fields": [
+                "$.checks",
+                "$.review_note"
+              ],
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "b78161dd02d84e16870fe63c5214159d",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "2.533000:4.667000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": false,
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "new_provider_calls": 1,
+              "section_ids": [
+                "2.533000:4.667000",
+                "4.667000:6.867000",
+                "6.867000:8.633000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "2.533000:4.667000",
+                  "flags": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 2.533,
+                      "end": 2.6,
+                      "frame_times": [
+                        2.533,
+                        2.533333
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 2.6,
+                      "end": 4.667,
+                      "frame_times": [
+                        2.7,
+                        2.8,
+                        3.066667,
+                        3.133,
+                        3.333333,
+                        3.6,
+                        3.7,
+                        3.866667,
+                        4.133333,
+                        4.366667,
+                        4.633333
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 2.7,
+                          "to": 2.8,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 2.8,
+                          "to": 3.066667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.066667,
+                          "to": 3.133,
+                          "delta_seconds": 0.066333
+                        },
+                        {
+                          "from": 3.133,
+                          "to": 3.333333,
+                          "delta_seconds": 0.200333
+                        },
+                        {
+                          "from": 3.333333,
+                          "to": 3.6,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.6,
+                          "to": 3.7,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 3.7,
+                          "to": 3.866667,
+                          "delta_seconds": 0.166667
+                        },
+                        {
+                          "from": 3.866667,
+                          "to": 4.133333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 4.133333,
+                          "to": 4.366667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 4.366667,
+                          "to": 4.633333,
+                          "delta_seconds": 0.266666
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    3.333,
+                    4.133
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    }
+                  ],
+                  "cited_motion_times": [
+                    2.533,
+                    2.8,
+                    3.333,
+                    4.133,
+                    4.633
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 2.8,
+                      "to": 3.333333
+                    },
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    },
+                    {
+                      "from": 4.133333,
+                      "to": 4.633333
+                    }
+                  ],
+                  "partial_text": [
+                    {
+                      "text": "Milk",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        2.533
+                      ]
+                    }
+                  ],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "4.667000:6.867000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 4.667,
+                      "end": 4.733,
+                      "frame_times": [
+                        4.667,
+                        4.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.667,
+                          "to": 4.7,
+                          "delta_seconds": 0.033
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 4.733,
+                      "end": 6.767,
+                      "frame_times": [
+                        4.833,
+                        4.966667,
+                        5.233333,
+                        5.5,
+                        5.766667,
+                        5.767,
+                        6.033333,
+                        6.267,
+                        6.3,
+                        6.566667,
+                        6.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.833,
+                          "to": 4.966667,
+                          "delta_seconds": 0.133667
+                        },
+                        {
+                          "from": 4.966667,
+                          "to": 5.233333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 5.233333,
+                          "to": 5.5,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.5,
+                          "to": 5.766667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.767,
+                          "to": 6.033333,
+                          "delta_seconds": 0.266333
+                        },
+                        {
+                          "from": 6.033333,
+                          "to": 6.267,
+                          "delta_seconds": 0.233667
+                        },
+                        {
+                          "from": 6.267,
+                          "to": 6.3,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.3,
+                          "to": 6.566667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 6.566667,
+                          "to": 6.7,
+                          "delta_seconds": 0.133333
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 6.767,
+                      "end": 6.867,
+                      "frame_times": [
+                        6.833333
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    6.267,
+                    6.567
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 6.267,
+                      "to": 6.566667
+                    }
+                  ],
+                  "cited_motion_times": [
+                    4.833,
+                    5.5,
+                    6.033,
+                    6.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 4.833,
+                      "to": 5.5
+                    },
+                    {
+                      "from": 5.5,
+                      "to": 6.033333
+                    },
+                    {
+                      "from": 6.033333,
+                      "to": 6.566667
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "2",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        4.833
+                      ]
+                    },
+                    {
+                      "text": "1",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        5.767,
+                        6.267
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 6.867,
+                      "end": 8.633,
+                      "frame_times": [
+                        6.867,
+                        6.9,
+                        7.1,
+                        7.3,
+                        7.533333,
+                        7.733,
+                        7.733333,
+                        7.966667,
+                        8.166667,
+                        8.4,
+                        8.6
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 6.867,
+                          "to": 6.9,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.9,
+                          "to": 7.1,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.1,
+                          "to": 7.3,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.3,
+                          "to": 7.533333,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 7.533333,
+                          "to": 7.733,
+                          "delta_seconds": 0.199667
+                        },
+                        {
+                          "from": 7.733333,
+                          "to": 7.966667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 7.966667,
+                          "to": 8.166667,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 8.166667,
+                          "to": 8.4,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 8.4,
+                          "to": 8.6,
+                          "delta_seconds": 0.2
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 9,
+                  "cited_subject_times": [
+                    8.167,
+                    8.6
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "cited_motion_times": [
+                    7.3,
+                    7.733,
+                    8.167,
+                    8.6
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 7.3,
+                      "to": 7.733
+                    },
+                    {
+                      "from": 7.733333,
+                      "to": 8.166667
+                    },
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                }
+              ],
+              "review_risks": [
+                {
+                  "id": "4.667000:6.867000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.96825,
+                  "is_hard_failure": false
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.80392,
+                  "is_hard_failure": false
+                }
+              ]
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "batch_source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "section_sources": {
+            "2.533000:4.667000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "4.667000:6.867000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "6.867000:8.633000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 1,
+          "observation_flags": [
+            {
+              "id": "2.533000:4.667000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "visible_text[1].evidence_times",
+                  "times": [
+                    4.833
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "2.533000:4.667000",
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "risk_reviewed_section_ids": [
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "section_source": {
+            "source_job_id": "7d931428a78c407b985a51a75248c10d",
+            "stage": "reconcile_2",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "a230f60c9af27f8106eab16867f84d2cd7398ee58e04dd4afd4457756d5763de"
+        },
+        {
+          "collection": "content_segments",
+          "index": 3,
+          "issues": [
+            "motion",
+            "visual"
+          ],
+          "window_id": "6.867000:8.633000",
+          "start": 6.867,
+          "end": 8.633,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "visual_verification"
+          ],
+          "before_sha256": "460b93b9072e7ccea77f1f8fbd24e948e8462c0d687f75bc46661f7873dd294e",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 6.867,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-012.jpg"
+            },
+            {
+              "time": 6.9,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-00.jpg"
+            },
+            {
+              "time": 7.1,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-01.jpg"
+            },
+            {
+              "time": 7.3,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-02.jpg"
+            },
+            {
+              "time": 7.533333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-03.jpg"
+            },
+            {
+              "time": 7.733,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-013.jpg"
+            },
+            {
+              "time": 7.733333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-04.jpg"
+            },
+            {
+              "time": 7.966667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-05.jpg"
+            },
+            {
+              "time": 8.166667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-06.jpg"
+            },
+            {
+              "time": 8.4,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-07.jpg"
+            },
+            {
+              "time": 8.6,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-bdbfaf11fc57ceca003b/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            6.867,
+            6.9,
+            7.1,
+            7.3,
+            7.533333,
+            7.733,
+            7.733333,
+            7.966667,
+            8.166667,
+            8.4,
+            8.6
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 6.867,
+            "end": 8.633,
+            "fps": 30.0,
+            "decoded_frames": 52,
+            "statistics": {
+              "measured_pairs": 51,
+              "qualified_pairs": 41,
+              "qualified_pair_fraction": 0.80392,
+              "image_dx_widths_per_second_median": -1.15908,
+              "image_dy_heights_per_second_median": -0.04258,
+              "image_rotation_degrees_per_second_median": 0.3219,
+              "image_scale_log_per_second_median": -0.01098,
+              "background_inlier_ratio_median": 0.82667,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.16806,
+              "center_residual_widths_per_second_median": 0.13448,
+              "center_residual_widths_per_second_p90_median": 0.22681,
+              "edge_residual_widths_per_second_median": 0.07382,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [],
+            "skipped_cut_pairs": [],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "2715b4bb9b5348638898212982945706",
+              "discarded_fields": [
+                "$.checks",
+                "$.review_note"
+              ],
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "b78161dd02d84e16870fe63c5214159d",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "2.533000:4.667000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": false,
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "new_provider_calls": 1,
+              "section_ids": [
+                "2.533000:4.667000",
+                "4.667000:6.867000",
+                "6.867000:8.633000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "2.533000:4.667000",
+                  "codes": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "2.533000:4.667000",
+                  "flags": [
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 2.533,
+                      "end": 2.6,
+                      "frame_times": [
+                        2.533,
+                        2.533333
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 2.6,
+                      "end": 4.667,
+                      "frame_times": [
+                        2.7,
+                        2.8,
+                        3.066667,
+                        3.133,
+                        3.333333,
+                        3.6,
+                        3.7,
+                        3.866667,
+                        4.133333,
+                        4.366667,
+                        4.633333
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 2.7,
+                          "to": 2.8,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 2.8,
+                          "to": 3.066667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.066667,
+                          "to": 3.133,
+                          "delta_seconds": 0.066333
+                        },
+                        {
+                          "from": 3.133,
+                          "to": 3.333333,
+                          "delta_seconds": 0.200333
+                        },
+                        {
+                          "from": 3.333333,
+                          "to": 3.6,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 3.6,
+                          "to": 3.7,
+                          "delta_seconds": 0.1
+                        },
+                        {
+                          "from": 3.7,
+                          "to": 3.866667,
+                          "delta_seconds": 0.166667
+                        },
+                        {
+                          "from": 3.866667,
+                          "to": 4.133333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 4.133333,
+                          "to": 4.366667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 4.366667,
+                          "to": 4.633333,
+                          "delta_seconds": 0.266666
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    3.333,
+                    4.133
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    }
+                  ],
+                  "cited_motion_times": [
+                    2.533,
+                    2.8,
+                    3.333,
+                    4.133,
+                    4.633
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 2.8,
+                      "to": 3.333333
+                    },
+                    {
+                      "from": 3.333333,
+                      "to": 4.133333
+                    },
+                    {
+                      "from": 4.133333,
+                      "to": 4.633333
+                    }
+                  ],
+                  "partial_text": [
+                    {
+                      "text": "Milk",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        2.533
+                      ]
+                    }
+                  ],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "4.667000:6.867000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 4.667,
+                      "end": 4.733,
+                      "frame_times": [
+                        4.667,
+                        4.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.667,
+                          "to": 4.7,
+                          "delta_seconds": 0.033
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 4.733,
+                      "end": 6.767,
+                      "frame_times": [
+                        4.833,
+                        4.966667,
+                        5.233333,
+                        5.5,
+                        5.766667,
+                        5.767,
+                        6.033333,
+                        6.267,
+                        6.3,
+                        6.566667,
+                        6.7
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 4.833,
+                          "to": 4.966667,
+                          "delta_seconds": 0.133667
+                        },
+                        {
+                          "from": 4.966667,
+                          "to": 5.233333,
+                          "delta_seconds": 0.266666
+                        },
+                        {
+                          "from": 5.233333,
+                          "to": 5.5,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.5,
+                          "to": 5.766667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 5.767,
+                          "to": 6.033333,
+                          "delta_seconds": 0.266333
+                        },
+                        {
+                          "from": 6.033333,
+                          "to": 6.267,
+                          "delta_seconds": 0.233667
+                        },
+                        {
+                          "from": 6.267,
+                          "to": 6.3,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.3,
+                          "to": 6.566667,
+                          "delta_seconds": 0.266667
+                        },
+                        {
+                          "from": 6.566667,
+                          "to": 6.7,
+                          "delta_seconds": 0.133333
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 6.767,
+                      "end": 6.867,
+                      "frame_times": [
+                        6.833333
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 10,
+                  "cited_subject_times": [
+                    6.267,
+                    6.567
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 6.267,
+                      "to": 6.566667
+                    }
+                  ],
+                  "cited_motion_times": [
+                    4.833,
+                    5.5,
+                    6.033,
+                    6.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 4.833,
+                      "to": 5.5
+                    },
+                    {
+                      "from": 5.5,
+                      "to": 6.033333
+                    },
+                    {
+                      "from": 6.033333,
+                      "to": 6.566667
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "2",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        4.833
+                      ]
+                    },
+                    {
+                      "text": "1",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        5.767,
+                        6.267
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "flags": [],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 6.867,
+                      "end": 8.633,
+                      "frame_times": [
+                        6.867,
+                        6.9,
+                        7.1,
+                        7.3,
+                        7.533333,
+                        7.733,
+                        7.733333,
+                        7.966667,
+                        8.166667,
+                        8.4,
+                        8.6
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 6.867,
+                          "to": 6.9,
+                          "delta_seconds": 0.033
+                        },
+                        {
+                          "from": 6.9,
+                          "to": 7.1,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.1,
+                          "to": 7.3,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 7.3,
+                          "to": 7.533333,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 7.533333,
+                          "to": 7.733,
+                          "delta_seconds": 0.199667
+                        },
+                        {
+                          "from": 7.733333,
+                          "to": 7.966667,
+                          "delta_seconds": 0.233334
+                        },
+                        {
+                          "from": 7.966667,
+                          "to": 8.166667,
+                          "delta_seconds": 0.2
+                        },
+                        {
+                          "from": 8.166667,
+                          "to": 8.4,
+                          "delta_seconds": 0.233333
+                        },
+                        {
+                          "from": 8.4,
+                          "to": 8.6,
+                          "delta_seconds": 0.2
+                        }
+                      ]
+                    }
+                  ],
+                  "available_adjacent_pair_count": 9,
+                  "cited_subject_times": [
+                    8.167,
+                    8.6
+                  ],
+                  "cited_subject_same_shot_pairs": [
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "cited_motion_times": [
+                    7.3,
+                    7.733,
+                    8.167,
+                    8.6
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 7.3,
+                      "to": 7.733
+                    },
+                    {
+                      "from": 7.733333,
+                      "to": 8.166667
+                    },
+                    {
+                      "from": 8.166667,
+                      "to": 8.6
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ]
+                }
+              ],
+              "review_risks": [
+                {
+                  "id": "4.667000:6.867000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.96825,
+                  "is_hard_failure": false
+                },
+                {
+                  "id": "6.867000:8.633000",
+                  "code": "independent_motion_during_coherent_view_change",
+                  "reason": "全局位移与独立主体位移需区分，要求同镜头接触点或相对地标证据，不能以出画作为证据。",
+                  "observed_subject_motion": "independent_translation",
+                  "coherent_view_change_pair_fraction": 1.0,
+                  "qualified_pair_fraction": 0.80392,
+                  "is_hard_failure": false
+                }
+              ]
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "batch_source_job_id": "7d931428a78c407b985a51a75248c10d",
+          "section_sources": {
+            "2.533000:4.667000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "4.667000:6.867000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            },
+            "6.867000:8.633000": {
+              "source_job_id": "7d931428a78c407b985a51a75248c10d",
+              "stage": "reconcile_2",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 1,
+          "observation_flags": [
+            {
+              "id": "2.533000:4.667000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "visible_text[1].evidence_times",
+                  "times": [
+                    4.833
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "2.533000:4.667000",
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "risk_reviewed_section_ids": [
+            "4.667000:6.867000",
+            "6.867000:8.633000"
+          ],
+          "section_source": {
+            "source_job_id": "7d931428a78c407b985a51a75248c10d",
+            "stage": "reconcile_2",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "5f310ff5a41af5ef0f8b2a01dd0d83cd3b80b43eea83a712e8249271fbfb519b"
+        },
+        {
+          "collection": "content_segments",
+          "index": 5,
+          "issues": [
+            "motion",
+            "visual"
+          ],
+          "window_id": "10.967000:12.533000",
+          "start": 10.967,
+          "end": 12.533,
+          "changed_fields": [],
+          "before_sha256": "2f51eb65e5b07c2b00272c3a2e9ebc94fb3e380f4a834a431a865159fd91e113",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 10.967,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-019.jpg"
+            },
+            {
+              "time": 11.0,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-00.jpg"
+            },
+            {
+              "time": 11.166667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-01.jpg"
+            },
+            {
+              "time": 11.366667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-02.jpg"
+            },
+            {
+              "time": 11.566667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-03.jpg"
+            },
+            {
+              "time": 11.733,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-020.jpg"
+            },
+            {
+              "time": 11.733333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-04.jpg"
+            },
+            {
+              "time": 11.933333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-05.jpg"
+            },
+            {
+              "time": 12.133333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-06.jpg"
+            },
+            {
+              "time": 12.333333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-07.jpg"
+            },
+            {
+              "time": 12.5,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-3540bef87806dcc5a268/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            10.967,
+            11.0,
+            11.166667,
+            11.366667,
+            11.566667,
+            11.733,
+            11.733333,
+            11.933333,
+            12.133333,
+            12.333333,
+            12.5
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 10.967,
+            "end": 12.533,
+            "fps": 30.0,
+            "decoded_frames": 46,
+            "statistics": {
+              "measured_pairs": 45,
+              "qualified_pairs": 44,
+              "qualified_pair_fraction": 0.97778,
+              "image_dx_widths_per_second_median": -0.71046,
+              "image_dy_heights_per_second_median": -0.02716,
+              "image_rotation_degrees_per_second_median": -2.39392,
+              "image_scale_log_per_second_median": -0.02964,
+              "background_inlier_ratio_median": 0.83259,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.1367,
+              "center_residual_widths_per_second_median": 0.11303,
+              "center_residual_widths_per_second_p90_median": 0.19438,
+              "edge_residual_widths_per_second_median": 0.07295,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [],
+            "skipped_cut_pairs": [],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "10.967000:12.533000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "10.967000:12.533000",
+                  "codes": [
+                    "description_locomotion_conflicts_with_subject_evidence"
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+          "batch_source_job_id": "e5459feeeb9d42dab53214d30605918c",
+          "section_sources": {
+            "10.967000:12.533000": {
+              "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "10.967000:12.533000",
+              "codes": [
+                "description_locomotion_conflicts_with_subject_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "10.967000:12.533000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "e5459feeeb9d42dab53214d30605918c",
+            "stage": "reconcile_1",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "2f51eb65e5b07c2b00272c3a2e9ebc94fb3e380f4a834a431a865159fd91e113"
+        }
+      ],
+      "automatic_model_review": true,
+      "new_provider_calls": 1,
+      "reused": {
+        "shot_detection": true,
+        "transcript": true,
+        "full_analysis_windows": 1,
+        "unchanged_segments": {
+          "content_segments": 2,
+          "segments": 2
+        }
+      }
+    }
+  },
+  "error": null,
+  "payload": {
+    "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+    "base_analysis_id": "08dc6faf75ec4f8bbc2c18b6a12c21bb",
+    "targets": [
+      {
+        "collection": "segments",
+        "index": 1,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 2,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 3,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 5,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 1,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 2,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 3,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 5,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      }
+    ],
+    "reviewed_edits": [],
+    "automatic": true
+  },
+  "provider_state": {},
+  "id": "7d931428a78c407b985a51a75248c10d",
+  "created_at": "2026-10-20T16:36:58.211978+00:00",
+  "updated_at": "2026-10-20T16:37:57.886443+00:00"
+}

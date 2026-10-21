@@ -1,0 +1,46 @@
+{
+  "assets": [
+    {
+      "id": "6dbf075e94c946dd837bf3c8e1608a50",
+      "name": "参考上传验收.png",
+      "kind": "image",
+      "duration": 0.0,
+      "width": 960,
+      "height": 540,
+      "has_audio": false,
+      "format": "png",
+      "size": 12680,
+      "sha256": "9a0a1277b4231fc279573af7d4c281eddc8bb1219a16c0ff3f7786416b574141",
+      "url": "/api/media/assets/512689002cba473e8063f41d01f0d5db.png",
+      "thumbnail_url": "/api/media/previews/6dbf075e94c946dd837bf3c8e1608a50.jpg",
+      "source": "upload",
+      "generation_id": null,
+      "purpose": "library",
+      "analysis_status": "queued",
+      "analysis": null,
+      "audio_status": "no_audio",
+      "transcript": null,
+      "created_at": "2026-10-21T03:49:00.433521+00:00",
+      "updated_at": "2026-10-21T03:49:00.460894+00:00",
+      "analysis_error": null,
+      "analysis_job_id": "bce2ab580f464913b6d5206e7138af06"
+    }
+  ],
+  "jobs": [
+    {
+      "kind": "analysis",
+      "status": "queued",
+      "progress": 0,
+      "message": "等待处理",
+      "result": null,
+      "error": null,
+      "id": "bce2ab580f464913b6d5206e7138af06",
+      "created_at": "2026-10-21T03:49:00.457196+00:00",
+      "updated_at": "2026-10-21T03:49:00.457207+00:00",
+      "resumable": false
+    }
+  ],
+  "job_ids": [
+    "bce2ab580f464913b6d5206e7138af06"
+  ]
+}

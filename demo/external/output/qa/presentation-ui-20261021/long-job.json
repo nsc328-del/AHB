@@ -1,0 +1,12 @@
+{
+  "kind": "reference_presentation",
+  "status": "failed",
+  "progress": 20.0,
+  "message": "组织分析必须按原顺序覆盖全部镜头且不能重复",
+  "result": null,
+  "error": "组织分析必须按原顺序覆盖全部镜头且不能重复",
+  "id": "64e1827b0b4c47e5bd1b594bbbcec8e9",
+  "created_at": "2026-10-21T03:42:53.028850+00:00",
+  "updated_at": "2026-10-21T03:43:08.168778+00:00",
+  "resumable": false
+}

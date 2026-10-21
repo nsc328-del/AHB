@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>从素材到故事</title>
+<style>
+  html,body{margin:0;padding:0;overflow:hidden;background:#ffffff;}
+  #stage{position:relative;width:1280px;height:720px;background:#ffffff;overflow:hidden;
+    font-family:'PingFang SC','Arial',sans-serif;}
+  .abs{position:absolute;}
+  .label{font-size:30px;color:#1B4DFF;letter-spacing:2px;font-weight:500;}
+  .hint{font-size:22px;color:#7C97FF;letter-spacing:1px;}
+  .prevTitle{font-size:40px;color:#1B4DFF;letter-spacing:4px;font-weight:600;}
+  .sub{font-size:22px;color:#5B78E6;letter-spacing:2px;}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="labelsWrap" class="abs"></div>
+  <div id="hintsWrap" class="abs"></div>
+  <div id="squaresWrap" class="abs"></div>
+  <svg id="lines" class="abs" width="1280" height="720" style="left:0;top:0;"></svg>
+  <div id="previewBox" class="abs"></div>
+  <div id="prevText" class="abs prevTitle" style="opacity:0;">故事预览</div>
+  <div id="prevSub" class="abs sub" style="opacity:0;">素材 → 镜头 → 成片</div>
+  <div id="progressLine" class="abs" style="opacity:0;height:3px;background:#1B4DFF;border-radius:2px;"></div>
+  <svg id="corners" class="abs" width="1280" height="720" style="left:0;top:0;pointer-events:none;"></svg>
+</div>
+<script>
+(function(){
+  var stage = document.getElementById('stage');
+
+  // ---------- 静态布局参数 ----------
+  // 左侧素材方块 2列x3行 阵列
+  var sqSize = 56;
+  var sqGapX = 26, sqGapY = 26;
+  var baseX = 150, baseY = 250;
+  var squarePositions = [];
+  for(var r=0;r<3;r++){
+    for(var c=0;c<2;c++){
+      squarePositions.push({
+        x: baseX + c*(sqSize+sqGapX),
+        y: baseY + r*(sqSize+sqGapY)
+      });
+    }
+  }
+
+  // 三条分支终点
+  var branchNode = [
+    {x: 780, y: 200},
+    {x: 800, y: 360},
+    {x: 780, y: 520}
+  ];
+
+  // 分支节点旁的提示文字
+  var hintTexts = [
+    {t:'镜头顺序', x: branchNode[0].x+34, y: branchNode[0].y-2},
+    {t:'画面组合', x: branchNode[1].x+34, y: branchNode[1].y-2},
+    {t:'节奏点',   x: branchNode[2].x+34, y: branchNode[2].y-2}
+  ];
+
+  // 预览框
+  var box = {x: 860, y: 240, w: 320, h: 240};
+
+  // 三行标签位置
+  var labelPos = [
+    {t:'选取', x: 400, y: 300},
+    {t:'编排', x: 400, y: 356},
+    {t:'成片', x: 400, y: 412}
+  ];
+
+  // ---------- 构建 DOM ----------
+  var labelsWrap = document.getElementById('labelsWrap');
+  var hintsWrap = document.getElementById('hintsWrap');
+  var squaresWrap = document.getElementById('squaresWrap');
+
+  var labelEls = [];
+  labelPos.forEach(function(p){
+    var d = document.createElement('div');
+    d.className = 'abs label';
+    d.textContent = p.t;
+    d.style.left = p.x+'px';
+    d.style.top = p.y+'px';
+    d.style.opacity = '0';
+    labelsWrap.appendChild(d);
+    labelEls.push(d);
+  });
+
+  var hintEls = [];
+  hintTexts.forEach(function(p){
+    var d = document.createElement('div');
+    d.className = 'abs hint';
+    d.textContent = p.t;
+    d.style.left = p.x+'px';
+    d.style.top = p.y+'px';
+    d.style.opacity = '0';
+    hintsWrap.appendChild(d);
+    hintEls.push(d);
+  });
+
+  var squareEls = [];
+  squarePositions.forEach(function(p){
+    var d = document.createElement('div');
+    d.className = 'abs';
+    d.style.width = sqSize+'px';
+    d.style.height = sqSize+'px';
+    d.style.boxSizing = 'border-box';
+    d.style.border = '2.5px solid #1B4DFF';
+    d.style.borderRadius = '4px';
+    d.style.opacity = '0';
+    d.style.left = '0px';
+    d.style.top = '0px';
+    squaresWrap.appendChild(d);
+    squareEls.push(d);
+  });
+
+  var svg = document.getElementById('lines');
+  var NS = 'http://www.w3.org/2000/svg';
+
+  // 分支曲线（从方块区域右缘到节点）
+  function makeCurve(node){
+    var path = document.createElementNS(NS,'path');
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke','#9FB6FF');
+    path.setAttribute('stroke-width','2');
+    path.setAttribute('stroke-linecap','round');
+    svg.appendChild(path);
+    return path;
+  }
+  var branchPaths = branchNode.map(makeCurve);
+
+  // 节点圆点
+  var nodeCircles = branchNode.map(function(n){
+    var c = document.createElementNS(NS,'circle');
+    c.setAttribute('cx', n.x);
+    c.setAttribute('cy', n.y);
+    c.setAttribute('r', 6);
+    c.setAttribute('fill','#1B4DFF');
+    c.setAttribute('opacity','0');
+    svg.appendChild(c);
+    return c;
+  });
+
+  // 汇合曲线（节点到预览框左缘），三条
+  var mergePaths = branchNode.map(function(n){
+    var p = document.createElementNS(NS,'path');
+    p.setAttribute('fill','none');
+    p.setAttribute('stroke','#C7D5FF');
+    p.setAttribute('stroke-width','2');
+    p.setAttribute('stroke-linecap','round');
+    svg.appendChild(p);
+    return p;
+  });
+
+  // ---------- 预览框（四条边逐步描边）----------
+  var previewBox = document.getElementById('previewBox');
+  previewBox.style.left = box.x+'px';
+  previewBox.style.top = box.y+'px';
+  previewBox.style.width = box.w+'px';
+  previewBox.style.height = box.h+'px';
+  previewBox.style.boxSizing = 'border-box';
+  previewBox.style.borderRadius = '6px';
+  previewBox.style.background = '#F7F9FF';
+
+  var edgeDefs = [
+    // top: left->right
+    {x1:0, y1:0, x2:box.w, y2:0, delay:4.0},
+    // right: top->bottom
+    {x1:box.w, y1:0, x2:box.w, y2:box.h, delay:4.25},
+    // bottom: right->left
+    {x1:box.w, y1:box.h, x2:0, y2:box.h, delay:4.5},
+    // left: bottom->top
+    {x1:0, y1:box.h, x2:0, y2:0, delay:4.75}
+  ];
+  var edgeEls = edgeDefs.map(function(e){
+    var d = document.createElement('div');
+    d.className = 'abs';
+    d.style.background = '#1B4DFF';
+    d.style.borderRadius = '1px';
+    d.style.opacity = '0';
+    previewBox.appendChild(d);
+    return d;
+  });
+
+  var prevText = document.getElementById('prevText');
+  var prevSub = document.getElementById('prevSub');
+  var progressLine = document.getElementById('progressLine');
+
+  var cornersSvg = document.getElementById('corners');
+  var cornerEls = [];
+  // 四个取景角标（L 形）
+  var cornerGeo = [
+    // 左上
+    {x:box.x-6, y:box.y-6, hx:1, hy:1},
+    // 右上
+    {x:box.x+box.w+6, y:box.y-6, hx:-1, hy:1},
+    // 左下
+    {x:box.x-6, y:box.y+box.h+6, hx:1, hy:-1},
+    // 右下
+    {x:box.x+box.w+6, y:box.y+box.h+6, hx:-1, hy:-1}
+  ];
+  cornerGeo.forEach(function(g){
+    var p = document.createElementNS(NS,'path');
+    var len = 22;
+    var d = 'M '+(g.x+g.hx*len)+' '+g.y+' L '+g.x+' '+g.y+' L '+g.x+' '+(g.y+g.hy*len);
+    p.setAttribute('d', d);
+    p.setAttribute('fill','none');
+    p.setAttribute('stroke','#1B4DFF');
+    p.setAttribute('stroke-width','3');
+    p.setAttribute('stroke-linecap','round');
+    p.setAttribute('stroke-linejoin','round');
+    p.setAttribute('opacity','0');
+    cornersSvg.appendChild(p);
+    cornerEls.push(p);
+  });
+
+  // ---------- 工具函数 ----------
+  function clamp(v,a,b){ return v<a?a:(v>b?b:v); }
+  function easeOut(t){ t=clamp(t,0,1); return 1-Math.pow(1-t,3); }
+  function easeInOut(t){ t=clamp(t,0,1); return t<0.5? 2*t*t : 1-Math.pow(-2*t+2,2)/2; }
+  function seg(t, a, b){ return clamp((t-a)/(b-a), 0, 1); }
+
+  // 计算方块的路径位置（用于 1.5–4.0 的移动）
+  // 分三支：索引 0,1 -> 上; 2,3 -> 中; 4,5 -> 下
+  function squareTarget(i){
+    var branch = Math.floor(i/2);
+    var n = branchNode[branch];
+    var offsetIndex = i%2;
+    return {
+      x: n.x - sqSize/2 + (offsetIndex===0? -18: 18),
+      y: n.y - sqSize/2
+    };
+  }
+
+  // ---------- 主渲染 ----------
+  window.renderAt = function(t){
+    t = Math.max(0, Math.min(10, t));
+
+    // 三行文字 0.0–4.0
+    var labelAlpha = 1;
+    if(t < 0.35){ labelAlpha = easeOut(seg(t,0,0.35)); }
+    if(t > 3.7){ labelAlpha = 1 - easeOut(seg(t,3.7,4.0)); }
+    labelEls.forEach(function(el,i){
+      var appear = easeOut(seg(t, 0.15 + i*0.12, 0.55 + i*0.12));
+      var a = labelAlpha * appear;
+      el.style.opacity = a.toFixed(3);
+      el.style.transform = 'translateX(' + ((1-appear)*(-16)) + 'px)';
+    });
+
+    // 方块出现 0.0–1.5 松散浮现
+    squareEls.forEach(function(el,i){
+      var ap = easeOut(seg(t, 0.05 + i*0.08, 0.5 + i*0.08));
+      var startP = squarePositions[i];
+
+      // 阶段：1.5–4.0 向右移动并分三支
+      var mv = seg(t, 1.5 + (i%2)*0.12 + Math.floor(i/2)*0.08, 3.1 + (i%2)*0.12 + Math.floor(i/2)*0.08);
+      // 用 easeInOut 但带轻微错位
+      var mve = easeInOut(mv);
+      var target = squareTarget(i);
+
+      var cx = startP.x + (target.x - startP.x) * mve;
+      var cy = startP.y + (target.y - startP.y) * mve;
+
+      // 4.0 后：方块收缩消失（左侧阵列收缩为细进度线）
+      var fadeOut = 1 - easeOut(seg(t, 4.0, 4.6));
+
+      // 7.0 后：再次淡出（清晰停留前）
+      var endFade = 1 - easeOut(seg(t, 8.8, 9.4));
+
+      el.style.opacity = (ap * fadeOut * endFade).toFixed(3);
+      el.style.left = cx+'px';
+      el.style.top = cy+'px';
+      // 缩放：出现时轻微放大
+      var sc = 0.85 + 0.15*ap;
+      el.style.transform = 'scale('+sc.toFixed(3)+')';
+    });
+
+    // 分支曲线：1.5–4.0 显现，4.0 淡出
+    var branchAlpha = 1;
+    if(t < 1.6) branchAlpha = easeOut(seg(t,1.5,1.9));
+    if(t > 3.8) branchAlpha = 1 - easeOut(seg(t,3.8,4.3));
+    if(t > 8.8) branchAlpha *= 1 - easeOut(seg(t,8.8,9.4));
+
+    branchPaths.forEach(function(p, idx){
+      var n = branchNode[idx];
+      // 起点：方块区域右缘
+      var sx = baseX + 2*(sqSize+sqGapX) - 6;
+      var sy = baseY + idx*(sqSize+sqGapY) + sqSize/2;
+      var ex = n.x - 8, ey = n.y;
+      var mx = (sx+ex)/2 + 40;
+      var d = 'M '+sx+' '+sy+' C '+mx+' '+sy+', '+mx+' '+ey+', '+ex+' '+ey;
+      p.setAttribute('d', d);
+      var draw = easeOut(seg(t, 1.6 + idx*0.12, 2.4 + idx*0.12));
+      p.setAttribute('stroke-dasharray', '600');
+      p.setAttribute('stroke-dashoffset', (600*(1-draw)).toFixed(1));
+      p.setAttribute('opacity', branchAlpha.toFixed(3));
+    });
+
+    // 节点圆点 2.0–4.0
+    nodeCircles.forEach(function(c, idx){
+      var a = easeOut(seg(t, 2.2 + idx*0.15, 2.7 + idx*0.15));
+      if(t > 3.8) a *= 1 - easeOut(seg(t,3.8,4.2));
+      if(t > 8.8) a *= 1 - easeOut(seg(t,8.8,9.4));
+      c.setAttribute('opacity', a.toFixed(3));
+      var pulse = 1;
+      if(t>2.7 && t<4.0){ pulse = 1 + 0.12*Math.sin((t-2.7)*6); }
+      c.setAttribute('r', (6*pulse).toFixed(2));
+    });
+
+    // 提示文字 1.5–4.0
+    hintEls.forEach(function(el, idx){
+      var a = easeOut(seg(t, 2.3 + idx*0.15, 2.9 + idx*0.15));
+      if(t > 3.7) a *= 1 - easeOut(seg(t,3.7,4.1));
+      if(t > 8.8) a *= 1 - easeOut(seg(t,8.8,9.4));
+      el.style.opacity = a.toFixed(3);
+      el.style.transform = 'translateX(' + ((1-a)*10) + 'px)';
+    });
+
+    // 汇合曲线 4.0–5.2 出现，5.2–6.2 淡出
+    var mergeAlpha = 0;
+    if(t >= 4.0) mergeAlpha = easeOut(seg(t,4.0,4.6));
+    if(t > 5.4) mergeAlpha *= 1 - easeOut(seg(t,5.4,6.3));
+
+    mergePaths.forEach(function(p, idx){
+      var n = branchNode[idx];
+      var sx = n.x + 8, sy = n.y;
+      var ex = box.x - 6, ey = box.y + box.h*0.5;
+      var mx = (sx+ex)/2 + 20;
+      var d = 'M '+sx+' '+sy+' C '+mx+' '+sy+', '+mx+' '+ey+', '+ex+' '+ey;
+      p.setAttribute('d', d);
+      var draw = easeOut(seg(t, 4.0 + idx*0.1, 4.8 + idx*0.1));
+      p.setAttribute('stroke-dasharray', '400');
+      p.setAttribute('stroke-dashoffset', (400*(1-draw)).toFixed(1));
+      p.setAttribute('opacity', mergeAlpha.toFixed(3));
+    });
+
+    // 预览框四条边描边 4.0–5.5
+    edgeDefs.forEach(function(e, idx){
+      var el = edgeEls[idx];
+      var p = easeOut(seg(t, e.delay, e.delay+0.55));
+      var isHoriz = (e.y1===e.y2);
+      var thick = 3;
+      if(isHoriz){
+        el.style.height = thick+'px';
+        el.style.top = (e.y1 - thick/2)+'px';
+        var fullW = box.w;
+        el.style.width = (fullW*p).toFixed(1)+'px';
+        el.style.left = (e.x1===0 ? 0 : (box.w - fullW*p)) + 'px';
+      } else {
+        el.style.width = thick+'px';
+        el.style.left = (e.x1 - thick/2)+'px';
+        var fullH = box.h;
+        el.style.height = (fullH*p).toFixed(1)+'px';
+        el.style.top = (e.y1===0 ? 0 : (box.h - fullH*p)) + 'px';
+      }
+      el.style.opacity = p>0 ? '1' : '0';
+    });
+
+    // 「故事预览」4.0 出现，保持到 10.0
+    var titleA = easeOut(seg(t, 4.35, 4.95));
+    prevText.style.opacity = titleA.toFixed(3);
+    prevText.style.left = (box.x + box.w/2)+'px';
+    prevText.style.top = (box.y + box.h/2 - 30)+'px';
+    prevText.style.transform = 'translateX(-50%)';
+    prevText.style.letterSpacing = '4px';
+
+    // 副标题 素材 → 镜头 → 成片 4.8 出现，8.5 淡出
+    var subA = easeOut(seg(t,4.8,5.3));
+    if(t > 8.0) subA *= 1 - easeOut(seg(t,8.0,8.5));
+    prevSub.style.opacity = subA.toFixed(3);
+    prevSub.style.left = (box.x + box.w/2)+'px';
+    prevSub.style.top = (box.y + box.h/2 + 36)+'px';
+    prevSub.style.transform = 'translateX(-50%)';
+    prevSub.style.whiteSpace = 'nowrap';
+
+    // 进度线 7.0–9.0 从左侧阵列位置收缩出现
+    var plA = easeOut(seg(t, 7.0, 7.6));
+    plA *= 1 - easeOut(seg(t, 9.3, 9.7));
+    progressLine.style.opacity = plA.toFixed(3);
+    var plW = 220 * easeInOut(seg(t, 7.0, 8.0));
+    progressLine.style.width = plW.toFixed(1)+'px';
+    progressLine.style.left = baseX+'px';
+    progressLine.style.top = (baseY + 3*(sqSize+sqGapY)/2 - 1)+'px';
+
+    // 取景角标 7.2 出现，8.9 淡出
+    var cornerA = easeOut(seg(t,7.2,7.7));
+    if(t > 8.3) cornerA *= 1 - easeOut(seg(t,8.3,8.9));
+    cornerEls.forEach(function(c){
+      c.setAttribute('opacity', cornerA.toFixed(3));
+      var s = 1;
+      if(t>7.7 && t<8.3){ s = 1 + 0.08*Math.sin((t-7.7)*7); }
+      c.setAttribute('transform', 'translate(0,0) scale('+s.toFixed(3)+')');
+      // 围绕各自角点缩放 - 简单处理：直接调整路径 stroke 宽度
+      c.setAttribute('stroke-width', (3*s).toFixed(2));
+    });
+
+    // 预览框背景：在描边过程中逐渐显现
+    var boxBgA = easeOut(seg(t,4.2,5.2));
+    if(t > 8.9) boxBgA *= 1 - easeOut(seg(t,8.9,9.5));
+    previewBox.style.background = 'rgba(247,249,255,'+(0.9*boxBgA).toFixed(3)+')';
+    previewBox.style.borderRadius = '6px';
+
+    // 预览框内的元素(故事预览/副标题)整体在最后轻微淡出? 保持到末帧不空
+    // 让标题在 9.6 后保持最小可见，避免空白
+    if(t > 9.5){
+      var k = 1 - (t-9.5)/0.5*0.15; // 轻微降到 85%
+      prevText.style.opacity = (titleA*k).toFixed(3);
+    }
+  };
+
+  window.renderAt(0);
+})();
+</script>
+</body>
+</html>

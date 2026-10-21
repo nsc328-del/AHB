@@ -1,0 +1,20 @@
+{
+  "signature": "3fd5d2f45cac5e6c1561c1e982cfd5b86d94f3b147f710ee78306abb46ebad71",
+  "source_job_id": "ca5770cb8467409e9100f3ee59f03b47",
+  "result": {
+    "version": "stable-request-v1",
+    "stage": "material_analysis",
+    "fingerprint": "56105c366b9daf4ae580c6427dcb45d46ad205222aeed523eafb581354d467d1",
+    "prefix_fingerprint": "4dc2e0ceb83f03fbf9436ccc4444ae04d689399ed9e8901f37d757c51478fb91",
+    "prefix_scope": "instructions_schema_and_stable_references",
+    "budget_kind": "conservative_estimate_not_provider_usage",
+    "text_utf8_bytes": 4781,
+    "image_count": 19,
+    "image_token_reserve": 19456,
+    "protocol_token_reserve": 4096,
+    "estimated_input_tokens": 28333,
+    "input_budget": 240000,
+    "output_token_reserve": 10000,
+    "context_limit": 1000000
+  }
+}

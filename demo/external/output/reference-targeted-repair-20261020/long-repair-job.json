@@ -1,0 +1,948 @@
+{
+  "kind": "reference_repair",
+  "status": "succeeded",
+  "progress": 100,
+  "message": "已完成",
+  "result": {
+    "asset_id": "2e2893e271774911a336c8a5aad5923c",
+    "analysis_id": "bd5c1574236546a98fd97c18e55f9f71",
+    "repair": {
+      "base_analysis_id": "32a001e2a23d4b0686fe9d6ba4d238c9",
+      "job_id": "d775dc30e7b840c6804dfb6b354cc5f4",
+      "created_at": "2026-10-20T15:48:29.254976+00:00",
+      "targets": [
+        {
+          "collection": "content_segments",
+          "index": 19,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "138.033000:145.733000",
+          "start": 138.033,
+          "end": 145.733,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role"
+          ],
+          "before_sha256": "9d782f683829dc6b3d95264eba397bcb56bd2da1b67e6112d0339b04a35e1de8",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 138.033,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-243.jpg"
+            },
+            {
+              "time": 139.867,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-247.jpg"
+            },
+            {
+              "time": 140.8,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-250.jpg"
+            },
+            {
+              "time": 141.933,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-254.jpg"
+            },
+            {
+              "time": 142.667,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-257.jpg"
+            },
+            {
+              "time": 143.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-261.jpg"
+            },
+            {
+              "time": 144.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-265.jpg"
+            },
+            {
+              "time": 144.933,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-268.jpg"
+            },
+            {
+              "time": 145.567,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-272.jpg"
+            }
+          ],
+          "frame_times": [
+            138.033,
+            139.867,
+            140.8,
+            141.933,
+            142.667,
+            143.6,
+            144.5,
+            144.933,
+            145.567
+          ],
+          "motion_evidence": null,
+          "cache_hit": false,
+          "source_job_id": "d775dc30e7b840c6804dfb6b354cc5f4",
+          "after_sha256": "c19afddcf2ca0ebb54257ddb4c4298b65787db965e1b6852b2d6bcb7a857e703"
+        },
+        {
+          "collection": "content_segments",
+          "index": 20,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "145.967000:148.400000",
+          "start": 145.967,
+          "end": 148.4,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role"
+          ],
+          "before_sha256": "e2e1a7443a028053d4c87ed4da110cc9695e71b8e2da624e0098c87732f62af0",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 145.967,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-275.jpg"
+            },
+            {
+              "time": 146.1,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-277.jpg"
+            },
+            {
+              "time": 146.133,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-278.jpg"
+            },
+            {
+              "time": 146.267,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-279.jpg"
+            },
+            {
+              "time": 146.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-281.jpg"
+            },
+            {
+              "time": 146.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-283.jpg"
+            },
+            {
+              "time": 147.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-284.jpg"
+            },
+            {
+              "time": 147.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-285.jpg"
+            },
+            {
+              "time": 148.1,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-287.jpg"
+            }
+          ],
+          "frame_times": [
+            145.967,
+            146.1,
+            146.133,
+            146.267,
+            146.633,
+            146.9,
+            147.233,
+            147.6,
+            148.1
+          ],
+          "motion_evidence": null,
+          "cache_hit": false,
+          "source_job_id": "d775dc30e7b840c6804dfb6b354cc5f4",
+          "after_sha256": "136ef1cc29950ae871ffc9a0dabe645b8e8815ecc402117fa18b4fe3e7bec75f"
+        },
+        {
+          "collection": "content_segments",
+          "index": 21,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "148.400000:152.467000",
+          "start": 148.4,
+          "end": 152.467,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role"
+          ],
+          "before_sha256": "43a80115766e7aec5c63c0eacdb3cde7a3779d7b9def1fbf38c80badbed76d34",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 148.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-288.jpg"
+            },
+            {
+              "time": 148.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-290.jpg"
+            },
+            {
+              "time": 149.367,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-292.jpg"
+            },
+            {
+              "time": 150.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-295.jpg"
+            },
+            {
+              "time": 150.567,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-297.jpg"
+            },
+            {
+              "time": 150.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-299.jpg"
+            },
+            {
+              "time": 151.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-302.jpg"
+            },
+            {
+              "time": 151.667,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-304.jpg"
+            },
+            {
+              "time": 152.133,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-306.jpg"
+            }
+          ],
+          "frame_times": [
+            148.4,
+            148.9,
+            149.367,
+            150.2,
+            150.567,
+            150.833,
+            151.4,
+            151.667,
+            152.133
+          ],
+          "motion_evidence": null,
+          "cache_hit": false,
+          "source_job_id": "d775dc30e7b840c6804dfb6b354cc5f4",
+          "after_sha256": "e465cacab04ca4ad2ed6b2cb9388f808945a45169289bd3ffbeaafbd9a0c3866"
+        },
+        {
+          "collection": "content_segments",
+          "index": 22,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "152.467000:156.200000",
+          "start": 152.467,
+          "end": 156.2,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role"
+          ],
+          "before_sha256": "fddc1e4bc370d1ecfb2cad97132d926b5c474e8da0ed2b2f31aa354561744384",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 152.467,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-307.jpg"
+            },
+            {
+              "time": 152.767,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-309.jpg"
+            },
+            {
+              "time": 153.067,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-311.jpg"
+            },
+            {
+              "time": 153.433,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-312.jpg"
+            },
+            {
+              "time": 153.967,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-314.jpg"
+            },
+            {
+              "time": 154.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-316.jpg"
+            },
+            {
+              "time": 154.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-317.jpg"
+            },
+            {
+              "time": 155.367,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-319.jpg"
+            },
+            {
+              "time": 155.867,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-321.jpg"
+            }
+          ],
+          "frame_times": [
+            152.467,
+            152.767,
+            153.067,
+            153.433,
+            153.967,
+            154.533,
+            154.833,
+            155.367,
+            155.867
+          ],
+          "motion_evidence": null,
+          "cache_hit": false,
+          "source_job_id": "d775dc30e7b840c6804dfb6b354cc5f4",
+          "after_sha256": "6dff82b203a13ae600d29156c46913482ff2efe66738fa8d925fa1ed5811783f"
+        },
+        {
+          "collection": "segments",
+          "index": 10,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "29.200000:30.567000",
+          "start": 29.2,
+          "end": 30.567,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role"
+          ],
+          "before_sha256": "6e53940898b7bb1180be108b765e2d291c4fbf7f35c924bcc90c2294ce60df4a",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 29.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-040.jpg"
+            },
+            {
+              "time": 29.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-041.jpg"
+            },
+            {
+              "time": 29.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-042.jpg"
+            },
+            {
+              "time": 30.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-043.jpg"
+            }
+          ],
+          "frame_times": [
+            29.2,
+            29.533,
+            29.9,
+            30.233
+          ],
+          "motion_evidence": null,
+          "cache_hit": false,
+          "source_job_id": "d775dc30e7b840c6804dfb6b354cc5f4",
+          "after_sha256": "88c11c99cacaf196644cc5cc91efa9b2b1a19e1303184c540075a02f8399fd0b"
+        },
+        {
+          "collection": "segments",
+          "index": 87,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "187.416500:210.047700",
+          "start": 187.41649999999998,
+          "end": 210.0477,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role"
+          ],
+          "before_sha256": "74b726f2cc21c69abf559e4c980d2554b1c3be9c8d537a264ebe57208a33318e",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 188.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-368.jpg"
+            },
+            {
+              "time": 191.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-372.jpg"
+            },
+            {
+              "time": 193.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-375.jpg"
+            },
+            {
+              "time": 196.033,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-378.jpg"
+            },
+            {
+              "time": 198.133,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-382.jpg"
+            },
+            {
+              "time": 201.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-386.jpg"
+            },
+            {
+              "time": 202.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-389.jpg"
+            },
+            {
+              "time": 205.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-392.jpg"
+            },
+            {
+              "time": 210.0,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-396.jpg"
+            }
+          ],
+          "frame_times": [
+            188.6,
+            191.533,
+            193.233,
+            196.033,
+            198.133,
+            201.6,
+            202.6,
+            205.5,
+            210.0
+          ],
+          "motion_evidence": null,
+          "cache_hit": false,
+          "source_job_id": "d775dc30e7b840c6804dfb6b354cc5f4",
+          "after_sha256": "a70c39fcf684838837379680d94623410b494864d6c01889759aef3e5ad91b40"
+        },
+        {
+          "collection": "content_segments",
+          "index": 1,
+          "issues": [
+            "speech"
+          ],
+          "start": 18.5,
+          "end": 24.633,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "1151ede739badec5723c7dfbbf8ddf3c3a1b9dbda07ccf5a4daa824420854244",
+          "method": "reviewed_text_detachment",
+          "reason": "adjacent_clause_spill",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "18fe621866739f87b3826eed8f27154f32c01b5c5e86ffe496eba07ff5bf7b13"
+        },
+        {
+          "collection": "content_segments",
+          "index": 2,
+          "issues": [
+            "speech"
+          ],
+          "start": 24.633,
+          "end": 30.9,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "2de18c21f50a5dc083fb704fb38ae0f7d10a17168cabef5f04d2eef150e37bd8",
+          "method": "reviewed_text_detachment",
+          "reason": "future_topic_substitution",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "54a2798d6914708c855c04304c97150e93054816f9733ddd00dc3527c8beb3ed"
+        },
+        {
+          "collection": "content_segments",
+          "index": 3,
+          "issues": [
+            "speech"
+          ],
+          "start": 30.9,
+          "end": 38.367,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "eabb21a70154c94873e42250ef5418f47b34ad94473fdacf81e4bbc0b135bb1d",
+          "method": "reviewed_text_detachment",
+          "reason": "future_clause_substitution",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "61f9cd242ac79e70dabd7b79cbcf5441251e7b03063536c872d2142470a124d8"
+        },
+        {
+          "collection": "content_segments",
+          "index": 6,
+          "issues": [
+            "speech"
+          ],
+          "start": 57.6,
+          "end": 63.7,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "824d9ec7305cdd4b07e238bcbe32e06b33f0ffe3c4ec1cc182791b0e4a74d5e3",
+          "method": "reviewed_text_detachment",
+          "reason": "adjacent_clause_spill",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "aa183ba724b4bc4148a98290a9a6df7499a5a0846aac866ad3a3af166976ebc5"
+        },
+        {
+          "collection": "content_segments",
+          "index": 8,
+          "issues": [
+            "speech"
+          ],
+          "start": 66.7,
+          "end": 72.6,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "06067d9c49748a78aa8fb8c30188b7bc8ca3ae14dfd3f081b4de4c4a64a4c4ad",
+          "method": "reviewed_text_detachment",
+          "reason": "future_clause_substitution",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "df26c3fdb8be696b85173aeb8b1b34edc6b00473fdd4283542cfcbd728885408"
+        },
+        {
+          "collection": "content_segments",
+          "index": 9,
+          "issues": [
+            "speech"
+          ],
+          "start": 72.6,
+          "end": 81.0,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "a22899414f3084b68f7fed704e118753a3fb480e225f492322e3d3f028b97a7a",
+          "method": "reviewed_text_detachment",
+          "reason": "word_boundary_completion",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "6efaac7d1c6e35028e73f691a61abd3f69d6dbbec14acb51e44991585e892574"
+        },
+        {
+          "collection": "content_segments",
+          "index": 12,
+          "issues": [
+            "speech"
+          ],
+          "start": 97.567,
+          "end": 104.6,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "188b9910fa59942d0fcff8f975684a683af9702c5871786774d425cfe0700c81",
+          "method": "reviewed_text_detachment",
+          "reason": "past_clause_carryover",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "2c396988859249c9f2347fc65257e87ff79336ab0bb9e4243af6f354489e3f0c"
+        },
+        {
+          "collection": "content_segments",
+          "index": 15,
+          "issues": [
+            "speech"
+          ],
+          "start": 115.833,
+          "end": 120.3,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "ee1af031f9eb3c6b4f029505e07d579c148c2dcff21af62dede83dfe92f69158",
+          "method": "reviewed_text_detachment",
+          "reason": "future_clause_substitution",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "f0196e5c5293f871b057279aa1189a02b94795b9dda9a1e719a828d339fdcb50"
+        },
+        {
+          "collection": "content_segments",
+          "index": 17,
+          "issues": [
+            "speech"
+          ],
+          "start": 128.1,
+          "end": 131.733,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "bd602d2d8c773dc5c048603a16b4a2a8097c9be06c4323247d793669be641209",
+          "method": "reviewed_text_detachment",
+          "reason": "adjacent_clause_spill",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "e1db238af93858094e9c31d753bd94757373fa84e3cfe31b4c4909d5298ca7c6"
+        },
+        {
+          "collection": "content_segments",
+          "index": 18,
+          "issues": [
+            "speech"
+          ],
+          "start": 131.733,
+          "end": 137.1,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "79bc6076e2e68176f37acc148fcf5da805c194c8b21a28285250cbb5578f725f",
+          "method": "reviewed_text_detachment",
+          "reason": "adjacent_clause_spill",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "3210a6404a332639fd728a3600db7ae19a905039e326cadd743d223f291a5c7c"
+        },
+        {
+          "collection": "content_segments",
+          "index": 23,
+          "issues": [
+            "speech"
+          ],
+          "start": 156.3,
+          "end": 161.733,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "cef8ac439e421dc3c1e0ee45ba324f5b1fc13fb1c7ff35e31a998811b3776144",
+          "method": "reviewed_text_detachment",
+          "reason": "past_clause_carryover",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "cad48fb650c11d452b8f30c84c1ce560fa950555f136443ec550d7fe15f7fdca"
+        },
+        {
+          "collection": "content_segments",
+          "index": 25,
+          "issues": [
+            "speech"
+          ],
+          "start": 166.3,
+          "end": 175.4,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "8a04ded216cde517c8416838d2aa263e334871158a71636c99d664d23f2ce3e9",
+          "method": "reviewed_text_detachment",
+          "reason": "same_interval_misparaphrase",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "75f3db92a3e4c8d30e4b9c24336e7f2158a88e8d6d924c169e9ea724e15eda99"
+        },
+        {
+          "collection": "content_segments",
+          "index": 26,
+          "issues": [
+            "speech"
+          ],
+          "start": 175.4,
+          "end": 182.9,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "0f86bd08696006bc4250b7eb45d0bb3ab8a93e10c3d51ac0e56a282f1389935f",
+          "method": "reviewed_text_detachment",
+          "reason": "word_boundary_completion",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "86b76147bf946730bd52b22972af781592505fb9ff2cf7e1c38f519a766bc7d8"
+        },
+        {
+          "collection": "content_segments",
+          "index": 30,
+          "issues": [
+            "speech"
+          ],
+          "start": 199.733,
+          "end": 202.6,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "d371d9208a338965dbcbf292b5e4bd9f53c587a5189c41fdb5d218d5383afc14",
+          "method": "reviewed_text_detachment",
+          "reason": "subtitle_as_speech",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "e5aa1128774c93b633b1d214d4f806802fb2fc2b6135e4f84670beb209dfe44b"
+        },
+        {
+          "collection": "segments",
+          "index": 9,
+          "issues": [
+            "speech"
+          ],
+          "start": 27.767,
+          "end": 29.2,
+          "changed_fields": [
+            "description"
+          ],
+          "before_sha256": "4fecd3dc49c173ea6687a5d6208e5366e8645a13938ecbd1968bba6302b3ce67",
+          "method": "reviewed_text_detachment",
+          "reason": "subtitle_negation_misread",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "1462717412d45c17e8fc5b75d9da8ee9ab9003253ad52399cdd37b905ea16df0"
+        },
+        {
+          "collection": "segments",
+          "index": 26,
+          "issues": [
+            "speech"
+          ],
+          "start": 66.867,
+          "end": 68.767,
+          "changed_fields": [
+            "role"
+          ],
+          "before_sha256": "6869dc644c71bc54d2bf6c36bbde0bfacefacbd5afa8fd675dc6ab18f9c8dc71",
+          "method": "reviewed_text_detachment",
+          "reason": "cross_interval_role_attribution",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "7c7469d60bd4713671adee9c9a9563b02a468e3f722e1521cf4418ef7b56e41d"
+        },
+        {
+          "collection": "segments",
+          "index": 52,
+          "issues": [
+            "speech"
+          ],
+          "start": 134.633,
+          "end": 136.233,
+          "changed_fields": [
+            "role"
+          ],
+          "before_sha256": "1451516d59d56ce06e4dc05f2be1b9a86998ec5771d6bdbc610ef29e15fbd874",
+          "method": "reviewed_text_detachment",
+          "reason": "cross_interval_role_attribution",
+          "frames": [],
+          "new_provider_calls": 0,
+          "after_sha256": "e00cf677749270cf898bd5bb4d895ae90e63100a13fb2a04949bbe09c01615c6"
+        }
+      ],
+      "new_provider_calls": 3,
+      "reused": {
+        "shot_detection": true,
+        "transcript": true,
+        "full_analysis_windows": 9,
+        "unchanged_segments": {
+          "content_segments": 15,
+          "segments": 87
+        }
+      }
+    }
+  },
+  "error": null,
+  "payload": {
+    "asset_id": "2e2893e271774911a336c8a5aad5923c",
+    "base_analysis_id": "32a001e2a23d4b0686fe9d6ba4d238c9",
+    "targets": [
+      {
+        "collection": "content_segments",
+        "index": 19,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 20,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 21,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 22,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 10,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 87,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      }
+    ],
+    "reviewed_edits": [
+      {
+        "collection": "content_segments",
+        "index": 1,
+        "expected_sha256": "1151ede739badec5723c7dfbbf8ddf3c3a1b9dbda07ccf5a4daa824420854244",
+        "fields": {
+          "description": "连续并置多重压力画面：人物背影、树林边打电话低头、室内白T恤伏案托腮、暗处弯腰俯身、船上抱头掩面、电脑前疲惫工作。"
+        },
+        "reason": "adjacent_clause_spill"
+      },
+      {
+        "collection": "content_segments",
+        "index": 2,
+        "expected_sha256": "2de18c21f50a5dc083fb704fb38ae0f7d10a17168cabef5f04d2eef150e37bd8",
+        "fields": {
+          "description": "车内逆光剪影与雨中车窗画面转暗，短暂黑场后出现黑底黄色引语字幕卡；随后切到海边日落全景，人物背影走向远处，三脚架长焦相机与太阳形成剪影，画面叠加引语字幕，最后回到开头男子抱镜头微笑对镜。"
+        },
+        "reason": "future_topic_substitution"
+      },
+      {
+        "collection": "content_segments",
+        "index": 3,
+        "expected_sha256": "eabb21a70154c94873e42250ef5418f47b34ad94473fdacf81e4bbc0b135bb1d",
+        "fields": {
+          "description": "戴眼镜青年在海边黄昏对镜头讲述，随后切入橙红晚霞中飞机剪影横越天空、成群飞鸟在浅粉橙天空散开的空镜。"
+        },
+        "reason": "future_clause_substitution"
+      },
+      {
+        "collection": "content_segments",
+        "index": 6,
+        "expected_sha256": "824d9ec7305cdd4b07e238bcbe32e06b33f0ffe3c4ec1cc182791b0e4a74d5e3",
+        "fields": {
+          "description": "男子穿浅灰连帽卫衣、双手插兜站在两片深色镜面墙之间，背景是樱花庭院，画面呈对称纵深；随后切为正面与侧脸近景，他戴黑框眼镜，目光向画外上方移动，神情平静。"
+        },
+        "reason": "adjacent_clause_spill"
+      },
+      {
+        "collection": "content_segments",
+        "index": 8,
+        "expected_sha256": "06067d9c49748a78aa8fb8c30188b7bc8ca3ae14dfd3f081b4de4c4a64a4c4ad",
+        "fields": {
+          "description": "男子走在白色多层办公空间的硬朗线条间，切到抬望近景；再在器材工作室低头操作相机稳定器，切侧脸特写；随后戴耳机坐在飞机客舱靠窗位置望向舷窗外。"
+        },
+        "reason": "future_clause_substitution"
+      },
+      {
+        "collection": "content_segments",
+        "index": 9,
+        "expected_sha256": "a22899414f3084b68f7fed704e118753a3fb480e225f492322e3d3f028b97a7a",
+        "fields": {
+          "description": "男子在爬满藤蔓的砖墙前低头侧脸，在樱花树与石碑庭院中横向行走，随后穿白色卫衣站在帆船上背对镜头望向海面与远船；最后正面近景面对镜头说话并微抬右手。"
+        },
+        "reason": "word_boundary_completion"
+      },
+      {
+        "collection": "content_segments",
+        "index": 12,
+        "expected_sha256": "188b9910fa59942d0fcff8f975684a683af9702c5871786774d425cfe0700c81",
+        "fields": {
+          "description": "男生穿米色T恤、戴口罩站在红砖建筑前人群中手持纸卷，周围工作人员走动；随后回到室内，男子穿黑色T恤在沙发前近景面向镜头说话，镜头先略向下，表情收敛。"
+        },
+        "reason": "past_clause_carryover"
+      },
+      {
+        "collection": "content_segments",
+        "index": 15,
+        "expected_sha256": "ee1af031f9eb3c6b4f029505e07d579c148c2dcff21af62dede83dfe92f69158",
+        "fields": {
+          "description": "男子穿深色连帽外套坐在夜间办公桌前面对笔记本电脑，屏幕蓝光映在镜片上，切侧脸特写；随后在昏暗房间中半躺举着手机，前景有虚化遮挡。"
+        },
+        "reason": "future_clause_substitution"
+      },
+      {
+        "collection": "content_segments",
+        "index": 17,
+        "expected_sha256": "bd602d2d8c773dc5c048603a16b4a2a8097c9be06c4323247d793669be641209",
+        "fields": {
+          "description": "雪原暮色中，几名深色衣物的人围着一只巨大白色气球站立，随后切为高空俯拍，雪地上只有几个人影和放射状脚印。"
+        },
+        "reason": "adjacent_clause_spill"
+      },
+      {
+        "collection": "content_segments",
+        "index": 18,
+        "expected_sha256": "79bc6076e2e68176f37acc148fcf5da805c194c8b21a28285250cbb5578f725f",
+        "fields": {
+          "description": "室内暖光下戴黑框眼镜男子侧脸说话，身旁取暖器发亮；再切到山谷间他穿黑T恤手持相机仰头，背后高山与云层；随后黑场字幕“别急着赶路”。"
+        },
+        "reason": "adjacent_clause_spill"
+      },
+      {
+        "collection": "content_segments",
+        "index": 23,
+        "expected_sha256": "cef8ac439e421dc3c1e0ee45ba324f5b1fc13fb1c7ff35e31a998811b3776144",
+        "fields": {
+          "description": "黑背景日食轮廓、正对镜头内部的环形镜筒与白色反光点、暗场中米黄色块状物与放射状丝缕、白色针状结晶呈放射花形、暗场中半透明绿色微生物漂浮，最后大量白色针状结晶叠化出人物侧脸上半身，前景结晶与抬手动作并置。"
+        },
+        "reason": "past_clause_carryover"
+      },
+      {
+        "collection": "content_segments",
+        "index": 25,
+        "expected_sha256": "8a04ded216cde517c8416838d2aa263e334871158a71636c99d664d23f2ce3e9",
+        "fields": {
+          "description": "从昏暗室内过渡到明亮厨房环境，戴眼镜、穿黑T恤的男子面对镜头讲话，手势丰富，背景白色橱柜与灯带。"
+        },
+        "reason": "same_interval_misparaphrase"
+      },
+      {
+        "collection": "content_segments",
+        "index": 26,
+        "expected_sha256": "0f86bd08696006bc4250b7eb45d0bb3ab8a93e10c3d51ac0e56a282f1389935f",
+        "fields": {
+          "description": "暗色工作室中，另一戴黑框眼镜、穿白色T恤男子面对镜头口述，背景有显示器、黄点灯光与麦克风。"
+        },
+        "reason": "word_boundary_completion"
+      },
+      {
+        "collection": "content_segments",
+        "index": 30,
+        "expected_sha256": "d371d9208a338965dbcbf292b5e4bd9f53c587a5189c41fdb5d218d5383afc14",
+        "fields": {
+          "description": "戴黑框眼镜、穿白色上衣的男子坐在有显示器与黄色灯点的室内环境中近景讲述，画面中逐渐叠加金黄色“无限进步”等相关字幕。"
+        },
+        "reason": "subtitle_as_speech"
+      },
+      {
+        "collection": "segments",
+        "index": 9,
+        "expected_sha256": "4fecd3dc49c173ea6687a5d6208e5366e8645a13938ecbd1968bba6302b3ce67",
+        "fields": {
+          "description": "黑底画面中央出现黄色字幕卡，右上角有平台标识。"
+        },
+        "reason": "subtitle_negation_misread"
+      },
+      {
+        "collection": "segments",
+        "index": 26,
+        "expected_sha256": "6869dc644c71bc54d2bf6c36bbde0bfacefacbd5afa8fd675dc6ab18f9c8dc71",
+        "fields": {
+          "role": "回到日常生活空间"
+        },
+        "reason": "cross_interval_role_attribution"
+      },
+      {
+        "collection": "segments",
+        "index": 52,
+        "expected_sha256": "1451516d59d56ce06e4dc05f2be1b9a86998ec5771d6bdbc610ef29e15fbd874",
+        "fields": {
+          "role": "创作者形象"
+        },
+        "reason": "cross_interval_role_attribution"
+      }
+    ]
+  },
+  "provider_state": {},
+  "id": "d775dc30e7b840c6804dfb6b354cc5f4",
+  "created_at": "2026-10-20T15:48:18.598389+00:00",
+  "updated_at": "2026-10-20T15:48:29.280219+00:00"
+}

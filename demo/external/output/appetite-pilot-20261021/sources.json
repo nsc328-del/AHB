@@ -1,0 +1,21 @@
+{
+  "video": {
+    "asset_id": "8c0decc1b5094bdd9a800458e2fd8fa6",
+    "title": "Omurice making, -Jul. 2012 a.ogv",
+    "author": "あきらや料理録",
+    "page": "https://commons.wikimedia.org/wiki/File:Omurice_making,_-Jul._2012_a.ogv",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "original_file": "sources/omurice-original.ogv",
+    "changes": "原文件保留；转为 H.264/AAC 以便浏览器播放；DS 选段、调速、配乐的衍生版本另存。"
+  },
+  "music": {
+    "asset_id": "b3b40af2dac1427097135af6ad960865",
+    "title": "Gimme that Groove!",
+    "author": "Michael Ramir C.",
+    "page": "https://mixkit.co/free-stock-music/funk/",
+    "download": "https://assets.mixkit.co/music/872/872.mp3",
+    "license": "Mixkit Stock Music Free License",
+    "license_url": "https://mixkit.co/license/#musicFree"
+  }
+}

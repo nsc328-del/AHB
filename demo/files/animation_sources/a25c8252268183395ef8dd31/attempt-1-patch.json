@@ -1,0 +1,9 @@
+{
+  "edits": [
+    {
+      "old": "<div id=\"closing\" class=\"abs closing\">让想法成为下一部片子</div>",
+      "new": "<div id=\"closing\" class=\"abs closing\">从一个想法，到下一部片子</div>"
+    }
+  ],
+  "design_notes": "仅替换收尾文案为「从一个想法，到下一部片子」，其余布局、动画时序与10秒时长保持不变。"
+}

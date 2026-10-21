@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "plan_id": "29e7d95736ac40b7b6c42d067b4b0052",
+  "plan_version": 2,
+  "output_sha256": "db523f597948b0b35e8f08e4429fa6d0a11422c7ec02b861659b8ce6ff60ae78",
+  "compiled_timeline": {
+    "fps": 30,
+    "frame_count": 270,
+    "interval": "[start_frame,end_frame)",
+    "clips": [
+      {
+        "clip_id": "d42e876e-5ab3-40b0-aca4-2790f208b896",
+        "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+        "start_frame": 0,
+        "end_frame": 90,
+        "source_start_seconds": 0.0,
+        "source_end_seconds": 3.0,
+        "source_time_base": "1/25",
+        "kind": "image",
+        "transition": "cut",
+        "caption": "从一个形状开始"
+      },
+      {
+        "clip_id": "a9d9bb65-9c3f-48b7-a06f-6af9a0730144",
+        "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+        "start_frame": 90,
+        "end_frame": 150,
+        "source_start_seconds": 0.0,
+        "source_end_seconds": 2.0,
+        "source_time_base": "1/12288",
+        "kind": "video",
+        "transition": "cut",
+        "caption": ""
+      },
+      {
+        "clip_id": "945b0596-6016-4068-aad5-8f400a4eeb5b",
+        "asset_id": "e400442976b34c6b92b3459502a60aaf",
+        "start_frame": 150,
+        "end_frame": 210,
+        "source_start_seconds": 0.0,
+        "source_end_seconds": 2.0,
+        "source_time_base": "1/25",
+        "kind": "image",
+        "transition": "cut",
+        "caption": ""
+      },
+      {
+        "clip_id": "61cb0c9f-b919-4025-a25c-61632b11659c",
+        "asset_id": "e48d062237fe407dafe6676c3a96289e",
+        "start_frame": 210,
+        "end_frame": 270,
+        "source_start_seconds": 0.0,
+        "source_end_seconds": 2.0,
+        "source_time_base": "1/25",
+        "kind": "image",
+        "transition": "cut",
+        "caption": ""
+      }
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+      "sha256": "9a0a1277b4231fc279573af7d4c281eddc8bb1219a16c0ff3f7786416b574141"
+    },
+    {
+      "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+      "sha256": "0491a6cab08ef7f71f9530613250dcfd4bc17dcb38b5903611a892405c66c477"
+    },
+    {
+      "asset_id": "e400442976b34c6b92b3459502a60aaf",
+      "sha256": "b9f745666fde7a9b78bc01d54a8c0c1b770dc81609b5b09252e8f18e24f846d6"
+    },
+    {
+      "asset_id": "e48d062237fe407dafe6676c3a96289e",
+      "sha256": "32d8624a3d6c55ec94d5a9fc5b4440e5f1e439b54287091036b77bcad5a4ae6a"
+    }
+  ],
+  "renderer_sha256": "8276cd4d5e57b725e005a8d0b71d000a58e14145e21519be6af8fbee6642dc1d",
+  "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+  "width": 720,
+  "height": 1280,
+  "sample_rate": 48000,
+  "font_requested": "Hiragino Sans GB",
+  "music_asset_id": null,
+  "music_volume": 0.16,
+  "plan": {
+    "title": "节点交互验收",
+    "brief": "手动编排 · 顺序展开",
+    "summary": "",
+    "template_id": "manual",
+    "ratio": "9:16",
+    "clips": [
+      {
+        "id": "d42e876e-5ab3-40b0-aca4-2790f208b896",
+        "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+        "start": 0.0,
+        "end": 3.0,
+        "duration": 3.0,
+        "label": "green.png",
+        "caption": "从一个形状开始",
+        "role": "body",
+        "transition": "cut",
+        "timeline_start": 0.0,
+        "timeline_end": 3.0
+      },
+      {
+        "id": "a9d9bb65-9c3f-48b7-a06f-6af9a0730144",
+        "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+        "start": 0.0,
+        "end": 2.0,
+        "duration": 2.0,
+        "label": "AI生成_abde9074.mp4",
+        "caption": "",
+        "role": "body",
+        "transition": "cut",
+        "timeline_start": 3.0,
+        "timeline_end": 5.0
+      },
+      {
+        "id": "945b0596-6016-4068-aad5-8f400a4eeb5b",
+        "asset_id": "e400442976b34c6b92b3459502a60aaf",
+        "start": 0.0,
+        "end": 2.0,
+        "duration": 2.0,
+        "label": "orange.png",
+        "caption": "",
+        "role": "body",
+        "transition": "cut",
+        "timeline_start": 5.0,
+        "timeline_end": 7.0
+      },
+      {
+        "id": "61cb0c9f-b919-4025-a25c-61632b11659c",
+        "asset_id": "e48d062237fe407dafe6676c3a96289e",
+        "start": 0.0,
+        "end": 2.0,
+        "duration": 2.0,
+        "label": "blue.png",
+        "caption": "",
+        "role": "body",
+        "transition": "cut",
+        "timeline_start": 7.0,
+        "timeline_end": 9.0
+      }
+    ],
+    "width": 720,
+    "height": 1280,
+    "duration": 9.0,
+    "project_id": "85e342b64afd4aa193b885156ac29ee6",
+    "id": "29e7d95736ac40b7b6c42d067b4b0052",
+    "version": 2,
+    "base_version_id": "c14b6dad59aa4a4f839af7b6101f31ea",
+    "origin": {
+      "source": "home_canvas",
+      "actor": "local_user",
+      "branch_id": "a",
+      "branch_name": "顺序展开",
+      "submission_id": "b805ee12-977f-4533-b2d0-b16de61ffcc5"
+    },
+    "change_summary": "镜头数 3 → 4；调整素材或镜头顺序；调整入出点或展示时长；修改字幕；调整转场",
+    "changes": [
+      "镜头数 3 → 4",
+      "调整素材或镜头顺序",
+      "调整入出点或展示时长",
+      "修改字幕",
+      "调整转场"
+    ],
+    "created_at": "2026-10-21T02:35:54.989182+00:00",
+    "updated_at": "2026-10-21T02:35:54.991676+00:00",
+    "url": "/api/media/plans/29e7d95736ac40b7b6c42d067b4b0052.json"
+  }
+}

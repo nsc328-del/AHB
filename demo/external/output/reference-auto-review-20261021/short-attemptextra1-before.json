@@ -1,0 +1,4533 @@
+{
+  "id": "bed732a655dd4a8e9a2d2386a964c5a5",
+  "name": "首尔旅行转场｜冷面公主.mp4",
+  "path": "${AHB_DATA}/assets/69e1152b8fe8471fbaac49c0ec6c678e.mp4",
+  "kind": "video",
+  "duration": 12.5667,
+  "width": 576,
+  "height": 1024,
+  "has_audio": true,
+  "format": "mov,mp4,m4a,3gp,3g2,mj2",
+  "video_codec": "hevc",
+  "audio_codec": "aac",
+  "size": 996138,
+  "sha256": "e6db1150efa795c8799924e796348027358a64200df1193a1fd252bb50b9162c",
+  "url": "/api/media/assets/69e1152b8fe8471fbaac49c0ec6c678e.mp4",
+  "thumbnail_url": "/api/media/previews/bed732a655dd4a8e9a2d2386a964c5a5.jpg",
+  "source": "upload",
+  "generation_id": null,
+  "purpose": "reference",
+  "analysis_status": "succeeded",
+  "analysis": {
+    "summary": "该素材为一段约12.6秒的首尔旅行风格短视频，无有效对白转录。画面由多个场景快切组成：红砖墙街巷与自助拍照亭、咖啡厅用餐与举杯、楼梯间和拍立得展示、卷帘门涂鸦墙前摆拍、商场休息区与咖啡厅内景。整体以年轻女性为主体，轻快旅行记录感强，适合做旅行vlog、街拍转场或城市漫游混剪。",
+    "tags": [
+      "首尔旅行",
+      "街拍",
+      "咖啡厅",
+      "自助拍照亭",
+      "涂鸦墙",
+      "年轻女性",
+      "快切转场",
+      "生活记录"
+    ],
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.533,
+        "timecode": "00:00-00:02",
+        "description": "画面从砖墙和黑色金属置物架旁向左扫过，货架上有纸箱与成排蓝色包装；随后出现便利店冰柜、门口与街边台阶。一名穿白衬衫、系红格领带、着灰裙的女生从画面右侧进入，面向镜头摆出手指点颊的姿势，之后从画面左侧出画，背景继续向左移动到黄色路缘线和街边车辆。",
+        "tags": [
+          "红砖墙",
+          "街巷",
+          "金属架",
+          "年轻女性",
+          "制服穿搭",
+          "人像"
+        ],
+        "role": "展示街边便利店外景，并引入一名摆姿势的女生。",
+        "shot_type": "中景与近景人像快速切换",
+        "motion": "背景主要向画面左侧位移；可见横向取景变化。物理运镜方式未判定。",
+        "evidence_times": [
+          0,
+          0.1,
+          0.333333,
+          0.633333,
+          0.966667,
+          1.266667,
+          1.3,
+          1.566667,
+          1.9,
+          2.2,
+          2.5
+        ],
+        "speech_evidence": [],
+        "speech_evidence_status": "unavailable",
+        "speech_evidence_unaligned_count": 0,
+        "visual_verification": {
+          "structured_motion": {
+            "image_direction": "left",
+            "view_change": "horizontal_sweep",
+            "evidence_times": [
+              0,
+              0.1,
+              0.333333,
+              0.633333,
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2,
+              2.5
+            ],
+            "subject_relative_movement": "shared_image_displacement",
+            "subject_evidence_basis": "shared_motion_only",
+            "subject_evidence_times": [
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2
+            ],
+            "subject_observation": "女生随背景一同向画面左方移动，从右侧入画、向左侧出画；未见连续步态或接触点变化。",
+            "viewpoint": "external",
+            "viewpoint_observation": "从外部视角看街边店面与人物全身。"
+          },
+          "visible_text": [
+            {
+              "text": "G25",
+              "legibility": "partial",
+              "evidence_times": [
+                1.266667,
+                1.3,
+                1.567,
+                1.9
+              ]
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checks": {
+              "image_direction": "consistent",
+              "subject_motion": "corrected",
+              "viewpoint": "consistent",
+              "visible_text": "consistent"
+            },
+            "note": "原描述把点颊摆姿列为相对运动；实际人物主要随背景向左位移并出画，修正为shared_image_displacement。G25仅在部分帧可读。",
+            "version": 2,
+            "method": "deepseek_observe_then_verify"
+          }
+        }
+      },
+      {
+        "start": 2.533,
+        "end": 4.667,
+        "timecode": "00:02-00:04",
+        "description": "街边步道有黄色地面标线与蓝色塑料筐，随后切至咖啡厅窗边座位：桌面摆有寿司、生鱼片拼盘和饮料，长发女性戴眼镜、举玻璃杯向镜头示意，背景有另一位顾客。",
+        "tags": [
+          "街边",
+          "黄色标线",
+          "咖啡厅",
+          "寿司拼盘",
+          "举杯",
+          "窗边"
+        ],
+        "role": "由街景转入用餐场景，展示城市生活体验",
+        "shot_type": "街景中景与咖啡厅近景",
+        "motion": "镜头随场景切换，人物有举杯动作",
+        "evidence_times": [
+          2.533,
+          2.7,
+          3.133,
+          3.7
+        ]
+      },
+      {
+        "start": 4.667,
+        "end": 6.867,
+        "timecode": "00:04-00:06",
+        "description": "咖啡厅内部过道与餐桌侧拍，食客举杯与用餐；随后切到自助拍照亭区域，灰色门上有数字2、1，门板和灯箱上贴满照片拼贴，女性穿毛绒外套和雪地靴，手拿照片卡摆动身体。",
+        "tags": [
+          "咖啡厅内景",
+          "自助拍照亭",
+          "照片墙",
+          "毛绒外套",
+          "雪地靴",
+          "摆拍"
+        ],
+        "role": "由用餐过渡到拍照体验，展示旅行中的趣味活动",
+        "shot_type": "侧拍中景与全身人像",
+        "motion": "镜头随人物移动，人物有摆动和转身",
+        "evidence_times": [
+          4.667,
+          4.833,
+          5.767,
+          6.267,
+          6.7
+        ]
+      },
+      {
+        "start": 6.867,
+        "end": 8.633,
+        "timecode": "00:06-00:08",
+        "description": "楼梯间墙面与木地板，随后长发女性穿白色衬衫、灰裙与格纹领带，双手举着两张拍立得照片，面对镜头张嘴笑；背景走廊墙上挂有多幅肖像画。",
+        "tags": [
+          "楼梯间",
+          "拍立得",
+          "笑容",
+          "格纹领带",
+          "肖像画背景"
+        ],
+        "role": "展示拍照成果，强化人物情绪与互动",
+        "shot_type": "中近景人像",
+        "motion": "人物正面朝向镜头，手部举起照片",
+        "evidence_times": [
+          6.867,
+          7.733,
+          8.633
+        ]
+      },
+      {
+        "start": 8.633,
+        "end": 10.8,
+        "timecode": "00:08-00:10",
+        "description": "镜头先短暂对着白墙上的长镜，镜中映出暖红墙、吊灯和座椅；8.7秒切镜后，画面转为卷帘门前，卷帘门上有卡通角色涂鸦和“ゆきもち”字样，一名穿浅色毛绒外套、戴粉色细框眼镜的女生面对镜头，摆出手指点颊的姿势；随后背景向左移动，画面带到空调外机和红色“びっくりDining”招牌，女生从画面左侧出画。",
+        "tags": [
+          "镜面",
+          "卡通涂鸦",
+          "卷帘门",
+          "户外街拍",
+          "雪地靴",
+          "手指标志"
+        ],
+        "role": "由镜中室内环境切至卷帘门前，展示一名戴眼镜女生摆拍，随后镜头横移离开人物。",
+        "shot_type": "镜面中景与户外全身人像",
+        "motion": "区间含切镜；以下仅描述同一镜头内变化。背景主要向画面左侧位移；可见横向取景变化。物理运镜方式未判定。",
+        "evidence_times": [
+          8.633,
+          8.633333,
+          8.8,
+          8.9,
+          9.166667,
+          9.4,
+          9.433333,
+          9.7,
+          9.8,
+          9.966667,
+          10.233333,
+          10.5,
+          10.766667
+        ],
+        "speech_evidence": [],
+        "speech_evidence_status": "unavailable",
+        "speech_evidence_unaligned_count": 0,
+        "visual_verification": {
+          "structured_motion": {
+            "image_direction": "left",
+            "view_change": "horizontal_sweep",
+            "evidence_times": [
+              8.8,
+              8.9,
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333,
+              10.5,
+              10.766667
+            ],
+            "subject_relative_movement": "pose_change_only",
+            "subject_evidence_basis": "articulation_only",
+            "subject_evidence_times": [
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333
+            ],
+            "subject_observation": "女生面对镜头站立，抬起手臂用手指点颊，手臂与姿势有变化；未见连续步态或接触点变化。之后她因取景移动从画面左侧出画，并非走出。",
+            "viewpoint": "external",
+            "viewpoint_observation": "开头为镜中室内反射画面，切镜后为外部视角看街边人物全身。"
+          },
+          "visible_text": [
+            {
+              "text": "ゆきもち",
+              "legibility": "clear",
+              "evidence_times": [
+                8.8,
+                8.9,
+                9.166667,
+                9.4,
+                9.433333,
+                9.7
+              ]
+            },
+            {
+              "text": "びっくりDining",
+              "legibility": "clear",
+              "evidence_times": [
+                9.8,
+                9.966667,
+                10.233333,
+                10.5,
+                10.766667
+              ]
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checks": {
+              "image_direction": "consistent",
+              "subject_motion": "corrected",
+              "viewpoint": "consistent",
+              "visible_text": "consistent"
+            },
+            "note": "删除“走出画面左侧”的步态断言，改为因取景移动从画面左侧出画；主体仅见摆拍姿势变化，无独立位移证据。",
+            "version": 2,
+            "method": "deepseek_observe_then_verify"
+          }
+        }
+      },
+      {
+        "start": 10.967,
+        "end": 12.533,
+        "timecode": "00:10-00:12",
+        "description": "从街边店铺招牌与狭窄街道切到室内商场或休息区，长发女性坐在大理石纹桌面旁，双手托腮面对镜头；桌上有粉色和橙色饮品及白色纸袋。镜头随后扫向周围座位区，能看到其他顾客和绿椅木桌。",
+        "tags": [
+          "商场内景",
+          "托腮",
+          "饮品",
+          "纸袋",
+          "座位区",
+          "生活记录"
+        ],
+        "role": "收尾于室内休息场景，回到轻松日常氛围",
+        "shot_type": "近景人像与室内中景",
+        "motion": "人物坐姿，镜头最后横扫周围环境",
+        "evidence_times": [
+          10.967,
+          11.733,
+          12.5,
+          12.533
+        ]
+      }
+    ],
+    "structure": [
+      {
+        "role": "开场建立",
+        "start": 0.0,
+        "end": 2.533,
+        "purpose": "用红砖街巷与制服人像建立首尔旅行氛围"
+      },
+      {
+        "role": "场景推进",
+        "start": 2.533,
+        "end": 4.667,
+        "purpose": "由街景转入咖啡厅用餐，展示旅途中的饮食体验"
+      },
+      {
+        "role": "活动展示",
+        "start": 4.667,
+        "end": 6.867,
+        "purpose": "呈现自助拍照亭的娱乐体验，突出人物活泼动作"
+      },
+      {
+        "role": "成果展示",
+        "start": 6.867,
+        "end": 8.633,
+        "purpose": "用拍立得和笑容强化互动感与纪念意义"
+      },
+      {
+        "role": "外景摆拍",
+        "start": 8.633,
+        "end": 10.8,
+        "purpose": "街拍涂鸦墙前摆姿势，突出穿搭与城市漫游感"
+      },
+      {
+        "role": "室内收尾",
+        "start": 10.967,
+        "end": 12.533,
+        "purpose": "在商场休息区结束，回到轻松日常的旅行记录"
+      }
+    ],
+    "content_segments": [
+      {
+        "start": 0.0,
+        "end": 2.533,
+        "timecode": "00:00-00:02",
+        "description": "画面从砖墙和黑色金属置物架旁向左扫过，货架上有纸箱与成排蓝色包装；随后出现便利店冰柜、门口与街边台阶。一名穿白衬衫、系红格领带、着灰裙的女生从画面右侧进入，面向镜头摆出手指点颊的姿势，之后从画面左侧出画，背景继续向左移动到黄色路缘线和街边车辆。",
+        "tags": [
+          "街巷",
+          "红砖墙",
+          "制服",
+          "人像"
+        ],
+        "role": "展示街边便利店外景，并引入一名摆姿势的女生。",
+        "shot_type": "中景转近景",
+        "motion": "背景主要向画面左侧位移；可见横向取景变化。物理运镜方式未判定。",
+        "evidence_times": [
+          0,
+          0.1,
+          0.333333,
+          0.633333,
+          0.966667,
+          1.266667,
+          1.3,
+          1.566667,
+          1.9,
+          2.2,
+          2.5
+        ],
+        "speech_evidence": [],
+        "speech_evidence_status": "unavailable",
+        "speech_evidence_unaligned_count": 0,
+        "overlaps": [],
+        "visual_verification": {
+          "structured_motion": {
+            "image_direction": "left",
+            "view_change": "horizontal_sweep",
+            "evidence_times": [
+              0,
+              0.1,
+              0.333333,
+              0.633333,
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2,
+              2.5
+            ],
+            "subject_relative_movement": "shared_image_displacement",
+            "subject_evidence_basis": "shared_motion_only",
+            "subject_evidence_times": [
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2
+            ],
+            "subject_observation": "女生随背景一同向画面左方移动，从右侧入画、向左侧出画；未见连续步态或接触点变化。",
+            "viewpoint": "external",
+            "viewpoint_observation": "从外部视角看街边店面与人物全身。"
+          },
+          "visible_text": [
+            {
+              "text": "G25",
+              "legibility": "partial",
+              "evidence_times": [
+                1.266667,
+                1.3,
+                1.567,
+                1.9
+              ]
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checks": {
+              "image_direction": "consistent",
+              "subject_motion": "corrected",
+              "viewpoint": "consistent",
+              "visible_text": "consistent"
+            },
+            "note": "原描述把点颊摆姿列为相对运动；实际人物主要随背景向左位移并出画，修正为shared_image_displacement。G25仅在部分帧可读。",
+            "version": 2,
+            "method": "deepseek_observe_then_verify"
+          }
+        }
+      },
+      {
+        "start": 2.533,
+        "end": 4.667,
+        "timecode": "00:02-00:04",
+        "description": "街边黄色标线与塑料筐，切至咖啡厅窗边，桌面摆满寿司与饮品，女性举杯示意。",
+        "tags": [
+          "街边",
+          "咖啡厅",
+          "寿司",
+          "举杯"
+        ],
+        "role": "展示旅行中的餐饮体验",
+        "shot_type": "街景中景与餐桌近景",
+        "motion": "场景切换，人物举杯",
+        "evidence_times": [
+          2.533,
+          3.133,
+          3.7
+        ],
+        "speech_evidence": [],
+        "speech_evidence_status": "unavailable",
+        "speech_evidence_unaligned_count": 0,
+        "overlaps": []
+      },
+      {
+        "start": 4.667,
+        "end": 6.867,
+        "timecode": "00:04-00:06",
+        "description": "咖啡厅内景侧拍，随后进入布满照片墙的自助拍照亭，女性拿照片卡摆动身体。",
+        "tags": [
+          "咖啡厅",
+          "拍照亭",
+          "照片墙",
+          "摆拍"
+        ],
+        "role": "过渡到互动体验场景",
+        "shot_type": "侧拍中景与全身人像",
+        "motion": "人物移动与转身",
+        "evidence_times": [
+          4.667,
+          4.833,
+          5.767,
+          6.267
+        ],
+        "speech_evidence": [],
+        "speech_evidence_status": "unavailable",
+        "speech_evidence_unaligned_count": 0,
+        "overlaps": []
+      },
+      {
+        "start": 6.867,
+        "end": 8.633,
+        "timecode": "00:06-00:08",
+        "description": "楼梯间后切至女性手持两张拍立得照片面向镜头笑。",
+        "tags": [
+          "楼梯间",
+          "拍立得",
+          "笑容"
+        ],
+        "role": "展示拍照成果与情绪互动",
+        "shot_type": "近景人像",
+        "motion": "人物手举照片",
+        "evidence_times": [
+          6.867,
+          7.733
+        ],
+        "speech_evidence": [],
+        "speech_evidence_status": "unavailable",
+        "speech_evidence_unaligned_count": 0,
+        "overlaps": []
+      },
+      {
+        "start": 8.633,
+        "end": 10.8,
+        "timecode": "00:08-00:10",
+        "description": "镜头先短暂对着白墙上的长镜，镜中映出暖红墙、吊灯和座椅；8.7秒切镜后，画面转为卷帘门前，卷帘门上有卡通角色涂鸦和“ゆきもち”字样，一名穿浅色毛绒外套、戴粉色细框眼镜的女生面对镜头，摆出手指点颊的姿势；随后背景向左移动，画面带到空调外机和红色“びっくりDining”招牌，女生从画面左侧出画。",
+        "tags": [
+          "镜面",
+          "涂鸦",
+          "户外摆拍"
+        ],
+        "role": "由镜中室内环境切至卷帘门前，展示一名戴眼镜女生摆拍，随后镜头横移离开人物。",
+        "shot_type": "中景与全身人像",
+        "motion": "区间含切镜；以下仅描述同一镜头内变化。背景主要向画面左侧位移；可见横向取景变化。物理运镜方式未判定。",
+        "evidence_times": [
+          8.633,
+          8.633333,
+          8.8,
+          8.9,
+          9.166667,
+          9.4,
+          9.433333,
+          9.7,
+          9.8,
+          9.966667,
+          10.233333,
+          10.5,
+          10.766667
+        ],
+        "speech_evidence": [],
+        "speech_evidence_status": "unavailable",
+        "speech_evidence_unaligned_count": 0,
+        "overlaps": [],
+        "visual_verification": {
+          "structured_motion": {
+            "image_direction": "left",
+            "view_change": "horizontal_sweep",
+            "evidence_times": [
+              8.8,
+              8.9,
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333,
+              10.5,
+              10.766667
+            ],
+            "subject_relative_movement": "pose_change_only",
+            "subject_evidence_basis": "articulation_only",
+            "subject_evidence_times": [
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333
+            ],
+            "subject_observation": "女生面对镜头站立，抬起手臂用手指点颊，手臂与姿势有变化；未见连续步态或接触点变化。之后她因取景移动从画面左侧出画，并非走出。",
+            "viewpoint": "external",
+            "viewpoint_observation": "开头为镜中室内反射画面，切镜后为外部视角看街边人物全身。"
+          },
+          "visible_text": [
+            {
+              "text": "ゆきもち",
+              "legibility": "clear",
+              "evidence_times": [
+                8.8,
+                8.9,
+                9.166667,
+                9.4,
+                9.433333,
+                9.7
+              ]
+            },
+            {
+              "text": "びっくりDining",
+              "legibility": "clear",
+              "evidence_times": [
+                9.8,
+                9.966667,
+                10.233333,
+                10.5,
+                10.766667
+              ]
+            }
+          ],
+          "verification": {
+            "status": "verified",
+            "checks": {
+              "image_direction": "consistent",
+              "subject_motion": "corrected",
+              "viewpoint": "consistent",
+              "visible_text": "consistent"
+            },
+            "note": "删除“走出画面左侧”的步态断言，改为因取景移动从画面左侧出画；主体仅见摆拍姿势变化，无独立位移证据。",
+            "version": 2,
+            "method": "deepseek_observe_then_verify"
+          }
+        }
+      },
+      {
+        "start": 10.967,
+        "end": 12.533,
+        "timecode": "00:10-00:12",
+        "description": "商场休息区，女性托腮坐于大理石桌旁，桌上饮品与纸袋，镜头最后扫向周边座位。",
+        "tags": [
+          "商场",
+          "托腮",
+          "饮品",
+          "座位区"
+        ],
+        "role": "室内收尾，回归日常氛围",
+        "shot_type": "近景与室内中景",
+        "motion": "人物坐姿，镜头横扫",
+        "evidence_times": [
+          10.967,
+          11.733,
+          12.5,
+          12.533
+        ],
+        "speech_evidence": [],
+        "speech_evidence_status": "unavailable",
+        "speech_evidence_unaligned_count": 0,
+        "overlaps": []
+      }
+    ],
+    "audio_analyzed": false,
+    "audio_note": "语种识别置信度偏低，转写仅供核对",
+    "analyzed_frame_times": [
+      0.0,
+      0.1,
+      1.3,
+      2.533,
+      2.7,
+      3.133,
+      3.7,
+      4.667,
+      4.833,
+      5.767,
+      6.267,
+      6.7,
+      6.867,
+      7.733,
+      8.633,
+      8.8,
+      9.4,
+      9.8,
+      10.8,
+      10.967,
+      11.733,
+      12.5,
+      12.533
+    ],
+    "model": "deepseek-flash",
+    "status": "completed",
+    "analysis_chunks": [
+      {
+        "index": 0,
+        "start": 0.0,
+        "end": 12.5667,
+        "context_start": 0.0,
+        "context_end": 12.5667,
+        "frame_times": [
+          0.0,
+          0.1,
+          1.3,
+          2.533,
+          2.7,
+          3.133,
+          3.7,
+          4.667,
+          4.833,
+          5.767,
+          6.267,
+          6.7,
+          6.867,
+          7.733,
+          8.633,
+          8.8,
+          9.4,
+          9.8,
+          10.8,
+          10.967,
+          11.733,
+          12.5,
+          12.533
+        ],
+        "core_frame_times": [
+          0.0,
+          0.1,
+          1.3,
+          2.533,
+          2.7,
+          3.133,
+          3.7,
+          4.667,
+          4.833,
+          5.767,
+          6.267,
+          6.7,
+          6.867,
+          7.733,
+          8.633,
+          8.8,
+          9.4,
+          9.8,
+          10.8,
+          10.967,
+          11.733,
+          12.5,
+          12.533
+        ],
+        "frame_count": 23,
+        "transcript_segment_count": 0,
+        "cache_hit": false,
+        "source_job_id": "e47ec3483132437ca555b5101a852d20"
+      }
+    ],
+    "analysis_call_count": 1,
+    "retained_call_count": 0,
+    "analysis_strategy": "single_window",
+    "evidence_frames": [
+      {
+        "time": 0.0,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-000.jpg"
+      },
+      {
+        "time": 0.1,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+      },
+      {
+        "time": 1.3,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+      },
+      {
+        "time": 2.533,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-003.jpg"
+      },
+      {
+        "time": 2.7,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-004.jpg"
+      },
+      {
+        "time": 3.133,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-005.jpg"
+      },
+      {
+        "time": 3.7,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-006.jpg"
+      },
+      {
+        "time": 4.667,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-007.jpg"
+      },
+      {
+        "time": 4.833,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-008.jpg"
+      },
+      {
+        "time": 5.767,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-009.jpg"
+      },
+      {
+        "time": 6.267,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-010.jpg"
+      },
+      {
+        "time": 6.7,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-011.jpg"
+      },
+      {
+        "time": 6.867,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-012.jpg"
+      },
+      {
+        "time": 7.733,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-013.jpg"
+      },
+      {
+        "time": 8.633,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+      },
+      {
+        "time": 8.8,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+      },
+      {
+        "time": 9.4,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+      },
+      {
+        "time": 9.8,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+      },
+      {
+        "time": 10.8,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-018.jpg"
+      },
+      {
+        "time": 10.967,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-019.jpg"
+      },
+      {
+        "time": 11.733,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-020.jpg"
+      },
+      {
+        "time": 12.5,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-021.jpg"
+      },
+      {
+        "time": 12.533,
+        "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-022.jpg"
+      }
+    ],
+    "analysis_id": "07d152c3afcf4dc0845645e99c8c6ed6",
+    "analyzed_at": "2026-10-20T14:37:10.267411+00:00",
+    "source_job_id": "e47ec3483132437ca555b5101a852d20",
+    "pipeline_version": 2,
+    "coverage": {
+      "method": "sampled_frames",
+      "sampled_frame_count": 23,
+      "detected_shot_count": 6,
+      "complete_frame_review": false
+    },
+    "shot_boundaries": [
+      0.0,
+      2.6,
+      4.733,
+      6.767,
+      8.7,
+      10.867,
+      12.5667
+    ],
+    "reference_analysis": true,
+    "shot_detection": {
+      "method": "motion_compensated_temporal_difference_v2",
+      "fps": 30.0,
+      "decoded_frames": 377,
+      "boundaries": [
+        0.0,
+        2.6,
+        4.733,
+        6.767,
+        8.7,
+        10.867,
+        12.5667
+      ],
+      "cuts": [
+        {
+          "time": 2.6,
+          "type": "hard_cut",
+          "transition": "hard_cut",
+          "difference": 0.2612,
+          "histogram_difference": 0.5472,
+          "temporal_ratio": 8.59,
+          "abruptness": 5.59,
+          "confidence": "high"
+        },
+        {
+          "time": 4.733,
+          "type": "hard_cut",
+          "transition": "hard_cut",
+          "difference": 0.2553,
+          "histogram_difference": 0.6686,
+          "temporal_ratio": 10.51,
+          "abruptness": 8.6,
+          "confidence": "high"
+        },
+        {
+          "time": 6.767,
+          "type": "hard_cut",
+          "transition": "hard_cut",
+          "difference": 0.1935,
+          "histogram_difference": 0.8182,
+          "temporal_ratio": 15.05,
+          "abruptness": 14.14,
+          "confidence": "high"
+        },
+        {
+          "time": 8.7,
+          "type": "hard_cut",
+          "transition": "hard_cut",
+          "difference": 0.2544,
+          "histogram_difference": 0.5623,
+          "temporal_ratio": 8.45,
+          "abruptness": 7.26,
+          "confidence": "high"
+        },
+        {
+          "time": 10.867,
+          "type": "hard_cut",
+          "transition": "hard_cut",
+          "difference": 0.2851,
+          "histogram_difference": 0.691,
+          "temporal_ratio": 9.09,
+          "abruptness": 9.12,
+          "confidence": "high"
+        }
+      ],
+      "gradual_transitions": [],
+      "review_candidates": [],
+      "coverage": "hard_cuts_with_gradual_candidates",
+      "limitations": [
+        "渐变区间为待核对候选，可能包含运镜或物体运动；不计入确定切点。",
+        "强烈运动、闪光和相似构图切换仍可能漏检或误检，镜头边界支持人工核对。"
+      ]
+    },
+    "shots": [
+      {
+        "id": "shot-0001",
+        "start": 0.0,
+        "end": 2.6,
+        "thumbnail_time": 1.3,
+        "thumbnail_url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg",
+        "transition": "start",
+        "detection_confidence": null
+      },
+      {
+        "id": "shot-0002",
+        "start": 2.6,
+        "end": 4.733,
+        "thumbnail_time": 3.7,
+        "thumbnail_url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-006.jpg",
+        "transition": "hard_cut",
+        "detection_confidence": "high"
+      },
+      {
+        "id": "shot-0003",
+        "start": 4.733,
+        "end": 6.767,
+        "thumbnail_time": 5.767,
+        "thumbnail_url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-009.jpg",
+        "transition": "hard_cut",
+        "detection_confidence": "high"
+      },
+      {
+        "id": "shot-0004",
+        "start": 6.767,
+        "end": 8.7,
+        "thumbnail_time": 7.733,
+        "thumbnail_url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-013.jpg",
+        "transition": "hard_cut",
+        "detection_confidence": "high"
+      },
+      {
+        "id": "shot-0005",
+        "start": 8.7,
+        "end": 10.867,
+        "thumbnail_time": 9.8,
+        "thumbnail_url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg",
+        "transition": "hard_cut",
+        "detection_confidence": "high"
+      },
+      {
+        "id": "shot-0006",
+        "start": 10.867,
+        "end": 12.5667,
+        "thumbnail_time": 11.733,
+        "thumbnail_url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-020.jpg",
+        "transition": "hard_cut",
+        "detection_confidence": "high"
+      }
+    ],
+    "audio_status": "succeeded",
+    "audio_used_in_analysis": false,
+    "audio_evidence": {
+      "status": "uncertain",
+      "reason": "语种识别置信度偏低，转写仅供核对",
+      "accepted_segment_count": 0,
+      "excluded_segment_count": 2,
+      "language_probability": 0.3068,
+      "policy": {
+        "version": 1,
+        "min_language_probability": 0.6,
+        "min_mean_word_probability": 0.5
+      }
+    },
+    "transcript": {
+      "text": "One dog got nausea, that my name baby's only there's a fee I say I'm the key, so I'm in chocolate",
+      "segments": [
+        {
+          "start": 2.26,
+          "end": 8.36,
+          "text": "One dog got nausea, that my name baby's only there's a fee",
+          "words": [
+            {
+              "start": 2.26,
+              "end": 2.9,
+              "word": " One",
+              "probability": 0.1359
+            },
+            {
+              "start": 2.9,
+              "end": 3.26,
+              "word": " dog",
+              "probability": 0.2583
+            },
+            {
+              "start": 3.26,
+              "end": 3.62,
+              "word": " got",
+              "probability": 0.2182
+            },
+            {
+              "start": 3.62,
+              "end": 4.68,
+              "word": " nausea,",
+              "probability": 0.5979
+            },
+            {
+              "start": 4.74,
+              "end": 4.86,
+              "word": " that",
+              "probability": 0.2495
+            },
+            {
+              "start": 4.86,
+              "end": 5.2,
+              "word": " my",
+              "probability": 0.0641
+            },
+            {
+              "start": 5.2,
+              "end": 5.52,
+              "word": " name",
+              "probability": 0.5993
+            },
+            {
+              "start": 5.52,
+              "end": 6.58,
+              "word": " baby's",
+              "probability": 0.3323
+            },
+            {
+              "start": 6.58,
+              "end": 7.08,
+              "word": " only",
+              "probability": 0.5378
+            },
+            {
+              "start": 7.08,
+              "end": 7.72,
+              "word": " there's",
+              "probability": 0.4901
+            },
+            {
+              "start": 7.72,
+              "end": 7.96,
+              "word": " a",
+              "probability": 0.7834
+            },
+            {
+              "start": 7.96,
+              "end": 8.36,
+              "word": " fee",
+              "probability": 0.3079
+            }
+          ]
+        },
+        {
+          "start": 8.36,
+          "end": 12.2,
+          "text": "I say I'm the key, so I'm in chocolate",
+          "words": [
+            {
+              "start": 8.36,
+              "end": 8.82,
+              "word": " I",
+              "probability": 0.689
+            },
+            {
+              "start": 8.82,
+              "end": 9.2,
+              "word": " say",
+              "probability": 0.9379
+            },
+            {
+              "start": 9.2,
+              "end": 9.68,
+              "word": " I'm",
+              "probability": 0.9161
+            },
+            {
+              "start": 9.68,
+              "end": 9.94,
+              "word": " the",
+              "probability": 0.5343
+            },
+            {
+              "start": 9.94,
+              "end": 10.42,
+              "word": " key,",
+              "probability": 0.4126
+            },
+            {
+              "start": 10.66,
+              "end": 10.82,
+              "word": " so",
+              "probability": 0.137
+            },
+            {
+              "start": 10.82,
+              "end": 11.5,
+              "word": " I'm",
+              "probability": 0.1834
+            },
+            {
+              "start": 11.5,
+              "end": 11.56,
+              "word": " in",
+              "probability": 0.4624
+            },
+            {
+              "start": 11.56,
+              "end": 12.2,
+              "word": " chocolate",
+              "probability": 0.4994
+            }
+          ]
+        }
+      ],
+      "language": "en",
+      "language_probability": 0.3068,
+      "duration": 12.563,
+      "model": "base",
+      "engine": "faster-whisper",
+      "local": true,
+      "has_speech": true,
+      "created_at": "2026-10-20T09:35:09.006674+00:00",
+      "url": "/api/media/plans/transcript-bed732a655dd4a8e9a2d2386a964c5a5-77b420bd4fcb4714ba90e443d861f855.json"
+    },
+    "transcript_used_at": null,
+    "content_evidence_annotation": {
+      "version": 1,
+      "source": "local_asr",
+      "alignment": "word_timestamps",
+      "audio_status": "uncertain",
+      "transcript_created_at": "2026-10-20T09:35:09.006674+00:00",
+      "overlap_pair_count": 0
+    },
+    "annotation_source_analysis_id": "1a0a9950d4ab4c36b29b1192d40c4378",
+    "annotation_created_at": "2026-10-20T14:59:45.289177+00:00",
+    "targeted_repairs": [
+      {
+        "base_analysis_id": "88b28ad9bed64739aaa307ac70aaa2ea",
+        "job_id": "a92e3329878242a0a1183be3be7dbfa2",
+        "created_at": "2026-10-20T15:48:23.291330+00:00",
+        "targets": [
+          {
+            "collection": "segments",
+            "index": 0,
+            "issues": [
+              "motion"
+            ],
+            "window_id": "0.000000:2.533000",
+            "start": 0.0,
+            "end": 2.533,
+            "changed_fields": [
+              "description",
+              "evidence_times",
+              "motion"
+            ],
+            "before_sha256": "642bd334fc151949284b739d6baa5d195e0068e9df9c986bb0ff24a75ed214f8",
+            "method": "local_visual_reanalysis",
+            "frames": [
+              {
+                "time": 0.0,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-00.jpg"
+              },
+              {
+                "time": 0.1,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+              },
+              {
+                "time": 0.333333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-01.jpg"
+              },
+              {
+                "time": 0.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-02.jpg"
+              },
+              {
+                "time": 0.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-03.jpg"
+              },
+              {
+                "time": 1.266667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-04.jpg"
+              },
+              {
+                "time": 1.3,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+              },
+              {
+                "time": 1.566667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-05.jpg"
+              },
+              {
+                "time": 1.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-06.jpg"
+              },
+              {
+                "time": 2.2,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-07.jpg"
+              },
+              {
+                "time": 2.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              0.0,
+              0.1,
+              0.333333,
+              0.633333,
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2,
+              2.5
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 0.0,
+              "end": 2.533,
+              "fps": 30.0,
+              "decoded_frames": 76,
+              "statistics": {
+                "measured_pairs": 75,
+                "qualified_pairs": 75,
+                "qualified_pair_fraction": 1.0,
+                "image_dx_widths_per_second_median": -0.86987,
+                "image_dy_heights_per_second_median": -0.02033,
+                "image_rotation_degrees_per_second_median": -10.68248,
+                "image_scale_log_per_second_median": 1e-05,
+                "background_inlier_ratio_median": 0.97279,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.05854,
+                "center_residual_widths_per_second_median": 0.04209,
+                "center_residual_widths_per_second_p90_median": 0.06098,
+                "edge_residual_widths_per_second_median": 0.04259,
+                "coherent_view_change_pair_fraction": 0.8,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [],
+              "skipped_cut_pairs": [],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "cache_hit": false,
+            "source_job_id": "a92e3329878242a0a1183be3be7dbfa2",
+            "after_sha256": "b49923e7424c5acbda99bfcc663ad10fa92d17ba19ba8386e959199930192393",
+            "reviewed_fields": {
+              "description": "连续画面从红砖建筑旁的黑色铁架、纸箱和冷柜扫向店外街道。一名穿白衬衫、灰裙、系红格纹领带的女生在冷柜前保持手指抵脸的姿势；随着取景变化，她从画面右侧出现、经过中央，再从左侧移出，随后露出黄色路面标线和蓝色箱子。",
+              "motion": "连续横向取景变化；背景主要向画面左侧移动，摇摄与平移无法仅凭这些帧区分。"
+            },
+            "review_note": "连续帧显示人物保持姿势或抬手，与背景共同发生屏幕位移；不支持DS对人物走开及物理取景方向的推断。",
+            "review_evidence": [
+              "${AHB_DATA}/frames/imported-evidence/output/reference-targeted-repair-20261020/motion-evidence/shot-01-sequence.jpg"
+            ]
+          },
+          {
+            "collection": "segments",
+            "index": 4,
+            "issues": [
+              "motion"
+            ],
+            "window_id": "8.633000:10.800000",
+            "start": 8.633,
+            "end": 10.8,
+            "changed_fields": [
+              "description",
+              "evidence_times",
+              "motion"
+            ],
+            "before_sha256": "664273987dcda92a5151ef2e4e3eaa1f7214588b5bbed1c1fde83aa28e70a6cb",
+            "method": "local_visual_reanalysis",
+            "frames": [
+              {
+                "time": 8.633,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+              },
+              {
+                "time": 8.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-00.jpg"
+              },
+              {
+                "time": 8.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+              },
+              {
+                "time": 8.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-01.jpg"
+              },
+              {
+                "time": 9.166667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-02.jpg"
+              },
+              {
+                "time": 9.4,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+              },
+              {
+                "time": 9.433333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-03.jpg"
+              },
+              {
+                "time": 9.7,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-04.jpg"
+              },
+              {
+                "time": 9.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+              },
+              {
+                "time": 9.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-05.jpg"
+              },
+              {
+                "time": 10.233333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-06.jpg"
+              },
+              {
+                "time": 10.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-07.jpg"
+              },
+              {
+                "time": 10.766667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              8.633,
+              8.633333,
+              8.8,
+              8.9,
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333,
+              10.5,
+              10.766667
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 8.633,
+              "end": 10.8,
+              "fps": 30.0,
+              "decoded_frames": 65,
+              "statistics": {
+                "measured_pairs": 63,
+                "qualified_pairs": 62,
+                "qualified_pair_fraction": 0.98413,
+                "image_dx_widths_per_second_median": -0.54907,
+                "image_dy_heights_per_second_median": 0.01781,
+                "image_rotation_degrees_per_second_median": -14.71462,
+                "image_scale_log_per_second_median": -0.03172,
+                "background_inlier_ratio_median": 0.93287,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.10477,
+                "center_residual_widths_per_second_median": 0.07163,
+                "center_residual_widths_per_second_p90_median": 0.11802,
+                "edge_residual_widths_per_second_median": 0.06821,
+                "coherent_view_change_pair_fraction": 1.0,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [
+                8.7
+              ],
+              "skipped_cut_pairs": [
+                8.7
+              ],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "cache_hit": false,
+            "source_job_id": "a92e3329878242a0a1183be3be7dbfa2",
+            "after_sha256": "9d8b8398b5dc8b2b7878d662f15bc64327212fd2432ebeba5b7e5362832ddeb2",
+            "reviewed_fields": {
+              "description": "起始短暂出现白墙与镜子，8.700秒切镜后连续扫过绘有白色卡通角色的卷帘门、门前女生、红色招牌和巷道路面。女生身体前倾，随后抬手做V手势；人物和背景随取景变化一起向画面左侧移动，不能据此判定她在步行。",
+              "motion": "8.700秒有切镜；切点后的连续画面中背景主要向左侧移动，呈横向扫过效果，摇摄与平移无法区分。"
+            },
+            "review_note": "连续帧显示人物保持姿势或抬手，与背景共同发生屏幕位移；不支持DS对人物走开及物理取景方向的推断。",
+            "review_evidence": [
+              "${AHB_DATA}/frames/imported-evidence/output/reference-targeted-repair-20261020/motion-evidence/shot-05-sequence.jpg"
+            ]
+          },
+          {
+            "collection": "content_segments",
+            "index": 0,
+            "issues": [
+              "motion"
+            ],
+            "window_id": "0.000000:2.533000",
+            "start": 0.0,
+            "end": 2.533,
+            "changed_fields": [
+              "description",
+              "evidence_times",
+              "motion"
+            ],
+            "before_sha256": "14a37b28a32c0fdec0d6ef734380171d3702121859290045720a65141b11d6e1",
+            "method": "local_visual_reanalysis",
+            "frames": [
+              {
+                "time": 0.0,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-00.jpg"
+              },
+              {
+                "time": 0.1,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+              },
+              {
+                "time": 0.333333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-01.jpg"
+              },
+              {
+                "time": 0.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-02.jpg"
+              },
+              {
+                "time": 0.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-03.jpg"
+              },
+              {
+                "time": 1.266667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-04.jpg"
+              },
+              {
+                "time": 1.3,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+              },
+              {
+                "time": 1.566667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-05.jpg"
+              },
+              {
+                "time": 1.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-06.jpg"
+              },
+              {
+                "time": 2.2,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-07.jpg"
+              },
+              {
+                "time": 2.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              0.0,
+              0.1,
+              0.333333,
+              0.633333,
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2,
+              2.5
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 0.0,
+              "end": 2.533,
+              "fps": 30.0,
+              "decoded_frames": 76,
+              "statistics": {
+                "measured_pairs": 75,
+                "qualified_pairs": 75,
+                "qualified_pair_fraction": 1.0,
+                "image_dx_widths_per_second_median": -0.86987,
+                "image_dy_heights_per_second_median": -0.02033,
+                "image_rotation_degrees_per_second_median": -10.68248,
+                "image_scale_log_per_second_median": 1e-05,
+                "background_inlier_ratio_median": 0.97279,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.05854,
+                "center_residual_widths_per_second_median": 0.04209,
+                "center_residual_widths_per_second_p90_median": 0.06098,
+                "edge_residual_widths_per_second_median": 0.04259,
+                "coherent_view_change_pair_fraction": 0.8,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [],
+              "skipped_cut_pairs": [],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "cache_hit": false,
+            "source_job_id": "a92e3329878242a0a1183be3be7dbfa2",
+            "after_sha256": "0f05d9929bedd2e85efcd1264f3edc944fffa95b9709f4a478948a48dd1a5dd3",
+            "reviewed_fields": {
+              "description": "连续画面从红砖建筑旁的黑色铁架、纸箱和冷柜扫向店外街道。一名穿白衬衫、灰裙、系红格纹领带的女生在冷柜前保持手指抵脸的姿势；随着取景变化，她从画面右侧出现、经过中央，再从左侧移出，随后露出黄色路面标线和蓝色箱子。",
+              "motion": "连续横向取景变化；背景主要向画面左侧移动，摇摄与平移无法仅凭这些帧区分。"
+            },
+            "review_note": "连续帧显示人物保持姿势或抬手，与背景共同发生屏幕位移；不支持DS对人物走开及物理取景方向的推断。",
+            "review_evidence": [
+              "${AHB_DATA}/frames/imported-evidence/output/reference-targeted-repair-20261020/motion-evidence/shot-01-sequence.jpg"
+            ]
+          },
+          {
+            "collection": "content_segments",
+            "index": 4,
+            "issues": [
+              "motion"
+            ],
+            "window_id": "8.633000:10.800000",
+            "start": 8.633,
+            "end": 10.8,
+            "changed_fields": [
+              "description",
+              "evidence_times",
+              "motion"
+            ],
+            "before_sha256": "55415a5d0612e341deceecdd645fbe199fe0f2744e7dc95111cb0fb8d17e930e",
+            "method": "local_visual_reanalysis",
+            "frames": [
+              {
+                "time": 8.633,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+              },
+              {
+                "time": 8.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-00.jpg"
+              },
+              {
+                "time": 8.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+              },
+              {
+                "time": 8.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-01.jpg"
+              },
+              {
+                "time": 9.166667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-02.jpg"
+              },
+              {
+                "time": 9.4,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+              },
+              {
+                "time": 9.433333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-03.jpg"
+              },
+              {
+                "time": 9.7,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-04.jpg"
+              },
+              {
+                "time": 9.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+              },
+              {
+                "time": 9.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-05.jpg"
+              },
+              {
+                "time": 10.233333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-06.jpg"
+              },
+              {
+                "time": 10.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-07.jpg"
+              },
+              {
+                "time": 10.766667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              8.633,
+              8.633333,
+              8.8,
+              8.9,
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333,
+              10.5,
+              10.766667
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 8.633,
+              "end": 10.8,
+              "fps": 30.0,
+              "decoded_frames": 65,
+              "statistics": {
+                "measured_pairs": 63,
+                "qualified_pairs": 62,
+                "qualified_pair_fraction": 0.98413,
+                "image_dx_widths_per_second_median": -0.54907,
+                "image_dy_heights_per_second_median": 0.01781,
+                "image_rotation_degrees_per_second_median": -14.71462,
+                "image_scale_log_per_second_median": -0.03172,
+                "background_inlier_ratio_median": 0.93287,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.10477,
+                "center_residual_widths_per_second_median": 0.07163,
+                "center_residual_widths_per_second_p90_median": 0.11802,
+                "edge_residual_widths_per_second_median": 0.06821,
+                "coherent_view_change_pair_fraction": 1.0,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [
+                8.7
+              ],
+              "skipped_cut_pairs": [
+                8.7
+              ],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "cache_hit": false,
+            "source_job_id": "a92e3329878242a0a1183be3be7dbfa2",
+            "after_sha256": "ba05069e0facdb580ad345ea23e4748fefb60ecc941ed7da75486aaa43462383",
+            "reviewed_fields": {
+              "description": "起始短暂出现白墙与镜子，8.700秒切镜后连续扫过绘有白色卡通角色的卷帘门、门前女生、红色招牌和巷道路面。女生身体前倾，随后抬手做V手势；人物和背景随取景变化一起向画面左侧移动，不能据此判定她在步行。",
+              "motion": "8.700秒有切镜；切点后的连续画面中背景主要向左侧移动，呈横向扫过效果，摇摄与平移无法区分。"
+            },
+            "review_note": "连续帧显示人物保持姿势或抬手，与背景共同发生屏幕位移；不支持DS对人物走开及物理取景方向的推断。",
+            "review_evidence": [
+              "${AHB_DATA}/frames/imported-evidence/output/reference-targeted-repair-20261020/motion-evidence/shot-05-sequence.jpg"
+            ]
+          }
+        ],
+        "new_provider_calls": 1,
+        "reused": {
+          "shot_detection": true,
+          "transcript": true,
+          "full_analysis_windows": 1,
+          "unchanged_segments": {
+            "content_segments": 4,
+            "segments": 4
+          }
+        },
+        "review_source_analysis_id": "3afc79e5fd3546bc97819841dd813e9f",
+        "reviewed_at": "2026-10-20T15:52:28.634640+00:00",
+        "review_provider_calls": 0
+      },
+      {
+        "base_analysis_id": "ca33d9a9c119401fa2ebfe2fdfda6b03",
+        "job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+        "created_at": "2026-10-20T16:14:34.686224+00:00",
+        "targets": [
+          {
+            "collection": "segments",
+            "index": 0,
+            "issues": [
+              "motion",
+              "visual"
+            ],
+            "window_id": "0.000000:2.533000",
+            "start": 0.0,
+            "end": 2.533,
+            "changed_fields": [
+              "description",
+              "evidence_times",
+              "motion",
+              "role",
+              "visual_verification"
+            ],
+            "before_sha256": "b49923e7424c5acbda99bfcc663ad10fa92d17ba19ba8386e959199930192393",
+            "method": "deepseek_observe_then_verify",
+            "frames": [
+              {
+                "time": 0.0,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-00.jpg"
+              },
+              {
+                "time": 0.1,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+              },
+              {
+                "time": 0.333333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-01.jpg"
+              },
+              {
+                "time": 0.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-02.jpg"
+              },
+              {
+                "time": 0.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-03.jpg"
+              },
+              {
+                "time": 1.266667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-04.jpg"
+              },
+              {
+                "time": 1.3,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+              },
+              {
+                "time": 1.566667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-05.jpg"
+              },
+              {
+                "time": 1.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-06.jpg"
+              },
+              {
+                "time": 2.2,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-07.jpg"
+              },
+              {
+                "time": 2.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              0.0,
+              0.1,
+              0.333333,
+              0.633333,
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2,
+              2.5
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 0.0,
+              "end": 2.533,
+              "fps": 30.0,
+              "decoded_frames": 76,
+              "statistics": {
+                "measured_pairs": 75,
+                "qualified_pairs": 75,
+                "qualified_pair_fraction": 1.0,
+                "image_dx_widths_per_second_median": -0.86987,
+                "image_dy_heights_per_second_median": -0.02033,
+                "image_rotation_degrees_per_second_median": -10.68248,
+                "image_scale_log_per_second_median": 1e-05,
+                "background_inlier_ratio_median": 0.97279,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.05854,
+                "center_residual_widths_per_second_median": 0.04209,
+                "center_residual_widths_per_second_p90_median": 0.06098,
+                "edge_residual_widths_per_second_median": 0.04259,
+                "coherent_view_change_pair_fraction": 0.8,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [],
+              "skipped_cut_pairs": [],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "reasoning_version": 2,
+            "stages": {
+              "observe": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "verify": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "reconcile_1": {
+                "cache_hit": false,
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "new_provider_calls": 1,
+                "section_ids": [
+                  "8.633000:10.800000"
+                ],
+                "validation_flags": [
+                  {
+                    "id": "8.633000:10.800000",
+                    "codes": [
+                      "description_locomotion_conflicts_with_subject_evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cache_hit": false,
+            "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "new_provider_calls": 1,
+            "observation_flags": [],
+            "reconciled_section_ids": [
+              "8.633000:10.800000"
+            ],
+            "after_sha256": "2083c75d32f9d2aa072d23d6c6ee23f062ffd3aec5cd9b3a29f018024fc5815a"
+          },
+          {
+            "collection": "segments",
+            "index": 4,
+            "issues": [
+              "motion",
+              "visual"
+            ],
+            "window_id": "8.633000:10.800000",
+            "start": 8.633,
+            "end": 10.8,
+            "changed_fields": [
+              "description",
+              "motion",
+              "role",
+              "visual_verification"
+            ],
+            "before_sha256": "9d8b8398b5dc8b2b7878d662f15bc64327212fd2432ebeba5b7e5362832ddeb2",
+            "method": "deepseek_observe_then_verify",
+            "frames": [
+              {
+                "time": 8.633,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+              },
+              {
+                "time": 8.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-00.jpg"
+              },
+              {
+                "time": 8.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+              },
+              {
+                "time": 8.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-01.jpg"
+              },
+              {
+                "time": 9.166667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-02.jpg"
+              },
+              {
+                "time": 9.4,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+              },
+              {
+                "time": 9.433333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-03.jpg"
+              },
+              {
+                "time": 9.7,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-04.jpg"
+              },
+              {
+                "time": 9.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+              },
+              {
+                "time": 9.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-05.jpg"
+              },
+              {
+                "time": 10.233333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-06.jpg"
+              },
+              {
+                "time": 10.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-07.jpg"
+              },
+              {
+                "time": 10.766667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              8.633,
+              8.633333,
+              8.8,
+              8.9,
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333,
+              10.5,
+              10.766667
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 8.633,
+              "end": 10.8,
+              "fps": 30.0,
+              "decoded_frames": 65,
+              "statistics": {
+                "measured_pairs": 63,
+                "qualified_pairs": 62,
+                "qualified_pair_fraction": 0.98413,
+                "image_dx_widths_per_second_median": -0.54907,
+                "image_dy_heights_per_second_median": 0.01781,
+                "image_rotation_degrees_per_second_median": -14.71462,
+                "image_scale_log_per_second_median": -0.03172,
+                "background_inlier_ratio_median": 0.93287,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.10477,
+                "center_residual_widths_per_second_median": 0.07163,
+                "center_residual_widths_per_second_p90_median": 0.11802,
+                "edge_residual_widths_per_second_median": 0.06821,
+                "coherent_view_change_pair_fraction": 1.0,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [
+                8.7
+              ],
+              "skipped_cut_pairs": [
+                8.7
+              ],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "reasoning_version": 2,
+            "stages": {
+              "observe": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "verify": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "reconcile_1": {
+                "cache_hit": false,
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "new_provider_calls": 1,
+                "section_ids": [
+                  "8.633000:10.800000"
+                ],
+                "validation_flags": [
+                  {
+                    "id": "8.633000:10.800000",
+                    "codes": [
+                      "description_locomotion_conflicts_with_subject_evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cache_hit": false,
+            "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "new_provider_calls": 1,
+            "observation_flags": [],
+            "reconciled_section_ids": [
+              "8.633000:10.800000"
+            ],
+            "after_sha256": "d78180719b0a5f4766face4ae9e35d946b78e25a6284a13958f72241be3cb60b"
+          },
+          {
+            "collection": "content_segments",
+            "index": 0,
+            "issues": [
+              "motion",
+              "visual"
+            ],
+            "window_id": "0.000000:2.533000",
+            "start": 0.0,
+            "end": 2.533,
+            "changed_fields": [
+              "description",
+              "evidence_times",
+              "motion",
+              "role",
+              "visual_verification"
+            ],
+            "before_sha256": "0f05d9929bedd2e85efcd1264f3edc944fffa95b9709f4a478948a48dd1a5dd3",
+            "method": "deepseek_observe_then_verify",
+            "frames": [
+              {
+                "time": 0.0,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-00.jpg"
+              },
+              {
+                "time": 0.1,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+              },
+              {
+                "time": 0.333333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-01.jpg"
+              },
+              {
+                "time": 0.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-02.jpg"
+              },
+              {
+                "time": 0.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-03.jpg"
+              },
+              {
+                "time": 1.266667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-04.jpg"
+              },
+              {
+                "time": 1.3,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+              },
+              {
+                "time": 1.566667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-05.jpg"
+              },
+              {
+                "time": 1.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-06.jpg"
+              },
+              {
+                "time": 2.2,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-07.jpg"
+              },
+              {
+                "time": 2.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-067e35b637f7d418ec1c/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              0.0,
+              0.1,
+              0.333333,
+              0.633333,
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2,
+              2.5
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 0.0,
+              "end": 2.533,
+              "fps": 30.0,
+              "decoded_frames": 76,
+              "statistics": {
+                "measured_pairs": 75,
+                "qualified_pairs": 75,
+                "qualified_pair_fraction": 1.0,
+                "image_dx_widths_per_second_median": -0.86987,
+                "image_dy_heights_per_second_median": -0.02033,
+                "image_rotation_degrees_per_second_median": -10.68248,
+                "image_scale_log_per_second_median": 1e-05,
+                "background_inlier_ratio_median": 0.97279,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.05854,
+                "center_residual_widths_per_second_median": 0.04209,
+                "center_residual_widths_per_second_p90_median": 0.06098,
+                "edge_residual_widths_per_second_median": 0.04259,
+                "coherent_view_change_pair_fraction": 0.8,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [],
+              "skipped_cut_pairs": [],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "reasoning_version": 2,
+            "stages": {
+              "observe": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "verify": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "reconcile_1": {
+                "cache_hit": false,
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "new_provider_calls": 1,
+                "section_ids": [
+                  "8.633000:10.800000"
+                ],
+                "validation_flags": [
+                  {
+                    "id": "8.633000:10.800000",
+                    "codes": [
+                      "description_locomotion_conflicts_with_subject_evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cache_hit": false,
+            "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "new_provider_calls": 1,
+            "observation_flags": [],
+            "reconciled_section_ids": [
+              "8.633000:10.800000"
+            ],
+            "after_sha256": "deb8990abbc516a3d711c7c4d3579edaa243b2689e2b27bb18d2bcafdf47b9ac"
+          },
+          {
+            "collection": "content_segments",
+            "index": 4,
+            "issues": [
+              "motion",
+              "visual"
+            ],
+            "window_id": "8.633000:10.800000",
+            "start": 8.633,
+            "end": 10.8,
+            "changed_fields": [
+              "description",
+              "motion",
+              "role",
+              "visual_verification"
+            ],
+            "before_sha256": "ba05069e0facdb580ad345ea23e4748fefb60ecc941ed7da75486aaa43462383",
+            "method": "deepseek_observe_then_verify",
+            "frames": [
+              {
+                "time": 8.633,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+              },
+              {
+                "time": 8.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-00.jpg"
+              },
+              {
+                "time": 8.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+              },
+              {
+                "time": 8.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-01.jpg"
+              },
+              {
+                "time": 9.166667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-02.jpg"
+              },
+              {
+                "time": 9.4,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+              },
+              {
+                "time": 9.433333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-03.jpg"
+              },
+              {
+                "time": 9.7,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-04.jpg"
+              },
+              {
+                "time": 9.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+              },
+              {
+                "time": 9.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-05.jpg"
+              },
+              {
+                "time": 10.233333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-06.jpg"
+              },
+              {
+                "time": 10.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-07.jpg"
+              },
+              {
+                "time": 10.766667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-7f6a87287806c1b802bf/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              8.633,
+              8.633333,
+              8.8,
+              8.9,
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333,
+              10.5,
+              10.766667
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 8.633,
+              "end": 10.8,
+              "fps": 30.0,
+              "decoded_frames": 65,
+              "statistics": {
+                "measured_pairs": 63,
+                "qualified_pairs": 62,
+                "qualified_pair_fraction": 0.98413,
+                "image_dx_widths_per_second_median": -0.54907,
+                "image_dy_heights_per_second_median": 0.01781,
+                "image_rotation_degrees_per_second_median": -14.71462,
+                "image_scale_log_per_second_median": -0.03172,
+                "background_inlier_ratio_median": 0.93287,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.10477,
+                "center_residual_widths_per_second_median": 0.07163,
+                "center_residual_widths_per_second_p90_median": 0.11802,
+                "edge_residual_widths_per_second_median": 0.06821,
+                "coherent_view_change_pair_fraction": 1.0,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [
+                8.7
+              ],
+              "skipped_cut_pairs": [
+                8.7
+              ],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "reasoning_version": 2,
+            "stages": {
+              "observe": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "verify": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "reconcile_1": {
+                "cache_hit": false,
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "new_provider_calls": 1,
+                "section_ids": [
+                  "8.633000:10.800000"
+                ],
+                "validation_flags": [
+                  {
+                    "id": "8.633000:10.800000",
+                    "codes": [
+                      "description_locomotion_conflicts_with_subject_evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cache_hit": false,
+            "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "new_provider_calls": 1,
+            "observation_flags": [],
+            "reconciled_section_ids": [
+              "8.633000:10.800000"
+            ],
+            "after_sha256": "371adcb15adab3a5707f92142c06b3947279d5a438d234a7d8bec29759d07d73"
+          }
+        ],
+        "automatic_model_review": true,
+        "new_provider_calls": 1,
+        "reused": {
+          "shot_detection": true,
+          "transcript": true,
+          "full_analysis_windows": 1,
+          "unchanged_segments": {
+            "content_segments": 4,
+            "segments": 4
+          }
+        }
+      },
+      {
+        "base_analysis_id": "0d47dc9aa9a6433486cb3461a8ea2ae9",
+        "job_id": "fbef35980b4f4fd8b945f2eb1b090714",
+        "created_at": "2026-10-20T16:19:34.410143+00:00",
+        "targets": [
+          {
+            "collection": "segments",
+            "index": 0,
+            "issues": [
+              "motion",
+              "visual"
+            ],
+            "window_id": "0.000000:2.533000",
+            "start": 0.0,
+            "end": 2.533,
+            "changed_fields": [
+              "visual_verification"
+            ],
+            "before_sha256": "2083c75d32f9d2aa072d23d6c6ee23f062ffd3aec5cd9b3a29f018024fc5815a",
+            "method": "deepseek_observe_then_verify",
+            "frames": [
+              {
+                "time": 0.0,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-00.jpg"
+              },
+              {
+                "time": 0.1,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+              },
+              {
+                "time": 0.333333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-01.jpg"
+              },
+              {
+                "time": 0.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-02.jpg"
+              },
+              {
+                "time": 0.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-03.jpg"
+              },
+              {
+                "time": 1.266667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-04.jpg"
+              },
+              {
+                "time": 1.3,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+              },
+              {
+                "time": 1.566667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-05.jpg"
+              },
+              {
+                "time": 1.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-06.jpg"
+              },
+              {
+                "time": 2.2,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-07.jpg"
+              },
+              {
+                "time": 2.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              0.0,
+              0.1,
+              0.333333,
+              0.633333,
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2,
+              2.5
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 0.0,
+              "end": 2.533,
+              "fps": 30.0,
+              "decoded_frames": 76,
+              "statistics": {
+                "measured_pairs": 75,
+                "qualified_pairs": 75,
+                "qualified_pair_fraction": 1.0,
+                "image_dx_widths_per_second_median": -0.86987,
+                "image_dy_heights_per_second_median": -0.02033,
+                "image_rotation_degrees_per_second_median": -10.68248,
+                "image_scale_log_per_second_median": 1e-05,
+                "background_inlier_ratio_median": 0.97279,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.05854,
+                "center_residual_widths_per_second_median": 0.04209,
+                "center_residual_widths_per_second_p90_median": 0.06098,
+                "edge_residual_widths_per_second_median": 0.04259,
+                "coherent_view_change_pair_fraction": 0.8,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [],
+              "skipped_cut_pairs": [],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "reasoning_version": 2,
+            "stages": {
+              "observe": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "verify": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "reconcile_1": {
+                "cache_hit": true,
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "new_provider_calls": 0,
+                "section_ids": [
+                  "8.633000:10.800000"
+                ],
+                "validation_flags": [
+                  {
+                    "id": "8.633000:10.800000",
+                    "codes": [
+                      "description_locomotion_conflicts_with_subject_evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cache_hit": true,
+            "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+            "batch_source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "section_sources": {
+              "0.000000:2.533000": {
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "stage": "verify",
+                "cache_hit": true
+              },
+              "8.633000:10.800000": {
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "stage": "reconcile_1",
+                "cache_hit": true
+              }
+            },
+            "new_provider_calls": 0,
+            "observation_flags": [],
+            "reconciled_section_ids": [
+              "8.633000:10.800000"
+            ],
+            "section_source": {
+              "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "call_count_scope": "batch",
+            "after_sha256": "a33f573e0d63d453893358f76f6daba7735024b5c2d0089a92c0430ede549479"
+          },
+          {
+            "collection": "segments",
+            "index": 4,
+            "issues": [
+              "motion",
+              "visual"
+            ],
+            "window_id": "8.633000:10.800000",
+            "start": 8.633,
+            "end": 10.8,
+            "changed_fields": [
+              "visual_verification"
+            ],
+            "before_sha256": "d78180719b0a5f4766face4ae9e35d946b78e25a6284a13958f72241be3cb60b",
+            "method": "deepseek_observe_then_verify",
+            "frames": [
+              {
+                "time": 8.633,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+              },
+              {
+                "time": 8.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-00.jpg"
+              },
+              {
+                "time": 8.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+              },
+              {
+                "time": 8.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-01.jpg"
+              },
+              {
+                "time": 9.166667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-02.jpg"
+              },
+              {
+                "time": 9.4,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+              },
+              {
+                "time": 9.433333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-03.jpg"
+              },
+              {
+                "time": 9.7,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-04.jpg"
+              },
+              {
+                "time": 9.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+              },
+              {
+                "time": 9.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-05.jpg"
+              },
+              {
+                "time": 10.233333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-06.jpg"
+              },
+              {
+                "time": 10.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-07.jpg"
+              },
+              {
+                "time": 10.766667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              8.633,
+              8.633333,
+              8.8,
+              8.9,
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333,
+              10.5,
+              10.766667
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 8.633,
+              "end": 10.8,
+              "fps": 30.0,
+              "decoded_frames": 65,
+              "statistics": {
+                "measured_pairs": 63,
+                "qualified_pairs": 62,
+                "qualified_pair_fraction": 0.98413,
+                "image_dx_widths_per_second_median": -0.54907,
+                "image_dy_heights_per_second_median": 0.01781,
+                "image_rotation_degrees_per_second_median": -14.71462,
+                "image_scale_log_per_second_median": -0.03172,
+                "background_inlier_ratio_median": 0.93287,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.10477,
+                "center_residual_widths_per_second_median": 0.07163,
+                "center_residual_widths_per_second_p90_median": 0.11802,
+                "edge_residual_widths_per_second_median": 0.06821,
+                "coherent_view_change_pair_fraction": 1.0,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [
+                8.7
+              ],
+              "skipped_cut_pairs": [
+                8.7
+              ],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "reasoning_version": 2,
+            "stages": {
+              "observe": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "verify": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "reconcile_1": {
+                "cache_hit": true,
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "new_provider_calls": 0,
+                "section_ids": [
+                  "8.633000:10.800000"
+                ],
+                "validation_flags": [
+                  {
+                    "id": "8.633000:10.800000",
+                    "codes": [
+                      "description_locomotion_conflicts_with_subject_evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cache_hit": true,
+            "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "batch_source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "section_sources": {
+              "0.000000:2.533000": {
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "stage": "verify",
+                "cache_hit": true
+              },
+              "8.633000:10.800000": {
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "stage": "reconcile_1",
+                "cache_hit": true
+              }
+            },
+            "new_provider_calls": 0,
+            "observation_flags": [],
+            "reconciled_section_ids": [
+              "8.633000:10.800000"
+            ],
+            "section_source": {
+              "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "call_count_scope": "batch",
+            "after_sha256": "9340952f2da63eeb1aece539214bb96ff3628337937b5a5e71744ff94871c243"
+          },
+          {
+            "collection": "content_segments",
+            "index": 0,
+            "issues": [
+              "motion",
+              "visual"
+            ],
+            "window_id": "0.000000:2.533000",
+            "start": 0.0,
+            "end": 2.533,
+            "changed_fields": [
+              "visual_verification"
+            ],
+            "before_sha256": "deb8990abbc516a3d711c7c4d3579edaa243b2689e2b27bb18d2bcafdf47b9ac",
+            "method": "deepseek_observe_then_verify",
+            "frames": [
+              {
+                "time": 0.0,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-00.jpg"
+              },
+              {
+                "time": 0.1,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+              },
+              {
+                "time": 0.333333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-01.jpg"
+              },
+              {
+                "time": 0.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-02.jpg"
+              },
+              {
+                "time": 0.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-03.jpg"
+              },
+              {
+                "time": 1.266667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-04.jpg"
+              },
+              {
+                "time": 1.3,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+              },
+              {
+                "time": 1.566667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-05.jpg"
+              },
+              {
+                "time": 1.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-06.jpg"
+              },
+              {
+                "time": 2.2,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-07.jpg"
+              },
+              {
+                "time": 2.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-e34704fdeb323990719c/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              0.0,
+              0.1,
+              0.333333,
+              0.633333,
+              0.966667,
+              1.266667,
+              1.3,
+              1.566667,
+              1.9,
+              2.2,
+              2.5
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 0.0,
+              "end": 2.533,
+              "fps": 30.0,
+              "decoded_frames": 76,
+              "statistics": {
+                "measured_pairs": 75,
+                "qualified_pairs": 75,
+                "qualified_pair_fraction": 1.0,
+                "image_dx_widths_per_second_median": -0.86987,
+                "image_dy_heights_per_second_median": -0.02033,
+                "image_rotation_degrees_per_second_median": -10.68248,
+                "image_scale_log_per_second_median": 1e-05,
+                "background_inlier_ratio_median": 0.97279,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.05854,
+                "center_residual_widths_per_second_median": 0.04209,
+                "center_residual_widths_per_second_p90_median": 0.06098,
+                "edge_residual_widths_per_second_median": 0.04259,
+                "coherent_view_change_pair_fraction": 0.8,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [],
+              "skipped_cut_pairs": [],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "reasoning_version": 2,
+            "stages": {
+              "observe": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "verify": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "reconcile_1": {
+                "cache_hit": true,
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "new_provider_calls": 0,
+                "section_ids": [
+                  "8.633000:10.800000"
+                ],
+                "validation_flags": [
+                  {
+                    "id": "8.633000:10.800000",
+                    "codes": [
+                      "description_locomotion_conflicts_with_subject_evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cache_hit": true,
+            "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+            "batch_source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "section_sources": {
+              "0.000000:2.533000": {
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "stage": "verify",
+                "cache_hit": true
+              },
+              "8.633000:10.800000": {
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "stage": "reconcile_1",
+                "cache_hit": true
+              }
+            },
+            "new_provider_calls": 0,
+            "observation_flags": [],
+            "reconciled_section_ids": [
+              "8.633000:10.800000"
+            ],
+            "section_source": {
+              "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "call_count_scope": "batch",
+            "after_sha256": "07a4cf592e2d36c3c9094fe4ca70f38206da6119c26f6bddddcdf85459984427"
+          },
+          {
+            "collection": "content_segments",
+            "index": 4,
+            "issues": [
+              "motion",
+              "visual"
+            ],
+            "window_id": "8.633000:10.800000",
+            "start": 8.633,
+            "end": 10.8,
+            "changed_fields": [
+              "visual_verification"
+            ],
+            "before_sha256": "371adcb15adab3a5707f92142c06b3947279d5a438d234a7d8bec29759d07d73",
+            "method": "deepseek_observe_then_verify",
+            "frames": [
+              {
+                "time": 8.633,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+              },
+              {
+                "time": 8.633333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-00.jpg"
+              },
+              {
+                "time": 8.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+              },
+              {
+                "time": 8.9,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-01.jpg"
+              },
+              {
+                "time": 9.166667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-02.jpg"
+              },
+              {
+                "time": 9.4,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+              },
+              {
+                "time": 9.433333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-03.jpg"
+              },
+              {
+                "time": 9.7,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-04.jpg"
+              },
+              {
+                "time": 9.8,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+              },
+              {
+                "time": 9.966667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-05.jpg"
+              },
+              {
+                "time": 10.233333,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-06.jpg"
+              },
+              {
+                "time": 10.5,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-07.jpg"
+              },
+              {
+                "time": 10.766667,
+                "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-aefe9a0f7f8b56e936af/motion-08.jpg"
+              }
+            ],
+            "frame_times": [
+              8.633,
+              8.633333,
+              8.8,
+              8.9,
+              9.166667,
+              9.4,
+              9.433333,
+              9.7,
+              9.8,
+              9.966667,
+              10.233333,
+              10.5,
+              10.766667
+            ],
+            "motion_evidence": {
+              "version": 1,
+              "method": "adjacent_lk_background_candidate_ransac",
+              "start": 8.633,
+              "end": 10.8,
+              "fps": 30.0,
+              "decoded_frames": 65,
+              "statistics": {
+                "measured_pairs": 63,
+                "qualified_pairs": 62,
+                "qualified_pair_fraction": 0.98413,
+                "image_dx_widths_per_second_median": -0.54907,
+                "image_dy_heights_per_second_median": 0.01781,
+                "image_rotation_degrees_per_second_median": -14.71462,
+                "image_scale_log_per_second_median": -0.03172,
+                "background_inlier_ratio_median": 0.93287,
+                "unexplained_local_motion_widths_per_second_p75_median": 0.10477,
+                "center_residual_widths_per_second_median": 0.07163,
+                "center_residual_widths_per_second_p90_median": 0.11802,
+                "edge_residual_widths_per_second_median": 0.06821,
+                "coherent_view_change_pair_fraction": 1.0,
+                "horizontal_sign_agreement": 1.0,
+                "image_horizontal_direction": "left",
+                "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+              },
+              "known_cuts_inside": [
+                8.7
+              ],
+              "skipped_cut_pairs": [
+                8.7
+              ],
+              "limits": [
+                "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+                "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+                "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+                "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+              ],
+              "model_calls": 0
+            },
+            "reasoning_version": 2,
+            "stages": {
+              "observe": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "verify": {
+                "cache_hit": true,
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "new_provider_calls": 0
+              },
+              "reconcile_1": {
+                "cache_hit": true,
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "new_provider_calls": 0,
+                "section_ids": [
+                  "8.633000:10.800000"
+                ],
+                "validation_flags": [
+                  {
+                    "id": "8.633000:10.800000",
+                    "codes": [
+                      "description_locomotion_conflicts_with_subject_evidence"
+                    ]
+                  }
+                ]
+              }
+            },
+            "cache_hit": true,
+            "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "batch_source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+            "section_sources": {
+              "0.000000:2.533000": {
+                "source_job_id": "07dedfbaeef34702b66e02ac8e774c7d",
+                "stage": "verify",
+                "cache_hit": true
+              },
+              "8.633000:10.800000": {
+                "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+                "stage": "reconcile_1",
+                "cache_hit": true
+              }
+            },
+            "new_provider_calls": 0,
+            "observation_flags": [],
+            "reconciled_section_ids": [
+              "8.633000:10.800000"
+            ],
+            "section_source": {
+              "source_job_id": "b5d62b3e17ec4e75b21def740ba55f8e",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "call_count_scope": "batch",
+            "after_sha256": "0bd399540430ee0ea31dc1e946edcd8df5ccc98cdf1c9a0426d9dc1f9c891747"
+          }
+        ],
+        "automatic_model_review": true,
+        "new_provider_calls": 0,
+        "reused": {
+          "shot_detection": true,
+          "transcript": true,
+          "full_analysis_windows": 1,
+          "unchanged_segments": {
+            "content_segments": 4,
+            "segments": 4
+          }
+        }
+      }
+    ],
+    "rhythm_analysis": {
+      "summary": "本次证据仅基于音频时序候选与切镜时间的对照，没有听审原音，不能确认音乐曲风、鼓点乐器或语音内容。5 个切点中，4 个在 100 ms 容差内同时邻近 onset 与 beat_candidate（cut 0、1、2、3），cut 4 两者均超差（+177 ms），归为 unaligned。值得注意的是，切点偏移呈现阶段性：cut 1–2 为 +53/+77 ms 的晚于事件，cut 3 回到 +10 ms，与 cut 0 同向小幅偏晚；整体并未形成单一稳定重复的相位锁定。对齐摘要显示 onset 命中率 0.8，但均匀覆盖基线约 0.67，整体平移 +0.2 s 时 onset 命中反而达到 1.0，说明邻近命中存在较多偶合可能；beat_candidate 命中率 0.8 高于其均匀覆盖 0.40，数值上更突出，但在 5 个切点、且 onset 与 beat 多处共用同一事件时间的条件下，无法区分是对齐节拍还是对齐起音突变。因此 editing_pattern 记为 mixed，仅表示候选时序关系（onset 与周期性候选都较接近切点），非听审结论；整体证据充分度为中等偏低。",
+      "editing_pattern": "mixed",
+      "confidence": "low",
+      "matches": [
+        {
+          "cut_id": 0,
+          "classification": "beat_aligned",
+          "reason": "切镜晚于 onset 10 ms、早于 beat_candidate 100 ms，均在 100 ms 容差内；因存在周期支持候选且偏早 100 ms，按 beat_aligned 记，但该点同时贴近 onset，不能排除是对齐起音突变。",
+          "cut_time": 2.6,
+          "onset_time": 2.59,
+          "beat_time": 2.7,
+          "onset_offset_ms": 10.0,
+          "beat_offset_ms": -100.0
+        },
+        {
+          "cut_id": 1,
+          "classification": "beat_aligned",
+          "reason": "onset 与 beat_candidate 均为 4.68 s，切镜晚 53 ms，在容差内；属于候选时序上的拍点邻近，强度 0.81 较高，但仍不是确认真实音乐拍点。",
+          "cut_time": 4.733,
+          "onset_time": 4.68,
+          "beat_time": 4.68,
+          "onset_offset_ms": 53.0,
+          "beat_offset_ms": 53.0
+        },
+        {
+          "cut_id": 2,
+          "classification": "beat_aligned",
+          "reason": "onset 与 beat_candidate 同为 6.69 s，切镜晚 77 ms，在容差内；与 cut 1 同向偏晚，构成局部重复相位的一点证据，但仅两个点不足以认定稳定锁定。",
+          "cut_time": 6.767,
+          "onset_time": 6.69,
+          "beat_time": 6.69,
+          "onset_offset_ms": 77.0,
+          "beat_offset_ms": 77.0
+        },
+        {
+          "cut_id": 3,
+          "classification": "beat_aligned",
+          "reason": "onset 与 beat_candidate 同为 8.69 s，切镜晚 10 ms，在容差内且强度 0.82 最高；然而偏晚幅度与 cut 1–2 不一致，相位未呈现单一稳定值。",
+          "cut_time": 8.7,
+          "onset_time": 8.69,
+          "beat_time": 8.69,
+          "onset_offset_ms": 10.0,
+          "beat_offset_ms": 10.0
+        },
+        {
+          "cut_id": 4,
+          "classification": "unaligned",
+          "reason": "最近的 onset/beat_candidate 在 10.69 s，切镜晚 177 ms，超出 100 ms 容差；不在任何候选邻近范围内，按规则判为 unaligned。",
+          "cut_time": 10.867,
+          "onset_time": 10.69,
+          "beat_time": 10.69,
+          "onset_offset_ms": 177.0,
+          "beat_offset_ms": 177.0
+        }
+      ],
+      "status": "completed",
+      "evidence": {
+        "version": 1,
+        "method": "spectral_flux_local_periodicity_v1",
+        "duration": 12.5667,
+        "timing": {
+          "time_basis": "original_media_playback_seconds",
+          "container_start_time": 0.0,
+          "audio_stream_start_time": 0.0,
+          "normalization": "ffmpeg copyts/start_at_zero; resample first_pts=0 preserves audio offset and gaps"
+        },
+        "sample_rate": 16000,
+        "analysis_hop_seconds": 0.01,
+        "sound_source_type": "unclassified",
+        "model_calls": 0,
+        "limits": [
+          "起音是频谱突变候选，可能来自鼓点、语音辅音、音效、剪接或噪声，不等同于音乐节拍。",
+          "没有执行音乐/语音分离或声源分类；不凭能量、起音或周期性将片段标为配乐或说话。",
+          "beat_candidates 是获得局部起音支持的周期性脉冲候选，不是人工确认的音乐节拍。",
+          "bpm 表示稳定局部脉冲的重复速率；音乐拍号、强拍位置及半拍/倍拍解释仍未确认。",
+          "低置信窗口的 bpm 为 null；节奏可以变化，不用一个全片 BPM 外推，也不在无证据位置补拍。",
+          "cut_offset_seconds = 切镜时间 - 音频事件时间；正数表示切镜发生在事件之后。",
+          "切镜接近起音或候选拍点只说明时间接近；密集音频事件会偶然命中，不能据此断言刻意卡点。"
+        ],
+        "status": "analyzed",
+        "onsets": [
+          {
+            "time": 0.01,
+            "strength": 0.1933,
+            "spectral_flux": 0.0826785,
+            "prominence": 0.0825457,
+            "energy_dbfs": -24.41
+          },
+          {
+            "time": 0.19,
+            "strength": 0.2203,
+            "spectral_flux": 0.0991294,
+            "prominence": 0.098262,
+            "energy_dbfs": -21.41
+          },
+          {
+            "time": 0.61,
+            "strength": 0.2428,
+            "spectral_flux": 0.1130321,
+            "prominence": 0.1113464,
+            "energy_dbfs": -22.19
+          },
+          {
+            "time": 0.7,
+            "strength": 0.1309,
+            "spectral_flux": 0.0660745,
+            "prominence": 0.0624895,
+            "energy_dbfs": -18.98
+          },
+          {
+            "time": 0.79,
+            "strength": 0.2216,
+            "spectral_flux": 0.1047691,
+            "prominence": 0.1027929,
+            "energy_dbfs": -18.08
+          },
+          {
+            "time": 0.97,
+            "strength": 0.2308,
+            "spectral_flux": 0.1122303,
+            "prominence": 0.110011,
+            "energy_dbfs": -21.67
+          },
+          {
+            "time": 1.09,
+            "strength": 0.129,
+            "spectral_flux": 0.0717963,
+            "prominence": 0.0564423,
+            "energy_dbfs": -18.28
+          },
+          {
+            "time": 1.17,
+            "strength": 0.1486,
+            "spectral_flux": 0.080158,
+            "prominence": 0.0763574,
+            "energy_dbfs": -16.26
+          },
+          {
+            "time": 1.36,
+            "strength": 0.1359,
+            "spectral_flux": 0.0784725,
+            "prominence": 0.0726873,
+            "energy_dbfs": -19.09
+          },
+          {
+            "time": 1.47,
+            "strength": 0.1209,
+            "spectral_flux": 0.0723116,
+            "prominence": 0.0588488,
+            "energy_dbfs": -13.82
+          },
+          {
+            "time": 1.71,
+            "strength": 0.1391,
+            "spectral_flux": 0.0771082,
+            "prominence": 0.0733076,
+            "energy_dbfs": -15.95
+          },
+          {
+            "time": 2.19,
+            "strength": 0.2052,
+            "spectral_flux": 0.1061894,
+            "prominence": 0.0994963,
+            "energy_dbfs": -16.48
+          },
+          {
+            "time": 2.44,
+            "strength": 1.0512,
+            "spectral_flux": 0.4665015,
+            "prominence": 0.46276,
+            "energy_dbfs": -10.16
+          },
+          {
+            "time": 2.59,
+            "strength": 0.4428,
+            "spectral_flux": 0.2082699,
+            "prominence": 0.1891688,
+            "energy_dbfs": -6.64
+          },
+          {
+            "time": 2.7,
+            "strength": 0.4381,
+            "spectral_flux": 0.2080749,
+            "prominence": 0.2059899,
+            "energy_dbfs": -11.43
+          },
+          {
+            "time": 3.09,
+            "strength": 0.607,
+            "spectral_flux": 0.280859,
+            "prominence": 0.279075,
+            "energy_dbfs": -11.15
+          },
+          {
+            "time": 3.19,
+            "strength": 0.5113,
+            "spectral_flux": 0.2393787,
+            "prominence": 0.2236848,
+            "energy_dbfs": -10.83
+          },
+          {
+            "time": 3.41,
+            "strength": 0.5845,
+            "spectral_flux": 0.2693823,
+            "prominence": 0.2629007,
+            "energy_dbfs": -17.58
+          },
+          {
+            "time": 3.69,
+            "strength": 1.0002,
+            "spectral_flux": 0.4468651,
+            "prominence": 0.440692,
+            "energy_dbfs": -10.76
+          },
+          {
+            "time": 4.19,
+            "strength": 1.0342,
+            "spectral_flux": 0.4619296,
+            "prominence": 0.4557566,
+            "energy_dbfs": -11.15
+          },
+          {
+            "time": 4.51,
+            "strength": 0.2474,
+            "spectral_flux": 0.1299985,
+            "prominence": 0.1269453,
+            "energy_dbfs": -21.44
+          },
+          {
+            "time": 4.68,
+            "strength": 0.8067,
+            "spectral_flux": 0.3711987,
+            "prominence": 0.3679917,
+            "energy_dbfs": -13.88
+          },
+          {
+            "time": 5.09,
+            "strength": 0.6376,
+            "spectral_flux": 0.3023553,
+            "prominence": 0.2976765,
+            "energy_dbfs": -13.86
+          },
+          {
+            "time": 5.18,
+            "strength": 0.3475,
+            "spectral_flux": 0.1788634,
+            "prominence": 0.1642244,
+            "energy_dbfs": -11.81
+          },
+          {
+            "time": 5.44,
+            "strength": 0.8229,
+            "spectral_flux": 0.3764663,
+            "prominence": 0.3712182,
+            "energy_dbfs": -13.42
+          },
+          {
+            "time": 5.69,
+            "strength": 0.7361,
+            "spectral_flux": 0.3368302,
+            "prominence": 0.3315822,
+            "energy_dbfs": -12.83
+          },
+          {
+            "time": 6.12,
+            "strength": 0.1184,
+            "spectral_flux": 0.0681586,
+            "prominence": 0.0454949,
+            "energy_dbfs": -15.86
+          },
+          {
+            "time": 6.19,
+            "strength": 1.2976,
+            "spectral_flux": 0.5711773,
+            "prominence": 0.5668218,
+            "energy_dbfs": -10.22
+          },
+          {
+            "time": 6.61,
+            "strength": 0.118,
+            "spectral_flux": 0.0731023,
+            "prominence": 0.059909,
+            "energy_dbfs": -32.63
+          },
+          {
+            "time": 6.69,
+            "strength": 0.7612,
+            "spectral_flux": 0.3451208,
+            "prominence": 0.3413895,
+            "energy_dbfs": -13.85
+          },
+          {
+            "time": 7.09,
+            "strength": 0.5676,
+            "spectral_flux": 0.2680213,
+            "prominence": 0.2574978,
+            "energy_dbfs": -11.45
+          },
+          {
+            "time": 7.19,
+            "strength": 0.604,
+            "spectral_flux": 0.2837846,
+            "prominence": 0.2743403,
+            "energy_dbfs": -10.89
+          },
+          {
+            "time": 7.44,
+            "strength": 0.7269,
+            "spectral_flux": 0.3360689,
+            "prominence": 0.3290726,
+            "energy_dbfs": -13.15
+          },
+          {
+            "time": 7.69,
+            "strength": 0.966,
+            "spectral_flux": 0.4358166,
+            "prominence": 0.4270325,
+            "energy_dbfs": -12.1
+          },
+          {
+            "time": 8.05,
+            "strength": 0.0987,
+            "spectral_flux": 0.065317,
+            "prominence": 0.0548881,
+            "energy_dbfs": -16.25
+          },
+          {
+            "time": 8.19,
+            "strength": 0.998,
+            "spectral_flux": 0.4469086,
+            "prominence": 0.4381245,
+            "energy_dbfs": -11.34
+          },
+          {
+            "time": 8.5,
+            "strength": 0.3025,
+            "spectral_flux": 0.1538932,
+            "prominence": 0.14398,
+            "energy_dbfs": -20.52
+          },
+          {
+            "time": 8.62,
+            "strength": 0.1868,
+            "spectral_flux": 0.1048229,
+            "prominence": 0.0945822,
+            "energy_dbfs": -23.6
+          },
+          {
+            "time": 8.69,
+            "strength": 0.8199,
+            "spectral_flux": 0.3765084,
+            "prominence": 0.3658752,
+            "energy_dbfs": -12.93
+          },
+          {
+            "time": 9.08,
+            "strength": 0.521,
+            "spectral_flux": 0.249386,
+            "prominence": 0.2387528,
+            "energy_dbfs": -12.73
+          },
+          {
+            "time": 9.19,
+            "strength": 0.3241,
+            "spectral_flux": 0.1661672,
+            "prominence": 0.1436217,
+            "energy_dbfs": -9.47
+          },
+          {
+            "time": 9.44,
+            "strength": 0.4797,
+            "spectral_flux": 0.2301364,
+            "prominence": 0.2242371,
+            "energy_dbfs": -13.08
+          },
+          {
+            "time": 9.69,
+            "strength": 0.7914,
+            "spectral_flux": 0.3631797,
+            "prominence": 0.3593202,
+            "energy_dbfs": -11.31
+          },
+          {
+            "time": 10.19,
+            "strength": 1.0381,
+            "spectral_flux": 0.4649125,
+            "prominence": 0.461053,
+            "energy_dbfs": -9.94
+          },
+          {
+            "time": 10.69,
+            "strength": 0.7001,
+            "spectral_flux": 0.3319995,
+            "prominence": 0.3248386,
+            "energy_dbfs": -13.3
+          },
+          {
+            "time": 11.09,
+            "strength": 0.875,
+            "spectral_flux": 0.4083936,
+            "prominence": 0.4012327,
+            "energy_dbfs": -12.34
+          },
+          {
+            "time": 11.19,
+            "strength": 0.4519,
+            "spectral_flux": 0.2286097,
+            "prominence": 0.1976688,
+            "energy_dbfs": -10.32
+          },
+          {
+            "time": 11.44,
+            "strength": 0.8559,
+            "spectral_flux": 0.3963962,
+            "prominence": 0.3891563,
+            "energy_dbfs": -14.85
+          },
+          {
+            "time": 11.69,
+            "strength": 0.7368,
+            "spectral_flux": 0.3426601,
+            "prominence": 0.3354202,
+            "energy_dbfs": -14.84
+          },
+          {
+            "time": 12.19,
+            "strength": 1.1479,
+            "spectral_flux": 0.5083133,
+            "prominence": 0.5014488,
+            "energy_dbfs": -12.71
+          },
+          {
+            "time": 12.45,
+            "strength": 0.0763,
+            "spectral_flux": 0.0399269,
+            "prominence": 0.0336698,
+            "energy_dbfs": -23.7
+          },
+          {
+            "time": 12.53,
+            "strength": 0.0986,
+            "spectral_flux": 0.04505,
+            "prominence": 0.0421022,
+            "energy_dbfs": -27.51
+          }
+        ],
+        "local_windows": [
+          {
+            "start": 0.0,
+            "end": 12.0,
+            "bpm": 119.94,
+            "confidence": "supported_local_pulse",
+            "score": 0.4928,
+            "onset_count": 49,
+            "sound_source_type": "unclassified",
+            "alternatives": [
+              {
+                "bpm": 119.94,
+                "score": 0.4928,
+                "autocorrelation": 0.426,
+                "grid_support": 1.0,
+                "onset_mass_supported": 0.608
+              },
+              {
+                "bpm": 59.97,
+                "score": 0.2971,
+                "autocorrelation": 0.4455,
+                "grid_support": 1.0,
+                "onset_mass_supported": 0.2738
+              },
+              {
+                "bpm": 80.02,
+                "score": 0.2568,
+                "autocorrelation": 0.1582,
+                "grid_support": 0.8125,
+                "onset_mass_supported": 0.3114
+              }
+            ],
+            "beat_candidates": [
+              {
+                "time": 0.19,
+                "grid_time": 0.1741,
+                "grid_offset_seconds": 0.0159,
+                "onset_strength": 0.2203
+              },
+              {
+                "time": 0.7,
+                "grid_time": 0.6744,
+                "grid_offset_seconds": 0.0256,
+                "onset_strength": 0.1309
+              },
+              {
+                "time": 1.17,
+                "grid_time": 1.1746,
+                "grid_offset_seconds": -0.0046,
+                "onset_strength": 0.1486
+              },
+              {
+                "time": 1.71,
+                "grid_time": 1.6749,
+                "grid_offset_seconds": 0.0351,
+                "onset_strength": 0.1391
+              },
+              {
+                "time": 2.19,
+                "grid_time": 2.1752,
+                "grid_offset_seconds": 0.0148,
+                "onset_strength": 0.2052
+              },
+              {
+                "time": 2.7,
+                "grid_time": 2.6754,
+                "grid_offset_seconds": 0.0246,
+                "onset_strength": 0.4381
+              },
+              {
+                "time": 3.19,
+                "grid_time": 3.1757,
+                "grid_offset_seconds": 0.0143,
+                "onset_strength": 0.5113
+              },
+              {
+                "time": 3.69,
+                "grid_time": 3.6759,
+                "grid_offset_seconds": 0.0141,
+                "onset_strength": 1.0002
+              },
+              {
+                "time": 4.19,
+                "grid_time": 4.1762,
+                "grid_offset_seconds": 0.0138,
+                "onset_strength": 1.0342
+              },
+              {
+                "time": 4.68,
+                "grid_time": 4.6764,
+                "grid_offset_seconds": 0.0036,
+                "onset_strength": 0.8067
+              },
+              {
+                "time": 5.18,
+                "grid_time": 5.1767,
+                "grid_offset_seconds": 0.0033,
+                "onset_strength": 0.3475
+              },
+              {
+                "time": 5.69,
+                "grid_time": 5.677,
+                "grid_offset_seconds": 0.013,
+                "onset_strength": 0.7361
+              },
+              {
+                "time": 6.19,
+                "grid_time": 6.1772,
+                "grid_offset_seconds": 0.0128,
+                "onset_strength": 1.2976
+              },
+              {
+                "time": 6.69,
+                "grid_time": 6.6775,
+                "grid_offset_seconds": 0.0125,
+                "onset_strength": 0.7612
+              },
+              {
+                "time": 7.19,
+                "grid_time": 7.1777,
+                "grid_offset_seconds": 0.0123,
+                "onset_strength": 0.604
+              },
+              {
+                "time": 7.69,
+                "grid_time": 7.678,
+                "grid_offset_seconds": 0.012,
+                "onset_strength": 0.966
+              },
+              {
+                "time": 8.19,
+                "grid_time": 8.1782,
+                "grid_offset_seconds": 0.0118,
+                "onset_strength": 0.998
+              },
+              {
+                "time": 8.69,
+                "grid_time": 8.6785,
+                "grid_offset_seconds": 0.0115,
+                "onset_strength": 0.8199
+              },
+              {
+                "time": 9.19,
+                "grid_time": 9.1788,
+                "grid_offset_seconds": 0.0112,
+                "onset_strength": 0.3241
+              },
+              {
+                "time": 9.69,
+                "grid_time": 9.679,
+                "grid_offset_seconds": 0.011,
+                "onset_strength": 0.7914
+              },
+              {
+                "time": 10.19,
+                "grid_time": 10.1793,
+                "grid_offset_seconds": 0.0107,
+                "onset_strength": 1.0381
+              },
+              {
+                "time": 10.69,
+                "grid_time": 10.6795,
+                "grid_offset_seconds": 0.0105,
+                "onset_strength": 0.7001
+              },
+              {
+                "time": 11.19,
+                "grid_time": 11.1798,
+                "grid_offset_seconds": 0.0102,
+                "onset_strength": 0.4519
+              },
+              {
+                "time": 11.69,
+                "grid_time": 11.68,
+                "grid_offset_seconds": 0.01,
+                "onset_strength": 0.7368
+              }
+            ],
+            "median_grid_error_seconds": 0.0121,
+            "reason": "periodic_onset_support"
+          },
+          {
+            "start": 0.5634,
+            "end": 12.5634,
+            "bpm": 119.87,
+            "confidence": "supported_local_pulse",
+            "score": 0.5299,
+            "onset_count": 50,
+            "sound_source_type": "unclassified",
+            "alternatives": [
+              {
+                "bpm": 119.87,
+                "score": 0.5299,
+                "autocorrelation": 0.448,
+                "grid_support": 1.0,
+                "onset_mass_supported": 0.6202
+              },
+              {
+                "bpm": 59.93,
+                "score": 0.3203,
+                "autocorrelation": 0.4383,
+                "grid_support": 1.0,
+                "onset_mass_supported": 0.2958
+              },
+              {
+                "bpm": 80.06,
+                "score": 0.2725,
+                "autocorrelation": 0.1805,
+                "grid_support": 0.8125,
+                "onset_mass_supported": 0.3322
+              }
+            ],
+            "beat_candidates": [
+              {
+                "time": 0.7,
+                "grid_time": 0.674,
+                "grid_offset_seconds": 0.026,
+                "onset_strength": 0.1309
+              },
+              {
+                "time": 1.17,
+                "grid_time": 1.1745,
+                "grid_offset_seconds": -0.0045,
+                "onset_strength": 0.1486
+              },
+              {
+                "time": 1.71,
+                "grid_time": 1.6751,
+                "grid_offset_seconds": 0.0349,
+                "onset_strength": 0.1391
+              },
+              {
+                "time": 2.19,
+                "grid_time": 2.1756,
+                "grid_offset_seconds": 0.0144,
+                "onset_strength": 0.2052
+              },
+              {
+                "time": 2.7,
+                "grid_time": 2.6762,
+                "grid_offset_seconds": 0.0238,
+                "onset_strength": 0.4381
+              },
+              {
+                "time": 3.19,
+                "grid_time": 3.1768,
+                "grid_offset_seconds": 0.0132,
+                "onset_strength": 0.5113
+              },
+              {
+                "time": 3.69,
+                "grid_time": 3.6773,
+                "grid_offset_seconds": 0.0127,
+                "onset_strength": 1.0002
+              },
+              {
+                "time": 4.19,
+                "grid_time": 4.1779,
+                "grid_offset_seconds": 0.0121,
+                "onset_strength": 1.0342
+              },
+              {
+                "time": 4.68,
+                "grid_time": 4.6785,
+                "grid_offset_seconds": 0.0015,
+                "onset_strength": 0.8067
+              },
+              {
+                "time": 5.18,
+                "grid_time": 5.179,
+                "grid_offset_seconds": 0.001,
+                "onset_strength": 0.3475
+              },
+              {
+                "time": 5.69,
+                "grid_time": 5.6796,
+                "grid_offset_seconds": 0.0104,
+                "onset_strength": 0.7361
+              },
+              {
+                "time": 6.19,
+                "grid_time": 6.1801,
+                "grid_offset_seconds": 0.0099,
+                "onset_strength": 1.2976
+              },
+              {
+                "time": 6.69,
+                "grid_time": 6.6807,
+                "grid_offset_seconds": 0.0093,
+                "onset_strength": 0.7612
+              },
+              {
+                "time": 7.19,
+                "grid_time": 7.1813,
+                "grid_offset_seconds": 0.0087,
+                "onset_strength": 0.604
+              },
+              {
+                "time": 7.69,
+                "grid_time": 7.6818,
+                "grid_offset_seconds": 0.0082,
+                "onset_strength": 0.966
+              },
+              {
+                "time": 8.19,
+                "grid_time": 8.1824,
+                "grid_offset_seconds": 0.0076,
+                "onset_strength": 0.998
+              },
+              {
+                "time": 8.69,
+                "grid_time": 8.6829,
+                "grid_offset_seconds": 0.0071,
+                "onset_strength": 0.8199
+              },
+              {
+                "time": 9.19,
+                "grid_time": 9.1835,
+                "grid_offset_seconds": 0.0065,
+                "onset_strength": 0.3241
+              },
+              {
+                "time": 9.69,
+                "grid_time": 9.6841,
+                "grid_offset_seconds": 0.0059,
+                "onset_strength": 0.7914
+              },
+              {
+                "time": 10.19,
+                "grid_time": 10.1846,
+                "grid_offset_seconds": 0.0054,
+                "onset_strength": 1.0381
+              },
+              {
+                "time": 10.69,
+                "grid_time": 10.6852,
+                "grid_offset_seconds": 0.0048,
+                "onset_strength": 0.7001
+              },
+              {
+                "time": 11.19,
+                "grid_time": 11.1857,
+                "grid_offset_seconds": 0.0043,
+                "onset_strength": 0.4519
+              },
+              {
+                "time": 11.69,
+                "grid_time": 11.6863,
+                "grid_offset_seconds": 0.0037,
+                "onset_strength": 0.7368
+              },
+              {
+                "time": 12.19,
+                "grid_time": 12.1869,
+                "grid_offset_seconds": 0.0031,
+                "onset_strength": 1.1479
+              }
+            ],
+            "median_grid_error_seconds": 0.0079,
+            "reason": "periodic_onset_support"
+          }
+        ],
+        "beat_candidates": [
+          {
+            "time": 0.19,
+            "grid_time": 0.1741,
+            "grid_offset_seconds": 0.0159,
+            "onset_strength": 0.2203,
+            "supporting_windows": [
+              0
+            ]
+          },
+          {
+            "time": 0.7,
+            "grid_time": 0.6744,
+            "grid_offset_seconds": 0.0256,
+            "onset_strength": 0.1309,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 1.17,
+            "grid_time": 1.1746,
+            "grid_offset_seconds": -0.0046,
+            "onset_strength": 0.1486,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 1.71,
+            "grid_time": 1.6749,
+            "grid_offset_seconds": 0.0351,
+            "onset_strength": 0.1391,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 2.19,
+            "grid_time": 2.1752,
+            "grid_offset_seconds": 0.0148,
+            "onset_strength": 0.2052,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 2.7,
+            "grid_time": 2.6754,
+            "grid_offset_seconds": 0.0246,
+            "onset_strength": 0.4381,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 3.19,
+            "grid_time": 3.1757,
+            "grid_offset_seconds": 0.0143,
+            "onset_strength": 0.5113,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 3.69,
+            "grid_time": 3.6759,
+            "grid_offset_seconds": 0.0141,
+            "onset_strength": 1.0002,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 4.19,
+            "grid_time": 4.1762,
+            "grid_offset_seconds": 0.0138,
+            "onset_strength": 1.0342,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 4.68,
+            "grid_time": 4.6764,
+            "grid_offset_seconds": 0.0036,
+            "onset_strength": 0.8067,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 5.18,
+            "grid_time": 5.1767,
+            "grid_offset_seconds": 0.0033,
+            "onset_strength": 0.3475,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 5.69,
+            "grid_time": 5.677,
+            "grid_offset_seconds": 0.013,
+            "onset_strength": 0.7361,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 6.19,
+            "grid_time": 6.1772,
+            "grid_offset_seconds": 0.0128,
+            "onset_strength": 1.2976,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 6.69,
+            "grid_time": 6.6775,
+            "grid_offset_seconds": 0.0125,
+            "onset_strength": 0.7612,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 7.19,
+            "grid_time": 7.1777,
+            "grid_offset_seconds": 0.0123,
+            "onset_strength": 0.604,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 7.69,
+            "grid_time": 7.678,
+            "grid_offset_seconds": 0.012,
+            "onset_strength": 0.966,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 8.19,
+            "grid_time": 8.1782,
+            "grid_offset_seconds": 0.0118,
+            "onset_strength": 0.998,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 8.69,
+            "grid_time": 8.6785,
+            "grid_offset_seconds": 0.0115,
+            "onset_strength": 0.8199,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 9.19,
+            "grid_time": 9.1788,
+            "grid_offset_seconds": 0.0112,
+            "onset_strength": 0.3241,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 9.69,
+            "grid_time": 9.679,
+            "grid_offset_seconds": 0.011,
+            "onset_strength": 0.7914,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 10.19,
+            "grid_time": 10.1793,
+            "grid_offset_seconds": 0.0107,
+            "onset_strength": 1.0381,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 10.69,
+            "grid_time": 10.6795,
+            "grid_offset_seconds": 0.0105,
+            "onset_strength": 0.7001,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 11.19,
+            "grid_time": 11.1798,
+            "grid_offset_seconds": 0.0102,
+            "onset_strength": 0.4519,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 11.69,
+            "grid_time": 11.68,
+            "grid_offset_seconds": 0.01,
+            "onset_strength": 0.7368,
+            "supporting_windows": [
+              0,
+              1
+            ]
+          },
+          {
+            "time": 12.19,
+            "grid_time": 12.1869,
+            "grid_offset_seconds": 0.0031,
+            "onset_strength": 1.1479,
+            "supporting_windows": [
+              1
+            ]
+          }
+        ],
+        "energy_by_second": [
+          {
+            "start": 0,
+            "end": 1.0,
+            "mean_dbfs": -20.67,
+            "peak_window_dbfs": -15.1
+          },
+          {
+            "start": 1,
+            "end": 2.0,
+            "mean_dbfs": -18.24,
+            "peak_window_dbfs": -13.27
+          },
+          {
+            "start": 2,
+            "end": 3.0,
+            "mean_dbfs": -13.85,
+            "peak_window_dbfs": -5.76
+          },
+          {
+            "start": 3,
+            "end": 4.0,
+            "mean_dbfs": -12.86,
+            "peak_window_dbfs": -9.23
+          },
+          {
+            "start": 4,
+            "end": 5.0,
+            "mean_dbfs": -14.89,
+            "peak_window_dbfs": -8.45
+          },
+          {
+            "start": 5,
+            "end": 6.0,
+            "mean_dbfs": -13.55,
+            "peak_window_dbfs": -10.36
+          },
+          {
+            "start": 6,
+            "end": 7.0,
+            "mean_dbfs": -15.1,
+            "peak_window_dbfs": -8.64
+          },
+          {
+            "start": 7,
+            "end": 8.0,
+            "mean_dbfs": -13.39,
+            "peak_window_dbfs": -9.83
+          },
+          {
+            "start": 8,
+            "end": 9.0,
+            "mean_dbfs": -15.54,
+            "peak_window_dbfs": -8.3
+          },
+          {
+            "start": 9,
+            "end": 10.0,
+            "mean_dbfs": -12.0,
+            "peak_window_dbfs": -8.99
+          },
+          {
+            "start": 10,
+            "end": 11.0,
+            "mean_dbfs": -12.97,
+            "peak_window_dbfs": -8.22
+          },
+          {
+            "start": 11,
+            "end": 12.0,
+            "mean_dbfs": -13.97,
+            "peak_window_dbfs": -9.52
+          },
+          {
+            "start": 12,
+            "end": 12.5634,
+            "mean_dbfs": -17.32,
+            "peak_window_dbfs": -9.5
+          }
+        ],
+        "audio_end": 12.5634,
+        "cut_matches": [
+          {
+            "cut_time": 2.6,
+            "onset": {
+              "time": 2.59,
+              "cut_offset_seconds": 0.01,
+              "offset_ms": 10.0,
+              "within_tolerance": true,
+              "strength": 0.4428
+            },
+            "beat_candidate": {
+              "time": 2.7,
+              "cut_offset_seconds": -0.1,
+              "offset_ms": -100.0,
+              "within_tolerance": true,
+              "strength": 0.4381
+            }
+          },
+          {
+            "cut_time": 4.733,
+            "onset": {
+              "time": 4.68,
+              "cut_offset_seconds": 0.053,
+              "offset_ms": 53.0,
+              "within_tolerance": true,
+              "strength": 0.8067
+            },
+            "beat_candidate": {
+              "time": 4.68,
+              "cut_offset_seconds": 0.053,
+              "offset_ms": 53.0,
+              "within_tolerance": true,
+              "strength": 0.8067
+            }
+          },
+          {
+            "cut_time": 6.767,
+            "onset": {
+              "time": 6.69,
+              "cut_offset_seconds": 0.077,
+              "offset_ms": 77.0,
+              "within_tolerance": true,
+              "strength": 0.7612
+            },
+            "beat_candidate": {
+              "time": 6.69,
+              "cut_offset_seconds": 0.077,
+              "offset_ms": 77.0,
+              "within_tolerance": true,
+              "strength": 0.7612
+            }
+          },
+          {
+            "cut_time": 8.7,
+            "onset": {
+              "time": 8.69,
+              "cut_offset_seconds": 0.01,
+              "offset_ms": 10.0,
+              "within_tolerance": true,
+              "strength": 0.8199
+            },
+            "beat_candidate": {
+              "time": 8.69,
+              "cut_offset_seconds": 0.01,
+              "offset_ms": 10.0,
+              "within_tolerance": true,
+              "strength": 0.8199
+            }
+          },
+          {
+            "cut_time": 10.867,
+            "onset": {
+              "time": 10.69,
+              "cut_offset_seconds": 0.177,
+              "offset_ms": 177.0,
+              "within_tolerance": false,
+              "strength": 0.7001
+            },
+            "beat_candidate": {
+              "time": 10.69,
+              "cut_offset_seconds": 0.177,
+              "offset_ms": 177.0,
+              "within_tolerance": false,
+              "strength": 0.7001
+            }
+          }
+        ],
+        "alignment_summary": {
+          "cut_count": 5,
+          "excluded_boundary_count": 2,
+          "tolerance_seconds": 0.1,
+          "numeric_epsilon_seconds": 1e-09,
+          "onset": {
+            "matched_cuts": 4,
+            "cut_fraction": 0.8,
+            "uniform_time_coverage_fraction": 0.6666,
+            "shifted_baseline_mean_fraction": 0.7
+          },
+          "beat_candidate": {
+            "matched_cuts": 4,
+            "cut_fraction": 0.8,
+            "uniform_time_coverage_fraction": 0.3979,
+            "shifted_baseline_mean_fraction": 0.4667
+          },
+          "shifted_cut_baseline": [
+            {
+              "shift_seconds": -0.5,
+              "cut_count": 5,
+              "onset_matched_cuts": 4,
+              "onset_fraction": 0.8,
+              "beat_candidate_matched_cuts": 4,
+              "beat_candidate_fraction": 0.8
+            },
+            {
+              "shift_seconds": -0.35,
+              "cut_count": 5,
+              "onset_matched_cuts": 1,
+              "onset_fraction": 0.2,
+              "beat_candidate_matched_cuts": 1,
+              "beat_candidate_fraction": 0.2
+            },
+            {
+              "shift_seconds": -0.2,
+              "cut_count": 5,
+              "onset_matched_cuts": 5,
+              "onset_fraction": 1.0,
+              "beat_candidate_matched_cuts": 1,
+              "beat_candidate_fraction": 0.2
+            },
+            {
+              "shift_seconds": 0.2,
+              "cut_count": 5,
+              "onset_matched_cuts": 2,
+              "onset_fraction": 0.4,
+              "beat_candidate_matched_cuts": 1,
+              "beat_candidate_fraction": 0.2
+            },
+            {
+              "shift_seconds": 0.35,
+              "cut_count": 5,
+              "onset_matched_cuts": 4,
+              "onset_fraction": 0.8,
+              "beat_candidate_matched_cuts": 3,
+              "beat_candidate_fraction": 0.6
+            },
+            {
+              "shift_seconds": 0.5,
+              "cut_count": 5,
+              "onset_matched_cuts": 5,
+              "onset_fraction": 1.0,
+              "beat_candidate_matched_cuts": 4,
+              "beat_candidate_fraction": 0.8
+            }
+          ],
+          "baseline_interpretation": "相同切点整体平移后的邻近命中率，只作偶合参照，不是显著性检验或刻意卡点的证明。"
+        },
+        "summary": {
+          "onset_count": 52,
+          "beat_candidate_count": 25,
+          "supported_local_windows": 2,
+          "window_count": 2,
+          "global_bpm": null
+        }
+      },
+      "source_job_id": "62d292ca5a3342fab17dc9bd6d985432",
+      "new_provider_calls": 1,
+      "cache_hit": false,
+      "raw_audio_sent": false,
+      "created_at": "2026-10-20T16:12:59.916655+00:00"
+    },
+    "rhythm_source_analysis_id": "29243eb0ef574acda19236262be13914"
+  },
+  "audio_status": "succeeded",
+  "transcript": {
+    "text": "One dog got nausea, that my name baby's only there's a fee I say I'm the key, so I'm in chocolate",
+    "segments": [
+      {
+        "start": 2.26,
+        "end": 8.36,
+        "text": "One dog got nausea, that my name baby's only there's a fee",
+        "words": [
+          {
+            "start": 2.26,
+            "end": 2.9,
+            "word": " One",
+            "probability": 0.1359
+          },
+          {
+            "start": 2.9,
+            "end": 3.26,
+            "word": " dog",
+            "probability": 0.2583
+          },
+          {
+            "start": 3.26,
+            "end": 3.62,
+            "word": " got",
+            "probability": 0.2182
+          },
+          {
+            "start": 3.62,
+            "end": 4.68,
+            "word": " nausea,",
+            "probability": 0.5979
+          },
+          {
+            "start": 4.74,
+            "end": 4.86,
+            "word": " that",
+            "probability": 0.2495
+          },
+          {
+            "start": 4.86,
+            "end": 5.2,
+            "word": " my",
+            "probability": 0.0641
+          },
+          {
+            "start": 5.2,
+            "end": 5.52,
+            "word": " name",
+            "probability": 0.5993
+          },
+          {
+            "start": 5.52,
+            "end": 6.58,
+            "word": " baby's",
+            "probability": 0.3323
+          },
+          {
+            "start": 6.58,
+            "end": 7.08,
+            "word": " only",
+            "probability": 0.5378
+          },
+          {
+            "start": 7.08,
+            "end": 7.72,
+            "word": " there's",
+            "probability": 0.4901
+          },
+          {
+            "start": 7.72,
+            "end": 7.96,
+            "word": " a",
+            "probability": 0.7834
+          },
+          {
+            "start": 7.96,
+            "end": 8.36,
+            "word": " fee",
+            "probability": 0.3079
+          }
+        ]
+      },
+      {
+        "start": 8.36,
+        "end": 12.2,
+        "text": "I say I'm the key, so I'm in chocolate",
+        "words": [
+          {
+            "start": 8.36,
+            "end": 8.82,
+            "word": " I",
+            "probability": 0.689
+          },
+          {
+            "start": 8.82,
+            "end": 9.2,
+            "word": " say",
+            "probability": 0.9379
+          },
+          {
+            "start": 9.2,
+            "end": 9.68,
+            "word": " I'm",
+            "probability": 0.9161
+          },
+          {
+            "start": 9.68,
+            "end": 9.94,
+            "word": " the",
+            "probability": 0.5343
+          },
+          {
+            "start": 9.94,
+            "end": 10.42,
+            "word": " key,",
+            "probability": 0.4126
+          },
+          {
+            "start": 10.66,
+            "end": 10.82,
+            "word": " so",
+            "probability": 0.137
+          },
+          {
+            "start": 10.82,
+            "end": 11.5,
+            "word": " I'm",
+            "probability": 0.1834
+          },
+          {
+            "start": 11.5,
+            "end": 11.56,
+            "word": " in",
+            "probability": 0.4624
+          },
+          {
+            "start": 11.56,
+            "end": 12.2,
+            "word": " chocolate",
+            "probability": 0.4994
+          }
+        ]
+      }
+    ],
+    "language": "en",
+    "language_probability": 0.3068,
+    "duration": 12.563,
+    "model": "base",
+    "engine": "faster-whisper",
+    "local": true,
+    "has_speech": true,
+    "created_at": "2026-10-20T09:35:09.006674+00:00",
+    "url": "/api/media/plans/transcript-bed732a655dd4a8e9a2d2386a964c5a5-77b420bd4fcb4714ba90e443d861f855.json"
+  },
+  "created_at": "2026-10-20T09:35:01.094564+00:00",
+  "updated_at": "2026-10-20T16:19:34.415508+00:00",
+  "audio_error": null,
+  "transcription_job_id": "77b420bd4fcb4714ba90e443d861f855",
+  "analysis_error": null,
+  "analysis_job_id": "e47ec3483132437ca555b5101a852d20"
+}

@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-21",
+  "ui": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "toolbar_height_px": 59,
+    "calendar": "left 55%, two-column daily album on right",
+    "daily_preview": "upright offset thumbnails and existing evidence caption",
+    "default_day": "2026-10-21",
+    "materials": 17,
+    "today_materials": 10,
+    "checks": [
+      "date switch",
+      "rapid three switches",
+      "empty day",
+      "filename search",
+      "detail return preserves day",
+      "no horizontal overflow",
+      "workspace previews distinct from adopted renders",
+      "restaurant v1 playback reached 20s and ended",
+      "cafe incomplete batch retained",
+      "report accessible"
+    ],
+    "not_verified": [
+      "narrow mobile viewport",
+      "reduced-motion OS setting"
+    ]
+  },
+  "motion": {
+    "action": "The calendar stays fixed while the selected day album changes in place.",
+    "identity": [
+      {
+        "object": "calendar day",
+        "identity": "data-day",
+        "preserved": true
+      },
+      {
+        "object": "calendar shell",
+        "identity": "mg-calendar-sidebar",
+        "preserved": true
+      },
+      {
+        "object": "album",
+        "identity": "selected date + asset id",
+        "preserved": true
+      }
+    ],
+    "frames": [
+      {
+        "file": "switch-start.png",
+        "position": "start"
+      },
+      {
+        "file": "switch-0.png",
+        "ms_after_click": 90,
+        "position": "middle"
+      },
+      {
+        "file": "switch-3.png",
+        "ms_after_click": 254,
+        "position": "end"
+      }
+    ],
+    "inspection": {
+      "anchor_stable": true,
+      "no_duplicate_content": true,
+      "no_blank_flash": true,
+      "unrelated_regions_still": true,
+      "scroll_not_stolen": true
+    },
+    "capture": "sequential real browser screenshots"
+  },
+  "data": {
+    "import_receipt": "import-receipt.json",
+    "existing_records_preserved": true,
+    "original_branch_preserved": true,
+    "original_video_hashes_match": true,
+    "checked_media_links": 14,
+    "previews": 4,
+    "adopted_by_import": 0,
+    "source_analysis_and_plans_reused": true
+  },
+  "validation": [
+    "existing calendar scheduling/timezone/isolation tests passed",
+    "caption evidence, missing analyses, filtered and outdated summaries checks passed",
+    "changed JavaScript syntax and git diff checks passed"
+  ]
+}

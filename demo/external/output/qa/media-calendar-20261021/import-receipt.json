@@ -1,0 +1,26 @@
+{
+  "source": "${AHB_HISTORY}/home/Documents/食亨/10月/通用视频AI剪辑工作台-素材分支",
+  "counts": {
+    "projects": 2,
+    "renders": 4,
+    "plans": 5,
+    "candidate_batches": 2,
+    "decision_events": 0,
+    "assets": 6,
+    "analyses": 2,
+    "jobs": 12,
+    "usage_records": 9,
+    "business_projects": 1
+  },
+  "existing_records_preserved": true,
+  "files_copied": 63,
+  "group": {
+    "id": "a93546b192bc4eca97e3759b2cd6f9d8",
+    "name": "餐饮实测"
+  },
+  "project_ids": [
+    "65c5c39e4b8740d7b65332ec22120e2a",
+    "e5a61c53f7704da4907966d273c93dec"
+  ],
+  "new_provider_calls": 0
+}

@@ -1,0 +1,16 @@
+{
+  "state": "submitted",
+  "approved_max_cny": 2,
+  "payload": {
+    "mode": "T2VA",
+    "skill_id": "h3-prompt-writing",
+    "prompt": "白色桌面上的蓝色几何方块，固定机位缓慢推近，无文字。",
+    "duration": 4,
+    "resolution": "768P",
+    "ratio": "16:9",
+    "reference_image_ids": [],
+    "reference_video_ids": [],
+    "reference_audio_ids": []
+  },
+  "job_id": "abde907492464441b9e0a6913a919f61"
+}

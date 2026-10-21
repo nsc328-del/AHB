@@ -1,0 +1,170 @@
+{
+  "scope": "仅排除星尚历史采集数据及其可见衍生证据；保留其他测试原件。",
+  "exclusions": [
+    {
+      "path": "output/playwright/branches-20261020/history-chart-fixed.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 121107
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-chart-mobile-fixed.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 71932
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-desktop.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 274003
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-detail.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 618255
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-empty.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 79784
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-end.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 90310
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-failure.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 121516
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-flow.webm",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 1475406
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-middle.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 85867
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-mobile.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 190974
+    },
+    {
+      "path": "output/playwright/branches-20261020/history-start.png",
+      "reason": "星尚历史看板截图或录屏；空状态图仍含该项目真实采集总量。",
+      "size_bytes": 156330
+    },
+    {
+      "path": "output/playwright/branches-20261020/main-history.png",
+      "reason": "星尚历史数据看板截图。",
+      "size_bytes": 121107
+    },
+    {
+      "path": "output/playwright/data-history-mobile.png",
+      "reason": "星尚真实历史案例列表截图。",
+      "size_bytes": 70985
+    },
+    {
+      "path": "output/playwright/history-expand.webm",
+      "reason": "历史案例展开录屏包含星尚真实记录。",
+      "size_bytes": 89314
+    },
+    {
+      "path": "output/playwright/history-frames/end.png",
+      "reason": "历史案例展开后包含星尚真实内容记录。",
+      "size_bytes": 140381
+    },
+    {
+      "path": "output/playwright/library-split/history-data.png",
+      "reason": "星尚真实历史案例与表现列表截图。",
+      "size_bytes": 168422
+    },
+    {
+      "path": "output/playwright/library-split/navigation.webm",
+      "reason": "导航混合录屏在约48–84秒包含星尚历史数据；整份留本地。",
+      "size_bytes": 2237902
+    },
+    {
+      "path": "output/playwright/meter-gallery-20261020/main-history.png",
+      "reason": "星尚历史表现数据看板截图。",
+      "size_bytes": 121043
+    },
+    {
+      "path": "output/playwright/product-ui/mobile-workspace.png",
+      "reason": "旧工作空间页面包含星尚真实历史记录。",
+      "size_bytes": 58845
+    },
+    {
+      "path": "output/qa/animation-20261021/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 5330
+    },
+    {
+      "path": "output/qa/batch-inline-20261020/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 1965
+    },
+    {
+      "path": "output/qa/data-version-20261020/acceptance.json",
+      "reason": "验收报告混有星尚真实采集统计、平台分布与采集时点；整份留本地。",
+      "size_bytes": 2591
+    },
+    {
+      "path": "output/qa/data-version-20261020/source-resync.json",
+      "reason": "星尚真实采集库同步统计快照。",
+      "size_bytes": 586
+    },
+    {
+      "path": "output/qa/data-version-20261020/source-status.json",
+      "reason": "星尚真实采集库来源与统计快照。",
+      "size_bytes": 533
+    },
+    {
+      "path": "output/qa/generation-dialog-20261020/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 3120
+    },
+    {
+      "path": "output/qa/home-redesign-20261021/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 2611
+    },
+    {
+      "path": "output/qa/media-calendar-20261021/before-import.sqlite",
+      "reason": "导入前的整库备份，包含星尚历史采集记录。",
+      "size_bytes": 31559680
+    },
+    {
+      "path": "output/qa/meter-gallery-20261020/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 8878
+    },
+    {
+      "path": "output/qa/operations-live-20261021/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 14164
+    },
+    {
+      "path": "output/qa/presentation-ui-20261021/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 11261
+    },
+    {
+      "path": "output/qa/product-ui-20261020/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 3042
+    },
+    {
+      "path": "output/qa/semantic-context-20261021/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 6264
+    },
+    {
+      "path": "output/reference-auto-review-20261021/acceptance.json",
+      "reason": "含真实星尚 publication_cases / publication_observations 统计，不属于模拟测试数据。",
+      "size_bytes": 18381
+    }
+  ]
+}

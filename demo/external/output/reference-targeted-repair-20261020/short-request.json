@@ -1,0 +1,35 @@
+{
+  "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+  "base_analysis_id": "88b28ad9bed64739aaa307ac70aaa2ea",
+  "targets": [
+    {
+      "collection": "segments",
+      "index": 0,
+      "issues": [
+        "motion"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 4,
+      "issues": [
+        "motion"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 0,
+      "issues": [
+        "motion"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 4,
+      "issues": [
+        "motion"
+      ]
+    }
+  ],
+  "reviewed_edits": []
+}

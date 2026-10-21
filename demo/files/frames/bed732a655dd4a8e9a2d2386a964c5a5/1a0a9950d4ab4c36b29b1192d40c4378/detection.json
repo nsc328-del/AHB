@@ -1,0 +1,73 @@
+{
+  "method": "motion_compensated_temporal_difference_v2",
+  "fps": 30.0,
+  "decoded_frames": 377,
+  "boundaries": [
+    0.0,
+    2.6,
+    4.733,
+    6.767,
+    8.7,
+    10.867,
+    12.5667
+  ],
+  "cuts": [
+    {
+      "time": 2.6,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2612,
+      "histogram_difference": 0.5472,
+      "temporal_ratio": 8.59,
+      "abruptness": 5.59,
+      "confidence": "high"
+    },
+    {
+      "time": 4.733,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2553,
+      "histogram_difference": 0.6686,
+      "temporal_ratio": 10.51,
+      "abruptness": 8.6,
+      "confidence": "high"
+    },
+    {
+      "time": 6.767,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1935,
+      "histogram_difference": 0.8182,
+      "temporal_ratio": 15.05,
+      "abruptness": 14.14,
+      "confidence": "high"
+    },
+    {
+      "time": 8.7,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2544,
+      "histogram_difference": 0.5623,
+      "temporal_ratio": 8.45,
+      "abruptness": 7.26,
+      "confidence": "high"
+    },
+    {
+      "time": 10.867,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2851,
+      "histogram_difference": 0.691,
+      "temporal_ratio": 9.09,
+      "abruptness": 9.12,
+      "confidence": "high"
+    }
+  ],
+  "gradual_transitions": [],
+  "review_candidates": [],
+  "coverage": "hard_cuts_with_gradual_candidates",
+  "limitations": [
+    "渐变区间为待核对候选，可能包含运镜或物体运动；不计入确定切点。",
+    "强烈运动、闪光和相似构图切换仍可能漏检或误检，镜头边界支持人工核对。"
+  ]
+}

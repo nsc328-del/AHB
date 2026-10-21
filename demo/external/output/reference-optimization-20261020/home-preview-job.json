@@ -1,0 +1,78 @@
+{
+  "kind": "render",
+  "status": "succeeded",
+  "progress": 100,
+  "message": "已完成",
+  "result": {
+    "project_id": "85e342b64afd4aa193b885156ac29ee6",
+    "plan_id": "c14b6dad59aa4a4f839af7b6101f31ea",
+    "version": 1,
+    "asset_id": "086444b907f54763bdb76d6a74201eed",
+    "url": "/api/media/renders/85e342b64afd4aa193b885156ac29ee6/v1-913fb5be351e414296e5484dd4625ee9.mp4",
+    "thumbnail_url": "/api/media/previews/086444b907f54763bdb76d6a74201eed.jpg",
+    "duration": 7.0,
+    "width": 720,
+    "height": 1280,
+    "sha256": "f4c3c73ec04012e7803139f3a1dd2b405ef2a78a038da8da71d94d6ea719b7da",
+    "manifest_url": "/api/media/renders/85e342b64afd4aa193b885156ac29ee6/v1-913fb5be351e414296e5484dd4625ee9.manifest.json",
+    "compiled_timeline": {
+      "fps": 30,
+      "frame_count": 210,
+      "interval": "[start_frame,end_frame)",
+      "clips": [
+        {
+          "clip_id": "d42e876e-5ab3-40b0-aca4-2790f208b896",
+          "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+          "start_frame": 0,
+          "end_frame": 90,
+          "source_start_seconds": 0.0,
+          "source_end_seconds": 3.0,
+          "source_time_base": "1/25",
+          "kind": "image",
+          "transition": "cut",
+          "caption": "从一个形状开始"
+        },
+        {
+          "clip_id": "945b0596-6016-4068-aad5-8f400a4eeb5b",
+          "asset_id": "e400442976b34c6b92b3459502a60aaf",
+          "start_frame": 90,
+          "end_frame": 150,
+          "source_start_seconds": 0.0,
+          "source_end_seconds": 2.0,
+          "source_time_base": "1/25",
+          "kind": "image",
+          "transition": "cut",
+          "caption": ""
+        },
+        {
+          "clip_id": "61cb0c9f-b919-4025-a25c-61632b11659c",
+          "asset_id": "e48d062237fe407dafe6676c3a96289e",
+          "start_frame": 150,
+          "end_frame": 210,
+          "source_start_seconds": 0.0,
+          "source_end_seconds": 2.0,
+          "source_time_base": "1/25",
+          "kind": "image",
+          "transition": "cut",
+          "caption": ""
+        }
+      ]
+    },
+    "candidate_preview": false,
+    "batch_id": null,
+    "adopted": false,
+    "id": "89a80f94c208472aadc204175afa81fe",
+    "created_at": "2026-10-20T15:03:40.080631+00:00",
+    "updated_at": "2026-10-20T15:03:40.080640+00:00"
+  },
+  "error": null,
+  "payload": {
+    "project_id": "85e342b64afd4aa193b885156ac29ee6",
+    "plan_id": "c14b6dad59aa4a4f839af7b6101f31ea",
+    "batch_id": null
+  },
+  "provider_state": {},
+  "id": "913fb5be351e414296e5484dd4625ee9",
+  "created_at": "2026-10-20T15:03:38.344842+00:00",
+  "updated_at": "2026-10-20T15:03:40.084082+00:00"
+}

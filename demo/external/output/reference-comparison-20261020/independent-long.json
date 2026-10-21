@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "status": "frozen_before_reading_deepseek_output",
+  "created_at": "2026-10-20T09:42:13.994670+00:00",
+  "source": {
+    "title": "影视飓风那些无法超越的片段",
+    "author": "小壕h",
+    "url": "https://www.bilibili.com/video/BV1kT421r7vE/",
+    "file": "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/sources/long_BV1kT421r7vE.mp4",
+    "sha256": "4794a266dd106652e30f148e7e2d0b27135c30d12e76d2469c6033882e3d2032",
+    "duration_seconds": 210.047667,
+    "video_seconds": 210.033,
+    "resolution": "1280x720",
+    "source_note": "创作者二次混剪，非影视飓风官方原作。平台整数时长211秒；本报告使用本地文件时间。"
+  },
+  "independence": {
+    "read_deepseek_output": false,
+    "read_workbench_analysis": false,
+    "paid_model_calls": 0,
+    "input_transcript": "long-local-transcript.json",
+    "transcript_engine": "local faster-whisper base",
+    "transcript_note": "仅辅助语义定位；有明显错字，按可见字幕核对。不视为已听审。"
+  },
+  "method": {
+    "viewed_frame_slots": 230,
+    "uniform_frames": 105,
+    "uniform_interval_seconds": 2,
+    "uniform_label_note": "contact_1~5 每2秒采样，标签为约数采样中心，不是切点。",
+    "scene_candidate_frames": 79,
+    "scene_threshold": 0.3,
+    "scene_detector": "FFmpeg select gt(scene,0.3)",
+    "boundary_frames": 46,
+    "boundary_evidence": "0、18.5/18.6、27~29.1、53.3~58.5、81.5~84.3、126.9~129、135.9~138、160~165、188~206秒，具体见 boundary-times.json。",
+    "audio_method": "单声道8kHz PCM，0.1秒RMS测量；看过波形；未做音频听审。",
+    "proof_images": [
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/contact_1.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/contact_2.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/contact_3.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/contact_4.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/contact_5.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/cutsheet_1.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/cutsheet_2.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/cutsheet_3.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/cutsheet_4.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/cutsheet_5.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/boundarysheet_1.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/boundarysheet_2.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/boundarysheet_3.jpg",
+      "${AHB_DATA}/frames/imported-evidence/output/reference-comparison-20261020/independent-long/audio-rms.png"
+    ]
+  },
+  "summary": {
+    "observed": "同一人物在多个年份、场所的口述和工作生活画面贯穿；海边、办公室、树林、雪地、飞机、水下、微观等实拍/实验影像交织，末尾有音乐署名与作者尾卡。",
+    "editorial_interpretation": "人物语录和思想转折组织的成长/焦虑主题混剪。画面的价值是解释或感受一句话，不是把漂亮画面平均排齐。全片有明显的长口述—短素材—黑场停顿—密集高光—长口述回收的变速。",
+    "primary_narrative": "对长期未来的焦虑 → 缩短期待尺度 → 拉大尺度后的意义追问 → 努力与自我怀疑 → 过程本身的意义 → 用影像经历作证明 → 行动/团队/留下印记。",
+    "confidence": "高：人物、字幕、镜头顺序和语义。中：创作者意图与观看感受。未判断：音乐类型、精确节拍、是否音画卡点。"
+  },
+  "semantic_sections": [
+    {
+      "start": 0,
+      "end": 18.567,
+      "name": "先让人物把困惑说清楚",
+      "observed": "海边坐着、抱长焦相机的男性，近中景持续到18.5秒；字幕从拉长视野谈到家庭、工作与人生下半场。18.567秒切到室内背影。",
+      "function": "用人物口述建立议题与关系，而非开场快切。",
+      "boundary": "18.567秒为检测到且邻帧核实的硬切；未宣称这个长段完全没有微小跳切。"
+    },
+    {
+      "start": 18.567,
+      "end": 29.1,
+      "name": "把焦虑变成可见状态",
+      "observed": "背影、低头、伏桌、工作、车内侧影连续出现；23~24.533秒切换明显加密。27秒画面已极暗，28.2秒黑底，28.7秒黄色引语出现，29.1秒海边全景出现。",
+      "function": "工作/低头状态承接焦虑语义，黑场给转折腾出停顿。",
+      "boundary": "18.567与29.1准确；27~28.7淡出/文字入场按所见样本定位。"
+    },
+    {
+      "start": 29.1,
+      "end": 56.7,
+      "name": "缩短期待，落实到日常",
+      "observed": "黄色引语叠海边，30.633秒回到海边人物；35.2秒开始飞机剪影、鸟群、人物背影、石滩、日出、船、海景。白字幕谈一小时、早餐、热巧克力、一天或几小时的期待。53.3秒仍有两个人海边剪影，54.7~55.5秒黑底白字幕，56.7秒黑底。",
+      "function": "画面营造具体可感的当下，不逐字展示早餐；主题从抽象担忧转为可期待的生活。",
+      "boundary": "35.2秒是实景串联起点；尾部是渐变与语义分隔，不伪装为单个精确硬切。"
+    },
+    {
+      "start": 56.7,
+      "end": 84.4,
+      "name": "反向放大尺度，再问意义",
+      "observed": "57.5秒人物背向镜头，58.5秒字幕谈人类历史；树林中的人物、地球、建筑、摄影机、机舱、草地、船、室内白卫衣口述切换。字幕问人类渺小、最终化为尘土，为何做好事/难事；81.5秒开始暗，82.5~84.3秒黑底。",
+      "function": "这里是第二次思想转折，而不只是场景换成室内；先给解法再提出更深一层的问题。",
+      "boundary": "84.4秒硬切进入爬山素材；56.7为黑场分隔参考点。"
+    },
+    {
+      "start": 84.4,
+      "end": 136.3,
+      "name": "努力与怀疑，走向和解",
+      "observed": "爬山、摄影、工作、剪辑台、电脑、活动与人物口述交替。字幕从埋头苦干、是否足够努力，到自我怀疑/超载。120.367秒室内白卫衣口述，123.333秒景别变近；127.5秒叠化到雪地气球，129.8秒俯拍雪地，131.633秒人物暖光，134.533秒山地持相机；136.3秒黑场。",
+      "function": "用不同情境的口述拼成同一个内在问题，再把“过程才重要”与真实经历联结。",
+      "boundary": "120.367、123.333、129.8、131.633、134.533、136.3有对应切变帧；127.5为叠化中间态而非硬切。"
+    },
+    {
+      "start": 136.3,
+      "end": 165.5,
+      "name": "用影像经历证明价值",
+      "observed": "136.9秒黑底“别急着赶路”，138秒高空装置淡入。接着气球、人物欢笑、灯与火花、手机、烟雾、跑步、雪山、水下动物、海浪、飞机、地球、微观结晶。144.2~153.867秒高密度变化；162秒结晶与蓝天人物有明确叠化，163~165秒保留人物近景。",
+      "function": "从说理转成可见的经验和创造，宏观/微观并置，给前面“过程”的观点提供感受证据。",
+      "boundary": "结束165.5为约数；162秒叠化可证实。"
+    },
+    {
+      "start": 165.5,
+      "end": 190.5,
+      "name": "回到人物，让观点落在行动",
+      "observed": "约166秒室内黑T恤人物近景持续多秒，字幕谈过度美化过去/未发生的事以及尝试；175.467秒切到旧口述，182.8秒车内，184.533秒团队合影，185.967秒草地多人环形俯拍，190秒开始叠化。",
+      "function": "在高光之后重新放慢，落到尝试、突破和团队，而不是让密集镜头一直冲到结尾。",
+      "boundary": "165.5与190.5约数；中间4个硬切时刻来自检测帧。"
+    },
+    {
+      "start": 190.5,
+      "end": 210.047667,
+      "name": "署名、印记、座右铭与作者尾卡",
+      "observed": "约191~193秒抽象虚焦背景上出现音乐署名；194~196秒白色引语、198~199秒黄色“印记”；200秒回到人物，202秒黄色“无限进步就是我们影视飓风的座右铭”，204~206秒人物与高空装置叠化；207/209秒黑底XIAOHAOH。",
+      "function": "先以文字让情绪收束，再用人物旧语句与高空影像回收主题；不是商品CTA。",
+      "boundary": "段落边界为约数，具体字幕取样可在boundarysheet_3及contact_5复核。"
+    }
+  ],
+  "verified_editing_mechanisms": [
+    {
+      "mechanism": "长短节奏对照",
+      "evidence": "开头至少18.5秒为同一海边人物构图；144.2~153.867秒有连续短画面；约166~175秒又回长口述。",
+      "reuse": "规划段落时按理解负荷与语义转折改变速度，不能给整条套同一镜头长度。"
+    },
+    {
+      "mechanism": "用黑场和淡出标记思想转折",
+      "evidence": "27~29.1、54.7~57.5、81.5~84.4、136.3~138附近均见黑底/暗场/淡入；部分伴随字幕。",
+      "reuse": "将视觉分隔绑定问题/解答切换，单独识别为段落关系，不计成无内容废帧。"
+    },
+    {
+      "mechanism": "口述主线与画面语义相连，但不逐词配图",
+      "evidence": "39.8~45.233秒字幕讲早餐与热巧克力，画面是海边日出和船；129.8秒“过程”附近是雪地同伴俯拍。",
+      "reuse": "素材角色应包含情绪、环境、经历和证据，而不只匹配名词tag。"
+    },
+    {
+      "mechanism": "硬切与叠化承担不同作用",
+      "evidence": "18.567、20.667、22.233等清楚换镜；127.5、162、190、204~206秒看到双画面叠化。",
+      "reuse": "保留转折和记忆/意象连接的区别，不把所有镜头统一换同一种转场。"
+    },
+    {
+      "mechanism": "两层字幕层级",
+      "evidence": "底部白字幕贯穿口述；28.7/29.1及202秒黄色居中引语强调关键语句；片尾“印记”与署名另有版式。",
+      "reuse": "对白字幕和观点强调应是不同图层、不同出现频率。"
+    }
+  ],
+  "measurements": {
+    "scene_candidates_total": 79,
+    "scene_candidates_per_20s": {
+      "0-20": 1,
+      "20-40": 12,
+      "40-60": 6,
+      "60-80": 8,
+      "80-100": 12,
+      "100-120": 7,
+      "120-140": 6,
+      "140-160": 23,
+      "160-180": 1,
+      "180-200": 3,
+      "200-210.048": 0
+    },
+    "warning": "这是画面差异阈值候选，包含运动/特效误触发，也漏掉叠化/淡入；不是镜头总数，不能用于直接计算平均镜头长度。"
+  },
+  "audio": {
+    "listened": false,
+    "transcript_used": true,
+    "waveform_reviewed": true,
+    "observed_credits": [
+      "你看，天黑了 — 魔鬼花园",
+      "Daylight — Seredris"
+    ],
+    "credits_note": "名称来自191~193秒可见署名；未据此推定具体入点、曲风、BPM或情绪。",
+    "safe_conclusion": "对白/口述的语义连续性可由可见字幕和本地转录交叉核验；音画是否精确卡点及音乐如何推动情绪需要实际听审。"
+  },
+  "asr_quality_notes": [
+    "本地base转录把视野识别成事业/事也、蓝色识别成男色、影视飓风识别成影视剧封等；本报告按可见字幕校正相关语义，不直接用错误转录生成引文。",
+    "未逐字校对全部转录；引用以画面可见短语为限。"
+  ],
+  "reuse_for_workbench": [
+    "应把语义段落、实际镜头、跨镜口述三层分开；同一个口述能覆盖多镜，同一镜头也可跨几句。",
+    "首先提炼问题→转折→经历支撑→行动收束的关系，再匹配自有素材。不要只复制时间占比与颜色。",
+    "候选差异可以改变论证路径和片段节奏，例如人物开头/经历开头/问题开头，而不是仅换BGM或换相似镜头。",
+    "保留较长口述与非逐字配图的余地；将所有历史高表现作品抽成快剪公式会漏掉这条片子的关键结构。"
+  ],
+  "limitations": [
+    "独立分析并不等于人工完整播放听审：本次实际查看230个取样帧位、局部边界及RMS图，未听音频。",
+    "快速动作、精确运镜、速度变换、音乐节奏和全部短镜头仍可能漏检，不能给出帧级全镜头EDL。",
+    "人物跨年份素材在本片中的组织可观察，但没有逐条核对原素材语境；不把混剪呈现的先后当作真实发生顺序。",
+    "播放/点赞数据不能证明本片某种剪法造成传播效果，也不能据一条样片证明优化算法优劣。"
+  ],
+  "subject_specific_observations": [
+    {
+      "time_s": 150.733,
+      "observation": "蓝色水下，一只大型鱼类有宽扁头部、白色斑点/条纹，外形可辨为鲸鲨。",
+      "confidence": "高（图像外形判断，不依赖标题）",
+      "evidence": "cutsheet_5 第1行第4格；contact_4 约02:31。"
+    },
+    {
+      "time_s": 151.3,
+      "observation": "水下有多只灰色流线型海洋动物，近处一只腹部更亮；该取样不进一步断定物种。",
+      "confidence": "中",
+      "evidence": "cutsheet_5 第2行第1格。"
+    },
+    {
+      "time_s": 158.233,
+      "observation": "黑底白色枝状、放射状结晶；161秒可见多颗几何枝晶。画面右上角可见来源标题包含“药”“放大1500倍”“结晶瞬间”。",
+      "confidence": "高：显微/微距结晶画面；不称作自然降雪。",
+      "evidence": "cutsheet_5 第3行第2格、boundarysheet_2 02:41。"
+    },
+    {
+      "time_s": 159.0,
+      "observation": "显微画面中透明/淡黄绿色的小型生物；仅凭图像不识别具体生物种类。",
+      "confidence": "中",
+      "evidence": "cutsheet_5 第3行第3格、boundarysheet_2 02:40。"
+    }
+  ],
+  "frozen_at": "2026-10-20T09:42:37.997744+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "revoked": true,
+  "events": [
+    {
+      "kind": "binding_confirmed",
+      "render_id": "6a2290c011cd4a4cb666da4113321387"
+    },
+    {
+      "kind": "binding_revoked",
+      "render_id": "6a2290c011cd4a4cb666da4113321387"
+    }
+  ]
+}

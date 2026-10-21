@@ -1,0 +1,1220 @@
+{
+  "method": "motion_compensated_temporal_difference_v2",
+  "fps": 30.0,
+  "decoded_frames": 6301,
+  "boundaries": [
+    0.0,
+    18.567,
+    20.667,
+    21.467,
+    22.233,
+    23.0,
+    23.733,
+    24.133,
+    24.533,
+    29.1,
+    30.633,
+    35.2,
+    36.733,
+    38.267,
+    39.8,
+    41.333,
+    43.167,
+    45.233,
+    47.433,
+    49.2,
+    59.967,
+    63.767,
+    66.767,
+    67.6,
+    68.833,
+    69.667,
+    70.867,
+    72.5,
+    75.4,
+    78.867,
+    80.5,
+    84.4,
+    84.967,
+    86.633,
+    88.433,
+    89.8,
+    90.867,
+    91.967,
+    93.733,
+    94.7,
+    95.933,
+    97.467,
+    101.467,
+    104.6,
+    106.5,
+    110.367,
+    115.733,
+    116.867,
+    118.4,
+    120.367,
+    123.333,
+    129.8,
+    131.633,
+    134.533,
+    136.3,
+    140.367,
+    141.167,
+    142.0,
+    142.767,
+    144.2,
+    144.633,
+    145.233,
+    145.633,
+    146.033,
+    146.167,
+    146.8,
+    147.667,
+    148.467,
+    149.267,
+    150.1,
+    150.733,
+    151.3,
+    151.733,
+    152.533,
+    152.967,
+    153.867,
+    154.9,
+    155.767,
+    156.633,
+    158.233,
+    159.0,
+    160.333,
+    175.467,
+    182.8,
+    184.533,
+    185.967,
+    210.0477
+  ],
+  "cuts": [
+    {
+      "time": 18.567,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2729,
+      "histogram_difference": 0.752,
+      "temporal_ratio": 34.11,
+      "abruptness": 15.17,
+      "confidence": "high"
+    },
+    {
+      "time": 20.667,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.212,
+      "histogram_difference": 0.6442,
+      "temporal_ratio": 5.31,
+      "abruptness": 2.75,
+      "confidence": "high"
+    },
+    {
+      "time": 21.467,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.157,
+      "histogram_difference": 0.4953,
+      "temporal_ratio": 4.52,
+      "abruptness": 3.17,
+      "confidence": "high"
+    },
+    {
+      "time": 22.233,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3117,
+      "histogram_difference": 0.6913,
+      "temporal_ratio": 27.39,
+      "abruptness": 23.41,
+      "confidence": "high"
+    },
+    {
+      "time": 23.0,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3305,
+      "histogram_difference": 0.62,
+      "temporal_ratio": 41.31,
+      "abruptness": 52.77,
+      "confidence": "high"
+    },
+    {
+      "time": 23.733,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1936,
+      "histogram_difference": 0.6696,
+      "temporal_ratio": 24.19,
+      "abruptness": 12.97,
+      "confidence": "high"
+    },
+    {
+      "time": 24.133,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2609,
+      "histogram_difference": 0.6834,
+      "temporal_ratio": 32.56,
+      "abruptness": 19.53,
+      "confidence": "high"
+    },
+    {
+      "time": 24.533,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3002,
+      "histogram_difference": 0.6802,
+      "temporal_ratio": 20.18,
+      "abruptness": 12.1,
+      "confidence": "high"
+    },
+    {
+      "time": 29.1,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.4842,
+      "histogram_difference": 0.8064,
+      "temporal_ratio": 60.53,
+      "abruptness": 29.97,
+      "confidence": "high"
+    },
+    {
+      "time": 30.633,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2418,
+      "histogram_difference": 0.5521,
+      "temporal_ratio": 26.8,
+      "abruptness": 18.54,
+      "confidence": "high"
+    },
+    {
+      "time": 35.2,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2653,
+      "histogram_difference": 0.8452,
+      "temporal_ratio": 33.16,
+      "abruptness": 29.92,
+      "confidence": "high"
+    },
+    {
+      "time": 36.733,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3847,
+      "histogram_difference": 0.8985,
+      "temporal_ratio": 48.08,
+      "abruptness": 51.5,
+      "confidence": "high"
+    },
+    {
+      "time": 38.267,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3381,
+      "histogram_difference": 0.8722,
+      "temporal_ratio": 42.27,
+      "abruptness": 45.04,
+      "confidence": "high"
+    },
+    {
+      "time": 39.8,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2636,
+      "histogram_difference": 0.7551,
+      "temporal_ratio": 30.27,
+      "abruptness": 19.52,
+      "confidence": "high"
+    },
+    {
+      "time": 41.333,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2197,
+      "histogram_difference": 0.617,
+      "temporal_ratio": 14.91,
+      "abruptness": 15.0,
+      "confidence": "high"
+    },
+    {
+      "time": 43.167,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.182,
+      "histogram_difference": 0.844,
+      "temporal_ratio": 11.67,
+      "abruptness": 3.36,
+      "confidence": "high"
+    },
+    {
+      "time": 45.233,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1967,
+      "histogram_difference": 0.4248,
+      "temporal_ratio": 24.58,
+      "abruptness": 39.33,
+      "confidence": "high"
+    },
+    {
+      "time": 47.433,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2163,
+      "histogram_difference": 0.8458,
+      "temporal_ratio": 27.03,
+      "abruptness": 43.25,
+      "confidence": "high"
+    },
+    {
+      "time": 49.2,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1758,
+      "histogram_difference": 0.7248,
+      "temporal_ratio": 21.97,
+      "abruptness": 35.16,
+      "confidence": "high"
+    },
+    {
+      "time": 59.967,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1621,
+      "histogram_difference": 0.3932,
+      "temporal_ratio": 19.98,
+      "abruptness": 11.61,
+      "confidence": "high"
+    },
+    {
+      "time": 63.767,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3145,
+      "histogram_difference": 0.6684,
+      "temporal_ratio": 39.31,
+      "abruptness": 62.89,
+      "confidence": "high"
+    },
+    {
+      "time": 66.767,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3131,
+      "histogram_difference": 0.7595,
+      "temporal_ratio": 39.14,
+      "abruptness": 17.59,
+      "confidence": "high"
+    },
+    {
+      "time": 67.6,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1973,
+      "histogram_difference": 0.3945,
+      "temporal_ratio": 9.15,
+      "abruptness": 8.59,
+      "confidence": "high"
+    },
+    {
+      "time": 68.833,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2481,
+      "histogram_difference": 0.6636,
+      "temporal_ratio": 14.02,
+      "abruptness": 23.9,
+      "confidence": "high"
+    },
+    {
+      "time": 69.667,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1763,
+      "histogram_difference": 0.6764,
+      "temporal_ratio": 18.38,
+      "abruptness": 6.59,
+      "confidence": "high"
+    },
+    {
+      "time": 70.867,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2784,
+      "histogram_difference": 0.6448,
+      "temporal_ratio": 34.8,
+      "abruptness": 42.99,
+      "confidence": "high"
+    },
+    {
+      "time": 72.5,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3818,
+      "histogram_difference": 0.5962,
+      "temporal_ratio": 47.73,
+      "abruptness": 76.37,
+      "confidence": "high"
+    },
+    {
+      "time": 75.4,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2038,
+      "histogram_difference": 0.5009,
+      "temporal_ratio": 20.16,
+      "abruptness": 12.03,
+      "confidence": "high"
+    },
+    {
+      "time": 78.867,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2348,
+      "histogram_difference": 0.7398,
+      "temporal_ratio": 19.06,
+      "abruptness": 8.97,
+      "confidence": "high"
+    },
+    {
+      "time": 80.5,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2393,
+      "histogram_difference": 0.7443,
+      "temporal_ratio": 20.55,
+      "abruptness": 9.9,
+      "confidence": "high"
+    },
+    {
+      "time": 84.4,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3336,
+      "histogram_difference": 0.8319,
+      "temporal_ratio": 41.7,
+      "abruptness": 5.77,
+      "confidence": "high"
+    },
+    {
+      "time": 84.967,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2302,
+      "histogram_difference": 0.4771,
+      "temporal_ratio": 3.33,
+      "abruptness": 3.53,
+      "confidence": "moderate"
+    },
+    {
+      "time": 86.633,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3235,
+      "histogram_difference": 0.6561,
+      "temporal_ratio": 38.53,
+      "abruptness": 6.69,
+      "confidence": "high"
+    },
+    {
+      "time": 88.433,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2381,
+      "histogram_difference": 0.4983,
+      "temporal_ratio": 29.76,
+      "abruptness": 47.62,
+      "confidence": "high"
+    },
+    {
+      "time": 89.8,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.197,
+      "histogram_difference": 0.6277,
+      "temporal_ratio": 24.63,
+      "abruptness": 39.41,
+      "confidence": "high"
+    },
+    {
+      "time": 90.867,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2297,
+      "histogram_difference": 0.4927,
+      "temporal_ratio": 28.71,
+      "abruptness": 45.94,
+      "confidence": "high"
+    },
+    {
+      "time": 91.967,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3091,
+      "histogram_difference": 0.6835,
+      "temporal_ratio": 38.63,
+      "abruptness": 61.48,
+      "confidence": "high"
+    },
+    {
+      "time": 93.733,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2422,
+      "histogram_difference": 0.5172,
+      "temporal_ratio": 22.79,
+      "abruptness": 12.97,
+      "confidence": "high"
+    },
+    {
+      "time": 94.7,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2884,
+      "histogram_difference": 0.6819,
+      "temporal_ratio": 36.05,
+      "abruptness": 38.8,
+      "confidence": "high"
+    },
+    {
+      "time": 95.933,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.4535,
+      "histogram_difference": 0.587,
+      "temporal_ratio": 56.68,
+      "abruptness": 90.69,
+      "confidence": "high"
+    },
+    {
+      "time": 97.467,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2958,
+      "histogram_difference": 0.4654,
+      "temporal_ratio": 36.98,
+      "abruptness": 59.17,
+      "confidence": "high"
+    },
+    {
+      "time": 101.467,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2673,
+      "histogram_difference": 0.4913,
+      "temporal_ratio": 29.69,
+      "abruptness": 17.36,
+      "confidence": "high"
+    },
+    {
+      "time": 104.6,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.229,
+      "histogram_difference": 0.5127,
+      "temporal_ratio": 28.62,
+      "abruptness": 32.3,
+      "confidence": "high"
+    },
+    {
+      "time": 106.5,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.359,
+      "histogram_difference": 0.7445,
+      "temporal_ratio": 31.09,
+      "abruptness": 20.09,
+      "confidence": "high"
+    },
+    {
+      "time": 110.367,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3,
+      "histogram_difference": 0.8111,
+      "temporal_ratio": 37.5,
+      "abruptness": 41.5,
+      "confidence": "high"
+    },
+    {
+      "time": 115.733,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2492,
+      "histogram_difference": 0.6617,
+      "temporal_ratio": 31.15,
+      "abruptness": 43.77,
+      "confidence": "high"
+    },
+    {
+      "time": 116.867,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1653,
+      "histogram_difference": 0.4017,
+      "temporal_ratio": 15.63,
+      "abruptness": 13.81,
+      "confidence": "high"
+    },
+    {
+      "time": 118.4,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2069,
+      "histogram_difference": 0.4369,
+      "temporal_ratio": 25.87,
+      "abruptness": 28.02,
+      "confidence": "high"
+    },
+    {
+      "time": 120.367,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.4312,
+      "histogram_difference": 0.582,
+      "temporal_ratio": 53.9,
+      "abruptness": 86.23,
+      "confidence": "high"
+    },
+    {
+      "time": 123.333,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.181,
+      "histogram_difference": 0.1941,
+      "temporal_ratio": 22.62,
+      "abruptness": 27.57,
+      "confidence": "high"
+    },
+    {
+      "time": 129.8,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1716,
+      "histogram_difference": 0.9029,
+      "temporal_ratio": 21.46,
+      "abruptness": 18.37,
+      "confidence": "high"
+    },
+    {
+      "time": 131.633,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3874,
+      "histogram_difference": 0.9144,
+      "temporal_ratio": 27.41,
+      "abruptness": 18.17,
+      "confidence": "high"
+    },
+    {
+      "time": 134.533,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3763,
+      "histogram_difference": 0.7414,
+      "temporal_ratio": 30.79,
+      "abruptness": 13.87,
+      "confidence": "high"
+    },
+    {
+      "time": 136.3,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.5678,
+      "histogram_difference": 0.8059,
+      "temporal_ratio": 70.98,
+      "abruptness": 113.57,
+      "confidence": "high"
+    },
+    {
+      "time": 140.367,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3341,
+      "histogram_difference": 0.7816,
+      "temporal_ratio": 9.75,
+      "abruptness": 4.56,
+      "confidence": "high"
+    },
+    {
+      "time": 141.167,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2139,
+      "histogram_difference": 0.7326,
+      "temporal_ratio": 5.55,
+      "abruptness": 2.63,
+      "confidence": "high"
+    },
+    {
+      "time": 142.0,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2138,
+      "histogram_difference": 0.6465,
+      "temporal_ratio": 26.61,
+      "abruptness": 17.21,
+      "confidence": "high"
+    },
+    {
+      "time": 142.767,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2294,
+      "histogram_difference": 0.6152,
+      "temporal_ratio": 11.33,
+      "abruptness": 6.89,
+      "confidence": "high"
+    },
+    {
+      "time": 144.2,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.532,
+      "histogram_difference": 0.751,
+      "temporal_ratio": 23.08,
+      "abruptness": 15.16,
+      "confidence": "high"
+    },
+    {
+      "time": 144.633,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2007,
+      "histogram_difference": 0.5019,
+      "temporal_ratio": 25.09,
+      "abruptness": 27.78,
+      "confidence": "high"
+    },
+    {
+      "time": 145.233,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2543,
+      "histogram_difference": 0.6881,
+      "temporal_ratio": 31.79,
+      "abruptness": 12.72,
+      "confidence": "high"
+    },
+    {
+      "time": 145.633,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2146,
+      "histogram_difference": 0.7851,
+      "temporal_ratio": 8.2,
+      "abruptness": 7.53,
+      "confidence": "high"
+    },
+    {
+      "time": 146.033,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3151,
+      "histogram_difference": 0.7525,
+      "temporal_ratio": 10.35,
+      "abruptness": 1.44,
+      "confidence": "moderate"
+    },
+    {
+      "time": 146.167,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.241,
+      "histogram_difference": 0.6385,
+      "temporal_ratio": 3.07,
+      "abruptness": 3.63,
+      "confidence": "moderate"
+    },
+    {
+      "time": 146.8,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2491,
+      "histogram_difference": 0.7749,
+      "temporal_ratio": 3.66,
+      "abruptness": 1.69,
+      "confidence": "moderate"
+    },
+    {
+      "time": 147.667,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3746,
+      "histogram_difference": 0.6253,
+      "temporal_ratio": 12.71,
+      "abruptness": 5.69,
+      "confidence": "high"
+    },
+    {
+      "time": 148.467,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2947,
+      "histogram_difference": 0.9095,
+      "temporal_ratio": 21.48,
+      "abruptness": 9.32,
+      "confidence": "high"
+    },
+    {
+      "time": 149.267,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2196,
+      "histogram_difference": 0.7335,
+      "temporal_ratio": 18.33,
+      "abruptness": 11.53,
+      "confidence": "high"
+    },
+    {
+      "time": 150.1,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2233,
+      "histogram_difference": 0.7762,
+      "temporal_ratio": 27.91,
+      "abruptness": 33.04,
+      "confidence": "high"
+    },
+    {
+      "time": 150.733,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.22,
+      "histogram_difference": 0.8606,
+      "temporal_ratio": 16.43,
+      "abruptness": 12.51,
+      "confidence": "high"
+    },
+    {
+      "time": 151.3,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2149,
+      "histogram_difference": 0.6511,
+      "temporal_ratio": 11.97,
+      "abruptness": 7.2,
+      "confidence": "high"
+    },
+    {
+      "time": 151.733,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2004,
+      "histogram_difference": 0.9305,
+      "temporal_ratio": 19.44,
+      "abruptness": 8.47,
+      "confidence": "high"
+    },
+    {
+      "time": 152.533,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3544,
+      "histogram_difference": 0.8523,
+      "temporal_ratio": 10.84,
+      "abruptness": 2.73,
+      "confidence": "high"
+    },
+    {
+      "time": 152.967,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2698,
+      "histogram_difference": 0.7342,
+      "temporal_ratio": 9.43,
+      "abruptness": 11.05,
+      "confidence": "high"
+    },
+    {
+      "time": 153.867,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2667,
+      "histogram_difference": 0.9121,
+      "temporal_ratio": 9.26,
+      "abruptness": 7.39,
+      "confidence": "high"
+    },
+    {
+      "time": 154.9,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.0365,
+      "histogram_difference": 0.7001,
+      "temporal_ratio": 4.56,
+      "abruptness": 5.5,
+      "confidence": "high"
+    },
+    {
+      "time": 155.767,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1096,
+      "histogram_difference": 0.7029,
+      "temporal_ratio": 8.75,
+      "abruptness": 5.99,
+      "confidence": "high"
+    },
+    {
+      "time": 156.633,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1029,
+      "histogram_difference": 0.822,
+      "temporal_ratio": 12.87,
+      "abruptness": 20.59,
+      "confidence": "high"
+    },
+    {
+      "time": 158.233,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.4061,
+      "histogram_difference": 0.7965,
+      "temporal_ratio": 50.76,
+      "abruptness": 64.07,
+      "confidence": "high"
+    },
+    {
+      "time": 159.0,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.1826,
+      "histogram_difference": 0.6613,
+      "temporal_ratio": 12.74,
+      "abruptness": 11.3,
+      "confidence": "high"
+    },
+    {
+      "time": 160.333,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.129,
+      "histogram_difference": 0.6726,
+      "temporal_ratio": 13.98,
+      "abruptness": 14.43,
+      "confidence": "high"
+    },
+    {
+      "time": 175.467,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3008,
+      "histogram_difference": 0.6942,
+      "temporal_ratio": 37.6,
+      "abruptness": 50.9,
+      "confidence": "high"
+    },
+    {
+      "time": 182.8,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.254,
+      "histogram_difference": 0.5787,
+      "temporal_ratio": 31.74,
+      "abruptness": 12.66,
+      "confidence": "high"
+    },
+    {
+      "time": 184.533,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.3299,
+      "histogram_difference": 0.5895,
+      "temporal_ratio": 41.23,
+      "abruptness": 19.15,
+      "confidence": "high"
+    },
+    {
+      "time": 185.967,
+      "type": "hard_cut",
+      "transition": "hard_cut",
+      "difference": 0.2766,
+      "histogram_difference": 0.828,
+      "temporal_ratio": 26.01,
+      "abruptness": 10.1,
+      "confidence": "high"
+    }
+  ],
+  "gradual_transitions": [
+    {
+      "start": 24.8,
+      "end": 26.133,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 29.333,
+      "end": 30.4,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 41.6,
+      "end": 42.933,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 52.8,
+      "end": 53.867,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 56.533,
+      "end": 58.667,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 62.4,
+      "end": 63.467,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 80.8,
+      "end": 81.867,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 85.333,
+      "end": 86.133,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 107.733,
+      "end": 109.867,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 126.667,
+      "end": 128.533,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 131.733,
+      "end": 133.067,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 137.6,
+      "end": 140.267,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 143.2,
+      "end": 144.0,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 156.8,
+      "end": 157.867,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 160.533,
+      "end": 162.933,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 164.8,
+      "end": 167.733,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 189.067,
+      "end": 192.0,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 192.8,
+      "end": 201.067,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    },
+    {
+      "start": 202.133,
+      "end": 206.933,
+      "type": "gradual",
+      "confidence": "candidate",
+      "needs_review": true
+    }
+  ],
+  "review_candidates": [
+    {
+      "time": 14.7,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.0306,
+      "histogram_difference": 0.1219,
+      "temporal_ratio": 3.82,
+      "abruptness": 1.18,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 41.633,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.1053,
+      "histogram_difference": 0.3386,
+      "temporal_ratio": 10.96,
+      "abruptness": 1.29,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 42.533,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.1479,
+      "histogram_difference": 0.2542,
+      "temporal_ratio": 14.35,
+      "abruptness": 1.21,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 53.567,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.1695,
+      "histogram_difference": 0.833,
+      "temporal_ratio": 21.18,
+      "abruptness": 1.59,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 81.467,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.0608,
+      "histogram_difference": 0.2301,
+      "temporal_ratio": 7.6,
+      "abruptness": 1.03,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 139.533,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.0836,
+      "histogram_difference": 0.3548,
+      "temporal_ratio": 10.42,
+      "abruptness": 7.31,
+      "confidence": "high",
+      "needs_review": true
+    },
+    {
+      "time": 140.833,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.2164,
+      "histogram_difference": 0.5199,
+      "temporal_ratio": 2.66,
+      "abruptness": 1.09,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 143.9,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.212,
+      "histogram_difference": 0.2613,
+      "temporal_ratio": 3.98,
+      "abruptness": 1.96,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 146.867,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.2844,
+      "histogram_difference": 0.6259,
+      "temporal_ratio": 4.17,
+      "abruptness": 1.93,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 147.167,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.2045,
+      "histogram_difference": 0.3296,
+      "temporal_ratio": 2.73,
+      "abruptness": 1.12,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 152.4,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.2,
+      "histogram_difference": 0.3128,
+      "temporal_ratio": 9.63,
+      "abruptness": 1.47,
+      "confidence": "moderate",
+      "needs_review": true
+    },
+    {
+      "time": 157.467,
+      "type": "visual_change",
+      "transition": "hard_cut",
+      "difference": 0.0823,
+      "histogram_difference": 0.2403,
+      "temporal_ratio": 4.51,
+      "abruptness": 2.0,
+      "confidence": "moderate",
+      "needs_review": true
+    }
+  ],
+  "coverage": "hard_cuts_with_gradual_candidates",
+  "limitations": [
+    "渐变区间为待核对候选，可能包含运镜或物体运动；不计入确定切点。",
+    "强烈运动、闪光和相似构图切换仍可能漏检或误检，镜头边界支持人工核对。"
+  ]
+}

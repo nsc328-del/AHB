@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "plan_id": "d353ccf03bd04624b5ebbb447c378195",
+  "plan_version": 3,
+  "output_sha256": "18b5e27fe9c6b964e99c5b73b32b365ad89b67ff121023360c529153735ca2e3",
+  "compiled_timeline": {
+    "fps": 30,
+    "frame_count": 720,
+    "interval": "[start_frame,end_frame)",
+    "clips": [
+      {
+        "clip_id": "2db7821092cb491d9f50d4551064617b",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 0,
+        "end_frame": 120,
+        "source_start_seconds": 36.0,
+        "source_end_seconds": 40.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "fade",
+        "caption": "剁椒鱼片 鲜辣上桌"
+      },
+      {
+        "clip_id": "dd71df7517cd47f2a8df2f83b4e43b58",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 120,
+        "end_frame": 225,
+        "source_start_seconds": 32.0,
+        "source_end_seconds": 35.5,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "红油鲜香"
+      },
+      {
+        "clip_id": "40a0d71db91c4ca08f7db567ff2f58c8",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 225,
+        "end_frame": 345,
+        "source_start_seconds": 4.0,
+        "source_end_seconds": 8.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "店内鲜活一角"
+      },
+      {
+        "clip_id": "fdaa3da69990403fa5a1dd6a491e6eb7",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 345,
+        "end_frame": 450,
+        "source_start_seconds": 8.0,
+        "source_end_seconds": 11.5,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "鲜鱼现处理"
+      },
+      {
+        "clip_id": "7fd3e73ba1434679873378a816f29630",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 450,
+        "end_frame": 540,
+        "source_start_seconds": 24.0,
+        "source_end_seconds": 27.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "香辣配料"
+      },
+      {
+        "clip_id": "dc9f2564287c48c6bacfb1b2ac70b047",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 540,
+        "end_frame": 630,
+        "source_start_seconds": 60.0,
+        "source_end_seconds": 63.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "舒适卡座 朋友小聚"
+      },
+      {
+        "clip_id": "fb9ee302cd714bfbbab738ad6593b399",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 630,
+        "end_frame": 720,
+        "source_start_seconds": 0.0,
+        "source_end_seconds": 3.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "好人缘餐吧 等你来"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+      "sha256": "1e9f7b793672bbce11ccc6fbddf652f926eb3b3b1f0bb0d0fc63c7762489e772"
+    }
+  ],
+  "renderer_sha256": "8276cd4d5e57b725e005a8d0b71d000a58e14145e21519be6af8fbee6642dc1d",
+  "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+  "width": 1280,
+  "height": 720,
+  "sample_rate": 48000,
+  "font_requested": "Hiragino Sans GB",
+  "music_asset_id": "",
+  "music_volume": 0.16,
+  "plan": {
+    "title": "好人缘餐吧·鲜味到店",
+    "summary": "20秒到店向短视频，采用“菜品开场—食材与后厨—门头落点”的探索剪法，与已有门头开场候选形成明显差异。先以剁椒鱼片和红油鱼片制造食欲，再用金鱼与厨师处理鱼片说明鲜味来源，插入调料与寿司特写丰富品类，最后用餐厅内外景和夜景门头完成到店引导。字幕只描述可见画面，不虚构价格、优惠、地址与口碑。",
+    "clips": [
+      {
+        "id": "2db7821092cb491d9f50d4551064617b",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 36.0,
+        "end": 40.0,
+        "duration": 4.0,
+        "label": "白盘剁椒鱼片铺满红辣椒与葱花，油亮特写",
+        "caption": "剁椒鱼片 鲜辣上桌",
+        "role": "以成品菜特写开场，先给食欲钩子",
+        "transition": "fade",
+        "timeline_start": 0.0,
+        "timeline_end": 4.0
+      },
+      {
+        "id": "dd71df7517cd47f2a8df2f83b4e43b58",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 32.0,
+        "end": 35.5,
+        "duration": 3.5,
+        "label": "红油汤汁中白色鱼片与辣椒芝麻特写",
+        "caption": "红油鲜香",
+        "role": "延续菜品味型，强化香辣印象",
+        "transition": "cut",
+        "timeline_start": 4.0,
+        "timeline_end": 7.5
+      },
+      {
+        "id": "40a0d71db91c4ca08f7db567ff2f58c8",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 4.0,
+        "end": 8.0,
+        "duration": 4.0,
+        "label": "店内鱼缸中橙红金鱼游动",
+        "caption": "店内鲜活一角",
+        "role": "从菜品转入店内生机细节，建立真实空间感",
+        "transition": "cut",
+        "timeline_start": 7.5,
+        "timeline_end": 11.5
+      },
+      {
+        "id": "fdaa3da69990403fa5a1dd6a491e6eb7",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 8.0,
+        "end": 11.5,
+        "duration": 3.5,
+        "label": "厨师托起整条鱼展示鱼身",
+        "caption": "鲜鱼现处理",
+        "role": "说明食材来源与后厨处理，承接鲜味逻辑",
+        "transition": "cut",
+        "timeline_start": 11.5,
+        "timeline_end": 15.0
+      },
+      {
+        "id": "7fd3e73ba1434679873378a816f29630",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 24.0,
+        "end": 27.0,
+        "duration": 3.0,
+        "label": "干红辣椒与花椒倾落金属盆",
+        "caption": "香辣配料",
+        "role": "用调料动势补足味觉层次与节奏变化",
+        "transition": "cut",
+        "timeline_start": 15.0,
+        "timeline_end": 18.0
+      },
+      {
+        "id": "dc9f2564287c48c6bacfb1b2ac70b047",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 60.0,
+        "end": 63.0,
+        "duration": 3.0,
+        "label": "餐厅内红色卡座、桌椅与砖墙陈设",
+        "caption": "舒适卡座 朋友小聚",
+        "role": "展示可到店用餐的环境，服务到店意图",
+        "transition": "cut",
+        "timeline_start": 18.0,
+        "timeline_end": 21.0
+      },
+      {
+        "id": "fb9ee302cd714bfbbab738ad6593b399",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 0.0,
+        "end": 3.0,
+        "duration": 3.0,
+        "label": "夜间门头“好人缘餐吧”与灯带、摩托车",
+        "caption": "好人缘餐吧 等你来",
+        "role": "以真实门头收尾，明确店名与到店落点",
+        "transition": "cut",
+        "timeline_start": 21.0,
+        "timeline_end": 24.0
+      }
+    ],
+    "music_asset_id": "",
+    "duration": 24.0,
+    "model": "deepseek-flash",
+    "request_context": {
+      "version": "stable-request-v1",
+      "stage": "editing_plan",
+      "fingerprint": "2d32a2a7a48868f1d5caddf13af3a7462432966161188f192332832e0d909b91",
+      "prefix_fingerprint": "ef7421686929e1e99f2bfebd4384471fa78ac5bdb5c6ac99986217a865c5d599",
+      "prefix_scope": "instructions_schema_and_stable_references",
+      "budget_kind": "conservative_estimate_not_provider_usage",
+      "text_utf8_bytes": 23313,
+      "image_count": 0,
+      "image_token_reserve": 0,
+      "protocol_token_reserve": 4096,
+      "estimated_input_tokens": 27409,
+      "input_budget": 240000,
+      "output_token_reserve": 10000,
+      "context_limit": 1000000
+    },
+    "brief": "为这家真实门店制作一条20秒的短视频，让附近潜在顾客看完有兴趣到店。用已有实拍画面选镜、重组、控制节奏。不要照搬原片顺序或连续截取一段，也不要制造不存在的店名、价格、优惠、地址和口碑。字幕简短自然，保留有用原声。不要添加AI生成画面。",
+    "ratio": "16:9",
+    "template_id": "free",
+    "audio_incomplete": true,
+    "source_kinds": {
+      "0cf5d848abe848908be4c6e71750b8d1": "video"
+    },
+    "width": 1280,
+    "height": 720,
+    "candidate_strategy": {
+      "key": "exploration",
+      "label": "探索剪法",
+      "exploration": true,
+      "instruction": "在事实与素材范围不变的前提下，探索与其他候选结构明显不同的剪法：更换开场素材、重组主要片段顺序，或大幅改变节奏分配。至少四分之一的素材组织或时间分配应不同；不能只换标题、角色名称、字幕或转场，不为差异牺牲可理解性。"
+    },
+    "difference_summary": "镜头数 5 → 7；素材次序不同；取材区间或节奏不同",
+    "diversity": {
+      "heuristic_version": "local-structure-v1",
+      "history_count": 0,
+      "history_similarity": null,
+      "novelty": null,
+      "novelty_penalty": 0,
+      "ranking_score": 1,
+      "nearest_history_plan_id": null,
+      "minimum_batch_distance": 0.666667,
+      "exploration": true,
+      "quality": {
+        "plan_validation": "passed",
+        "preview_validation": "pending"
+      },
+      "predicts_performance": false
+    },
+    "project_id": "e5a61c53f7704da4907966d273c93dec",
+    "id": "d353ccf03bd04624b5ebbb447c378195",
+    "version": 3,
+    "base_version_id": null,
+    "origin": {
+      "source": "candidate",
+      "actor": "model",
+      "job_id": "0720c0004b004df79e10b3de56754286",
+      "batch_id": "0d50edb2b4764332a14717b6273ff534",
+      "candidate_key": "exploration"
+    },
+    "change_summary": "建立初始方案",
+    "changes": [
+      "建立初始方案"
+    ],
+    "created_at": "2026-10-21T06:15:00.589226+00:00",
+    "updated_at": "2026-10-21T06:15:00.596294+00:00",
+    "url": "/api/media/plans/d353ccf03bd04624b5ebbb447c378195.json"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "character_anchors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scene_anchors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "shots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "integer"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "continuity": {
+            "type": "string"
+          },
+          "visual": {
+            "type": "string"
+          },
+          "audio": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "T2VA",
+              "I2VA",
+              "L2VA",
+              "FL2VA",
+              "Ref2VA"
+            ]
+          },
+          "reference_asset_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "first_asset_id": {
+            "type": "string"
+          },
+          "last_asset_id": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "duration",
+          "purpose",
+          "continuity",
+          "visual",
+          "audio",
+          "mode",
+          "reference_asset_ids",
+          "first_asset_id",
+          "last_asset_id",
+          "prompt"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "title",
+    "summary",
+    "character_anchors",
+    "scene_anchors",
+    "missing_inputs",
+    "shots"
+  ],
+  "additionalProperties": false
+}

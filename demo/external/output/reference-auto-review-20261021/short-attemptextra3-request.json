@@ -1,0 +1,71 @@
+{
+  "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+  "base_analysis_id": "07d152c3afcf4dc0845645e99c8c6ed6",
+  "targets": [
+    {
+      "collection": "segments",
+      "index": 1,
+      "issues": [
+        "visual",
+        "motion"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 2,
+      "issues": [
+        "visual",
+        "motion"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 3,
+      "issues": [
+        "visual",
+        "motion"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 5,
+      "issues": [
+        "visual",
+        "motion"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 1,
+      "issues": [
+        "visual",
+        "motion"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 2,
+      "issues": [
+        "visual",
+        "motion"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 3,
+      "issues": [
+        "visual",
+        "motion"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 5,
+      "issues": [
+        "visual",
+        "motion"
+      ]
+    }
+  ],
+  "automatic": true
+}

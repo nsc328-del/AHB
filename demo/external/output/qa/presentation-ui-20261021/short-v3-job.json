@@ -1,0 +1,262 @@
+{
+  "kind": "reference_presentation",
+  "status": "succeeded",
+  "progress": 100,
+  "message": "已完成",
+  "result": {
+    "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+    "analysis_id": "18ba835f40d543df93e34b353201a51b",
+    "presentation": {
+      "kind": "motion_transition",
+      "label": "同向横移串联",
+      "summary": "六个镜头均以背景画面持续向左位移的近似横幅扫视为主要连接；人物在不同场景中摆姿势，切点依靠运动方向和节奏感接续，而非因果故事。",
+      "confidence": "medium",
+      "basis": [
+        "各镜头motion_statistics均显示背景画面向左位移，horizontal_sign_agreement为1.0",
+        "六个镜头均记录到coherent_view_change_pair_fraction≥0.8的连续同向画面变化",
+        "人物在不同场景反复以点颊、举照片等姿势出现，但无连续动作或因果推进",
+        "旁白缺失，音频证据置信度低，节奏对齐仅为候选时序"
+      ],
+      "limitations": [
+        "音频证据置信度低、节奏对齐为低置信度候选，不能确认声音主导",
+        "部分镜头画面变化与主体相对位移混杂，不能排除视差影响",
+        "未提供全部连续帧，运动判断基于抽样帧和既有运动统计"
+      ],
+      "nodes": [
+        {
+          "label": "店外横移",
+          "description": "砖墙货架到便利店冰柜再到街边，女生点颊随背景向左位移。",
+          "evidence_times": [
+            0,
+            0.967,
+            1.9,
+            2.533
+          ],
+          "id": "node-1",
+          "shot_ids": [
+            "shot-0001"
+          ],
+          "start": 0.0,
+          "end": 2.6,
+          "image_motion": {
+            "direction": "left",
+            "coordinate_system": "screen_background",
+            "source": "existing_visual_verification"
+          }
+        },
+        {
+          "label": "咖啡厅横移",
+          "description": "室内咖啡厅女子持杯、抬手指向侧方，背景持续向左位移。",
+          "evidence_times": [
+            2.7,
+            3.333,
+            4.133,
+            4.7
+          ],
+          "id": "node-2",
+          "shot_ids": [
+            "shot-0002"
+          ],
+          "start": 2.6,
+          "end": 4.733,
+          "image_motion": {
+            "direction": "left",
+            "coordinate_system": "screen_background",
+            "source": "existing_visual_verification"
+          }
+        },
+        {
+          "label": "门前摆姿",
+          "description": "贴满照片的门前，白外套女子举小卡片摆姿势，背景向左。",
+          "evidence_times": [
+            4.833,
+            5.5,
+            6.267,
+            6.7
+          ],
+          "id": "node-3",
+          "shot_ids": [
+            "shot-0003"
+          ],
+          "start": 4.733,
+          "end": 6.767,
+          "image_motion": {
+            "direction": "left",
+            "coordinate_system": "screen_background",
+            "source": "existing_visual_verification"
+          }
+        },
+        {
+          "label": "楼梯间举照片",
+          "description": "楼梯间墙面与台阶，白外套女子举两张照片，场景向左位移。",
+          "evidence_times": [
+            6.833,
+            7.3,
+            8.167,
+            8.633
+          ],
+          "id": "node-4",
+          "shot_ids": [
+            "shot-0004"
+          ],
+          "start": 6.767,
+          "end": 8.7,
+          "image_motion": {
+            "direction": "left",
+            "coordinate_system": "screen_background",
+            "source": "existing_visual_verification"
+          }
+        },
+        {
+          "label": "卷帘门前点颊",
+          "description": "卡通涂鸦卷帘门前，毛绒外套女生点颊，背景移向红色招牌。",
+          "evidence_times": [
+            8.8,
+            9.433,
+            9.967,
+            10.8
+          ],
+          "id": "node-5",
+          "shot_ids": [
+            "shot-0005"
+          ],
+          "start": 8.7,
+          "end": 10.867,
+          "image_motion": {
+            "direction": "left",
+            "coordinate_system": "screen_background",
+            "source": "existing_visual_verification"
+          }
+        },
+        {
+          "label": "餐饮区托脸",
+          "description": "大理石桌前，女性双手托脸，取景移向后方座位区。",
+          "evidence_times": [
+            10.967,
+            11.567,
+            11.933,
+            12.533
+          ],
+          "id": "node-6",
+          "shot_ids": [
+            "shot-0006"
+          ],
+          "start": 10.867,
+          "end": 12.5667,
+          "image_motion": {
+            "direction": "left",
+            "coordinate_system": "screen_background",
+            "source": "existing_visual_verification"
+          }
+        }
+      ],
+      "links": [
+        {
+          "kind": "motion_match",
+          "description": "街景扫视切到室内，延续向左横移的构图节奏。",
+          "evidence_times": [
+            1.9,
+            2.533,
+            2.7,
+            3.333
+          ],
+          "from": "node-1",
+          "to": "node-2"
+        },
+        {
+          "kind": "motion_match",
+          "description": "咖啡厅内横向扫视后切到门前摆姿，继续向左位移。",
+          "evidence_times": [
+            4.133,
+            4.7,
+            4.833,
+            5.5
+          ],
+          "from": "node-2",
+          "to": "node-3"
+        },
+        {
+          "kind": "motion_match",
+          "description": "门前转身动作与楼梯间横向移动在运动相位上接续。",
+          "evidence_times": [
+            6.267,
+            6.7,
+            6.833,
+            7.3
+          ],
+          "from": "node-3",
+          "to": "node-4"
+        },
+        {
+          "kind": "motion_match",
+          "description": "楼梯间举照片后切至卷帘门点颊，保持同向扫视。",
+          "evidence_times": [
+            8.167,
+            8.633,
+            8.8,
+            9.433
+          ],
+          "from": "node-4",
+          "to": "node-5"
+        },
+        {
+          "kind": "motion_match",
+          "description": "卷帘门旁向左横移切到餐饮区同样横向取景变化。",
+          "evidence_times": [
+            9.967,
+            10.8,
+            10.967,
+            11.567
+          ],
+          "from": "node-5",
+          "to": "node-6"
+        }
+      ],
+      "version": 2,
+      "source_analysis_id": "59b04e35874e4c62855b9f52a92f2e82",
+      "source_job_id": "c07a251472d74348a3b0c55963a5e9b8",
+      "created_at": "2026-10-21T03:57:29.316685+00:00",
+      "cache_hit": true,
+      "new_provider_calls": 0,
+      "reused": {
+        "shot_detection": true,
+        "transcript": true,
+        "visual_observations": true,
+        "motion_measurements": true,
+        "rhythm_analysis": true,
+        "full_analysis_windows": 1
+      },
+      "frame_times": [
+        0.0,
+        0.966667,
+        1.9,
+        2.533333,
+        2.7,
+        3.333333,
+        4.133333,
+        4.7,
+        4.833,
+        5.5,
+        6.267,
+        6.7,
+        6.833333,
+        7.3,
+        8.166667,
+        8.633333,
+        8.8,
+        9.433333,
+        9.966667,
+        10.8,
+        10.967,
+        11.566667,
+        11.933333,
+        12.533
+      ]
+    }
+  },
+  "error": null,
+  "id": "9d7cf7f8eedd4869aae918ccb38779f6",
+  "created_at": "2026-10-21T03:57:29.243950+00:00",
+  "updated_at": "2026-10-21T03:57:29.419445+00:00",
+  "resumable": false
+}

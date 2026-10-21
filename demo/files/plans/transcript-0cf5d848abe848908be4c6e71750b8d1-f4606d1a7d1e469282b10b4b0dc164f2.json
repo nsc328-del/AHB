@@ -1,0 +1,29 @@
+{
+  "text": "So",
+  "segments": [
+    {
+      "start": 0.46,
+      "end": 1.18,
+      "text": "So",
+      "no_speech_probability": 0.6853,
+      "avg_log_probability": -0.9761,
+      "compression_ratio": 0.2,
+      "words": [
+        {
+          "start": 0.46,
+          "end": 1.18,
+          "word": " So",
+          "probability": 0.021
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "language_probability": 0.5598,
+  "duration": 75.836,
+  "model": "base",
+  "engine": "faster-whisper",
+  "local": true,
+  "has_speech": true,
+  "created_at": "2026-10-21T06:13:25.418465+00:00"
+}

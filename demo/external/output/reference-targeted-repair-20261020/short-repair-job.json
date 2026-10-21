@@ -1,0 +1,551 @@
+{
+  "kind": "reference_repair",
+  "status": "succeeded",
+  "progress": 100,
+  "message": "已完成",
+  "result": {
+    "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+    "analysis_id": "3afc79e5fd3546bc97819841dd813e9f",
+    "repair": {
+      "base_analysis_id": "88b28ad9bed64739aaa307ac70aaa2ea",
+      "job_id": "a92e3329878242a0a1183be3be7dbfa2",
+      "created_at": "2026-10-20T15:48:23.291330+00:00",
+      "targets": [
+        {
+          "collection": "segments",
+          "index": 0,
+          "issues": [
+            "motion"
+          ],
+          "window_id": "0.000000:2.533000",
+          "start": 0.0,
+          "end": 2.533,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "motion"
+          ],
+          "before_sha256": "642bd334fc151949284b739d6baa5d195e0068e9df9c986bb0ff24a75ed214f8",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 0.0,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-00.jpg"
+            },
+            {
+              "time": 0.1,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+            },
+            {
+              "time": 0.333333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-01.jpg"
+            },
+            {
+              "time": 0.633333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-02.jpg"
+            },
+            {
+              "time": 0.966667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-03.jpg"
+            },
+            {
+              "time": 1.266667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-04.jpg"
+            },
+            {
+              "time": 1.3,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+            },
+            {
+              "time": 1.566667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-05.jpg"
+            },
+            {
+              "time": 1.9,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-06.jpg"
+            },
+            {
+              "time": 2.2,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-07.jpg"
+            },
+            {
+              "time": 2.5,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            0.0,
+            0.1,
+            0.333333,
+            0.633333,
+            0.966667,
+            1.266667,
+            1.3,
+            1.566667,
+            1.9,
+            2.2,
+            2.5
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 0.0,
+            "end": 2.533,
+            "fps": 30.0,
+            "decoded_frames": 76,
+            "statistics": {
+              "measured_pairs": 75,
+              "qualified_pairs": 75,
+              "qualified_pair_fraction": 1.0,
+              "image_dx_widths_per_second_median": -0.86987,
+              "image_dy_heights_per_second_median": -0.02033,
+              "image_rotation_degrees_per_second_median": -10.68248,
+              "image_scale_log_per_second_median": 1e-05,
+              "background_inlier_ratio_median": 0.97279,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.05854,
+              "center_residual_widths_per_second_median": 0.04209,
+              "center_residual_widths_per_second_p90_median": 0.06098,
+              "edge_residual_widths_per_second_median": 0.04259,
+              "coherent_view_change_pair_fraction": 0.8,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [],
+            "skipped_cut_pairs": [],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "cache_hit": false,
+          "source_job_id": "a92e3329878242a0a1183be3be7dbfa2",
+          "after_sha256": "9210bfc54585a6aa8d30c6292ceb9dfcbca24bf6b4b48c39323a7a660a2973dd"
+        },
+        {
+          "collection": "segments",
+          "index": 4,
+          "issues": [
+            "motion"
+          ],
+          "window_id": "8.633000:10.800000",
+          "start": 8.633,
+          "end": 10.8,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "motion"
+          ],
+          "before_sha256": "664273987dcda92a5151ef2e4e3eaa1f7214588b5bbed1c1fde83aa28e70a6cb",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 8.633,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+            },
+            {
+              "time": 8.633333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-00.jpg"
+            },
+            {
+              "time": 8.8,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+            },
+            {
+              "time": 8.9,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-01.jpg"
+            },
+            {
+              "time": 9.166667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-02.jpg"
+            },
+            {
+              "time": 9.4,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+            },
+            {
+              "time": 9.433333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-03.jpg"
+            },
+            {
+              "time": 9.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-04.jpg"
+            },
+            {
+              "time": 9.8,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+            },
+            {
+              "time": 9.966667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-05.jpg"
+            },
+            {
+              "time": 10.233333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-06.jpg"
+            },
+            {
+              "time": 10.5,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-07.jpg"
+            },
+            {
+              "time": 10.766667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            8.633,
+            8.633333,
+            8.8,
+            8.9,
+            9.166667,
+            9.4,
+            9.433333,
+            9.7,
+            9.8,
+            9.966667,
+            10.233333,
+            10.5,
+            10.766667
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 8.633,
+            "end": 10.8,
+            "fps": 30.0,
+            "decoded_frames": 65,
+            "statistics": {
+              "measured_pairs": 63,
+              "qualified_pairs": 62,
+              "qualified_pair_fraction": 0.98413,
+              "image_dx_widths_per_second_median": -0.54907,
+              "image_dy_heights_per_second_median": 0.01781,
+              "image_rotation_degrees_per_second_median": -14.71462,
+              "image_scale_log_per_second_median": -0.03172,
+              "background_inlier_ratio_median": 0.93287,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.10477,
+              "center_residual_widths_per_second_median": 0.07163,
+              "center_residual_widths_per_second_p90_median": 0.11802,
+              "edge_residual_widths_per_second_median": 0.06821,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [
+              8.7
+            ],
+            "skipped_cut_pairs": [
+              8.7
+            ],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "cache_hit": false,
+          "source_job_id": "a92e3329878242a0a1183be3be7dbfa2",
+          "after_sha256": "cee1435d52711b3d1e15082d63cce354bd1a3df3c8f4230745863d792c6923f5"
+        },
+        {
+          "collection": "content_segments",
+          "index": 0,
+          "issues": [
+            "motion"
+          ],
+          "window_id": "0.000000:2.533000",
+          "start": 0.0,
+          "end": 2.533,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "motion"
+          ],
+          "before_sha256": "14a37b28a32c0fdec0d6ef734380171d3702121859290045720a65141b11d6e1",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 0.0,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-00.jpg"
+            },
+            {
+              "time": 0.1,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-001.jpg"
+            },
+            {
+              "time": 0.333333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-01.jpg"
+            },
+            {
+              "time": 0.633333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-02.jpg"
+            },
+            {
+              "time": 0.966667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-03.jpg"
+            },
+            {
+              "time": 1.266667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-04.jpg"
+            },
+            {
+              "time": 1.3,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-002.jpg"
+            },
+            {
+              "time": 1.566667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-05.jpg"
+            },
+            {
+              "time": 1.9,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-06.jpg"
+            },
+            {
+              "time": 2.2,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-07.jpg"
+            },
+            {
+              "time": 2.5,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-f4f90803745f0345c4b3/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            0.0,
+            0.1,
+            0.333333,
+            0.633333,
+            0.966667,
+            1.266667,
+            1.3,
+            1.566667,
+            1.9,
+            2.2,
+            2.5
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 0.0,
+            "end": 2.533,
+            "fps": 30.0,
+            "decoded_frames": 76,
+            "statistics": {
+              "measured_pairs": 75,
+              "qualified_pairs": 75,
+              "qualified_pair_fraction": 1.0,
+              "image_dx_widths_per_second_median": -0.86987,
+              "image_dy_heights_per_second_median": -0.02033,
+              "image_rotation_degrees_per_second_median": -10.68248,
+              "image_scale_log_per_second_median": 1e-05,
+              "background_inlier_ratio_median": 0.97279,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.05854,
+              "center_residual_widths_per_second_median": 0.04209,
+              "center_residual_widths_per_second_p90_median": 0.06098,
+              "edge_residual_widths_per_second_median": 0.04259,
+              "coherent_view_change_pair_fraction": 0.8,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [],
+            "skipped_cut_pairs": [],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "cache_hit": false,
+          "source_job_id": "a92e3329878242a0a1183be3be7dbfa2",
+          "after_sha256": "ef2eda4a915b3141518156ab57c97f421ab14d4fbe5194a09b282ebc89714cea"
+        },
+        {
+          "collection": "content_segments",
+          "index": 4,
+          "issues": [
+            "motion"
+          ],
+          "window_id": "8.633000:10.800000",
+          "start": 8.633,
+          "end": 10.8,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "motion"
+          ],
+          "before_sha256": "55415a5d0612e341deceecdd645fbe199fe0f2744e7dc95111cb0fb8d17e930e",
+          "method": "local_visual_reanalysis",
+          "frames": [
+            {
+              "time": 8.633,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-014.jpg"
+            },
+            {
+              "time": 8.633333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-00.jpg"
+            },
+            {
+              "time": 8.8,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-015.jpg"
+            },
+            {
+              "time": 8.9,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-01.jpg"
+            },
+            {
+              "time": 9.166667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-02.jpg"
+            },
+            {
+              "time": 9.4,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-016.jpg"
+            },
+            {
+              "time": 9.433333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-03.jpg"
+            },
+            {
+              "time": 9.7,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-04.jpg"
+            },
+            {
+              "time": 9.8,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/1a0a9950d4ab4c36b29b1192d40c4378/frame-017.jpg"
+            },
+            {
+              "time": 9.966667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-05.jpg"
+            },
+            {
+              "time": 10.233333,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-06.jpg"
+            },
+            {
+              "time": 10.5,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-07.jpg"
+            },
+            {
+              "time": 10.766667,
+              "url": "/api/media/frames/bed732a655dd4a8e9a2d2386a964c5a5/repair-13640f566a29d7c9cc5d/motion-08.jpg"
+            }
+          ],
+          "frame_times": [
+            8.633,
+            8.633333,
+            8.8,
+            8.9,
+            9.166667,
+            9.4,
+            9.433333,
+            9.7,
+            9.8,
+            9.966667,
+            10.233333,
+            10.5,
+            10.766667
+          ],
+          "motion_evidence": {
+            "version": 1,
+            "method": "adjacent_lk_background_candidate_ransac",
+            "start": 8.633,
+            "end": 10.8,
+            "fps": 30.0,
+            "decoded_frames": 65,
+            "statistics": {
+              "measured_pairs": 63,
+              "qualified_pairs": 62,
+              "qualified_pair_fraction": 0.98413,
+              "image_dx_widths_per_second_median": -0.54907,
+              "image_dy_heights_per_second_median": 0.01781,
+              "image_rotation_degrees_per_second_median": -14.71462,
+              "image_scale_log_per_second_median": -0.03172,
+              "background_inlier_ratio_median": 0.93287,
+              "unexplained_local_motion_widths_per_second_p75_median": 0.10477,
+              "center_residual_widths_per_second_median": 0.07163,
+              "center_residual_widths_per_second_p90_median": 0.11802,
+              "edge_residual_widths_per_second_median": 0.06821,
+              "coherent_view_change_pair_fraction": 1.0,
+              "horizontal_sign_agreement": 1.0,
+              "image_horizontal_direction": "left",
+              "interpretation": "分布较广的背景候选存在连续同向画面位移；请结合图像判断取景变化，不直接命名物理运镜。"
+            },
+            "known_cuts_inside": [
+              8.7
+            ],
+            "skipped_cut_pairs": [
+              8.7
+            ],
+            "limits": [
+              "光流描述画面上的位移，不等同于摄像机的物理运动；不能据此断言推近、变焦、横移轨道或速度曲线。",
+              "外围区域只是背景候选，可能被人物、车辆、转场或遮挡占据；需与连续画面共同核对。",
+              "低纹理、模糊、视差、曝光变化会降低跟踪可靠度；没有可靠跟踪不表示固定机位。",
+              "已知切镜两侧不计算连续运动，转场由既有切镜证据单列。"
+            ],
+            "model_calls": 0
+          },
+          "cache_hit": false,
+          "source_job_id": "a92e3329878242a0a1183be3be7dbfa2",
+          "after_sha256": "738ff284a3bd7f686964c70b1aa0bab02396797221d28385b0e9ce9641b5a2db"
+        }
+      ],
+      "new_provider_calls": 1,
+      "reused": {
+        "shot_detection": true,
+        "transcript": true,
+        "full_analysis_windows": 1,
+        "unchanged_segments": {
+          "content_segments": 4,
+          "segments": 4
+        }
+      }
+    }
+  },
+  "error": null,
+  "payload": {
+    "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+    "base_analysis_id": "88b28ad9bed64739aaa307ac70aaa2ea",
+    "targets": [
+      {
+        "collection": "segments",
+        "index": 0,
+        "issues": [
+          "motion"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 4,
+        "issues": [
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 0,
+        "issues": [
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 4,
+        "issues": [
+          "motion"
+        ]
+      }
+    ],
+    "reviewed_edits": []
+  },
+  "provider_state": {},
+  "id": "a92e3329878242a0a1183be3be7dbfa2",
+  "created_at": "2026-10-20T15:48:18.608430+00:00",
+  "updated_at": "2026-10-20T15:48:23.297936+00:00"
+}

@@ -1,0 +1,60 @@
+{
+  "title": "换个节奏",
+  "summary": "借用样片三段递进结构与1秒、3秒、2秒的节奏骨架，用三张静态图形重组：绿色三角开场定调，蓝色方块承接展开，橙色圆形收尾。全程硬切、无音乐，字幕随图形依次压入。",
+  "clips": [
+    {
+      "id": "b518f884435e45b1b1945b7d723f26d3",
+      "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+      "start": 0.0,
+      "end": 1.0,
+      "duration": 1.0,
+      "label": "绿色三角居中亮相，短促开场定调",
+      "caption": "三角开场",
+      "role": "开场",
+      "transition": "cut",
+      "timeline_start": 0.0,
+      "timeline_end": 1.0
+    },
+    {
+      "id": "2fd54620633c44deb77a305b2b5319d6",
+      "asset_id": "e48d062237fe407dafe6676c3a96289e",
+      "start": 0.0,
+      "end": 3.0,
+      "duration": 3.0,
+      "label": "蓝色方块居中展开，承接并拉长节奏",
+      "caption": "方块展开",
+      "role": "展开",
+      "transition": "cut",
+      "timeline_start": 1.0,
+      "timeline_end": 4.0
+    },
+    {
+      "id": "8e3916d4c26e4f73896578996b2d2f7d",
+      "asset_id": "e400442976b34c6b92b3459502a60aaf",
+      "start": 0.0,
+      "end": 2.0,
+      "duration": 2.0,
+      "label": "橙色圆形居中收束，以定型图形完成收尾",
+      "caption": "圆形收尾",
+      "role": "收束",
+      "transition": "cut",
+      "timeline_start": 4.0,
+      "timeline_end": 6.0
+    }
+  ],
+  "music_asset_id": "",
+  "duration": 6.0,
+  "model": "deepseek-flash",
+  "brief": "参照样片的三段结构与1秒、3秒、2秒节奏，用我选中的三张图片重组：绿色三角开场，蓝色方块展开，橙色圆形收尾。字幕依次为「三角开场」「方块展开」「圆形收尾」，不加音乐。标题：换个节奏。",
+  "ratio": "16:9",
+  "template_id": "story",
+  "audio_incomplete": false,
+  "project_id": "5958c22cb2f94b8aaf8df289d6edbee5",
+  "width": 1280,
+  "height": 720,
+  "id": "74825616dce6469ca5fa189953a0ac47",
+  "version": 1,
+  "base_version_id": null,
+  "created_at": "2026-10-20T04:38:57.581409+00:00",
+  "updated_at": "2026-10-20T04:38:57.581422+00:00"
+}

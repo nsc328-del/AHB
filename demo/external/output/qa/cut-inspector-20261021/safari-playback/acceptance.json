@@ -1,0 +1,25 @@
+{
+  "browser": "User Safari, existing workbench tab",
+  "reproduction": "Metadata-only preload left opaque loading overlay waiting for loadeddata; native Play immediately began playback",
+  "fix": [
+    "Preload current excerpt automatically",
+    "Show original source thumbnail while waiting",
+    "Clear loading indicator on metadata, do not cover player controls",
+    "Ignore events from replaced players",
+    "Retry local playback on media error",
+    "Version static imports to load fix"
+  ],
+  "verified": [
+    "Source and result HTTP range requests return 206",
+    "Coffee clip 5 source and processed excerpt show visible Play without prior playback",
+    "Both source and processed excerpt played to end in Safari",
+    "Source/result/source rapid switching leaves correct source selected without loading cover",
+    "JavaScript syntax and whitespace checks passed"
+  ],
+  "not_verified": [
+    "Forced network failure retry path",
+    "Mobile Safari"
+  ],
+  "model_calls": 0,
+  "backend_restart": false
+}

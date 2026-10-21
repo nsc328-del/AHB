@@ -1,0 +1,191 @@
+{
+  "asset_id": "2e2893e271774911a336c8a5aad5923c",
+  "base_analysis_id": "2fe5d09115674886bdbcdd4f9928b1d7",
+  "targets": [
+    {
+      "collection": "content_segments",
+      "index": 1,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 2,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 3,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 6,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 8,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 9,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 12,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 15,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 17,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 18,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 19,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 20,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 21,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 22,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 23,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 25,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 26,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 30,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 9,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 26,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 52,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 10,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 87,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    }
+  ],
+  "automatic": true
+}

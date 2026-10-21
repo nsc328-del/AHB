@@ -1,0 +1,33 @@
+{
+  "project_id": "74716807545e479f875cebc3c1046bd7",
+  "started": true,
+  "deepseek_plan_requests": 1,
+  "h3_requests": 0,
+  "status": "succeeded",
+  "elapsed_seconds": 1.55,
+  "clip_count": 3,
+  "duration": 6.0,
+  "intervals": [
+    {
+      "asset_id": "e48d062237fe407dafe6676c3a96289e",
+      "start": 0.0,
+      "end": 2.0,
+      "duration": 2.0,
+      "caption": "蓝色方块"
+    },
+    {
+      "asset_id": "e400442976b34c6b92b3459502a60aaf",
+      "start": 0.0,
+      "end": 2.0,
+      "duration": 2.0,
+      "caption": "橙色圆形"
+    },
+    {
+      "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+      "start": 0.0,
+      "end": 2.0,
+      "duration": 2.0,
+      "caption": "绿色三角"
+    }
+  ]
+}

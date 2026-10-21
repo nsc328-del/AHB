@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-10-20T14:56:01.669630+00:00",
+  "error": null,
+  "id": "e980dd29a87a4bf089680d32a3b4942f",
+  "kind": "home_node_edit",
+  "message": "已完成",
+  "payload": {
+    "asset_ids": [
+      "ed7d48f177304c759fe9381a74a72f9d"
+    ],
+    "clip_id": "d42e876e-5ab3-40b0-aca4-2790f208b896",
+    "instruction": "这个镜头展示 3 秒，字幕写“从一个形状开始”。保留当前素材，不改其他镜头。",
+    "plan": {
+      "clips": [
+        {
+          "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+          "caption": "",
+          "duration": 2.0,
+          "end": 2.0,
+          "id": "d42e876e-5ab3-40b0-aca4-2790f208b896",
+          "label": "green.png",
+          "role": "body",
+          "start": 0.0,
+          "timeline_end": 2.0,
+          "timeline_start": 0.0,
+          "transition": "cut"
+        },
+        {
+          "asset_id": "e400442976b34c6b92b3459502a60aaf",
+          "caption": "",
+          "duration": 2.0,
+          "end": 2.0,
+          "id": "945b0596-6016-4068-aad5-8f400a4eeb5b",
+          "label": "orange.png",
+          "role": "body",
+          "start": 0.0,
+          "timeline_end": 4.0,
+          "timeline_start": 2.0,
+          "transition": "cut"
+        },
+        {
+          "asset_id": "e48d062237fe407dafe6676c3a96289e",
+          "caption": "",
+          "duration": 2.0,
+          "end": 2.0,
+          "id": "61cb0c9f-b919-4025-a25c-61632b11659c",
+          "label": "blue.png",
+          "role": "body",
+          "start": 0.0,
+          "timeline_end": 6.0,
+          "timeline_start": 4.0,
+          "transition": "cut"
+        }
+      ],
+      "ratio": "9:16",
+      "title": "节点交互验收"
+    },
+    "signature": "5f21d82c7fb146b9914338d3ce669b0d84efefe0eb6bee8f4402831e9cc1358f",
+    "submission_id": "3a13f0dd-a145-4b01-a1f0-a77e3107f272"
+  },
+  "progress": 100,
+  "provider_state": {},
+  "result": {
+    "clip_id": "d42e876e-5ab3-40b0-aca4-2790f208b896",
+    "signature": "5f21d82c7fb146b9914338d3ce669b0d84efefe0eb6bee8f4402831e9cc1358f",
+    "clip": {
+      "id": "d42e876e-5ab3-40b0-aca4-2790f208b896",
+      "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+      "start": 0.0,
+      "end": 3.0,
+      "duration": 3.0,
+      "label": "green.png",
+      "caption": "从一个形状开始",
+      "role": "body",
+      "transition": "cut",
+      "timeline_start": 0.0,
+      "timeline_end": 3.0
+    },
+    "explanation": "展示 3 秒；字幕改为「从一个形状开始」",
+    "changes": [
+      "展示 3 秒",
+      "字幕改为「从一个形状开始」"
+    ]
+  },
+  "status": "succeeded",
+  "updated_at": "2026-10-20T14:56:03.381210+00:00"
+}

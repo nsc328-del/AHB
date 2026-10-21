@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-21",
+  "scope": "隆莱呷运营首页首版",
+  "route": "http://127.0.0.1:8787/#operations",
+  "changed": [
+    "static/operations-home.js",
+    "static/operations-home.css",
+    "static/operations-data.js",
+    "static/app.js (接线、选材返回)",
+    "static/index.html (导航、资源)"
+  ],
+  "content": {
+    "brand": "隆莱呷卤肉饭",
+    "annual_months": 12,
+    "seed_ideas": 8,
+    "industry_observations": 3,
+    "plan_is_example": true,
+    "live_news_feed": false,
+    "persistence": "本浏览器 localStorage"
+  },
+  "browser": {
+    "provider": "已有内置浏览器",
+    "tab": 5,
+    "viewport": [
+      672,
+      795
+    ],
+    "horizontal_overflow": false,
+    "new_chrome_processes_started": 0
+  },
+  "verified": [
+    "空地址进入运营首页；原剪辑、素材、样片等导航保留",
+    "选题改标题与20→25秒后刷新保留，随后恢复示例20秒",
+    "200秒非法输入阻止进入制作，不悄悄提交旧值",
+    "选题从10月21日改到22日，两个日期列表同步；测试后恢复",
+    "行业观察加入当天选题，同日重复按钮禁用，移出与撤销保留原选题",
+    "10月31天、11月30天日历正确；周月切换和回到今天通过",
+    "开始制作保留品牌/选题/描述/镜头/平台/20秒/3候选，未自动调用生成",
+    "选材用green.png验收返回#brief，原brief保留；测试后清空验收选材",
+    "编辑区域原位展开/收起和快速反向，保留单一编辑表单，最终收起",
+    "真实AX点击展开前后scrollY均278.5、标题y均331.3984375；采样检查未见重影",
+    "node --check 三个JS通过"
+  ],
+  "usage": {
+    "deepseek_calls": 0,
+    "h3_calls": 0,
+    "global_token_total_before": 1113748,
+    "global_token_total_after": 1113748
+  },
+  "data_after": {
+    "assets": 18,
+    "projects": 5,
+    "jobs": 63,
+    "active_jobs": 0
+  },
+  "limitations": [
+    "未接实时新闻抓取或自动年度策划",
+    "未接团队共享计划或品牌真实经营数据",
+    "宽屏与390px布局未实机复核；减弱动态仅实现CSS分支",
+    "动效录像为真实截图按采样时间合成，非连续录屏；Playwright点击的自动滚动与实际AX点击记录分别保留"
+  ],
+  "proof": [
+    "home.png",
+    "editor-00.png",
+    "editor-03.png",
+    "editor-07.png",
+    "editor-timing.json",
+    "collapse-00.png",
+    "collapse-05.png",
+    "interaction-sampled.mp4"
+  ]
+}

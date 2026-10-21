@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-10-21T14:07:19+08:00",
+  "elapsed_seconds": 3.6,
+  "returned_items": 19,
+  "raw_candidate_count": 188,
+  "topic_fit": {
+    "food": 6,
+    "daily_life": 5,
+    "general": 8
+  },
+  "source_states": [
+    {
+      "id": "chinahotel",
+      "name": "中国饭店协会",
+      "status": "ok",
+      "fetched_at": "2026-10-21T14:07:18+08:00",
+      "count": 8,
+      "latest_published_at": "2026-10-21"
+    },
+    {
+      "id": "chinanews_society",
+      "name": "中国新闻网 · 社会",
+      "status": "ok",
+      "fetched_at": "2026-10-21T14:07:15+08:00",
+      "count": 30,
+      "latest_published_at": "2026-10-21T13:45:14+08:00"
+    },
+    {
+      "id": "soso_douyin",
+      "name": "搜搜热 · 抖音",
+      "status": "ok",
+      "fetched_at": "2026-10-21T14:07:17+08:00",
+      "source_updated_at": "2026-10-21T13:56:37+08:00",
+      "count": 49
+    },
+    {
+      "id": "soso_toutiao",
+      "name": "搜搜热 · 今日头条",
+      "status": "ok",
+      "fetched_at": "2026-10-21T14:07:17+08:00",
+      "source_updated_at": "2026-10-21T13:57:30+08:00",
+      "count": 50
+    },
+    {
+      "id": "soso_weibo",
+      "name": "搜搜热 · 微博",
+      "status": "ok",
+      "fetched_at": "2026-10-21T14:07:17+08:00",
+      "source_updated_at": "2026-10-21T13:59:31+08:00",
+      "count": 51
+    }
+  ],
+  "checks": {
+    "unique_stable_ids": true,
+    "platform_publication_date_not_fabricated": true,
+    "industry_news_has_no_rank": true,
+    "rss_future_date_excluded": true,
+    "unknown_publication_retained_as_unknown": true,
+    "all_sources_failure_returns_no_fake_items": true
+  }
+}

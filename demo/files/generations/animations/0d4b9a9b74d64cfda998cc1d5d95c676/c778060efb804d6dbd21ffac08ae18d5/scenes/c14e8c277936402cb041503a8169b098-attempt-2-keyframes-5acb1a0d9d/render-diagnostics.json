@@ -1,0 +1,78 @@
+{
+  "ok": true,
+  "diagnostics": [
+    {
+      "code": "blank_keyframe",
+      "severity": "warning",
+      "message": "部分采样帧几乎为单色，可能是入场或留白"
+    }
+  ],
+  "checkpoints": [
+    {
+      "time": 0.0,
+      "frame": 0,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000000.png"
+    },
+    {
+      "time": 2.5,
+      "frame": 75,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000075.png"
+    },
+    {
+      "time": 5.0,
+      "frame": 150,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000150.png"
+    },
+    {
+      "time": 7.5,
+      "frame": 225,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000225.png"
+    },
+    {
+      "time": 9.966666666666667,
+      "frame": 299,
+      "path": "${AHB_DATA}/generations/animations/0d4b9a9b74d64cfda998cc1d5d95c676/c778060efb804d6dbd21ffac08ae18d5/scenes/c14e8c277936402cb041503a8169b098-attempt-2-keyframes-5acb1a0d9d/frame-000299.png"
+    }
+  ],
+  "isolation": {
+    "sandbox_requested": true,
+    "no_sandbox_flag": false,
+    "network": "data_only",
+    "profile": "ephemeral",
+    "clock": "paused",
+    "browser_version": "155.0.8059.79"
+  },
+  "frame_checks": [
+    {
+      "frame": 0,
+      "time": 0.0,
+      "pixel_stddev": 0.0
+    },
+    {
+      "frame": 75,
+      "time": 2.5,
+      "pixel_stddev": 20.167
+    },
+    {
+      "frame": 150,
+      "time": 5.0,
+      "pixel_stddev": 20.363
+    },
+    {
+      "frame": 225,
+      "time": 7.5,
+      "pixel_stddev": 14.621
+    },
+    {
+      "frame": 299,
+      "time": 9.966666666666667,
+      "pixel_stddev": 18.372
+    }
+  ],
+  "duration": 10.0,
+  "frames": 300,
+  "fps": 30,
+  "width": 1280,
+  "height": 720,
+  "render_seconds": 13.734
+}

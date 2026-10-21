@@ -1,0 +1,39 @@
+{
+  "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+  "base_analysis_id": "0d47dc9aa9a6433486cb3461a8ea2ae9",
+  "targets": [
+    {
+      "collection": "segments",
+      "index": 0,
+      "issues": [
+        "motion",
+        "visual"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 4,
+      "issues": [
+        "motion",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 0,
+      "issues": [
+        "motion",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 4,
+      "issues": [
+        "motion",
+        "visual"
+      ]
+    }
+  ],
+  "automatic": true
+}

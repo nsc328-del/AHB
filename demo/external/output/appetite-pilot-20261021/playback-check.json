@@ -1,0 +1,100 @@
+[
+  {
+    "node": 1,
+    "mode": "source",
+    "http_status": 200,
+    "bytes": 1235824,
+    "duration": 4.7667
+  },
+  {
+    "node": 1,
+    "mode": "result",
+    "http_status": 200,
+    "bytes": 970096,
+    "duration": 3.6667
+  },
+  {
+    "node": 2,
+    "mode": "source",
+    "http_status": 200,
+    "bytes": 2120963,
+    "duration": 4.7667
+  },
+  {
+    "node": 2,
+    "mode": "result",
+    "http_status": 200,
+    "bytes": 1371129,
+    "duration": 3.033
+  },
+  {
+    "node": 3,
+    "mode": "source",
+    "http_status": 200,
+    "bytes": 957724,
+    "duration": 2.0
+  },
+  {
+    "node": 3,
+    "mode": "result",
+    "http_status": 200,
+    "bytes": 914183,
+    "duration": 2.0
+  },
+  {
+    "node": 4,
+    "mode": "source",
+    "http_status": 200,
+    "bytes": 659577,
+    "duration": 4.2997
+  },
+  {
+    "node": 4,
+    "mode": "result",
+    "http_status": 200,
+    "bytes": 554646,
+    "duration": 3.3
+  },
+  {
+    "node": 5,
+    "mode": "source",
+    "http_status": 200,
+    "bytes": 1438688,
+    "duration": 4.5667
+  },
+  {
+    "node": 5,
+    "mode": "result",
+    "http_status": 200,
+    "bytes": 1338210,
+    "duration": 4.533
+  },
+  {
+    "node": 6,
+    "mode": "source",
+    "http_status": 200,
+    "bytes": 890448,
+    "duration": 4.7663
+  },
+  {
+    "node": 6,
+    "mode": "result",
+    "http_status": 200,
+    "bytes": 905632,
+    "duration": 4.9
+  },
+  {
+    "node": 7,
+    "mode": "source",
+    "http_status": 200,
+    "bytes": 249535,
+    "duration": 2.0
+  },
+  {
+    "node": 7,
+    "mode": "result",
+    "http_status": 200,
+    "bytes": 265087,
+    "duration": 2.0
+  }
+]

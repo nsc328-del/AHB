@@ -5,6 +5,8 @@ __pycache__/
 *.pyc
 .DS_Store
 output/
+!demo/external/output/
+!demo/external/output/**
 .playwright-cli/
 .pytest_cache/
 .env
@@ -13,3 +15,4 @@ output/
 server.env
 providers.json
 *.log
+!demo/external/output/**/*.log

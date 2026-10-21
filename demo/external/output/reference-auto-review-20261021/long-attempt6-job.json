@@ -1,0 +1,5437 @@
+{
+  "kind": "reference_repair",
+  "status": "succeeded",
+  "progress": 100,
+  "message": "已完成",
+  "result": {
+    "asset_id": "2e2893e271774911a336c8a5aad5923c",
+    "analysis_id": "777a64cf39884f689bd9d4788f714a8f",
+    "repair": {
+      "base_analysis_id": "a13d1ea54cd345f19173a059494393ad",
+      "job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+      "created_at": "2026-10-20T16:33:24.270866+00:00",
+      "targets": [
+        {
+          "collection": "content_segments",
+          "index": 1,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "18.500000:24.633000",
+          "start": 18.5,
+          "end": 24.633,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "18fe621866739f87b3826eed8f27154f32c01b5c5e86ffe496eba07ff5bf7b13",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 18.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-007.jpg"
+            },
+            {
+              "time": 19.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-010.jpg"
+            },
+            {
+              "time": 21.1,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-013.jpg"
+            },
+            {
+              "time": 21.867,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-016.jpg"
+            },
+            {
+              "time": 22.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-019.jpg"
+            },
+            {
+              "time": 23.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-022.jpg"
+            },
+            {
+              "time": 23.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-025.jpg"
+            },
+            {
+              "time": 24.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-028.jpg"
+            },
+            {
+              "time": 24.467,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-031.jpg"
+            }
+          ],
+          "frame_times": [
+            18.5,
+            19.833,
+            21.1,
+            21.867,
+            22.633,
+            23.4,
+            23.833,
+            24.233,
+            24.467
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "d5e2b7daedcc484cbaca434b19865a6e",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "24.633000:30.900000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "24.633000:30.900000",
+                  "codes": [
+                    "description_locomotion_conflicts_with_subject_evidence"
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "18.500000:24.633000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "24.633000:30.900000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "27.767000:29.200000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "29.200000:30.567000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "30.900000:38.367000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "24.633000:30.900000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "visible_text[2].evidence_times",
+                  "times": [
+                    29.033,
+                    29.533
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "24.633000:30.900000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "c7379e7402802e94c240b258ad947a774976abe5f3682241a916a5f739eda90c"
+        },
+        {
+          "collection": "content_segments",
+          "index": 2,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "24.633000:30.900000",
+          "start": 24.633,
+          "end": 30.9,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "54a2798d6914708c855c04304c97150e93054816f9733ddd00dc3527c8beb3ed",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 24.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-032.jpg"
+            },
+            {
+              "time": 25.867,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-034.jpg"
+            },
+            {
+              "time": 26.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-035.jpg"
+            },
+            {
+              "time": 27.767,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-037.jpg"
+            },
+            {
+              "time": 28.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-038.jpg"
+            },
+            {
+              "time": 29.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-040.jpg"
+            },
+            {
+              "time": 29.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-042.jpg"
+            },
+            {
+              "time": 30.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-043.jpg"
+            },
+            {
+              "time": 30.733,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-045.jpg"
+            }
+          ],
+          "frame_times": [
+            24.633,
+            25.867,
+            26.633,
+            27.767,
+            28.833,
+            29.2,
+            29.9,
+            30.233,
+            30.733
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "d5e2b7daedcc484cbaca434b19865a6e",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "24.633000:30.900000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "24.633000:30.900000",
+                  "codes": [
+                    "description_locomotion_conflicts_with_subject_evidence"
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "18.500000:24.633000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "24.633000:30.900000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "27.767000:29.200000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "29.200000:30.567000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "30.900000:38.367000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "24.633000:30.900000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "visible_text[2].evidence_times",
+                  "times": [
+                    29.033,
+                    29.533
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "24.633000:30.900000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "reconcile_1",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "e55934378eb8a950242ff1e8a4b6e4406871c45e91266a5b4cde1b0aa1445761"
+        },
+        {
+          "collection": "content_segments",
+          "index": 3,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "30.900000:38.367000",
+          "start": 30.9,
+          "end": 38.367,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "61f9cd242ac79e70dabd7b79cbcf5441251e7b03063536c872d2142470a124d8",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 30.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-046.jpg"
+            },
+            {
+              "time": 31.7,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-047.jpg"
+            },
+            {
+              "time": 32.933,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-048.jpg"
+            },
+            {
+              "time": 35.3,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-050.jpg"
+            },
+            {
+              "time": 35.667,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-051.jpg"
+            },
+            {
+              "time": 35.967,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-052.jpg"
+            },
+            {
+              "time": 36.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-054.jpg"
+            },
+            {
+              "time": 37.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-055.jpg"
+            },
+            {
+              "time": 38.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-056.jpg"
+            }
+          ],
+          "frame_times": [
+            30.9,
+            31.7,
+            32.933,
+            35.3,
+            35.667,
+            35.967,
+            36.833,
+            37.5,
+            38.2
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "d5e2b7daedcc484cbaca434b19865a6e",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "24.633000:30.900000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "24.633000:30.900000",
+                  "codes": [
+                    "description_locomotion_conflicts_with_subject_evidence"
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "18.500000:24.633000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "24.633000:30.900000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "27.767000:29.200000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "29.200000:30.567000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "30.900000:38.367000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "24.633000:30.900000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "visible_text[2].evidence_times",
+                  "times": [
+                    29.033,
+                    29.533
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "24.633000:30.900000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "8a621bae509825b3428b201ab07df043887598c8c266eb3079c44c96d1fb1471"
+        },
+        {
+          "collection": "content_segments",
+          "index": 6,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "57.600000:63.700000",
+          "start": 57.6,
+          "end": 63.7,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "aa183ba724b4bc4148a98290a9a6df7499a5a0846aac866ad3a3af166976ebc5",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 57.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-092.jpg"
+            },
+            {
+              "time": 58.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-093.jpg"
+            },
+            {
+              "time": 59.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-094.jpg"
+            },
+            {
+              "time": 59.433,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-095.jpg"
+            },
+            {
+              "time": 59.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-096.jpg"
+            },
+            {
+              "time": 61.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-098.jpg"
+            },
+            {
+              "time": 62.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-099.jpg"
+            },
+            {
+              "time": 63.3,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-100.jpg"
+            },
+            {
+              "time": 63.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-101.jpg"
+            }
+          ],
+          "frame_times": [
+            57.6,
+            58.4,
+            59.2,
+            59.433,
+            59.9,
+            61.9,
+            62.6,
+            63.3,
+            63.4
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "66.700000:72.600000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "66.700000:72.600000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        66.867
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "57.600000:63.700000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "66.700000:72.600000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "66.867000:68.767000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "72.600000:81.000000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "66.700000:72.600000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    67.367
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    67.367
+                  ]
+                },
+                {
+                  "field": "visible_text[0].evidence_times",
+                  "times": [
+                    66.867,
+                    67.367,
+                    67.7
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "72.600000:81.000000",
+              "codes": [
+                "description_locomotion_conflicts_with_subject_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "66.700000:72.600000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "8611d5dc50b95047b9b36f3091bc053d688e1a2dc835aef1fdf940486d40d59e"
+        },
+        {
+          "collection": "content_segments",
+          "index": 8,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "66.700000:72.600000",
+          "start": 66.7,
+          "end": 72.6,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "df26c3fdb8be696b85173aeb8b1b34edc6b00473fdd4283542cfcbd728885408",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 66.7,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-106.jpg"
+            },
+            {
+              "time": 67.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-108.jpg"
+            },
+            {
+              "time": 67.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-110.jpg"
+            },
+            {
+              "time": 68.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-112.jpg"
+            },
+            {
+              "time": 68.933,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-114.jpg"
+            },
+            {
+              "time": 69.767,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-117.jpg"
+            },
+            {
+              "time": 70.8,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-119.jpg"
+            },
+            {
+              "time": 71.333,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-121.jpg"
+            },
+            {
+              "time": 72.433,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-123.jpg"
+            }
+          ],
+          "frame_times": [
+            66.7,
+            67.2,
+            67.533,
+            68.233,
+            68.933,
+            69.767,
+            70.8,
+            71.333,
+            72.433
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "66.700000:72.600000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "66.700000:72.600000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        66.867
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "57.600000:63.700000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "66.700000:72.600000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "66.867000:68.767000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "72.600000:81.000000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "66.700000:72.600000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    67.367
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    67.367
+                  ]
+                },
+                {
+                  "field": "visible_text[0].evidence_times",
+                  "times": [
+                    66.867,
+                    67.367,
+                    67.7
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "72.600000:81.000000",
+              "codes": [
+                "description_locomotion_conflicts_with_subject_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "66.700000:72.600000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "reconcile_1",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "2fab2ce224634a17d8bc233da6e59b94acc6246de394fae6b8ff0505f5405d58"
+        },
+        {
+          "collection": "content_segments",
+          "index": 9,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "72.600000:81.000000",
+          "start": 72.6,
+          "end": 81.0,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "6efaac7d1c6e35028e73f691a61abd3f69d6dbbec14acb51e44991585e892574",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 72.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-124.jpg"
+            },
+            {
+              "time": 75.3,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-126.jpg"
+            },
+            {
+              "time": 75.333,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-127.jpg"
+            },
+            {
+              "time": 75.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-128.jpg"
+            },
+            {
+              "time": 78.8,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-130.jpg"
+            },
+            {
+              "time": 79.267,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-132.jpg"
+            },
+            {
+              "time": 79.7,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-133.jpg"
+            },
+            {
+              "time": 80.3,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-134.jpg"
+            },
+            {
+              "time": 80.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-136.jpg"
+            }
+          ],
+          "frame_times": [
+            72.6,
+            75.3,
+            75.333,
+            75.5,
+            78.8,
+            79.267,
+            79.7,
+            80.3,
+            80.6
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "66.700000:72.600000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "66.700000:72.600000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        66.867
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "57.600000:63.700000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "66.700000:72.600000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "66.867000:68.767000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "72.600000:81.000000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "66.700000:72.600000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    67.367
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    67.367
+                  ]
+                },
+                {
+                  "field": "visible_text[0].evidence_times",
+                  "times": [
+                    66.867,
+                    67.367,
+                    67.7
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "72.600000:81.000000",
+              "codes": [
+                "description_locomotion_conflicts_with_subject_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "66.700000:72.600000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "47318cb9592d3dac1a84a3aa72dd317b1996887731a70df3b221d11d61bdd18d"
+        },
+        {
+          "collection": "content_segments",
+          "index": 12,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "97.567000:104.600000",
+          "start": 97.567,
+          "end": 104.6,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "2c396988859249c9f2347fc65257e87ff79336ab0bb9e4243af6f354489e3f0c",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 97.567,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-179.jpg"
+            },
+            {
+              "time": 99.067,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-180.jpg"
+            },
+            {
+              "time": 99.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-181.jpg"
+            },
+            {
+              "time": 101.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-182.jpg"
+            },
+            {
+              "time": 101.567,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-183.jpg"
+            },
+            {
+              "time": 103.033,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-184.jpg"
+            },
+            {
+              "time": 103.067,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-185.jpg"
+            },
+            {
+              "time": 104.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-186.jpg"
+            }
+          ],
+          "frame_times": [
+            97.567,
+            99.067,
+            99.5,
+            101.4,
+            101.567,
+            103.033,
+            103.067,
+            104.533
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "97.567000:104.600000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "115.833000:120.300000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "128.100000:131.733000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "3609c400ee559034b39c75c884f2e4b74a1a7e1ee0bbea0c5ce0649b9360dc06"
+        },
+        {
+          "collection": "content_segments",
+          "index": 15,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "115.833000:120.300000",
+          "start": 115.833,
+          "end": 120.3,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "f0196e5c5293f871b057279aa1189a02b94795b9dda9a1e719a828d339fdcb50",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 115.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-204.jpg"
+            },
+            {
+              "time": 116.3,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-205.jpg"
+            },
+            {
+              "time": 116.8,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-206.jpg"
+            },
+            {
+              "time": 116.967,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-207.jpg"
+            },
+            {
+              "time": 117.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-208.jpg"
+            },
+            {
+              "time": 118.333,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-209.jpg"
+            },
+            {
+              "time": 118.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-210.jpg"
+            },
+            {
+              "time": 118.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-211.jpg"
+            },
+            {
+              "time": 119.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-212.jpg"
+            }
+          ],
+          "frame_times": [
+            115.833,
+            116.3,
+            116.8,
+            116.967,
+            117.633,
+            118.333,
+            118.5,
+            118.9,
+            119.4
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "97.567000:104.600000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "115.833000:120.300000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "128.100000:131.733000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "6e5b83abff95547fcb51e2762a1dfd2d5ffe6b51f4d8909de6d68635e1db0e77"
+        },
+        {
+          "collection": "content_segments",
+          "index": 17,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "128.100000:131.733000",
+          "start": 128.1,
+          "end": 131.733,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "e1db238af93858094e9c31d753bd94757373fa84e3cfe31b4c4909d5298ca7c6",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 128.1,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-223.jpg"
+            },
+            {
+              "time": 129.033,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-224.jpg"
+            },
+            {
+              "time": 129.733,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-225.jpg"
+            },
+            {
+              "time": 129.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-226.jpg"
+            },
+            {
+              "time": 130.733,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-227.jpg"
+            },
+            {
+              "time": 130.767,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-228.jpg"
+            },
+            {
+              "time": 131.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-229.jpg"
+            },
+            {
+              "time": 131.567,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-230.jpg"
+            }
+          ],
+          "frame_times": [
+            128.1,
+            129.033,
+            129.733,
+            129.9,
+            130.733,
+            130.767,
+            131.233,
+            131.567
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "97.567000:104.600000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "115.833000:120.300000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "128.100000:131.733000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "2885903f977531656aea653b8efc0aa10adf09478f344f0f381c52a51d12a85e"
+        },
+        {
+          "collection": "content_segments",
+          "index": 18,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "131.733000:137.100000",
+          "start": 131.733,
+          "end": 137.1,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "3210a6404a332639fd728a3600db7ae19a905039e326cadd743d223f291a5c7c",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 131.733,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-231.jpg"
+            },
+            {
+              "time": 132.033,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-232.jpg"
+            },
+            {
+              "time": 132.8,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-233.jpg"
+            },
+            {
+              "time": 133.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-235.jpg"
+            },
+            {
+              "time": 134.467,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-236.jpg"
+            },
+            {
+              "time": 134.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-237.jpg"
+            },
+            {
+              "time": 135.433,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-239.jpg"
+            },
+            {
+              "time": 136.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-240.jpg"
+            },
+            {
+              "time": 136.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-241.jpg"
+            }
+          ],
+          "frame_times": [
+            131.733,
+            132.033,
+            132.8,
+            133.6,
+            134.467,
+            134.633,
+            135.433,
+            136.233,
+            136.4
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section",
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        148.1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": true,
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "138.033000:145.733000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 138.033,
+                      "end": 140.367,
+                      "frame_times": [
+                        138.033,
+                        139.867
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 138.033,
+                          "to": 139.867,
+                          "delta_seconds": 1.834
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 140.367,
+                      "end": 141.167,
+                      "frame_times": [
+                        140.8
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 141.167,
+                      "end": 142.0,
+                      "frame_times": [
+                        141.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 142.0,
+                      "end": 142.767,
+                      "frame_times": [
+                        142.667
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 142.767,
+                      "end": 144.2,
+                      "frame_times": [
+                        143.6
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 144.2,
+                      "end": 144.633,
+                      "frame_times": [
+                        144.5
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 144.633,
+                      "end": 145.233,
+                      "frame_times": [
+                        144.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 7,
+                      "start": 145.233,
+                      "end": 145.633,
+                      "frame_times": [
+                        145.567
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 8,
+                      "start": 145.633,
+                      "end": 145.733,
+                      "frame_times": [],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 1,
+                  "cited_subject_times": [
+                    142.667,
+                    143.6
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    141.933,
+                    142.667
+                  ],
+                  "cited_motion_same_shot_pairs": [],
+                  "partial_text": [
+                    {
+                      "text": "剑山市场 72 号 501",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    }
+                  ],
+                  "clear_text": [
+                    {
+                      "text": "去感受路",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        138.033
+                      ]
+                    },
+                    {
+                      "text": "NO. 4",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    },
+                    {
+                      "text": "梦想可以大",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        141.933
+                      ]
+                    },
+                    {
+                      "text": "但第一步总是小的",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        143.6
+                      ]
+                    },
+                    {
+                      "text": "找到啦",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        144.5,
+                        144.933,
+                        145.567
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 148.4,
+                      "end": 148.467,
+                      "frame_times": [
+                        148.4
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 148.467,
+                      "end": 149.267,
+                      "frame_times": [
+                        148.9
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 149.267,
+                      "end": 150.1,
+                      "frame_times": [
+                        149.367
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 150.1,
+                      "end": 150.733,
+                      "frame_times": [
+                        150.2,
+                        150.567
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 150.2,
+                          "to": 150.567,
+                          "delta_seconds": 0.367
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 150.733,
+                      "end": 151.3,
+                      "frame_times": [
+                        150.833
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 151.3,
+                      "end": 151.733,
+                      "frame_times": [
+                        151.4,
+                        151.667
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 151.4,
+                          "to": 151.667,
+                          "delta_seconds": 0.267
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 151.733,
+                      "end": 152.467,
+                      "frame_times": [
+                        152.133
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 2,
+                  "cited_subject_times": [
+                    148.9
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    150.2,
+                    150.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 150.2,
+                      "to": 150.567
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "能够拍到世界的另一面",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        148.4
+                      ]
+                    },
+                    {
+                      "text": "呈现给你",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        149.367
+                      ]
+                    },
+                    {
+                      "text": "是我们的荣幸",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        150.833,
+                        151.4
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+          "section_sources": {
+            "131.733000:137.100000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "134.633000:136.233000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "138.033000:145.733000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            },
+            "145.967000:148.400000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "148.400000:152.467000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "131.733000:137.100000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "138.033000:145.733000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            },
+            {
+              "id": "148.400000:152.467000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "138.033000:145.733000",
+            "148.400000:152.467000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "23383c302dec8d178b8d245730fbc1aa742d30afefaf01d955ff6b8c762f657f"
+        },
+        {
+          "collection": "content_segments",
+          "index": 19,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "138.033000:145.733000",
+          "start": 138.033,
+          "end": 145.733,
+          "changed_fields": [
+            "description",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "3b37cef3116bd200b6f2712e1293433006e96fbf2584da62b6731a705efbd078",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 138.033,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-243.jpg"
+            },
+            {
+              "time": 139.867,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-247.jpg"
+            },
+            {
+              "time": 140.8,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-250.jpg"
+            },
+            {
+              "time": 141.933,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-254.jpg"
+            },
+            {
+              "time": 142.667,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-257.jpg"
+            },
+            {
+              "time": 143.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-261.jpg"
+            },
+            {
+              "time": 144.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-265.jpg"
+            },
+            {
+              "time": 144.933,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-268.jpg"
+            },
+            {
+              "time": 145.567,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-272.jpg"
+            }
+          ],
+          "frame_times": [
+            138.033,
+            139.867,
+            140.8,
+            141.933,
+            142.667,
+            143.6,
+            144.5,
+            144.933,
+            145.567
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section",
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        148.1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": true,
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "138.033000:145.733000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 138.033,
+                      "end": 140.367,
+                      "frame_times": [
+                        138.033,
+                        139.867
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 138.033,
+                          "to": 139.867,
+                          "delta_seconds": 1.834
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 140.367,
+                      "end": 141.167,
+                      "frame_times": [
+                        140.8
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 141.167,
+                      "end": 142.0,
+                      "frame_times": [
+                        141.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 142.0,
+                      "end": 142.767,
+                      "frame_times": [
+                        142.667
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 142.767,
+                      "end": 144.2,
+                      "frame_times": [
+                        143.6
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 144.2,
+                      "end": 144.633,
+                      "frame_times": [
+                        144.5
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 144.633,
+                      "end": 145.233,
+                      "frame_times": [
+                        144.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 7,
+                      "start": 145.233,
+                      "end": 145.633,
+                      "frame_times": [
+                        145.567
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 8,
+                      "start": 145.633,
+                      "end": 145.733,
+                      "frame_times": [],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 1,
+                  "cited_subject_times": [
+                    142.667,
+                    143.6
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    141.933,
+                    142.667
+                  ],
+                  "cited_motion_same_shot_pairs": [],
+                  "partial_text": [
+                    {
+                      "text": "剑山市场 72 号 501",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    }
+                  ],
+                  "clear_text": [
+                    {
+                      "text": "去感受路",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        138.033
+                      ]
+                    },
+                    {
+                      "text": "NO. 4",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    },
+                    {
+                      "text": "梦想可以大",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        141.933
+                      ]
+                    },
+                    {
+                      "text": "但第一步总是小的",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        143.6
+                      ]
+                    },
+                    {
+                      "text": "找到啦",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        144.5,
+                        144.933,
+                        145.567
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 148.4,
+                      "end": 148.467,
+                      "frame_times": [
+                        148.4
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 148.467,
+                      "end": 149.267,
+                      "frame_times": [
+                        148.9
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 149.267,
+                      "end": 150.1,
+                      "frame_times": [
+                        149.367
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 150.1,
+                      "end": 150.733,
+                      "frame_times": [
+                        150.2,
+                        150.567
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 150.2,
+                          "to": 150.567,
+                          "delta_seconds": 0.367
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 150.733,
+                      "end": 151.3,
+                      "frame_times": [
+                        150.833
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 151.3,
+                      "end": 151.733,
+                      "frame_times": [
+                        151.4,
+                        151.667
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 151.4,
+                          "to": 151.667,
+                          "delta_seconds": 0.267
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 151.733,
+                      "end": 152.467,
+                      "frame_times": [
+                        152.133
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 2,
+                  "cited_subject_times": [
+                    148.9
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    150.2,
+                    150.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 150.2,
+                      "to": 150.567
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "能够拍到世界的另一面",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        148.4
+                      ]
+                    },
+                    {
+                      "text": "呈现给你",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        149.367
+                      ]
+                    },
+                    {
+                      "text": "是我们的荣幸",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        150.833,
+                        151.4
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+          "batch_source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+          "section_sources": {
+            "131.733000:137.100000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "134.633000:136.233000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "138.033000:145.733000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            },
+            "145.967000:148.400000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "148.400000:152.467000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "131.733000:137.100000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "138.033000:145.733000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            },
+            {
+              "id": "148.400000:152.467000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "138.033000:145.733000",
+            "148.400000:152.467000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+            "stage": "reconcile_2",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "7ced9a33dd23d4453e1a6010e224d78a0b31e2468bf2c76e8b94dafff3b82177"
+        },
+        {
+          "collection": "content_segments",
+          "index": 20,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "145.967000:148.400000",
+          "start": 145.967,
+          "end": 148.4,
+          "changed_fields": [
+            "description",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "136ef1cc29950ae871ffc9a0dabe645b8e8815ecc402117fa18b4fe3e7bec75f",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 145.967,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-275.jpg"
+            },
+            {
+              "time": 146.1,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-277.jpg"
+            },
+            {
+              "time": 146.133,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-278.jpg"
+            },
+            {
+              "time": 146.267,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-279.jpg"
+            },
+            {
+              "time": 146.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-281.jpg"
+            },
+            {
+              "time": 146.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-283.jpg"
+            },
+            {
+              "time": 147.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-284.jpg"
+            },
+            {
+              "time": 147.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-285.jpg"
+            },
+            {
+              "time": 148.1,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-287.jpg"
+            }
+          ],
+          "frame_times": [
+            145.967,
+            146.1,
+            146.133,
+            146.267,
+            146.633,
+            146.9,
+            147.233,
+            147.6,
+            148.1
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section",
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        148.1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": true,
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "138.033000:145.733000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 138.033,
+                      "end": 140.367,
+                      "frame_times": [
+                        138.033,
+                        139.867
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 138.033,
+                          "to": 139.867,
+                          "delta_seconds": 1.834
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 140.367,
+                      "end": 141.167,
+                      "frame_times": [
+                        140.8
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 141.167,
+                      "end": 142.0,
+                      "frame_times": [
+                        141.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 142.0,
+                      "end": 142.767,
+                      "frame_times": [
+                        142.667
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 142.767,
+                      "end": 144.2,
+                      "frame_times": [
+                        143.6
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 144.2,
+                      "end": 144.633,
+                      "frame_times": [
+                        144.5
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 144.633,
+                      "end": 145.233,
+                      "frame_times": [
+                        144.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 7,
+                      "start": 145.233,
+                      "end": 145.633,
+                      "frame_times": [
+                        145.567
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 8,
+                      "start": 145.633,
+                      "end": 145.733,
+                      "frame_times": [],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 1,
+                  "cited_subject_times": [
+                    142.667,
+                    143.6
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    141.933,
+                    142.667
+                  ],
+                  "cited_motion_same_shot_pairs": [],
+                  "partial_text": [
+                    {
+                      "text": "剑山市场 72 号 501",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    }
+                  ],
+                  "clear_text": [
+                    {
+                      "text": "去感受路",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        138.033
+                      ]
+                    },
+                    {
+                      "text": "NO. 4",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    },
+                    {
+                      "text": "梦想可以大",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        141.933
+                      ]
+                    },
+                    {
+                      "text": "但第一步总是小的",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        143.6
+                      ]
+                    },
+                    {
+                      "text": "找到啦",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        144.5,
+                        144.933,
+                        145.567
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 148.4,
+                      "end": 148.467,
+                      "frame_times": [
+                        148.4
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 148.467,
+                      "end": 149.267,
+                      "frame_times": [
+                        148.9
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 149.267,
+                      "end": 150.1,
+                      "frame_times": [
+                        149.367
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 150.1,
+                      "end": 150.733,
+                      "frame_times": [
+                        150.2,
+                        150.567
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 150.2,
+                          "to": 150.567,
+                          "delta_seconds": 0.367
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 150.733,
+                      "end": 151.3,
+                      "frame_times": [
+                        150.833
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 151.3,
+                      "end": 151.733,
+                      "frame_times": [
+                        151.4,
+                        151.667
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 151.4,
+                          "to": 151.667,
+                          "delta_seconds": 0.267
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 151.733,
+                      "end": 152.467,
+                      "frame_times": [
+                        152.133
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 2,
+                  "cited_subject_times": [
+                    148.9
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    150.2,
+                    150.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 150.2,
+                      "to": 150.567
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "能够拍到世界的另一面",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        148.4
+                      ]
+                    },
+                    {
+                      "text": "呈现给你",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        149.367
+                      ]
+                    },
+                    {
+                      "text": "是我们的荣幸",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        150.833,
+                        151.4
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+          "section_sources": {
+            "131.733000:137.100000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "134.633000:136.233000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "138.033000:145.733000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            },
+            "145.967000:148.400000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "148.400000:152.467000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "131.733000:137.100000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "138.033000:145.733000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            },
+            {
+              "id": "148.400000:152.467000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "138.033000:145.733000",
+            "148.400000:152.467000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "c67a920be2bcfaf06e3413467dd0246c1838885f77a91655ca669df3f47ff37a"
+        },
+        {
+          "collection": "content_segments",
+          "index": 21,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "148.400000:152.467000",
+          "start": 148.4,
+          "end": 152.467,
+          "changed_fields": [
+            "description",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "5c7c6cd39797d84b22f4c03eaae7582f1a7e49bca4fa1ba5bfe8a510b13f7a01",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 148.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-288.jpg"
+            },
+            {
+              "time": 148.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-290.jpg"
+            },
+            {
+              "time": 149.367,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-292.jpg"
+            },
+            {
+              "time": 150.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-295.jpg"
+            },
+            {
+              "time": 150.567,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-297.jpg"
+            },
+            {
+              "time": 150.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-299.jpg"
+            },
+            {
+              "time": 151.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-302.jpg"
+            },
+            {
+              "time": 151.667,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-304.jpg"
+            },
+            {
+              "time": 152.133,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-306.jpg"
+            }
+          ],
+          "frame_times": [
+            148.4,
+            148.9,
+            149.367,
+            150.2,
+            150.567,
+            150.833,
+            151.4,
+            151.667,
+            152.133
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section",
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        148.1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": true,
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "138.033000:145.733000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 138.033,
+                      "end": 140.367,
+                      "frame_times": [
+                        138.033,
+                        139.867
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 138.033,
+                          "to": 139.867,
+                          "delta_seconds": 1.834
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 140.367,
+                      "end": 141.167,
+                      "frame_times": [
+                        140.8
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 141.167,
+                      "end": 142.0,
+                      "frame_times": [
+                        141.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 142.0,
+                      "end": 142.767,
+                      "frame_times": [
+                        142.667
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 142.767,
+                      "end": 144.2,
+                      "frame_times": [
+                        143.6
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 144.2,
+                      "end": 144.633,
+                      "frame_times": [
+                        144.5
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 144.633,
+                      "end": 145.233,
+                      "frame_times": [
+                        144.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 7,
+                      "start": 145.233,
+                      "end": 145.633,
+                      "frame_times": [
+                        145.567
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 8,
+                      "start": 145.633,
+                      "end": 145.733,
+                      "frame_times": [],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 1,
+                  "cited_subject_times": [
+                    142.667,
+                    143.6
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    141.933,
+                    142.667
+                  ],
+                  "cited_motion_same_shot_pairs": [],
+                  "partial_text": [
+                    {
+                      "text": "剑山市场 72 号 501",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    }
+                  ],
+                  "clear_text": [
+                    {
+                      "text": "去感受路",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        138.033
+                      ]
+                    },
+                    {
+                      "text": "NO. 4",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    },
+                    {
+                      "text": "梦想可以大",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        141.933
+                      ]
+                    },
+                    {
+                      "text": "但第一步总是小的",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        143.6
+                      ]
+                    },
+                    {
+                      "text": "找到啦",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        144.5,
+                        144.933,
+                        145.567
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 148.4,
+                      "end": 148.467,
+                      "frame_times": [
+                        148.4
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 148.467,
+                      "end": 149.267,
+                      "frame_times": [
+                        148.9
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 149.267,
+                      "end": 150.1,
+                      "frame_times": [
+                        149.367
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 150.1,
+                      "end": 150.733,
+                      "frame_times": [
+                        150.2,
+                        150.567
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 150.2,
+                          "to": 150.567,
+                          "delta_seconds": 0.367
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 150.733,
+                      "end": 151.3,
+                      "frame_times": [
+                        150.833
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 151.3,
+                      "end": 151.733,
+                      "frame_times": [
+                        151.4,
+                        151.667
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 151.4,
+                          "to": 151.667,
+                          "delta_seconds": 0.267
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 151.733,
+                      "end": 152.467,
+                      "frame_times": [
+                        152.133
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 2,
+                  "cited_subject_times": [
+                    148.9
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    150.2,
+                    150.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 150.2,
+                      "to": 150.567
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "能够拍到世界的另一面",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        148.4
+                      ]
+                    },
+                    {
+                      "text": "呈现给你",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        149.367
+                      ]
+                    },
+                    {
+                      "text": "是我们的荣幸",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        150.833,
+                        151.4
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+          "batch_source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+          "section_sources": {
+            "131.733000:137.100000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "134.633000:136.233000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "138.033000:145.733000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            },
+            "145.967000:148.400000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "148.400000:152.467000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "131.733000:137.100000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "138.033000:145.733000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            },
+            {
+              "id": "148.400000:152.467000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "138.033000:145.733000",
+            "148.400000:152.467000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+            "stage": "reconcile_2",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "9d51af1515645f7d5473d33f85dd8ca0c301707185c7a7e19d062a250360cbac"
+        },
+        {
+          "collection": "content_segments",
+          "index": 22,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "152.467000:156.200000",
+          "start": 152.467,
+          "end": 156.2,
+          "changed_fields": [
+            "description",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "48cbea4823064241883ca47a23ddefae2840c1b0013f463db14b30754675c865",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 152.467,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-307.jpg"
+            },
+            {
+              "time": 152.767,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-309.jpg"
+            },
+            {
+              "time": 153.067,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-311.jpg"
+            },
+            {
+              "time": 153.433,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-312.jpg"
+            },
+            {
+              "time": 153.967,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-314.jpg"
+            },
+            {
+              "time": 154.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-316.jpg"
+            },
+            {
+              "time": 154.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-317.jpg"
+            },
+            {
+              "time": 155.367,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-319.jpg"
+            },
+            {
+              "time": 155.867,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-321.jpg"
+            }
+          ],
+          "frame_times": [
+            152.467,
+            152.767,
+            153.067,
+            153.433,
+            153.967,
+            154.533,
+            154.833,
+            155.367,
+            155.867
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            },
+            "verify": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "batch_source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "section_sources": {
+            "152.467000:156.200000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "156.300000:161.733000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "166.300000:175.400000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "175.400000:182.900000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 2,
+          "observation_flags": [],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+            "stage": "verify",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "b2519fb48d15f32cdba845e6981fade80abaca9ce25e9fa0fb677ae8bf706868"
+        },
+        {
+          "collection": "content_segments",
+          "index": 23,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "156.300000:161.733000",
+          "start": 156.3,
+          "end": 161.733,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "cad48fb650c11d452b8f30c84c1ce560fa950555f136443ec550d7fe15f7fdca",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 156.3,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-323.jpg"
+            },
+            {
+              "time": 156.733,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-325.jpg"
+            },
+            {
+              "time": 157.433,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-327.jpg"
+            },
+            {
+              "time": 158.167,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-329.jpg"
+            },
+            {
+              "time": 158.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-331.jpg"
+            },
+            {
+              "time": 158.933,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-334.jpg"
+            },
+            {
+              "time": 159.667,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-336.jpg"
+            },
+            {
+              "time": 160.267,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-338.jpg"
+            },
+            {
+              "time": 160.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-340.jpg"
+            }
+          ],
+          "frame_times": [
+            156.3,
+            156.733,
+            157.433,
+            158.167,
+            158.4,
+            158.933,
+            159.667,
+            160.267,
+            160.9
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            },
+            "verify": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "batch_source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "section_sources": {
+            "152.467000:156.200000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "156.300000:161.733000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "166.300000:175.400000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "175.400000:182.900000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 2,
+          "observation_flags": [],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+            "stage": "verify",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "c2bc5a1313a94bd1756eb006a8d8800b6d4620d20a25c302b0f4e087987e9f4d"
+        },
+        {
+          "collection": "content_segments",
+          "index": 25,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "166.300000:175.400000",
+          "start": 166.3,
+          "end": 175.4,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "75f3db92a3e4c8d30e4b9c24336e7f2158a88e8d6d924c169e9ea724e15eda99",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 166.3,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-347.jpg"
+            },
+            {
+              "time": 166.433,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-348.jpg"
+            },
+            {
+              "time": 167.267,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-349.jpg"
+            },
+            {
+              "time": 167.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-350.jpg"
+            },
+            {
+              "time": 168.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-351.jpg"
+            },
+            {
+              "time": 170.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-352.jpg"
+            },
+            {
+              "time": 174.367,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-353.jpg"
+            }
+          ],
+          "frame_times": [
+            166.3,
+            166.433,
+            167.267,
+            167.9,
+            168.233,
+            170.4,
+            174.367
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            },
+            "verify": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "batch_source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "section_sources": {
+            "152.467000:156.200000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "156.300000:161.733000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "166.300000:175.400000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "175.400000:182.900000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 2,
+          "observation_flags": [],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+            "stage": "verify",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "586cf05be4f28032ed6d6c7e8595bde86d713a0ed652ef456b87d989b111db08"
+        },
+        {
+          "collection": "content_segments",
+          "index": 26,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "175.400000:182.900000",
+          "start": 175.4,
+          "end": 182.9,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "86b76147bf946730bd52b22972af781592505fb9ff2cf7e1c38f519a766bc7d8",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 175.4,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-354.jpg"
+            },
+            {
+              "time": 175.567,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-355.jpg"
+            },
+            {
+              "time": 178.3,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-356.jpg"
+            },
+            {
+              "time": 179.167,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-357.jpg"
+            },
+            {
+              "time": 182.267,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-358.jpg"
+            },
+            {
+              "time": 182.733,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-359.jpg"
+            }
+          ],
+          "frame_times": [
+            175.4,
+            175.567,
+            178.3,
+            179.167,
+            182.267,
+            182.733
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            },
+            "verify": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "batch_source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "section_sources": {
+            "152.467000:156.200000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "156.300000:161.733000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "166.300000:175.400000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "175.400000:182.900000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 2,
+          "observation_flags": [],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+            "stage": "verify",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "5d29b619caeffefaa4e34041178ebbcf2563f78c0b6ff0dd0abe39096f9650aa"
+        },
+        {
+          "collection": "content_segments",
+          "index": 30,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "199.733000:202.600000",
+          "start": 199.733,
+          "end": 202.6,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "e5aa1128774c93b633b1d214d4f806802fb2fc2b6135e4f84670beb209dfe44b",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 199.733,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-384.jpg"
+            },
+            {
+              "time": 200.667,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-385.jpg"
+            },
+            {
+              "time": 201.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-386.jpg"
+            },
+            {
+              "time": 201.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-387.jpg"
+            },
+            {
+              "time": 202.1,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-388.jpg"
+            }
+          ],
+          "frame_times": [
+            199.733,
+            200.667,
+            201.6,
+            201.633,
+            202.1
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            },
+            "verify": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "batch_source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "section_sources": {
+            "187.416500:210.047700": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "199.733000:202.600000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 2,
+          "observation_flags": [
+            {
+              "id": "187.416500:210.047700",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    199.733,
+                    200.667,
+                    201.633,
+                    202.1
+                  ]
+                },
+                {
+                  "field": "visible_text[6].evidence_times",
+                  "times": [
+                    199.733
+                  ]
+                },
+                {
+                  "field": "visible_text[7].evidence_times",
+                  "times": [
+                    201.633,
+                    202.1
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "199.733000:202.600000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    202.6
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    202.6
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    202.6
+                  ]
+                },
+                {
+                  "field": "visible_text[1].evidence_times",
+                  "times": [
+                    202.6
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+            "stage": "verify",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "92115510ed6ac61a65301dc47783df98be750bcfb3b01f8337ca1934fd46775e"
+        },
+        {
+          "collection": "segments",
+          "index": 9,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "27.767000:29.200000",
+          "start": 27.767,
+          "end": 29.2,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "1462717412d45c17e8fc5b75d9da8ee9ab9003253ad52399cdd37b905ea16df0",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 27.767,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-037.jpg"
+            },
+            {
+              "time": 28.833,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-038.jpg"
+            },
+            {
+              "time": 29.033,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-039.jpg"
+            }
+          ],
+          "frame_times": [
+            27.767,
+            28.833,
+            29.033
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "d5e2b7daedcc484cbaca434b19865a6e",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "24.633000:30.900000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "24.633000:30.900000",
+                  "codes": [
+                    "description_locomotion_conflicts_with_subject_evidence"
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "18.500000:24.633000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "24.633000:30.900000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "27.767000:29.200000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "29.200000:30.567000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "30.900000:38.367000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "24.633000:30.900000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "visible_text[2].evidence_times",
+                  "times": [
+                    29.033,
+                    29.533
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "24.633000:30.900000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "34447d2013b20076dc16f731289254521829bb41bab59e5881d5214c15b6064e"
+        },
+        {
+          "collection": "segments",
+          "index": 26,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "66.867000:68.767000",
+          "start": 66.867,
+          "end": 68.767,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "7c7469d60bd4713671adee9c9a9563b02a468e3f722e1521cf4418ef7b56e41d",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 66.867,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-107.jpg"
+            },
+            {
+              "time": 67.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-108.jpg"
+            },
+            {
+              "time": 67.367,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-109.jpg"
+            },
+            {
+              "time": 67.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-110.jpg"
+            },
+            {
+              "time": 67.7,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-111.jpg"
+            },
+            {
+              "time": 68.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-112.jpg"
+            }
+          ],
+          "frame_times": [
+            66.867,
+            67.2,
+            67.367,
+            67.533,
+            67.7,
+            68.233
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "66.700000:72.600000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "66.700000:72.600000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        66.867
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "57.600000:63.700000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "66.700000:72.600000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "66.867000:68.767000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "72.600000:81.000000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "66.700000:72.600000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    67.367
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    67.367
+                  ]
+                },
+                {
+                  "field": "visible_text[0].evidence_times",
+                  "times": [
+                    66.867,
+                    67.367,
+                    67.7
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "72.600000:81.000000",
+              "codes": [
+                "description_locomotion_conflicts_with_subject_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "66.700000:72.600000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "777c6ea3d771db0b4639f0ed0f1082ce73c4f613ab718f12adaf7010bbcffcbf"
+        },
+        {
+          "collection": "segments",
+          "index": 52,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "134.633000:136.233000",
+          "start": 134.633,
+          "end": 136.233,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "e00cf677749270cf898bd5bb4d895ae90e63100a13fb2a04949bbe09c01615c6",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 134.633,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-237.jpg"
+            },
+            {
+              "time": 134.733,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-238.jpg"
+            },
+            {
+              "time": 135.433,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-239.jpg"
+            }
+          ],
+          "frame_times": [
+            134.633,
+            134.733,
+            135.433
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "evidence_time_not_provided_in_section",
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "invalid_evidence": [
+                    {
+                      "field": "visible_text[0].evidence_times",
+                      "times": [
+                        148.1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "reconcile_2": {
+              "cache_hit": true,
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "138.033000:145.733000",
+                "148.400000:152.467000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "138.033000:145.733000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ]
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "codes": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ]
+                }
+              ],
+              "reasoning_effort": "low",
+              "evidence_diagnostics": [
+                {
+                  "id": "138.033000:145.733000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence",
+                    "description_quote_not_supported_by_clear_visible_text"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 138.033,
+                      "end": 140.367,
+                      "frame_times": [
+                        138.033,
+                        139.867
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 138.033,
+                          "to": 139.867,
+                          "delta_seconds": 1.834
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 140.367,
+                      "end": 141.167,
+                      "frame_times": [
+                        140.8
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 141.167,
+                      "end": 142.0,
+                      "frame_times": [
+                        141.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 142.0,
+                      "end": 142.767,
+                      "frame_times": [
+                        142.667
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 142.767,
+                      "end": 144.2,
+                      "frame_times": [
+                        143.6
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 144.2,
+                      "end": 144.633,
+                      "frame_times": [
+                        144.5
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 144.633,
+                      "end": 145.233,
+                      "frame_times": [
+                        144.933
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 7,
+                      "start": 145.233,
+                      "end": 145.633,
+                      "frame_times": [
+                        145.567
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 8,
+                      "start": 145.633,
+                      "end": 145.733,
+                      "frame_times": [],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 1,
+                  "cited_subject_times": [
+                    142.667,
+                    143.6
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    141.933,
+                    142.667
+                  ],
+                  "cited_motion_same_shot_pairs": [],
+                  "partial_text": [
+                    {
+                      "text": "剑山市场 72 号 501",
+                      "legibility": "partial",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    }
+                  ],
+                  "clear_text": [
+                    {
+                      "text": "去感受路",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        138.033
+                      ]
+                    },
+                    {
+                      "text": "NO. 4",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        139.867
+                      ]
+                    },
+                    {
+                      "text": "梦想可以大",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        141.933
+                      ]
+                    },
+                    {
+                      "text": "但第一步总是小的",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        143.6
+                      ]
+                    },
+                    {
+                      "text": "找到啦",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        144.5,
+                        144.933,
+                        145.567
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                },
+                {
+                  "id": "148.400000:152.467000",
+                  "flags": [
+                    "subject_change_requires_same_shot_temporal_evidence"
+                  ],
+                  "same_shot_frame_groups": [
+                    {
+                      "shot_group": 0,
+                      "start": 148.4,
+                      "end": 148.467,
+                      "frame_times": [
+                        148.4
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 1,
+                      "start": 148.467,
+                      "end": 149.267,
+                      "frame_times": [
+                        148.9
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 2,
+                      "start": 149.267,
+                      "end": 150.1,
+                      "frame_times": [
+                        149.367
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 3,
+                      "start": 150.1,
+                      "end": 150.733,
+                      "frame_times": [
+                        150.2,
+                        150.567
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 150.2,
+                          "to": 150.567,
+                          "delta_seconds": 0.367
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 4,
+                      "start": 150.733,
+                      "end": 151.3,
+                      "frame_times": [
+                        150.833
+                      ],
+                      "adjacent_pairs": []
+                    },
+                    {
+                      "shot_group": 5,
+                      "start": 151.3,
+                      "end": 151.733,
+                      "frame_times": [
+                        151.4,
+                        151.667
+                      ],
+                      "adjacent_pairs": [
+                        {
+                          "from": 151.4,
+                          "to": 151.667,
+                          "delta_seconds": 0.267
+                        }
+                      ]
+                    },
+                    {
+                      "shot_group": 6,
+                      "start": 151.733,
+                      "end": 152.467,
+                      "frame_times": [
+                        152.133
+                      ],
+                      "adjacent_pairs": []
+                    }
+                  ],
+                  "available_adjacent_pair_count": 2,
+                  "cited_subject_times": [
+                    148.9
+                  ],
+                  "cited_subject_same_shot_pairs": [],
+                  "cited_motion_times": [
+                    150.2,
+                    150.567
+                  ],
+                  "cited_motion_same_shot_pairs": [
+                    {
+                      "from": 150.2,
+                      "to": 150.567
+                    }
+                  ],
+                  "partial_text": [],
+                  "clear_text": [
+                    {
+                      "text": "能够拍到世界的另一面",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        148.4
+                      ]
+                    },
+                    {
+                      "text": "呈现给你",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        149.367
+                      ]
+                    },
+                    {
+                      "text": "是我们的荣幸",
+                      "legibility": "clear",
+                      "evidence_times": [
+                        150.833,
+                        151.4
+                      ]
+                    }
+                  ],
+                  "evidence_rules": [
+                    "frame_groups由真实切点分组；只有同一组的不同时间帧才能形成连续动作对照。跨组画面变化不能证明运镜或人物动作。",
+                    "相邻pair表示可供查看的对照，不代表已证明动作；仍须看到主体相对背景的变化或步态，不能只补上时间戳来通过校验。",
+                    "单帧只能支持该帧可见的场景与姿态，不能据此肯定跑动、步行、走出、转身过程或连续姿态变化。",
+                    "若现有对照不能证明某动作，删去description和subject_observation中的肯定动作断言，保留可见事实与不确定性。",
+                    "partial_text不是确定字幕；不得在description作为确定引文。可保留文字存在或未确认的表述，不能补齐模糊字。",
+                    "只有重新查看实际帧确实清晰可辨时，才能将partial改为clear并引用对应帧，不能仅为满足校验升级清晰度。"
+                  ],
+                  "temporal_limit": "当前主体动作引用没有形成同镜头对照；请查看列出的真实pairs后自行判断，若不支持动作就保留单帧可见事实，不得引用未提供的时间。"
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+          "section_sources": {
+            "131.733000:137.100000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "134.633000:136.233000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "138.033000:145.733000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            },
+            "145.967000:148.400000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "148.400000:152.467000": {
+              "source_job_id": "666fe31b5cac4291be1f3ccfdd6d3fed",
+              "stage": "reconcile_2",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "131.733000:137.100000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    134.733
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "138.033000:145.733000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            },
+            {
+              "id": "148.400000:152.467000",
+              "codes": [
+                "subject_change_requires_same_shot_temporal_evidence"
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "138.033000:145.733000",
+            "148.400000:152.467000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "bb1431c2f92d7ab9afbff346557e07051ffc7459a1dcbdd6b4100ba2e8646b7d"
+        },
+        {
+          "collection": "segments",
+          "index": 10,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "29.200000:30.567000",
+          "start": 29.2,
+          "end": 30.567,
+          "changed_fields": [
+            "description",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "88c11c99cacaf196644cc5cc91efa9b2b1a19e1303184c540075a02f8399fd0b",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 29.2,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-040.jpg"
+            },
+            {
+              "time": 29.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-041.jpg"
+            },
+            {
+              "time": 29.9,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-042.jpg"
+            },
+            {
+              "time": 30.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-043.jpg"
+            }
+          ],
+          "frame_times": [
+            29.2,
+            29.533,
+            29.9,
+            30.233
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": true,
+              "source_job_id": "d5e2b7daedcc484cbaca434b19865a6e",
+              "new_provider_calls": 0
+            },
+            "verify": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0
+            },
+            "reconcile_1": {
+              "cache_hit": true,
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "new_provider_calls": 0,
+              "section_ids": [
+                "24.633000:30.900000"
+              ],
+              "validation_flags": [
+                {
+                  "id": "24.633000:30.900000",
+                  "codes": [
+                    "description_locomotion_conflicts_with_subject_evidence"
+                  ]
+                }
+              ]
+            }
+          },
+          "cache_hit": true,
+          "source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "batch_source_job_id": "cc4738471d544c46aca38921de1468ca",
+          "section_sources": {
+            "18.500000:24.633000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "24.633000:30.900000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "reconcile_1",
+              "cache_hit": true
+            },
+            "27.767000:29.200000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "29.200000:30.567000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            },
+            "30.900000:38.367000": {
+              "source_job_id": "cc4738471d544c46aca38921de1468ca",
+              "stage": "verify",
+              "cache_hit": true
+            }
+          },
+          "new_provider_calls": 0,
+          "observation_flags": [
+            {
+              "id": "24.633000:30.900000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    29.533
+                  ]
+                },
+                {
+                  "field": "visible_text[2].evidence_times",
+                  "times": [
+                    29.033,
+                    29.533
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [
+            "24.633000:30.900000"
+          ],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "cc4738471d544c46aca38921de1468ca",
+            "stage": "verify",
+            "cache_hit": true
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "96ffc22b95d206b3f02aae1ba502a2f27bdc813f292c779de2968e281972267e"
+        },
+        {
+          "collection": "segments",
+          "index": 87,
+          "issues": [
+            "speech",
+            "visual"
+          ],
+          "window_id": "187.416500:210.047700",
+          "start": 187.41649999999998,
+          "end": 210.0477,
+          "changed_fields": [
+            "description",
+            "evidence_times",
+            "role",
+            "motion",
+            "visual_verification"
+          ],
+          "before_sha256": "b966a7cd2e388b19095b091eee38daf2315849b5faa906c55ac4c8ef2c285b81",
+          "method": "deepseek_observe_then_verify",
+          "frames": [
+            {
+              "time": 188.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-368.jpg"
+            },
+            {
+              "time": 191.533,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-372.jpg"
+            },
+            {
+              "time": 193.233,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-375.jpg"
+            },
+            {
+              "time": 196.033,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-378.jpg"
+            },
+            {
+              "time": 198.133,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-382.jpg"
+            },
+            {
+              "time": 201.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-386.jpg"
+            },
+            {
+              "time": 202.6,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-389.jpg"
+            },
+            {
+              "time": 205.5,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-392.jpg"
+            },
+            {
+              "time": 210.0,
+              "url": "/api/media/frames/2e2893e271774911a336c8a5aad5923c/45ca95794cbe4371bbbc9bba1908e904/frame-396.jpg"
+            }
+          ],
+          "frame_times": [
+            188.6,
+            191.533,
+            193.233,
+            196.033,
+            198.133,
+            201.6,
+            202.6,
+            205.5,
+            210.0
+          ],
+          "motion_evidence": null,
+          "reasoning_version": 2,
+          "stages": {
+            "observe": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            },
+            "verify": {
+              "cache_hit": false,
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "new_provider_calls": 1
+            }
+          },
+          "cache_hit": false,
+          "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "batch_source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+          "section_sources": {
+            "187.416500:210.047700": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            },
+            "199.733000:202.600000": {
+              "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+              "stage": "verify",
+              "cache_hit": false
+            }
+          },
+          "new_provider_calls": 2,
+          "observation_flags": [
+            {
+              "id": "187.416500:210.047700",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    199.733,
+                    200.667,
+                    201.633,
+                    202.1
+                  ]
+                },
+                {
+                  "field": "visible_text[6].evidence_times",
+                  "times": [
+                    199.733
+                  ]
+                },
+                {
+                  "field": "visible_text[7].evidence_times",
+                  "times": [
+                    201.633,
+                    202.1
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "199.733000:202.600000",
+              "codes": [
+                "evidence_time_not_provided_in_section"
+              ],
+              "invalid_evidence": [
+                {
+                  "field": "evidence_times",
+                  "times": [
+                    202.6
+                  ]
+                },
+                {
+                  "field": "structured_motion.evidence_times",
+                  "times": [
+                    202.6
+                  ]
+                },
+                {
+                  "field": "structured_motion.subject_evidence_times",
+                  "times": [
+                    202.6
+                  ]
+                },
+                {
+                  "field": "visible_text[1].evidence_times",
+                  "times": [
+                    202.6
+                  ]
+                }
+              ]
+            }
+          ],
+          "reconciled_section_ids": [],
+          "risk_reviewed_section_ids": [],
+          "section_source": {
+            "source_job_id": "dd95dbec9a114b6bac7d66f757bc5452",
+            "stage": "verify",
+            "cache_hit": false
+          },
+          "call_count_scope": "batch",
+          "after_sha256": "a5fe0662b92b17a4552700a404dc31dda04803e4bf2e2e6134c0ff5c386303aa"
+        }
+      ],
+      "automatic_model_review": true,
+      "new_provider_calls": 4,
+      "reused": {
+        "shot_detection": true,
+        "transcript": true,
+        "full_analysis_windows": 9,
+        "unchanged_segments": {
+          "content_segments": 15,
+          "segments": 87
+        }
+      }
+    }
+  },
+  "error": null,
+  "payload": {
+    "asset_id": "2e2893e271774911a336c8a5aad5923c",
+    "base_analysis_id": "a13d1ea54cd345f19173a059494393ad",
+    "targets": [
+      {
+        "collection": "content_segments",
+        "index": 1,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 2,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 3,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 6,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 8,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 9,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 12,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 15,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 17,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 18,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 19,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 20,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 21,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 22,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 23,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 25,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 26,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 30,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 9,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 26,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 52,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 10,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 87,
+        "issues": [
+          "speech",
+          "visual"
+        ]
+      }
+    ],
+    "reviewed_edits": [],
+    "automatic": true
+  },
+  "provider_state": {},
+  "id": "dd95dbec9a114b6bac7d66f757bc5452",
+  "created_at": "2026-10-20T16:33:00.321237+00:00",
+  "updated_at": "2026-10-20T16:33:24.308525+00:00"
+}

@@ -1,0 +1,314 @@
+{
+  "created_at": "2026-10-20T16:45:34.768510+00:00",
+  "status": "code_and_provenance_checks_passed",
+  "meaning": "结构、来源、用量和链接检查通过；不是模型事实准确率验收。",
+  "baseline_files": [
+    {
+      "path": "output/reference-comparison-20261020/拉片对照.html",
+      "sha256": "89a48f9c9d25df76c909f25b0dd226d8e6a60fddc599cdda3762f2abeb2c6b5b",
+      "actual_sha256": "89a48f9c9d25df76c909f25b0dd226d8e6a60fddc599cdda3762f2abeb2c6b5b",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/short-usage.json",
+      "sha256": "d0af811b74fe17e80c870d6c0693d3b2afd80be1c3a2b12dbc0f5912f666eff0",
+      "actual_sha256": "d0af811b74fe17e80c870d6c0693d3b2afd80be1c3a2b12dbc0f5912f666eff0",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/short-local-transcript.json",
+      "sha256": "06a548e8e86184a72e2e4827387b7da31e64b62ea79a29e8ffe58a8925d4eabe",
+      "actual_sha256": "06a548e8e86184a72e2e4827387b7da31e64b62ea79a29e8ffe58a8925d4eabe",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/long-local-transcript.json",
+      "sha256": "9e7f9087a547ffd1f5525a8d97c12f88576e11078e7f62f12d3395e95ab6ce1b",
+      "actual_sha256": "9e7f9087a547ffd1f5525a8d97c12f88576e11078e7f62f12d3395e95ab6ce1b",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/short-deepseek.json",
+      "sha256": "8e9036fe0863ed88240899d9ba9f02b54303efdf9c127e1aaf1bb323d99c6552",
+      "actual_sha256": "8e9036fe0863ed88240899d9ba9f02b54303efdf9c127e1aaf1bb323d99c6552",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/long-deepseek.json",
+      "sha256": "69eb076de51c483b0df6b9aad444a26c4e079127361b820f030db614a4f2e5e3",
+      "actual_sha256": "69eb076de51c483b0df6b9aad444a26c4e079127361b820f030db614a4f2e5e3",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/workbench-imported.png",
+      "sha256": "c8a5223c333d3a26cd2ed87271306426550721c3d3e523f50b61587f39ff96ac",
+      "actual_sha256": "c8a5223c333d3a26cd2ed87271306426550721c3d3e523f50b61587f39ff96ac",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/build_comparison.py",
+      "sha256": "b61135473f9d035735cb310502d90b9a60f344520e104991ea3a7e8b5fa4336e",
+      "actual_sha256": "b61135473f9d035735cb310502d90b9a60f344520e104991ea3a7e8b5fa4336e",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/short-import.json",
+      "sha256": "e8fb2d41f9e4c9359b9a96b7fb00f7bc729d13f1146b7725b72bca655b9103fc",
+      "actual_sha256": "e8fb2d41f9e4c9359b9a96b7fb00f7bc729d13f1146b7725b72bca655b9103fc",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/independent-long.json",
+      "sha256": "3fe38da42d36c98b6d2d1a1e4cbd41240d72fe355814d130532e4c115908ddd0",
+      "actual_sha256": "3fe38da42d36c98b6d2d1a1e4cbd41240d72fe355814d130532e4c115908ddd0",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/comparison.json",
+      "sha256": "faad47aaadb52ed221d9538330d593a274775fc8b6724f71c2da7ebc2230fe20",
+      "actual_sha256": "faad47aaadb52ed221d9538330d593a274775fc8b6724f71c2da7ebc2230fe20",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/independent-short.json",
+      "sha256": "a68c4f0545a2e54f9a86971ba6a272b70ff67e9e03785e901861e8eddeab090c",
+      "actual_sha256": "a68c4f0545a2e54f9a86971ba6a272b70ff67e9e03785e901861e8eddeab090c",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/long-ds-input-evidence.jpg",
+      "sha256": "a87657faf6676d8d6e86635d5e62e8e7d0d64de07a76074159dcf9b7b750cb8a",
+      "actual_sha256": "a87657faf6676d8d6e86635d5e62e8e7d0d64de07a76074159dcf9b7b750cb8a",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/long-usage.json",
+      "sha256": "ba8b66be82304e5c1b301d2702f38e5ad0f1fa51677864977b923af6e0ad7fea",
+      "actual_sha256": "ba8b66be82304e5c1b301d2702f38e5ad0f1fa51677864977b923af6e0ad7fea",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-comparison-20261020/long-import.json",
+      "sha256": "85720d33bac49e2b2f08392ed823843bdcf1015eef174cc33730cac912774c9a",
+      "actual_sha256": "85720d33bac49e2b2f08392ed823843bdcf1015eef174cc33730cac912774c9a",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-recovery-receipt.json",
+      "sha256": "8bb6c2f0f473ce7cdd06976254a3c84d618c93a376a8720821c130cb4144806c",
+      "actual_sha256": "8bb6c2f0f473ce7cdd06976254a3c84d618c93a376a8720821c130cb4144806c",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-final-receipt.json",
+      "sha256": "199c2219bf5f43cf0903f04272919a9444c5d2cfd140ee5e7cd0604fa875fb4b",
+      "actual_sha256": "199c2219bf5f43cf0903f04272919a9444c5d2cfd140ee5e7cd0604fa875fb4b",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt2-job.json",
+      "sha256": "1959bcd3e57e79498e3e4bb90548ef44c1fad3ed417f302ef3c1dacf851412c7",
+      "actual_sha256": "1959bcd3e57e79498e3e4bb90548ef44c1fad3ed417f302ef3c1dacf851412c7",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/short-usage.json",
+      "sha256": "44d4d98b211627b14596a283ba25442d3552940f7a471b3f932ca3d09e2af9af",
+      "actual_sha256": "44d4d98b211627b14596a283ba25442d3552940f7a471b3f932ca3d09e2af9af",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/dense-cuts-01.jpg",
+      "sha256": "79b9bdf55fcb07494290118cf0bc0c82a858f2e113767d146f6e5ffc33234ca7",
+      "actual_sha256": "79b9bdf55fcb07494290118cf0bc0c82a858f2e113767d146f6e5ffc33234ca7",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt1-usage.json",
+      "sha256": "c40d0ae098205e9eece9464a2440bf2d9c823620697336a7b82e3b4d88788b83",
+      "actual_sha256": "c40d0ae098205e9eece9464a2440bf2d9c823620697336a7b82e3b4d88788b83",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/dense-cuts-02.jpg",
+      "sha256": "63b665a39d6e8039d1e85e7bcafdad1212bda4fee33c70dfe757c1f58c07d7bf",
+      "actual_sha256": "63b665a39d6e8039d1e85e7bcafdad1212bda4fee33c70dfe757c1f58c07d7bf",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/ending-01.jpg",
+      "sha256": "69ba0f6976c0de40801d85abfac0137ad53e71cc076d7678272b61e33594a5da",
+      "actual_sha256": "69ba0f6976c0de40801d85abfac0137ad53e71cc076d7678272b61e33594a5da",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/home-preview-job.json",
+      "sha256": "9cab71a3e7c5bce5658480e985b0b0673f54c0fae6b504498791fb1982bcdc9a",
+      "actual_sha256": "9cab71a3e7c5bce5658480e985b0b0673f54c0fae6b504498791fb1982bcdc9a",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/acceptance.json",
+      "sha256": "e9addf04743f296814fc950b878747b39892a56753d9489c9331017707b89da4",
+      "actual_sha256": "e9addf04743f296814fc950b878747b39892a56753d9489c9331017707b89da4",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/home-node-usage.json",
+      "sha256": "e5de6504e99daee65167d50cc34a380c56086c191a42be6ad2b4c9b47d0b44cc",
+      "actual_sha256": "e5de6504e99daee65167d50cc34a380c56086c191a42be6ad2b4c9b47d0b44cc",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt1-after.json",
+      "sha256": "5fe72fa1f7eee050b97e78fcca6e24ec0ba30a05b9f6c0cc41e65f2c2b1609f3",
+      "actual_sha256": "5fe72fa1f7eee050b97e78fcca6e24ec0ba30a05b9f6c0cc41e65f2c2b1609f3",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/short-annotated.json",
+      "sha256": "76c444f0af7963879013ec746df32f56abbaca6f7a6fe4975111ae1f1c83e773",
+      "actual_sha256": "76c444f0af7963879013ec746df32f56abbaca6f7a6fe4975111ae1f1c83e773",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/short-job.json",
+      "sha256": "e53a750fa16ce12f6e2090a3a0eb9c1ca976f0ea2114233047fe6a693acf358f",
+      "actual_sha256": "e53a750fa16ce12f6e2090a3a0eb9c1ca976f0ea2114233047fe6a693acf358f",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/comparison.json",
+      "sha256": "cae6cca37d6ea4ada3a3498cb1ae5089648ef9beb0a0a35bcb935e4ac89da5cc",
+      "actual_sha256": "cae6cca37d6ea4ada3a3498cb1ae5089648ef9beb0a0a35bcb935e4ac89da5cc",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/short-after.json",
+      "sha256": "2f0a3a17450882e8f7a6e1967e624403c310b863f90d682fdfcd37e9fe1d9d94",
+      "actual_sha256": "2f0a3a17450882e8f7a6e1967e624403c310b863f90d682fdfcd37e9fe1d9d94",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-job.json",
+      "sha256": "5f9acb3e6713a4c081a24db84411621d97cd9dfc32f637dc6e46575035fe978b",
+      "actual_sha256": "5f9acb3e6713a4c081a24db84411621d97cd9dfc32f637dc6e46575035fe978b",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt2-after.json",
+      "sha256": "32ed24c80b04d3c073c104b73cc990348bbe3eab3b3f6c835adb439be5e67b85",
+      "actual_sha256": "32ed24c80b04d3c073c104b73cc990348bbe3eab3b3f6c835adb439be5e67b85",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-after.json",
+      "sha256": "ea2cf3fa04fc56c53302dc83c1465ceb0264e047b0ff2b478d3acd6abd07e403",
+      "actual_sha256": "ea2cf3fa04fc56c53302dc83c1465ceb0264e047b0ff2b478d3acd6abd07e403",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/annotation-receipt.json",
+      "sha256": "28040f2b981f84ffd3520a7fbc818062ce1db82f3297e7154549d28e63fd3846",
+      "actual_sha256": "28040f2b981f84ffd3520a7fbc818062ce1db82f3297e7154549d28e63fd3846",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/rerun-jobs.json",
+      "sha256": "16ced48af57bafa872c228d294a9ff1a30d387aa160d0ba1e0df911afa3c8061",
+      "actual_sha256": "16ced48af57bafa872c228d294a9ff1a30d387aa160d0ba1e0df911afa3c8061",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt1-job.json",
+      "sha256": "07a3b299dca1229d2f5096cca27db20f91d66088d486043ca162a7bb8716eeb7",
+      "actual_sha256": "07a3b299dca1229d2f5096cca27db20f91d66088d486043ca162a7bb8716eeb7",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-attempt2-usage.json",
+      "sha256": "f8f5a4f15e3551eed38556f81d749c28609deceade769b260a830adf35c0e147",
+      "actual_sha256": "f8f5a4f15e3551eed38556f81d749c28609deceade769b260a830adf35c0e147",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-usage.json",
+      "sha256": "73255e5de039c3770728583ecafc7808da0266e97f9e7eb97c46f2f1687b3cd3",
+      "actual_sha256": "73255e5de039c3770728583ecafc7808da0266e97f9e7eb97c46f2f1687b3cd3",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/home-node-job.json",
+      "sha256": "9bdcb6247cf35c134d39653ecaf36f6bcf61bc2193ed8f357f77a9e8e4bfae80",
+      "actual_sha256": "9bdcb6247cf35c134d39653ecaf36f6bcf61bc2193ed8f357f77a9e8e4bfae80",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/优化前后对照.html",
+      "sha256": "50d055141c00f592057f6acc56c70f592b30e844f369c51611301a60011b8e18",
+      "actual_sha256": "50d055141c00f592057f6acc56c70f592b30e844f369c51611301a60011b8e18",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/detection-validation.json",
+      "sha256": "a06e85b18b53dc7134f71a0d7ecd958ff4b966f1a218c9171ead083c86db7527",
+      "actual_sha256": "a06e85b18b53dc7134f71a0d7ecd958ff4b966f1a218c9171ead083c86db7527",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/baseline-hashes.json",
+      "sha256": "153645b4faebeb94897dfa98e3049162c2c37b72c1508fcdf89d7a9c340b8a3d",
+      "actual_sha256": "153645b4faebeb94897dfa98e3049162c2c37b72c1508fcdf89d7a9c340b8a3d",
+      "unchanged": true
+    },
+    {
+      "path": "output/reference-optimization-20261020/long-annotated.json",
+      "sha256": "7d8e640e8ec68c962e122c39015907c08bf7f1aa66c3f7c3cf2230db21ccd280",
+      "actual_sha256": "7d8e640e8ec68c962e122c39015907c08bf7f1aa66c3f7c3cf2230db21ccd280",
+      "unchanged": true
+    }
+  ],
+  "target_hashes_match": true,
+  "untouched_fields_match_v2": true,
+  "previous_manual_records_automatically_rewritten": {
+    "long": 23,
+    "short": 4
+  },
+  "final_analysis_ids": {
+    "long": "777a64cf39884f689bd9d4788f714a8f",
+    "short": "b2c5493023dd46f493c8886b36807afb"
+  },
+  "successful_automatic_repairs": {
+    "long": 1,
+    "short": 4
+  },
+  "unique_target_records": {
+    "long": 23,
+    "short": 12
+  },
+  "unique_local_references": 280,
+  "media_elements": 251,
+  "source_files_unchanged_during_build": 47,
+  "usage": {
+    "reported_tokens": 504497,
+    "calls": 36,
+    "unknown_token_calls": 0,
+    "failed_tasks": 8,
+    "failed_task_tokens": 344804,
+    "response_status_counts": {
+      "completed": 34,
+      "incomplete": 2
+    },
+    "incomplete_response_tokens": 50674
+  },
+  "remaining_fact_issue": {
+    "case": "short",
+    "collection": "content_segments",
+    "index": 2,
+    "start": 4.667,
+    "end": 6.867,
+    "description": "室内咖啡厅短暂镜头后切至贴满照片的灰色门前：一名白色外套、浅色裙装的女子在数字“2”和“1”的门前摆姿势，举起印有照片的小卡片。随后她向画面左侧转身迈步，身体逐渐从左侧离开取景，最后画面出现走廊墙面和镜面陈设。",
+    "subject_relative_movement": "independent_translation"
+  },
+  "browser_opened_for_this_report": false
+}

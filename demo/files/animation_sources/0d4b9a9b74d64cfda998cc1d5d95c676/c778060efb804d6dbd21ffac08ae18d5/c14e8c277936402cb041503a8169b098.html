@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>每个镜头，都能再调整</title>
+<style>
+  html,body{margin:0;padding:0;overflow:hidden;background:#ffffff;}
+  #stage{position:relative;width:1280px;height:720px;overflow:hidden;background:#ffffff;
+    font-family:'PingFang SC','Arial',sans-serif;}
+  .abs{position:absolute;}
+  .title{left:0;width:1280px;text-align:center;color:#0B3C78;
+    font-size:44px;font-weight:600;letter-spacing:2px;}
+  .label{color:#1668C9;font-size:28px;font-weight:500;letter-spacing:1px;white-space:nowrap;}
+  .sub{color:#3B6EA8;font-size:28px;font-weight:400;letter-spacing:1px;white-space:nowrap;}
+  .closing{left:0;width:1280px;text-align:center;color:#0B3C78;font-size:52px;font-weight:600;letter-spacing:3px;}
+  .seg{position:absolute;background:#EAF2FC;border:2px solid #1668C9;border-radius:8px;box-sizing:border-box;}
+  .seg-sel{background:#DCEBFC;border-width:4px;}
+  .seg-new{background:#EAF2FC;border:2px dashed #1668C9;}
+  .seg-deep{background:#1668C9;border-color:#0B3C78;}
+  .seg-deep-label{position:absolute;color:#ffffff;font-size:26px;font-weight:500;letter-spacing:1px;}
+  .timeline{position:absolute;height:2px;background:#BBD3EE;}
+  .tick{position:absolute;width:2px;height:14px;background:#BBD3EE;}
+  #capLine{position:absolute;height:2px;background:#1668C9;}
+  #capText{position:absolute;color:#0B3C78;font-size:30px;font-weight:400;letter-spacing:1px;white-space:nowrap;}
+  .arrowhead{position:absolute;width:0;height:0;}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="title" class="abs title">每个镜头，都能再调整</div>
+
+  <div id="tlLine" class="timeline"></div>
+  <div id="tlTick1" class="tick"></div>
+  <div id="tlTick2" class="tick"></div>
+  <div id="tlTick3" class="tick"></div>
+
+  <div id="seg1" class="seg"></div>
+  <div id="seg2" class="seg seg-sel"></div>
+  <div id="seg3" class="seg"></div>
+  <div id="seg4" class="seg seg-new"></div>
+
+  <div id="deepLabel" class="seg-deep-label">镜头</div>
+
+  <div id="durArrowL" class="abs"></div>
+  <div id="durArrowR" class="abs"></div>
+  <div id="durLabel" class="abs label">时长</div>
+
+  <div id="capLine" class="abs"></div>
+  <div id="capText" class="abs"></div>
+  <div id="capLabel" class="abs label">字幕</div>
+
+  <div id="loopIcon" class="abs"></div>
+  <div id="repLabel" class="abs label">替换镜头</div>
+
+  <div id="closing" class="abs closing">从一个想法，到下一部片子</div>
+</div>
+<script>
+(function(){
+  var stage = document.getElementById('stage');
+
+  var titleEl = document.getElementById('title');
+  var tlLine = document.getElementById('tlLine');
+  var ticks = [document.getElementById('tlTick1'),document.getElementById('tlTick2'),document.getElementById('tlTick3')];
+  var seg1 = document.getElementById('seg1');
+  var seg2 = document.getElementById('seg2');
+  var seg3 = document.getElementById('seg3');
+  var seg4 = document.getElementById('seg4');
+  var deepLabel = document.getElementById('deepLabel');
+  var durArrowL = document.getElementById('durArrowL');
+  var durArrowR = document.getElementById('durArrowR');
+  var durLabel = document.getElementById('durLabel');
+  var capLine = document.getElementById('capLine');
+  var capText = document.getElementById('capText');
+  var capLabel = document.getElementById('capLabel');
+  var loopIcon = document.getElementById('loopIcon');
+  var repLabel = document.getElementById('repLabel');
+  var closingEl = document.getElementById('closing');
+
+  // ---- base geometry ----
+  var TL_Y = 372;            // timeline y
+  var TL_X = 230;            // timeline start x
+  var TL_W = 820;            // timeline width
+  var SEG_H = 58;
+  var SEG_Y = TL_Y - SEG_H - 22;   // segments sit above line
+
+  var S1_X = 280, S1_W = 170;
+  var S2_X = 500, S2_W = 240;      // selected, grows to 320
+  var S3_X = 800, S3_W = 190;
+  var GROW = 80;                    // duration extension
+
+  var SEG1_Y = SEG_Y;
+
+  // timeline elements
+  tlLine.style.left = TL_X+'px';
+  tlLine.style.top = TL_Y+'px';
+  tlLine.style.width = TL_W+'px';
+  var tickXs = [TL_X, TL_X + TL_W/2, TL_X + TL_W];
+  for(var i=0;i<3;i++){
+    ticks[i].style.left = tickXs[i]+'px';
+    ticks[i].style.top = (TL_Y-6)+'px';
+  }
+
+  seg1.style.top = SEG1_Y+'px';
+  seg2.style.top = SEG1_Y+'px';
+  seg3.style.top = SEG1_Y+'px';
+  seg4.style.top = SEG1_Y+'px';
+
+  // deep label inside seg2
+  deepLabel.style.top = (SEG1_Y + 15)+'px';
+  deepLabel.style.left = (S2_X + 22)+'px';
+
+  // duration label above seg2 right edge
+  durLabel.style.top = (SEG1_Y - 52)+'px';
+
+  // caption line below seg2
+  var CAP_Y = TL_Y + 46;
+  capLine.style.left = (S2_X + 20)+'px';
+  capLine.style.top = CAP_Y+'px';
+  capLine.style.width = (S2_W - 40)+'px';
+
+  capText.style.left = (S2_X + 30)+'px';
+  capText.style.top = (CAP_Y + 16)+'px';
+  capText.textContent = '';
+
+  capLabel.style.left = (S2_X + 30)+'px';
+  capLabel.style.top = (CAP_Y + 70)+'px';
+
+  // replace label to right of seg2 near new seg
+  repLabel.style.left = '620px';
+  repLabel.style.top = (SEG1_Y + 16)+'px';
+
+  // loop icon (SVG) inside seg2
+  loopIcon.innerHTML =
+    '<svg width="44" height="44" viewBox="0 0 44 44">'+
+    '<path d="M12 18 A12 12 0 1 1 12 30" fill="none" stroke="#0B3C78" stroke-width="3" stroke-linecap="round"/>'+
+    '<polygon points="12,11 12,25 23,18" fill="#0B3C78"/>'+
+    '</svg>';
+  loopIcon.style.left = (S2_X + S2_W/2 - 22)+'px';
+  loopIcon.style.top = (SEG1_Y + SEG_H/2 - 22)+'px';
+
+  // duration arrowheads drawn as SVG-ish triangles via clip-path boxes
+  durArrowL.innerHTML = '<svg width="20" height="26" viewBox="0 0 20 26"><polygon points="18,2 18,24 2,13" fill="#1668C9"/></svg>';
+  durArrowR.innerHTML = '<svg width="20" height="26" viewBox="0 0 20 26"><polygon points="2,2 2,24 18,13" fill="#1668C9"/></svg>';
+
+  // ---- easing ----
+  function clamp01(x){ return x<0?0:(x>1?1:x); }
+  function easeOutCubic(x){ x=clamp01(x); return 1-Math.pow(1-x,3); }
+  function easeInOutSine(x){ x=clamp01(x); return -(Math.cos(Math.PI*x)-1)/2; }
+  function seg(a,b,t){ return clamp01((t-a)/(b-a)); }
+
+  function setOp(el,o){ el.style.opacity = o; }
+
+  function render(t){
+    t = Math.max(0, Math.min(10, t));
+
+    // ---------------- title ----------------
+    var tIn = easeOutCubic(seg(0.0,0.8,t));
+    var tOut = easeOutCubic(seg(7.3,8.0,t));
+    titleEl.style.top = (34 + (1-tIn)*22 - tOut*30)+'px';
+    titleEl.style.opacity = String(tIn * (1-tOut));
+
+    // ---------------- timeline + segments enter ----------------
+    var tlIn = easeOutCubic(seg(0.5,1.4,t));
+    var tlOut = easeOutCubic(seg(7.3,8.0,t));
+    var tlAlpha = tlIn*(1-tlOut);
+    var tlShift = -tlOut*40;
+    tlLine.style.opacity = String(tlAlpha);
+    tlLine.style.transform = 'scaleX('+tlIn+') translateY('+tlShift+'px)';
+    tlLine.style.transformOrigin = 'left center';
+    for(var i=0;i<3;i++){
+      ticks[i].style.opacity = String(tlAlpha);
+      ticks[i].style.transform = 'translateY('+tlShift+'px)';
+    }
+
+    // base segment positions
+    var s1in = easeOutCubic(seg(0.9,1.7,t));
+    var s2in = easeOutCubic(seg(1.0,1.8,t));
+    var s3in = easeOutCubic(seg(1.1,1.9,t));
+
+    // duration growth of seg2: 2.5 -> 3.8
+    var grow = easeInOutSine(seg(2.5,3.8,t)) * GROW;
+    var s2w = S2_W + grow;
+
+    // replace action 7.5 -> 8.6: seg2 deepens, new segment slides in from right of seg2
+    var repl = easeInOutSine(seg(7.5,8.6,t));
+    // compressed shift: seg3 slides right to make room for new seg, then new seg arrives
+    var s3shift = easeInOutSine(seg(7.5,8.5,t)) * 0;
+
+    // final fade of timeline group at 7.9 - 8.6 partly overlapping; but keep visible until 8.0
+    var groupOut = easeOutCubic(seg(7.9,8.7,t));
+    var groupAlpha = (1-groupOut);
+
+    function placeSeg(el, x, w, inP, alphaMul){
+      el.style.left = x+'px';
+      el.style.width = w+'px';
+      el.style.height = SEG_H+'px';
+      var a = inP*(alphaMul===undefined?1:alphaMul)*groupAlpha;
+      el.style.opacity = String(clamp01(a));
+      el.style.transform = 'translateY('+((1-inP)*16 + tlShift)+'px)';
+    }
+
+    placeSeg(seg1, S1_X, S1_W, s1in);
+    placeSeg(seg2, S2_X, s2w, s2in);
+    placeSeg(seg3, S3_X + s3shift, S3_W, s3in);
+
+    // deep color on seg2 at replace time
+    var deepT = easeOutCubic(seg(7.6,8.3,t));
+    // seg2 background interpolate #DCEBFC -> #1668C9
+    var r1=220,g1=235,b1=252, r2=22,g2=104,b2=201;
+    var rr = Math.round(r1+(r2-r1)*deepT);
+    var gg = Math.round(g1+(g2-g1)*deepT);
+    var bb = Math.round(b1+(b2-b1)*deepT);
+    seg2.style.background = 'rgb('+rr+','+gg+','+bb+')';
+    seg2.style.borderColor = deepT>0.5 ? '#0B3C78' : '#1668C9';
+
+    // deep label fades in when deep starts
+    var dlIn = easeOutCubic(seg(7.7,8.3,t));
+    deepLabel.style.opacity = String(dlIn*groupAlpha*0.95);
+    deepLabel.style.transform = 'translateY('+((1-dlIn)*8)+'px)';
+
+    // loop icon inside seg2: 7.5 in, 8.4 out
+    var lIn = easeOutCubic(seg(7.4,8.0,t));
+    var lOut = easeOutCubic(seg(8.2,8.7,t));
+    loopIcon.style.opacity = String(lIn*(1-lOut)*groupAlpha);
+    loopIcon.style.transform = 'rotate('+((1-lIn)*0 + lOut*90)+'deg) scale('+(0.6+0.4*lIn)+')';
+    loopIcon.style.display = 'block';
+
+    // new segment (seg4) slides in from right of seg2
+    var nIn = easeOutCubic(seg(7.8,8.6,t));
+    var seg4X = S2_X + s2w + 26;
+    placeSeg(seg4, seg4X, 150, nIn);
+    // its dashed border become normal?
+    seg4.style.opacity = String(clamp01(nIn*groupAlpha));
+    seg4.style.transform = 'translateX('+((1-nIn)*60)+'px) translateY('+tlShift+'px)';
+
+    renderDuration(t, grow, groupAlpha, tlShift);
+    renderCaption(t, groupAlpha, tlShift);
+    renderReplaceLabel(t, groupAlpha, tlShift);
+    renderClosing(t);
+  }
+
+  function renderDuration(t, grow, groupAlpha, shift){
+    // arrow appears 2.3 -> 2.9, extends with grow
+    var aIn = easeOutCubic(seg(2.3,2.9,t));
+    var aOut = easeOutCubic(seg(4.6,5.1,t));
+    var a = aIn*(1-aOut)*groupAlpha;
+
+    var baseRight = S2_X + S2_W + grow;  // right edge of seg2
+    var midY = SEG1_Y + SEG_H/2;
+    var armLen = 58;
+    // two-headed arrow centered on right edge
+    durArrowL.style.left = (baseRight - armLen - 10)+'px';
+    durArrowL.style.top = (midY - 13)+'px';
+    durArrowL.style.opacity = String(a);
+    var shake = 1 + 0.0;
+
+    durArrowR.style.left = (baseRight + 10)+'px';
+    durArrowR.style.top = (midY - 13)+'px';
+    durArrowR.style.opacity = String(a);
+
+    // a thin line connecting the two arrowheads
+    // (use durLabel line via border) - draw with durArrowL/R; add small connector
+    var conn = document.getElementById('durConn');
+    if(!conn){
+      conn = document.createElement('div');
+      conn.id='durConn';
+      conn.className='abs';
+      conn.style.height='2px';
+      conn.style.background='#1668C9';
+      stage.appendChild(conn);
+    }
+    conn.style.left = (baseRight - armLen)+'px';
+    conn.style.top = (midY-1)+'px';
+    conn.style.width = (armLen*2)+'px';
+    conn.style.opacity = String(a*0.8);
+
+    var lbIn = easeOutCubic(seg(2.5,3.1,t));
+    var lbOut = easeOutCubic(seg(4.6,5.1,t));
+    var la = lbIn*(1-lbOut)*groupAlpha;
+    durLabel.style.left = (baseRight - 34)+'px';
+    durLabel.style.top = (SEG1_Y - 50 + (1-lbIn)*10)+'px';
+    durLabel.style.opacity = String(la);
+  }
+
+  function renderCaption(t, groupAlpha, shift){
+    // caption line 5.0 -> 7.5ish
+    var liIn = easeOutCubic(seg(4.9,5.4,t));
+    var liOut = easeOutCubic(seg(7.4,7.9,t));
+    var la = liIn*(1-liOut)*groupAlpha;
+    capLine.style.opacity = String(la);
+    capLine.style.transform = 'scaleX('+liIn+')';
+    capLine.style.transformOrigin = 'left center';
+
+    var full = '镜头，可以再调整';
+    // typed from 5.5 to 7.0
+    var p = easeInOutSine(seg(5.5,7.0,t));
+    var n = Math.round(p * full.length);
+    capText.textContent = full.slice(0, n);
+    capText.style.opacity = String(clamp01(p*2)*groupAlpha);
+
+    var lbIn = easeOutCubic(seg(5.1,5.6,t));
+    var lbOut = easeOutCubic(seg(7.4,7.9,t));
+    capLabel.style.opacity = String(lbIn*(1-lbOut)*groupAlpha);
+    capLabel.style.transform = 'translateY('+((1-lbIn)*10)+'px)';
+
+    var clOut = easeOutCubic(seg(7.7,8.2,t));
+    capText.style.opacity = String(clamp01(p*2)*groupAlpha*(1-clOut*0.9));
+    capLabel.style.opacity = String(lbIn*(1-lbOut)*groupAlpha);
+  }
+
+  function renderReplaceLabel(t, groupAlpha, shift){
+    var lIn = easeOutCubic(seg(7.5,8.0,t));
+    var lOut = easeOutCubic(seg(8.5,9.0,t));
+    var a = lIn*(1-lOut)*groupAlpha;
+    repLabel.style.opacity = String(a);
+    repLabel.style.transform = 'translateY('+((1-lIn)*12)+'px)';
+  }
+
+  function renderClosing(t){
+    var cIn = easeOutCubic(seg(8.5,9.3,t));
+    var hold = easeInOutSine(seg(9.0,9.6,t));
+    closingEl.style.opacity = String(cIn);
+    closingEl.style.top = (322 + (1-cIn)*18)+'px';
+    // subtle underline growth
+    var ul = document.getElementById('closeUnderline');
+    if(!ul){
+      ul = document.createElement('div');
+      ul.id='closeUnderline';
+      ul.className='abs';
+      ul.style.height='3px';
+      ul.style.background='#1668C9';
+      ul.style.borderRadius='2px';
+      stage.appendChild(ul);
+    }
+    var w = 360 * easeOutCubic(seg(8.9,9.6,t));
+    ul.style.width = w+'px';
+    ul.style.left = (640 - w/2)+'px';
+    ul.style.top = (392)+'px';
+    ul.style.opacity = String(seg(8.9,9.4,t));
+  }
+
+  window.renderAt = render;
+  render(0);
+})();
+</script>
+</body>
+</html>

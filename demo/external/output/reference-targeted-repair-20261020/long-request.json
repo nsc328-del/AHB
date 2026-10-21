@@ -1,0 +1,209 @@
+{
+  "asset_id": "2e2893e271774911a336c8a5aad5923c",
+  "base_analysis_id": "32a001e2a23d4b0686fe9d6ba4d238c9",
+  "targets": [
+    {
+      "collection": "content_segments",
+      "index": 19,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 20,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 21,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "content_segments",
+      "index": 22,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 10,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    },
+    {
+      "collection": "segments",
+      "index": 87,
+      "issues": [
+        "speech",
+        "visual"
+      ]
+    }
+  ],
+  "reviewed_edits": [
+    {
+      "collection": "content_segments",
+      "index": 1,
+      "expected_sha256": "1151ede739badec5723c7dfbbf8ddf3c3a1b9dbda07ccf5a4daa824420854244",
+      "fields": {
+        "description": "连续并置多重压力画面：人物背影、树林边打电话低头、室内白T恤伏案托腮、暗处弯腰俯身、船上抱头掩面、电脑前疲惫工作。"
+      },
+      "reason": "adjacent_clause_spill"
+    },
+    {
+      "collection": "content_segments",
+      "index": 2,
+      "expected_sha256": "2de18c21f50a5dc083fb704fb38ae0f7d10a17168cabef5f04d2eef150e37bd8",
+      "fields": {
+        "description": "车内逆光剪影与雨中车窗画面转暗，短暂黑场后出现黑底黄色引语字幕卡；随后切到海边日落全景，人物背影走向远处，三脚架长焦相机与太阳形成剪影，画面叠加引语字幕，最后回到开头男子抱镜头微笑对镜。"
+      },
+      "reason": "future_topic_substitution"
+    },
+    {
+      "collection": "content_segments",
+      "index": 3,
+      "expected_sha256": "eabb21a70154c94873e42250ef5418f47b34ad94473fdacf81e4bbc0b135bb1d",
+      "fields": {
+        "description": "戴眼镜青年在海边黄昏对镜头讲述，随后切入橙红晚霞中飞机剪影横越天空、成群飞鸟在浅粉橙天空散开的空镜。"
+      },
+      "reason": "future_clause_substitution"
+    },
+    {
+      "collection": "content_segments",
+      "index": 6,
+      "expected_sha256": "824d9ec7305cdd4b07e238bcbe32e06b33f0ffe3c4ec1cc182791b0e4a74d5e3",
+      "fields": {
+        "description": "男子穿浅灰连帽卫衣、双手插兜站在两片深色镜面墙之间，背景是樱花庭院，画面呈对称纵深；随后切为正面与侧脸近景，他戴黑框眼镜，目光向画外上方移动，神情平静。"
+      },
+      "reason": "adjacent_clause_spill"
+    },
+    {
+      "collection": "content_segments",
+      "index": 8,
+      "expected_sha256": "06067d9c49748a78aa8fb8c30188b7bc8ca3ae14dfd3f081b4de4c4a64a4c4ad",
+      "fields": {
+        "description": "男子走在白色多层办公空间的硬朗线条间，切到抬望近景；再在器材工作室低头操作相机稳定器，切侧脸特写；随后戴耳机坐在飞机客舱靠窗位置望向舷窗外。"
+      },
+      "reason": "future_clause_substitution"
+    },
+    {
+      "collection": "content_segments",
+      "index": 9,
+      "expected_sha256": "a22899414f3084b68f7fed704e118753a3fb480e225f492322e3d3f028b97a7a",
+      "fields": {
+        "description": "男子在爬满藤蔓的砖墙前低头侧脸，在樱花树与石碑庭院中横向行走，随后穿白色卫衣站在帆船上背对镜头望向海面与远船；最后正面近景面对镜头说话并微抬右手。"
+      },
+      "reason": "word_boundary_completion"
+    },
+    {
+      "collection": "content_segments",
+      "index": 12,
+      "expected_sha256": "188b9910fa59942d0fcff8f975684a683af9702c5871786774d425cfe0700c81",
+      "fields": {
+        "description": "男生穿米色T恤、戴口罩站在红砖建筑前人群中手持纸卷，周围工作人员走动；随后回到室内，男子穿黑色T恤在沙发前近景面向镜头说话，镜头先略向下，表情收敛。"
+      },
+      "reason": "past_clause_carryover"
+    },
+    {
+      "collection": "content_segments",
+      "index": 15,
+      "expected_sha256": "ee1af031f9eb3c6b4f029505e07d579c148c2dcff21af62dede83dfe92f69158",
+      "fields": {
+        "description": "男子穿深色连帽外套坐在夜间办公桌前面对笔记本电脑，屏幕蓝光映在镜片上，切侧脸特写；随后在昏暗房间中半躺举着手机，前景有虚化遮挡。"
+      },
+      "reason": "future_clause_substitution"
+    },
+    {
+      "collection": "content_segments",
+      "index": 17,
+      "expected_sha256": "bd602d2d8c773dc5c048603a16b4a2a8097c9be06c4323247d793669be641209",
+      "fields": {
+        "description": "雪原暮色中，几名深色衣物的人围着一只巨大白色气球站立，随后切为高空俯拍，雪地上只有几个人影和放射状脚印。"
+      },
+      "reason": "adjacent_clause_spill"
+    },
+    {
+      "collection": "content_segments",
+      "index": 18,
+      "expected_sha256": "79bc6076e2e68176f37acc148fcf5da805c194c8b21a28285250cbb5578f725f",
+      "fields": {
+        "description": "室内暖光下戴黑框眼镜男子侧脸说话，身旁取暖器发亮；再切到山谷间他穿黑T恤手持相机仰头，背后高山与云层；随后黑场字幕“别急着赶路”。"
+      },
+      "reason": "adjacent_clause_spill"
+    },
+    {
+      "collection": "content_segments",
+      "index": 23,
+      "expected_sha256": "cef8ac439e421dc3c1e0ee45ba324f5b1fc13fb1c7ff35e31a998811b3776144",
+      "fields": {
+        "description": "黑背景日食轮廓、正对镜头内部的环形镜筒与白色反光点、暗场中米黄色块状物与放射状丝缕、白色针状结晶呈放射花形、暗场中半透明绿色微生物漂浮，最后大量白色针状结晶叠化出人物侧脸上半身，前景结晶与抬手动作并置。"
+      },
+      "reason": "past_clause_carryover"
+    },
+    {
+      "collection": "content_segments",
+      "index": 25,
+      "expected_sha256": "8a04ded216cde517c8416838d2aa263e334871158a71636c99d664d23f2ce3e9",
+      "fields": {
+        "description": "从昏暗室内过渡到明亮厨房环境，戴眼镜、穿黑T恤的男子面对镜头讲话，手势丰富，背景白色橱柜与灯带。"
+      },
+      "reason": "same_interval_misparaphrase"
+    },
+    {
+      "collection": "content_segments",
+      "index": 26,
+      "expected_sha256": "0f86bd08696006bc4250b7eb45d0bb3ab8a93e10c3d51ac0e56a282f1389935f",
+      "fields": {
+        "description": "暗色工作室中，另一戴黑框眼镜、穿白色T恤男子面对镜头口述，背景有显示器、黄点灯光与麦克风。"
+      },
+      "reason": "word_boundary_completion"
+    },
+    {
+      "collection": "content_segments",
+      "index": 30,
+      "expected_sha256": "d371d9208a338965dbcbf292b5e4bd9f53c587a5189c41fdb5d218d5383afc14",
+      "fields": {
+        "description": "戴黑框眼镜、穿白色上衣的男子坐在有显示器与黄色灯点的室内环境中近景讲述，画面中逐渐叠加金黄色“无限进步”等相关字幕。"
+      },
+      "reason": "subtitle_as_speech"
+    },
+    {
+      "collection": "segments",
+      "index": 9,
+      "expected_sha256": "4fecd3dc49c173ea6687a5d6208e5366e8645a13938ecbd1968bba6302b3ce67",
+      "fields": {
+        "description": "黑底画面中央出现黄色字幕卡，右上角有平台标识。"
+      },
+      "reason": "subtitle_negation_misread"
+    },
+    {
+      "collection": "segments",
+      "index": 26,
+      "expected_sha256": "6869dc644c71bc54d2bf6c36bbde0bfacefacbd5afa8fd675dc6ab18f9c8dc71",
+      "fields": {
+        "role": "回到日常生活空间"
+      },
+      "reason": "cross_interval_role_attribution"
+    },
+    {
+      "collection": "segments",
+      "index": 52,
+      "expected_sha256": "1451516d59d56ce06e4dc05f2be1b9a86998ec5771d6bdbc610ef29e15fbd874",
+      "fields": {
+        "role": "创作者形象"
+      },
+      "reason": "cross_interval_role_attribution"
+    }
+  ]
+}

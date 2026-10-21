@@ -1,0 +1,63 @@
+{
+  "assets": [
+    {
+      "id": "0cf5d848abe848908be4c6e71750b8d1",
+      "name": "好人缘餐厅_网络实拍测试.mp4",
+      "kind": "video",
+      "duration": 75.8357,
+      "width": 1280,
+      "height": 720,
+      "has_audio": true,
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "size": 19667705,
+      "sha256": "1e9f7b793672bbce11ccc6fbddf652f926eb3b3b1f0bb0d0fc63c7762489e772",
+      "url": "/api/media/assets/662bb4150b6149bc886cd057f769fea9.mp4",
+      "thumbnail_url": "/api/media/previews/0cf5d848abe848908be4c6e71750b8d1.jpg",
+      "source": "upload",
+      "generation_id": null,
+      "purpose": "library",
+      "analysis_status": "queued",
+      "analysis": null,
+      "audio_status": "running",
+      "transcript": null,
+      "created_at": "2026-10-21T06:13:19.048922+00:00",
+      "updated_at": "2026-10-21T06:13:19.592630+00:00",
+      "audio_error": null,
+      "transcription_job_id": "f4606d1a7d1e469282b10b4b0dc164f2",
+      "analysis_error": null,
+      "analysis_job_id": "ca5770cb8467409e9100f3ee59f03b47"
+    }
+  ],
+  "jobs": [
+    {
+      "kind": "transcription",
+      "status": "queued",
+      "progress": 0,
+      "message": "等待处理",
+      "result": null,
+      "error": null,
+      "id": "f4606d1a7d1e469282b10b4b0dc164f2",
+      "created_at": "2026-10-21T06:13:19.073654+00:00",
+      "updated_at": "2026-10-21T06:13:19.073657+00:00",
+      "resumable": false
+    },
+    {
+      "kind": "analysis",
+      "status": "queued",
+      "progress": 0,
+      "message": "等待处理",
+      "result": null,
+      "error": null,
+      "id": "ca5770cb8467409e9100f3ee59f03b47",
+      "created_at": "2026-10-21T06:13:19.092877+00:00",
+      "updated_at": "2026-10-21T06:13:19.092882+00:00",
+      "resumable": false
+    }
+  ],
+  "job_ids": [
+    "f4606d1a7d1e469282b10b4b0dc164f2",
+    "ca5770cb8467409e9100f3ee59f03b47"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "restaurant-A": {
+    "duration": 20.0,
+    "clip_durations": [
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0
+    ],
+    "black_intervals": []
+  },
+  "restaurant-B": {
+    "duration": 20.1,
+    "clip_durations": [
+      4.0,
+      4.1,
+      4.0,
+      4.0,
+      4.0
+    ],
+    "black_intervals": []
+  },
+  "restaurant-C": {
+    "duration": 24.0,
+    "clip_durations": [
+      4.0,
+      3.5,
+      4.0,
+      3.5,
+      3.0,
+      3.0,
+      3.0
+    ],
+    "black_intervals": []
+  },
+  "cafe-B": {
+    "duration": 21.9,
+    "clip_durations": [
+      3.9,
+      3.9,
+      3.9,
+      3.9,
+      3.9,
+      2.4
+    ],
+    "black_intervals": []
+  },
+  "cafe_source_duration": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_type": "video",
+        "duration": "51.120000"
+      },
+      {
+        "index": 1,
+        "codec_type": "audio",
+        "duration": "51.157167"
+      }
+    ],
+    "format": {
+      "duration": "51.157167"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-20",
+  "isolation": "QA data separate; primary user projects unchanged",
+  "real_deepseek": {
+    "calls": 3,
+    "previews": [
+      {
+        "plan_id": "be6e79508f7d4fe2ab8ade43b73c0851",
+        "strategy": "证据先行",
+        "exploration": false,
+        "minimum_batch_distance": 0.333333,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1280,
+              "height": 720
+            },
+            {
+              "codec_name": "aac"
+            }
+          ],
+          "format": {
+            "duration": "6.000000"
+          }
+        }
+      },
+      {
+        "plan_id": "2c17b6c8cba5482ea8bc8d9416a659d9",
+        "strategy": "问题切入",
+        "exploration": false,
+        "minimum_batch_distance": 0.333333,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1280,
+              "height": 720
+            },
+            {
+              "codec_name": "aac"
+            }
+          ],
+          "format": {
+            "duration": "6.000000"
+          }
+        }
+      },
+      {
+        "plan_id": "47962c55d039485491866b43f134802e",
+        "strategy": "探索剪法",
+        "exploration": true,
+        "minimum_batch_distance": 0.333333,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1280,
+              "height": 720
+            },
+            {
+              "codec_name": "aac"
+            }
+          ],
+          "format": {
+            "duration": "6.000000"
+          }
+        }
+      }
+    ],
+    "human_selections": 1,
+    "chosen_render_is_current": true
+  },
+  "regression": {
+    "command": ".venv/bin/python -m unittest discover -s tests -v",
+    "passed": 38,
+    "meaningful_paths": [
+      "3/5 actual FFmpeg previews with mock model",
+      "single failed preview retry without model",
+      "false exploration rejected",
+      "legacy preview adaptation",
+      "historical metric scope and missing values"
+    ]
+  },
+  "browser": [
+    "three real previews played; same player DOM",
+    "reason and selection persisted",
+    "platform and observation detail",
+    "empty dates",
+    "rapid tab reversal",
+    "failed request keeps old chart and tab",
+    "390px no page overflow"
+  ],
+  "main_platform_counts": {
+    "douyin": 194,
+    "xiaohongshu": 155,
+    "channels": 188
+  },
+  "visual_evidence": "output/playwright/branches-20261020/ (candidate-flow.webm and reviewed start/middle/end.png)",
+  "limits": [
+    "No training or audience performance prediction",
+    "Novelty uses comparable editing structure only",
+    "Quality checks cover timeline and playable output, not artistic merit",
+    "No H3 calls"
+  ],
+  "main_service_checked": true,
+  "qa_service_stopped": true,
+  "history_visual_evidence": [
+    "history-flow.webm",
+    "history-start.png",
+    "history-middle.png",
+    "history-end.png",
+    "history-desktop.png",
+    "history-mobile.png"
+  ]
+}

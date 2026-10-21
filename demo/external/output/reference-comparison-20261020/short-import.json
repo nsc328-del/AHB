@@ -1,0 +1,63 @@
+{
+  "assets": [
+    {
+      "id": "bed732a655dd4a8e9a2d2386a964c5a5",
+      "name": "首尔旅行转场｜冷面公主.mp4",
+      "kind": "video",
+      "duration": 12.5667,
+      "width": 576,
+      "height": 1024,
+      "has_audio": true,
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video_codec": "hevc",
+      "audio_codec": "aac",
+      "size": 996138,
+      "sha256": "e6db1150efa795c8799924e796348027358a64200df1193a1fd252bb50b9162c",
+      "url": "/api/media/assets/69e1152b8fe8471fbaac49c0ec6c678e.mp4",
+      "thumbnail_url": "/api/media/previews/bed732a655dd4a8e9a2d2386a964c5a5.jpg",
+      "source": "upload",
+      "generation_id": null,
+      "purpose": "reference",
+      "analysis_status": "running",
+      "analysis": null,
+      "audio_status": "running",
+      "transcript": null,
+      "created_at": "2026-10-20T09:35:01.094564+00:00",
+      "updated_at": "2026-10-20T09:35:01.741446+00:00",
+      "audio_error": null,
+      "transcription_job_id": "77b420bd4fcb4714ba90e443d861f855",
+      "analysis_error": null,
+      "analysis_job_id": "aa1334b1c46a4951b31b07220027dacc"
+    }
+  ],
+  "jobs": [
+    {
+      "kind": "transcription",
+      "status": "queued",
+      "progress": 0,
+      "message": "等待处理",
+      "result": null,
+      "error": null,
+      "id": "77b420bd4fcb4714ba90e443d861f855",
+      "created_at": "2026-10-20T09:35:01.103540+00:00",
+      "updated_at": "2026-10-20T09:35:01.103543+00:00",
+      "resumable": false
+    },
+    {
+      "kind": "reference",
+      "status": "queued",
+      "progress": 0,
+      "message": "等待处理",
+      "result": null,
+      "error": null,
+      "id": "aa1334b1c46a4951b31b07220027dacc",
+      "created_at": "2026-10-20T09:35:01.113282+00:00",
+      "updated_at": "2026-10-20T09:35:01.113286+00:00",
+      "resumable": false
+    }
+  ],
+  "job_ids": [
+    "77b420bd4fcb4714ba90e443d861f855",
+    "aa1334b1c46a4951b31b07220027dacc"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "design": {
+    "palette": {
+      "base": "#FFFFFF",
+      "desk": "#F8F9FC",
+      "accent": "#3044ED",
+      "text": "#242936",
+      "secondary": "#778091",
+      "line": "#E6E9F1"
+    },
+    "type": "PingFang SC/Hiragino Sans GB：40–50px首页标题、13px工作面标题、12–13px节点标题；字体随视口收敛",
+    "composition": "创作标题和导入入口位于上方；素材侧托盘与真实分支画布共同组成一张桌面；次级入口保持轻量。",
+    "review": "保留用户白底蓝色主张，去掉平权模块与默认展开表单，重点只放在可操作分支。"
+  },
+  "action_sentence": "素材或镜头从原抓取点抬起，目标中心接纳替换、间隙接纳插入；邻居轻让位，松手落到真实节点，取消返回来源。",
+  "identities": [
+    {
+      "object": "素材",
+      "identity": "asset.id",
+      "rule": "移动展示快照不复制播放器"
+    },
+    {
+      "object": "镜头",
+      "identity": "branch.id + clip.id",
+      "rule": "替换保留clip id，排序不修改其他分支"
+    },
+    {
+      "object": "节点编辑器",
+      "identity": "clip.id",
+      "rule": "原节点展开并保留输入草稿，旧异步结果不能覆盖新内容"
+    },
+    {
+      "object": "预览任务",
+      "identity": "submission_id + job_id",
+      "rule": "不确定回执只查询同次提交"
+    },
+    {
+      "object": "插入槽",
+      "identity": "当前分支原序列边界",
+      "rule": "仅为命中位置，不作持久节点身份"
+    }
+  ],
+  "critical_checks": [
+    "替换、插入、排序、撤销及其他分支不变",
+    "缩放后命中、画布平移、取消与快速再操作",
+    "节点展开收起与输入保留",
+    "预览实际FFmpeg输出、丢回执恢复、失效素材草稿保留"
+  ],
+  "scope": "仅首页和直接相关交互，不修改其他模块数据或发起模型调用"
+}

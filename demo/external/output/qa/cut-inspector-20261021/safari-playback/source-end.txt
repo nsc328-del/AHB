@@ -1,0 +1,9 @@
+The following is a diff from the previous accessibility tree for Window: "剪辑工作台" with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 148-149
+~									252 按钮 播放
+~									254 文本 已播放：3秒钟
+~									255 滑块 (settable, float) Value: 1, Details: 3秒钟
+~										256 值指示器 1
++			264 图像 FaviconImageView
++			265 文本 Value: 剪辑工作台, ID: UnifiedTabBarButton._titleTextField
+The focused UI element is 218 container 原片片段 5, URL: 127.0.0.1:8787/api/renders/48e1ebb010ac4048b5fb8d3bca9d8436/clips/e1e70dfd849144cbb2eabad352902f24/source

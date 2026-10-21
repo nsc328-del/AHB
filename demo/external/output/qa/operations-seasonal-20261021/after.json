@@ -1,0 +1,855 @@
+{
+  "id": "longlaixia",
+  "revision": 3,
+  "brand": {
+    "name": "隆莱呷卤肉饭",
+    "profile": "台式卤肉饭品牌。内容用于抖音、小红书、视频号门店矩阵。门店拍摄上传，总部制作、审核、分发。当前菜单、价格、优惠及门店地址尚未录入，不在内容中编造。",
+    "sources": [
+      {
+        "title": "南方+：罗麦克与隆莱呷品牌",
+        "date": "2026-09-04",
+        "url": "https://finance.sina.com.cn/roll/2026-09-04/doc-iniqsvkn5822119.shtml"
+      }
+    ]
+  },
+  "annual_plan": {
+    "year": 2026,
+    "status": "draft",
+    "months": [
+      {
+        "month": 1,
+        "theme": "年货季与春节预热",
+        "focus": "春节前先覆盖返乡客、留城客的用餐需求；盘点各店春节营业安排，准备营业告知与年味内容。年货、礼盒只在已有商品时参与。",
+        "events": [
+          {
+            "day": 1,
+            "label": "元旦"
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "theme": "春节营业与返工",
+        "focus": "春节分留城营业、假期出游、节后返工三段安排。营业店突出哪里能吃、怎样到店；写字楼店在复工时恢复工作餐内容。各店营业与优惠先确认。",
+        "events": [
+          {
+            "day": 14,
+            "label": "情人节"
+          },
+          {
+            "day": 16,
+            "label": "除夕"
+          },
+          {
+            "day": 17,
+            "label": "春节"
+          },
+          {
+            "day": 24,
+            "label": "节后返工"
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "theme": "春季开学与通勤",
+        "focus": "校园周边店围绕返校后的日常吃饭、新生认路与同学结伴；写字楼店围绕返工后的固定午餐选择。开学日期按附近学校核对，不全店套学生主题。",
+        "events": [
+          {
+            "day": 3,
+            "label": "元宵"
+          },
+          {
+            "day": 8,
+            "label": "三八节"
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "theme": "春游与五一预热",
+        "focus": "清明短途出游带动商圈、景点周边用餐；提前准备五一门店路线、营业时间与附近游逛内容。社区店保留周末家庭用餐主线。",
+        "events": [
+          {
+            "day": 5,
+            "label": "清明"
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "theme": "五一客流与520",
+        "focus": "五一重点覆盖游客和逛街人群，做商圈吃饭选择与到店指引；520再面向情侣和朋友约饭。双人餐或团购只使用已确认在售内容。",
+        "events": [
+          {
+            "day": 1,
+            "label": "五一"
+          },
+          {
+            "day": 20,
+            "label": "520"
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "theme": "618与毕业季",
+        "focus": "校园店做毕业前再吃一顿、同学聚餐；商圈店结合端午出游。618关注本地生活与外卖平台实际活动，参加后再宣传券包、有效期和使用门店。",
+        "events": [
+          {
+            "day": 18,
+            "label": "618"
+          },
+          {
+            "day": 19,
+            "label": "端午"
+          }
+        ]
+      },
+      {
+        "month": 7,
+        "theme": "暑期与夏季外卖",
+        "focus": "暑期商圈店面向出游家庭，校园店关注留校学生；写字楼店保留午餐与外卖需求。围绕实际在售搭配、取餐方式组织内容，不把高温直接写成销量增长。",
+        "events": []
+      },
+      {
+        "month": 8,
+        "theme": "七夕与开学预热",
+        "focus": "七夕做双人用餐场景；下旬校园周边店提前准备新生认路、附近吃饭攻略。暑期客流向返校客流切换，分门店排期，开学日以学校通知为准。",
+        "events": [
+          {
+            "day": 19,
+            "label": "七夕"
+          }
+        ]
+      },
+      {
+        "month": 9,
+        "theme": "秋季开学与中秋",
+        "focus": "校园店覆盖新生和返校人群，从认识门店转向日常复购；中秋覆盖留校、留城与商圈出游。月末提前准备国庆路线、营业信息与门店素材。",
+        "events": [
+          {
+            "day": 10,
+            "label": "教师节"
+          },
+          {
+            "day": 25,
+            "label": "中秋"
+          }
+        ]
+      },
+      {
+        "month": 10,
+        "theme": "国庆客流与复购",
+        "focus": "国庆先争取商圈游客与到店客流；节后转向写字楼工作餐、校园日常复购。下旬核对双11平台活动及可用商品，提前备齐内容；热饭特写、工作日午餐、店员吃法留作具体选题。",
+        "events": [
+          {
+            "day": 1,
+            "label": "国庆"
+          },
+          {
+            "day": 8,
+            "label": "节后返工"
+          }
+        ]
+      },
+      {
+        "month": 11,
+        "theme": "双11与冬季复购",
+        "focus": "双11关注已报名的本地生活、团购和外卖活动，讲清使用场景与核销规则；未参与活动的店继续做冬季工作餐。后半月跟进已购顾客到店与复购。",
+        "events": [
+          {
+            "day": 11,
+            "label": "双11"
+          }
+        ]
+      },
+      {
+        "month": 12,
+        "theme": "双12与年末跨年",
+        "focus": "双12承接已确认的平台活动；年末覆盖逛街、聚会前后的一餐与跨年营业。沉淀门店和老客故事，并准备下一年春节营业、返乡与留城内容。",
+        "events": [
+          {
+            "day": 12,
+            "label": "双12"
+          },
+          {
+            "day": 31,
+            "label": "跨年"
+          }
+        ]
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "title": "冷空气这天，卤肉饭从后厨端出",
+      "angle": "后厨舀卤肉浇在饭上，双手端碗穿过门帘，放到顾客面前；按端出→穿过→落桌剪，保留门帘和碗底碰桌声。",
+      "category": "热饭出餐",
+      "date": "2026-10-21",
+      "platform": "douyin",
+      "duration": 18,
+      "shots": [
+        "后厨里勺子从卤肉锅舀起，浇在白饭上。",
+        "双手端起碗，碗沿冒热气。",
+        "手掀门帘，端碗走出后厨。",
+        "碗放到顾客面前桌上，发出轻响。"
+      ],
+      "id": "d08e6d19931d4375b3b35ec1c88fe16f",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [
+        "35c3590a2dded8ffd4abc186"
+      ],
+      "sources": [
+        {
+          "id": "35c3590a2dded8ffd4abc186",
+          "title": "中东部大部降水稀少 江南多地降温如换季",
+          "summary": "中国天气网讯 今天(10月21日)起，中东部大部降水稀少，新疆北部雨雪增多。同时，受冷空气影响，东北、西南、江南、华南等地气温下降，江南不少地方降温猛烈，隔日如换季。明天起，中东部气温自北向南开始陆续反弹。",
+          "url": "https://www.chinanews.com.cn/sh/2026/10-21/10718250.shtml",
+          "source": "中国新闻网 · 社会",
+          "source_id": "chinanews_society",
+          "published_at": "2026-10-21T08:40:27+08:00",
+          "published_raw": "Wed, 21 Oct 2026 08:40:27 +0800",
+          "fetched_at": "2026-10-21T14:17:47+08:00",
+          "kind": "news",
+          "time_basis": "rss_pubDate",
+          "freshness": "recent",
+          "matched_keywords": [
+            "降温"
+          ],
+          "topic_fit": "daily_life"
+        }
+      ],
+      "basis": "热点",
+      "job_id": "dc08ffa770d5499caf7ff725b1f8b61d",
+      "context_revision": 2,
+      "snapshot_id": "ee8481d1ee8448959e7960b4972371e6",
+      "created_at": "2026-10-21T06:18:37.474407+00:00",
+      "updated_at": "2026-10-21T06:18:37.474415+00:00"
+    },
+    {
+      "title": "降温天，先摸一下碗烫不烫",
+      "angle": "固定机位近景：手掌贴碗壁试温，翻手背再贴一次，然后拿勺拌饭；只拍手和碗，不拍脸，保留拌饭声。",
+      "category": "热饭特写",
+      "date": "2026-10-21",
+      "platform": "channels",
+      "duration": 15,
+      "shots": [
+        "手掌贴在碗壁上停住。",
+        "手背再贴一次碗壁。",
+        "勺子插进饭里，从中间拌开。",
+        "酱汁和饭粒在碗里翻动。"
+      ],
+      "id": "21ffbd014a1b41f19ac96210f472ad90",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [
+        "17728ad48f719d1d5fa48286"
+      ],
+      "sources": [
+        {
+          "id": "17728ad48f719d1d5fa48286",
+          "title": "台风“蔷琵”继续向西偏北方向移动 中东部地区仍有大风降温天气",
+          "summary": "中新网10月21日电 据中央气象台网站消息，21日，冷空气继续影响我国中东部地区，关注大风降温、雨雪天气对人体健康、交通出行等的影响，做好森林草原和城乡防火工作；渤海、黄海等海域关注海上大风影响。21日至24日，新疆北部将有持续雨雪和大风降温天气，局地累计降水量大，需加强对交通、旅游和农畜牧业等安全管理。关注台风“蔷琵”发展移动趋势及对我国东南部海域、华东沿海等地的风雨影响。",
+          "url": "https://www.chinanews.com.cn/sh/2026/10-21/10718246.shtml",
+          "source": "中国新闻网 · 社会",
+          "source_id": "chinanews_society",
+          "published_at": "2026-10-21T08:30:51+08:00",
+          "published_raw": "Wed, 21 Oct 2026 08:30:51 +0800",
+          "fetched_at": "2026-10-21T14:17:47+08:00",
+          "kind": "news",
+          "time_basis": "rss_pubDate",
+          "freshness": "recent",
+          "matched_keywords": [
+            "天气",
+            "降温"
+          ],
+          "topic_fit": "daily_life"
+        }
+      ],
+      "basis": "热点",
+      "job_id": "dc08ffa770d5499caf7ff725b1f8b61d",
+      "context_revision": 2,
+      "snapshot_id": "ee8481d1ee8448959e7960b4972371e6",
+      "created_at": "2026-10-21T06:18:37.474436+00:00",
+      "updated_at": "2026-10-21T06:18:37.474438+00:00"
+    },
+    {
+      "title": "天冷了，店员自己这碗怎么盛",
+      "angle": "拍店员收工后拿碗盛饭：先舀饭压实，再浇卤汁，端到角落座位坐下吃；全程跟拍动作，不采访、不作评价。",
+      "category": "店员日常",
+      "date": "2026-10-21",
+      "platform": "xiaohongshu",
+      "duration": 20,
+      "shots": [
+        "店员从架子上取下空碗。",
+        "饭勺舀饭进碗，用勺背压一压。",
+        "卤肉汁浇在饭上，沿碗边淋一圈。",
+        "店员端碗走到角落座位坐下。",
+        "拿起筷子拌开，吃第一口。"
+      ],
+      "id": "13b5fd0809ff40fe8f021571a59e1aa5",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "月度计划",
+      "job_id": "dc08ffa770d5499caf7ff725b1f8b61d",
+      "context_revision": 2,
+      "snapshot_id": "ee8481d1ee8448959e7960b4972371e6",
+      "created_at": "2026-10-21T06:18:37.474451+00:00",
+      "updated_at": "2026-10-21T06:18:37.474452+00:00"
+    },
+    {
+      "title": "冷天进店，外套先搭椅背",
+      "angle": "固定机位拍顾客进店脱外套搭椅背、坐下、双手捧碗，再拍筷子拌饭。剪掉等餐，保留进店到动筷。",
+      "category": "到店过程",
+      "date": "2026-10-22",
+      "platform": "channels",
+      "duration": 20,
+      "shots": [
+        "顾客推门进店，手拉外套拉链",
+        "顾客把外套搭在椅背上，坐下",
+        "顾客双手捧起碗，低头看碗",
+        "顾客拿筷子拌饭，碗沿留汁痕"
+      ],
+      "id": "cd4387c968ad4c798b9694f2df2be046",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "月度计划",
+      "job_id": "8f8f7c576e5f49b38589f7700c7b0238",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:12:34.291868+00:00",
+      "updated_at": "2026-10-21T06:12:34.291869+00:00"
+    },
+    {
+      "title": "降温天，后厨先盛这一碗",
+      "angle": "门口风吹门帘，切后厨盛饭、端碗落桌，按动作顺序剪，保留原声。",
+      "category": "热饭出餐",
+      "date": "2026-10-23",
+      "platform": "douyin",
+      "duration": 22,
+      "shots": [
+        "门店门口，风吹动门帘，路人缩肩走过",
+        "后厨里，店员舀卤汁淋在白饭上",
+        "店员双手端起碗，转身走出后厨",
+        "碗放到桌上，筷子摆到碗边"
+      ],
+      "id": "efee1b15f92e499a9ff971082d2cb628",
+      "origin": "ai",
+      "edited": true,
+      "revision": 2,
+      "source_ids": [
+        "35c3590a2dded8ffd4abc186"
+      ],
+      "sources": [
+        {
+          "id": "35c3590a2dded8ffd4abc186",
+          "title": "中东部大部降水稀少 江南多地降温如换季",
+          "summary": "中国天气网讯 今天(10月21日)起，中东部大部降水稀少，新疆北部雨雪增多。同时，受冷空气影响，东北、西南、江南、华南等地气温下降，江南不少地方降温猛烈，隔日如换季。明天起，中东部气温自北向南开始陆续反弹。",
+          "url": "https://www.chinanews.com.cn/sh/2026/10-21/10718250.shtml",
+          "source": "中国新闻网 · 社会",
+          "source_id": "chinanews_society",
+          "published_at": "2026-10-21T08:40:27+08:00",
+          "published_raw": "Wed, 21 Oct 2026 08:40:27 +0800",
+          "fetched_at": "2026-10-21T14:10:01+08:00",
+          "kind": "news",
+          "time_basis": "rss_pubDate",
+          "freshness": "recent",
+          "matched_keywords": [
+            "降温"
+          ],
+          "topic_fit": "daily_life"
+        }
+      ],
+      "basis": "热点",
+      "job_id": "8f8f7c576e5f49b38589f7700c7b0238",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:12:34.291840+00:00",
+      "updated_at": "2026-10-21T06:16:59.352377+00:00"
+    },
+    {
+      "title": "只拍筷子：从拌开到夹起",
+      "angle": "全程近景跟筷子，不拍人脸。先拍筷子插进饭里拌开，再夹起一块卤肉，最后放回碗沿。",
+      "category": "近景细节",
+      "date": "2026-10-23",
+      "platform": "xiaohongshu",
+      "duration": 15,
+      "shots": [
+        "筷子从筷架拿起，伸进碗里",
+        "筷子把饭和卤汁拌开，米粒翻动",
+        "筷子夹起一块卤肉，停一秒",
+        "筷子放回碗沿，画面停住"
+      ],
+      "id": "9b36c47730c04a50921f53d2ed491bb1",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "门店日常",
+      "job_id": "8f8f7c576e5f49b38589f7700c7b0238",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:12:34.291881+00:00",
+      "updated_at": "2026-10-21T06:12:34.291883+00:00"
+    },
+    {
+      "title": "一碗饭从窗口递到手上",
+      "angle": "从出餐窗口内外两侧拍：内侧装碗推窗，外侧顾客伸手接碗。用两个机位对剪，保留递接瞬间。",
+      "category": "出餐窗口",
+      "date": "2026-10-24",
+      "platform": "douyin",
+      "duration": 18,
+      "shots": [
+        "窗口内侧，店员把碗放到窗台",
+        "窗口外侧，顾客伸手准备接",
+        "两只手在窗口交接碗",
+        "顾客端碗转身走向座位"
+      ],
+      "id": "ed136c67bc0649dea30c8ae96bddcf1b",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "门店日常",
+      "job_id": "8f8f7c576e5f49b38589f7700c7b0238",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:12:34.291893+00:00",
+      "updated_at": "2026-10-21T06:12:34.291894+00:00"
+    },
+    {
+      "title": "店里怎么吃：店员下班这碗",
+      "angle": "拍店员收工后自己盛一碗坐下吃，记录舀汁、拌饭、吃两口。人物是店员，不是顾客评价。",
+      "category": "店员吃法",
+      "date": "2026-10-25",
+      "platform": "channels",
+      "duration": 25,
+      "shots": [
+        "店员解下围裙挂在墙边",
+        "店员拿碗盛饭，舀一勺卤汁",
+        "店员坐下，筷子拌开饭",
+        "店员低头吃两口，抬头看镜头外"
+      ],
+      "id": "9cf18d81231d41e981cd0fb9577f560b",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "月度计划",
+      "job_id": "8f8f7c576e5f49b38589f7700c7b0238",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:12:34.291903+00:00",
+      "updated_at": "2026-10-21T06:12:34.291904+00:00"
+    }
+  ],
+  "hotspots": {
+    "items": [
+      {
+        "id": "68952f76939844d663e276c9",
+        "title": "冬天第一串车厘子糖葫芦",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2705800",
+        "source": "搜搜热 · 抖音热榜",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:44:46+08:00",
+        "observed_at": "2026-10-21T14:38:54+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 4,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "糖葫芦"
+        ],
+        "topic_fit": "food",
+        "content_category": "吃什么",
+        "selection_evidence": "title_keywords",
+        "excluded_keywords": []
+      },
+      {
+        "id": "d27c7116d9b79714c7ff7164",
+        "title": "进入面要多吃面要多见时代",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2705361",
+        "source": "搜搜热 · 抖音热榜",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:44:46+08:00",
+        "observed_at": "2026-10-21T14:38:54+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 18,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "面要多吃"
+        ],
+        "topic_fit": "food",
+        "content_category": "吃什么",
+        "selection_evidence": "title_keywords",
+        "excluded_keywords": []
+      },
+      {
+        "id": "06525686c2b60bf1c0c2267e",
+        "title": "瞬移滑镜慢动作挑战",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2705851",
+        "source": "搜搜热 · 抖音热榜",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:44:46+08:00",
+        "observed_at": "2026-10-21T14:38:54+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 21,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "滑镜",
+          "慢动作"
+        ],
+        "topic_fit": "format",
+        "content_category": "怎么拍",
+        "selection_evidence": "title_keywords",
+        "excluded_keywords": []
+      }
+    ],
+    "sources": [
+      {
+        "id": "soso_douyin",
+        "name": "搜搜热 · 抖音热榜",
+        "status": "ok",
+        "fetched_at": "2026-10-21T14:44:46+08:00",
+        "source_updated_at": "2026-10-21T14:38:54+08:00",
+        "count": 49,
+        "selected_count": 3
+      }
+    ],
+    "fetched_at": "2026-10-21T14:44:46+08:00",
+    "candidate_count": 49,
+    "selection_basis": "douyin_restaurant_clues_v2",
+    "coverage": {
+      "douyin": "public_general_board_filtered",
+      "xiaohongshu": "not_connected"
+    },
+    "refreshed_at": "2026-10-21T06:44:46.597054+00:00",
+    "snapshot_id": "b1a708ae134b44e7af26b9128fd973b8"
+  },
+  "last_generation": {
+    "job_id": "dc08ffa770d5499caf7ff725b1f8b61d",
+    "added": 3,
+    "skipped": 0,
+    "idea_ids": [
+      "d08e6d19931d4375b3b35ec1c88fe16f",
+      "21ffbd014a1b41f19ac96210f472ad90",
+      "13b5fd0809ff40fe8f021571a59e1aa5"
+    ],
+    "scope": "day",
+    "date": "2026-10-21",
+    "context_revision": 2,
+    "snapshot_id": "ee8481d1ee8448959e7960b4972371e6",
+    "generated_at": "2026-10-21T06:18:37.476478+00:00",
+    "request_context": [
+      {
+        "version": "stable-request-v1",
+        "stage": "operations_content_plan",
+        "fingerprint": "bdbca6fa66a0e34805a052d3d737b3d50404c40423cb35e8214c2bd45e197fd8",
+        "prefix_fingerprint": "28fdf4b00791c62c7252da02b519c256d68405e45a242d1a8d73ef1812eb7b12",
+        "prefix_scope": "instructions_schema_and_stable_references",
+        "budget_kind": "conservative_estimate_not_provider_usage",
+        "text_utf8_bytes": 18034,
+        "image_count": 0,
+        "image_token_reserve": 0,
+        "protocol_token_reserve": 4096,
+        "estimated_input_tokens": 22130,
+        "input_budget": 240000,
+        "output_token_reserve": 10000,
+        "context_limit": 1000000
+      }
+    ]
+  },
+  "created_at": "2026-10-21T06:08:37.862496+00:00",
+  "updated_at": "2026-10-21T06:44:46.601515+00:00",
+  "today": "2026-10-21",
+  "active_jobs": [],
+  "latest_jobs": [
+    {
+      "kind": "operations_hotspots",
+      "status": "succeeded",
+      "progress": 100,
+      "message": "已完成",
+      "result": {
+        "snapshot_id": "b1a708ae134b44e7af26b9128fd973b8",
+        "count": 3,
+        "sources": [
+          {
+            "id": "soso_douyin",
+            "name": "搜搜热 · 抖音热榜",
+            "status": "ok",
+            "fetched_at": "2026-10-21T14:44:46+08:00",
+            "source_updated_at": "2026-10-21T14:38:54+08:00",
+            "count": 49,
+            "selected_count": 3
+          }
+        ]
+      },
+      "error": null,
+      "id": "8c59c39b27b44948898348101da7809c",
+      "created_at": "2026-10-21T06:44:44.847376+00:00",
+      "updated_at": "2026-10-21T06:44:46.604715+00:00",
+      "resumable": false,
+      "operation_request": {}
+    },
+    {
+      "kind": "operations_hotspots",
+      "status": "succeeded",
+      "progress": 100,
+      "message": "已完成",
+      "result": {
+        "snapshot_id": "6b781ea06dee4c5bbf4145c569213876",
+        "count": 5,
+        "sources": [
+          {
+            "id": "soso_douyin",
+            "name": "搜搜热 · 抖音热榜",
+            "status": "ok",
+            "fetched_at": "2026-10-21T14:43:51+08:00",
+            "source_updated_at": "2026-10-21T14:38:54+08:00",
+            "count": 49,
+            "selected_count": 5
+          }
+        ]
+      },
+      "error": null,
+      "id": "ee9c1e65d33142ee810d8b988f4a343f",
+      "created_at": "2026-10-21T06:43:49.251366+00:00",
+      "updated_at": "2026-10-21T06:43:51.876833+00:00",
+      "resumable": false,
+      "operation_request": {}
+    },
+    {
+      "kind": "operations_plan",
+      "status": "succeeded",
+      "progress": 100,
+      "message": "已完成",
+      "result": {
+        "job_id": "dc08ffa770d5499caf7ff725b1f8b61d",
+        "added": 3,
+        "skipped": 0,
+        "idea_ids": [
+          "d08e6d19931d4375b3b35ec1c88fe16f",
+          "21ffbd014a1b41f19ac96210f472ad90",
+          "13b5fd0809ff40fe8f021571a59e1aa5"
+        ],
+        "scope": "day",
+        "date": "2026-10-21",
+        "context_revision": 2,
+        "snapshot_id": "ee8481d1ee8448959e7960b4972371e6",
+        "generated_at": "2026-10-21T06:18:37.476478+00:00",
+        "request_context": [
+          {
+            "version": "stable-request-v1",
+            "stage": "operations_content_plan",
+            "fingerprint": "bdbca6fa66a0e34805a052d3d737b3d50404c40423cb35e8214c2bd45e197fd8",
+            "prefix_fingerprint": "28fdf4b00791c62c7252da02b519c256d68405e45a242d1a8d73ef1812eb7b12",
+            "prefix_scope": "instructions_schema_and_stable_references",
+            "budget_kind": "conservative_estimate_not_provider_usage",
+            "text_utf8_bytes": 18034,
+            "image_count": 0,
+            "image_token_reserve": 0,
+            "protocol_token_reserve": 4096,
+            "estimated_input_tokens": 22130,
+            "input_budget": 240000,
+            "output_token_reserve": 10000,
+            "context_limit": 1000000
+          }
+        ]
+      },
+      "error": null,
+      "id": "dc08ffa770d5499caf7ff725b1f8b61d",
+      "created_at": "2026-10-21T06:18:33.732598+00:00",
+      "updated_at": "2026-10-21T06:18:37.478511+00:00",
+      "resumable": false,
+      "operation_request": {
+        "scope": "day",
+        "date": "2026-10-21",
+        "source_ids": []
+      }
+    },
+    {
+      "kind": "operations_hotspots",
+      "status": "succeeded",
+      "progress": 100,
+      "message": "已完成",
+      "result": {
+        "snapshot_id": "ee8481d1ee8448959e7960b4972371e6",
+        "count": 17,
+        "sources": [
+          {
+            "id": "chinahotel",
+            "name": "中国饭店协会",
+            "status": "ok",
+            "fetched_at": "2026-10-21T14:17:49+08:00",
+            "count": 8,
+            "latest_published_at": "2026-10-21"
+          },
+          {
+            "id": "chinanews_society",
+            "name": "中国新闻网 · 社会",
+            "status": "ok",
+            "fetched_at": "2026-10-21T14:17:47+08:00",
+            "count": 30,
+            "latest_published_at": "2026-10-21T13:45:14+08:00"
+          },
+          {
+            "id": "soso_douyin",
+            "name": "搜搜热 · 抖音",
+            "status": "ok",
+            "fetched_at": "2026-10-21T14:17:49+08:00",
+            "source_updated_at": "2026-10-21T14:17:30+08:00",
+            "count": 49
+          },
+          {
+            "id": "soso_toutiao",
+            "name": "搜搜热 · 今日头条",
+            "status": "ok",
+            "fetched_at": "2026-10-21T14:17:49+08:00",
+            "source_updated_at": "2026-10-21T14:08:05+08:00",
+            "count": 50
+          },
+          {
+            "id": "soso_weibo",
+            "name": "搜搜热 · 微博",
+            "status": "ok",
+            "fetched_at": "2026-10-21T14:17:49+08:00",
+            "source_updated_at": "2026-10-21T14:09:50+08:00",
+            "count": 52
+          }
+        ]
+      },
+      "error": null,
+      "id": "854605e7e5ce4d178bc3621dc35c0822",
+      "created_at": "2026-10-21T06:17:46.870345+00:00",
+      "updated_at": "2026-10-21T06:17:50.629601+00:00",
+      "resumable": false,
+      "operation_request": {}
+    },
+    {
+      "kind": "operations_plan",
+      "status": "succeeded",
+      "progress": 100,
+      "message": "已完成",
+      "result": {
+        "job_id": "8f8f7c576e5f49b38589f7700c7b0238",
+        "added": 5,
+        "skipped": 0,
+        "idea_ids": [
+          "efee1b15f92e499a9ff971082d2cb628",
+          "cd4387c968ad4c798b9694f2df2be046",
+          "9b36c47730c04a50921f53d2ed491bb1",
+          "ed136c67bc0649dea30c8ae96bddcf1b",
+          "9cf18d81231d41e981cd0fb9577f560b"
+        ],
+        "scope": "week",
+        "date": "2026-10-21",
+        "context_revision": 1,
+        "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+        "generated_at": "2026-10-21T06:12:34.293761+00:00",
+        "request_context": [
+          {
+            "version": "stable-request-v1",
+            "stage": "operations_content_plan",
+            "fingerprint": "83e668f1f9787b903f34d744c371aee2b408674890dde2a81e13f1aab291d261",
+            "prefix_fingerprint": "534ff166906ed00de7a7386d00e12ea52b00b8df48ba5b2feaf55d7f2a69ca3d",
+            "prefix_scope": "instructions_schema_and_stable_references",
+            "budget_kind": "conservative_estimate_not_provider_usage",
+            "text_utf8_bytes": 17660,
+            "image_count": 0,
+            "image_token_reserve": 0,
+            "protocol_token_reserve": 4096,
+            "estimated_input_tokens": 21756,
+            "input_budget": 240000,
+            "output_token_reserve": 10000,
+            "context_limit": 1000000
+          }
+        ]
+      },
+      "error": null,
+      "id": "8f8f7c576e5f49b38589f7700c7b0238",
+      "created_at": "2026-10-21T06:12:29.501448+00:00",
+      "updated_at": "2026-10-21T06:12:34.295882+00:00",
+      "resumable": false,
+      "operation_request": {
+        "scope": "week",
+        "date": "2026-10-21",
+        "source_ids": []
+      }
+    },
+    {
+      "kind": "operations_plan",
+      "status": "succeeded",
+      "progress": 100,
+      "message": "已完成",
+      "result": {
+        "job_id": "d5039bdadef54ad78e8196cbeb9fa706",
+        "added": 5,
+        "skipped": 0,
+        "idea_ids": [
+          "ee4282ed246a438a84345d9cd23d44cb",
+          "f50be94fd9064deba39f8dea6522806b",
+          "f8cd57b99f414de1a046c3daad9b2ba1",
+          "d90013e680f44e1099452e144cace6c7",
+          "9de9430fdcea4c2987b6d877dadb7a70"
+        ],
+        "scope": "week",
+        "date": "2026-10-21",
+        "context_revision": 1,
+        "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+        "generated_at": "2026-10-21T06:10:14.535789+00:00",
+        "request_context": [
+          {
+            "version": "stable-request-v1",
+            "stage": "operations_content_plan",
+            "fingerprint": "236f0ad656e6d54435c7a64266d5e12578e0beae59c544eeaa9f1bbd1cdde47e",
+            "prefix_fingerprint": "a78f3c0eebb5676f4a22b36b35a79651d0689e686a6732e3efc8c59bc12e13a8",
+            "prefix_scope": "instructions_schema_and_stable_references",
+            "budget_kind": "conservative_estimate_not_provider_usage",
+            "text_utf8_bytes": 17232,
+            "image_count": 0,
+            "image_token_reserve": 0,
+            "protocol_token_reserve": 4096,
+            "estimated_input_tokens": 21328,
+            "input_budget": 240000,
+            "output_token_reserve": 10000,
+            "context_limit": 1000000
+          }
+        ]
+      },
+      "error": null,
+      "id": "d5039bdadef54ad78e8196cbeb9fa706",
+      "created_at": "2026-10-21T06:10:01.496743+00:00",
+      "updated_at": "2026-10-21T06:10:14.537989+00:00",
+      "resumable": false,
+      "operation_request": {
+        "scope": "week",
+        "date": "2026-10-21",
+        "source_ids": []
+      }
+    }
+  ]
+}

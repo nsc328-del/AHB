@@ -1,0 +1,19 @@
+{
+  "title": "几何静帧",
+  "summary": "单张几何图形静态展示4秒，无字幕、无声音，直接呈现蓝色矩形与黄色圆形的极简构图。",
+  "clips": [
+    {
+      "asset_id": "synthetic-shapes",
+      "start": 0.0,
+      "end": 4.0,
+      "duration": 4.0,
+      "label": "静态展示几何图画面",
+      "caption": "",
+      "role": "开场",
+      "transition": "cut"
+    }
+  ],
+  "music_asset_id": "",
+  "duration": 4.0,
+  "model": "deepseek-flash"
+}

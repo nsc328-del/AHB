@@ -1,0 +1,784 @@
+{
+  "id": "longlaixia",
+  "revision": 1,
+  "brand": {
+    "name": "隆莱呷卤肉饭",
+    "profile": "台式卤肉饭品牌。内容用于抖音、小红书、视频号门店矩阵。门店拍摄上传，总部制作、审核、分发。当前菜单、价格、优惠及门店地址尚未录入，不在内容中编造。",
+    "sources": [
+      {
+        "title": "南方+：罗麦克与隆莱呷品牌",
+        "date": "2026-09-04",
+        "url": "https://finance.sina.com.cn/roll/2026-09-04/doc-iniqsvkn5822119.shtml"
+      }
+    ]
+  },
+  "annual_plan": {
+    "year": 2026,
+    "status": "draft",
+    "months": [
+      {
+        "month": 1,
+        "theme": "新年第一碗",
+        "focus": "开门、出餐",
+        "events": [
+          {
+            "day": 1,
+            "label": "元旦"
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "theme": "同桌吃饭",
+        "focus": "一人食、双人用餐",
+        "events": []
+      },
+      {
+        "month": 3,
+        "theme": "工作日午餐",
+        "focus": "点单、取餐、开吃",
+        "events": []
+      },
+      {
+        "month": 4,
+        "theme": "街角门店",
+        "focus": "门头、到店路线",
+        "events": []
+      },
+      {
+        "month": 5,
+        "theme": "假日到店",
+        "focus": "到店路线、店员吃法",
+        "events": [
+          {
+            "day": 1,
+            "label": "五一"
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "theme": "一口搭配",
+        "focus": "浇汁、拌饭、搭配",
+        "events": []
+      },
+      {
+        "month": 7,
+        "theme": "夏日午餐",
+        "focus": "进店、落座、午餐",
+        "events": []
+      },
+      {
+        "month": 8,
+        "theme": "门店日常",
+        "focus": "备餐、饭点、收店",
+        "events": []
+      },
+      {
+        "month": 9,
+        "theme": "工作日一人食",
+        "focus": "工作餐、单人搭配",
+        "events": []
+      },
+      {
+        "month": 10,
+        "theme": "秋日热饭",
+        "focus": "热饭特写、午餐、店员吃法",
+        "events": [
+          {
+            "day": 1,
+            "label": "国庆"
+          },
+          {
+            "day": 28,
+            "label": "月底复盘"
+          }
+        ]
+      },
+      {
+        "month": 11,
+        "theme": "热饭原声",
+        "focus": "端饭、拌饭、碗筷原声",
+        "events": []
+      },
+      {
+        "month": 12,
+        "theme": "年度回看",
+        "focus": "店员、门店、年度片段",
+        "events": [
+          {
+            "day": 31,
+            "label": "年末回看"
+          }
+        ]
+      }
+    ]
+  },
+  "ideas": [
+    {
+      "title": "降温天，卤肉饭端上桌先拌开",
+      "angle": "用降温新闻做由头，拍一碗热饭从后厨端到顾客手边。开头手背贴碗沿试温，中段拌饭原声，结尾碗放桌上。",
+      "category": "热饭",
+      "date": "2026-10-21",
+      "platform": "douyin",
+      "duration": 20,
+      "shots": [
+        "后厨台面，店员双手端起一只热碗，碗沿冒气。",
+        "镜头跟手穿过出餐口，碗稳稳放到托盘上。",
+        "顾客座位，筷子从碗边插进去，慢慢把酱汁和饭拌开。",
+        "特写碗中饭粒被翻动，收声先留筷碰碗的声音。",
+        "镜头回到桌角，碗搁在桌面，画面停在饭面。"
+      ],
+      "id": "ee4282ed246a438a84345d9cd23d44cb",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [
+        "35c3590a2dded8ffd4abc186"
+      ],
+      "sources": [
+        {
+          "id": "35c3590a2dded8ffd4abc186",
+          "title": "中东部大部降水稀少 江南多地降温如换季",
+          "summary": "中国天气网讯 今天(10月21日)起，中东部大部降水稀少，新疆北部雨雪增多。同时，受冷空气影响，东北、西南、江南、华南等地气温下降，江南不少地方降温猛烈，隔日如换季。明天起，中东部气温自北向南开始陆续反弹。",
+          "url": "https://www.chinanews.com.cn/sh/2026/10-21/10718250.shtml",
+          "source": "中国新闻网 · 社会",
+          "source_id": "chinanews_society",
+          "published_at": "2026-10-21T08:40:27+08:00",
+          "published_raw": "Wed, 21 Oct 2026 08:40:27 +0800",
+          "fetched_at": "2026-10-21T14:10:01+08:00",
+          "kind": "news",
+          "time_basis": "rss_pubDate",
+          "freshness": "recent",
+          "matched_keywords": [
+            "降温"
+          ],
+          "topic_fit": "daily_life"
+        }
+      ],
+      "basis": "热点",
+      "job_id": "d5039bdadef54ad78e8196cbeb9fa706",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:10:14.533913+00:00",
+      "updated_at": "2026-10-21T06:10:14.533925+00:00"
+    },
+    {
+      "title": "一人食：点单到吃完只拍一个座位",
+      "angle": "按10月热饭月重点，固定机位拍单人座从点单、端饭到放筷。剪掉中间等待，保留端碗和落筷两个动作。",
+      "category": "一人食",
+      "date": "2026-10-22",
+      "platform": "channels",
+      "duration": 25,
+      "shots": [
+        "固定机位，空座位和桌面菜单入画。",
+        "顾客入座，手指在菜单上点了一下。",
+        "店员从画面边送入一碗卤肉饭，碗落在桌垫上。",
+        "顾客拿起筷子拨开碗边配菜。",
+        "吃完，筷子并拢放在碗沿，手离桌。"
+      ],
+      "id": "f50be94fd9064deba39f8dea6522806b",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "月度计划",
+      "job_id": "d5039bdadef54ad78e8196cbeb9fa706",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:10:14.533946+00:00",
+      "updated_at": "2026-10-21T06:10:14.533948+00:00"
+    },
+    {
+      "title": "卤肉饭浇汁：镜头只跟勺子走",
+      "angle": "6月搭配主题的延伸，只拍浇汁动作。勺子从锅中舀起酱汁，沿碗边绕一圈，再拍一次拌饭。全部近景。",
+      "category": "浇汁",
+      "date": "2026-10-23",
+      "platform": "xiaohongshu",
+      "duration": 15,
+      "shots": [
+        "后厨不锈钢台面，勺子伸进卤汁锅。",
+        "近景，勺子提起，酱汁沿勺边滑落。",
+        "白饭碗入画，勺子在饭面绕一圈浇下。",
+        "筷子把浇过汁的饭从中间夹起一撮。",
+        "碗放回台面，勺子搁在碗边。"
+      ],
+      "id": "f8cd57b99f414de1a046c3daad9b2ba1",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "月度计划",
+      "job_id": "d5039bdadef54ad78e8196cbeb9fa706",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:10:14.533984+00:00",
+      "updated_at": "2026-10-21T06:10:14.533987+00:00"
+    },
+    {
+      "title": "门头到座位：走一遍到店路线",
+      "angle": "4月街角门店主题的补拍。从店外门头拍到推门、落座。手持跟走，一镜到底后剪成三段。",
+      "category": "到店路线",
+      "date": "2026-10-24",
+      "platform": "douyin",
+      "duration": 20,
+      "shots": [
+        "店外街道，镜头对准门头招牌停两秒。",
+        "手推开店门，画面跟着进入店内。",
+        "镜头扫过桌椅，停在一张空桌前。",
+        "人坐下，背包放到旁边椅子上。",
+        "镜头压低，桌面和筷子筒入画。"
+      ],
+      "id": "d90013e680f44e1099452e144cace6c7",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "门店日常",
+      "job_id": "d5039bdadef54ad78e8196cbeb9fa706",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:10:14.533998+00:00",
+      "updated_at": "2026-10-21T06:10:14.533999+00:00"
+    },
+    {
+      "title": "端饭、拌饭、放碗：只留原声",
+      "angle": "11月热饭原声主题提前拍。不配乐，保留端碗、筷子拌饭、碗落桌三个声音，画面按声音节点剪。",
+      "category": "原声",
+      "date": "2026-10-25",
+      "platform": "channels",
+      "duration": 18,
+      "shots": [
+        "出餐口，碗底碰托盘，收一声闷响。",
+        "桌面近景，筷子插入饭中，拌饭声起。",
+        "拌饭动作持续两秒，画面不切。",
+        "筷子夹起饭送入口，碗边留酱汁痕。",
+        "碗被放回桌面，画面停半秒。"
+      ],
+      "id": "9de9430fdcea4c2987b6d877dadb7a70",
+      "origin": "ai",
+      "edited": false,
+      "revision": 1,
+      "source_ids": [],
+      "sources": [],
+      "basis": "月度计划",
+      "job_id": "d5039bdadef54ad78e8196cbeb9fa706",
+      "context_revision": 1,
+      "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+      "created_at": "2026-10-21T06:10:14.534010+00:00",
+      "updated_at": "2026-10-21T06:10:14.534011+00:00"
+    }
+  ],
+  "hotspots": {
+    "items": [
+      {
+        "id": "15404e0ebdaa4d959cb279c7",
+        "title": "央媒专访 | 广州酒家集团党委副书记孙晓莉：以产品创新与场景焕新，持续创造美食消费新价值",
+        "summary": "消费者正在重新定义“吃”这件事。从饱腹到体验，从单一到多元，从追求低价到为品质和情感买单，餐饮消费正呈现更加多元的发展趋势。如何以产品创新与场景焕新回应消费变化，探索产品、场景与消费需求之间的新连接，成为行业探索高质量发展的重要课题。",
+        "url": "https://www.chinahotel.org.cn/articles/18034",
+        "source": "中国饭店协会",
+        "source_id": "chinahotel",
+        "published_at": "2026-10-21",
+        "published_raw": "2026-10-21",
+        "fetched_at": "2026-10-21T14:10:04+08:00",
+        "kind": "industry_news",
+        "time_basis": "article_visible_date",
+        "freshness": "recent",
+        "matched_keywords": [
+          "美食",
+          "消费"
+        ],
+        "topic_fit": "food"
+      },
+      {
+        "id": "70e17d60841fa0236c0acf57",
+        "title": "央媒专访 | 五仁餐饮集团董事长罗龙明：聚势拓市场，以食传文化，让“佛山味道”连接世界餐桌",
+        "summary": "从火锅、茶饮到中式正餐、粤式茶点，越来越多中国餐饮品牌走向海外。面对不同市场在准入要求、饮食习惯和运营成本方面的差异，如何稳定呈现中国味道、融入当地消费生活，既关乎品牌能否在海外扎根，也影响着中国饮食文化在世界餐桌上的位置。",
+        "url": "https://www.chinahotel.org.cn/articles/18033",
+        "source": "中国饭店协会",
+        "source_id": "chinahotel",
+        "published_at": "2026-10-21",
+        "published_raw": "2026-10-21",
+        "fetched_at": "2026-10-21T14:10:04+08:00",
+        "kind": "industry_news",
+        "time_basis": "article_visible_date",
+        "freshness": "recent",
+        "matched_keywords": [
+          "餐饮"
+        ],
+        "topic_fit": "food"
+      },
+      {
+        "id": "d3d02feba64ce3da0ab9712e",
+        "title": "央媒专访 | 中国饭店协会会长陈新华：以新质美食赋能粤点发展 助力“十五五”餐饮提质惠民",
+        "summary": "从品质餐饮、地标美食、非遗美食不断丰富，到特色小吃、咖啡茶饮等新业态、新场景持续涌现......随着消费需求不断升级，餐饮业也在加快丰富供给、创新场景，寻找新的发展空间。",
+        "url": "https://www.chinahotel.org.cn/articles/18031",
+        "source": "中国饭店协会",
+        "source_id": "chinahotel",
+        "published_at": "2026-10-21",
+        "published_raw": "2026-10-21",
+        "fetched_at": "2026-10-21T14:10:04+08:00",
+        "kind": "industry_news",
+        "time_basis": "article_visible_date",
+        "freshness": "recent",
+        "matched_keywords": [
+          "餐饮",
+          "美食"
+        ],
+        "topic_fit": "food"
+      },
+      {
+        "id": "1e84b631f23cb1ad957488b5",
+        "title": "2026年全国食品安全宣传周——全国饭店业食品安全与质量年会在京启幕",
+        "summary": "10月19日，全国饭店业食品安全与质量年会在北京开幕。年会以“数智赋能食安治理 诚信守护舌尖安全”为主题，由中国饭店协会主办，是2026年全国食品安全宣传周系列活动之一。",
+        "url": "https://www.chinahotel.org.cn/articles/18029",
+        "source": "中国饭店协会",
+        "source_id": "chinahotel",
+        "published_at": "2026-10-20",
+        "published_raw": "2026-10-20",
+        "fetched_at": "2026-10-21T14:10:04+08:00",
+        "kind": "industry_news",
+        "time_basis": "article_visible_date",
+        "freshness": "recent",
+        "matched_keywords": [
+          "饭店",
+          "食品"
+        ],
+        "topic_fit": "food"
+      },
+      {
+        "id": "38f54973e26bf50120b56e06",
+        "title": "餐饮数据 | 1-9月餐饮收入41969亿元，增长2.4%，累计增速企稳",
+        "summary": "国家统计局数据显示，2026年1—9月，全国餐饮收入41969亿元，同比增长2.4%，增速与1—8月持平，结束年内逐月回落走势；9月当月餐饮收入4603亿元，同比增长2.1%，比8月加快1.0个百分点，环比增长1.3%。结合协会调研情况来看，中秋假期等节日消费带动9月餐饮市场出现企稳信号，结构调整与融合发展持续推进。",
+        "url": "https://www.chinahotel.org.cn/articles/18028",
+        "source": "中国饭店协会",
+        "source_id": "chinahotel",
+        "published_at": "2026-10-20",
+        "published_raw": "2026-10-20",
+        "fetched_at": "2026-10-21T14:10:05+08:00",
+        "kind": "industry_news",
+        "time_basis": "article_visible_date",
+        "freshness": "recent",
+        "matched_keywords": [
+          "餐饮"
+        ],
+        "topic_fit": "food"
+      },
+      {
+        "id": "7198227a2f1bb5e1e7b55673",
+        "title": "2026广州精品美食周启动",
+        "summary": "10月10日晚，2026广州精品美食周在广州市海心沙亚运公园启幕。本届美食周以“马上开饭”为主题，是2026广州服务消费季和“食在广州”城市品牌的标志性活动，汇聚209个酒店餐饮品牌，20余家中华老字号与广府名店、30余家首次登陆广州的国际美食品牌，会期10天。活动与第140届广交会深度联动，是住宿餐饮行业落实党中央、国务院扩大服务消费决策部署和《关于促进服务消费高质量发展的意见》的生动实践。",
+        "url": "https://www.chinahotel.org.cn/articles/18024",
+        "source": "中国饭店协会",
+        "source_id": "chinahotel",
+        "published_at": "2026-10-13",
+        "published_raw": "2026-10-13",
+        "fetched_at": "2026-10-21T14:10:05+08:00",
+        "kind": "industry_news",
+        "time_basis": "article_visible_date",
+        "freshness": "background",
+        "matched_keywords": [
+          "美食"
+        ],
+        "topic_fit": "food"
+      },
+      {
+        "id": "35c3590a2dded8ffd4abc186",
+        "title": "中东部大部降水稀少 江南多地降温如换季",
+        "summary": "中国天气网讯 今天(10月21日)起，中东部大部降水稀少，新疆北部雨雪增多。同时，受冷空气影响，东北、西南、江南、华南等地气温下降，江南不少地方降温猛烈，隔日如换季。明天起，中东部气温自北向南开始陆续反弹。",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-21/10718250.shtml",
+        "source": "中国新闻网 · 社会",
+        "source_id": "chinanews_society",
+        "published_at": "2026-10-21T08:40:27+08:00",
+        "published_raw": "Wed, 21 Oct 2026 08:40:27 +0800",
+        "fetched_at": "2026-10-21T14:10:01+08:00",
+        "kind": "news",
+        "time_basis": "rss_pubDate",
+        "freshness": "recent",
+        "matched_keywords": [
+          "降温"
+        ],
+        "topic_fit": "daily_life"
+      },
+      {
+        "id": "17728ad48f719d1d5fa48286",
+        "title": "台风“蔷琵”继续向西偏北方向移动 中东部地区仍有大风降温天气",
+        "summary": "中新网10月21日电 据中央气象台网站消息，21日，冷空气继续影响我国中东部地区，关注大风降温、雨雪天气对人体健康、交通出行等的影响，做好森林草原和城乡防火工作；渤海、黄海等海域关注海上大风影响。21日至24日，新疆北部将有持续雨雪和大风降温天气，局地累计降水量大，需加强对交通、旅游和农畜牧业等安全管理。关注台风“蔷琵”发展移动趋势及对我国东南部海域、华东沿海等地的风雨影响。",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-21/10718246.shtml",
+        "source": "中国新闻网 · 社会",
+        "source_id": "chinanews_society",
+        "published_at": "2026-10-21T08:30:51+08:00",
+        "published_raw": "Wed, 21 Oct 2026 08:30:51 +0800",
+        "fetched_at": "2026-10-21T14:10:01+08:00",
+        "kind": "news",
+        "time_basis": "rss_pubDate",
+        "freshness": "recent",
+        "matched_keywords": [
+          "天气",
+          "降温"
+        ],
+        "topic_fit": "daily_life"
+      },
+      {
+        "id": "9f5191ca91d28d183daa138a",
+        "title": "等夏天等秋天",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2704385",
+        "source": "搜搜热 · 抖音",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:07:17+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 33,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "秋天"
+        ],
+        "topic_fit": "daily_life"
+      },
+      {
+        "id": "275758191b83fb7eb2990eac",
+        "title": "黄金消费降温了吗",
+        "summary": "",
+        "url": "https://www.toutiao.com/trending/7698911292244889130/",
+        "source": "搜搜热 · 今日头条",
+        "source_id": "soso_toutiao",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:08:05+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 37,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "消费",
+          "降温"
+        ],
+        "topic_fit": "daily_life"
+      },
+      {
+        "id": "3b93dc21302a9bd403a12fe2",
+        "title": "娃圈秋日穿搭大赏",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2704936",
+        "source": "搜搜热 · 抖音",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:07:17+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 42,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [
+          "秋日"
+        ],
+        "topic_fit": "daily_life"
+      },
+      {
+        "id": "5daf311d0b776270c3f88ac9",
+        "title": "NBA揭幕战马刺雷霆爆发冲突",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2705933",
+        "source": "搜搜热 · 抖音",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:07:17+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 1,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [],
+        "topic_fit": "general"
+      },
+      {
+        "id": "68952f76939844d663e276c9",
+        "title": "冬天第一串车厘子糖葫芦",
+        "summary": "",
+        "url": "https://www.douyin.com/hot/2705800",
+        "source": "搜搜热 · 抖音",
+        "source_id": "soso_douyin",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:07:17+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 2,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [],
+        "topic_fit": "general"
+      },
+      {
+        "id": "5ea092ca1a46b5e95f2e631a",
+        "title": "拟出台的中国AI禁令震动全球",
+        "summary": "",
+        "url": "https://s.weibo.com/weibo?q=%23%E6%8B%9F%E5%87%BA%E5%8F%B0%E7%9A%84%E4%B8%AD%E5%9B%BDAI%E7%A6%81%E4%BB%A4%E9%9C%87%E5%8A%A8%E5%85%A8%E7%90%83%23&t=31&band_rank=1&Refer=top",
+        "source": "搜搜热 · 微博",
+        "source_id": "soso_weibo",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:09:50+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 1,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [],
+        "topic_fit": "general"
+      },
+      {
+        "id": "43c6acfaba470d85681a6183",
+        "title": "台独给周杰伦扣帽子国台办回应",
+        "summary": "",
+        "url": "https://s.weibo.com/weibo?q=%23%E5%8F%B0%E7%8B%AC%E7%BB%99%E5%91%A8%E6%9D%B0%E4%BC%A6%E6%89%A3%E5%B8%BD%E5%AD%90%E5%9B%BD%E5%8F%B0%E5%8A%9E%E5%9B%9E%E5%BA%94%23&t=31&band_rank=1&Refer=top",
+        "source": "搜搜热 · 微博",
+        "source_id": "soso_weibo",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:09:50+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 2,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [],
+        "topic_fit": "general"
+      },
+      {
+        "id": "2155b01ca1961a716d337c57",
+        "title": "国际油价昨夜上演大逆转",
+        "summary": "",
+        "url": "https://www.toutiao.com/trending/7698870180273307686/",
+        "source": "搜搜热 · 今日头条",
+        "source_id": "soso_toutiao",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:08:05+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 1,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [],
+        "topic_fit": "general"
+      },
+      {
+        "id": "f8a41f7a357cbb63ae834071",
+        "title": "国家癌症中心公布发病前五癌症",
+        "summary": "",
+        "url": "https://www.toutiao.com/trending/7698926636556750362/",
+        "source": "搜搜热 · 今日头条",
+        "source_id": "soso_toutiao",
+        "published_at": null,
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "observed_at": "2026-10-21T14:08:05+08:00",
+        "time_basis": "aggregator_snapshot",
+        "kind": "platform_hotspot",
+        "rank": 2,
+        "rank_basis": "aggregator_list_position",
+        "freshness": "recent",
+        "matched_keywords": [],
+        "topic_fit": "general"
+      },
+      {
+        "id": "7136ba48b103f06cb8fafbb2",
+        "title": "“萨克斯大爷”：音乐漫湖岸,热爱抵流年",
+        "summary": "重回聚光灯下，千万粉丝的关注让75岁老人“演奏拖堂”",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-21/10718431.shtml",
+        "source": "中国新闻网 · 社会",
+        "source_id": "chinanews_society",
+        "published_at": "2026-10-21T13:45:14+08:00",
+        "published_raw": "Wed, 21 Oct 2026 13:45:14 +0800",
+        "fetched_at": "2026-10-21T14:10:01+08:00",
+        "kind": "news",
+        "time_basis": "rss_pubDate",
+        "freshness": "recent",
+        "matched_keywords": [],
+        "topic_fit": "general"
+      },
+      {
+        "id": "8d29964ce378e87618d07f5d",
+        "title": "海关查获外币硬币211799枚，折合人民币约162.2万元",
+        "summary": "中新网10月21日电 据“海关发布”微信公众号消息，近日，拱北海关所属湾仔海关在出口跨境电商渠道查获外币硬币共计211799枚，折合人民币约162.2万元。",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-21/10718427.shtml",
+        "source": "中国新闻网 · 社会",
+        "source_id": "chinanews_society",
+        "published_at": "2026-10-21T13:42:46+08:00",
+        "published_raw": "Wed, 21 Oct 2026 13:42:46 +0800",
+        "fetched_at": "2026-10-21T14:10:01+08:00",
+        "kind": "news",
+        "time_basis": "rss_pubDate",
+        "freshness": "recent",
+        "matched_keywords": [],
+        "topic_fit": "general"
+      }
+    ],
+    "sources": [
+      {
+        "id": "chinahotel",
+        "name": "中国饭店协会",
+        "status": "ok",
+        "fetched_at": "2026-10-21T14:10:04+08:00",
+        "count": 8,
+        "latest_published_at": "2026-10-21"
+      },
+      {
+        "id": "chinanews_society",
+        "name": "中国新闻网 · 社会",
+        "status": "ok",
+        "fetched_at": "2026-10-21T14:10:01+08:00",
+        "count": 30,
+        "latest_published_at": "2026-10-21T13:45:14+08:00"
+      },
+      {
+        "id": "soso_douyin",
+        "name": "搜搜热 · 抖音",
+        "status": "ok",
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "source_updated_at": "2026-10-21T14:07:17+08:00",
+        "count": 49
+      },
+      {
+        "id": "soso_toutiao",
+        "name": "搜搜热 · 今日头条",
+        "status": "ok",
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "source_updated_at": "2026-10-21T14:08:05+08:00",
+        "count": 50
+      },
+      {
+        "id": "soso_weibo",
+        "name": "搜搜热 · 微博",
+        "status": "ok",
+        "fetched_at": "2026-10-21T14:10:03+08:00",
+        "source_updated_at": "2026-10-21T14:09:50+08:00",
+        "count": 52
+      }
+    ],
+    "fetched_at": "2026-10-21T14:10:05+08:00",
+    "candidate_count": 189,
+    "selection_basis": "food_and_daily_life_keywords_then_small_general_sample",
+    "refreshed_at": "2026-10-21T06:10:05.252219+00:00",
+    "snapshot_id": "4e7dff1783124dabb49a452979e470d5"
+  },
+  "last_generation": {
+    "job_id": "d5039bdadef54ad78e8196cbeb9fa706",
+    "added": 5,
+    "skipped": 0,
+    "idea_ids": [
+      "ee4282ed246a438a84345d9cd23d44cb",
+      "f50be94fd9064deba39f8dea6522806b",
+      "f8cd57b99f414de1a046c3daad9b2ba1",
+      "d90013e680f44e1099452e144cace6c7",
+      "9de9430fdcea4c2987b6d877dadb7a70"
+    ],
+    "scope": "week",
+    "date": "2026-10-21",
+    "context_revision": 1,
+    "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+    "generated_at": "2026-10-21T06:10:14.535789+00:00",
+    "request_context": [
+      {
+        "version": "stable-request-v1",
+        "stage": "operations_content_plan",
+        "fingerprint": "236f0ad656e6d54435c7a64266d5e12578e0beae59c544eeaa9f1bbd1cdde47e",
+        "prefix_fingerprint": "a78f3c0eebb5676f4a22b36b35a79651d0689e686a6732e3efc8c59bc12e13a8",
+        "prefix_scope": "instructions_schema_and_stable_references",
+        "budget_kind": "conservative_estimate_not_provider_usage",
+        "text_utf8_bytes": 17232,
+        "image_count": 0,
+        "image_token_reserve": 0,
+        "protocol_token_reserve": 4096,
+        "estimated_input_tokens": 21328,
+        "input_budget": 240000,
+        "output_token_reserve": 10000,
+        "context_limit": 1000000
+      }
+    ]
+  },
+  "created_at": "2026-10-21T06:08:37.862496+00:00",
+  "updated_at": "2026-10-21T06:10:14.535797+00:00",
+  "today": "2026-10-21",
+  "active_jobs": [],
+  "latest_jobs": [
+    {
+      "kind": "operations_plan",
+      "status": "succeeded",
+      "progress": 100,
+      "message": "已完成",
+      "result": {
+        "job_id": "d5039bdadef54ad78e8196cbeb9fa706",
+        "added": 5,
+        "skipped": 0,
+        "idea_ids": [
+          "ee4282ed246a438a84345d9cd23d44cb",
+          "f50be94fd9064deba39f8dea6522806b",
+          "f8cd57b99f414de1a046c3daad9b2ba1",
+          "d90013e680f44e1099452e144cace6c7",
+          "9de9430fdcea4c2987b6d877dadb7a70"
+        ],
+        "scope": "week",
+        "date": "2026-10-21",
+        "context_revision": 1,
+        "snapshot_id": "4e7dff1783124dabb49a452979e470d5",
+        "generated_at": "2026-10-21T06:10:14.535789+00:00",
+        "request_context": [
+          {
+            "version": "stable-request-v1",
+            "stage": "operations_content_plan",
+            "fingerprint": "236f0ad656e6d54435c7a64266d5e12578e0beae59c544eeaa9f1bbd1cdde47e",
+            "prefix_fingerprint": "a78f3c0eebb5676f4a22b36b35a79651d0689e686a6732e3efc8c59bc12e13a8",
+            "prefix_scope": "instructions_schema_and_stable_references",
+            "budget_kind": "conservative_estimate_not_provider_usage",
+            "text_utf8_bytes": 17232,
+            "image_count": 0,
+            "image_token_reserve": 0,
+            "protocol_token_reserve": 4096,
+            "estimated_input_tokens": 21328,
+            "input_budget": 240000,
+            "output_token_reserve": 10000,
+            "context_limit": 1000000
+          }
+        ]
+      },
+      "error": null,
+      "id": "d5039bdadef54ad78e8196cbeb9fa706",
+      "created_at": "2026-10-21T06:10:01.496743+00:00",
+      "updated_at": "2026-10-21T06:10:14.537989+00:00",
+      "resumable": false,
+      "operation_request": {
+        "scope": "week",
+        "date": "2026-10-21",
+        "source_ids": []
+      }
+    },
+    {
+      "kind": "operations_plan",
+      "status": "failed",
+      "progress": 1.0,
+      "message": "任务执行失败，请查看本机服务日志并重试此操作。",
+      "result": null,
+      "error": "任务执行失败，请查看本机服务日志并重试此操作。",
+      "id": "17220ca9f0234d36bf567f64dac1f315",
+      "created_at": "2026-10-21T06:08:37.958040+00:00",
+      "updated_at": "2026-10-21T06:08:37.963734+00:00",
+      "resumable": false,
+      "operation_request": {
+        "scope": "week",
+        "date": "2026-10-21",
+        "source_ids": []
+      }
+    }
+  ]
+}

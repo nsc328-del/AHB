@@ -1,0 +1,12 @@
+{
+  "kind": "reference_presentation",
+  "status": "failed",
+  "progress": 20.0,
+  "message": "组织节点只命名静态场景与姿态，不能重新推断运动",
+  "result": null,
+  "error": "组织节点只命名静态场景与姿态，不能重新推断运动",
+  "id": "c07a251472d74348a3b0c55963a5e9b8",
+  "created_at": "2026-10-21T03:48:27.841794+00:00",
+  "updated_at": "2026-10-21T03:48:35.044032+00:00",
+  "resumable": false
+}

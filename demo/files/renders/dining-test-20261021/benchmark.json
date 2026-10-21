@@ -1,0 +1,104 @@
+{
+  "restaurant": {
+    "source": {
+      "webpage_url": "https://www.bilibili.com/video/BV1qZ4y1x7jS/",
+      "title": "【\b无缝转场】餐厅广告拍摄",
+      "uploader": "子艺影视传媒",
+      "duration": 75.867,
+      "upload_date": "20200420"
+    },
+    "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+    "brief": "为这家真实门店制作一条20秒的短视频，让附近潜在顾客看完有兴趣到店。用已有实拍画面选镜、重组、控制节奏。不要照搬原片顺序或连续截取一段，也不要制造不存在的店名、价格、优惠、地址和口碑。字幕简短自然，保留有用原声。不要添加AI生成画面。",
+    "candidate_receipt": {
+      "job_id": "0720c0004b004df79e10b3de56754286",
+      "project_id": "e5a61c53f7704da4907966d273c93dec",
+      "batch_id": "0d50edb2b4764332a14717b6273ff534"
+    },
+    "job": {
+      "kind": "candidates",
+      "status": "succeeded",
+      "progress": 100,
+      "message": "已完成",
+      "result": {
+        "batch_id": "0d50edb2b4764332a14717b6273ff534",
+        "project_id": "e5a61c53f7704da4907966d273c93dec",
+        "plan_ids": [
+          "7aeb58797a99411488210f7c77f21557",
+          "7ef586c0655e48198c627b838431ca89",
+          "d353ccf03bd04624b5ebbb447c378195"
+        ]
+      },
+      "error": null,
+      "id": "0720c0004b004df79e10b3de56754286",
+      "created_at": "2026-10-21T06:14:48.567597+00:00",
+      "updated_at": "2026-10-21T06:15:20.738060+00:00",
+      "resumable": false
+    },
+    "review_previews": [
+      {
+        "plan_id": "7aeb58797a99411488210f7c77f21557",
+        "render_id": "3bbfabfcce42469e9efbf380763c5d41",
+        "file": "restaurant-A.mp4",
+        "url": "/api/media/renders/e5a61c53f7704da4907966d273c93dec/v1-9db0fea3ee744e36b5e43137cd204e14.mp4",
+        "duration": 20.0
+      },
+      {
+        "plan_id": "7ef586c0655e48198c627b838431ca89",
+        "render_id": "9ca2699d4f19482697feca28ad666b0a",
+        "file": "restaurant-B.mp4",
+        "url": "/api/media/renders/e5a61c53f7704da4907966d273c93dec/v2-109d33e0863943d7a59f4bdc929aa4d4.mp4",
+        "duration": 20.1
+      },
+      {
+        "plan_id": "d353ccf03bd04624b5ebbb447c378195",
+        "render_id": "60911648e60a44928ba4623b617f7a99",
+        "file": "restaurant-C.mp4",
+        "url": "/api/media/renders/e5a61c53f7704da4907966d273c93dec/v3-f15ac00c4317471e8017a6fa36eefab9.mp4",
+        "duration": 24.0
+      }
+    ]
+  },
+  "cafe": {
+    "source": {
+      "webpage_url": "https://www.bilibili.com/video/BV1sK4y1t78t/",
+      "title": "咖啡店宣传片",
+      "uploader": "拼拼凑凑的晴朗",
+      "duration": 51.157,
+      "upload_date": "20200526"
+    },
+    "asset_id": "5d3523be1d264ee1aadb94a03f63f171",
+    "brief": "为这家真实门店制作一条20秒的短视频，让附近潜在顾客看完有兴趣到店。用已有实拍画面选镜、重组、控制节奏。不要照搬原片顺序或连续截取一段，也不要制造不存在的店名、价格、优惠、地址和口碑。字幕简短自然，保留有用原声。不要添加AI生成画面。",
+    "candidate_receipt": {
+      "job_id": "e04a8ad68f4c421bbb39c648e6c47d4c",
+      "project_id": "65c5c39e4b8740d7b65332ec22120e2a",
+      "batch_id": "c299da3ff9ec470b83ba35497810a695"
+    },
+    "job": {
+      "kind": "candidates",
+      "status": "failed",
+      "progress": 46.83333333333333,
+      "message": "“探索剪法”未形成不同的镜头结构；已保留本批记录，请调整素材或要求后重试",
+      "result": null,
+      "error": "“探索剪法”未形成不同的镜头结构；已保留本批记录，请调整素材或要求后重试",
+      "id": "e04a8ad68f4c421bbb39c648e6c47d4c",
+      "created_at": "2026-10-21T06:15:04.524878+00:00",
+      "updated_at": "2026-10-21T06:15:18.644969+00:00",
+      "resumable": false
+    },
+    "review_failures": [
+      {
+        "plan_id": "49fdbb020efd4ba19bd79a289718d338",
+        "error": "第1个镜头超出真实素材时长"
+      }
+    ],
+    "review_previews": [
+      {
+        "plan_id": "fad8b189bf334989becf148ca874c825",
+        "render_id": "48e1ebb010ac4048b5fb8d3bca9d8436",
+        "file": "cafe-B.mp4",
+        "url": "/api/media/renders/65c5c39e4b8740d7b65332ec22120e2a/v2-416f5cdc63ea4f4ea2115378c641d994.mp4",
+        "duration": 21.9
+      }
+    ]
+  }
+}

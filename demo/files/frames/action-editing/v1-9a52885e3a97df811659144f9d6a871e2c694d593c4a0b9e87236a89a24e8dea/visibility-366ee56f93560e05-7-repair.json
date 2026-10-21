@@ -1,0 +1,17 @@
+{
+  "visible": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true
+  ],
+  "reason": "前10帧中菜品被白色厨房纸或手部大面积遮挡，无法清楚看到主体；89.758s和89.925s两帧中菜品清晰可见于盘中。"
+}

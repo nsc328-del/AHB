@@ -1,0 +1,139 @@
+{
+  "title": "好人缘餐吧 · 20秒到店吸引短片",
+  "summary": "采用“证据先行”结构：先以最有食欲的成品鱼片与红油辣椒画面抓住注意力，再快速回溯后厨处理鱼片、备料与寿司手工，随后用店内实景证明环境，最后以夜间门头收束到店路径。全部为原素材实拍，不添加虚构店名、价格或口碑；字幕仅描述可见内容。",
+  "clips": [
+    {
+      "id": "eb4105fdcbe2410ea650082b6c008d2e",
+      "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+      "start": 36.0,
+      "end": 40.0,
+      "duration": 4.0,
+      "label": "白盘鱼片覆盖红辣椒碎与葱花，油亮汤汁特写",
+      "caption": "红油鱼片 铺满辣椒葱花",
+      "role": "证据开场：先给最有食欲的成品结果",
+      "transition": "fade",
+      "timeline_start": 0.0,
+      "timeline_end": 4.0
+    },
+    {
+      "id": "525ab78119d242919e68c0dc16c34d75",
+      "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+      "start": 44.0,
+      "end": 48.0,
+      "duration": 4.0,
+      "label": "戴透明手套在砧板上切红色鱼块，纹理清晰",
+      "caption": "现切鱼片 看得见的新鲜",
+      "role": "补原因：用刀工与食材处理证明新鲜",
+      "transition": "cut",
+      "timeline_start": 4.0,
+      "timeline_end": 8.0
+    },
+    {
+      "id": "a7865db036cc49fba5edc4956a0c1ef7",
+      "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+      "start": 20.0,
+      "end": 24.0,
+      "duration": 4.0,
+      "label": "白色台面多只小碗盛放调料，手取用撒料",
+      "caption": "辣椒花椒 香辣味型",
+      "role": "补上下文：展示调味配料来源",
+      "transition": "cut",
+      "timeline_start": 8.0,
+      "timeline_end": 12.0
+    },
+    {
+      "id": "12fd723744644efaba155d6b434f556a",
+      "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+      "start": 60.0,
+      "end": 64.0,
+      "duration": 4.0,
+      "label": "透过门框看到餐厅内红色沙发卡座、桌椅与装饰画",
+      "caption": "暖色卡座 适合朋友小聚",
+      "role": "环境证据：证明可到店坐下用餐",
+      "transition": "cut",
+      "timeline_start": 12.0,
+      "timeline_end": 16.0
+    },
+    {
+      "id": "6167acd983424ee6838a2ecf9d8c92c7",
+      "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+      "start": 0.0,
+      "end": 4.0,
+      "duration": 4.0,
+      "label": "夜间门头“好人缘 餐吧”与灯带、门前街道",
+      "caption": "好人缘餐吧 夜间亮灯营业",
+      "role": "收束：回到真实门店外观，明确到店主体",
+      "transition": "cut",
+      "timeline_start": 16.0,
+      "timeline_end": 20.0
+    }
+  ],
+  "music_asset_id": "",
+  "duration": 20.0,
+  "model": "deepseek-flash",
+  "request_context": {
+    "version": "stable-request-v1",
+    "stage": "editing_plan",
+    "fingerprint": "d269177ad99dff1799f675fce991d1b97a8c71309bc2d17204842ef86a7d0bd4",
+    "prefix_fingerprint": "ef7421686929e1e99f2bfebd4384471fa78ac5bdb5c6ac99986217a865c5d599",
+    "prefix_scope": "instructions_schema_and_stable_references",
+    "budget_kind": "conservative_estimate_not_provider_usage",
+    "text_utf8_bytes": 22572,
+    "image_count": 0,
+    "image_token_reserve": 0,
+    "protocol_token_reserve": 4096,
+    "estimated_input_tokens": 26668,
+    "input_budget": 240000,
+    "output_token_reserve": 10000,
+    "context_limit": 1000000
+  },
+  "brief": "为这家真实门店制作一条20秒的短视频，让附近潜在顾客看完有兴趣到店。用已有实拍画面选镜、重组、控制节奏。不要照搬原片顺序或连续截取一段，也不要制造不存在的店名、价格、优惠、地址和口碑。字幕简短自然，保留有用原声。不要添加AI生成画面。",
+  "ratio": "16:9",
+  "template_id": "free",
+  "audio_incomplete": true,
+  "source_kinds": {
+    "0cf5d848abe848908be4c6e71750b8d1": "video"
+  },
+  "width": 1280,
+  "height": 720,
+  "candidate_strategy": {
+    "key": "evidence",
+    "label": "证据先行",
+    "instruction": "先给素材中最有说服力的结果、事实或视觉证据，再补原因或上下文，最后收束。没有结果证据时，用最明确的主体展示开场，不虚构结论。",
+    "exploration": false
+  },
+  "difference_summary": "本批结构对照",
+  "diversity": {
+    "heuristic_version": "local-structure-v1",
+    "history_count": 0,
+    "history_similarity": null,
+    "novelty": null,
+    "novelty_penalty": 0,
+    "ranking_score": 1,
+    "nearest_history_plan_id": null,
+    "minimum_batch_distance": null,
+    "exploration": false,
+    "quality": {
+      "plan_validation": "passed",
+      "preview_validation": "pending"
+    },
+    "predicts_performance": false
+  },
+  "project_id": "e5a61c53f7704da4907966d273c93dec",
+  "id": "7aeb58797a99411488210f7c77f21557",
+  "version": 1,
+  "base_version_id": null,
+  "origin": {
+    "source": "candidate",
+    "actor": "model",
+    "job_id": "0720c0004b004df79e10b3de56754286",
+    "batch_id": "0d50edb2b4764332a14717b6273ff534",
+    "candidate_key": "evidence"
+  },
+  "change_summary": "建立初始方案",
+  "changes": [
+    "建立初始方案"
+  ],
+  "created_at": "2026-10-21T06:14:52.426507+00:00",
+  "updated_at": "2026-10-21T06:14:52.426519+00:00"
+}

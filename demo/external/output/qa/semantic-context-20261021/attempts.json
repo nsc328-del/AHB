@@ -1,0 +1,102 @@
+[
+  {
+    "job": {
+      "kind": "reference_semantics",
+      "payload": {
+        "asset_id": "2e2893e271774911a336c8a5aad5923c",
+        "base_analysis_id": "bd4eb58239b048649a8010e0ac9a6b88"
+      },
+      "status": "failed",
+      "progress": 35.0,
+      "message": "DeepSeek 未完成结构化分析，请减少单次素材量后重试",
+      "result": null,
+      "error": "DeepSeek 未完成结构化分析，请减少单次素材量后重试",
+      "provider_state": {},
+      "id": "9d2a401e6dac4b4c847e24f44e95e6f1",
+      "created_at": "2026-10-21T04:30:07.518867+00:00",
+      "updated_at": "2026-10-21T04:31:22.742786+00:00"
+    },
+    "usage": [
+      {
+        "id": "2abda5d403fcc7be4f63a3b2f506740e",
+        "created_at": "2026-10-21T04:31:22.735488+00:00",
+        "updated_at": "2026-10-21T04:31:22.735488+00:00",
+        "provider": "deepseek",
+        "model": "deepseek-flash",
+        "operation": "reference_semantics",
+        "status": "incomplete",
+        "http_status": 200,
+        "provider_task_id": null,
+        "provider_response_id": "c60d9401-7522-4b32-88c9-50599a424db2",
+        "job_id": "9d2a401e6dac4b4c847e24f44e95e6f1",
+        "project_id": null,
+        "asset_id": "2e2893e271774911a336c8a5aad5923c",
+        "batch_id": null,
+        "input_tokens": 11080,
+        "output_tokens": 16001,
+        "total_tokens": 27081,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 11080,
+        "video_seconds": null,
+        "input_seconds": null,
+        "output_seconds": null,
+        "input_audio_seconds": null,
+        "input_image_count": null,
+        "derived_fields": [
+          "cache_miss_tokens"
+        ],
+        "usage_status": "reported"
+      }
+    ]
+  },
+  {
+    "job": {
+      "kind": "reference_semantics",
+      "payload": {
+        "asset_id": "2e2893e271774911a336c8a5aad5923c",
+        "base_analysis_id": "bd4eb58239b048649a8010e0ac9a6b88"
+      },
+      "status": "failed",
+      "progress": 35.0,
+      "message": "语义段必须按真实语音边界连续覆盖，不能重叠、缺失或切断句子",
+      "result": null,
+      "error": "语义段必须按真实语音边界连续覆盖，不能重叠、缺失或切断句子",
+      "provider_state": {},
+      "id": "b6841f6efb744daa94d148e862ff89fc",
+      "created_at": "2026-10-21T04:32:48.431345+00:00",
+      "updated_at": "2026-10-21T04:33:00.149481+00:00"
+    },
+    "usage": [
+      {
+        "id": "6c6d6d190dfad32db73dc11d531bf792",
+        "created_at": "2026-10-21T04:33:00.079576+00:00",
+        "updated_at": "2026-10-21T04:33:00.079576+00:00",
+        "provider": "deepseek",
+        "model": "deepseek-flash",
+        "operation": "reference_semantics",
+        "status": "completed",
+        "http_status": 200,
+        "provider_task_id": null,
+        "provider_response_id": "1c6f54ce-97aa-460c-91a9-72b23da1edd2",
+        "job_id": "b6841f6efb744daa94d148e862ff89fc",
+        "project_id": null,
+        "asset_id": "2e2893e271774911a336c8a5aad5923c",
+        "batch_id": null,
+        "input_tokens": 11055,
+        "output_tokens": 2027,
+        "total_tokens": 13082,
+        "cache_hit_tokens": 0,
+        "cache_miss_tokens": 11055,
+        "video_seconds": null,
+        "input_seconds": null,
+        "output_seconds": null,
+        "input_audio_seconds": null,
+        "input_image_count": null,
+        "derived_fields": [
+          "cache_miss_tokens"
+        ],
+        "usage_status": "reported"
+      }
+    ]
+  }
+]

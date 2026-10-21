@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "plan_id": "7ef586c0655e48198c627b838431ca89",
+  "plan_version": 2,
+  "output_sha256": "4013ab0bee52d30ff225bcef949d9f1d89c234f875f56a815dd9d51b272cbd2c",
+  "compiled_timeline": {
+    "fps": 30,
+    "frame_count": 603,
+    "interval": "[start_frame,end_frame)",
+    "clips": [
+      {
+        "clip_id": "0f34bb9627894f7286b64a98a1ded2a2",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 0,
+        "end_frame": 120,
+        "source_start_seconds": 0.0,
+        "source_end_seconds": 4.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "fade",
+        "caption": "夜里的好人缘餐吧"
+      },
+      {
+        "clip_id": "17d445c563c64ea3a64d03b4b98556da",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 120,
+        "end_frame": 243,
+        "source_start_seconds": 35.9,
+        "source_end_seconds": 40.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "招牌鱼片，红油鲜香"
+      },
+      {
+        "clip_id": "19e0f8f4354549a4832daf2ec023a1ef",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 243,
+        "end_frame": 363,
+        "source_start_seconds": 44.0,
+        "source_end_seconds": 48.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "现切现处理"
+      },
+      {
+        "clip_id": "998f6dc241e440388c117af00d207b99",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 363,
+        "end_frame": 483,
+        "source_start_seconds": 12.0,
+        "source_end_seconds": 16.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "鱼片薄切入锅"
+      },
+      {
+        "clip_id": "b4125b73537e499dae7bbd6e40d2d318",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start_frame": 483,
+        "end_frame": 603,
+        "source_start_seconds": 60.0,
+        "source_end_seconds": 64.0,
+        "source_time_base": "1/16000",
+        "kind": "video",
+        "transition": "cut",
+        "caption": "暖光卡座，适合小聚"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+      "sha256": "1e9f7b793672bbce11ccc6fbddf652f926eb3b3b1f0bb0d0fc63c7762489e772"
+    }
+  ],
+  "renderer_sha256": "8276cd4d5e57b725e005a8d0b71d000a58e14145e21519be6af8fbee6642dc1d",
+  "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers",
+  "width": 1280,
+  "height": 720,
+  "sample_rate": 48000,
+  "font_requested": "Hiragino Sans GB",
+  "music_asset_id": "",
+  "music_volume": 0.16,
+  "plan": {
+    "title": "好人缘餐吧·夜访鱼鲜",
+    "summary": "以顾客最关心的问题“这家店到底做什么、值不值得进”切入：先用门头给出答案，再快速展示真实招牌菜与后厨处理过程，最后落到店内环境和夜景外观，形成“找店—看菜—进店”的20秒到店引导。素材均为同一实拍视频的不同区间，不编造店名、价格或口碑。",
+    "clips": [
+      {
+        "id": "0f34bb9627894f7286b64a98a1ded2a2",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 0.0,
+        "end": 4.0,
+        "duration": 4.0,
+        "label": "夜间门头全景，招牌“好人缘餐吧”与经营品类文字完整入画",
+        "caption": "夜里的好人缘餐吧",
+        "role": "问题切入后的答案镜头：先让附近顾客一眼认出店铺与品类",
+        "transition": "fade",
+        "timeline_start": 0.0,
+        "timeline_end": 4.0
+      },
+      {
+        "id": "17d445c563c64ea3a64d03b4b98556da",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 35.9,
+        "end": 40.0,
+        "duration": 4.1,
+        "label": "白盘鱼片覆满红辣椒碎与葱花，汤汁油亮",
+        "caption": "招牌鱼片，红油鲜香",
+        "role": "用最有食欲的成品菜回应“值不值得进”",
+        "transition": "cut",
+        "timeline_start": 4.0,
+        "timeline_end": 8.1
+      },
+      {
+        "id": "19e0f8f4354549a4832daf2ec023a1ef",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 44.0,
+        "end": 48.0,
+        "duration": 4.0,
+        "label": "戴手套的手在砧板上切红色鱼块，刀下纹理清晰",
+        "caption": "现切现处理",
+        "role": "把成品落到食材处理，强化新鲜可信",
+        "transition": "cut",
+        "timeline_start": 8.1,
+        "timeline_end": 12.1
+      },
+      {
+        "id": "998f6dc241e440388c117af00d207b99",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 12.0,
+        "end": 16.0,
+        "duration": 4.0,
+        "label": "菜刀在砧板上压切鱼片，近景特写",
+        "caption": "鱼片薄切入锅",
+        "role": "补充后厨手艺与备料节奏",
+        "transition": "cut",
+        "timeline_start": 12.1,
+        "timeline_end": 16.1
+      },
+      {
+        "id": "b4125b73537e499dae7bbd6e40d2d318",
+        "asset_id": "0cf5d848abe848908be4c6e71750b8d1",
+        "start": 60.0,
+        "end": 64.0,
+        "duration": 4.0,
+        "label": "透过门框看向餐厅内部，红色卡座、砖墙与装饰画",
+        "caption": "暖光卡座，适合小聚",
+        "role": "从菜品转回真实到店空间，完成到店理由",
+        "transition": "cut",
+        "timeline_start": 16.1,
+        "timeline_end": 20.1
+      }
+    ],
+    "music_asset_id": "",
+    "duration": 20.1,
+    "model": "deepseek-flash",
+    "request_context": {
+      "version": "stable-request-v1",
+      "stage": "editing_plan",
+      "fingerprint": "cb08799d49b73dd5262f777649148a4fa25a62ea93a323b92c87169184fa72c8",
+      "prefix_fingerprint": "ef7421686929e1e99f2bfebd4384471fa78ac5bdb5c6ac99986217a865c5d599",
+      "prefix_scope": "instructions_schema_and_stable_references",
+      "budget_kind": "conservative_estimate_not_provider_usage",
+      "text_utf8_bytes": 22824,
+      "image_count": 0,
+      "image_token_reserve": 0,
+      "protocol_token_reserve": 4096,
+      "estimated_input_tokens": 26920,
+      "input_budget": 240000,
+      "output_token_reserve": 10000,
+      "context_limit": 1000000
+    },
+    "brief": "为这家真实门店制作一条20秒的短视频，让附近潜在顾客看完有兴趣到店。用已有实拍画面选镜、重组、控制节奏。不要照搬原片顺序或连续截取一段，也不要制造不存在的店名、价格、优惠、地址和口碑。字幕简短自然，保留有用原声。不要添加AI生成画面。",
+    "ratio": "16:9",
+    "template_id": "free",
+    "audio_incomplete": true,
+    "source_kinds": {
+      "0cf5d848abe848908be4c6e71750b8d1": "video"
+    },
+    "width": 1280,
+    "height": 720,
+    "candidate_strategy": {
+      "key": "question",
+      "label": "问题切入",
+      "instruction": "从用户需求中真实存在的问题、对照或悬念切入，再用素材逐步回应。与证据先行方案改变开场取材、镜头顺序或时间分配；不能编造冲突或对白。",
+      "exploration": false
+    },
+    "difference_summary": "取材区间或节奏不同",
+    "diversity": {
+      "heuristic_version": "local-structure-v1",
+      "history_count": 0,
+      "history_similarity": null,
+      "novelty": null,
+      "novelty_penalty": 0,
+      "ranking_score": 1,
+      "nearest_history_plan_id": null,
+      "minimum_batch_distance": 0.666667,
+      "exploration": false,
+      "quality": {
+        "plan_validation": "passed",
+        "preview_validation": "pending"
+      },
+      "predicts_performance": false
+    },
+    "project_id": "e5a61c53f7704da4907966d273c93dec",
+    "id": "7ef586c0655e48198c627b838431ca89",
+    "version": 2,
+    "base_version_id": null,
+    "origin": {
+      "source": "candidate",
+      "actor": "model",
+      "job_id": "0720c0004b004df79e10b3de56754286",
+      "batch_id": "0d50edb2b4764332a14717b6273ff534",
+      "candidate_key": "question"
+    },
+    "change_summary": "建立初始方案",
+    "changes": [
+      "建立初始方案"
+    ],
+    "created_at": "2026-10-21T06:14:56.174057+00:00",
+    "updated_at": "2026-10-21T06:15:00.595011+00:00",
+    "url": "/api/media/plans/7ef586c0655e48198c627b838431ca89.json"
+  }
+}

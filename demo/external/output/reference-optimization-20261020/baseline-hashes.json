@@ -1,0 +1,13 @@
+{
+  "short-usage.json": "d0af811b74fe17e80c870d6c0693d3b2afd80be1c3a2b12dbc0f5912f666eff0",
+  "short-local-transcript.json": "06a548e8e86184a72e2e4827387b7da31e64b62ea79a29e8ffe58a8925d4eabe",
+  "long-local-transcript.json": "9e7f9087a547ffd1f5525a8d97c12f88576e11078e7f62f12d3395e95ab6ce1b",
+  "short-deepseek.json": "8e9036fe0863ed88240899d9ba9f02b54303efdf9c127e1aaf1bb323d99c6552",
+  "long-deepseek.json": "69eb076de51c483b0df6b9aad444a26c4e079127361b820f030db614a4f2e5e3",
+  "short-import.json": "e8fb2d41f9e4c9359b9a96b7fb00f7bc729d13f1146b7725b72bca655b9103fc",
+  "independent-long.json": "3fe38da42d36c98b6d2d1a1e4cbd41240d72fe355814d130532e4c115908ddd0",
+  "comparison.json": "faad47aaadb52ed221d9538330d593a274775fc8b6724f71c2da7ebc2230fe20",
+  "independent-short.json": "a68c4f0545a2e54f9a86971ba6a272b70ff67e9e03785e901861e8eddeab090c",
+  "long-usage.json": "ba8b66be82304e5c1b301d2702f38e5ad0f1fa51677864977b923af6e0ad7fea",
+  "long-import.json": "85720d33bac49e2b2f08392ed823843bdcf1015eef174cc33730cac912774c9a"
+}

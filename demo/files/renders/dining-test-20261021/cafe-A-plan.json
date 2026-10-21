@@ -1,0 +1,153 @@
+{
+  "title": "一杯咖啡的20秒证据",
+  "summary": "采用“证据先行”结构：先以心形拉花成品开场，立刻给出最有说服力的视觉结果；随后回到咖啡豆、压粉、萃取、奶泡注入的制作语境，解释这杯成品如何形成；最后以成品杯与糖包的完整特写收束。全程使用素材内无对白片段，保留环境声，不虚构店名、价格与口碑。",
+  "clips": [
+    {
+      "id": "cf399a1deca14e84b9f6657c799c903e",
+      "asset_id": "5d3523be1d264ee1aadb94a03f63f171",
+      "start": 47.2,
+      "end": 51.157,
+      "duration": 3.957,
+      "label": "心形拉花成品杯特写，杯碟与糖包完整入画",
+      "caption": "附近的一杯好咖啡",
+      "role": "结果证据开场，先给出最有说服力的成品画面",
+      "transition": "fade",
+      "timeline_start": 0.0,
+      "timeline_end": 3.957
+    },
+    {
+      "id": "46446f774e0a4d868ee8c90a6249a647",
+      "asset_id": "5d3523be1d264ee1aadb94a03f63f171",
+      "start": 0.0,
+      "end": 3.96,
+      "duration": 3.96,
+      "label": "虚焦高光转为透明容器中的咖啡豆",
+      "caption": "从咖啡豆开始",
+      "role": "回到原料语境，补充成品的原因",
+      "transition": "cut",
+      "timeline_start": 3.957,
+      "timeline_end": 7.917
+    },
+    {
+      "id": "d03720fe2f1249f987eb8eaffe7840bd",
+      "asset_id": "5d3523be1d264ee1aadb94a03f63f171",
+      "start": 11.8,
+      "end": 15.76,
+      "duration": 3.96,
+      "label": "手握住金属压粉器，压在装有咖啡粉的粉碗上",
+      "caption": "认真压好每一粉",
+      "role": "制作流程中的关键动作，体现手工与稳定出品",
+      "transition": "cut",
+      "timeline_start": 7.917,
+      "timeline_end": 11.877
+    },
+    {
+      "id": "69aa9b263417477ca7ff819bc10fc48f",
+      "asset_id": "5d3523be1d264ee1aadb94a03f63f171",
+      "start": 23.6,
+      "end": 27.52,
+      "duration": 3.92,
+      "label": "咖啡液从冲煮手柄分流嘴流入白色咖啡杯",
+      "caption": "浓缩慢慢流出",
+      "role": "萃取结果的过程证据，连接原料与成品",
+      "transition": "cut",
+      "timeline_start": 11.877,
+      "timeline_end": 15.797
+    },
+    {
+      "id": "f66d911e51434421ad056e47a258ab67",
+      "asset_id": "5d3523be1d264ee1aadb94a03f63f171",
+      "start": 39.32,
+      "end": 43.28,
+      "duration": 3.96,
+      "label": "白色奶液注入浓缩咖啡，液面形成拉花纹理",
+      "caption": "奶泡注入，拉花成形",
+      "role": "从浓缩到拉花的关键转折，解释成品图案来源",
+      "transition": "cut",
+      "timeline_start": 15.797,
+      "timeline_end": 19.757
+    },
+    {
+      "id": "12ab85c9ffeb43fb95814a10a662127b",
+      "asset_id": "5d3523be1d264ee1aadb94a03f63f171",
+      "start": 47.2,
+      "end": 50.387,
+      "duration": 3.187,
+      "label": "成品心形拉花咖啡杯与糖包静置展示",
+      "caption": "等你来喝",
+      "role": "回到成品收束，形成首尾呼应",
+      "transition": "cut",
+      "timeline_start": 19.757,
+      "timeline_end": 22.944
+    }
+  ],
+  "music_asset_id": "",
+  "duration": 22.944,
+  "model": "deepseek-flash",
+  "request_context": {
+    "version": "stable-request-v1",
+    "stage": "editing_plan",
+    "fingerprint": "324fb3dc78eddd9368efff2287e745aa3e23023aec2fb06470d870dd269f324d",
+    "prefix_fingerprint": "ef7421686929e1e99f2bfebd4384471fa78ac5bdb5c6ac99986217a865c5d599",
+    "prefix_scope": "instructions_schema_and_stable_references",
+    "budget_kind": "conservative_estimate_not_provider_usage",
+    "text_utf8_bytes": 16172,
+    "image_count": 0,
+    "image_token_reserve": 0,
+    "protocol_token_reserve": 4096,
+    "estimated_input_tokens": 20268,
+    "input_budget": 240000,
+    "output_token_reserve": 10000,
+    "context_limit": 1000000
+  },
+  "brief": "为这家真实门店制作一条20秒的短视频，让附近潜在顾客看完有兴趣到店。用已有实拍画面选镜、重组、控制节奏。不要照搬原片顺序或连续截取一段，也不要制造不存在的店名、价格、优惠、地址和口碑。字幕简短自然，保留有用原声。不要添加AI生成画面。",
+  "ratio": "16:9",
+  "template_id": "free",
+  "audio_incomplete": true,
+  "source_kinds": {
+    "5d3523be1d264ee1aadb94a03f63f171": "video"
+  },
+  "width": 1280,
+  "height": 720,
+  "candidate_strategy": {
+    "key": "evidence",
+    "label": "证据先行",
+    "instruction": "先给素材中最有说服力的结果、事实或视觉证据，再补原因或上下文，最后收束。没有结果证据时，用最明确的主体展示开场，不虚构结论。",
+    "exploration": false
+  },
+  "difference_summary": "本批结构对照",
+  "diversity": {
+    "heuristic_version": "local-structure-v1",
+    "history_count": 0,
+    "history_similarity": null,
+    "novelty": null,
+    "novelty_penalty": 0,
+    "ranking_score": 1,
+    "nearest_history_plan_id": null,
+    "minimum_batch_distance": null,
+    "exploration": false,
+    "quality": {
+      "plan_validation": "passed",
+      "preview_validation": "pending"
+    },
+    "predicts_performance": false
+  },
+  "project_id": "65c5c39e4b8740d7b65332ec22120e2a",
+  "id": "49fdbb020efd4ba19bd79a289718d338",
+  "version": 1,
+  "base_version_id": null,
+  "origin": {
+    "source": "candidate",
+    "actor": "model",
+    "job_id": "e04a8ad68f4c421bbb39c648e6c47d4c",
+    "batch_id": "c299da3ff9ec470b83ba35497810a695",
+    "candidate_key": "evidence"
+  },
+  "change_summary": "建立初始方案",
+  "changes": [
+    "建立初始方案"
+  ],
+  "created_at": "2026-10-21T06:15:07.919721+00:00",
+  "updated_at": "2026-10-21T06:15:07.921662+00:00",
+  "url": "/api/media/plans/49fdbb020efd4ba19bd79a289718d338.json"
+}

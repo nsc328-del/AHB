@@ -1,0 +1,85 @@
+{
+  "title": "节点交互验收",
+  "brief": "手动编排 · 顺序展开",
+  "summary": "",
+  "template_id": "manual",
+  "ratio": "9:16",
+  "clips": [
+    {
+      "id": "d42e876e-5ab3-40b0-aca4-2790f208b896",
+      "asset_id": "ed7d48f177304c759fe9381a74a72f9d",
+      "start": 0.0,
+      "end": 3.0,
+      "duration": 3.0,
+      "label": "green.png",
+      "caption": "从一个形状开始",
+      "role": "body",
+      "transition": "cut",
+      "timeline_start": 0.0,
+      "timeline_end": 3.0
+    },
+    {
+      "id": "a9d9bb65-9c3f-48b7-a06f-6af9a0730144",
+      "asset_id": "a9e3a40491324423826eb8ca76f4e99a",
+      "start": 0.0,
+      "end": 2.0,
+      "duration": 2.0,
+      "label": "AI生成_abde9074.mp4",
+      "caption": "",
+      "role": "body",
+      "transition": "cut",
+      "timeline_start": 3.0,
+      "timeline_end": 5.0
+    },
+    {
+      "id": "945b0596-6016-4068-aad5-8f400a4eeb5b",
+      "asset_id": "e400442976b34c6b92b3459502a60aaf",
+      "start": 0.0,
+      "end": 2.0,
+      "duration": 2.0,
+      "label": "orange.png",
+      "caption": "",
+      "role": "body",
+      "transition": "cut",
+      "timeline_start": 5.0,
+      "timeline_end": 7.0
+    },
+    {
+      "id": "61cb0c9f-b919-4025-a25c-61632b11659c",
+      "asset_id": "e48d062237fe407dafe6676c3a96289e",
+      "start": 0.0,
+      "end": 2.0,
+      "duration": 2.0,
+      "label": "blue.png",
+      "caption": "",
+      "role": "body",
+      "transition": "cut",
+      "timeline_start": 7.0,
+      "timeline_end": 9.0
+    }
+  ],
+  "width": 720,
+  "height": 1280,
+  "duration": 9.0,
+  "project_id": "85e342b64afd4aa193b885156ac29ee6",
+  "id": "29e7d95736ac40b7b6c42d067b4b0052",
+  "version": 2,
+  "base_version_id": "c14b6dad59aa4a4f839af7b6101f31ea",
+  "origin": {
+    "source": "home_canvas",
+    "actor": "local_user",
+    "branch_id": "a",
+    "branch_name": "顺序展开",
+    "submission_id": "b805ee12-977f-4533-b2d0-b16de61ffcc5"
+  },
+  "change_summary": "镜头数 3 → 4；调整素材或镜头顺序；调整入出点或展示时长；修改字幕；调整转场",
+  "changes": [
+    "镜头数 3 → 4",
+    "调整素材或镜头顺序",
+    "调整入出点或展示时长",
+    "修改字幕",
+    "调整转场"
+  ],
+  "created_at": "2026-10-21T02:35:54.989182+00:00",
+  "updated_at": "2026-10-21T02:35:54.989192+00:00"
+}

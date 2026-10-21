@@ -1,0 +1,84 @@
+{
+  "kind": "reference_repair",
+  "status": "failed",
+  "progress": 10.0,
+  "message": "DeepSeek 未完成结构化分析，请减少单次素材量后重试",
+  "result": null,
+  "error": "DeepSeek 未完成结构化分析，请减少单次素材量后重试",
+  "payload": {
+    "asset_id": "bed732a655dd4a8e9a2d2386a964c5a5",
+    "base_analysis_id": "07d152c3afcf4dc0845645e99c8c6ed6",
+    "targets": [
+      {
+        "collection": "segments",
+        "index": 1,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 2,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 3,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "segments",
+        "index": 5,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 1,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 2,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 3,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      },
+      {
+        "collection": "content_segments",
+        "index": 5,
+        "issues": [
+          "visual",
+          "motion"
+        ]
+      }
+    ],
+    "reviewed_edits": [],
+    "automatic": true
+  },
+  "provider_state": {},
+  "id": "2715b4bb9b5348638898212982945706",
+  "created_at": "2026-10-20T16:23:26.445566+00:00",
+  "updated_at": "2026-10-20T16:24:36.139840+00:00"
+}

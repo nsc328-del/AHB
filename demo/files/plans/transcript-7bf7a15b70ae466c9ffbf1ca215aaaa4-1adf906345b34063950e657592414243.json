@@ -1,0 +1,12 @@
+{
+  "text": "",
+  "segments": [],
+  "language": "en",
+  "language_probability": 0.5658,
+  "duration": 6.016,
+  "model": "base",
+  "engine": "faster-whisper",
+  "local": true,
+  "has_speech": false,
+  "created_at": "2026-10-20T04:29:08.782999+00:00"
+}
