@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA = Path(os.environ.get("VIDEO_STUDIO_DATA", str(ROOT / "data"))).expanduser().resolve()
 TABLES = {
-    "assets", "analyses", "projects", "plans", "jobs", "renders",
+    "assets", "analyses", "projects", "plans", "jobs", "renders", "business_projects", "daily_summaries",
     "candidate_batches", "decision_events", "publication_cases",
     "publication_observations", "publication_bindings", "publication_events",
     "publication_syncs", "usage_records", "usage_tracking", "generation_batches", "animation_projects", "animation_revisions",

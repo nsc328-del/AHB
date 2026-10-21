@@ -11,7 +11,7 @@ export function createMediaGallery(ctx){
   const $=ctx.$||((selector,root=document)=>root.querySelector(selector));
   const $$=ctx.$$||((selector,root=document)=>[...root.querySelectorAll(selector)]);
   const state={
-    analysis:{detailId:null,scroll:0,anchorId:null,anchorOffset:null,openDates:new Set(),restore:0},
+    analysis:{month:null,day:null,summaries:new Map(),loadedAt:0,loading:false,detailId:null,scroll:0,anchorId:null,anchorOffset:null,openDates:new Set(),restore:0},
     reference:{detailId:null,scroll:0,anchorId:null,anchorOffset:null,search:'',renaming:null,restore:0,rhythmPages:new Map(),presentationLinks:new Map(),presentationPending:new Set(),chapters:new Map()},
   };
   const titleFor=kind=>kind==='reference'?'样片分析':'素材&分析';
@@ -19,7 +19,7 @@ export function createMediaGallery(ctx){
   const routeIs=kind=>S.route===kind;
   const selectedSegment=(id,index)=>ctx.segmentSelected?ctx.segmentSelected(id,index):S.segments.some(item=>item.asset_id===id&&item.index===index);
   const isReference=isReferenceAsset;
-  const assetsFor=kind=>S.assets.filter(asset=>kind==='reference'?asset.kind==='video'&&isReference(asset):!isReference(asset)&&['image','video','audio'].includes(asset.kind));
+  const assetsFor=kind=>S.assets.filter(asset=>kind==='reference'?asset.kind==='video'&&isReference(asset):asset.source!=='candidate_preview'&&!isReference(asset)&&['image','video','audio'].includes(asset.kind));
 
   function visibleAssets(kind){
     if(kind==='reference'){
@@ -39,7 +39,7 @@ export function createMediaGallery(ctx){
   function dateInfo(asset){
     const date=new Date(asset.created_at||asset.uploaded_at||'');
     if(Number.isNaN(date.getTime()))return {key:'unknown',label:'日期未记录',time:0};
-    const key=`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+    const key=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
     return {key,label:date.toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric'}),time:date.getTime()};
   }
   function grouped(kind){
@@ -148,6 +148,14 @@ export function createMediaGallery(ctx){
   }
   function nodeThumbnail(asset,node){
     const shots=asset.analysis?.shots||[],ids=new Set(node.shot_ids||[]);
+    if(semanticFor(asset)){
+      // Chapter boundaries follow speech, so their first frame can belong to the
+      // preceding shot. Reuse an interior thumbnail instead of a boundary frame.
+      const middle=(Number(node.start)+Number(node.end))/2;
+      const inside=shots.filter(shot=>shot.thumbnail_url&&Number(shot.thumbnail_time)>=Number(node.start)&&Number(shot.thumbnail_time)<Number(node.end));
+      inside.sort((a,b)=>Math.abs(Number(a.thumbnail_time)-middle)-Math.abs(Number(b.thumbnail_time)-middle));
+      if(inside.length)return inside[0].thumbnail_url;
+    }
     const matched=shots.find(shot=>ids.has(shot.id));
     const byTime=shots.find(shot=>Number(node.start)>=Number(shot.start)&&Number(node.start)<Number(shot.end));
     return (matched||byTime)?.thumbnail_url||'';
@@ -159,17 +167,16 @@ export function createMediaGallery(ctx){
     const result=presentationFor(asset),nodes=presentationNodes(asset),semantic=semanticFor(asset),kind=semantic?'narrative':result?.kind||'uncertain';
     if(!nodes.length)return '';
     const visible=compact?nodes.slice(0,4):nodes;
-    if(kind==='narrative')return `<ol class="${compact?'mg-reference-structure':'mg-structure-track'}" aria-label="${semantic?'章节':'叙事结构'}">${visible.map((node,index)=>`<li><button type="button" class="${compact?'':'mg-structure-node'}" ${presentationButtonAttrs(asset,node,compact)} ${semantic?'aria-pressed="false"':''} aria-label="${esc(node.label||`内容段 ${index+1}`)}，${timecode(node.start)} 至 ${timecode(node.end)}"><span class="mg-node-copy"><strong>${esc(node.label||`内容段 ${index+1}`)}</strong><small>${timecode(node.start)}–${timecode(node.end)}</small></span>${referenceDurationHTML(node)}</button></li>`).join('')}${compact&&nodes.length>4?`<li class="mg-reference-more"><button type="button" data-mg-action="open" data-kind="reference" data-id="${esc(asset.id)}" aria-label="查看全部 ${nodes.length} 个${semantic?'章节':'内容段'}">+${nodes.length-4}</button></li>`:''}</ol>`;
     const links=result?.links||[];
     const linked=kind==='motion_transition'||kind==='rhythm_montage';
     const rows=visible.map((node,index)=>{
       const image=nodeThumbnail(asset,node),next=visible[index+1],link=next&&links.find(item=>item.from===node.id&&item.to===next.id);
       const text=node.label||`镜头 ${index+1}`;
-      const card=`<button type="button" class="mg-presentation-node" style="--mg-duration-width:${Math.max(4,Math.min(100,(Number(node.end)-Number(node.start))/Math.max(...nodes.map(item=>Number(item.end)-Number(item.start)),.1)*100)).toFixed(1)}%" ${presentationButtonAttrs(asset,node,compact)} aria-label="${esc(text)}，${timecode(node.start)} 至 ${timecode(node.end)}"><span class="mg-presentation-thumb">${image?`<img src="${esc(image)}" alt="" loading="lazy">`:'<span class="mg-shot-placeholder" aria-hidden="true">▧</span>'}<span class="mg-presentation-number">${index+1}</span></span><span class="mg-presentation-node-title">${esc(text)}</span><span class="mg-presentation-node-time">${timecode(node.start)}–${timecode(node.end)}</span>${referenceDurationHTML(node)}${!compact&&node.description?`<span class="mg-presentation-node-description">${esc(node.description)}</span>`:''}</button>`;
+      const card=`<button type="button" class="mg-presentation-node" ${semantic?'aria-pressed="false"':''} style="--mg-duration-width:${Math.max(4,Math.min(100,(Number(node.end)-Number(node.start))/Math.max(...nodes.map(item=>Number(item.end)-Number(item.start)),.1)*100)).toFixed(1)}%" ${presentationButtonAttrs(asset,node,compact)} aria-label="${esc(text)}，${timecode(node.start)} 至 ${timecode(node.end)}"><span class="mg-presentation-thumb">${image?`<img src="${esc(image)}" alt="" loading="lazy">`:'<span class="mg-shot-placeholder" aria-hidden="true">▧</span>'}<span class="mg-presentation-number">${index+1}</span></span><span class="mg-presentation-node-title">${esc(text)}</span><span class="mg-presentation-node-time">${timecode(node.start)}–${timecode(node.end)}</span>${referenceDurationHTML(node)}${!compact&&node.description?`<span class="mg-presentation-node-description">${esc(node.description)}</span>`:''}</button>`;
       const connection=linked&&next?`<button type="button" class="mg-presentation-joint ${link?.kind==='uncertain'?'is-uncertain':''}" data-mg-action="presentation-link" data-kind="reference" data-id="${esc(asset.id)}" data-from="${esc(node.id||'')}" data-to="${esc(next.id||'')}" aria-label="查看 ${esc(text)} 与 ${esc(next.label||'下一镜头')} 的衔接依据" ${hasLinkEvidence(link)?'':'disabled'}><svg viewBox="0 0 32 14" aria-hidden="true"><path d="M5 7h22"/><circle cx="3" cy="7" r="2"/><circle cx="29" cy="7" r="2"/></svg>${!compact?`<span>${esc(linkKinds[link?.kind]||'待核对')}</span>`:''}</button>`:'';
       return `<li>${card}${connection}</li>`;
     }).join('');
-    return `<ol class="mg-presentation-track is-${kind} ${compact?'is-compact':''}" aria-label="${esc(presentationKinds[kind])}">${rows}${compact&&nodes.length>4?`<li class="mg-presentation-more"><button type="button" data-mg-action="open" data-kind="reference" data-id="${esc(asset.id)}" aria-label="查看全部 ${nodes.length} 个镜头">+${nodes.length-4}</button></li>`:''}</ol>`;
+    return `<ol class="mg-presentation-track is-${kind} ${compact?'is-compact':''}" aria-label="${esc(presentationKinds[kind])}">${rows}${compact&&nodes.length>4?`<li class="mg-presentation-more"><button type="button" data-mg-action="open" data-kind="reference" data-id="${esc(asset.id)}" aria-label="查看全部 ${nodes.length} 个${semantic?'章节':'镜头'}">+${nodes.length-4}</button></li>`:''}</ol>`;
   }
   const hasLinkEvidence=link=>!!(link&&(String(link.description||'').trim()||link.evidence_times?.length));
   function presentationLinkHTML(asset){
@@ -242,36 +249,75 @@ export function createMediaGallery(ctx){
   function refreshGallery(kind){
     const root=rootFor(kind);if(!root)return;
     if(kind==='reference')return refreshReferenceCards(root);
-    const groups=grouped(kind),gallery=$('.mg-gallery',root),current=state[kind];
-    $('.mg-gallery-count',root).textContent=`${assetsFor(kind).length} ${kind==='reference'?'条样片':'份素材'}`;
-    if(!groups.length){
-      gallery.innerHTML=`<div class="mg-empty"><p>${assetsFor(kind).length?'没有匹配的素材':kind==='reference'?'还没有样片':'还没有素材'}</p>${assetsFor(kind).length?'<button type="button" class="button" data-mg-action="reset-filters">清除筛选</button>':uploadButton(kind,true)}</div>`;
-      return;
+    refreshCalendar(root);
+  }
+  const shanghaiDay=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  function refreshCalendar(root){
+    const current=state.analysis,groups=grouped('analysis'),byDay=new Map(groups.map(group=>[group.key,group]));
+    const gallery=$('.mg-gallery',root);gallery.classList.add('mg-calendar');
+    $('.mg-gallery-count',root).textContent=`${assetsFor('analysis').length} 份素材`;
+    current.month ||= shanghaiDay().slice(0,7);
+    if(!current.loading&&Date.now()-current.loadedAt>15000){
+      current.loading=true;current.loadedAt=Date.now();
+      ctx.api('/material-calendar').then(data=>{current.summaries=new Map(data.days.map(row=>[row.day,row]));if(root.isConnected)refreshCalendar(root)})
+        .catch(()=>{}).finally(()=>{current.loading=false});
     }
-    $('.mg-empty',gallery)?.remove();
-    const validDates=new Set(groups.map(group=>group.key));
-    $$('.mg-date',gallery).forEach(element=>{if(!validDates.has(element.dataset.date))element.remove()});
-    for(const [index,group] of groups.entries()){
-      let section=$$('.mg-date',gallery).find(item=>item.dataset.date===group.key);
-      if(!section){
-        section=document.createElement('section');section.className='mg-date';section.dataset.date=group.key;
-        const panelId=`mg-${kind}-${group.key}`;
-        section.innerHTML=`<button type="button" class="mg-date-trigger" data-mg-action="toggle-date" aria-controls="${panelId}" aria-expanded="false"></button><div class="mg-album-reveal" id="${panelId}"><div class="mg-album-clip"><div class="mg-album"></div></div></div>`;
+    const [year,month]=current.month.split('-').map(Number),first=new Date(Date.UTC(year,month-1,1)),offset=(first.getUTCDay()+6)%7;
+    const count=new Date(Date.UTC(year,month,0)).getUTCDate(),cells=Math.ceil((offset+count)/7)*7;
+    let body='';
+    for(let index=0;index<cells;index++){
+      const dayNumber=index-offset+1,valid=dayNumber>0&&dayNumber<=count;
+      const key=valid?`${current.month}-${String(dayNumber).padStart(2,'0')}`:'',group=byDay.get(key),digest=current.summaries.get(key);
+      const summary=digest?.result?.summary||digest?.previous_result?.summary;
+      const counts=group?['video','image','audio'].map(kind=>{const n=group.assets.filter(a=>a.kind===kind).length;return n?`${n} ${kindNames[kind]}`:''}).filter(Boolean).join(' · '):'';
+      const waiting=key>=shanghaiDay()?'明日汇总':digest?.status==='waiting_analysis'?'等待素材分析':['queued','running'].includes(digest?.status)?'汇总中':digest?.error?'汇总未完成':'待汇总';
+      const stack=group?groupSummary(group).split('<span class="mg-date-caption">')[0]:'';
+      body+=`<div data-calendar-key="${key||'outside-'+index}" class="mg-calendar-cell ${!valid?'is-outside':''} ${key===shanghaiDay()?'is-today':''} ${current.day===key?'is-selected':''}">${valid?`<button type="button" class="mg-calendar-day" data-mg-action="calendar-day" data-day="${key}" aria-expanded="${current.day===key}" aria-label="${key}，${group?group.assets.length+'份素材':'无素材'}" ${!group?'disabled':''}><span class="mg-calendar-date">${dayNumber}</span>${group?`${stack}<span class="mg-calendar-count">${esc(counts)}</span><span class="mg-calendar-summary">${esc(summary||waiting)}</span>${summary&&digest?.status==='outdated'?'<span class="mg-calendar-pending">有新分析待汇总</span>':''}`:''}</button>`:''}</div>`;
+      if(index%7===6&&current.day){
+        const selected=Number(current.day.slice(-2)),position=offset+selected-1;
+        if(current.day.startsWith(current.month)&&position>=index-6&&position<=index&&byDay.has(current.day)){
+          const selectedGroup=byDay.get(current.day),digest=current.summaries.get(current.day),summary=digest?.result||digest?.previous_result;
+          body+=`<section data-calendar-key="expanded-${current.day}" class="mg-calendar-expanded" data-date="${current.day}"><div class="mg-calendar-expanded-heading"><div><h2>${Number(current.day.slice(5,7))}月${selected}日</h2><span>${selectedGroup.assets.length} 份素材</span></div><div>${digest?.job_id?`<div data-usage-scope="job" data-usage-job-id="${esc(digest.job_id)}" data-usage-label="本次汇总用量"></div>`:''}${current.day<shanghaiDay()?`<button type="button" class="button small quiet" data-mg-action="calendar-summary" data-day="${current.day}" ${['queued','running'].includes(digest?.status)?'disabled':''}>${['queued','running'].includes(digest?.status)?'汇总中':summary?'更新汇总':'汇总素材'}</button>`:''}<button type="button" class="mg-calendar-close" data-mg-action="calendar-close" aria-label="收起日期">×</button></div></div>${summary&&['queued','running','outdated'].includes(digest?.status)?'<p class="mg-calendar-pending">新汇总准备中，当前为上次结果</p>':''}${summary?`<p class="mg-calendar-day-summary">${esc(summary.summary)}</p><div class="mg-tags">${(summary.themes||[]).map(tag=>`<span>${esc(tag)}</span>`).join('')}</div>${summary.missing_count?`<p class="mg-calendar-pending">${summary.missing_count} 份尚无分析，未计入总结</p>`:''}`:''}${digest?.error?`<p class="mg-card-error">${esc(digest.error)}</p>`:''}<div class="mg-album">${selectedGroup.assets.map(asset=>`<article class="mg-card ${S.selected.has(asset.id)?'selected':''}" data-asset-id="${esc(asset.id)}">${cardContent(asset,'analysis')}</article>`).join('')}</div></section>`;
+        }
       }
-      const summary=$('.mg-date-trigger',section),html=groupSummary(group);
-      if(summary._mgMarkup!==html){summary.innerHTML=html;summary._mgMarkup=html}
-      setDateOpen(section,current.openDates.has(group.key),kind);
-      const album=$('.mg-album',section),ids=new Set(group.assets.map(asset=>asset.id));
-      $$('.mg-card',album).forEach(item=>{if(!ids.has(item.dataset.assetId))item.remove()});
-      group.assets.forEach((asset,assetIndex)=>{
-        let card=$$('.mg-card',album).find(item=>item.dataset.assetId===asset.id);
-        if(!card){card=document.createElement('article');card.className='mg-card';card.dataset.assetId=asset.id}
-        const content=cardContent(asset,kind);
-        if(card._mgMarkup!==content){card.innerHTML=content;card._mgMarkup=content}
-        card.classList.toggle('selected',kind==='analysis'&&S.selected.has(asset.id));
-        if(album.children[assetIndex]!==card)album.insertBefore(card,album.children[assetIndex]||null);
-      });
-      if(gallery.children[index]!==section)gallery.insertBefore(section,gallery.children[index]||null);
+    }
+    const html=`<div class="mg-calendar-heading"><h2>${year}<span>年</span> ${month}<span>月</span></h2><div><button type="button" data-mg-action="calendar-prev" aria-label="上个月">‹</button><button type="button" data-mg-action="calendar-today">本月</button><button type="button" data-mg-action="calendar-next" aria-label="下个月">›</button></div></div><div class="mg-calendar-scroll"><div class="mg-calendar-grid">${['一','二','三','四','五','六','日'].map(day=>`<div data-calendar-key="weekday-${day}" class="mg-calendar-weekday">${day}</div>`).join('')}${body}</div></div>`;
+    if(gallery._mgMarkup!==html){
+      if(gallery.dataset.month!==current.month){gallery.innerHTML=html;gallery.dataset.month=current.month}
+      else patchCalendar(gallery,html);
+      gallery._mgMarkup=html;ctx.onContentChange?.();
+    }
+  }
+  function patchCalendar(gallery,html){
+    const template=document.createElement('template');template.innerHTML=html;
+    const grid=$('.mg-calendar-grid',gallery),incoming=$('.mg-calendar-grid',template.content);
+    const existing=new Map([...grid.children].map(node=>[node.dataset.calendarKey,node]));
+    const wanted=new Set([...incoming.children].map(node=>node.dataset.calendarKey));
+    let cursor=grid.firstElementChild;
+    for(const fresh of incoming.children){
+      const key=fresh.dataset.calendarKey;let node=existing.get(key);existing.delete(key);
+      if(!node){node=fresh.cloneNode(true)}
+      else {
+        if(node._exitAnimation){node._exitAnimation.cancel();node._exitAnimation=null;node.inert=false}
+        node.className=fresh.className;
+        const button=$('.mg-calendar-day',node),next=$('.mg-calendar-day',fresh);
+        if(button&&next){
+          for(const attr of ['aria-expanded','aria-label','disabled'])next.hasAttribute(attr)?button.setAttribute(attr,next.getAttribute(attr)):button.removeAttribute(attr);
+          if(button.innerHTML!==next.innerHTML)button.innerHTML=next.innerHTML;
+        }else if(node.innerHTML!==fresh.innerHTML)node.innerHTML=fresh.innerHTML;
+      }
+      while(cursor&&!wanted.has(cursor.dataset.calendarKey))cursor=cursor.nextElementSibling;
+      if(node!==cursor)grid.insertBefore(node,cursor);
+      cursor=node.nextElementSibling;
+    }
+    for(const node of existing.values()){
+      if(node.classList.contains('mg-calendar-expanded')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+        if(node._exitAnimation)continue;
+        node.inert=true;
+        const animation=node.animate([{opacity:1},{opacity:0}],{duration:140,easing:'ease-out'});
+        node._exitAnimation=animation;
+        animation.finished.then(()=>{if(node._exitAnimation===animation)node.remove()}).catch(()=>{});
+      }else node.remove();
     }
   }
   function analyzeButton(asset,kind){
@@ -539,7 +585,7 @@ export function createMediaGallery(ctx){
     const root=$('.mg-root[data-kind=reference]'),player=root&&$('.mg-player video',root);
     if(!player)return;
     const asset=assetById(state.reference.detailId),chapter=asset&&chapterFor(asset);
-    $$('.mg-structure-node[aria-pressed]',root).forEach(node=>node.setAttribute('aria-pressed',String(node.dataset.nodeId===chapter?.id)));
+    $$('.mg-structure-node[aria-pressed],.mg-presentation-node[aria-pressed]',root).forEach(node=>node.setAttribute('aria-pressed',String(node.dataset.nodeId===chapter?.id)));
     $('.mg-all-chapters',root)?.setAttribute('aria-pressed',String(!chapter));
     const nodes=$$('.mg-structure-node,.mg-presentation-node',root);
     nodes.forEach((node,index)=>{
@@ -638,6 +684,25 @@ export function createMediaGallery(ctx){
   document.addEventListener('click',event=>{
     const button=event.target.closest('[data-mg-action]');if(!button)return;
     const action=button.dataset.mgAction,id=button.dataset.id,kind=button.dataset.kind||$('.mg-root')?.dataset.kind;
+    if(action?.startsWith('calendar-')){
+      const current=state.analysis;
+      if(action==='calendar-day')current.day=current.day===button.dataset.day?null:button.dataset.day;
+      if(action==='calendar-close')current.day=null;
+      if(action==='calendar-today'){current.month=shanghaiDay().slice(0,7);current.day=null}
+      if(action==='calendar-prev'||action==='calendar-next'){
+        const [year,month]=current.month.split('-').map(Number),date=new Date(Date.UTC(year,month-1+(action==='calendar-next'?1:-1),1));
+        current.month=date.toISOString().slice(0,7);current.day=null;
+      }
+      if(action==='calendar-summary'){
+        button.disabled=true;
+        ctx.api(`/material-calendar/${button.dataset.day}/summarize`,{}).then(receipt=>{
+          if(receipt.job_id)ctx.track(receipt,()=>{current.loadedAt=0;refresh();ctx.toast('当日素材已汇总')});
+          else ctx.toast('等待单份素材分析完成');
+          current.loadedAt=0;refresh();
+        }).catch(error=>{ctx.toast(error.message,true);button.disabled=false});return;
+      }
+      refreshGallery('analysis');syncSelection();return;
+    }
     if(action==='open'){open(kind,id);return}
     if(action==='open-seek'){const asset=assetById(id);if(semanticFor(asset))state.reference.chapters.set(id,button.dataset.nodeId);open('reference',id);seek(Number(button.dataset.time));setInspectorTab(isNarrative(asset)?'content':'shots');return}
     if(action==='chapter-reset'){state.reference.chapters.delete(id);refreshDetail('reference',assetById(id));return}

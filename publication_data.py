@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 
 import storage as db
 
-TABLES = {"publication_cases", "publication_observations", "publication_bindings",
+TABLES = {"business_projects", "publication_cases", "publication_observations", "publication_bindings",
           "publication_events", "publication_syncs"}
 SOURCE_LOCATION = "mini-alpha:publication-inventory/publications.sqlite"
 SYNC_LOCK = threading.Lock()
@@ -340,10 +340,7 @@ def sync_history():
 def list_history(platform="", account="", query="", limit=30, offset=0, workspace_id=None):
     cases = _records("publication_cases")
     if workspace_id is not None:
-        if workspace_id != "xingshang":
-            raise KeyError(workspace_id)
-        cases = [c for c in cases if c.get("source", {}).get("kind") == "alpha_sqlite"
-                 and c.get("source", {}).get("location") == SOURCE_LOCATION]
+        cases = workspace_cases(workspace_id)
     facets = {"platforms": sorted({c["platform"] for c in cases}), "accounts": sorted({c["account"] for c in cases})}
     selected = [c for c in cases if (not platform or c["platform"] == platform) and
                 (not account or c["account"] == account) and (not query or query.casefold() in c["title"].casefold())]
@@ -355,22 +352,51 @@ def list_history(platform="", account="", query="", limit=30, offset=0, workspac
             "next_offset": offset + limit if offset + limit < len(selected) else None}
 
 
+def workspace_info(workspace_id):
+    if workspace_id == "xingshang":
+        return {"id": "xingshang", "name": "星尚"}
+    item = db.get("business_projects", workspace_id)
+    if not item:
+        raise KeyError(workspace_id)
+    return item
+
+
+def workspace_cases(workspace_id):
+    workspace_info(workspace_id)
+    cases = _records("publication_cases")
+    if workspace_id == "xingshang":
+        return [c for c in cases if c.get("source", {}).get("kind") == "alpha_sqlite"
+                and c.get("source", {}).get("location") == SOURCE_LOCATION]
+    return [c for c in cases if c.get("workspace_id") == workspace_id]
+
+
+def create_workspace(name):
+    if not isinstance(name, str) or not 1 <= len(name.strip()) <= 60:
+        raise ValueError("项目名称需要 1–60 个字符")
+    name = name.strip()
+    with db.connection() as conn:
+        conn.execute("BEGIN IMMEDIATE")
+        existing = [json.loads(row[0])["name"] for row in conn.execute("SELECT data FROM business_projects")]
+        if name.casefold() in {n.casefold() for n in ["星尚", *existing]}:
+            raise ValueError("已有同名项目")
+        item = {"id": db.identifier(), "name": name, "created_at": db.now(), "updated_at": db.now()}
+        _put(conn, "business_projects", item)
+    return item
+
+
 def business_workspaces():
-    cases = list_history(limit=1, workspace_id="xingshang")
-    source_cases = [c for c in _records("publication_cases") if c.get("source", {}).get("kind") == "alpha_sqlite"
-                    and c.get("source", {}).get("location") == SOURCE_LOCATION]
-    latest = max(source_cases, key=lambda c: c.get("captured_epoch") or 0, default={})
-    return {"workspaces": [{"id": "xingshang", "name": "星尚", "cases_count": cases["total"],
-                           "platforms": cases["facets"]["platforms"],
-                           "accounts_count": len(cases["facets"]["accounts"]),
-                           "latest_captured_at": latest.get("captured_at"),
-                           "view_only": True}]}
+    rows = []
+    for item in [{"id": "xingshang", "name": "星尚"}, *db.records("business_projects", 5000)]:
+        cases = workspace_cases(item["id"])
+        latest = max(cases, key=lambda c: c.get("captured_epoch") or 0, default={})
+        rows.append({**item, "cases_count": len(cases), "platforms": sorted({c["platform"] for c in cases}),
+            "accounts_count": len({c["account"] for c in cases}), "latest_captured_at": latest.get("captured_at"), "view_only": True})
+    return {"workspaces": rows}
 
 
 def history_dashboard(workspace_id="xingshang", platform="douyin", account="", date_from="", date_to=""):
     """Aggregate one platform's latest per-video observations, never observation sums."""
-    if workspace_id != "xingshang":
-        raise KeyError(workspace_id)
+    workspace = workspace_info(workspace_id)
     if platform not in {"douyin", "xiaohongshu", "channels"}:
         raise ValueError("请选择一个平台")
 
@@ -394,9 +420,7 @@ def history_dashboard(workspace_id="xingshang", platform="douyin", account="", d
         epoch = _time(value)
         return datetime.fromtimestamp(epoch, zone).date() if epoch is not None else None
 
-    source_cases = [c for c in _records("publication_cases")
-                    if c.get("source", {}).get("kind") == "alpha_sqlite"
-                    and c.get("source", {}).get("location") == SOURCE_LOCATION]
+    source_cases = workspace_cases(workspace_id)
     platform_cases = [c for c in source_cases if c.get("platform") == platform]
     accounts = sorted({c["account"] for c in platform_cases})
     scoped = [c for c in platform_cases if not account or c.get("account") == account]
@@ -447,7 +471,7 @@ def history_dashboard(workspace_id="xingshang", platform="douyin", account="", d
                          "captured_at", "age_hours", "metrics")}
     sorted_cases = sorted(cases, key=lambda c: _time(c.get("published_at")) or 0, reverse=True)
     return {
-        "workspace": {"id": workspace_id, "name": "星尚"},
+        "workspace": {"id": workspace_id, "name": workspace["name"]},
         "filters": {"platform": platform, "account": account, "date_from": date_from, "date_to": date_to},
         "facets": {"platforms": sorted({c["platform"] for c in source_cases}), "accounts": accounts,
                    "date_min": known_dates[0].isoformat() if known_dates else None,

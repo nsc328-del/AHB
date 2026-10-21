@@ -9,18 +9,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent / "vendor" / "skills"
 SOURCE = "https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/"
 
-# Brief examples adapted from the published style rules. These are not the
-# undisclosed prompts used to produce the preview GIFs, and are never user input.
+# Brief examples reflect observed official preview frames and published style rules.
+# The exact preview prompts were not found in the checked public sources. These
+# placeholders are our examples, not original prompts, and are never user input.
 _BRIEF_EXAMPLES = {
-    "h3-prompt-writing": "例如：清晨咖啡店，一杯拿铁放到窗边，镜头缓慢靠近奶泡纹理。暖色侧光，保留杯碟轻碰和店内环境声。",
-    "minimalist-product-ad-generator": "例如：为图中的无线耳机做一条广告。白色留白中打开充电盒，切到材质细节，最后展示完整产品；轻快电子节奏，保持外形与颜色一致。",
-    "papercraft-stop-motion-explainer": "例如：用纸艺定格讲清月相变化。纸月球沿轨道绕地球移动，光照面随位置变化；保留纸张纤维、前后层次与轻微纸片摩擦声。",
-    "3d-animation-short-generator": "例如：两个小伙伴修理一辆坏掉的小车。先尝试失败，再一起找到办法，最后开车出发。温暖的 3D 动画，角色造型和场景保持一致。",
-    "brand-promo-video-generator": "例如：介绍一家街角咖啡店。从清晨开门、磨豆到第一杯咖啡递给客人；突出真实手作过程，结尾出现我提供的店名和标志。",
-    "music-video-subtitle-generator": "例如：用我上传的音乐与歌词做一段 MV。文字在主唱进入时逐句出现，跟随重拍变化；副歌画面更开阔，保持人物与色调一致。",
-    "co-op-game-intro-generator": "例如：把两张人物图做成双人合作游戏开场。左右玩家卡片依次亮起，两位角色确认加入后并肩出发；保留各自服装、装备和身份。",
-    "paper-collage-explainer-generator": "例如：用纸张拼贴讲一个想法如何落地。散落的笔记逐张靠拢，拼出路径，最后搭成一座纸桥；保留剪贴边缘与纸张声，不加旁白。",
-    "handdrawn-live-video-generator": "例如：真实书桌上，一条发光手绘线爬过杯沿，变成小鱼游向桌边。镜头稍慢半拍跟随，笔触粗糙，线条始终贴合真实物体。",
+    "h3-prompt-writing": "描述你想要的主体、场景和动作，再补充镜头与声音。也可以上传参考素材，说明哪些特点需要保留。",
+    "minimalist-product-ad-generator": "例如：银色手机的极简广告，浅色背景中展示金属边框、侧面按键与机身细节，穿插简短英文大字。上传产品图，并告诉我需要突出哪些特点。",
+    "papercraft-stop-motion-explainer": "例如：月夜的中式纸艺庭院，纸偶少女、圆月、树枝与桌上器物组成层叠的微缩场景。用定格动作表现节日氛围，保留纸张纹理。你也可以换成自己的主题。",
+    "3d-animation-short-generator": "例如：小女孩和粉色小伙伴坐在旋转茶杯里，表情生动，游乐园色彩明亮。做一段温暖有趣的3D动画，保持角色造型一致。请补充你想发生的小故事。",
+    "brand-promo-video-generator": "例如：以深色界面、紫色品牌卡片与产品画面介绍一款创作工具，穿插Logo和简短功能文案。请提供你的品牌素材与真实卖点。",
+    "music-video-subtitle-generator": "例如：歌手近景与大幅英文歌词共同构图，文字穿插在人物前后，形成有节奏的音乐画面。请上传音乐，并提供希望出现的歌词。",
+    "co-op-game-intro-generator": "例如：两位卡通角色并排出现在合作冒险游戏菜单，配上玩家信息、游戏标题与开始按钮。请提供角色参考和要显示的文字。",
+    "paper-collage-explainer-generator": "例如：紫色纸质房间、黑白棋盘格地面和一扇门，组成带剪贴边缘的超现实空间。请说明想用这个空间表达什么观点。",
+    "handdrawn-live-video-generator": "例如：真实水槽边，一只手拿起杯子，发光手绘线条附着在杯身，与实物动作融合。请描述线条如何变化，以及要使用的现实场景。",
 }
 
 _SKILLS = [
@@ -47,7 +48,7 @@ def get_skills() -> list[dict]:
         row["prompt_placeholder"] = _BRIEF_EXAMPLES[row["id"]]
         row["prompt_placeholder_source"] = {
             "kind": "adapted_brief", "source_url": SOURCE + row["id"],
-            "preview_original_prompt_verified": False,
+            "preview_original_prompt_verified": False, "basis": "observed_preview_frames_and_style_rules",
         }
         row["limitations"] = [] if row["id"] == "h3-prompt-writing" else [
             "使用已上传的角色、产品或场景锚点；未接自动锚点生图。",
