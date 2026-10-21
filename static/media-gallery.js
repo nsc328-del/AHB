@@ -228,6 +228,7 @@ export function createMediaGallery(ctx){
     if(!state[kind])return;
     let root=rootFor(kind);
     if(!root){
+      if(kind==='analysis'&&!state.analysis.detailId){state.analysis.day=shanghaiDay();state.analysis.month=state.analysis.day.slice(0,7)}
       $('#app').innerHTML=`<section class="mg-root drop-area" data-kind="${kind}"><div class="mg-page-heading"><div><h1>${titleFor(kind)}</h1><p class="mg-gallery-count"></p></div><div class="mg-heading-actions">${uploadButton(kind,true)}</div></div>${kind==='analysis'?filtersHTML():referenceFiltersHTML()}<div class="mg-gallery"></div><div class="mg-detail" hidden></div></section>`;
       root=rootFor(kind);
       ctx.bindDrop?.();
@@ -253,72 +254,69 @@ export function createMediaGallery(ctx){
   }
   const shanghaiDay=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   function refreshCalendar(root){
-    const current=state.analysis,groups=grouped('analysis'),byDay=new Map(groups.map(group=>[group.key,group]));
+    const current=state.analysis,today=shanghaiDay(),groups=grouped('analysis'),byDay=new Map(groups.map(group=>[group.key,group]));
     const gallery=$('.mg-gallery',root);gallery.classList.add('mg-calendar');
     $('.mg-gallery-count',root).textContent=`${assetsFor('analysis').length} 份素材`;
-    current.month ||= shanghaiDay().slice(0,7);
+    current.day ||= today;current.month ||= current.day.slice(0,7);
     if(!current.loading&&Date.now()-current.loadedAt>15000){
       current.loading=true;current.loadedAt=Date.now();
       ctx.api('/material-calendar').then(data=>{current.summaries=new Map(data.days.map(row=>[row.day,row]));if(root.isConnected)refreshCalendar(root)})
         .catch(()=>{}).finally(()=>{current.loading=false});
     }
+    if(!$('.mg-calendar-sidebar',gallery))gallery.innerHTML='<aside class="mg-calendar-sidebar" aria-label="素材日历"><div class="mg-calendar-heading"></div><div class="mg-calendar-grid"></div></aside><section class="mg-calendar-results" aria-label="当日素材"><div class="mg-calendar-results-heading"></div><div class="mg-calendar-digest"></div><div class="mg-calendar-empty" hidden></div><div class="mg-album"></div></section>';
     const [year,month]=current.month.split('-').map(Number),first=new Date(Date.UTC(year,month-1,1)),offset=(first.getUTCDay()+6)%7;
     const count=new Date(Date.UTC(year,month,0)).getUTCDate(),cells=Math.ceil((offset+count)/7)*7;
-    let body='';
-    for(let index=0;index<cells;index++){
-      const dayNumber=index-offset+1,valid=dayNumber>0&&dayNumber<=count;
-      const key=valid?`${current.month}-${String(dayNumber).padStart(2,'0')}`:'',group=byDay.get(key),digest=current.summaries.get(key);
-      const summary=digest?.result?.summary||digest?.previous_result?.summary;
-      const counts=group?['video','image','audio'].map(kind=>{const n=group.assets.filter(a=>a.kind===kind).length;return n?`${n} ${kindNames[kind]}`:''}).filter(Boolean).join(' · '):'';
-      const waiting=key>=shanghaiDay()?'明日汇总':digest?.status==='waiting_analysis'?'等待素材分析':['queued','running'].includes(digest?.status)?'汇总中':digest?.error?'汇总未完成':'待汇总';
-      const stack=group?groupSummary(group).split('<span class="mg-date-caption">')[0]:'';
-      body+=`<div data-calendar-key="${key||'outside-'+index}" class="mg-calendar-cell ${!valid?'is-outside':''} ${key===shanghaiDay()?'is-today':''} ${current.day===key?'is-selected':''}">${valid?`<button type="button" class="mg-calendar-day" data-mg-action="calendar-day" data-day="${key}" aria-expanded="${current.day===key}" aria-label="${key}，${group?group.assets.length+'份素材':'无素材'}" ${!group?'disabled':''}><span class="mg-calendar-date">${dayNumber}</span>${group?`${stack}<span class="mg-calendar-count">${esc(counts)}</span><span class="mg-calendar-summary">${esc(summary||waiting)}</span>${summary&&digest?.status==='outdated'?'<span class="mg-calendar-pending">有新分析待汇总</span>':''}`:''}</button>`:''}</div>`;
-      if(index%7===6&&current.day){
-        const selected=Number(current.day.slice(-2)),position=offset+selected-1;
-        if(current.day.startsWith(current.month)&&position>=index-6&&position<=index&&byDay.has(current.day)){
-          const selectedGroup=byDay.get(current.day),digest=current.summaries.get(current.day),summary=digest?.result||digest?.previous_result;
-          body+=`<section data-calendar-key="expanded-${current.day}" class="mg-calendar-expanded" data-date="${current.day}"><div class="mg-calendar-expanded-heading"><div><h2>${Number(current.day.slice(5,7))}月${selected}日</h2><span>${selectedGroup.assets.length} 份素材</span></div><div>${digest?.job_id?`<div data-usage-scope="job" data-usage-job-id="${esc(digest.job_id)}" data-usage-label="本次汇总用量"></div>`:''}${current.day<shanghaiDay()?`<button type="button" class="button small quiet" data-mg-action="calendar-summary" data-day="${current.day}" ${['queued','running'].includes(digest?.status)?'disabled':''}>${['queued','running'].includes(digest?.status)?'汇总中':summary?'更新汇总':'汇总素材'}</button>`:''}<button type="button" class="mg-calendar-close" data-mg-action="calendar-close" aria-label="收起日期">×</button></div></div>${summary&&['queued','running','outdated'].includes(digest?.status)?'<p class="mg-calendar-pending">新汇总准备中，当前为上次结果</p>':''}${summary?`<p class="mg-calendar-day-summary">${esc(summary.summary)}</p><div class="mg-tags">${(summary.themes||[]).map(tag=>`<span>${esc(tag)}</span>`).join('')}</div>${summary.missing_count?`<p class="mg-calendar-pending">${summary.missing_count} 份尚无分析，未计入总结</p>`:''}`:''}${digest?.error?`<p class="mg-card-error">${esc(digest.error)}</p>`:''}<div class="mg-album">${selectedGroup.assets.map(asset=>`<article class="mg-card ${S.selected.has(asset.id)?'selected':''}" data-asset-id="${esc(asset.id)}">${cardContent(asset,'analysis')}</article>`).join('')}</div></section>`;
-        }
-      }
+    patchHTML('.mg-calendar-heading',`<h2>${year}<span>年</span> ${month}<span>月</span></h2><div><button type="button" data-mg-action="calendar-prev" aria-label="上个月">‹</button><button type="button" data-mg-action="calendar-today">今天</button><button type="button" data-mg-action="calendar-next" aria-label="下个月">›</button></div>`,gallery);
+    const grid=$('.mg-calendar-grid',gallery);
+    if(grid.dataset.month!==current.month){
+      grid.innerHTML=['一','二','三','四','五','六','日'].map(day=>`<span class="mg-calendar-weekday">${day}</span>`).join('')+Array.from({length:cells},(_,index)=>{
+        const number=index-offset+1;if(number<1||number>count)return '<span class="mg-calendar-cell is-outside" aria-hidden="true"></span>';
+        const key=`${current.month}-${String(number).padStart(2,'0')}`;
+        return `<div class="mg-calendar-cell"><button type="button" class="mg-calendar-day" data-mg-action="calendar-day" data-day="${key}"><span class="mg-calendar-date">${number}</span><span class="mg-calendar-day-count"></span></button></div>`;
+      }).join('');
+      grid.dataset.month=current.month;
     }
-    const html=`<div class="mg-calendar-heading"><h2>${year}<span>年</span> ${month}<span>月</span></h2><div><button type="button" data-mg-action="calendar-prev" aria-label="上个月">‹</button><button type="button" data-mg-action="calendar-today">本月</button><button type="button" data-mg-action="calendar-next" aria-label="下个月">›</button></div></div><div class="mg-calendar-scroll"><div class="mg-calendar-grid">${['一','二','三','四','五','六','日'].map(day=>`<div data-calendar-key="weekday-${day}" class="mg-calendar-weekday">${day}</div>`).join('')}${body}</div></div>`;
-    if(gallery._mgMarkup!==html){
-      if(gallery.dataset.month!==current.month){gallery.innerHTML=html;gallery.dataset.month=current.month}
-      else patchCalendar(gallery,html);
-      gallery._mgMarkup=html;ctx.onContentChange?.();
+    for(const button of $$('[data-mg-action=calendar-day]',grid)){
+      const key=button.dataset.day,amount=byDay.get(key)?.assets.length||0,selected=key===current.day;
+      button.parentElement.classList.toggle('is-today',key===today);
+      button.parentElement.classList.toggle('is-selected',selected);
+      button.parentElement.classList.toggle('has-assets',amount>0);
+      button.setAttribute('aria-pressed',String(selected));
+      button.setAttribute('aria-label',`${key}，${amount?amount+'份素材':'无素材'}`);
+      if(key===today)button.setAttribute('aria-current','date');else button.removeAttribute('aria-current');
+      $('.mg-calendar-day-count',button).textContent=amount?String(amount):'';
     }
-  }
-  function patchCalendar(gallery,html){
-    const template=document.createElement('template');template.innerHTML=html;
-    const grid=$('.mg-calendar-grid',gallery),incoming=$('.mg-calendar-grid',template.content);
-    const existing=new Map([...grid.children].map(node=>[node.dataset.calendarKey,node]));
-    const wanted=new Set([...incoming.children].map(node=>node.dataset.calendarKey));
-    let cursor=grid.firstElementChild;
-    for(const fresh of incoming.children){
-      const key=fresh.dataset.calendarKey;let node=existing.get(key);existing.delete(key);
-      if(!node){node=fresh.cloneNode(true)}
-      else {
-        if(node._exitAnimation){node._exitAnimation.cancel();node._exitAnimation=null;node.inert=false}
-        node.className=fresh.className;
-        const button=$('.mg-calendar-day',node),next=$('.mg-calendar-day',fresh);
-        if(button&&next){
-          for(const attr of ['aria-expanded','aria-label','disabled'])next.hasAttribute(attr)?button.setAttribute(attr,next.getAttribute(attr)):button.removeAttribute(attr);
-          if(button.innerHTML!==next.innerHTML)button.innerHTML=next.innerHTML;
-        }else if(node.innerHTML!==fresh.innerHTML)node.innerHTML=fresh.innerHTML;
-      }
-      while(cursor&&!wanted.has(cursor.dataset.calendarKey))cursor=cursor.nextElementSibling;
-      if(node!==cursor)grid.insertBefore(node,cursor);
-      cursor=node.nextElementSibling;
+    const selected=byDay.get(current.day),assets=selected?.assets||[],digest=current.summaries.get(current.day),summary=digest?.result||digest?.previous_result;
+    const total=assetsFor('analysis').filter(asset=>dateInfo(asset).key===current.day).length,filtered=!!String(S.search||'').trim()||!!S.filter&&S.filter!=='all';
+    const results=$('.mg-calendar-results',gallery),changedDay=results.dataset.date!==current.day;
+    if(changedDay){
+      results.dataset.date=current.day;
+      // Keep the calendar and focus stable while only the selected day's content changes.
+      $('.mg-calendar-results-heading',results).replaceChildren();
+      $('.mg-calendar-results-heading',results)._mgMarkup=null;
+      $('.mg-album',results).replaceChildren();
     }
-    for(const node of existing.values()){
-      if(node.classList.contains('mg-calendar-expanded')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-        if(node._exitAnimation)continue;
-        node.inert=true;
-        const animation=node.animate([{opacity:1},{opacity:0}],{duration:140,easing:'ease-out'});
-        node._exitAnimation=animation;
-        animation.finished.then(()=>{if(node._exitAnimation===animation)node.remove()}).catch(()=>{});
-      }else node.remove();
+    patchHTML('.mg-calendar-results-heading',`<div><h2>${Number(current.day.slice(5,7))}月${Number(current.day.slice(8))}日</h2>${current.day===today?'<span class="mg-calendar-today-label">今天</span>':''}<span class="mg-calendar-result-count">${filtered?`${assets.length} / ${total}`:total} 份素材</span></div><div class="mg-calendar-result-actions">${digest?.job_id?`<div data-usage-scope="job" data-usage-job-id="${esc(digest.job_id)}" data-usage-label="本次汇总用量"></div>`:''}${total&&current.day<today?`<button type="button" class="button small quiet" data-mg-action="calendar-summary" data-day="${current.day}" ${['queued','running'].includes(digest?.status)?'disabled':''}>${['queued','running'].includes(digest?.status)?'汇总中':summary?'更新汇总':'汇总素材'}</button>`:''}</div>`,results);
+    patchHTML('.mg-calendar-digest',`${summary&&['queued','running','outdated'].includes(digest?.status)?'<p class="mg-calendar-pending">新汇总准备中，当前为上次结果</p>':''}${summary?`<p class="mg-calendar-day-summary">${esc(summary.summary)}</p><div class="mg-tags">${(summary.themes||[]).map(tag=>`<span>${esc(tag)}</span>`).join('')}</div>${summary.missing_count?`<p class="mg-calendar-pending">${summary.missing_count} 份尚无分析，未计入总结</p>`:''}`:''}${digest?.error?`<p class="mg-card-error">${esc(digest.error)}</p>`:''}`,results);
+    const empty=$('.mg-calendar-empty',results);empty.hidden=assets.length>0;
+    patchHTML('.mg-calendar-empty',total?'<p>没有符合筛选条件的素材</p><button type="button" class="button small quiet" data-mg-action="reset-filters">清除筛选</button>':'<p>当天还没有素材</p>',results);
+    const album=$('.mg-album',results),existing=new Map([...album.children].map(card=>[card.dataset.assetId,card]));
+    let cursor=album.firstElementChild;
+    for(const asset of assets){
+      let card=existing.get(asset.id);existing.delete(asset.id);
+      if(!card){card=document.createElement('article');card.className='mg-card';card.dataset.assetId=asset.id}
+      const html=cardContent(asset,'analysis');
+      if(card._mgMarkup!==html){card.innerHTML=html;card._mgMarkup=html}
+      card.classList.toggle('selected',S.selected.has(asset.id));
+      if(card!==cursor)album.insertBefore(card,cursor);cursor=card.nextElementSibling;
     }
+    for(const card of existing.values())card.remove();
+    if(changedDay&&!gallery.hidden&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      results.getAnimations().forEach(animation=>animation.cancel());
+      results.animate([{opacity:.35,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:180,easing:'cubic-bezier(.2,.7,.3,1)'});
+    }
+    $('[data-mg-action=select-visible]',root).disabled=!assets.length;
+    ctx.onContentChange?.();
   }
   function analyzeButton(asset,kind){
     if(asset.kind==='audio')return '';
@@ -686,12 +684,11 @@ export function createMediaGallery(ctx){
     const action=button.dataset.mgAction,id=button.dataset.id,kind=button.dataset.kind||$('.mg-root')?.dataset.kind;
     if(action?.startsWith('calendar-')){
       const current=state.analysis;
-      if(action==='calendar-day')current.day=current.day===button.dataset.day?null:button.dataset.day;
-      if(action==='calendar-close')current.day=null;
-      if(action==='calendar-today'){current.month=shanghaiDay().slice(0,7);current.day=null}
+      if(action==='calendar-day')current.day=button.dataset.day;
+      if(action==='calendar-today'){current.day=shanghaiDay();current.month=current.day.slice(0,7)}
       if(action==='calendar-prev'||action==='calendar-next'){
         const [year,month]=current.month.split('-').map(Number),date=new Date(Date.UTC(year,month-1+(action==='calendar-next'?1:-1),1));
-        current.month=date.toISOString().slice(0,7);current.day=null;
+        current.month=date.toISOString().slice(0,7);
       }
       if(action==='calendar-summary'){
         button.disabled=true;
@@ -732,7 +729,7 @@ export function createMediaGallery(ctx){
     if(action==='toggle-date'){const section=button.closest('.mg-date');setDateOpen(section,!section.classList.contains('is-open'),kind);return}
     if(action==='filter'){S.filter=id;$$('[data-mg-action=filter]',rootFor(kind)).forEach(item=>{item.classList.toggle('active',item.dataset.id===id);item.setAttribute('aria-pressed',String(item.dataset.id===id))});refreshGallery(kind);syncSelection();return}
     if(action==='reset-filters'){S.filter='all';S.search='';const root=rootFor(kind);$('#mg-search',root).value='';$$('[data-mg-action=filter]',root).forEach(item=>{item.classList.toggle('active',item.dataset.id==='all');item.setAttribute('aria-pressed',String(item.dataset.id==='all'))});refreshGallery(kind);syncSelection();return}
-    if(action==='select-visible'){visibleAssets('analysis').forEach(asset=>S.selected.add(asset.id));persistSelection();syncSelection();return}
+    if(action==='select-visible'){visibleAssets('analysis').filter(asset=>dateInfo(asset).key===state.analysis.day).forEach(asset=>S.selected.add(asset.id));persistSelection();syncSelection();return}
     if(action==='inspector-tab'){setInspectorTab(button.dataset.tab);return}
     if(action==='rhythm-page'){setRhythmPage(button.dataset.page);return}
     if(action==='rhythm-current'){const player=$('.mg-player video',rootFor('reference'));if(player)setRhythmPage(Math.floor(player.currentTime/rhythmWindowSeconds));return}
